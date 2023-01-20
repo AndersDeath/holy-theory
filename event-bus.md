@@ -1,6 +1,6 @@
 # Event Bus
 
-`
+```
 interface IEventBus {
     channels: any,
     subscribe: (arg1: string, listener: (...args: any[]) => void) => void,
@@ -25,4 +25,4 @@ const EventBus: IEventBus = {
     }
 
 }
-`
+```
