@@ -9,3 +9,4 @@
 ## Data Structures
 
 * [Hash table](/strucures/hash-table.md)
+* [Map](/strucures/map.md)
