@@ -11,3 +11,4 @@
 * [Hash table](/strucures/hash-table.md)
 * [Map](/strucures/map.md)
 * [Priority queue](/strucures/priority-queue.md)
+* [Queue](/strucures/queue.md)
