@@ -13,3 +13,4 @@
 * [Priority queue](/strucures/priority-queue.md)
 * [Queue](/strucures/queue.md)
 * [Set](/strucures/set.md)
+* [Stack](/strucures/stack.md)
