@@ -18,5 +18,6 @@
 ## Algorithms
 
 * [Bubble sort](/algorithms/bubble-sort.md)
+* [Insertion sort](/algorithms/insertion-sort.md)
 * [Diffie Hellman](/algorithms/bubble-sort.md)
 
