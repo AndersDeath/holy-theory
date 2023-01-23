@@ -14,3 +14,7 @@
 * [Queue](/strucures/queue.md)
 * [Set](/strucures/set.md)
 * [Stack](/strucures/stack.md)
+
+## Algorithms
+
+* [Stack](/algorithms/bubble-sort.md)
