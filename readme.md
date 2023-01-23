@@ -17,4 +17,6 @@
 
 ## Algorithms
 
-* [Stack](/algorithms/bubble-sort.md)
+* [Bubble sort](/algorithms/bubble-sort.md)
+* [Diffie Hellman](/algorithms/bubble-sort.md)
+
