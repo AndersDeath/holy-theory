@@ -2,23 +2,27 @@
 
 ## Patterns
 
-* [Event Bus](/patterns/event-bus.md)
-* [Observer](/patterns/observer.md)
-* [Singleton](/patterns/singleton.md)
+* [Event Bus](/patterns/event-bus.md) – TypeScript
+* [Observer](/patterns/observer.md) – TypeScript
+* [Singleton](/patterns/singleton.md) – TypeScript
 
 ## Data Structures
 
-* [Hash table](/strucures/hash-table.md)
-* [Map](/strucures/map.md)
-* [Priority queue](/strucures/priority-queue.md)
-* [Queue](/strucures/queue.md)
-* [Set](/strucures/set.md)
-* [Stack](/strucures/stack.md)
+* [Hash table](/strucures/hash-table.md) – TypeScript
+* [Map](/strucures/map.md) – TypeScript
+* [Priority queue](/strucures/priority-queue.md) – TypeScript
+* [Queue](/strucures/queue.md) – TypeScript
+* [Set](/strucures/set.md) – TypeScript
+* [Stack](/strucures/stack.md) – TypeScript
 
 ## Algorithms
 
-* [Bubble sort](/algorithms/bubble-sort.md)
-* [Insertion sort](/algorithms/insertion-sort.md)
-* [Selection sort](/algorithms/selection-sort.md)
-* [Diffie Hellman](/algorithms/bubble-sort.md)
-* [Pairwise](/algorithms/bubble-sort.md)
+* [Bubble sort](/algorithms/bubble-sort.md) – TypeScript
+* [Insertion sort](/algorithms/insertion-sort.md) – TypeScript
+* [Selection sort](/algorithms/selection-sort.md) – TypeScript
+* [Diffie Hellman](/algorithms/bubble-sort.md) – TypeScript
+* [Pairwise](/algorithms/bubble-sort.md) – TypeScript
+
+## Training
+
+
