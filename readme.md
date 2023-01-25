@@ -25,4 +25,5 @@
 
 ## Training
 
+* [Cumulative Sum](/training/cumulative-sum.md) – Java
 
