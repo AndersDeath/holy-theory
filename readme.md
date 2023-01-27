@@ -18,7 +18,7 @@
 ## Algorithms
 
 * [Bubble sort](/algorithms/bubble-sort.md) – TypeScript
-* [Insertion sort](/algorithms/insertion-sort.md) – TypeScript
+* [Insertion sort](/algorithms/insertion-sort.md) – TypeScript, Java
 * [Selection sort](/algorithms/selection-sort.md) – TypeScript
 * [Diffie Hellman](/algorithms/bubble-sort.md) – TypeScript
 * [Pairwise](/algorithms/bubble-sort.md) – TypeScript
