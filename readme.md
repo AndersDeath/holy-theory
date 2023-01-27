@@ -8,12 +8,12 @@
 
 ## Data Structures
 
-* [Hash table](/strucures/hash-table.md) – TypeScript
-* [Map](/strucures/map.md) – TypeScript
-* [Priority queue](/strucures/priority-queue.md) – TypeScript
-* [Queue](/strucures/queue.md) – TypeScript
-* [Set](/strucures/set.md) – TypeScript
-* [Stack](/strucures/stack.md) – TypeScript
+* [Hash table](/structures/hash-table.md) – TypeScript
+* [Map](/structures/map.md) – TypeScript
+* [Priority queue](/structures/priority-queue.md) – TypeScript
+* [Queue](/structures/queue.md) – TypeScript
+* [Set](/structures/set.md) – TypeScript
+* [Stack](/structures/stack.md) – TypeScript
 
 ## Algorithms
 
