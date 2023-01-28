@@ -3,7 +3,6 @@
 ```java
 class Solution {
 	int getIdenticalTwinsCount (int[] arr) {
-		// add your logic here
 		HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
 		for (int i = 0; i < arr.length; i++) {
 			Integer val = map.get(arr[i]);
