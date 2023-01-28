@@ -27,5 +27,4 @@
 
 * [Cumulative Sum](/training/cumulative-sum.md) – Java
 * [Even number of digits Sum](/training/even-number-of-digits.md) – Java
-
-
+* [Identical twins](/training/identical-twins.md) – Java
