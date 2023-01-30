@@ -22,6 +22,8 @@
 * [Selection sort](/algorithms/selection-sort.md) – TypeScript
 * [Diffie Hellman](/algorithms/bubble-sort.md) – TypeScript
 * [Pairwise](/algorithms/bubble-sort.md) – TypeScript
+* [Merge Sort](/algorithms/merge-sort.md) – Java
+
 
 ## Training
 
