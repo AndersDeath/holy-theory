@@ -23,7 +23,7 @@
 * [Diffie Hellman](/algorithms/bubble-sort.md) – TypeScript
 * [Pairwise](/algorithms/bubble-sort.md) – TypeScript
 * [Merge Sort](/algorithms/merge-sort.md) – Java
-* * [Merge Sort](/algorithms/quick-sort.md) – Java
+* [Quick sort](/algorithms/quick-sort.md) – Java
 
 
 
