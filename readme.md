@@ -32,6 +32,7 @@
 * [Cumulative Sum](/training/cumulative-sum.md) – Java
 * [Even number of digits Sum](/training/even-number-of-digits.md) – Java
 * [Identical twins](/training/identical-twins.md) – Java
+* [Palindrome number](/training/palindrome-number.md.md) – Java
 
 ## Questions
 * [01-reverse-number](/questions/reverse-number.md) – Java, all languages
