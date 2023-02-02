@@ -1,6 +1,6 @@
 # Map
 
-```
+```typescript
 export class Map {
 
     private collection: any = {}

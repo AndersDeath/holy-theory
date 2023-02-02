@@ -14,6 +14,7 @@
 * [Queue](/structures/queue.md) – TypeScript
 * [Set](/structures/set.md) – TypeScript
 * [Stack](/structures/stack.md) – TypeScript
+* [Linked List](/structures/linked-list.md) – TypeScript
 
 ## Algorithms
 
@@ -23,7 +24,7 @@
 * [Diffie Hellman](/algorithms/bubble-sort.md) – TypeScript
 * [Pairwise](/algorithms/bubble-sort.md) – TypeScript
 * [Merge Sort](/algorithms/merge-sort.md) – Java
-* [Quick sort](/algorithms/quick-sort.md) – Java
+* [Quick sort](/algorithms/quick-sort.md) – Java, Python
 
 
 
@@ -32,7 +33,7 @@
 * [Cumulative Sum](/training/cumulative-sum.md) – Java
 * [Even number of digits Sum](/training/even-number-of-digits.md) – Java
 * [Identical twins](/training/identical-twins.md) – Java
-* [Palindrome number](/training/palindrome-number.md.md) – Java
+* [Palindrome number](/training/palindrome-number.md) – Java
 
 ## Questions
-* [01-reverse-number](/questions/reverse-number.md) – Java, all languages
+* [01-reverse-number](/questions/01-reverse-number.md) – Java, all languages
