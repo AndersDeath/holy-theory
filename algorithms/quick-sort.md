@@ -36,4 +36,17 @@ class Solution {
 
 ```
 
+```python
+def quicksort(arr):
+    if len(arr) < 2:
+        return arr
+    else:
+        pivot = arr[len(arr)/2]
+        less = [i for i in arr[1:] if i <= pivot]
+        greater = [i for i in arr[1:] if i > pivot]
+        return quicksort(less) + [pivot] + quicksort(greater)
+
+print(quicksort([10,2,3,1,5,4]))
+```
+
 * [Go back](../readme.md)
