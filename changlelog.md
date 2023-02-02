@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file.
 
 - add 01-reverse number question
 - add palindrome number training
+- add quick sort in python
 
 ## [0.0.2] - 2023-01-31
 - minor fix
