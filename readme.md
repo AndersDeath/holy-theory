@@ -14,6 +14,7 @@
 * [Queue](/structures/queue.md) – TypeScript
 * [Set](/structures/set.md) – TypeScript
 * [Stack](/structures/stack.md) – TypeScript
+* [Linked List](/structures/linked-list.md) – TypeScript
 
 ## Algorithms
 
