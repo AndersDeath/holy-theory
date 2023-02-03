@@ -9,6 +9,7 @@ All notable changes to this project will be documented in this file.
 - add quick sort in python
 - add linked list in typescript
 - add horizontal and vertical scaling
+- add cap theorem
 
 ## [0.0.2] - 2023-01-31
 - minor fix
