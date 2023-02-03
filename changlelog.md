@@ -8,6 +8,7 @@ All notable changes to this project will be documented in this file.
 - add palindrome number training
 - add quick sort in python
 - add linked list in typescript
+- add horizontal and vertical scaling
 
 ## [0.0.2] - 2023-01-31
 - minor fix

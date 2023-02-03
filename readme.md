@@ -37,3 +37,7 @@
 
 ## Questions
 * [01-reverse-number](/questions/01-reverse-number.md) – Java, all languages
+
+## System design
+
+* [01-horizontal-vertical-scaling](/system-design/01-horizontal-vertical-scaling.md)
