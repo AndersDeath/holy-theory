@@ -25,8 +25,7 @@
 * [Pairwise](/algorithms/bubble-sort.md) – TypeScript
 * [Merge Sort](/algorithms/merge-sort.md) – Java
 * [Quick sort](/algorithms/quick-sort.md) – Java, Python
-
-
+* [Symmetric difference](/algorithms/symmetric-difference.md) – TypeScript
 
 ## Training
 
