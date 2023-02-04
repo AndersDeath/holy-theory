@@ -10,6 +10,7 @@ All notable changes to this project will be documented in this file.
 - add linked list in typescript
 - add horizontal and vertical scaling
 - add cap theorem
+- add symmetric difference in TypesScript
 
 ## [0.0.2] - 2023-01-31
 - minor fix
