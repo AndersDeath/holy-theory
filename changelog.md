@@ -12,6 +12,7 @@ All notable changes to this project will be documented in this file.
 - add cap theorem
 - add symmetric difference in TypesScript
 - add data structures types
+- add reverse array training in TypeScript
 
 ## [0.0.2] - 2023-01-31
 - minor fix
