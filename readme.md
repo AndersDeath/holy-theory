@@ -34,6 +34,8 @@
 * [Even number of digits Sum](/training/even-number-of-digits.md) – Java
 * [Identical twins](/training/identical-twins.md) – Java
 * [Palindrome number](/training/palindrome-number.md) – Java
+* [Reverse array](/training/reverse-array.md) – TypeScript
+
 
 ## Questions
 * [01-reverse-number](/questions/01-reverse-number.md) – Java, all languages
