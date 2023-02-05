@@ -11,6 +11,7 @@ All notable changes to this project will be documented in this file.
 - add horizontal and vertical scaling
 - add cap theorem
 - add symmetric difference in TypesScript
+- add data structures types
 
 ## [0.0.2] - 2023-01-31
 - minor fix

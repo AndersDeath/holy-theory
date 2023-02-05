@@ -8,6 +8,7 @@
 
 ## Data Structures
 
+* [Data structures types](/structures/data-structures-types.md)
 * [Hash table](/structures/hash-table.md) – TypeScript
 * [Map](/structures/map.md) – TypeScript
 * [Priority queue](/structures/priority-queue.md) – TypeScript
