@@ -35,6 +35,7 @@
 * [Identical twins](/training/identical-twins.md) – Java
 * [Palindrome number](/training/palindrome-number.md) – Java
 * [Reverse array](/training/reverse-array.md) – TypeScript
+* [Remove duplicates](/training/remove-duplicates.md) – Java
 
 
 ## Questions
