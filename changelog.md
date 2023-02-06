@@ -2,7 +2,9 @@
 
 All notable changes to this project will be documented in this file.
 
-## [01.02.2022] - In progress
+## [0.0.4] - In progress
+
+## [0.0.3] - 2023-02-06
 
 - add 01-reverse number question
 - add palindrome number training
