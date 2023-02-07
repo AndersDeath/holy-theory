@@ -36,7 +36,7 @@
 * [Palindrome number](/training/palindrome-number.md) – Java
 * [Reverse array](/training/reverse-array.md) – TypeScript
 * [Remove duplicates](/training/remove-duplicates.md) – Java
-
+* [Reverse words](/training/reverse-words.md) – TypeScript
 
 ## Questions
 * [01-reverse-number](/questions/01-reverse-number.md) – Java, all languages

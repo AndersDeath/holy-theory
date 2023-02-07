@@ -3,7 +3,8 @@
 All notable changes to this project will be documented in this file.
 
 ## [0.0.4] - In progress
-
+- add reverse words training in TypeScript
+- add https://codewars.com to sources
 ## [0.0.3] - 2023-02-06
 
 - add 01-reverse number question
