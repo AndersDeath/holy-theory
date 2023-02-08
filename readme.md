@@ -27,6 +27,7 @@
 * [Merge Sort](/algorithms/merge-sort.md) – Java
 * [Quick sort](/algorithms/quick-sort.md) – Java, Python
 * [Symmetric difference](/algorithms/symmetric-difference.md) – TypeScript
+* [Binary search](/algorithms/binary-search.md) – TypeScript
 
 ## Training
 
