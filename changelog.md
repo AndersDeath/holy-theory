@@ -9,6 +9,7 @@ All notable changes to this project will be documented in this file.
 - add Binary search
 - add Lonely Integer training
 - add Validate pin training
+- add Array data structure draft
 ## [0.0.3] - 2023-02-06
 
 - add 01-reverse number question
