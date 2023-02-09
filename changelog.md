@@ -7,6 +7,8 @@ All notable changes to this project will be documented in this file.
 - add https://codewars.com to sources
 - add chain adding functions training in TypeScript
 - add Binary search
+- add Lonely Integer training
+- add Validate pin training
 ## [0.0.3] - 2023-02-06
 
 - add 01-reverse number question

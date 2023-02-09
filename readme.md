@@ -39,6 +39,8 @@
 * [Remove duplicates](/training/remove-duplicates.md) – Java
 * [Reverse words](/training/reverse-words.md) – TypeScript
 * [Chain adding functions](/training/chain-adding-functions.md) – TypeScript
+* [Lonely integer](/training/lonely-integer.md) – TypeScript
+* [Validate pin](/training/validate-pin.md) – TypeScript
 ## Questions
 * [01-reverse-number](/questions/01-reverse-number.md) – Java, all languages
 
