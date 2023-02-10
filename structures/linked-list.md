@@ -1,5 +1,7 @@
 # Linked list
 
+![Linked List](./linked-list.png)
+
 ```typescript
 
 export class Noddy {
