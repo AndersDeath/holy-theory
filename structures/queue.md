@@ -1,7 +1,8 @@
-
 # Queue
 
-```
+![Queue](./queue.png)
+
+```typescript
 export class Queue {
     private collection: any[] = [];
 

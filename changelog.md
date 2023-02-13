@@ -3,7 +3,7 @@
 All notable changes to this project will be documented in this file.
 
 # [0.0.5] - In Progress
--
+- update queue
 ## [0.0.4] - 2023-02-13
 - add reverse words training in TypeScript
 - add https://codewars.com to sources
