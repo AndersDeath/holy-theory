@@ -2,7 +2,9 @@
 
 All notable changes to this project will be documented in this file.
 
-## [0.0.4] - In progress
+# [0.0.5] - In Progress
+-
+## [0.0.4] - 2023-02-13
 - add reverse words training in TypeScript
 - add https://codewars.com to sources
 - add chain adding functions training in TypeScript
