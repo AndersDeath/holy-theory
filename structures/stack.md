@@ -1,7 +1,7 @@
-
 # Stack
+![Stack](./stack.png)
 
-```
+```typescript
 export class Stack {
     private collection:any[] = [];
 
