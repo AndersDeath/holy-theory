@@ -1,6 +1,9 @@
 # Priority Queue
 
-```
+![priority-queue](./priority-queue.png)
+
+
+```typescript
 export class PriorityQueue {
     private collection: any[] = []
 
