@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file.
 - update queue
 - update stack
 - update priority queue
+- add plus/minus training
 
 ## [0.0.4] - 2023-02-13
 - add reverse words training in TypeScript
