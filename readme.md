@@ -44,6 +44,7 @@
 * [Validate pin](/training/validate-pin.md) – TypeScript
 * [Pangram](/training/pangram.md) – TypeScript
 * [Plus Minus](/training/plus-minus.md) – TypeScript
+* [Time conversion](/training/time-conversion.md) – TypeScript
 ## Questions
 * [01-reverse-number](/questions/01-reverse-number.md) – Java, all languages
 
