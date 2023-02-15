@@ -9,6 +9,10 @@ All notable changes to this project will be documented in this file.
 - add plus/minus training in TypeScript
 - add time conversion training in TypeScript
 - add find the median training in TypeScript
+- add merge two sorted liked lists training in TypeScript
+- add queue using two stacks training in TypeScript
+- add balanced brackets training in JavaScript
+- add pairs training in TypeScript
 
 ## [0.0.4] - 2023-02-13
 - add reverse words training in TypeScript

@@ -46,6 +46,10 @@
 * [Plus Minus](/training/plus-minus.md) – TypeScript
 * [Time conversion](/training/time-conversion.md) – TypeScript
 * [Find the median](/training/find-the-median.md) – TypeScript
+* [Merge two sorted linked lists](/training/merge-two-sorted-linked-lists.md) – TypeScript
+* [Queue using two stacks](/training/queue-using-two-stacks.md) – TypeScript
+* [Balanced brackets](/training/balanced-brackets.md) – JavaScript
+* [Pairs](/training/pairs.md) – TypeScript
 
 ## Questions
 * [01-reverse-number](/questions/01-reverse-number.md) – Java, all languages
