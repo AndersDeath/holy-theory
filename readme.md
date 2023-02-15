@@ -48,6 +48,7 @@
 * [Find the median](/training/find-the-median.md) – TypeScript
 * [Merge two sorted linked lists](/training/merge-two-sorted-linked-lists.md) – TypeScript
 * [Queue using two stacks](/training/queue-using-two-stacks.md) – TypeScript
+* [Balanced brackets](/training/balanced-brackets.md) – JavaScript
 
 ## Questions
 * [01-reverse-number](/questions/01-reverse-number.md) – Java, all languages
