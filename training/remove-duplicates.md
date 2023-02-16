@@ -1,4 +1,4 @@
-# Even number of digits
+# Remove duplicates
 
 ```java
 class Solution {

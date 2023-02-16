@@ -13,6 +13,9 @@ All notable changes to this project will be documented in this file.
 - add queue using two stacks training in TypeScript
 - add balanced brackets training in JavaScript
 - add pairs training in TypeScript
+- add tree data structure
+- update hash table data structure
+- add remove duplicate words training in TypeScript
 
 ## [0.0.4] - 2023-02-13
 - add reverse words training in TypeScript
