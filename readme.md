@@ -51,6 +51,7 @@
 * [Queue using two stacks](/training/queue-using-two-stacks.md) – TypeScript
 * [Balanced brackets](/training/balanced-brackets.md) – JavaScript
 * [Pairs](/training/pairs.md) – TypeScript
+* [Remove duplicate words](/training/remove-duplicate-words.md) – TypeScript
 
 ## Questions
 * [01-reverse-number](/questions/01-reverse-number.md) – Java, all languages
