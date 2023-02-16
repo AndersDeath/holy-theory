@@ -1,4 +1,5 @@
 # Hash table
+![Hash table](./hash-table.png)
 
 ```typescript
 const superPrimitiveHashingFunc = (string: string) => {
