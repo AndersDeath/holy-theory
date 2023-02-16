@@ -17,6 +17,7 @@
 * [Set](/structures/set.md) – TypeScript
 * [Stack](/structures/stack.md) – TypeScript
 * [Linked List](/structures/linked-list.md) – TypeScript
+* [Tree](/structures/tree.md)
 
 ## Algorithms
 
