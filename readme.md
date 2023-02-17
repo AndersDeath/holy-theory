@@ -53,6 +53,8 @@
 * [Pairs](/training/pairs.md) – TypeScript
 * [Remove duplicate words](/training/remove-duplicate-words.md) – TypeScript
 * [Binary tree in order traversal](/training/binary-tree-in-order-traversal.md) – Java
+* [Primes upon to n](/training/primes-upon-to-n.md) – Java
+
 ## Questions
 * [01-reverse-number](/questions/01-reverse-number.md) – Java, all languages
 
