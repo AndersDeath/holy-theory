@@ -17,6 +17,7 @@ All notable changes to this project will be documented in this file.
 - update hash table data structure
 - add remove duplicate words training in TypeScript
 - update stack data structure in Java
+- add binary tree in order traversal training in Java
 
 ## [0.0.4] - 2023-02-13
 - add reverse words training in TypeScript
