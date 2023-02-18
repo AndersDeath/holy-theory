@@ -30,7 +30,8 @@
 * [Quick sort](/algorithms/quick-sort.md) – Java, Python
 * [Symmetric difference](/algorithms/symmetric-difference.md) – TypeScript
 * [Binary search](/algorithms/binary-search.md) – TypeScript
-* [Binary tree in order traversal](/algorithms/binary-tree-in-order-traversal.md) – Java
+* [Binary tree inorder traversal](/algorithms/binary-tree-in-order-traversal.md) – Java
+* [Binary tree preoder traversal](/algorithms/binary-tree-preorder-traversal.md) – Java
 
 ## Training
 
