@@ -57,7 +57,7 @@
 
 ## Questions
 * [01-reverse-number](/questions/01-reverse-number.md) – Java, all languages
-
+* [02-big-o](/questions/02-big-o.md)
 ## System design
 
 * [01-horizontal-vertical-scaling](/system-design/01-horizontal-vertical-scaling.md)

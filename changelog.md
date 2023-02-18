@@ -19,6 +19,7 @@ All notable changes to this project will be documented in this file.
 - update stack data structure in Java
 - add binary tree in order traversal training in Java
 - add primes upon to n training in Java
+- add big o notation question
 
 ## [0.0.4] - 2023-02-13
 - add reverse words training in TypeScript
