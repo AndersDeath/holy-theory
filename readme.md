@@ -32,6 +32,7 @@
 * [Binary search](/algorithms/binary-search.md) – TypeScript
 * [Binary tree inorder traversal](/algorithms/binary-tree-in-order-traversal.md) – Java
 * [Binary tree preoder traversal](/algorithms/binary-tree-preorder-traversal.md) – Java
+* [Binary tree postorder traversal](/algorithms/binary-tree-postorder-traversal.md) – Java
 
 ## Training
 
