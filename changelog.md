@@ -22,6 +22,7 @@ All notable changes to this project will be documented in this file.
 - add big o notation question
 - add binary tree preorder traversal in Java
 - add binary tree postorder traversal in Java
+- add simple text editor training in JavaScript
 
 
 ## [0.0.4] - 2023-02-13
