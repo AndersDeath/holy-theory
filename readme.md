@@ -57,6 +57,8 @@
 * [Remove duplicate words](/training/remove-duplicate-words.md) – TypeScript
 * [Primes upon to n](/training/primes-upon-to-n.md) – Java
 * [Simple text editor](/training/simple-text-editor.md) – JavaScript
+* [Memo](/training/memo.md) – JavaScript
+
 ## Questions
 * [01-reverse-number](/questions/01-reverse-number.md) – Java, all languages
 * [02-big-o](/questions/02-big-o.md)
