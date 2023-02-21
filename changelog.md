@@ -5,6 +5,9 @@ All notable changes to this project will be documented in this file.
 # [0.0.6] - In Progress
 
 - add memo training in JS
+- add interpolation search
+- update binary search
+- update quick sort
 
 # [0.0.5] - 2023-02-20
 - update queue
