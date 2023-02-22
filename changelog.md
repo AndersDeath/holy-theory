@@ -9,6 +9,7 @@ All notable changes to this project will be documented in this file.
 - update binary search
 - update quick sort
 - add big O complexity graph
+- add graph abstract
 
 # [0.0.5] - 2023-02-20
 - update queue
