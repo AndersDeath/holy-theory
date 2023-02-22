@@ -8,6 +8,7 @@ All notable changes to this project will be documented in this file.
 - add interpolation search
 - update binary search
 - update quick sort
+- add big O complexity graph
 
 # [0.0.5] - 2023-02-20
 - update queue
