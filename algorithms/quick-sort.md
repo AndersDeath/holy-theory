@@ -80,8 +80,6 @@ class Solution {
 		}
 		i++;
 		swap(array, i, end);
-	
-		
 		
 		return i;
 	}
