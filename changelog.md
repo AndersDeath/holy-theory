@@ -11,7 +11,8 @@ All notable changes to this project will be documented in this file.
 - add big O complexity graph
 - add graph abstract
 - add bubble sort in Java
-
+- add selection sort in Java
+  
 # [0.0.5] - 2023-02-20
 - update queue
 - update stack
