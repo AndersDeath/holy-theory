@@ -70,6 +70,8 @@
 * [02-CAP Theorem](/system-design/02-cap-theorem.md)
 * [03-How dns resolves ip address](/system-design/03-how-dsn-resovles-ip.md)
 * [04-Single server setup](/system-design/04-single-servier-setup.md)
+* [05-Database + single servers setup](/system-design/05-database-single-servers-setup.md)
+
 
 ## JavaScript
 
