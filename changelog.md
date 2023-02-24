@@ -12,6 +12,11 @@ All notable changes to this project will be documented in this file.
 - add graph abstract
 - add bubble sort in Java
 - add selection sort in Java
+- add how dns resolves ip address
+- add single server setup 
+- add database + single servers setup
+- add load balancer
+- add database replication
   
 # [0.0.5] - 2023-02-20
 - update queue
