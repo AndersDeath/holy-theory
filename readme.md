@@ -60,6 +60,7 @@
 * [Primes upon to n](/training/primes-upon-to-n.md) – Java
 * [Simple text editor](/training/simple-text-editor.md) – JavaScript
 * [Memo](/training/memo.md) – JavaScript
+* [Fibonacci streaming](/training/fibonacci-streaming.md) – TypeScript
 
 ## Questions
 * [01-reverse-number](/questions/01-reverse-number.md) – Java, all languages
