@@ -17,6 +17,7 @@ All notable changes to this project will be documented in this file.
 - add database + single servers setup
 - add load balancer
 - add database replication
+- add fibonacci streaming training in TS
   
 # [0.0.5] - 2023-02-20
 - update queue

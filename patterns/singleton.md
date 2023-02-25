@@ -1,6 +1,6 @@
 # Singleton
 
-```
+```typescript
 const singleton = (function() {
   let instance:any;
 
