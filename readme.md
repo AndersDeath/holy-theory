@@ -74,6 +74,7 @@
 * [05-Database + single servers setup](/system-design/05-database-single-servers-setup.md)
 * [06-Load balancer](/system-design/06-load-balancer.md)
 * [07-Database replication](/system-design/07-database-replication.md)
+* [08-Web tier + Data tier + Load balancer System design](/system-design/08-web-tier-data-tier-load-balancer-system-desing.md)
 
 
 ## JavaScript
