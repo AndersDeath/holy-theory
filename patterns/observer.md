@@ -1,6 +1,6 @@
 # Observer
 
-```
+```typescript
 export class Observer {
     private observers: any[] = [];
 

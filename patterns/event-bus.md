@@ -1,6 +1,6 @@
 # Event Bus
 
-```
+```typescript
 interface IEventBus {
     channels: any,
     subscribe: (arg1: string, listener: (...args: any[]) => void) => void,
