@@ -83,6 +83,7 @@
 * [14-Web tier + Data tier + Load balancer + Cache + CDN stateless System design](/system-design/14-web-tier-data-tier-load-balancer-cache-cdn-stateless-system-design.md)
 * [15-System design with data centers](/system-design/15-system-design-with-data-centres.md)
 * [16-Message queue](/system-design/16-message-queue.md)
+* [17-System design with message queue](/system-design/17-system-design-with-message-queue.md)
 
 ## JavaScript
 
