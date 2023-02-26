@@ -76,7 +76,14 @@
 * [07-Database replication](/system-design/07-database-replication.md)
 * [08-Web tier + Data tier + Load balancer System design](/system-design/08-web-tier-data-tier-load-balancer-system-desing.md)
 * [09-Cache tier](/system-design/09-cache-tier.md)
-
+* [10-CDN workflow](/system-design/10-cdn-workflow.md)
+* [11-Web tier + Data tier + Load balancer + Cache + CDN System design](/system-design/11-web-tier-data-tier-load-balancer-cache-cdn-system-design.md)
+* [12-Stateful architecture](/system-design/12-stateful-architecture.md)
+* [13-Stateless architecture](/system-design/13-stateless-architecture.md)
+* [14-Web tier + Data tier + Load balancer + Cache + CDN stateless System design](/system-design/14-web-tier-data-tier-load-balancer-cache-cdn-stateless-system-design.md)
+* [15-System design with data centers](/system-design/15-system-design-with-data-centres.md)
+* [16-Message queue](/system-design/16-message-queue.md)
+* [17-System design with message queue](/system-design/17-system-design-with-message-queue.md)
 
 ## JavaScript
 
