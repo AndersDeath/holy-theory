@@ -82,6 +82,8 @@
 * [13-Stateless architecture](/system-design/13-stateless-architecture.md)
 * [14-Web tier + Data tier + Load balancer + Cache + CDN stateless System design](/system-design/14-web-tier-data-tier-load-balancer-cache-cdn-stateless-system-design.md)
 * [15-System design with data centers](/system-design/15-system-design-with-data-centres.md)
+* [15-Message queue](/system-design/16-message-queue.md)
+
 ## JavaScript
 
 * [Event Loop](/javascript/event-loop.md)

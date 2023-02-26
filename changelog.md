@@ -26,6 +26,7 @@ All notable changes to this project will be documented in this file.
 - add Stateless architecture
 - add Web tier + Data tier + Load balancer + Cache + CDN stateless System design
 - add System design with data centers
+- add Message queue
   
 # [0.0.5] - 2023-02-20
 - update queue
