@@ -80,6 +80,7 @@
 * [11-Web tier + Data tier + Load balancer + Cache + CDN System design](/system-design/11-web-tier-data-tier-load-balancer-cache-cdn-system-design.md)
 * [12-Stateful architecture](/system-design/12-stateful-architecture.md)
 * [13-Stateless architecture](/system-design/13-stateless-architecture.md)
+* [14-web-tier-data-tier-load-balancer-cache-cdn-stateless-system-design](/system-design/14-web-tier-data-tier-load-balancer-cache-cdn-stateless-system-design.md)
 ## JavaScript
 
 * [Event Loop](/javascript/event-loop.md)
