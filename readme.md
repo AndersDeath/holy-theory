@@ -78,6 +78,7 @@
 * [09-Cache tier](/system-design/09-cache-tier.md)
 * [10-CDN workflow](/system-design/10-cdn-workflow.md)
 * [11-Web tier + Data tier + Load balancer + Cache + CDN System design](/system-design/11-web-tier-data-tier-load-balancer-cache-cdn-system-design.md)
+* [12-Stateful architecture](/system-design/12-stateful-architecture.md)
 ## JavaScript
 
 * [Event Loop](/javascript/event-loop.md)
