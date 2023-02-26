@@ -76,7 +76,7 @@
 * [07-Database replication](/system-design/07-database-replication.md)
 * [08-Web tier + Data tier + Load balancer System design](/system-design/08-web-tier-data-tier-load-balancer-system-desing.md)
 * [09-Cache tier](/system-design/09-cache-tier.md)
-
+* [10-CDN workflow](/system-design/10-cdn-workflow.md)
 
 ## JavaScript
 
