@@ -2,16 +2,20 @@
 
 ```java
 class Solution {
-    int[][] adjListToMatrix(int n, ArrayList<Integer>[] adjList) {
-		int [][] matrix = new int[n][n];
-
+    ArrayList<Integer>[] matrixToAdjList(int n, int[][] matrix) {
+        ArrayList<Integer>[] adjList = new ArrayList [n];
 		for(int i = 0; i < n; i++) {
-			for(int j = 0; j < adjList[i].size(); j++) {
-				matrix[i][adjList[i].get(j)] = 1;
-			}
+			adjList[i] = new ArrayList<Integer>();
 		}
 		
-		return matrix;
+		for(int i = 0; i < n; i++) {
+			for(int j = 0; j < n; j++) {
+				if(matrix[i][j] == 1) {
+					adjList[i].add(j);
+				}
+			}
+		}
+		return adjList;
     }
 }
 ```
