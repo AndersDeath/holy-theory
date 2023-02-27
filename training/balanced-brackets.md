@@ -34,7 +34,7 @@ function isBalanced(s) {
    return stack.length === 0 ? 'YES' : 'NO'
 }
 
-,,,
+```
 
 ** Source: http://hackerrank.com**
 * [Go back](../readme.md)
