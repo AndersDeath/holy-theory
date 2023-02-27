@@ -1,8 +1,9 @@
 # Changelog
 
 All notable changes to this project will be documented in this file.
-
-# [0.0.6] - In Progress
+# [0.0.7] - In Progress
+- 
+# [0.0.6] - 2023-02-27
 
 - add memo training in JS
 - add interpolation search
