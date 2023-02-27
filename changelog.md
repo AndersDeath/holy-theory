@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 # [0.0.7] - In Progress
-- 
+- add Adjacency list to adjacency matrix
 # [0.0.6] - 2023-02-27
 
 - add memo training in JS
