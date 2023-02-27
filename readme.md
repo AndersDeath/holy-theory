@@ -62,6 +62,7 @@
 * [Memo](/training/memo.md) – JavaScript
 * [Fibonacci streaming](/training/fibonacci-streaming.md) – TypeScript
 * [Adjacency list to adjacency matrix](/training/adjacency-list-to-adjacency-matrix.md) – Java
+* [Adjacency matrix to adjacency list](/training/adjacency-matrix-to-adjacency-list.md) – Java
 ## Questions
 * [01-reverse-number](/questions/01-reverse-number.md) – Java, all languages
 * [02-big-o](/questions/02-big-o.md)
