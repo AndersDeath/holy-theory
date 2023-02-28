@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 # [0.0.7] - In Progress
 - add Adjacency list to adjacency matrix training
 - add Adjacency matrix to adjacency list training
+- add Round robing
+- add Sticky round robin
 # [0.0.6] - 2023-02-27
 
 - add memo training in JS
