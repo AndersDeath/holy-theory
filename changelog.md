@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file.
 - add Adjacency matrix to adjacency list training
 - add Round robing
 - add Sticky round robin
+- add Weighted round robin
 # [0.0.6] - 2023-02-27
 
 - add memo training in JS

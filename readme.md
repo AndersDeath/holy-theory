@@ -87,6 +87,7 @@
 * [17-System design with message queue](/system-design/17-system-design-with-message-queue.md)
 * [18-Round robin](/system-design/18-round-robin.md)
 * [19-Sticky round robin](/system-design/19-sticky-round-robin.md)
+* [20-Weighted round robin](/system-design/20-weighted-round-robin.md)
 
 ## JavaScript
 
