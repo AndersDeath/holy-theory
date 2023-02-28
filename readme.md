@@ -90,6 +90,7 @@
 * [20-Weighted round robin](/system-design/20-weighted-round-robin.md)
 * [21-IP/URL hash](/system-design/21-ip-url-hash.md)
 * [22-Least connections](/system-design/22-least-connections.md)
+* [22-Least time](/system-design/23-least-time.md)
 
 ## JavaScript
 
