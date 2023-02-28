@@ -88,6 +88,7 @@
 * [18-Round robin](/system-design/18-round-robin.md)
 * [19-Sticky round robin](/system-design/19-sticky-round-robin.md)
 * [20-Weighted round robin](/system-design/20-weighted-round-robin.md)
+* [21-IP/URL hash](/system-design/21-ip-url-hash.md)
 
 ## JavaScript
 

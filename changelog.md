@@ -7,6 +7,7 @@ All notable changes to this project will be documented in this file.
 - add Round robing
 - add Sticky round robin
 - add Weighted round robin
+- add IP/URL hash
 # [0.0.6] - 2023-02-27
 
 - add memo training in JS
