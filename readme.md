@@ -65,7 +65,10 @@
 * [Adjacency matrix to adjacency list](/training/adjacency-matrix-to-adjacency-list.md) – Java
 * [Longest Substring Without Repeating Characters](/training/longest-substring-without-repeating-characters.md) – TypeScript
 * [Add Two Numbers](./training/add-two-number.md) – TypeScript
-## Questions
+* [Valid parentheses](./training/valid-parentheses.md) – TypeScript
+* [Longest common prefix](./training/longest-common-prefix.md) – TypeScript
+* [Median of two sorted arrays](./training/median-of-two-sorted-arrays.md) – TypeScript
+## Question
 * [01-reverse-number](/questions/01-reverse-number.md) – Java, all languages
 * [02-big-o](/questions/02-big-o.md)
 ## System design
