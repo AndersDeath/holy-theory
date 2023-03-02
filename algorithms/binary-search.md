@@ -1,5 +1,7 @@
 # Binary search
 
+![Binary search](./binary-search.png)
+
 Steps:
 
 Step 1 - Read the search element from the user.
