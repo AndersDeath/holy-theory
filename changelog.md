@@ -13,7 +13,8 @@ All notable changes to this project will be documented in this file.
 - add Longest Substring Without Repeating Characters training
 - add Add Two Numbers training
 - add Binary search scheme
-- add Valid parentheses in TS
+- add Valid parentheses training in TS
+- add Longest common prefix training in TS
 # [0.0.6] - 2023-02-27
 
 - add memo training in JS
