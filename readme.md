@@ -67,6 +67,7 @@
 * [Add Two Numbers](./training/add-two-number.md) – TypeScript
 * [Valid parentheses](./training/valid-parentheses.md) – TypeScript
 * [Longest common prefix](./training/longest-common-prefix.md) – TypeScript
+* [Median of two sorted arrays](./training/median-of-two-sorted-arrays.md) – TypeScript
 ## Question
 * [01-reverse-number](/questions/01-reverse-number.md) – Java, all languages
 * [02-big-o](/questions/02-big-o.md)
