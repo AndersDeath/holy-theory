@@ -69,6 +69,7 @@
 * [Longest common prefix](./training/longest-common-prefix.md) – TypeScript
 * [Median of two sorted arrays](./training/median-of-two-sorted-arrays.md) – TypeScript
 * [Search insert position](./training/search-intest-position.md) – TypeScript
+* [Climbing stairs](./training/climbing-stairs.md) – TypeScript
 ## Question
 * [01-reverse-number](/questions/01-reverse-number.md) – Java, all languages
 * [02-big-o](/questions/02-big-o.md)
