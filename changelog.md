@@ -16,6 +16,7 @@ All notable changes to this project will be documented in this file.
 - add Valid parentheses training in TS
 - add Longest common prefix training in TS
 - add Median of two sorted arrays in TS
+- add another solution for Merge two sorted linked lists
 # [0.0.6] - 2023-02-27
 
 - add memo training in JS
