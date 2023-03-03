@@ -71,6 +71,7 @@
 * [Search insert position](./training/search-intest-position.md) – TypeScript
 * [Climbing stairs](./training/climbing-stairs.md) – TypeScript
 * [Same tree](./training/same-tree.md) – TypeScript
+* [Find the Index of the First Occurrence in a String](./training/find-the-index-of-the-first-occurrence-in-a-tring.md) – TypeScript
 ## Question
 * [01-reverse-number](/questions/01-reverse-number.md) – Java, all languages
 * [02-big-o](/questions/02-big-o.md)
