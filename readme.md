@@ -104,3 +104,4 @@
 ## JavaScript
 
 * [Event Loop](/javascript/event-loop.md)
+* [JavaScript number size summary](./javascript/javascript-number-size-summary.md)
