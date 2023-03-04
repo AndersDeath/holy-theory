@@ -21,6 +21,7 @@ All notable changes to this project will be documented in this file.
 - add Climbing stairs training in TS
 - add Same tree training in TS
 - add Find the Index of the First Occurrence in a String training in TS
+- add JavaScript number size summary
 # [0.0.6] - 2023-02-27
 
 - add memo training in JS
