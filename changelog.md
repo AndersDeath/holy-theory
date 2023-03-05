@@ -23,6 +23,7 @@ All notable changes to this project will be documented in this file.
 - add Find the Index of the First Occurrence in a String training in TS
 - add JavaScript number size summary
 - add Array length property JS
+- add JS data types
 # [0.0.6] - 2023-02-27
 
 - add memo training in JS
