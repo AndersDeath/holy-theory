@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 
 # [0.0.8] - In Progress
 
+* add times function in JS
+
 # [0.0.7] - 2023-03-06
 - add Adjacency list to adjacency matrix training
 - add Adjacency matrix to adjacency list training
