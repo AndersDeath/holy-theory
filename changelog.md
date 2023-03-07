@@ -5,6 +5,9 @@ All notable changes to this project will be documented in this file.
 # [0.0.8] - In Progress
 
 * add times function in JS
+* add chain calculator in JS
+* add Inventory update training in JS
+* add Curry function
 
 # [0.0.7] - 2023-03-06
 * add Adjacency list to adjacency matrix training
