@@ -22,7 +22,7 @@ class Solution {
 		return count;
 	}
 }
-,,,
+```
 
 * [Go back](../readme.md)
 
