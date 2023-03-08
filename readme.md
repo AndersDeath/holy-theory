@@ -36,6 +36,7 @@
 * [Binary tree postorder traversal](/algorithms/binary-tree-postorder-traversal.md) – Java
 * [Interpolation search](/algorithms/interpolation-search.md) – Java
 * [Graph adjacency matrix](./algorithms/graph-adjacency-matrix.md) – Java
+* [Graph adjacency list]('./algorithms/graph-adjacency-list.md') – Java
 
 ## Training
 

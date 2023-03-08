@@ -9,6 +9,7 @@ All notable changes to this project will be documented in this file.
 * add Inventory update training in JS
 * add Curry function
 * add Graph adjacency matrix
+* add Graph adjacency list
 
 # [0.0.7] - 2023-03-06
 * add Adjacency list to adjacency matrix training
