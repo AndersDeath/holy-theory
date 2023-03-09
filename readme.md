@@ -78,6 +78,7 @@
 * [Chain calculator](./training/chain-calculator.md) – JavaScript
 * [Inventory update](./training/inventory-update.md) – JavaScript
 * [Curry function](./training/curry-finction.md) – TypeScript
+* [Longest palindrome](./training/longest-palindrome.md) – TypeScript
 ## Question
 * [01-reverse-number](/questions/01-reverse-number.md) – Java, all languages
 * [02-big-o](/questions/02-big-o.md)
