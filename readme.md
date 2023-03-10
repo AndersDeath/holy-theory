@@ -84,6 +84,7 @@
 * [02-big-o](/questions/02-big-o.md)
 * [03-oop-principles](/questions/03-oop-principles.md)
 * [04-restful-api-methods](/questions/04-restful-api-methods.md)
+* [05-types-of-databases](/questions/05-types-of-databases.md)
 ## System design
 
 * [01-horizontal-vertical-scaling](/system-design/01-horizontal-vertical-scaling.md)
