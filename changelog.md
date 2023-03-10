@@ -12,6 +12,7 @@ All notable changes to this project will be documented in this file.
 * add Graph adjacency list
 * add OOP principles
 * add longest palindrome training in TS
+* add RESTful api methods
 
 # [0.0.7] - 2023-03-06
 * add Adjacency list to adjacency matrix training
