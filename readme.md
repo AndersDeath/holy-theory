@@ -79,6 +79,7 @@
 * [Inventory update](./training/inventory-update.md) – JavaScript
 * [Curry function](./training/curry-finction.md) – TypeScript
 * [Longest palindrome](./training/longest-palindrome.md) – TypeScript
+* [Longest Palindromic Substring](./training/longest-palindromic-substring.md) – TypeScript
 ## Question
 * [01-reverse-number](/questions/01-reverse-number.md) – Java, all languages
 * [02-big-o](/questions/02-big-o.md)
