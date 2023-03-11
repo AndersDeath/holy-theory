@@ -79,12 +79,16 @@
 * [Inventory update](./training/inventory-update.md) – JavaScript
 * [Curry function](./training/curry-finction.md) – TypeScript
 * [Longest palindrome](./training/longest-palindrome.md) – TypeScript
+* [Longest Palindromic Substring](./training/longest-palindromic-substring.md) – TypeScript
 ## Question
 * [01-reverse-number](/questions/01-reverse-number.md) – Java, all languages
 * [02-big-o](/questions/02-big-o.md)
 * [03-oop-principles](/questions/03-oop-principles.md)
 * [04-restful-api-methods](/questions/04-restful-api-methods.md)
 * [05-types-of-databases](/questions/05-types-of-databases.md)
+* [06-software-categories](/questions/06-software-categories.md)
+* [07-software-characteristics](/questions/07-software-characteristics.md)
+* [08-sdlc](/questions/08-sdlc.md)
 ## System design
 
 * [01-horizontal-vertical-scaling](/system-design/01-horizontal-vertical-scaling.md)
