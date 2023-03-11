@@ -85,6 +85,7 @@
 * [03-oop-principles](/questions/03-oop-principles.md)
 * [04-restful-api-methods](/questions/04-restful-api-methods.md)
 * [05-types-of-databases](/questions/05-types-of-databases.md)
+* [06-software-categories](/questions/06-software-categories.md)
 ## System design
 
 * [01-horizontal-vertical-scaling](/system-design/01-horizontal-vertical-scaling.md)
