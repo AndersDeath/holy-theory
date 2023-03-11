@@ -14,7 +14,8 @@ All notable changes to this project will be documented in this file.
 * add longest palindrome training in TS
 * add RESTful api methods
 * add Types of Databases
-* add Software categories schemes
+* add Software categories schema
+* add Software characteristics schema
 
 # [0.0.7] - 2023-03-06
 * add Adjacency list to adjacency matrix training
