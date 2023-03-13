@@ -81,6 +81,7 @@
 * [Longest palindrome](./training/longest-palindrome.md) – TypeScript
 * [Longest Palindromic Substring](./training/longest-palindromic-substring.md) – TypeScript
 * [Promises sequence]('./training/promises-sequence.md') – TypeScript
+* [Remove element in place]('./training/remove-element-in-place.md') – TypeScript
 ## Question
 * [01-reverse-number](/questions/01-reverse-number.md) – Java, all languages
 * [02-big-o](/questions/02-big-o.md)

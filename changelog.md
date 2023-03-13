@@ -19,6 +19,7 @@ All notable changes to this project will be documented in this file.
 * add Software development life cycle schema
 * add Longest Palindromic Substring in TS
 * add Promises sequence
+* add Remove element in place training in TS
 
 # [0.0.7] - 2023-03-06
 * add Adjacency list to adjacency matrix training
