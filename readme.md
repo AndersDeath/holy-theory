@@ -115,7 +115,8 @@
 * [20-Weighted round robin](/system-design/20-weighted-round-robin.md)
 * [21-IP/URL hash](/system-design/21-ip-url-hash.md)
 * [22-Least connections](/system-design/22-least-connections.md)
-* [22-Least time](/system-design/23-least-time.md)
+* [23-Least time](/system-design/23-least-time.md)
+* [24-Simplified Continuous integration flow](/system-design/24-simplified-continious-integration-flow.md)
 
 ## JavaScript
 
