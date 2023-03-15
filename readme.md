@@ -83,6 +83,7 @@
 * [Promises sequence]('./training/promises-sequence.md') – TypeScript
 * [Remove element in place]('./training/remove-element-in-place.md') – TypeScript
 * [Swap Nodes in Pairs]['./training/swap-nodes-in-pairs.md'] – TypeScript
+* [Length of Last Word]['./training/length-of-last-word.md'] – TypeScript
 ## Question
 * [01-reverse-number](/questions/01-reverse-number.md) – Java, all languages
 * [02-big-o](/questions/02-big-o.md)
