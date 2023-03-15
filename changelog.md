@@ -3,7 +3,12 @@
 All notable changes to this project will be documented in this file.
 
 # [0.0.9] - In Progress
--
+- add Simplified Continuous integration flow
+- add Swap Nodes in Pairs training
+- add Length of Last Word training
+- add Symmetric Tree training
+- add Balanced Binary Tree training
+- add Find the Pivot Integer
 # [0.0.8] - 2023-03-13
 
 * add times function in JS

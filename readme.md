@@ -82,6 +82,11 @@
 * [Longest Palindromic Substring](./training/longest-palindromic-substring.md) – TypeScript
 * [Promises sequence]('./training/promises-sequence.md') – TypeScript
 * [Remove element in place]('./training/remove-element-in-place.md') – TypeScript
+* [Swap Nodes in Pairs]('./training/swap-nodes-in-pairs.md') – TypeScript
+* [Length of Last Word]('./training/length-of-last-word.md') – TypeScript
+* [Symmetric Tree]('./training/symmetric-tree.md') – TypeScript
+* [Balanced Binary Tree]('./training/balanced-binary-tree.md') – TypeScript
+* [Find the Pivot Integer]('./training/../../training/find-the-pivot-integer.md') – TypeScript
 ## Question
 * [01-reverse-number](/questions/01-reverse-number.md) – Java, all languages
 * [02-big-o](/questions/02-big-o.md)
@@ -115,7 +120,8 @@
 * [20-Weighted round robin](/system-design/20-weighted-round-robin.md)
 * [21-IP/URL hash](/system-design/21-ip-url-hash.md)
 * [22-Least connections](/system-design/22-least-connections.md)
-* [22-Least time](/system-design/23-least-time.md)
+* [23-Least time](/system-design/23-least-time.md)
+* [24-Simplified Continuous integration flow](/system-design/24-simplified-continious-integration-flow.md)
 
 ## JavaScript
 
