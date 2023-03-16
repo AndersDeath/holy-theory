@@ -88,7 +88,8 @@
 * [Balanced Binary Tree]('./training/balanced-binary-tree.md') – TypeScript
 * [Find the Pivot Integer]('./training/../../training/find-the-pivot-integer.md') – TypeScript
 * [Word search]('./training/word-search.md') – TypeScript
-* [ Generate Parentheses]('./training/generate-parentheses.md') – TypeScript
+* [Generate Parentheses]('./training/generate-parentheses.md') – TypeScript
+* [Binary Tree Inorder Traversal]('./training/binary-tree-inorder-traversal.md') – TypeScript
 ## Question
 * [01-reverse-number](/questions/01-reverse-number.md) – Java, all languages
 * [02-big-o](/questions/02-big-o.md)
