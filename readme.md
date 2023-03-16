@@ -87,6 +87,7 @@
 * [Symmetric Tree]('./training/symmetric-tree.md') – TypeScript
 * [Balanced Binary Tree]('./training/balanced-binary-tree.md') – TypeScript
 * [Find the Pivot Integer]('./training/../../training/find-the-pivot-integer.md') – TypeScript
+* [Word search]('./training/word-search.md') – TypeScript
 ## Question
 * [01-reverse-number](/questions/01-reverse-number.md) – Java, all languages
 * [02-big-o](/questions/02-big-o.md)
