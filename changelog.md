@@ -12,6 +12,7 @@ All notable changes to this project will be documented in this file.
 - add Word search training
 - add Generate Parentheses training
 - add Binary Tree Inorder Traversal training
+- add Permutations training
 # [0.0.8] - 2023-03-13
 
 * add times function in JS
