@@ -91,6 +91,7 @@
 * [Generate Parentheses]('./training/generate-parentheses.md') – TypeScript
 * [Binary Tree Inorder Traversal]('./training/binary-tree-inorder-traversal.md') – TypeScript
 * [Permutations]('./training/permutations.md') – TypeScript
+* [Rotate image]('./training/rotate-image.md') – TypeScript
 ## Question
 * [01-reverse-number](/questions/01-reverse-number.md) – Java, all languages
 * [02-big-o](/questions/02-big-o.md)
