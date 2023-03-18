@@ -14,6 +14,7 @@ All notable changes to this project will be documented in this file.
 - add Binary Tree Inorder Traversal training
 - add Permutations training
 - add Rotate image training
+- add Maximum Depth of Binary Tree training
 # [0.0.8] - 2023-03-13
 
 * add times function in JS
