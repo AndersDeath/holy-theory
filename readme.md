@@ -136,3 +136,4 @@
 * [JavaScript number size summary](./javascript/javascript-number-size-summary.md)
 * [Array length property](./javascript/array-length-property.md)
 * [JavaScript data types](./javascript/javascript-data-types.md)
+* [JS Arrays cheat sheet](./javascript/js-arrays-cheat-sheet.md)
