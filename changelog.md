@@ -2,7 +2,9 @@
 
 All notable changes to this project will be documented in this file.
 
-# [0.0.9] - In Progress
+# [0.0.10] - In Progress
+
+# [0.0.9] - 2023-03-20
 - add Simplified Continuous integration flow
 - add Swap Nodes in Pairs training
 - add Length of Last Word training
