@@ -94,6 +94,7 @@
 * [Rotate image]('./training/rotate-image.md') – TypeScript
 * [Maximum Depth of Binary Tree]('./training/maximum-depth-of-binary-tree.md') – TypeScript
 * [Add binary]('./training/add-binary.md') – TypeScript
+* [Plus one](./training/plus-one.md) – TypeScript
 ## Question
 * [01-reverse-number](/questions/01-reverse-number.md) – Java, all languages
 * [02-big-o](/questions/02-big-o.md)

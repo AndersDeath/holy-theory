@@ -3,6 +3,7 @@
 All notable changes to this project will be documented in this file.
 
 # [0.0.10] - In Progress
+- add plus one training in TS
 
 # [0.0.9] - 2023-03-20
 - add Simplified Continuous integration flow
