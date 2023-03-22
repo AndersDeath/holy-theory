@@ -96,6 +96,7 @@
 * [Add binary]('./training/add-binary.md') – TypeScript
 * [Plus one](./training/plus-one.md) – TypeScript
 * [String to integer (atoi)](./training/string-to-integer-atoi.md) – TypeScript
+* [Bit countries](./training/big-countries.md) – SQL
 ## Question
 * [01-reverse-number](/questions/01-reverse-number.md) – Java, all languages
 * [02-big-o](/questions/02-big-o.md)
