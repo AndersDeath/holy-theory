@@ -7,6 +7,7 @@ All notable changes to this project will be documented in this file.
 - add String to integer (atoi) training in TS
 - add big countries training in SQL
 - add Duplicate Emails in SQL
+- add Single Number training in TS
 
 # [0.0.9] - 2023-03-20
 - add Simplified Continuous integration flow
