@@ -95,6 +95,11 @@
 * [Maximum Depth of Binary Tree]('./training/maximum-depth-of-binary-tree.md') – TypeScript
 * [Add binary]('./training/add-binary.md') – TypeScript
 * [Plus one](./training/plus-one.md) – TypeScript
+* [String to integer (atoi)](./training/string-to-integer-atoi.md) – TypeScript
+* [Bit countries](./training/big-countries.md) – SQL
+* [Duplicate Emails](./training/duplicate-emails.md) – SQL
+* [Single Number](./training/single-number.md) – TypeScript
+* [Sqrt(x)](./training/sqrt(x).md) – TypeScript
 ## Question
 * [01-reverse-number](/questions/01-reverse-number.md) – Java, all languages
 * [02-big-o](/questions/02-big-o.md)
@@ -138,3 +143,4 @@
 * [Array length property](./javascript/array-length-property.md)
 * [JavaScript data types](./javascript/javascript-data-types.md)
 * [JS Arrays cheat sheet](./javascript/js-arrays-cheat-sheet.md)
+* [Promise action flow](./javascript/promise-action-flow.md)
