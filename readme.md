@@ -100,6 +100,7 @@
 * [Duplicate Emails](./training/duplicate-emails.md) – SQL
 * [Single Number](./training/single-number.md) – TypeScript
 * [Sqrt(x)](./training/sqrt(x).md) – TypeScript
+* [Reverse bits](./training/reverse-bits.md) – TypeScript
 ## Question
 * [01-reverse-number](/questions/01-reverse-number.md) – Java, all languages
 * [02-big-o](/questions/02-big-o.md)
