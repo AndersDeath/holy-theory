@@ -10,6 +10,7 @@ All notable changes to this project will be documented in this file.
 - add Single Number training in TS
 - add Sqrt(x) training in TS
 - add Promise action flow
+- update add binary
 
 # [0.0.9] - 2023-03-20
 - add Simplified Continuous integration flow

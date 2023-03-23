@@ -30,4 +30,8 @@ var addBinary = function(a, b) {
 };
 
 ```
+
+Time complexity: O(n)
+Space complexity: O(n)
+
 * [Go back](../readme.md)
