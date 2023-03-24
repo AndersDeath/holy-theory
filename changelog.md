@@ -12,6 +12,7 @@ All notable changes to this project will be documented in this file.
 - add Promise action flow
 - update add binary
 - add Reverse bits training
+- add selection sort scheme
 
 # [0.0.9] - 2023-03-20
 - add Simplified Continuous integration flow
