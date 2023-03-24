@@ -145,3 +145,5 @@
 * [JavaScript data types](./javascript/javascript-data-types.md)
 * [JS Arrays cheat sheet](./javascript/js-arrays-cheat-sheet.md)
 * [Promise action flow](./javascript/promise-action-flow.md)
+* [Possible types of function in JS](./javascript/possible-types-of-functions-in-js.md)
+* [Different ways of declaring functions in JS](./javascript/different-ways-of-declaring-a-function-in-js.md)
