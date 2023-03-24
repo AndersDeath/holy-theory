@@ -1,5 +1,8 @@
-
 # Selection sort
+
+![Selection sort](./selection-sort.png)
+
+
 ```typescript
 function selectionSort(array: any[]) {
   for (let i = 0; i < array.length - 1; i++) {
