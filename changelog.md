@@ -13,6 +13,7 @@ All notable changes to this project will be documented in this file.
 - update add binary
 - add Reverse bits training
 - add selection sort scheme
+- add Possible types of function in JS
 
 # [0.0.9] - 2023-03-20
 - add Simplified Continuous integration flow
