@@ -17,6 +17,7 @@ All notable changes to this project will be documented in this file.
 - add Different ways of declaring functions in JS
 - add Linked List Cycle training in TS
 - add Merge Sorted Array training in TS
+- add Convert Sorted Array to Binary Search Tree in TS
 
 # [0.0.9] - 2023-03-20
 - add Simplified Continuous integration flow
