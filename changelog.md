@@ -2,7 +2,9 @@
 
 All notable changes to this project will be documented in this file.
 
-# [0.0.10] - In Progress
+# [0.0.11] - In progress
+-
+# [0.0.10] - 2023-03-27
 - add plus one training in TS
 - add String to integer (atoi) training in TS
 - add big countries training in SQL

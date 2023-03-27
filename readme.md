@@ -150,3 +150,6 @@
 * [Promise action flow](./javascript/promise-action-flow.md)
 * [Possible types of function in JS](./javascript/possible-types-of-functions-in-js.md)
 * [Different ways of declaring functions in JS](./javascript/different-ways-of-declaring-a-function-in-js.md)
+
+
+[Eleventy alpha version ](https://eleventy-vladimir-test.netlify.app/)
