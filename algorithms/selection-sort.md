@@ -34,4 +34,26 @@ console.log(selectionSort([1, 4, 2, 8, 345, 123, 43, 32, 5643, 63, 123, 43, 2, 5
 	}
 ```
 
+```python
+print('This is selection sort')
+
+def find_smallest(arr):
+    smallest = arr[0]
+    smallest_index = 0
+    for i in range(1, len(arr)):
+        if arr[i] < smallest:
+            smallest = arr[i]
+            smallest_index = i
+    return smallest_index
+
+def selection_sort(arr):
+    newArr = []
+    for i in range(len(arr)):
+        smallest = find_smallest(arr)
+        newArr.append(arr.pop(smallest))
+    return newArr
+
+print(selection_sort([5,4,6,2,1,123, 2, 3,1,23 ,1,1,]))
+```
+
 * [Go back](../readme.md)

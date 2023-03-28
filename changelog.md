@@ -3,39 +3,40 @@
 All notable changes to this project will be documented in this file.
 
 # [0.0.11] - In progress
--
+* add Binary search in Python
+* add Selection sort in Python
 # [0.0.10] - 2023-03-27
-- add plus one training in TS
-- add String to integer (atoi) training in TS
-- add big countries training in SQL
-- add Duplicate Emails in SQL
-- add Single Number training in TS
-- add Sqrt(x) training in TS
-- add Promise action flow
-- update add binary
-- add Reverse bits training
-- add selection sort scheme
-- add Possible types of function in JS
-- add Different ways of declaring functions in JS
-- add Linked List Cycle training in TS
-- add Merge Sorted Array training in TS
-- add Convert Sorted Array to Binary Search Tree in TS
+* add plus one training in TS
+* add String to integer (atoi) training in TS
+* add big countries training in SQL
+* add Duplicate Emails in SQL
+* add Single Number training in TS
+* add Sqrt(x) training in TS
+* add Promise action flow
+* update add binary
+* add Reverse bits training
+* add selection sort scheme
+* add Possible types of function in JS
+* add Different ways of declaring functions in JS
+* add Linked List Cycle training in TS
+* add Merge Sorted Array training in TS
+* add Convert Sorted Array to Binary Search Tree in TS
 
 # [0.0.9] - 2023-03-20
-- add Simplified Continuous integration flow
-- add Swap Nodes in Pairs training
-- add Length of Last Word training
-- add Symmetric Tree training
-- add Balanced Binary Tree training
-- add Find the Pivot Integer
-- add Word search training
-- add Generate Parentheses training
-- add Binary Tree Inorder Traversal training
-- add Permutations training
-- add Rotate image training
-- add Maximum Depth of Binary Tree training
-- add Add binary training
-- add JS Arrays cheat sheet
+* add Simplified Continuous integration flow
+* add Swap Nodes in Pairs training
+* add Length of Last Word training
+* add Symmetric Tree training
+* add Balanced Binary Tree training
+* add Find the Pivot Integer
+* add Word search training
+* add Generate Parentheses training
+* add Binary Tree Inorder Traversal training
+* add Permutations training
+* add Rotate image training
+* add Maximum Depth of Binary Tree training
+* add Add binary training
+* add JS Arrays cheat sheet
 # [0.0.8] - 2023-03-13
 
 * add times function in JS
