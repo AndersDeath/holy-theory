@@ -104,6 +104,8 @@
 * [Linked List Cycle](./training/linked-list-cycle.md) – TypeScript
 * [Merge Sorted Array](./training/merge-sorted-array.md) – TypeScript
 * [Convert Sorted Array to Binary Search Tree](./training/convert-sorted-array-to-binary-search-tree.md) – TypeScript
+* [Pascal triangle](./training/pascal-triangle.md) – Java
+* [Arithmetic sequence](./training/arithmetic-sequence.md) – Java
 ## Question
 * [01-reverse-number](/questions/01-reverse-number.md) – Java, all languages
 * [02-big-o](/questions/02-big-o.md)

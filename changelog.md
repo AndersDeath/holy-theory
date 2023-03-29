@@ -5,6 +5,8 @@ All notable changes to this project will be documented in this file.
 # [0.0.11] - In progress
 * add Binary search in Python
 * add Selection sort in Python
+* add Pascal triangle training in Java
+* add Arithmetic sequence training in Java
 # [0.0.10] - 2023-03-27
 * add plus one training in TS
 * add String to integer (atoi) training in TS
