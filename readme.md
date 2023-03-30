@@ -106,6 +106,7 @@
 * [Convert Sorted Array to Binary Search Tree](./training/convert-sorted-array-to-binary-search-tree.md) – TypeScript
 * [Pascal triangle](./training/pascal-triangle.md) – Java
 * [Arithmetic sequence](./training/arithmetic-sequence.md) – Java
+* [Delete Duplicate Emails](./training/delete-duplicates-emails.md) – SQL
 ## Question
 * [01-reverse-number](/questions/01-reverse-number.md) – Java, all languages
 * [02-big-o](/questions/02-big-o.md)
