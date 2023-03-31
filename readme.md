@@ -107,6 +107,7 @@
 * [Pascal triangle](./training/pascal-triangle.md) – Java
 * [Arithmetic sequence](./training/arithmetic-sequence.md) – Java
 * [Delete Duplicate Emails](./training/delete-duplicates-emails.md) – SQL
+* [Find the Difference](./training/find-the-diffrenece.md) – TypeScript
 ## Question
 * [01-reverse-number](/questions/01-reverse-number.md) – Java, all languages
 * [02-big-o](/questions/02-big-o.md)
