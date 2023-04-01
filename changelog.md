@@ -9,6 +9,7 @@ All notable changes to this project will be documented in this file.
 * add Arithmetic sequence training in Java
 * add Delete Duplicate Emails training in SQL
 * add Find the Difference training in TypeScript
+* add Happy Number training
 # [0.0.10] - 2023-03-27
 * add plus one training in TS
 * add String to integer (atoi) training in TS
