@@ -109,6 +109,7 @@
 * [Delete Duplicate Emails](./training/delete-duplicates-emails.md) – SQL
 * [Find the Difference](./training/find-the-diffrenece.md) – TypeScript
 * [Happy Number](./training/happy-number.md) – TypeScript
+* [Missing number](./training/missing-number.md) – TypeScript
 ## Question
 * [01-reverse-number](/questions/01-reverse-number.md) – Java, all languages
 * [02-big-o](/questions/02-big-o.md)
