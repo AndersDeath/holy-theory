@@ -110,6 +110,7 @@
 * [Find the Difference](./training/find-the-diffrenece.md) – TypeScript
 * [Happy Number](./training/happy-number.md) – TypeScript
 * [Missing number](./training/missing-number.md) – TypeScript
+* [Reverse string](./training/reverse-string.md) – TypeScript
 ## Question
 * [01-reverse-number](/questions/01-reverse-number.md) – Java, all languages
 * [02-big-o](/questions/02-big-o.md)
