@@ -11,6 +11,8 @@ All notable changes to this project will be documented in this file.
 * add Find the Difference training in TypeScript
 * add Happy Number training
 * add Missing number training TypeScript
+* add Reverse string training TypeScript
+
 # [0.0.10] - 2023-03-27
 * add plus one training in TS
 * add String to integer (atoi) training in TS
