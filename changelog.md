@@ -2,7 +2,9 @@
 
 All notable changes to this project will be documented in this file.
 
-# [0.0.11] - In progress
+# [0.0.12] - In progress
+
+# [0.0.11] - 2023-04-03
 * add Binary search in Python
 * add Selection sort in Python
 * add Pascal triangle training in Java
