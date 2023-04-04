@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file.
 * add Number of 1 Bits training in TS
 * add Intersection of two arrays 2 training in TS
 * add Valid Anagram training in TS
+* add Pascal triangle 2 training in TS
 
 # [0.0.11] - 2023-04-03
 * add Binary search in Python
