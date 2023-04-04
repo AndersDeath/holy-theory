@@ -113,6 +113,7 @@
 * [Reverse string](./training/reverse-string.md) – TypeScript
 * [Number of 1 Bits]('./training/number-of-1-bits.md') – TypeScript
 * [Intersection of two arrays 2]('./training/intersection-of-two-arrays-2.md') – TypeScript
+* [Valid Anagram]('./training/valid-anagram.md') – TypeScript
 ## Question
 * [01-reverse-number](/questions/01-reverse-number.md) – Java, all languages
 * [02-big-o](/questions/02-big-o.md)
