@@ -26,10 +26,8 @@
 * [Insertion sort](/algorithms/insertion-sort.md) – TypeScript, Java
 * [Selection sort](/algorithms/selection-sort.md) – TypeScript
 * [Diffie Hellman](/algorithms/bubble-sort.md) – TypeScript
-* [Pairwise](/algorithms/bubble-sort.md) – TypeScript
 * [Merge Sort](/algorithms/merge-sort.md) – Java
 * [Quick sort](/algorithms/quick-sort.md) – Java, Python
-* [Symmetric difference](/algorithms/symmetric-difference.md) – TypeScript
 * [Binary search](/algorithms/binary-search.md) – TypeScript
 * [Binary tree inorder traversal](/algorithms/binary-tree-in-order-traversal.md) – Java
 * [Binary tree preoder traversal](/algorithms/binary-tree-preorder-traversal.md) – Java
@@ -116,6 +114,9 @@
 * [Valid Anagram]('./training/valid-anagram.md') – TypeScript
 * [Pascal triangle 2]('./training/pascal-triangle-2.md') – TypeScript
 * [Intersection of Two Linked Lists]('./training/intersection-of-two-linked-lists.md') –TypeScript
+* [Pairwise](/training/bubble-sort.md) – TypeScript
+* [Symmetric difference](/training/symmetric-difference.md) – TypeScript
+
 ## Question
 * [01-reverse-number](/questions/01-reverse-number.md) – Java, all languages
 * [02-big-o](/questions/02-big-o.md)

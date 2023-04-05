@@ -1,3 +1,8 @@
+---
+title: Graph adjacency matrix
+tags: ['adjacency', 'algorithms', 'graph']
+languages: ['java']
+---
 # Graph adjacency matrix
 
 ```java

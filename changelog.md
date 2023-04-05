@@ -8,6 +8,9 @@ All notable changes to this project will be documented in this file.
 * add Valid Anagram training in TS
 * add Pascal triangle 2 training in TS
 * add Intersection of Two Linked Lists training in TS
+* add metadata to algorithms
+* move Pairwise and Symmetric difference to trainings
+* add metadata to javascript questions
 
 # [0.0.11] - 2023-04-03
 * add Binary search in Python

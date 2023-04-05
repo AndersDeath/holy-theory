@@ -1,3 +1,8 @@
+---
+title: Array length property
+tags: ['question', 'interview']
+languages: ['javascript']
+---
 # Array length property
 What is the value of clothes[0]:
 

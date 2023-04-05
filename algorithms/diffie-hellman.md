@@ -1,6 +1,11 @@
+---
+title: Diffie hellman algorithm
+tags: ['algorithms', 'security', 'encrypt', 'decrypt']
+languages: ['javascript']
+---
 # Diffie hellman algorithm
 
-```
+```javascript
 function power(a: any, b: any, p: any) {
     if(b === 1) {
         return 1

@@ -1,3 +1,8 @@
+---
+title: Graph adjacency list
+tags: ['adjacency', 'algorithms', 'graph']
+languages: ['java']
+---
 # Graph adjacency list
 
 ```java

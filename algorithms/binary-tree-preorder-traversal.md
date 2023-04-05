@@ -1,3 +1,8 @@
+---
+title: Binary tree preorder traversal
+tags: ['traversal', 'algorithms', 'binary', 'tree']
+languages: ['java']
+---
 # Binary tree preorder traversal
 
 ```java

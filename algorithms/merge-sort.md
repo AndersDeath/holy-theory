@@ -1,3 +1,8 @@
+---
+title: Merge sort
+tags: ['algorithms', 'merge', 'sort']
+languages: ['java']
+---
 # Merge sort
 
 ## Java

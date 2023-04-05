@@ -1,3 +1,8 @@
+---
+title: Bubble sort
+tags: ['algorithms', 'bubble', 'sort']
+languages: ['typescript', 'java']
+---
 # Bubble sort
 
 ```typescript

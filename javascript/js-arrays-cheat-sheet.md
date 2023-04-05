@@ -1,6 +1,11 @@
-# JS Arrays cheat sheet
+---
+title: JavaScript Arrays cheat sheet
+tags: ['question', 'interview']
+languages: ['javascript']
+---
+# JavaScript Arrays cheat sheet
 
-![JS Arrays cheat sheet](./js-arrays-cheat-sheet.png)
+![JavaScript Arrays cheat sheet](./js-arrays-cheat-sheet.png)
 
 
 * [Go back](../readme.md)
