@@ -1,6 +1,10 @@
-
+---
+title: Pairwise
+tags: ['algorithms', 'merge', 'sort']
+languages: ['typescript']
+---
 # Pairwise
-```
+```typescript
 export function pairwise(arr:number[], arg:number) {
     const index = [];
 

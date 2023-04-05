@@ -1,3 +1,8 @@
+---
+title: Selection sort
+tags: ['algorithms', 'selection', 'sort']
+languages: ['java', 'typescript', 'python']
+---
 # Selection sort
 
 ![Selection sort](./selection-sort.png)

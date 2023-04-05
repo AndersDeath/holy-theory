@@ -1,3 +1,8 @@
+---
+title: Binary tree postorder traversal
+tags: ['traversal', 'algorithms', 'binary', 'tree']
+languages: ['java']
+---
 # Binary tree postorder traversal
 
 ```java

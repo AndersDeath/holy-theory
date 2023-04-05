@@ -1,3 +1,8 @@
+---
+title: Binary search
+tags: ['search', 'algorithms', 'binary']
+languages: ['typescript', 'java', 'python']
+---
 # Binary search
 
 ![Binary search](./binary-search.png)

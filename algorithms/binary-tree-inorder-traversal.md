@@ -1,3 +1,8 @@
+---
+title: Binary tree in order traversal
+tags: ['traversal', 'algorithms', 'binary', 'tree']
+languages: ['java']
+---
 # Binary tree in order traversal
 
 ```java

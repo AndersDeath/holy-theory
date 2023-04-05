@@ -1,8 +1,11 @@
+---
+title: Insertion sort
+tags: ['algorithms', 'insertion', 'sort']
+languages: ['typescript', 'java']
+---
 # Insertion sort
-
-
 ## TypeScript
-```ts
+```typescript
 function insertionSort(array: number[] | string[]) {
     for (let i = 1; i < array.length; i++) {
         let curr = array[i];

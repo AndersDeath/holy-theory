@@ -1,3 +1,8 @@
+---
+title: Interpolation search
+tags: ['algorithms', 'interpolation', 'search']
+languages: ['java']
+---
 # Interpolation search
 
 ```java

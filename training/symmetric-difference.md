@@ -1,4 +1,8 @@
-
+---
+title: Symmetric difference
+tags: ['algorithms']
+languages: ['typescript']
+---
 # Symmetric difference
 ```typescript
 export const symmetricDifference = (...args: any) => [...new Set(args.reduce((arr1: any, arr2: any) => [
