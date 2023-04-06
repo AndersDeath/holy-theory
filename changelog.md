@@ -13,6 +13,7 @@ All notable changes to this project will be documented in this file.
 * add metadata to javascript questions
 * add Contains Duplicate training in TS
 * add Path Sum training in TS
+* add Best Time to Buy and Sell Stock training in TS
 
 # [0.0.11] - 2023-04-03
 * add Binary search in Python

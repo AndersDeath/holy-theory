@@ -118,6 +118,7 @@
 * [Symmetric difference](/training/symmetric-difference.md) – TypeScript
 * [Contains Duplicate](./training/contains-duplicates.md) – TypeScript
 * [Path Sum](./training/path-sum.md) – TypeScript
+* [Best Time to Buy and Sell Stock](./training/best-time-to-buy-and-sell-stock.md) – TypeScript
 
 ## Question
 * [01-reverse-number](/questions/01-reverse-number.md) – Java, all languages
