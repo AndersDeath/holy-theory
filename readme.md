@@ -116,6 +116,7 @@
 * [Intersection of Two Linked Lists]('./training/intersection-of-two-linked-lists.md') –TypeScript
 * [Pairwise](/training/bubble-sort.md) – TypeScript
 * [Symmetric difference](/training/symmetric-difference.md) – TypeScript
+* [Contains Duplicate](./training/contains-duplicates.md) – TypeScript
 
 ## Question
 * [01-reverse-number](/questions/01-reverse-number.md) – Java, all languages
