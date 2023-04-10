@@ -1,3 +1,8 @@
+---
+title: OOP Principles
+tags: ['question', 'interview', 'theory', 'computer-science']
+languages: ['']
+---
 # OOP Principles
 
 ## Abstraction

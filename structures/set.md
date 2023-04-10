@@ -1,7 +1,7 @@
 
 # Set
 
-```
+```typescript
 export class Set {
     private dictionary: any = {}
     private length = 0

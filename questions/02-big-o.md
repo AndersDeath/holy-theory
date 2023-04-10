@@ -1,3 +1,8 @@
+---
+title: Big O
+tags: ['question', 'interview', 'theory', 'computer-science']
+languages: ['']
+---
 # Big O
 
 ![Big O](./02-big-o.png)

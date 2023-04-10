@@ -1,3 +1,8 @@
+---
+title: How to reverse a number?
+tags: ['question', 'interview']
+languages: ['java']
+---
 # How to reverse a number?
 
 To invert a number in Java, you need to divide the number by 10 in the loop until it equals 0. And in the body of the loop find the remainder of the division by 10 and add to the result from the previous step, increased by a factor of 10.

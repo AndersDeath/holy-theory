@@ -17,6 +17,7 @@ All notable changes to this project will be documented in this file.
 * add Majority Element training in TS
 * add Palindrome linked list in TS
 * add Move Zeroes training in TS
+* add metadata to questions
 
 # [0.0.11] - 2023-04-03
 * add Binary search in Python
