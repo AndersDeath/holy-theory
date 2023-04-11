@@ -122,6 +122,7 @@
 * [Majority Element](./training/majority-element.md) – TypeScript
 * [Palindrome linked list](./training/palindrome-linked-list.md) – TypeScript
 * [Move Zeroes](./training/move-zerod.md) – TypeScript
+* [First Unique Character in a String](./training/first-unique-character-in-a-string.md) – TypeScript
 
 ## Question
 * [01-reverse-number](/questions/01-reverse-number.md) – Java, all languages

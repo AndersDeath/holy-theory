@@ -4,6 +4,7 @@ All notable changes to this project will be documented in this file.
 
 # [0.0.13] - In Progress
 - add Architectural characteristics
+- add First Unique Character in a String training
 # [0.0.12] - 2023-04-10
 * add Number of 1 Bits training in TS
 * add Intersection of two arrays 2 training in TS
