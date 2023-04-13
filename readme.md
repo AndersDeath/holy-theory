@@ -125,6 +125,7 @@
 * [First Unique Character in a String](./training/first-unique-character-in-a-string.md) – TypeScript
 * [Fizz Buzz](./training/fizz-buzz.md) – TypeScript
 * [Container With Most Water](./training/container-with-most-water.md) – TypeScript
+* [3Sum](./training/3sum.md) – TypeScript
 
 ## Question
 * [01-reverse-number](/questions/01-reverse-number.md) – Java, all languages
