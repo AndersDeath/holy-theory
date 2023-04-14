@@ -8,6 +8,7 @@ All notable changes to this project will be documented in this file.
 - add Fizz Buzz training
 - add Container With Most Water training
 - add 3sum training in TS
+- add Combine Two Tables training in TS
 # [0.0.12] - 2023-04-10
 * add Number of 1 Bits training in TS
 * add Intersection of two arrays 2 training in TS
