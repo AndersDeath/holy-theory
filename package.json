@@ -1,0 +1,28 @@
+{
+  "name": "holy-theory",
+  "version": "0.0.12",
+  "description": "The Book",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndersDeath/holy-theory.git"
+  },
+  "keywords": [
+    "book",
+    "theory",
+    "computer",
+    "science",
+    "traininig",
+    "inteview",
+    "questions"
+  ],
+  "author": "Vladimir Bolshakov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AndersDeath/holy-theory/issues"
+  },
+  "homepage": "https://github.com/AndersDeath/holy-theory#readme"
+}
