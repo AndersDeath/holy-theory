@@ -9,6 +9,7 @@ All notable changes to this project will be documented in this file.
 - add Container With Most Water training
 - add 3sum training in TS
 - add Combine Two Tables training in TS
+- start working on builder
 # [0.0.12] - 2023-04-10
 * add Number of 1 Bits training in TS
 * add Intersection of two arrays 2 training in TS
