@@ -15,14 +15,21 @@
     "theory",
     "computer",
     "science",
-    "traininig",
-    "inteview",
+    "training",
+    "interview",
     "questions"
   ],
-  "author": "Vladimir Bolshakov",
+  "author": {
+    "name": "Vladimir Bolshakov",
+    "email": "andersdeath@gmail.com",
+    "url": "https://github.com/AndersDeath"
+  },
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/AndersDeath/holy-theory/issues"
   },
-  "homepage": "https://github.com/AndersDeath/holy-theory#readme"
+  "homepage": "https://github.com/AndersDeath/holy-theory#readme",
+  "devDependencies": {
+    "parse-md": "^3.0.3"
+  }
 }
