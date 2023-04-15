@@ -1,3 +1,9 @@
+---
+title: Event Bus
+tags: ['question', 'patterns', 'design']
+languages: ['typescript']
+---
+
 # Event Bus
 
 ```typescript

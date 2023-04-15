@@ -1,3 +1,8 @@
+---
+title: Observer
+tags: ['question', 'patterns', 'design']
+languages: ['typescript']
+---
 # Observer
 
 ```typescript
