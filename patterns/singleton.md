@@ -1,3 +1,8 @@
+---
+title: Singleton
+tags: ['question', 'patterns', 'design']
+languages: ['typescript']
+---
 # Singleton
 
 ```typescript
