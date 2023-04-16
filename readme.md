@@ -127,6 +127,7 @@
 * [Container With Most Water](./training/container-with-most-water.md) – TypeScript
 * [3Sum](./training/3sum.md) – TypeScript
 * [Combine Two Tables](./training/combine-two-tables.md) – SQL
+* [Customers Who Never Order](./training/customers-who-never-order.md) – SQL
 
 ## Question
 * [01-reverse-number](/questions/01-reverse-number.md) – Java, all languages
