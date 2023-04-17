@@ -12,6 +12,7 @@ All notable changes to this project will be documented in this file.
 * start working on builder
 * add metadata to patterns
 * add Customers Who Never Order training in SQL
+* add Employees Earning More Than Their Managers training in SQL
 # [0.0.12] - 2023-04-10
 * add Number of 1 Bits training in TS
 * add Intersection of two arrays 2 training in TS
