@@ -1,8 +1,10 @@
 # Changelog
 
 All notable changes to this project will be documented in this file.
+# [0.0.14] - In progress
+* 
 
-# [0.0.13] - In Progress
+# [0.0.13] - 2023-04-17
 * add Architectural characteristics
 * add First Unique Character in a String training
 * add Fizz Buzz training
@@ -12,6 +14,7 @@ All notable changes to this project will be documented in this file.
 * start working on builder
 * add metadata to patterns
 * add Customers Who Never Order training in SQL
+* add Employees Earning More Than Their Managers training in SQL
 # [0.0.12] - 2023-04-10
 * add Number of 1 Bits training in TS
 * add Intersection of two arrays 2 training in TS
