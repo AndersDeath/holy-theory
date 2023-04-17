@@ -1,8 +1,10 @@
 # Changelog
 
 All notable changes to this project will be documented in this file.
+# [0.0.14] - In progress
+* 
 
-# [0.0.13] - In Progress
+# [0.0.13] - 2023-04-17
 * add Architectural characteristics
 * add First Unique Character in a String training
 * add Fizz Buzz training
