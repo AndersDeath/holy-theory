@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 # [0.0.14] - In progress
-* 
+* add Remove Linked List Elements training in TS
 
 # [0.0.13] - 2023-04-17
 * add Architectural characteristics
