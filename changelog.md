@@ -2,7 +2,9 @@
 
 All notable changes to this project will be documented in this file.
 # [0.0.14] - In progress
-* 
+* add Remove Linked List Elements training in TS
+* add Contains Duplicates 2 training in TS
+* update builder
 
 # [0.0.13] - 2023-04-17
 * add Architectural characteristics
