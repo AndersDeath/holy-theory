@@ -1,15 +1,15 @@
-const fs = require('fs');
-const path = require('path');
-const parseMD = require('parse-md');
+import fs from 'fs';
+import path from 'path';
+import parseMD  from 'parse-md';
 
 const folders = [
     'algorithms',
-    'javascript',
-    'patterns',
-    'questions',
-    'structures',
-    'system-design',
-    'training'
+    // 'javascript',
+    // 'patterns',
+    // 'questions',
+    // 'structures',
+    // 'system-design',
+    // 'training'
 ];
 
 const getFiles = (dir) => {
@@ -27,7 +27,15 @@ const getFiles = (dir) => {
 let data = [];
 
 folders.forEach((e) => {
-    data.push(getFiles(path.join('./',e)));;
+    data.push(getFiles(path.join('./',e)));
 })
-
-console.log(data);
+data.forEach((group) => {
+    for (let index = 0; index < group.length; index++) {
+        const item = group[index];
+        const fileContents = fs.readFileSync(item, 'utf8');
+        const { metadata, content } = parseMD(fileContents);
+        console.log(content);
+        break
+        
+    }
+})
