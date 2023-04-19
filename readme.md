@@ -130,6 +130,7 @@
 * [Customers Who Never Order](./training/customers-who-never-order.md) – SQL
 * [Employees Earning More Than Their Managers](./training/employees-earning-more-than-their-managers.md) – SQL
 * [Remove Linked List Elements](./training/remove-linked-list-elements.md) – TypeScript
+* [Contains Duplicates 2](./training/contains-duplicates-2.md) – TypeScript
 
 ## Question
 * [01-reverse-number](/questions/01-reverse-number.md) – Java, all languages
