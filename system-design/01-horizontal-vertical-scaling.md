@@ -1,3 +1,8 @@
+---
+title: Horizontal and vertical scaling
+tags: ['system design']
+languages: ['']
+---
 # Horizontal and vertical scaling
 Scalability refers to an application’s ability to handle and withstand an increased workload without sacrificing latency. An application needs solid computing power to scale well. The servers should be powerful enough to handle increased traffic loads. There are two main ways to scale an application: horizontally and vertically.
 

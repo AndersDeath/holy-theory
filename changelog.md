@@ -5,6 +5,7 @@ All notable changes to this project will be documented in this file.
 * add Remove Linked List Elements training in TS
 * add Contains Duplicates 2 training in TS
 * update builder
+* add metadata to system design section
 
 # [0.0.13] - 2023-04-17
 * add Architectural characteristics
