@@ -1,3 +1,8 @@
+---
+title: Web tier + Data tier + Load balancer + Cache + CDN stateless System design
+tags: ['system design']
+languages: ['']
+---
 ## Web tier + Data tier + Load balancer + Cache + CDN stateless System design
 
 
