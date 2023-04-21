@@ -1,3 +1,8 @@
+---
+title: CDN Workflow
+tags: ['system design']
+languages: ['']
+---
 ## CDN Workflow
 
 ![CDN Workflow](./10-cdn-workflow.png)
