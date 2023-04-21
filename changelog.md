@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file.
 * add Contains Duplicates 2 training in TS
 * update builder
 * add metadata to system design section
+* add Excel Sheet Column Title training in TS
 
 # [0.0.13] - 2023-04-17
 * add Architectural characteristics
