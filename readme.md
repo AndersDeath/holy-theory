@@ -132,6 +132,7 @@
 * [Remove Linked List Elements](./training/remove-linked-list-elements.md) – TypeScript
 * [Contains Duplicates 2](./training/contains-duplicates-2.md) – TypeScript
 * [Excel Sheet Column Title](./training/excel-sheet-column-title.md) – TypeScript
+* [Binary Tree Preorder Traversal](./training/binary-tree-preorder-traversal.md) – TypeScript
 
 ## Question
 * [01-reverse-number](/questions/01-reverse-number.md) – Java, all languages
