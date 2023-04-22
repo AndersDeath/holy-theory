@@ -7,6 +7,8 @@ All notable changes to this project will be documented in this file.
 * update builder
 * add metadata to system design section
 * add Excel Sheet Column Title training in TS
+* add Binary Tree Preorder Traversal in TS
+* add Minimum Depth of Binary Tree in TS
 
 # [0.0.13] - 2023-04-17
 * add Architectural characteristics
