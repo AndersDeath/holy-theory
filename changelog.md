@@ -1,7 +1,11 @@
 # Changelog
 
 All notable changes to this project will be documented in this file.
-# [0.0.14] - In progress
+
+# [0.0.15] - In Progress
+
+
+# [0.0.14] - 2023-04-24
 * add Remove Linked List Elements training in TS
 * add Contains Duplicates 2 training in TS
 * update builder
