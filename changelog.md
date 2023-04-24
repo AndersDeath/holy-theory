@@ -10,6 +10,7 @@ All notable changes to this project will be documented in this file.
 * add Binary Tree Preorder Traversal in TS
 * add Minimum Depth of Binary Tree in TS
 * add Integer to Roman training in TS
+* add Binary Tree Postorder Traversal training in TS
 
 # [0.0.13] - 2023-04-17
 * add Architectural characteristics
