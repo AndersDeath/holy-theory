@@ -139,6 +139,7 @@
 * [Valid Phone Numbers](./training/valid-phone-numbers.md) – Bash
 * [Tenth Line](./training/tenth-line.md) – Bash
 * [Pascal triangle 3](./training/pascal-triangle-3.md) – TypeScript
+* [Rising Temperature](./training/rising-temperature.md) – SQL
 
 ## Question
 * [01-reverse-number](/questions/01-reverse-number.md) – Java, all languages
