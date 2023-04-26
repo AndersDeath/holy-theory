@@ -12,6 +12,6 @@ class Solution {
 		return pascalRow;
 	}
 }
-,,,
+```
 
 * [Go back](../readme.md)

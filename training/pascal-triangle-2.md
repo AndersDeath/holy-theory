@@ -18,6 +18,6 @@ function generate(numRows: number): number[][] {
 		return pascal;
 
 };
-,,,
+```
 
 * [Go back](../readme.md)
