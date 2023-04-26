@@ -138,6 +138,7 @@
 * [Binary Tree Postorder Traversal](./training/binary-tree-postorder-traversal.md) – TypeScript
 * [Valid Phone Numbers](./training/valid-phone-numbers.md) – Bash
 * [Tenth Line](./training/tenth-line.md) – Bash
+* [Pascal triangle 3](./training/pascal-triangle-3.md) – TypeScript
 
 ## Question
 * [01-reverse-number](/questions/01-reverse-number.md) – Java, all languages

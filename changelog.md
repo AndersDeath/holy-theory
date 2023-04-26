@@ -5,6 +5,7 @@ All notable changes to this project will be documented in this file.
 # [0.0.15] - In Progress
 * add Valid Phone Numbers training in Bash
 * add Tenth Line training in Bash
+* add Pascal triangle 3 training in TS
 
 # [0.0.14] - 2023-04-24
 * add Remove Linked List Elements training in TS
