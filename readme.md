@@ -142,6 +142,7 @@
 * [Rising Temperature](./training/rising-temperature.md) – SQL
 * [Isomorphic Strings](./training/isomorphic-string.md) – TypeScript
 * [Implement Stack using Queues](./training/implement-stack-using-queues.md) – TypeScript
+* [Invert Binary Tree](./training/invert-binary-tree.md) – TypeScript
 
 ## Question
 * [01-reverse-number](/questions/01-reverse-number.md) – Java, all languages
