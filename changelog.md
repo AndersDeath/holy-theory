@@ -10,6 +10,7 @@ All notable changes to this project will be documented in this file.
 * add Isomorphic Strings training in TS
 * add Implement Stack using Queues training in TS
 * add Invert Binary Tree training in TS
+* add Summary Ranges training in TS
 
 # [0.0.14] - 2023-04-24
 * add Remove Linked List Elements training in TS
