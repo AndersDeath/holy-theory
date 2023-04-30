@@ -1,3 +1,8 @@
+---
+title: Fizz Buzz
+tags: ['training', 'task']
+languages: ['typescript']
+---
 # Fizz Buzz
 
 ```typescript

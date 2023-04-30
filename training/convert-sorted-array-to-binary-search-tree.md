@@ -1,5 +1,9 @@
+---
+title: Convert Sorted Array to Binary Search Tree
+tags: ['training', 'task', 'tree']
+languages: ['typescript']
+---
 # Convert Sorted Array to Binary Search Tree
-
 
 ```typescript
 

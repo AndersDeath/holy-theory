@@ -1,3 +1,8 @@
+---
+title: Delete Duplicate Emails
+tags: ['training', 'task']
+languages: ['sql']
+---
 # Delete Duplicate Emails
 
 ```sql

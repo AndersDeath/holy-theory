@@ -1,3 +1,8 @@
+---
+title: Curry function
+tags: ['training', 'task']
+languages: ['typescript']
+---
 # Curry function
 
 ```typescript

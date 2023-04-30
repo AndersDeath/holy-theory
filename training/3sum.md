@@ -1,3 +1,8 @@
+---
+title: 3Sum
+tags: ['training', 'task']
+languages: ['typescript']
+---
 # 3Sum
 
 ```typescript

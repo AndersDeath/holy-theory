@@ -1,3 +1,8 @@
+---
+title: Linked List Cycle
+tags: ['training', 'task']
+languages: ['typescript']
+---
 # Linked List Cycle
 
 ```typescript

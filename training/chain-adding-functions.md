@@ -1,3 +1,8 @@
+---
+title: Chain adding functions
+tags: ['training', 'task']
+languages: ['typescript']
+---
 # Chain adding functions
 
 Multiple calls:

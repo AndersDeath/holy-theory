@@ -1,3 +1,8 @@
+---
+title: Contains Duplicates 2
+tags: ['training', 'task']
+languages: ['typescript']
+---
 # Contains Duplicates 2
 
 ```typescript

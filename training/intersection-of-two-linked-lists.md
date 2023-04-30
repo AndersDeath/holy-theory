@@ -1,3 +1,8 @@
+---
+title: Intersection of Two Linked Lists
+tags: ['training', 'task', 'linkedlist']
+languages: ['typescript']
+---
 # Intersection of Two Linked Lists
 
 ```typescript

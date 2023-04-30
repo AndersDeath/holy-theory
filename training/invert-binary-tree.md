@@ -1,3 +1,8 @@
+---
+title: Invert Binary Tree
+tags: ['training', 'task', 'tree']
+languages: ['typescript']
+---
 # Invert Binary Tree
 
 ```typescript

@@ -1,3 +1,8 @@
+---
+title: Find the median
+tags: ['training', 'task']
+languages: ['typescript']
+---
 # Find the median
 
 ```typescript

@@ -1,3 +1,8 @@
+---
+title: Add binary
+tags: ['training', 'task']
+languages: ['typescript']
+---
 # Add binary
 
 ```typescript

@@ -1,3 +1,8 @@
+---
+title: Isomorphic Strings
+tags: ['training', 'task']
+languages: ['typescript']
+---
 # Isomorphic Strings
 
 ```typescript

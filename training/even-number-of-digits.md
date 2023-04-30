@@ -1,4 +1,8 @@
-
+---
+title: Even number of digits
+tags: ['training', 'task']
+languages: ['java']
+---
 # Even number of digits
 ```java
 class Solution {

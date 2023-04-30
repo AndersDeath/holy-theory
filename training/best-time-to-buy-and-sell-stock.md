@@ -1,3 +1,8 @@
+---
+title: Best Time to Buy and Sell Stock
+tags: ['training', 'task']
+languages: ['typescript']
+---
 # Best Time to Buy and Sell Stock
 
 ```typescript

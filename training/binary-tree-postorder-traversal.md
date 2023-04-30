@@ -1,3 +1,8 @@
+---
+title: Binary Tree Postorder Traversal
+tags: ['training', 'task', 'tree']
+languages: ['typescript']
+---
 # Binary Tree Postorder Traversal
 
 ```typescript

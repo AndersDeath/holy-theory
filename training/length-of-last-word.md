@@ -1,3 +1,8 @@
+---
+title: Length of Last Word
+tags: ['training', 'task']
+languages: ['typescript']
+---
 # Length of Last Word
 
 ```typescript

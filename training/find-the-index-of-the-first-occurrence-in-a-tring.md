@@ -1,3 +1,8 @@
+---
+title: Find the Index of the First Occurrence in a String
+tags: ['training', 'task']
+languages: ['typescript']
+---
 # Find the Index of the First Occurrence in a String
 
 ```typescript

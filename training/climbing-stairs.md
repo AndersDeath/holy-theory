@@ -1,3 +1,8 @@
+---
+title: Climbing stairs
+tags: ['training', 'task']
+languages: ['typescript']
+---
 # Climbing stairs
 
 ```typescript

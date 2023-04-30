@@ -1,3 +1,8 @@
+---
+title: Generate Parentheses
+tags: ['training', 'task']
+languages: ['typescript']
+---
 # Generate Parentheses
 
 ```typescript

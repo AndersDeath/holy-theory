@@ -1,3 +1,8 @@
+---
+title: First Unique Character in a String
+tags: ['training', 'task']
+languages: ['typescript']
+---
 # First Unique Character in a String
 
 ```typescript

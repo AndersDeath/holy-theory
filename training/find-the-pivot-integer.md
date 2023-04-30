@@ -1,3 +1,8 @@
+---
+title: Find the Pivot Integer
+tags: ['training', 'task']
+languages: ['typescript']
+---
 # Find the Pivot Integer
 
 ```typescript

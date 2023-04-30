@@ -1,3 +1,8 @@
+---
+title: Cumulative Sum
+tags: ['training', 'task']
+languages: ['java']
+---
 # Cumulative Sum
 
 ```java

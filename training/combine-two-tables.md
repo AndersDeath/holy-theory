@@ -1,3 +1,8 @@
+---
+title: Combine Two Tables
+tags: ['training', 'task']
+languages: ['sql']
+---
 # Combine Two Tables
 
 ```SQL

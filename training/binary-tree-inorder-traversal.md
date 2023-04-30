@@ -1,3 +1,8 @@
+---
+title: Binary Tree Inorder Traversal
+tags: ['training', 'task', 'tree']
+languages: ['typescript']
+---
 # Binary Tree Inorder Traversal
 
 ```typescript
