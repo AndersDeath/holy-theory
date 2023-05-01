@@ -1,3 +1,8 @@
+---
+title: Map
+tags: ['theory', 'structures', 'data structures']
+languages: ['typescript']
+---
 # Map
 
 ```typescript

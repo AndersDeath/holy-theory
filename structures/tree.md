@@ -1,3 +1,8 @@
+---
+title: Tree
+tags: ['theory', 'structures', 'data structures']
+languages: ['javascript']
+---
 # Tree
 ![Tree1](./tree1.png)
 ![Tree2](./tree2.png)

@@ -1,3 +1,8 @@
+---
+title: Priority Queue
+tags: ['theory', 'structures', 'data structures']
+languages: ['typescript']
+---
 # Priority Queue
 
 ![priority-queue](./priority-queue.png)

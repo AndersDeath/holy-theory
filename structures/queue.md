@@ -1,3 +1,8 @@
+---
+title: Queue
+tags: ['theory', 'structures', 'data structures']
+languages: ['typescript']
+---
 # Queue
 
 ![Queue](./queue.png)

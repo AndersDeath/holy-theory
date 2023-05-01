@@ -1,3 +1,8 @@
+---
+title: Linked list
+tags: ['theory', 'structures', 'data structures']
+languages: ['typescript']
+---
 # Linked list
 
 ![Linked List](./linked-list.png)
