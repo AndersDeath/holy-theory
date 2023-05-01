@@ -1,3 +1,8 @@
+---
+title: Reverse array
+tags: ['training', 'task']
+languages: ['typescript']
+---
 # Reverse array
 
 Solution Steps

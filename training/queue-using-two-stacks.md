@@ -1,3 +1,8 @@
+---
+title: Merge two sorted linked lists
+tags: ['training', 'task']
+languages: ['typescript']
+---
 # Merge two sorted linked lists
 ```typescript
 function processData(input) {

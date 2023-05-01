@@ -1,3 +1,8 @@
+---
+title: Time conversion
+tags: ['training', 'task']
+languages: ['typescript']
+---
 # Time conversion
 
 ```typescript

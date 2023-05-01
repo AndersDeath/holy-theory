@@ -1,5 +1,9 @@
+---
+title: Summary Ranges
+tags: ['training', 'task']
+languages: ['typescript']
+---
 # Summary Ranges
-
 
 ```typescript
 function summaryRanges(nums: number[]): string[] {

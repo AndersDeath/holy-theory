@@ -1,3 +1,8 @@
+---
+title: Primes upon to N
+tags: ['training', 'task']
+languages: ['java']
+---
 # Primes upon to N
 
 ```java

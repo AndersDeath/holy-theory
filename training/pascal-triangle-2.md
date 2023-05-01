@@ -1,3 +1,8 @@
+---
+title: Pascal triangle 2
+tags: ['training', 'task']
+languages: ['typescript']
+---
 # Pascal triangle 2
 ```typescript
 

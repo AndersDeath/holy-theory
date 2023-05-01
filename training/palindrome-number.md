@@ -1,4 +1,8 @@
-
+---
+title: Palindrome number
+tags: ['training', 'task']
+languages: ['java']
+---
 # Palindrome number
 ```java
  class Solution {

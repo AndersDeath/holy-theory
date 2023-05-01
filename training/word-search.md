@@ -1,3 +1,8 @@
+---
+title: Word search
+tags: ['training', 'task']
+languages: ['typescript']
+---
 # Word search
 
 ```typescript

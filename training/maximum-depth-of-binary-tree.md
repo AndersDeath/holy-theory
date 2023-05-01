@@ -1,3 +1,8 @@
+---
+title: Maximum Depth of Binary Tree
+tags: ['training', 'task']
+languages: ['typescript']
+---
 # Maximum Depth of Binary Tree
 
 ```typescript

@@ -1,4 +1,8 @@
-
+---
+title: Pairs
+tags: ['training', 'task']
+languages: ['typescript']
+---
 # Pairs
 ```typescript
 function pairs(k: number, arr: number[]): number {
@@ -21,7 +25,7 @@ function pairs(k: number, arr: number[]): number {
 }
 
 }
-,,,
+```
 
 ** Source: http://hackerrank.com**
 * [Go back](../readme.md)

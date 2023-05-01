@@ -1,3 +1,8 @@
+---
+title: Permutations
+tags: ['training', 'task']
+languages: ['typescript']
+---
 # Permutations
 
 ```typescript

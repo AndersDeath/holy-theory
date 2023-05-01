@@ -1,3 +1,8 @@
+---
+title: Missing number
+tags: ['training', 'task']
+languages: ['typescript']
+---
 # Missing number
 
 ```typescript

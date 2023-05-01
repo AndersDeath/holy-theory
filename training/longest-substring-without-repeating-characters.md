@@ -1,4 +1,9 @@
-# Longest Substring Without Repeating Characters	
+---
+title: Longest Substring Without Repeating Characters
+tags: ['training', 'task']
+languages: ['typescript']
+---
+# Longest Substring Without Repeating Characters
 ```typescript
 function lengthOfLongestSubstring(s: string): number {
     if(s.length === 0) return 0;
@@ -22,6 +27,6 @@ function lengthOfLongestSubstring(s: string): number {
     return maxLength;
 
 };
-,,,
+```
 
 * [Go back](../readme.md)

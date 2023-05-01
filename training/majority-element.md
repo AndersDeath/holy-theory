@@ -1,3 +1,8 @@
+---
+title: Majority Element
+tags: ['training', 'task']
+languages: ['typescript']
+---
 # Majority Element
 
 ```typescript

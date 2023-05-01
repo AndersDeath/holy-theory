@@ -1,3 +1,8 @@
+---
+title: Remove duplicates
+tags: ['training', 'task']
+languages: ['java']
+---
 # Remove duplicates
 
 ```java

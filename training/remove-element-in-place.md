@@ -1,3 +1,8 @@
+---
+title: Remove element in place
+tags: ['training', 'task']
+languages: ['typescript']
+---
 # Remove element in place
 
 ```typescript

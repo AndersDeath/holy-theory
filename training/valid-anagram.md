@@ -1,3 +1,8 @@
+---
+title: Valid Anagram
+tags: ['training', 'task']
+languages: ['typescript']
+---
 # Valid Anagram
 
 ```typescript

@@ -1,3 +1,8 @@
+---
+title: Palindrome linked list
+tags: ['training', 'task']
+languages: ['typescript']
+---
 # Palindrome linked list
 
 ```typescript

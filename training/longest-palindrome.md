@@ -1,3 +1,8 @@
+---
+title: Longest palindrome
+tags: ['training', 'task']
+languages: ['typescript']
+---
 # Longest palindrome
 
 ```typescript

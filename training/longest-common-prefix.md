@@ -1,3 +1,8 @@
+---
+title: Longest common prefix
+tags: ['training', 'task']
+languages: ['typescript']
+---
 # Longest common prefix
 ```typescript
 function longestCommonPrefix(strs: string[]): string {

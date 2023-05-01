@@ -1,3 +1,8 @@
+---
+title: Remove Linked List Elements
+tags: ['training', 'task']
+languages: ['typescript']
+---
 # Remove Linked List Elements
 
 ```typescript

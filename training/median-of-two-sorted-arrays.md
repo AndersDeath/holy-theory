@@ -1,3 +1,8 @@
+---
+title: Median of two sorted arrays
+tags: ['training', 'task']
+languages: ['typescript']
+---
 # Median of two sorted arrays
 
 ```typescript

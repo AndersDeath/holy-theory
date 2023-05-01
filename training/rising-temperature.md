@@ -1,3 +1,8 @@
+---
+title: Rising Temperature
+tags: ['training', 'task']
+languages: ['sql']
+---
 # Rising Temperature
 
 ```SQL

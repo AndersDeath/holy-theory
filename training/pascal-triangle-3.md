@@ -1,3 +1,8 @@
+---
+title: Pascal triangle 3
+tags: ['training', 'task']
+languages: ['typescript']
+---
 # Pascal triangle 3 
 ```typescript
 function getRow(rowIndex: number): number[] {

@@ -1,3 +1,8 @@
+---
+title: Search insert position
+tags: ['training', 'task']
+languages: ['typescript']
+---
 # Search insert position
 
 ```typescript

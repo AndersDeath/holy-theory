@@ -1,3 +1,8 @@
+---
+title: Number of 1 Bits
+tags: ['training', 'task']
+languages: ['typescript']
+---
 # Number of 1 Bits
 
 ```typescript

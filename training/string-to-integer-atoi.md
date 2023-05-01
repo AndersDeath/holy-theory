@@ -1,3 +1,8 @@
+---
+title: String to integer (atoi)
+tags: ['training', 'task']
+languages: ['typescript']
+---
 # String to integer (atoi)
 
 ```typescript

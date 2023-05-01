@@ -1,6 +1,6 @@
 ---
 title: Symmetric difference
-tags: ['algorithms']
+tags: ['algorithms','training','task']
 languages: ['typescript']
 ---
 # Symmetric difference
