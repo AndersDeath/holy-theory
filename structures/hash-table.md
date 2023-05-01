@@ -1,3 +1,8 @@
+---
+title: Hash table
+tags: ['theory', 'structures', 'data structures']
+languages: ['typescript']
+---
 # Hash table
 ![Hash table](./hash-table.png)
 

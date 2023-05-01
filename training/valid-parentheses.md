@@ -1,3 +1,8 @@
+---
+title: Valid parentheses
+tags: ['training', 'task']
+languages: ['typescript']
+---
 # Valid parentheses
 
 ```typescript

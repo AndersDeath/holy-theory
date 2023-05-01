@@ -1,3 +1,8 @@
+---
+title: Adjacency list to adjacency matrix
+tags: ['training', 'task', 'matrix', 'graph']
+languages: ['java']
+---
 # Adjacency list to adjacency matrix
 
 ```java

@@ -1,3 +1,8 @@
+---
+title: Single Number
+tags: ['training', 'task']
+languages: ['typescript']
+---
 # Single Number
 
 ```typescript

@@ -1,3 +1,8 @@
+---
+title: Fibonacci streaming 
+tags: ['training', 'task']
+languages: ['typescript']
+---
 # Fibonacci streaming 
 
 ```typescript

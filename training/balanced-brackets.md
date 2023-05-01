@@ -1,3 +1,8 @@
+---
+title: Balanced brackets
+tags: ['training', 'task']
+languages: ['typescript']
+---
 # Balanced brackets
 ```typescript
 

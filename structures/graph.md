@@ -1,3 +1,8 @@
+---
+title: Graph
+tags: ['theory', 'structures', 'data structures']
+languages: ['']
+---
 # Graph
 
 ![Graph](./graph.png)

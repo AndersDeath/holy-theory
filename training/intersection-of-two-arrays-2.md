@@ -1,3 +1,8 @@
+---
+title: Intersection of two arrays 2
+tags: ['training', 'task']
+languages: ['typescript']
+---
 # Intersection of two arrays 2
 
 ```typescript

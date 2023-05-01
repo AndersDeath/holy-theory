@@ -1,3 +1,8 @@
+---
+title: Sqrt(x)
+tags: ['training', 'task']
+languages: ['typescript']
+---
 # Sqrt(x)
 
 ```typescript

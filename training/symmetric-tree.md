@@ -1,3 +1,8 @@
+---
+title: Symmetric Tree
+tags: ['training', 'task']
+languages: ['typescript']
+---
 # Symmetric Tree
 
 ```typescript

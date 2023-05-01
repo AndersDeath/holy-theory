@@ -1,3 +1,8 @@
+---
+title: Add Two Numbers
+tags: ['training', 'task']
+languages: ['typescript']
+---
 # Add Two Numbers
 
 ```typescript

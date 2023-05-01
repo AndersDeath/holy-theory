@@ -1,3 +1,8 @@
+---
+title: Validate pin
+tags: ['training', 'task']
+languages: ['typescript']
+---
 # Validate pin
 
 ```typescript

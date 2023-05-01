@@ -1,8 +1,9 @@
 # Changelog
 
 All notable changes to this project will be documented in this file.
-
-# [0.0.15] - In Progress
+# [0.0.16] - In Progress
+* 
+# [0.0.15] - 2023-05-01
 * add Valid Phone Numbers training in Bash
 * add Tenth Line training in Bash
 * add Pascal triangle 3 training in TS
@@ -12,6 +13,9 @@ All notable changes to this project will be documented in this file.
 * add Invert Binary Tree training in TS
 * add Summary Ranges training in TS
 * update metadata in system design section
+* update metadata in trainings section
+* update metadata in structures section
+* update builder
 
 # [0.0.14] - 2023-04-24
 * add Remove Linked List Elements training in TS

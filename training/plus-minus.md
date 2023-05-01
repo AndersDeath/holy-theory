@@ -1,3 +1,8 @@
+---
+title: Plus minus
+tags: ['training', 'task']
+languages: ['typescript']
+---
 # Plus minus
 
 ```typescript

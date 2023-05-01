@@ -1,3 +1,8 @@
+---
+title: Times function in JS
+tags: ['training', 'task']
+languages: ['javascript']
+---
 # Times function in JS
 
 Sometimes, we often find ourselves in need of running a particular function several times.

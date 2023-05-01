@@ -1,3 +1,8 @@
+---
+title: Stack
+tags: ['theory', 'structures', 'data structures']
+languages: ['typescript', 'java']
+---
 # Stack
 ![Stack](./stack.png)
 

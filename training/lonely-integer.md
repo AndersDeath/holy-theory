@@ -1,3 +1,8 @@
+---
+title: Lonely Integer
+tags: ['training', 'task']
+languages: ['typescript']
+---
 # Lonely Integer
 ```typescript
 function lonelyInteger(a: number[]): number {

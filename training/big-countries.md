@@ -1,3 +1,8 @@
+---
+title: Big countries
+tags: ['training', 'task']
+languages: ['sql']
+---
 # Big countries
 
 ```sql

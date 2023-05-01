@@ -1,3 +1,8 @@
+---
+title: Excel Sheet Column Title
+tags: ['training', 'task']
+languages: ['typescript']
+---
 # Excel Sheet Column Title
 
 ```typescript

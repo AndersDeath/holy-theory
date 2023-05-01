@@ -1,3 +1,8 @@
+---
+title: Valid Phone Numbers
+tags: ['training', 'task']
+languages: ['bash']
+---
 # Valid Phone Numbers
 
 ```bash

@@ -1,3 +1,8 @@
+---
+title: Swap Nodes in Pairs
+tags: ['training', 'task']
+languages: ['typescript']
+---
 # Swap Nodes in Pairs
 
 ```typescript

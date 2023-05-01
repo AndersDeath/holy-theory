@@ -1,5 +1,9 @@
+---
+title: Implement Stack using Queues
+tags: ['training', 'task']
+languages: ['typescript']
+---
 # Implement Stack using Queues
-
 
 ```typescript
 class MyStack {

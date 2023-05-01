@@ -1,3 +1,8 @@
+---
+title: Chain calculator
+tags: ['training', 'task']
+languages: ['typescript']
+---
 # Chain calculator
 
 ```typescript

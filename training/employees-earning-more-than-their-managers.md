@@ -1,3 +1,8 @@
+---
+title: Employees Earning More Than Their Managers
+tags: ['training', 'task']
+languages: ['sql']
+---
 # Employees Earning More Than Their Managers
 
 ```sql

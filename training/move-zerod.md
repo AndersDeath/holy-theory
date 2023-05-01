@@ -1,3 +1,8 @@
+---
+title: Move Zeroes
+tags: ['training', 'task']
+languages: ['typescript']
+---
 # Move Zeroes
 
 ```typescript

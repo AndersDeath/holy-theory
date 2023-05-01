@@ -1,3 +1,8 @@
+---
+title: Path Sum
+tags: ['training', 'task']
+languages: ['typescript']
+---
 # Path Sum
 
 ```typescript

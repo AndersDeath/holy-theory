@@ -1,3 +1,8 @@
+---
+title: Remove duplicate words
+tags: ['training', 'task']
+languages: ['typescript']
+---
 # Remove duplicate words
 
 ```typescript

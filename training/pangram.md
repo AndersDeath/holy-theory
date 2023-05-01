@@ -1,4 +1,8 @@
-
+---
+title: Pangram
+tags: ['training', 'task']
+languages: ['typescript']
+---
 # Pangram
 ```typescript
 function isPangram(string:string){

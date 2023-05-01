@@ -1,3 +1,8 @@
+---
+title: Same tree
+tags: ['training', 'task']
+languages: ['typescript']
+---
 # Same tree
 
 ```typescript

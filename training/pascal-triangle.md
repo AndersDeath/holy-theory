@@ -1,3 +1,8 @@
+---
+title: Pascal triangle
+tags: ['training', 'task']
+languages: ['java']
+---
 # Pascal triangle
 ```java
 class Solution {

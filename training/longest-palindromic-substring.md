@@ -1,4 +1,8 @@
-
+---
+title: Longest Palindromic Substring
+tags: ['training', 'task']
+languages: ['typescript']
+---
 # Longest Palindromic Substring
 
 ```typescript

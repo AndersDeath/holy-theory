@@ -1,3 +1,8 @@
+---
+title: Happy Number
+tags: ['training', 'task']
+languages: ['typescript']
+---
 # Happy Number
 
 ```typescript

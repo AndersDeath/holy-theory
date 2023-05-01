@@ -1,3 +1,8 @@
+---
+title: Inventory update
+tags: ['training', 'task']
+languages: ['typescript']
+---
 # Inventory update
 
 ```typescript

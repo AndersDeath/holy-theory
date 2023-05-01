@@ -1,3 +1,8 @@
+---
+title: Arithmetic sequence
+tags: ['training', 'task']
+languages: ['java']
+---
 # Arithmetic sequence
 
 ```java

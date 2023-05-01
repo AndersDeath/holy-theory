@@ -1,3 +1,8 @@
+---
+title: Binary Tree Preorder Traversal
+tags: ['training', 'task', 'tree']
+languages: ['typescript']
+---
 # Binary Tree Preorder Traversal
 
 ```typescript

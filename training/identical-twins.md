@@ -1,4 +1,8 @@
-
+---
+title: Identical twins
+tags: ['training', 'task']
+languages: ['java']
+---
 # Identical twins
 ```java
 class Solution {

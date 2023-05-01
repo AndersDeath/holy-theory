@@ -1,3 +1,8 @@
+---
+title: Promises sequence
+tags: ['training', 'task']
+languages: ['typescript']
+---
 # Promises sequence
 
 ```typescript

@@ -2,6 +2,33 @@ import fs from 'fs';
 import path from 'path';
 import parseMD  from 'parse-md';
 
+let mainOutput = '';
+let tagsOutput = '';
+let languageOutput = '';
+
+const entity = {
+    meta: {
+        srcPath: "",
+        id: "",
+        tags: [],
+        languages: [],
+        title: "",
+    },
+    body: "",
+    main: {
+        path: "",
+        link: ""
+    },
+    tags: {
+        path: "",
+        link: ""
+    },
+    language: {
+        path: "",
+        link: ""
+    }
+}
+
 const folders = [
     'algorithms',
     // 'javascript',
@@ -34,8 +61,8 @@ data.forEach((group) => {
         const item = group[index];
         const fileContents = fs.readFileSync(item, 'utf8');
         const { metadata, content } = parseMD(fileContents);
-        console.log(content);
-        break
+        console.log(metadata);
+        break;
         
     }
 })

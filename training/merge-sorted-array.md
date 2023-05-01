@@ -1,5 +1,9 @@
+---
+title: Merge Sorted Array
+tags: ['training', 'task']
+languages: ['typescript']
+---
 # Merge Sorted Array
-
 
 ```typescript
 /**

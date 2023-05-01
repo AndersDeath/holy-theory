@@ -1,3 +1,8 @@
+---
+title: Duplicate Emails
+tags: ['training', 'task']
+languages: ['sql']
+---
 # Duplicate Emails
 
 ```sql

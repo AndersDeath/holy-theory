@@ -1,3 +1,8 @@
+---
+title: Customers Who Never Order
+tags: ['training', 'task']
+languages: ['sql']
+---
 # Customers Who Never Order
 
 ```SQL

@@ -1,3 +1,8 @@
+---
+title: Find the Difference
+tags: ['training', 'task']
+languages: ['typescript']
+---
 # Find the Difference
 
 ```typescript

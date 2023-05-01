@@ -1,3 +1,8 @@
+---
+title: Data structures types
+tags: ['theory', 'structures', 'data structures']
+languages: ['']
+---
 # Data structures types
 ![Data structures types](./data-structures-types.png)
 

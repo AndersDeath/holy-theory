@@ -1,5 +1,9 @@
+---
+title: Reverse bits
+tags: ['training', 'task']
+languages: ['typescript']
+---
 # Reverse bits
-
 
 ```typescript
 /**

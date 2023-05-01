@@ -1,3 +1,8 @@
+---
+title: Simple text editor
+tags: ['training', 'task']
+languages: ['javascript']
+---
 # Simple text editor
 
 ```javascript

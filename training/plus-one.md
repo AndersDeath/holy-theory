@@ -1,3 +1,8 @@
+---
+title: Plus One
+tags: ['training', 'task']
+languages: ['typescript']
+---
 # Plus One
 
 ```typescript

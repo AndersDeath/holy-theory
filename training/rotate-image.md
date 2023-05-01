@@ -1,3 +1,8 @@
+---
+title: Rotate image
+tags: ['training', 'task']
+languages: ['typescript']
+---
 # Rotate image
 
 ```typescript

@@ -1,3 +1,8 @@
+---
+title: Balanced Binary Tree
+tags: ['training', 'task', 'tree']
+languages: ['typescript']
+---
 # Balanced Binary Tree
 
 ```typescript

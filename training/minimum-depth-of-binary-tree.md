@@ -1,3 +1,8 @@
+---
+title: Minimum Depth of Binary Tree
+tags: ['training', 'task']
+languages: ['typescript']
+---
 # Minimum Depth of Binary Tree
 
 ```typescript
