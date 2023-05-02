@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 # [0.0.16] - In Progress
-* 
+* add power of two training in TS
 # [0.0.15] - 2023-05-01
 * add Valid Phone Numbers training in Bash
 * add Tenth Line training in Bash
