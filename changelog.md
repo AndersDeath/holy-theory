@@ -2,7 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 # [0.0.16] - In Progress
-* 
+* add power of two training in TS
+* add Implement Queue using Stacks training in TS
+* add experimental support of pug
+* add Binary Tree Paths in TS
 # [0.0.15] - 2023-05-01
 * add Valid Phone Numbers training in Bash
 * add Tenth Line training in Bash

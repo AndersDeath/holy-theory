@@ -144,6 +144,9 @@
 * [Implement Stack using Queues](./training/implement-stack-using-queues.md) – TypeScript
 * [Invert Binary Tree](./training/invert-binary-tree.md) – TypeScript
 * [Summary Ranges](./training/summary-ranges.md) – TypeScript
+* [Power of two](./training/power-of-two.md) – TypeScript
+* [Implement Queue using Stacks](./training/implement-queue-usin-stack.md) – TypeScript
+* [Binary Tree Paths](./training/binary-tree-paths.md) – TypeScript
 
 ## Question
 * [01-reverse-number](/questions/01-reverse-number.md) – Java, all languages

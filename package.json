@@ -32,5 +32,8 @@
   "homepage": "https://github.com/AndersDeath/holy-theory#readme",
   "devDependencies": {
     "parse-md": "^3.0.3"
+  },
+  "dependencies": {
+    "pug": "^3.0.2"
   }
 }
