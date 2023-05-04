@@ -147,6 +147,8 @@
 * [Power of two](./training/power-of-two.md) – TypeScript
 * [Implement Queue using Stacks](./training/implement-queue-usin-stack.md) – TypeScript
 * [Binary Tree Paths](./training/binary-tree-paths.md) – TypeScript
+* [Ugly Number](./training/ugly-number.md) – TypeScript
+* [First Bad Version](./training/firts-bad-version.md) – TypeScript
 
 ## Question
 * [01-reverse-number](/questions/01-reverse-number.md) – Java, all languages
