@@ -149,6 +149,7 @@
 * [Binary Tree Paths](./training/binary-tree-paths.md) – TypeScript
 * [Ugly Number](./training/ugly-number.md) – TypeScript
 * [First Bad Version](./training/firts-bad-version.md) – TypeScript
+* [Word Pattern](./training/word-pattern.md) – TypeScript
 
 ## Question
 * [01-reverse-number](/questions/01-reverse-number.md) – Java, all languages
