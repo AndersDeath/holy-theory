@@ -10,6 +10,7 @@ All notable changes to this project will be documented in this file.
 * add Ugly Number in TS
 * add Word Pattern in TS
 * add first workable version of builder.js
+* change approach for storing images
 # [0.0.15] - 2023-05-01
 * add Valid Phone Numbers training in Bash
 * add Tenth Line training in Bash
