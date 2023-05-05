@@ -41,6 +41,8 @@ const folders = [
     'training'
 ];
 
+const languagesMap = new Map();
+
 const getFiles = (dir) => {
     let results = [];
     fs.readdirSync(dir).forEach((file) => {
@@ -69,15 +71,27 @@ data.forEach((group) => {
         const item = group[index];
         const fileContents = fs.readFileSync(item, 'utf8');
         const { metadata, content } = parseMD(fileContents);
-        testData.push({
-            title: metadata.title,
-            body: marked.parse(content)
-        });
+        // console.log(metadata);
+        if(metadata.languages.length > 0) {
+            for (let i = 0; i < metadata.languages.length; i++) {
+                if(metadata.languages[i] && languagesMap.get(metadata.languages[i])) {
+                    languagesMap.set(metadata.languages[i], languagesMap.get(metadata.languages[i]) + 1);
+                } else {
+                    metadata.languages[i] ? languagesMap.set(metadata.languages[i], 1) : null;
+                }
+            }
+            
+        }
+        // testData.push({
+        //     title: metadata.title,
+        //     body: marked.parse(content)
+        // });
     }
 })
 
-
-
+console.log(languagesMap)
+const obj = Object.fromEntries(languagesMap)
+console.log(obj)
 let article =  fs.readFileSync('./tools/views/article.pug', 'utf-8');
 const articleFunction = pug.compile(article);
 
@@ -95,4 +109,4 @@ let o = layoutFunction({
     values: articles
 })
 
-fs.writeFileSync('./tools/test/check.html', o)
+// fs.writeFileSync('./tools/test/check.html', o)
