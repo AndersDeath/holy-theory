@@ -2,39 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import parseMD  from 'parse-md';
 import pug from 'pug';
-
-let article =  fs.readFileSync('./tools/views/article.pug', 'utf-8');
-const articleFunction = pug.compile(article);
-
-let layout = fs.readFileSync('./tools/views/layout.pug', 'utf-8');
-const layoutFunction = pug.compile(layout);
-
-
-let testData = [];
-
-for (let index = 0; index < 20; index++) {
-    testData.push({
-        title: `Title ${index + 1}`,
-        body: `Body ${index + 1}`,
-    });
-}
-
-let articles = [];
-
-testData.forEach((item) => {
-    articles.push(articleFunction(item));
-});
-
-let o = layoutFunction({
-    header: 'Some Awesome Header',
-    values: articles
-})
-console.log(o)
-
-fs.writeFileSync('./tools/test/check.html', o)
-
-
-
+import { marked } from 'marked';
 
 let mainOutput = '';
 let tagsOutput = '';
@@ -65,12 +33,12 @@ const entity = {
 
 const folders = [
     'algorithms',
-    // 'javascript',
-    // 'patterns',
-    // 'questions',
-    // 'structures',
-    // 'system-design',
-    // 'training'
+    'javascript',
+    'patterns',
+    'questions',
+    'structures',
+    'system-design',
+    'training'
 ];
 
 const getFiles = (dir) => {
@@ -80,10 +48,16 @@ const getFiles = (dir) => {
         const stat = fs.statSync(file);
         if(stat && stat.isDirectory()) {
             results = results.concat(getFiles(file))
-        } else results.push(file);
+        } else {
+            if(path.extname(file) === '.md') {
+                results.push(file);
+            }
+        }
     });
     return results;
 }
+
+let testData = [];
 
 let data = [];
 
@@ -95,8 +69,30 @@ data.forEach((group) => {
         const item = group[index];
         const fileContents = fs.readFileSync(item, 'utf8');
         const { metadata, content } = parseMD(fileContents);
-        console.log(metadata);
-        break;
-        
+        testData.push({
+            title: metadata.title,
+            body: marked.parse(content)
+        });
     }
 })
+
+
+
+let article =  fs.readFileSync('./tools/views/article.pug', 'utf-8');
+const articleFunction = pug.compile(article);
+
+let layout = fs.readFileSync('./tools/views/layout.pug', 'utf-8');
+const layoutFunction = pug.compile(layout);
+
+let articles = [];
+
+testData.forEach((item) => {
+    articles.push(articleFunction(item));
+});
+
+let o = layoutFunction({
+    header: 'Holy Theory',
+    values: articles
+})
+
+fs.writeFileSync('./tools/test/check.html', o)
