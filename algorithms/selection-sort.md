@@ -5,7 +5,7 @@ languages: ['java', 'typescript', 'python']
 ---
 # Selection sort
 
-![Selection sort](./selection-sort.png)
+![Selection sort](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/selection-sort.png)
 
 
 ```typescript

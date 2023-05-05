@@ -5,7 +5,7 @@ languages: ['typescript']
 ---
 # Priority Queue
 
-![priority-queue](./priority-queue.png)
+![priority-queue](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/priority-queue.png)
 
 
 ```typescript

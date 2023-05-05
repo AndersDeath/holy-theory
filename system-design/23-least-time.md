@@ -5,6 +5,6 @@ languages: ['']
 ---
 ## Least time
 
-![Least time](./23-least-time.png)
+![Least time](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/23-least-time.png)
 
 * [Go back](../readme.md)

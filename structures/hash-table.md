@@ -4,7 +4,7 @@ tags: ['theory', 'structures', 'data structures']
 languages: ['typescript']
 ---
 # Hash table
-![Hash table](./hash-table.png)
+![Hash table](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/hash-table.png)
 
 ```typescript
 const superPrimitiveHashingFunc = (string: string) => {

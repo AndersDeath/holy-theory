@@ -4,7 +4,7 @@ tags: ['theory', 'structures', 'data structures']
 languages: ['typescript', 'java']
 ---
 # Stack
-![Stack](./stack.png)
+![Stack](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/stack.png)
 
 ```typescript
 export class Stack {

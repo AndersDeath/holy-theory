@@ -4,8 +4,8 @@ tags: ['theory', 'structures', 'data structures']
 languages: ['javascript']
 ---
 # Tree
-![Tree1](./tree1.png)
-![Tree2](./tree2.png)
+![Tree1](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/tree1.png)
+![Tree2](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/tree2.png)
 
 ## Tree
 ```javascript

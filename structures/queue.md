@@ -5,7 +5,7 @@ languages: ['typescript']
 ---
 # Queue
 
-![Queue](./queue.png)
+![Queue](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/queue.png)
 
 ```typescript
 export class Queue {
