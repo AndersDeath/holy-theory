@@ -4,7 +4,7 @@ tags: ['theory', 'structures', 'data structures']
 languages: ['']
 ---
 # Data structures types
-![Data structures types](./data-structures-types.png)
+![Data structures types](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/data-structures-types.png)
 
 * Linear Data Structure: A data structure that includes data elements arranged sequentially or linearly, where each element is connected to its previous and next nearest elements, is referred to as a linear data structure. Arrays and linked lists are two examples of linear data structures.
 

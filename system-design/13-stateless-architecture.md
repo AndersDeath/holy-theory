@@ -5,6 +5,6 @@ languages: ['']
 ---
 ## Stateless architecture
 
-![Stateless architecture](./13-stateless-architecture.png)
+![Stateless architecture](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/13-stateless-architecture.png)
 
 * [Go back](../readme.md)

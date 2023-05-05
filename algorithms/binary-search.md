@@ -5,7 +5,7 @@ languages: ['typescript', 'java', 'python']
 ---
 # Binary search
 
-![Binary search](./binary-search.png)
+![Binary search](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/binary-search.png)
 
 Steps:
 

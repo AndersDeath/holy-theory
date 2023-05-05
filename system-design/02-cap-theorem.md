@@ -11,6 +11,6 @@ Availability: The databases cannot have downtime and should be available and res
 Partition Tolerance: The database system should be functioning despite the communication becoming unstable.
 The following image represents what databases guarantee what aspects of the CAP Theorem simultaneously. We see that RDBMS databases guarantee consistency and Availability simultaneously. Redis, MongoDB, Hbase databases guarantee Consistency and Partition Tolerance. Cassandra, CouchDB guarantees Availability and Partition Tolerance.
 
-![CAP theorem](./02-cap-theorem.png)
+![CAP theorem](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/02-cap-theorem.png)
 
 * [Go back](../readme.md)

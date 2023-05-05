@@ -5,7 +5,7 @@ languages: ['typescript']
 ---
 # Linked list
 
-![Linked List](./linked-list.png)
+![Linked List](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/linked-list.png)
 
 ```typescript
 
