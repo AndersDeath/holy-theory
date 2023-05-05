@@ -4,6 +4,34 @@ import parseMD  from 'parse-md';
 import pug from 'pug';
 import { marked } from 'marked';
 
+class LanguageMap {
+    
+    constructor() {
+        this.map = new Map();
+    }
+
+    set(element) {
+        if(element && this.map.get(element)) {
+            this.map.set(element, this.map.get(element) + 1);
+        } else {
+            element ? this.map.set(element, 1) : null;
+        }
+    }
+
+    setFromArr(arr) {
+        for (let i = 0; i < arr.length; i++) {
+            this.set(arr[i]);
+        }
+    }
+
+    get() {
+        return this.map;
+    }
+    getObj() {
+        return Object.fromEntries(this.map);
+    }
+}
+
 let mainOutput = '';
 let tagsOutput = '';
 let languageOutput = '';
@@ -63,6 +91,8 @@ let testData = [];
 
 let data = [];
 
+let lm = new LanguageMap()
+
 folders.forEach((e) => {
     data.push(getFiles(path.join('./',e)));
 })
@@ -72,15 +102,9 @@ data.forEach((group) => {
         const fileContents = fs.readFileSync(item, 'utf8');
         const { metadata, content } = parseMD(fileContents);
         // console.log(metadata);
+       
         if(metadata.languages.length > 0) {
-            for (let i = 0; i < metadata.languages.length; i++) {
-                if(metadata.languages[i] && languagesMap.get(metadata.languages[i])) {
-                    languagesMap.set(metadata.languages[i], languagesMap.get(metadata.languages[i]) + 1);
-                } else {
-                    metadata.languages[i] ? languagesMap.set(metadata.languages[i], 1) : null;
-                }
-            }
-            
+            lm.setFromArr(metadata.languages);
         }
         // testData.push({
         //     title: metadata.title,
@@ -89,9 +113,9 @@ data.forEach((group) => {
     }
 })
 
-console.log(languagesMap)
-const obj = Object.fromEntries(languagesMap)
-console.log(obj)
+console.log(lm.get())
+// const obj = Object.fromEntries(languagesMap)
+// console.log(obj)
 let article =  fs.readFileSync('./tools/views/article.pug', 'utf-8');
 const articleFunction = pug.compile(article);
 
