@@ -4,6 +4,34 @@ import parseMD  from 'parse-md';
 import pug from 'pug';
 import { marked } from 'marked';
 
+class LanguageMap {
+    
+    constructor() {
+        this.map = new Map();
+    }
+
+    set(element) {
+        if(element && this.map.get(element)) {
+            this.map.set(element, this.map.get(element) + 1);
+        } else {
+            element ? this.map.set(element, 1) : null;
+        }
+    }
+
+    setFromArr(arr) {
+        for (let i = 0; i < arr.length; i++) {
+            this.set(arr[i]);
+        }
+    }
+
+    get() {
+        return this.map;
+    }
+    getObj() {
+        return Object.fromEntries(this.map);
+    }
+}
+
 let mainOutput = '';
 let tagsOutput = '';
 let languageOutput = '';
@@ -41,6 +69,8 @@ const folders = [
     'training'
 ];
 
+const languagesMap = new Map();
+
 const getFiles = (dir) => {
     let results = [];
     fs.readdirSync(dir).forEach((file) => {
@@ -61,6 +91,8 @@ let testData = [];
 
 let data = [];
 
+let lm = new LanguageMap()
+
 folders.forEach((e) => {
     data.push(getFiles(path.join('./',e)));
 })
@@ -69,15 +101,21 @@ data.forEach((group) => {
         const item = group[index];
         const fileContents = fs.readFileSync(item, 'utf8');
         const { metadata, content } = parseMD(fileContents);
-        testData.push({
-            title: metadata.title,
-            body: marked.parse(content)
-        });
+        // console.log(metadata);
+       
+        if(metadata.languages.length > 0) {
+            lm.setFromArr(metadata.languages);
+        }
+        // testData.push({
+        //     title: metadata.title,
+        //     body: marked.parse(content)
+        // });
     }
 })
 
-
-
+console.log(lm.get())
+// const obj = Object.fromEntries(languagesMap)
+// console.log(obj)
 let article =  fs.readFileSync('./tools/views/article.pug', 'utf-8');
 const articleFunction = pug.compile(article);
 
@@ -95,4 +133,4 @@ let o = layoutFunction({
     values: articles
 })
 
-fs.writeFileSync('./tools/test/check.html', o)
+// fs.writeFileSync('./tools/test/check.html', o)
