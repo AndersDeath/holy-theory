@@ -8,6 +8,7 @@ All notable changes to this project will be documented in this file.
 * add Binary Tree Paths in TS
 * add First Bad Version in TS
 * add Ugly Number in TS
+* add Word Pattern in TS
 # [0.0.15] - 2023-05-01
 * add Valid Phone Numbers training in Bash
 * add Tenth Line training in Bash
