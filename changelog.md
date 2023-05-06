@@ -11,7 +11,7 @@ All notable changes to this project will be documented in this file.
 * add Word Pattern in TS
 * add first workable version of builder.js
 * change approach for storing images
-* 
+* add Nim Game training in TS
 
 # [0.0.15] - 2023-05-01
 * add Valid Phone Numbers training in Bash
