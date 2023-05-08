@@ -1,7 +1,9 @@
 # Changelog
 
 All notable changes to this project will be documented in this file.
-# [0.0.16] - In Progress
+# [0.0.17] - In Progress
+* 
+# [0.0.16] - 2023-05-08
 * add power of two training in TS
 * add Implement Queue using Stacks training in TS
 * add experimental support of pug
