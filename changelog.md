@@ -1,7 +1,9 @@
 # Changelog
 
 All notable changes to this project will be documented in this file.
-# [0.0.16] - In Progress
+# [0.0.17] - In Progress
+* 
+# [0.0.16] - 2023-05-08
 * add power of two training in TS
 * add Implement Queue using Stacks training in TS
 * add experimental support of pug
@@ -12,6 +14,7 @@ All notable changes to this project will be documented in this file.
 * add first workable version of builder.js
 * change approach for storing images
 * add Nim Game training in TS
+* add Range Sum Query in TS
 
 # [0.0.15] - 2023-05-01
 * add Valid Phone Numbers training in Bash
