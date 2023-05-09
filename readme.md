@@ -152,7 +152,8 @@
 * [Word Pattern](./training/word-pattern.md) – TypeScript
 * [Nim Game](./training/nim-game.md) – TypeScript
 * [Range Sum Query](./training/range-sum-query.md) – TypeScript
-* [Reverse Vowels of a String]('./training/reverse-vowels-of-a-string.md') – TypeScript
+* [Reverse Vowels of a String](./training/reverse-vowels-of-a-string.md) – TypeScript
+* [Counting Bits](./training/counting-bits.md) – TypeScript
 
 ## Question
 * [01-reverse-number](/questions/01-reverse-number.md) – Java, all languages
