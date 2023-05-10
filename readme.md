@@ -154,6 +154,7 @@
 * [Range Sum Query](./training/range-sum-query.md) – TypeScript
 * [Reverse Vowels of a String](./training/reverse-vowels-of-a-string.md) – TypeScript
 * [Counting Bits](./training/counting-bits.md) – TypeScript
+* [Intersection of two arrays ](./training/intersections-of-two-arrays.md) – TypeScript
 
 ## Question
 * [01-reverse-number](/questions/01-reverse-number.md) – Java, all languages
