@@ -4,6 +4,7 @@ All notable changes to this project will be documented in this file.
 # [0.0.17] - In Progress
 * add Reverse Vowels of a String training in TS
 * add Counting Bits training in TS
+* add Intersection of two arrays  training in TS
 # [0.0.16] - 2023-05-08
 * add power of two training in TS
 * add Implement Queue using Stacks training in TS
