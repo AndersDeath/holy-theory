@@ -2114,6 +2114,27 @@ function helper(nums: number[], start:number, end: number) {
     return node
 }
 </code></pre>
+</span></li><li><h1></h1><hr/><span><h1 id="counting-bits">Counting Bits</h1>
+<pre><code class="language-typescript">function countBits(n: number): number[] {
+    let result: number[] = [0];
+    let pow = 1;
+    let offset = 1;
+    for (let i = 1; i &lt;= n; i ++) {
+        if (i == pow) {
+            result[i] = 1;
+            pow = pow &lt;&lt; 1;
+            offset = 1;
+        } else {
+            result[i] = result[offset] + 1;
+            offset++;
+        }
+    }
+    return result;
+};
+</code></pre>
+<ul>
+<li><a href="../readme.md">Go back</a></li>
+</ul>
 </span></li><li><h1></h1><hr/><span><h1 id="cumulative-sum">Cumulative Sum</h1>
 <pre><code class="language-java">class Solution {
     int[] getCumulativeSum (int[] arr) {
@@ -2611,6 +2632,23 @@ function getIntersectionNode(headA: ListNode | null, headB: ListNode | null): Li
     }
     return pointer1;
 };
+</code></pre>
+<ul>
+<li><a href="../readme.md">Go back</a></li>
+</ul>
+</span></li><li><h1></h1><hr/><span><h1 id="intersection-of-two-arrays">Intersection of two arrays</h1>
+<pre><code class="language-typescript">
+function intersection(nums1: number[], nums2: number[]) {
+    let nums1Map = new Set(nums1);
+    let result = new Set();
+    nums2.forEach(item =&gt; {
+        if(nums1Map.has(item)){
+            result.add(item)
+        }
+    });
+    return Array.from(result);
+};
+
 </code></pre>
 <ul>
 <li><a href="../readme.md">Go back</a></li>
@@ -3177,6 +3215,15 @@ function moveZeroes(nums: number[]): void {
 <ul>
 <li><a href="../readme.md">Go back</a></li>
 </ul>
+</span></li><li><h1></h1><hr/><span><h1 id="nim-game">Nim Game</h1>
+<pre><code class="language-typescript">
+function canWinNim(n: number): boolean {
+    return !(n % 4 == 0);
+};
+</code></pre>
+<ul>
+<li><a href="../readme.md">Go back</a></li>
+</ul>
 </span></li><li><h1></h1><hr/><span><h1 id="number-of-1-bits">Number of 1 Bits</h1>
 <pre><code class="language-typescript">
 function hammingWeight(n: number): number {
@@ -3490,6 +3537,23 @@ var plusOne = function(digits) {
 <ul>
 <li><a href="../readme.md">Go back</a></li>
 </ul>
+</span></li><li><h1></h1><hr/><span><h1 id="power-of-four">Power of Four</h1>
+<pre><code class="language-typescript">function isPowerOfFour(n: number): boolean {
+    if (n &lt;= 0) {
+        return false;
+    }
+    while (n &gt; 3) {
+        if (n % 4 != 0) {
+            return false;
+        }
+        n = n / 4;
+    }
+    return n == 1;
+};
+</code></pre>
+<ul>
+<li><a href="../readme.md">Go back</a></li>
+</ul>
 </span></li><li><h1></h1><hr/><span><h1 id="power-of-two">Power of two</h1>
 <pre><code class="language-typescript">function isPowerOfTwo(n: number): boolean {
     if (n &lt;= 0) {
@@ -3591,6 +3655,30 @@ let q = [a,b,c].reduce((acc:any, f: any) =&gt; {
 ** Source: http://hackerrank.com**
 * [Go back](../readme.md)
 </code></pre>
+</span></li><li><h1></h1><hr/><span><h1 id="range-sum-query">Range Sum Query</h1>
+<pre><code class="language-typescript">class NumArray {
+    public sums = [];
+    constructor(nums: number[]) {
+        for (var i = 0; i &lt; nums.length; i++) {
+            this.sums[i] = i === 0 ? nums[0] : (this.sums[i - 1] + nums[i]);
+        }
+    }
+
+    sumRange(left: number, right: number): number {
+        var sums = this.sums;
+        return left === 0 ? sums[right] : (sums[right] - sums[left - 1]);
+    }
+}
+
+/**
+ * Your NumArray object will be instantiated and called as such:
+ * var obj = new NumArray(nums)
+ * var param_1 = obj.sumRange(left,right)
+ */
+</code></pre>
+<ul>
+<li><a href="../readme.md">Go back</a></li>
+</ul>
 </span></li><li><h1></h1><hr/><span><h1 id="remove-duplicate-words">Remove duplicate words</h1>
 <pre><code class="language-typescript">function removeDuplicateWords(s: string): string {
     const set = new Set();
@@ -3730,6 +3818,38 @@ function reverseString(s: string[]): void {
       s[l++] = s[r];
       s[r--] = temp;
     }
+};
+</code></pre>
+<ul>
+<li><a href="../readme.md">Go back</a></li>
+</ul>
+</span></li><li><h1></h1><hr/><span><h1 id="reverse-vowels-of-a-string">Reverse Vowels of a String</h1>
+<pre><code class="language-typescript">
+function reverseVowels(s: string): string {
+    const arr = s.split(&quot;&quot;);
+    let left = 0, right = arr.length;
+
+    const vowels = [&#39;A&#39;, &#39;E&#39;, &#39;I&#39;, &#39;O&#39;, &#39;U&#39;, &#39;a&#39;, &#39;e&#39;, &#39;i&#39;, &#39;o&#39;, &#39;u&#39;]
+
+    while (left &lt; right) {
+        if (vowels.indexOf(arr[left]) === -1) {
+            left++;
+            continue;
+        }
+        if (vowels.indexOf(arr[right]) === -1) {
+            right--;
+            continue;
+        }
+
+        const temp = arr[left];
+        arr[left] = arr[right];
+        arr[right] = temp;
+
+        left++;
+        right--;
+    }
+
+    return arr.join(&quot;&quot;);
 };
 </code></pre>
 <ul>
