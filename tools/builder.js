@@ -106,10 +106,10 @@ data.forEach((group) => {
         if(metadata.languages.length > 0) {
             lm.setFromArr(metadata.languages);
         }
-        // testData.push({
-        //     title: metadata.title,
-        //     body: marked.parse(content)
-        // });
+        testData.push({
+            title: metadata.title,
+            body: marked.parse(content)
+        });
     }
 })
 
@@ -133,4 +133,4 @@ let o = layoutFunction({
     values: articles
 })
 
-// fs.writeFileSync('./tools/test/check.html', o)
+fs.writeFileSync('./tools/test/check.html', o)
