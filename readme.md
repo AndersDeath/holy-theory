@@ -155,6 +155,7 @@
 * [Reverse Vowels of a String](./training/reverse-vowels-of-a-string.md) – TypeScript
 * [Counting Bits](./training/counting-bits.md) – TypeScript
 * [Intersection of two arrays ](./training/intersections-of-two-arrays.md) – TypeScript
+* [Power of Four](./training/power-of-four.md) – TypeScript
 
 ## Question
 * [01-reverse-number](/questions/01-reverse-number.md) – Java, all languages
