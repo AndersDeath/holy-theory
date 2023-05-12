@@ -156,6 +156,7 @@
 * [Counting Bits](./training/counting-bits.md) – TypeScript
 * [Intersection of two arrays ](./training/intersections-of-two-arrays.md) – TypeScript
 * [Power of Four](./training/power-of-four.md) – TypeScript
+* [Valid Perfect Square](./training/valid-perfect-square.md) – TypeScript
 
 ## Question
 * [01-reverse-number](/questions/01-reverse-number.md) – Java, all languages
