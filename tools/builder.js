@@ -1,17 +1,17 @@
 import fs from 'fs';
 import path from 'path';
-import parseMD  from 'parse-md';
+import parseMD from 'parse-md';
 import pug from 'pug';
 import { marked } from 'marked';
 
 class LanguageMap {
-    
+
     constructor() {
         this.map = new Map();
     }
 
     set(element) {
-        if(element && this.map.get(element)) {
+        if (element && this.map.get(element)) {
             this.map.set(element, this.map.get(element) + 1);
         } else {
             element ? this.map.set(element, 1) : null;
@@ -76,10 +76,10 @@ const getFiles = (dir) => {
     fs.readdirSync(dir).forEach((file) => {
         file = dir + '/' + file;
         const stat = fs.statSync(file);
-        if(stat && stat.isDirectory()) {
+        if (stat && stat.isDirectory()) {
             results = results.concat(getFiles(file))
         } else {
-            if(path.extname(file) === '.md') {
+            if (path.extname(file) === '.md') {
                 results.push(file);
             }
         }
@@ -94,7 +94,7 @@ let data = [];
 let lm = new LanguageMap()
 
 folders.forEach((e) => {
-    data.push(getFiles(path.join('./',e)));
+    data.push(getFiles(path.join('./', e)));
 })
 data.forEach((group) => {
     for (let index = 0; index < group.length; index++) {
@@ -102,8 +102,8 @@ data.forEach((group) => {
         const fileContents = fs.readFileSync(item, 'utf8');
         const { metadata, content } = parseMD(fileContents);
         // console.log(metadata);
-       
-        if(metadata.languages.length > 0) {
+
+        if (metadata.languages.length > 0) {
             lm.setFromArr(metadata.languages);
         }
         testData.push({
@@ -113,14 +113,17 @@ data.forEach((group) => {
     }
 })
 
-console.log(lm.get())
-// const obj = Object.fromEntries(languagesMap)
-// console.log(obj)
-let article =  fs.readFileSync('./tools/views/article.pug', 'utf-8');
+// console.log(lm.get())
+const obj = Object.fromEntries(lm.get())
+console.log(obj)
+let article = fs.readFileSync('./tools/views/article.pug', 'utf-8');
 const articleFunction = pug.compile(article);
 
 let layout = fs.readFileSync('./tools/views/layout.pug', 'utf-8');
 const layoutFunction = pug.compile(layout);
+
+let languages = fs.readFileSync('./tools/views/languages.pug', 'utf-8');
+const languagesFunction = pug.compile(languages);
 
 let articles = [];
 
@@ -133,4 +136,8 @@ let o = layoutFunction({
     values: articles
 })
 
-fs.writeFileSync('./tools/test/check.html', o)
+// fs.writeFileSync('./tools/test/check.html', o)
+fs.writeFileSync('./tools/test/languages.html',
+    languagesFunction({
+        values: obj
+    }))
