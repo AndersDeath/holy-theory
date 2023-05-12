@@ -3,7 +3,7 @@ import path from 'path';
 import parseMD from 'parse-md';
 import pug from 'pug';
 import { marked } from 'marked';
-
+import { compile } from '@eit6609/markdown-templates';
 class LanguageMap {
 
     constructor() {
@@ -108,7 +108,8 @@ data.forEach((group) => {
         }
         testData.push({
             title: metadata.title,
-            body: marked.parse(content)
+            body: marked.parse(content),
+            bodyMD: content
         });
     }
 })
@@ -125,10 +126,16 @@ const layoutFunction = pug.compile(layout);
 let languages = fs.readFileSync('./tools/views/languages.pug', 'utf-8');
 const languagesFunction = pug.compile(languages);
 
+let articleMD = fs.readFileSync('./tools/views/article.md', 'utf-8');
+
+let articleMDFunction = compile(articleMD);
+
 let articles = [];
 
 testData.forEach((item) => {
     articles.push(articleFunction(item));
+    fs.writeFileSync(`./tools/test/md/${item.title}.md`, articleMDFunction(item));
+
 });
 
 let o = layoutFunction({
