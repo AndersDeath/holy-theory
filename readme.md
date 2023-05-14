@@ -158,6 +158,7 @@
 * [Power of Four](./training/power-of-four.md) – TypeScript
 * [Valid Perfect Square](./training/valid-perfect-square.md) – TypeScript
 * [Guess Number Higher or Lower](./training/guess-number-highter-or-lower.md) – TypeScript
+* [Ransom Note](./training/ransome-note.md) – TypeScript
 
 ## Question
 * [01-reverse-number](/questions/01-reverse-number.md) – Java, all languages
