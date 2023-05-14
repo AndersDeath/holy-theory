@@ -9,6 +9,7 @@ All notable changes to this project will be documented in this file.
 * update build.js
 * add Valid Perfect Square training in TS
 * add Guess Number Higher or Lower training in TS
+* add Ransom Note training in TS
 # [0.0.16] - 2023-05-08
 * add power of two training in TS
 * add Implement Queue using Stacks training in TS
