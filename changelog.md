@@ -1,7 +1,9 @@
 # Changelog
 
 All notable changes to this project will be documented in this file.
-# [0.0.17] - In Progress
+# [0.0.18] - In Progress
+* 
+# [0.0.17] - 2023-05-15
 * add Reverse Vowels of a String training in TS
 * add Counting Bits training in TS
 * add Intersection of two arrays  training in TS
