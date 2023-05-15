@@ -1,9 +1,9 @@
 # Changelog
 
 All notable changes to this project will be documented in this file.
-# [0.0.18] - In Progress
+# [0.0.19] - In Progress
 * 
-# [0.0.17] - 2023-05-15
+# [0.0.18] - 2023-05-15
 * add Reverse Vowels of a String training in TS
 * add Counting Bits training in TS
 * add Intersection of two arrays  training in TS
@@ -12,6 +12,8 @@ All notable changes to this project will be documented in this file.
 * add Valid Perfect Square training in TS
 * add Guess Number Higher or Lower training in TS
 * add Ransom Note training in TS
+
+# [0.0.17] - missed due to mistake
 # [0.0.16] - 2023-05-08
 * add power of two training in TS
 * add Implement Queue using Stacks training in TS
