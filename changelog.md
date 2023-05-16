@@ -3,6 +3,7 @@
 All notable changes to this project will be documented in this file.
 # [0.0.19] - In Progress
 * add Submission Detail training in TS
+* add Binary Watch training in Java
 # [0.0.18] - 2023-05-15
 * add Reverse Vowels of a String training in TS
 * add Counting Bits training in TS

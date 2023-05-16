@@ -160,6 +160,7 @@
 * [Guess Number Higher or Lower](./training/guess-number-highter-or-lower.md) – TypeScript
 * [Ransom Note](./training/ransome-note.md) – TypeScript
 * [Submission Detail](./training/submission-detail.md) – TypeScript
+* [Binary Watch](./training/binary-watch.md) – Java
 
 ## Question
 * [01-reverse-number](/questions/01-reverse-number.md) – Java, all languages
