@@ -161,6 +161,7 @@
 * [Ransom Note](./training/ransome-note.md) – TypeScript
 * [Submission Detail](./training/submission-detail.md) – TypeScript
 * [Binary Watch](./training/binary-watch.md) – Java
+* [Sum of Left Leaves](./training/sum-of-left-leaves.md) – TypeScript
 
 ## Question
 * [01-reverse-number](/questions/01-reverse-number.md) – Java, all languages
