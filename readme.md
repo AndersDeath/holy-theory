@@ -162,6 +162,7 @@
 * [Submission Detail](./training/submission-detail.md) – TypeScript
 * [Binary Watch](./training/binary-watch.md) – Java
 * [Sum of Left Leaves](./training/sum-of-left-leaves.md) – TypeScript
+* [Convert a Number to Hexadecimal](./training/convert-number-to-hexadecimal.md) – Java
 
 ## Question
 * [01-reverse-number](/questions/01-reverse-number.md) – Java, all languages
