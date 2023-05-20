@@ -108,16 +108,16 @@ function Builder() {
     // console.log(lm.get())
     const obj = Object.fromEntries(lm.get())
     console.log(obj)
-    let article = fs.readFileSync('./tools/views/article.pug', 'utf-8');
+    let article = fs.readFileSync('./builder/views/article.pug', 'utf-8');
     const articleFunction = pug.compile(article);
 
-    let layout = fs.readFileSync('./tools/views/layout.pug', 'utf-8');
+    let layout = fs.readFileSync('./builder/views/layout.pug', 'utf-8');
     const layoutFunction = pug.compile(layout);
 
-    let languages = fs.readFileSync('./tools/views/languages.pug', 'utf-8');
+    let languages = fs.readFileSync('./builder/views/languages.pug', 'utf-8');
     const languagesFunction = pug.compile(languages);
 
-    let articleMD = fs.readFileSync('./tools/views/article.md', 'utf-8');
+    let articleMD = fs.readFileSync('./builder/views/article.md', 'utf-8');
 
     let articleMDFunction = compile(articleMD);
 
@@ -125,7 +125,7 @@ function Builder() {
 
     testData.forEach((item) => {
         articles.push(articleFunction(item));
-        fs.writeFileSync(`./tools/test/md/${item.title}.md`, articleMDFunction(item));
+        fs.writeFileSync(`./builder/test/md/${item.title}.md`, articleMDFunction(item));
 
     });
 
@@ -134,8 +134,8 @@ function Builder() {
         values: articles
     })
 
-    // fs.writeFileSync('./tools/test/check.html', o)
-    fs.writeFileSync('./tools/test/languages.html',
+    // fs.writeFileSync('./builder/test/check.html', o)
+    fs.writeFileSync('./builder/test/languages.html',
         languagesFunction({
             values: obj
         }))
