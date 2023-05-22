@@ -8,6 +8,7 @@ All notable changes to this project will be documented in this file.
 * add Convert a Number to Hexadecimal training in TS
 * update builder
 * add Add Strings training in TS
+* add Number of Segments in a String training in TS
 # [0.0.18] - 2023-05-15
 * add Reverse Vowels of a String training in TS
 * add Counting Bits training in TS
