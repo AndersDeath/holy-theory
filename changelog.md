@@ -1,7 +1,8 @@
 # Changelog
 
 All notable changes to this project will be documented in this file.
-# [0.0.19] - In Progress
+# [0.0.20] - In Progress
+# [0.0.19] - 2023-05-22
 * add Submission Detail training in TS
 * add Binary Watch training in Java
 * add Sum of Left Leaves training in TS
