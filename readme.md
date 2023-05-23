@@ -165,6 +165,7 @@
 * [Convert a Number to Hexadecimal](./training/convert-number-to-hexadecimal.md) – Java
 * [Add Strings](./training/add-strings.md) – TypeScript
 * [Number of Segments in a String](./training/number-of-segments-in-a-string.md) – TypeScript
+* [Arranging Coins](./training/arranging-coins.md) – TypeScript
 
 ## Question
 * [01-reverse-number](/questions/01-reverse-number.md) – Java, all languages
