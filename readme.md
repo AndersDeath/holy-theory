@@ -167,6 +167,7 @@
 * [Number of Segments in a String](./training/number-of-segments-in-a-string.md) – TypeScript
 * [Arranging Coins](./training/arranging-coins.md) – TypeScript
 * [Find All Numbers Disappeared in an Array](./training/find-all-numbers-disappeared-in-an-array.md) – TypeScript
+* [Assign Cookies](./training/assign-cookies.md) – TypeScript
 
 ## Question
 * [01-reverse-number](/questions/01-reverse-number.md) – Java, all languages
