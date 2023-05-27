@@ -169,6 +169,7 @@
 * [Find All Numbers Disappeared in an Array](./training/find-all-numbers-disappeared-in-an-array.md) – TypeScript
 * [Assign Cookies](./training/assign-cookies.md) – TypeScript
 * [Third Maximum Number](./training/third-maximum-number.md) – TypeScript
+* [Repeated Substring Pattern](./training/repeated-substring-pattern.md) – TypeScript
 
 ## Question
 * [01-reverse-number](/questions/01-reverse-number.md) – Java, all languages
