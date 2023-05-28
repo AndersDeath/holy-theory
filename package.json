@@ -40,7 +40,6 @@
     "marked-gfm-heading-id": "^3.0.3",
     "marked-highlight": "^2.0.1",
     "marked-mangle": "^1.0.1",
-    "pug": "^3.0.2",
-    "pygmentize-bundled": "^2.3.0"
+    "pug": "^3.0.2"
   }
 }

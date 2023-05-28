@@ -10,7 +10,9 @@ import hljs from 'highlight.js';
 
 import { compile } from '@eit6609/markdown-templates';
 import { LanguageMap } from './language-map.js';
-
+marked.use({
+    langPrefix: ''
+})
 marked.use(markedHighlight({
     langPrefix: 'hljs language-',
     highlight(code, lang) {
