@@ -5,22 +5,15 @@ import pug from 'pug';
 import {marked} from './marked.js';
 import { compile } from '@eit6609/markdown-templates';
 import { LanguageMap } from './language-map.js';
+import { getConfig } from './utils.js';
+import { Templates } from './templates.js';
 
-class Templates {
-    constructor(paths) {
-        this.paths = paths;
-        this.load();
-    }
 
-    load() {
-        console.log(this.paths);
-    }
+const paths = getConfig().templates;
 
-    getTemplate() {
 
-    }
+const tmp = new Templates(paths);
 
-}
 
 function Builder() {
     class Entity {
@@ -121,38 +114,7 @@ function Builder() {
         }
     })
 
-    const paths = [
-        {
-            path: './builder/views/article.pug',
-            title: 'article',
-            type: 'pug'
-        },
-        {
-            path: './builder/views/layout.pug',
-            title: 'layout',
-            type: 'pug'
-        },
-        {
-            path: './builder/views/languages.pug',
-            title: 'languages',
-            type: 'pug'
-        },
-        {
-            path: './builder/views/languages.pug',
-            title: 'languages',
-            type: 'pug'
-        },
-        {
-            path: './builder/views/index.pug',
-            title: 'index',
-            type: 'pug'
-        },
-        {
-            path: './builder/views/articles.md',
-            title: 'articlesMD',
-            type: 'md'
-        },
-    ]
+   
 
     // console.log(lm.get())
     const obj = Object.fromEntries(lm.get())
