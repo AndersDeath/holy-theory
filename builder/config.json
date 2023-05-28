@@ -1,4 +1,13 @@
 {
+  "folders": [
+    "algorithms",
+    "javascript",
+    "patterns",
+    "questions",
+    "structures",
+    "system-design",
+    "training"
+  ],
   "templates": [
     {
       "path": "./builder/views/article.pug",

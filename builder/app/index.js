@@ -57,17 +57,7 @@ function Builder() {
         }
     }
 
-    const folders = [
-        'algorithms',
-        'javascript',
-        'patterns',
-        'questions',
-        'structures',
-        'system-design',
-        'training'
-    ];
-
-    const languagesMap = new Map();
+    const folders = getConfig().folders;
 
     const getFiles = (dir) => {
         let results = [];
