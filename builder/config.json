@@ -1,0 +1,48 @@
+{
+  "folders": [
+    "algorithms",
+    "javascript",
+    "patterns",
+    "questions",
+    "structures",
+    "system-design",
+    "training"
+  ],
+  "templates": [
+    {
+      "path": "./builder/views/article.pug",
+      "title": "article",
+      "type": "pug"
+    },
+    {
+      "path": "./builder/views/layout.pug",
+      "title": "layout",
+      "type": "pug"
+    },
+    {
+      "path": "./builder/views/languages.pug",
+      "title": "languages",
+      "type": "pug"
+    },
+    {
+      "path": "./builder/views/languages.pug",
+      "title": "languages",
+      "type": "pug"
+    },
+    {
+      "path": "./builder/views/index.pug",
+      "title": "index",
+      "type": "pug"
+    },
+    {
+        "path": "./builder/views/nav.pug",
+        "title": "nav",
+        "type": "pug"
+      },
+    {
+      "path": "./builder/views/article.md",
+      "title": "articleMD",
+      "type": "md"
+    }
+  ]
+}

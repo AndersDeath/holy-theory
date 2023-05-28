@@ -1,27 +1,33 @@
-# Binary tree postorder traversal
+# Binary Tree Postorder Traversal
 ---
-# Binary tree postorder traversal
+# Binary Tree Postorder Traversal
 
-```java
-class Solution {
-	
-	void utility(Node root, List<Integer> traversal) {
-		if(root == null) {
-			return;
-		}
-		
-		utility(root.left, traversal);
-		utility(root.right, traversal);
-		traversal.add(root.data);
+```typescript
+/**
+ * Definition for a binary tree node.
+ * class TreeNode {
+ *     val: number
+ *     left: TreeNode | null
+ *     right: TreeNode | null
+ *     constructor(val?: number, left?: TreeNode | null, right?: TreeNode | null) {
+ *         this.val = (val===undefined ? 0 : val)
+ *         this.left = (left===undefined ? null : left)
+ *         this.right = (right===undefined ? null : right)
+ *     }
+ * }
+ */
 
-	}
-	
-	List<Integer> getPostorderTraversal(Node root) {
-		List<Integer> traversal = new ArrayList<Integer>();
-		utility(root, traversal);
-		return traversal;
-	}
-}
+function postorderTraversal(root: TreeNode | null): number[] {
+  var res = [];
+  helper(root, res);
+  return res;
+};
 
+const helper = function (root, res) {
+  if (!root) return;
+  helper(root.left, res);
+  helper(root.right, res);
+  res.push(root.val);
+};
 ```
 * [Go back](../readme.md)
