@@ -1,6 +1,6 @@
-# Binary Tree Postorder Traversal
+# Binary Tree Inorder Traversal
 ---
-# Binary Tree Postorder Traversal
+# Binary Tree Inorder Traversal
 
 ```typescript
 /**
@@ -17,17 +17,21 @@
  * }
  */
 
-function postorderTraversal(root: TreeNode | null): number[] {
-  var res = [];
-  helper(root, res);
-  return res;
-};
+function inorderTraversal(root: TreeNode | null): number[] {
+    const list = [];
+    const stack = [];
+    let node = root;
 
-const helper = function (root, res) {
-  if (!root) return;
-  helper(root.left, res);
-  helper(root.right, res);
-  res.push(root.val);
+    while(node !== null || stack.length > 0) {
+        while(node !== null) {
+            stack.push(node);
+            node = node.left
+        }
+        list.push(stack[stack.length -1].val);
+        let el = stack.pop();
+        node = el.right;
+    }
+    return list;
 };
 ```
 * [Go back](../readme.md)

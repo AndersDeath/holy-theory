@@ -1,6 +1,6 @@
-# Binary Tree Postorder Traversal
+# Invert Binary Tree
 ---
-# Binary Tree Postorder Traversal
+# Invert Binary Tree
 
 ```typescript
 /**
@@ -17,17 +17,14 @@
  * }
  */
 
-function postorderTraversal(root: TreeNode | null): number[] {
-  var res = [];
-  helper(root, res);
-  return res;
-};
+function invertTree(root: TreeNode | null): TreeNode | null {
+    if (root == null) return null;
 
-const helper = function (root, res) {
-  if (!root) return;
-  helper(root.left, res);
-  helper(root.right, res);
-  res.push(root.val);
+    const left = root.left;
+    const right = root.right;
+    root.left = invertTree(right);
+    root.right = invertTree(left);
+    return root;
 };
 ```
 * [Go back](../readme.md)

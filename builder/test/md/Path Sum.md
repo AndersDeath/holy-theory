@@ -1,8 +1,9 @@
-# Binary Tree Postorder Traversal
+# Path Sum
 ---
-# Binary Tree Postorder Traversal
+# Path Sum
 
 ```typescript
+
 /**
  * Definition for a binary tree node.
  * class TreeNode {
@@ -17,17 +18,23 @@
  * }
  */
 
-function postorderTraversal(root: TreeNode | null): number[] {
-  var res = [];
-  helper(root, res);
-  return res;
+function hasPathSum(root: TreeNode | null, targetSum: number): boolean {
+
+    if(root === null) {
+        return false;
+    }
+
+    if(
+        root.left === null &&
+        root.right === null &&
+        targetSum - root.val === 0
+    ) {
+        return true;
+    }
+
+    return hasPathSum(root.left, targetSum - root.val) || hasPathSum(root.right, targetSum - root.val)
+
 };
 
-const helper = function (root, res) {
-  if (!root) return;
-  helper(root.left, res);
-  helper(root.right, res);
-  res.push(root.val);
-};
 ```
 * [Go back](../readme.md)

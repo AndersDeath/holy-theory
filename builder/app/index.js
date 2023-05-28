@@ -125,7 +125,7 @@ function Builder() {
 
     testData.forEach((item) => {
         articles.push(articleFunction(item));
-        fs.writeFileSync(`./builder/test/md/${item.title}.md`, articleMDFunction(item));
+        fs.writeFileSync(`./builder/test/md/${item.title.replace('\/','-')}.md`, articleMDFunction(item));
 
     });
 

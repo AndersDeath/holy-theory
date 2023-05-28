@@ -1,6 +1,6 @@
-# Binary Tree Postorder Traversal
+# Maximum Depth of Binary Tree
 ---
-# Binary Tree Postorder Traversal
+# Maximum Depth of Binary Tree
 
 ```typescript
 /**
@@ -17,17 +17,16 @@
  * }
  */
 
-function postorderTraversal(root: TreeNode | null): number[] {
-  var res = [];
-  helper(root, res);
-  return res;
-};
+function maxDepth(root: TreeNode | null): number {
+    if(root === null) return 0;
+    else {
+        let leftDepth = maxDepth(root.left);
+        let rightDepth = maxDepth(root.right);
+        if(leftDepth > rightDepth) return leftDepth + 1;
+        else return rightDepth + 1;
+    }
 
-const helper = function (root, res) {
-  if (!root) return;
-  helper(root.left, res);
-  helper(root.right, res);
-  res.push(root.val);
 };
 ```
+**Source: https://leetcode.com**
 * [Go back](../readme.md)
