@@ -3,8 +3,40 @@ import path from 'path';
 import parseMD from 'parse-md';
 import pug from 'pug';
 import { marked } from 'marked';
+import { markedHighlight } from "marked-highlight";
+import { mangle } from "marked-mangle";
+import { gfmHeadingId } from "marked-gfm-heading-id";
+import hljs from 'highlight.js';
+
 import { compile } from '@eit6609/markdown-templates';
 import { LanguageMap } from './language-map.js';
+
+marked.use(markedHighlight({
+    langPrefix: 'hljs language-',
+    highlight(code, lang) {
+      const language = hljs.getLanguage(lang) ? lang : 'plaintext';
+      return hljs.highlight(code, { language }).value;
+    }
+  }));
+marked.use(mangle());
+marked.use(gfmHeadingId());
+
+
+class Templates {
+    constructor(paths) {
+        this.paths = paths;
+        this.load();
+    }
+
+    load() {
+        console.log(this.paths);
+    }
+
+    getTemplate() {
+
+    }
+
+}
 
 function Builder() {
     class Entity {
@@ -105,9 +137,42 @@ function Builder() {
         }
     })
 
+    const paths = [
+        {
+            path: './builder/views/article.pug',
+            title: 'article',
+            type: 'pug'
+        },
+        {
+            path: './builder/views/layout.pug',
+            title: 'layout',
+            type: 'pug'
+        },
+        {
+            path: './builder/views/languages.pug',
+            title: 'languages',
+            type: 'pug'
+        },
+        {
+            path: './builder/views/languages.pug',
+            title: 'languages',
+            type: 'pug'
+        },
+        {
+            path: './builder/views/index.pug',
+            title: 'index',
+            type: 'pug'
+        },
+        {
+            path: './builder/views/articles.md',
+            title: 'articlesMD',
+            type: 'md'
+        },
+    ]
+
     // console.log(lm.get())
     const obj = Object.fromEntries(lm.get())
-    console.log(obj)
+    // console.log(obj)
     let article = fs.readFileSync('./builder/views/article.pug', 'utf-8');
     const articleFunction = pug.compile(article);
 
@@ -119,13 +184,13 @@ function Builder() {
 
     let articleMD = fs.readFileSync('./builder/views/article.md', 'utf-8');
 
-    let articleMDFunction = compile(articleMD);
+    const articleMDFunction = compile(articleMD);
 
     let articles = [];
 
     testData.forEach((item) => {
         articles.push(articleFunction(item));
-        fs.writeFileSync(`./builder/test/md/${item.title.replace('\/','-')}.md`, articleMDFunction(item));
+        fs.writeFileSync(`./builder/test/md/${item.title.replace('\/', '-')}.md`, articleMDFunction(item));
 
     });
 
@@ -134,7 +199,7 @@ function Builder() {
         values: articles
     })
 
-    // fs.writeFileSync('./builder/test/check.html', o)
+    fs.writeFileSync('./builder/test/check.html', o)
     fs.writeFileSync('./builder/test/languages.html',
         languagesFunction({
             values: obj
@@ -142,4 +207,4 @@ function Builder() {
 }
 
 
-export {Builder};
+export { Builder };
