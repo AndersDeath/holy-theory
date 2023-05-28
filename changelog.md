@@ -7,6 +7,7 @@ All notable changes to this project will be documented in this file.
 * add Assign Cookies training in TS
 * add Third Maximum Number training in TS
 * add Repeated Substring Pattern training in TS
+* add Hamming Distance training in TS
 # [0.0.19] - 2023-05-22
 * add Submission Detail training in TS
 * add Binary Watch training in Java
