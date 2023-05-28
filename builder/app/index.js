@@ -1,9 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import parseMD from 'parse-md';
-import pug from 'pug';
-import {marked} from './marked.js';
-import { compile } from '@eit6609/markdown-templates';
+import { marked } from './marked.js';
 import { LanguageMap } from './language-map.js';
 import { getConfig } from './utils.js';
 import { Templates } from './templates.js';
@@ -12,7 +10,7 @@ import { Templates } from './templates.js';
 const paths = getConfig().templates;
 
 
-const tmp = new Templates(paths);
+const templates = new Templates(paths);
 
 
 function Builder() {
@@ -114,41 +112,23 @@ function Builder() {
         }
     })
 
-   
-
-    // console.log(lm.get())
-    const obj = Object.fromEntries(lm.get())
-    // console.log(obj)
-    let article = fs.readFileSync('./builder/views/article.pug', 'utf-8');
-    const articleFunction = pug.compile(article);
-
-    let layout = fs.readFileSync('./builder/views/layout.pug', 'utf-8');
-    const layoutFunction = pug.compile(layout);
-
-    let languages = fs.readFileSync('./builder/views/languages.pug', 'utf-8');
-    const languagesFunction = pug.compile(languages);
-
-    let articleMD = fs.readFileSync('./builder/views/article.md', 'utf-8');
-
-    const articleMDFunction = compile(articleMD);
-
     let articles = [];
 
     testData.forEach((item) => {
-        articles.push(articleFunction(item));
-        fs.writeFileSync(`./builder/test/md/${item.title.replace('\/', '-')}.md`, articleMDFunction(item));
+        articles.push(templates.getData()['article'].build(item));
+        fs.writeFileSync(`./builder/test/md/${item.title.replace('\/', '-')}.md`, templates.getData()['articleMD'].build(item));
 
     });
 
-    let o = layoutFunction({
+    let o = templates.getData()['layout'].build({
         header: 'Holy Theory',
         values: articles
     })
 
     fs.writeFileSync('./builder/test/check.html', o)
     fs.writeFileSync('./builder/test/languages.html',
-        languagesFunction({
-            values: obj
+        templates.getData()['languages'].build({
+            values: Object.fromEntries(lm.get())
         }))
 }
 

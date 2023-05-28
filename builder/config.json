@@ -26,8 +26,8 @@
       "type": "pug"
     },
     {
-      "path": "./builder/views/articles.md",
-      "title": "articlesMD",
+      "path": "./builder/views/article.md",
+      "title": "articleMD",
       "type": "md"
     }
   ]
