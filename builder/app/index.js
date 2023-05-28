@@ -115,7 +115,10 @@ function Builder() {
         values: articles
     })
 
-    fs.writeFileSync('./builder/test/check.html', o)
+    fs.writeFileSync('./builder/test/index.html', templates.getData()['index'].build(
+      {  navigation:  templates.getData()['nav'].build()}
+    ))
+    fs.writeFileSync('./builder/test/all.html', o)
     fs.writeFileSync('./builder/test/languages.html',
         templates.getData()['languages'].build({
             values: Object.fromEntries(lm.get())
