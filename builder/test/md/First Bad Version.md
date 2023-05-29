@@ -1,6 +1,4 @@
 # First Bad Version
----
-# First Bad Version
 
 ```typescript
 
@@ -30,4 +28,3 @@ var solution = function(isBadVersion: any) {
 ```
 
 **Source: https://leetcode.com**
-* [Go back](../readme.md)

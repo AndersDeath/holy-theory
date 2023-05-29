@@ -1,6 +1,4 @@
 # Repeated Substring Pattern
----
-# Repeated Substring Pattern
 
 ```typescript
 function repeatedSubstringPattern(s: string): boolean {
@@ -17,4 +15,4 @@ function repeatedSubstringPattern(s: string): boolean {
         return false;
 };
 ```
-* [Go back](../readme.md)
+

@@ -1,6 +1,4 @@
 # Binary Tree Paths
----
-# Binary Tree Paths
 
 ```typescript
 /**
@@ -35,4 +33,4 @@ function helper(root: TreeNode, path: string, responce: string[]) {
     helper(root.right, path + root.val + "->", responce);
 }
 ```
-* [Go back](../readme.md)
+

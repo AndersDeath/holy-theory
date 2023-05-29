@@ -1,6 +1,4 @@
 # Merge two sorted linked lists
----
-# Merge two sorted linked lists
 ```typescript
 function processData(input) {
     let arr = input.split('\n');
@@ -20,4 +18,4 @@ function processData(input) {
 ,,,
 
 ** Source: http://hackerrank.com**
-* [Go back](../readme.md)
+

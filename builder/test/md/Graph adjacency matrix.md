@@ -1,6 +1,4 @@
 # Graph adjacency matrix
----
-# Graph adjacency matrix
 
 ```java
 public class Graph {
@@ -46,4 +44,3 @@ public class Graph {
 }
 ```
 
-* [Go back](../readme.md)

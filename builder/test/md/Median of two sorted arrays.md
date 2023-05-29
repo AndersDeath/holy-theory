@@ -1,6 +1,4 @@
 # Median of two sorted arrays
----
-# Median of two sorted arrays
 
 ```typescript
 function findMedianSortedArrays(nums1: number[], nums2: number[]): number {
@@ -39,4 +37,3 @@ function findMedianSortedArrays(nums1: number[], nums2: number[]): number {
 };
 ```
 **Source: https://leetcode.com**
-* [Go back](../readme.md)

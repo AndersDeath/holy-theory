@@ -1,6 +1,4 @@
 # Interpolation search
----
-# Interpolation search
 
 ```java
 class Solution {
@@ -26,4 +24,3 @@ class Solution {
 
 }
 ```
-* [Go back](../readme.md)

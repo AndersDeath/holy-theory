@@ -1,6 +1,4 @@
 # Happy Number
----
-# Happy Number
 
 ```typescript
 
@@ -26,4 +24,3 @@ const getNextSum = (number) => {
 
 ```
 
-* [Go back](../readme.md)

@@ -1,6 +1,4 @@
 # Find All Numbers Disappeared in an Array
----
-# Find All Numbers Disappeared in an Array
 
 ```typescript
 function findDisappearedNumbers(nums: number[]): number[] {
@@ -20,4 +18,3 @@ function findDisappearedNumbers(nums: number[]): number[] {
 };
 ```
 
-* [Go back](../readme.md)

@@ -1,6 +1,4 @@
 # Isomorphic Strings
----
-# Isomorphic Strings
 
 ```typescript
 function isIsomorphic(s: string, t: string): boolean {
@@ -17,4 +15,3 @@ function isIsomorphic(s: string, t: string): boolean {
         return true;
 };
 ```
-* [Go back](../readme.md)

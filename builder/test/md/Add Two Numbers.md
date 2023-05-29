@@ -1,6 +1,4 @@
 # Add Two Numbers
----
-# Add Two Numbers
 
 ```typescript
 /**
@@ -54,4 +52,4 @@ function addTwoNumbers(l1: ListNode | null, l2: ListNode | null): ListNode | nul
 
 };
 ```
-* [Go back](../readme.md)
+

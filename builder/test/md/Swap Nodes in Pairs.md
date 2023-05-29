@@ -1,6 +1,4 @@
 # Swap Nodes in Pairs
----
-# Swap Nodes in Pairs
 
 ```typescript
 /**
@@ -34,4 +32,3 @@ function swapPairs(head: ListNode | null): ListNode | null {
 };
 ```
 
-* [Go back](../readme.md)

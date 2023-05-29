@@ -1,6 +1,4 @@
 # Rotate image
----
-# Rotate image
 
 ```typescript
 /**
@@ -27,4 +25,3 @@ function rotate(matrix: number[][]): void {
     }
 };
 ```
-* [Go back](../readme.md)

@@ -1,6 +1,4 @@
 # Add Strings
----
-# Add Strings
 
 ```typescript
 function addStrings(num1: string, num2: string): string {
@@ -32,4 +30,4 @@ function addStrings(num1: string, num2: string): string {
     return res;
 };
 ```
-* [Go back](../readme.md)
+

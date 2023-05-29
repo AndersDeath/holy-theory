@@ -1,6 +1,4 @@
 # Range Sum Query
----
-# Range Sum Query
 
 ```typescript
 class NumArray {
@@ -24,4 +22,4 @@ class NumArray {
  */
 ```
 
-* [Go back](../readme.md)
+

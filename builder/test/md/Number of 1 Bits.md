@@ -1,6 +1,4 @@
 # Number of 1 Bits
----
-# Number of 1 Bits
 
 ```typescript
 
@@ -17,4 +15,4 @@ function hammingWeight(n: number): number {
 
 ```
 
-* [Go back](../readme.md)
+

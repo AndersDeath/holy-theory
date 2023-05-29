@@ -1,5 +1,3 @@
-# Pascal triangle 3
----
 # Pascal triangle 3 
 ```typescript
 function getRow(rowIndex: number): number[] {
@@ -12,4 +10,4 @@ function getRow(rowIndex: number): number[] {
 };
 ```
 
-* [Go back](../readme.md)
+

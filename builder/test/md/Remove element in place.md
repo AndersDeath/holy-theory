@@ -1,6 +1,4 @@
 # Remove element in place
----
-# Remove element in place
 
 ```typescript
 function removeElement(nums: number[], val: number): number {
@@ -13,4 +11,4 @@ function removeElement(nums: number[], val: number): number {
     return count;
 };
 ```
-* [Go back](../readme.md)
+

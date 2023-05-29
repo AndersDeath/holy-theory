@@ -1,6 +1,4 @@
 # Linked List Cycle
----
-# Linked List Cycle
 
 ```typescript
 /**
@@ -33,4 +31,4 @@ var hasCycle = function(head) {
 };
 ```
 
-* [Go back](../readme.md)
+

@@ -1,6 +1,4 @@
 # Hamming Distance
----
-# Hamming Distance
 
 ```java
 
@@ -19,4 +17,3 @@ class Solution {
 }
 ```
 
-* [Go back](../readme.md)

@@ -1,6 +1,4 @@
 # Chain adding functions
----
-# Chain adding functions
 
 Multiple calls:
 
@@ -31,4 +29,4 @@ function add(x: number): any {
     return f;
   }
 ```
-* [Go back](../readme.md)
+

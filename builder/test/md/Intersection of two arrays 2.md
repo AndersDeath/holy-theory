@@ -1,6 +1,4 @@
 # Intersection of two arrays 2
----
-# Intersection of two arrays 2
 
 ```typescript
 
@@ -26,4 +24,3 @@ function intersect(nums1: number[], nums2: number[]): number[] {
 };
 
 ```
-* [Go back](../readme.md)

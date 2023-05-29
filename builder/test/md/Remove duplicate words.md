@@ -1,6 +1,4 @@
 # Remove duplicate words
----
-# Remove duplicate words
 
 ```typescript
 function removeDuplicateWords(s: string): string {
@@ -11,4 +9,4 @@ function removeDuplicateWords(s: string): string {
     return [...set].join(' ');
   }
 ```
-* [Go back](../readme.md)
+

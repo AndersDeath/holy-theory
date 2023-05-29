@@ -1,6 +1,4 @@
 # Nim Game
----
-# Nim Game
 
 ```typescript
 
@@ -9,4 +7,4 @@ function canWinNim(n: number): boolean {
 };
 
 ```
-* [Go back](../readme.md)
+

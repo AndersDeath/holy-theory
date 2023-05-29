@@ -1,6 +1,4 @@
 # Graph adjacency list
----
-# Graph adjacency list
 
 ```java
 
@@ -49,4 +47,3 @@ public class GraphList {
 }
 ```
 
-* [Go back](../readme.md)

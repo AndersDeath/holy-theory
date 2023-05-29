@@ -1,6 +1,4 @@
 # Summary Ranges
----
-# Summary Ranges
 
 ```typescript
 function summaryRanges(nums: number[]): string[] {
@@ -22,4 +20,3 @@ function summaryRanges(nums: number[]): string[] {
     return output;
 };
 ```
-* [Go back](../readme.md)

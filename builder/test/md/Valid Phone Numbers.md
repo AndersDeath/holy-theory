@@ -1,6 +1,4 @@
 # Valid Phone Numbers
----
-# Valid Phone Numbers
 
 ```bash
 
@@ -11,4 +9,3 @@ grep -E "^(\([0-9]{3}\) |[0-9]{3}\-)[0-9]{3}\-[0-9]{4}$" file.txt
 ```
 
 **Source: https://leetcode.com**
-* [Go back](../readme.md)

@@ -1,6 +1,4 @@
 # Chain calculator
----
-# Chain calculator
 
 ```typescript
 function ChainCalculator(given) {
@@ -27,4 +25,4 @@ const calculator = new ChainCalculator();
 
 calculator.log().sum(15).log().sum(10).log().finish().log()
 ```
-* [Go back](../readme.md)
+

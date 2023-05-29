@@ -1,6 +1,4 @@
 # Binary Tree Preorder Traversal
----
-# Binary Tree Preorder Traversal
 
 ```typescript
 
@@ -33,4 +31,4 @@ function preorder(root: TreeNode | null, output: any[]) {
 }
 
 ```
-* [Go back](../readme.md)
+

@@ -1,6 +1,4 @@
 # Observer
----
-# Observer
 
 ```typescript
 export class Observer {
@@ -21,4 +19,3 @@ export class Observer {
 
 ```
 
-* [Go back](../readme.md)

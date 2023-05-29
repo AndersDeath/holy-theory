@@ -1,6 +1,4 @@
 # Simple text editor
----
-# Simple text editor
 
 ```javascript
 function processData(input) {
@@ -33,4 +31,3 @@ function processData(input) {
 ```
 
 **Source: https://hackerrank.com**
-* [Go back](../readme.md)

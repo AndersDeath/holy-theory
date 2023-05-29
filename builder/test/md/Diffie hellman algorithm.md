@@ -1,6 +1,4 @@
 # Diffie hellman algorithm
----
-# Diffie hellman algorithm
 
 ```javascript
 function power(a: any, b: any, p: any) {
@@ -48,4 +46,3 @@ function DiffieHellman() {
 DiffieHellman()
 ```
 
-* [Go back](../readme.md)

@@ -1,6 +1,4 @@
 # Contains Duplicate
----
-# Contains Duplicate
 
 ```typescript
 function containsDuplicate(nums: number[]): boolean {
@@ -15,4 +13,3 @@ function containsDuplicate(nums: number[]): boolean {
 ```
 
 **Source: https://leetcode.com**
-* [Go back](../readme.md)

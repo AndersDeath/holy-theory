@@ -1,6 +1,4 @@
 # Remove Linked List Elements
----
-# Remove Linked List Elements
 
 ```typescript
 /**
@@ -37,4 +35,4 @@ function removeElements(head: ListNode | null, val: number): ListNode | null {
         return head;
 };
 ```
-* [Go back](../readme.md)
+

@@ -1,6 +1,4 @@
 # Generate Parentheses
----
-# Generate Parentheses
 
 ```typescript
 function generateParenthesis(n: number): string[] {
@@ -24,4 +22,4 @@ function generator(result, s, open, close, n) {
 }
 ```
 
-* [Go back](../readme.md)
+

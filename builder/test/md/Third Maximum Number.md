@@ -1,6 +1,4 @@
 # Third Maximum Number
----
-# Third Maximum Number
 
 ```typescript
 function thirdMax(nums: number[]): number {
@@ -10,4 +8,3 @@ function thirdMax(nums: number[]): number {
 };
 ```
 
-* [Go back](../readme.md)

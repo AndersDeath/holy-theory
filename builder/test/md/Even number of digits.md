@@ -1,6 +1,4 @@
 # Even number of digits
----
-# Even number of digits
 ```java
 class Solution {
 	int countOfDigits(int number) {
@@ -30,4 +28,4 @@ class Solution {
 }
 
 ```
-* [Go back](../readme.md)
+

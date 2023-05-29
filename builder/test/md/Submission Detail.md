@@ -1,6 +1,4 @@
 # Submission Detail
----
-# Submission Detail
 
 ```typescript
 function isSubsequence(s: string, t: string): boolean {
@@ -18,4 +16,3 @@ function isSubsequence(s: string, t: string): boolean {
     return true;
 };
 ```
-* [Go back](../readme.md)

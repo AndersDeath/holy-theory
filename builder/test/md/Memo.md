@@ -1,6 +1,4 @@
 # Memo
----
-# Memo
 
 ```typescript
 export function memo(func: any) {
@@ -16,4 +14,4 @@ export function memo(func: any) {
     }
 }
 ```
-* [Go back](../readme.md)
+

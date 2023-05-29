@@ -1,5 +1,3 @@
-# CAP theorem
----
 ## CAP theorem
 CAP(Consistency-Availability-Partition Tolerance) theorem says that a distributed system cannot guarantee C, A and P simultaneously. It can at max provide any 2 of the 3 guarantees. Let us understand this with the help of a distributed database system. 
 
@@ -10,4 +8,3 @@ The following image represents what databases guarantee what aspects of the CAP 
 
 ![CAP theorem](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/02-cap-theorem.png)
 
-* [Go back](../readme.md)

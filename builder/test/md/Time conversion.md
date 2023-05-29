@@ -1,6 +1,4 @@
 # Time conversion
----
-# Time conversion
 
 ```typescript
 function timeConversion(s: string): string {
@@ -17,4 +15,3 @@ function timeConversion(s: string): string {
 }
 ```
 
-* [Go back](../readme.md)

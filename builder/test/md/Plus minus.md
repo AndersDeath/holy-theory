@@ -1,6 +1,4 @@
 # Plus minus
----
-# Plus minus
 
 ```typescript
 function plusMinus(arr: number[]): void {
@@ -24,4 +22,4 @@ function plusMinus(arr: number[]): void {
 }
 ```
 
-* [Go back](../readme.md)
+

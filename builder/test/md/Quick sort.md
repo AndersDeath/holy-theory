@@ -1,5 +1,3 @@
-# Quick sort
----
 # Quicksort
 ```java
 class Solution {
@@ -88,4 +86,3 @@ class Solution {
 }
 ```
 
-* [Go back](../readme.md)

@@ -1,6 +1,4 @@
 # Move Zeroes
----
-# Move Zeroes
 
 ```typescript
 /**
@@ -21,4 +19,4 @@ function moveZeroes(nums: number[]): void {
 };
 ```
 
-* [Go back](../readme.md)
+

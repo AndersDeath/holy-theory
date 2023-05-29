@@ -90,14 +90,14 @@ function Builder() {
             const fileContents = fs.readFileSync(item, 'utf8');
             const { metadata, content } = parseMD(fileContents);
             // console.log(metadata);
-
+            let cleanedContent = content.replace('* [Go back](../readme.md)', '');
             if (metadata.languages.length > 0) {
                 lm.setFromArr(metadata.languages);
             }
             testData.push({
                 title: metadata.title,
-                body: marked.parse(content),
-                bodyMD: content
+                body: marked.parse(cleanedContent),
+                bodyMD: cleanedContent
             });
         }
     })
@@ -109,18 +109,21 @@ function Builder() {
         fs.writeFileSync(`./builder/test/md/${item.title.replace('\/', '-')}.md`, templates.getData()['articleMD'].build(item));
 
     });
+    const nav = templates.getData()['nav'].build();
 
     let o = templates.getData()['layout'].build({
         header: 'Holy Theory',
-        values: articles
+        values: articles,
+        navigation: nav
     })
 
     fs.writeFileSync('./builder/test/index.html', templates.getData()['index'].build(
-      {  navigation:  templates.getData()['nav'].build()}
+        { navigation: nav }
     ))
     fs.writeFileSync('./builder/test/all.html', o)
     fs.writeFileSync('./builder/test/languages.html',
         templates.getData()['languages'].build({
+            navigation: nav,
             values: Object.fromEntries(lm.get())
         }))
 }

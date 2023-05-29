@@ -1,6 +1,4 @@
 # Remove duplicates
----
-# Remove duplicates
 
 ```java
 class Solution {
@@ -20,4 +18,4 @@ class Solution {
     }
 }
 ```
-* [Go back](../readme.md)
+

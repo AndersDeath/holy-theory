@@ -1,6 +1,4 @@
 # Reverse Vowels of a String
----
-# Reverse Vowels of a String
 
 ```typescript
 
@@ -31,4 +29,3 @@ function reverseVowels(s: string): string {
     return arr.join("");
 };
 ```
-* [Go back](../readme.md)

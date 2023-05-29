@@ -1,6 +1,4 @@
 # Search insert position
----
-# Search insert position
 
 ```typescript
 function searchInsert(nums: number[], target: number): number {
@@ -16,4 +14,3 @@ function searchInsert(nums: number[], target: number): number {
 ```
 
 **Source: https://leetcode.com**
-* [Go back](../readme.md)

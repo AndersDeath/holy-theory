@@ -1,6 +1,4 @@
 # Valid parentheses
----
-# Valid parentheses
 
 ```typescript
 function isValid(s: string): boolean {
@@ -24,4 +22,3 @@ function isValid(s: string): boolean {
 };
 ```
 **Source: https://leetcode.com**
-* [Go back](../readme.md)

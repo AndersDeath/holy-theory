@@ -1,6 +1,4 @@
 # Arranging Coins
----
-# Arranging Coins
 
 ```typescript
 function arrangeCoins(n: number): number {
@@ -17,4 +15,4 @@ function arrangeCoins(n: number): number {
     return cnt;
 };
 ```
-* [Go back](../readme.md)
+

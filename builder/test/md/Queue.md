@@ -1,6 +1,4 @@
 # Queue
----
-# Queue
 
 ![Queue](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/queue.png)
 
@@ -36,4 +34,3 @@ export class Queue {
 
 ```
 
-* [Go back](../readme.md)

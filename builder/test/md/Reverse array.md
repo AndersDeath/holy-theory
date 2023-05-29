@@ -1,6 +1,4 @@
 # Reverse array
----
-# Reverse array
 
 Solution Steps
 
@@ -29,4 +27,4 @@ function reverseArray(a: number[]): number[] {
 }
 
 ```
-* [Go back](../readme.md)
+

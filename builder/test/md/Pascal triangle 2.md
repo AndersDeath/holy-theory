@@ -1,6 +1,4 @@
 # Pascal triangle 2
----
-# Pascal triangle 2
 ```typescript
 
 function generate(numRows: number): number[][] {
@@ -22,4 +20,4 @@ function generate(numRows: number): number[][] {
 };
 ```
 
-* [Go back](../readme.md)
+

@@ -1,6 +1,4 @@
 # Number of Segments in a String
----
-# Number of Segments in a String
 
 ```typescript
 
@@ -15,4 +13,4 @@ function countSegments(s: string): number {
 
 ```
 
-* [Go back](../readme.md)
+

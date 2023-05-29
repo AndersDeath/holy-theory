@@ -1,6 +1,4 @@
 # Singleton
----
-# Singleton
 
 ```typescript
 const singleton = (function() {
@@ -29,4 +27,3 @@ const singleton = (function() {
 
 ```
 
-* [Go back](../readme.md)

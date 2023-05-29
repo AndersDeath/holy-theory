@@ -1,6 +1,4 @@
 # Binary Tree Inorder Traversal
----
-# Binary Tree Inorder Traversal
 
 ```typescript
 /**
@@ -34,4 +32,4 @@ function inorderTraversal(root: TreeNode | null): number[] {
     return list;
 };
 ```
-* [Go back](../readme.md)
+

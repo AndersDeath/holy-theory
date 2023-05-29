@@ -1,6 +1,4 @@
 # Binary search
----
-# Binary search
 
 ![Binary search](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/binary-search.png)
 
@@ -91,4 +89,3 @@ res = binary_search(my_list, 3)
 print(my_list[res])
 ```
 
-* [Go back](../readme.md)

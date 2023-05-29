@@ -1,6 +1,4 @@
 # Binary Tree Postorder Traversal
----
-# Binary Tree Postorder Traversal
 
 ```typescript
 /**
@@ -30,4 +28,4 @@ const helper = function (root, res) {
   res.push(root.val);
 };
 ```
-* [Go back](../readme.md)
+

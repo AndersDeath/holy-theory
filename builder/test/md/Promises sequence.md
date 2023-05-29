@@ -1,6 +1,4 @@
 # Promises sequence
----
-# Promises sequence
 
 ```typescript
 const a = new Promise((resolve: any, reject: any) => {
@@ -31,4 +29,4 @@ let q = [a,b,c].reduce((acc:any, f: any) => {
 }, Promise.resolve());
 ```
 
-* [Go back](../readme.md)
+

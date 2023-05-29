@@ -1,6 +1,4 @@
 # Primes upon to N
----
-# Primes upon to N
 
 ```java
 class Solution {
@@ -31,4 +29,4 @@ class Solution {
 }
 ```
 
-* [Go back](../readme.md)
+

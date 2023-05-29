@@ -1,6 +1,4 @@
 # Tree
----
-# Tree
 ![Tree1](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/tree1.png)
 ![Tree2](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/tree2.png)
 
@@ -111,4 +109,3 @@ class BinarySearchTree {
 
 ```
 
-* [Go back](../readme.md)

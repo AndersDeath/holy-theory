@@ -1,6 +1,4 @@
 # Word search
----
-# Word search
 
 ```typescript
 function exist(board: string[][], word: string): boolean {
@@ -35,4 +33,3 @@ function backtrack(board, word, i, j,index, row, col) {
 
 }
 ```
-* [Go back](../readme.md)

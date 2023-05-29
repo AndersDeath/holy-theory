@@ -1,6 +1,4 @@
 # Length of Last Word
----
-# Length of Last Word
 
 ```typescript
 function lengthOfLastWord(s: string): number {
@@ -16,4 +14,3 @@ function lengthOfLastWord(s: string): number {
     return counter;
 };
 ```
-* [Go back](../readme.md)

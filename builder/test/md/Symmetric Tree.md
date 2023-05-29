@@ -1,6 +1,4 @@
 # Symmetric Tree
----
-# Symmetric Tree
 
 ```typescript
 /**
@@ -30,4 +28,3 @@ function isMirror(node1: TreeNode, node2: TreeNode): boolean {
 }
 ```
 
-* [Go back](../readme.md)

@@ -1,6 +1,4 @@
 # Climbing stairs
----
-# Climbing stairs
 
 ```typescript
 function climbStairs(n: number): number {
@@ -20,4 +18,3 @@ function climbStairs(n: number): number {
 ```
 
 **Source: https://leetcode.com**
-* [Go back](../readme.md)

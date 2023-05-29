@@ -1,6 +1,4 @@
 # Balanced brackets
----
-# Balanced brackets
 ```typescript
 
 const tokens = {
@@ -39,4 +37,4 @@ function isBalanced(s) {
 ```
 
 ** Source: http://hackerrank.com**
-* [Go back](../readme.md)
+

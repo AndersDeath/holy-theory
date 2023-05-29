@@ -1,6 +1,4 @@
 # Merge sort
----
-# Merge sort
 
 ## Java
 ```java
@@ -55,4 +53,3 @@ class Solution {
 }
 
 ```
-* [Go back](../readme.md)

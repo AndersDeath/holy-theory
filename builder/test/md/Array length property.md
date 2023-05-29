@@ -1,6 +1,4 @@
 # Array length property
----
-# Array length property
 What is the value of clothes[0]:
 
 ```javascript
@@ -16,4 +14,3 @@ As result when JavaScript executes clothes.length = 0, all clothes items are del
 
 clothes[0] is undefined, because clothes array has been emptied.
 
-* [Go back](../readme.md)

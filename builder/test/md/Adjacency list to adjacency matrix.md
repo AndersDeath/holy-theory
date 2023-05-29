@@ -1,6 +1,4 @@
 # Adjacency list to adjacency matrix
----
-# Adjacency list to adjacency matrix
 
 ```java
 class Solution {
@@ -17,4 +15,4 @@ class Solution {
     }
 }
 ```
-* [Go back](../readme.md)
+

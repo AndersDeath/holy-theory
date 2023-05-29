@@ -1,6 +1,4 @@
 # Pascal triangle
----
-# Pascal triangle
 ```java
 class Solution {
 	int[] pascalTriangleRow(int rowNo) {
@@ -16,4 +14,4 @@ class Solution {
 }
 ```
 
-* [Go back](../readme.md)
+

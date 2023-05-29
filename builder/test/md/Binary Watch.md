@@ -1,6 +1,4 @@
 # Binary Watch
----
-# Binary Watch
 
 ```java
 
@@ -18,4 +16,4 @@ class Solution {
     }
 }
 ```
-* [Go back](../readme.md)
+

@@ -1,6 +1,4 @@
 # Fizz Buzz
----
-# Fizz Buzz
 
 ```typescript
 function fizzBuzz(n: number): string[] {
@@ -21,4 +19,4 @@ function fizzBuzz(n: number): string[] {
 };
 ```
 
-* [Go back](../readme.md)
+

@@ -1,6 +1,4 @@
 # Same tree
----
-# Same tree
 
 ```typescript
 function isSameTree(p: TreeNode | null, q: TreeNode | null): boolean {
@@ -15,4 +13,3 @@ function isSameTree(p: TreeNode | null, q: TreeNode | null): boolean {
 ```
 
 **Source: https://leetcode.com**
-* [Go back](../readme.md)

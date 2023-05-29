@@ -1,5 +1,3 @@
-# Fibonacci streaming
----
 # Fibonacci streaming 
 
 ```typescript
@@ -26,4 +24,3 @@ export function fibonacciSequence(): Iterator<number> {
   }
 ```
 
-* [Go back](../readme.md)

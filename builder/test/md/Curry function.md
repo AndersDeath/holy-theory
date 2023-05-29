@@ -1,6 +1,4 @@
 # Curry function
----
-# Curry function
 
 ```typescript
 function curry(func: any) {
@@ -16,4 +14,4 @@ function curry(func: any) {
     return curried;
 }
 ```
-* [Go back](../readme.md)
+

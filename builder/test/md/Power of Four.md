@@ -1,6 +1,4 @@
 # Power of Four
----
-# Power of Four
 
 ```typescript
 function isPowerOfFour(n: number): boolean {
@@ -17,4 +15,4 @@ function isPowerOfFour(n: number): boolean {
 };
 ```
 
-* [Go back](../readme.md)
+

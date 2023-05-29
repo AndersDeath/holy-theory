@@ -1,6 +1,4 @@
 # Integer to Roman
----
-# Integer to Roman
 
 ```typescript
 
@@ -19,4 +17,3 @@ function intToRoman(num: number): string {
 };
 
 ```
-* [Go back](../readme.md)

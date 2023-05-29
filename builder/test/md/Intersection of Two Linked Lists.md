@@ -1,6 +1,4 @@
 # Intersection of Two Linked Lists
----
-# Intersection of Two Linked Lists
 
 ```typescript
 /**
@@ -28,4 +26,3 @@ function getIntersectionNode(headA: ListNode | null, headB: ListNode | null): Li
 };
 
 ```
-* [Go back](../readme.md)

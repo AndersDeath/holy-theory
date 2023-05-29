@@ -1,6 +1,4 @@
 # Map
----
-# Map
 
 ```typescript
 export class Map {
@@ -44,5 +42,5 @@ export class Map {
 }
 ```
 
-* [Go back](../readme.md)
+
   

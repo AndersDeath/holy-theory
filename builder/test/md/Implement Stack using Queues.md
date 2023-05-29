@@ -1,6 +1,4 @@
 # Implement Stack using Queues
----
-# Implement Stack using Queues
 
 ```typescript
 class MyStack {
@@ -40,4 +38,3 @@ class MyStack {
  * var param_4 = obj.empty()
  */
 ```
-* [Go back](../readme.md)

@@ -1,6 +1,4 @@
 # Merge Sorted Array
----
-# Merge Sorted Array
 
 ```typescript
 /**
@@ -18,4 +16,4 @@ function merge(nums1: number[], m: number, nums2: number[], n: number): void {
 
 };
 ```
-* [Go back](../readme.md)
+

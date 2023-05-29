@@ -1,6 +1,4 @@
 # Invert Binary Tree
----
-# Invert Binary Tree
 
 ```typescript
 /**
@@ -27,4 +25,3 @@ function invertTree(root: TreeNode | null): TreeNode | null {
     return root;
 };
 ```
-* [Go back](../readme.md)

@@ -1,6 +1,4 @@
 # Permutations
----
-# Permutations
 
 ```typescript
 function permute(nums: number[]): number[][] {
@@ -29,4 +27,4 @@ function dfs(nums, index,output) {
 }
 ```
 
-* [Go back](../readme.md)
+

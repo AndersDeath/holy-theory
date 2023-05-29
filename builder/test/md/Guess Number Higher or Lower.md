@@ -1,6 +1,4 @@
 # Guess Number Higher or Lower
----
-# Guess Number Higher or Lower
 
 ```typescript
 
@@ -29,4 +27,3 @@ function guessNumber(n: number): number {
 
 ```
 
-* [Go back](../readme.md)

@@ -1,6 +1,4 @@
 # Valid Perfect Square
----
-# Valid Perfect Square
 
 ```typescript
 function isPerfectSquare(num: number): boolean {
@@ -13,4 +11,3 @@ function isPerfectSquare(num: number): boolean {
 };
 ```
 **Source: https://leetcode.com**
-* [Go back](../readme.md)

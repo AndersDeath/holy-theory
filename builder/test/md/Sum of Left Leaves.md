@@ -1,6 +1,4 @@
 # Sum of Left Leaves
----
-# Sum of Left Leaves
 
 ```typescript
 /**
@@ -33,4 +31,3 @@ function sumOfLeftLeaves(root: TreeNode | null): number {
     return result;
 };
 ```
-* [Go back](../readme.md)

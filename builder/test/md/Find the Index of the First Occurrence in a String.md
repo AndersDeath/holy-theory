@@ -1,6 +1,4 @@
 # Find the Index of the First Occurrence in a String
----
-# Find the Index of the First Occurrence in a String
 
 ```typescript
 function strStr(haystack: string, needle: string): number {
@@ -16,4 +14,3 @@ function strStr(haystack: string, needle: string): number {
 };
 ```
 **Source: https://leetcode.com**
-* [Go back](../readme.md)

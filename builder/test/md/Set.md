@@ -1,6 +1,4 @@
 # Set
----
-# Set
 
 ```typescript
 export class Set {
@@ -115,4 +113,3 @@ export class Set {
 
 ```
 
-* [Go back](../readme.md)

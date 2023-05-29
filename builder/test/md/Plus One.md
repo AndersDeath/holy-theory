@@ -1,6 +1,4 @@
 # Plus One
----
-# Plus One
 
 ```typescript
 
@@ -31,4 +29,4 @@ var plusOne = function(digits) {
 };
 
 ```
-* [Go back](../readme.md)
+

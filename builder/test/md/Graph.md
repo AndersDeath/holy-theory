@@ -1,6 +1,4 @@
 # Graph
----
-# Graph
 
 ![Graph](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/graph.png)
 ![Graph directed](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/graph-directed.png)
@@ -11,4 +9,3 @@ Basic Operations:
 
 
 
-* [Go back](../readme.md)

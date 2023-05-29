@@ -1,6 +1,4 @@
 # Linked list
----
-# Linked list
 
 ![Linked List](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/linked-list.png)
 
@@ -132,5 +130,5 @@ export class LinkedList {
 }
 ```
 
-* [Go back](../readme.md)
+
   

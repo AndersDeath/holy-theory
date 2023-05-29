@@ -1,6 +1,4 @@
 # String to integer (atoi)
----
-# String to integer (atoi)
 
 ```typescript
 /**
@@ -42,4 +40,3 @@ var myAtoi = function(s) {
     return number;
 };
 ```
-* [Go back](../readme.md)

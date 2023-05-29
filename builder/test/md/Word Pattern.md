@@ -1,6 +1,4 @@
 # Word Pattern
----
-# Word Pattern
 
 ```typescript
 function wordPattern(pattern: string, s: string): boolean {
@@ -30,4 +28,3 @@ function wordPattern(pattern: string, s: string): boolean {
 };
 ```
 **Source: https://codewars.com**
-* [Go back](../readme.md)

@@ -1,6 +1,4 @@
 # Palindrome linked list
----
-# Palindrome linked list
 
 ```typescript
 
@@ -34,4 +32,4 @@ function isPalindrome(head: ListNode | null): boolean {
 
 ```
 
-* [Go back](../readme.md)
+

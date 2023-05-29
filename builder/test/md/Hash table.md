@@ -1,6 +1,4 @@
 # Hash table
----
-# Hash table
 ![Hash table](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/hash-table.png)
 
 ```typescript
@@ -41,4 +39,3 @@ export class HashTable {
 }
 ```
 
-* [Go back](../readme.md)

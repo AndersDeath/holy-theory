@@ -1,6 +1,4 @@
 # Minimum Depth of Binary Tree
----
-# Minimum Depth of Binary Tree
 
 ```typescript
 /**
@@ -40,5 +38,5 @@ function minDepth(root: TreeNode | null): number {
         return depth;
 };
 ```
-* [Go back](../readme.md)
+
 

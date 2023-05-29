@@ -1,6 +1,4 @@
 # Reverse bits
----
-# Reverse bits
 
 ```typescript
 /**
@@ -14,4 +12,4 @@ var reverseBits = function(n) {
 };
 
 ```
-* [Go back](../readme.md)
+

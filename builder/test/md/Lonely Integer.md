@@ -1,6 +1,4 @@
 # Lonely Integer
----
-# Lonely Integer
 ```typescript
 function lonelyInteger(a: number[]): number {
     return a.reduce((a: number, b: number) => a^b);
@@ -8,4 +6,4 @@ function lonelyInteger(a: number[]): number {
 
 ,,,
 
-* [Go back](../readme.md)
+

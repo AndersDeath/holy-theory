@@ -1,6 +1,4 @@
 # 3Sum
----
-# 3Sum
 
 ```typescript
 
@@ -36,4 +34,4 @@ function threeSum(nums: number[]): number[][] {
 };
 
 ```
-* [Go back](../readme.md)
+

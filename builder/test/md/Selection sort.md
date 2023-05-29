@@ -1,6 +1,4 @@
 # Selection sort
----
-# Selection sort
 
 ![Selection sort](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/selection-sort.png)
 
@@ -58,4 +56,3 @@ def selection_sort(arr):
 print(selection_sort([5,4,6,2,1,123, 2, 3,1,23 ,1,1,]))
 ```
 
-* [Go back](../readme.md)

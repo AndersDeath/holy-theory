@@ -1,6 +1,4 @@
 # Missing number
----
-# Missing number
 
 ```typescript
 
@@ -15,4 +13,4 @@ function missingNumber(nums: number[]): number {
 
 ```
 
-* [Go back](../readme.md)
+

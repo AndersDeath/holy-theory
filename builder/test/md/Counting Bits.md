@@ -1,6 +1,4 @@
 # Counting Bits
----
-# Counting Bits
 
 ```typescript
 function countBits(n: number): number[] {
@@ -20,4 +18,4 @@ function countBits(n: number): number[] {
     return result;
 };
 ```
-* [Go back](../readme.md)
+
