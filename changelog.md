@@ -2,6 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 # [0.0.21] - In Progress
+* add Island Perimeter training in TS
 
 # [0.0.20] - 2023-05-29
 * add Arranging Coins training in TS
