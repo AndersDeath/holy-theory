@@ -1,7 +1,9 @@
 # Changelog
 
 All notable changes to this project will be documented in this file.
-# [0.0.20] - In Progress
+# [0.0.21] - In Progress
+
+# [0.0.20] - 2023-05-29
 * add Arranging Coins training in TS
 * add Find All Numbers Disappeared in an Array training in TS
 * add Assign Cookies training in TS
