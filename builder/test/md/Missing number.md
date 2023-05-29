@@ -13,4 +13,4 @@ function missingNumber(nums: number[]): number {
 
 ```
 
-* [Go back](../readme.md)
+

@@ -18,4 +18,3 @@ function climbStairs(n: number): number {
 ```
 
 **Source: https://leetcode.com**
-* [Go back](../readme.md)

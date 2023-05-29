@@ -7,4 +7,4 @@ function canWinNim(n: number): boolean {
 };
 
 ```
-* [Go back](../readme.md)
+

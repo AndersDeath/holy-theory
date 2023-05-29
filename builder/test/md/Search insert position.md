@@ -14,4 +14,3 @@ function searchInsert(nums: number[], target: number): number {
 ```
 
 **Source: https://leetcode.com**
-* [Go back](../readme.md)

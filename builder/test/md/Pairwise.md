@@ -29,4 +29,3 @@ console.log(res);
 
 ```
 
-* [Go back](../readme.md)

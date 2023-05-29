@@ -31,4 +31,3 @@ function sumOfLeftLeaves(root: TreeNode | null): number {
     return result;
 };
 ```
-* [Go back](../readme.md)

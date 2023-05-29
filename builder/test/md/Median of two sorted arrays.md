@@ -37,4 +37,3 @@ function findMedianSortedArrays(nums1: number[], nums2: number[]): number {
 };
 ```
 **Source: https://leetcode.com**
-* [Go back](../readme.md)

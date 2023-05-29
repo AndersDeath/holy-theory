@@ -37,4 +37,4 @@ function isBalanced(s) {
 ```
 
 ** Source: http://hackerrank.com**
-* [Go back](../readme.md)
+

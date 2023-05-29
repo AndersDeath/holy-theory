@@ -22,4 +22,3 @@ function isValid(s: string): boolean {
 };
 ```
 **Source: https://leetcode.com**
-* [Go back](../readme.md)

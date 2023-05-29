@@ -35,4 +35,4 @@ function removeElements(head: ListNode | null, val: number): ListNode | null {
         return head;
 };
 ```
-* [Go back](../readme.md)
+

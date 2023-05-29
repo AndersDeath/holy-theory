@@ -13,4 +13,3 @@ function isSameTree(p: TreeNode | null, q: TreeNode | null): boolean {
 ```
 
 **Source: https://leetcode.com**
-* [Go back](../readme.md)

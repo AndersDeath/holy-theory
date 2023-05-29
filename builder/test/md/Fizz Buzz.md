@@ -19,4 +19,4 @@ function fizzBuzz(n: number): string[] {
 };
 ```
 
-* [Go back](../readme.md)
+

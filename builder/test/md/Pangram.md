@@ -11,4 +11,4 @@ function isPangram(string:string){
   }
 ,,,
 
-* [Go back](../readme.md)
+

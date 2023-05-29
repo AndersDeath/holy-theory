@@ -15,4 +15,4 @@ function hammingWeight(n: number): number {
 
 ```
 
-* [Go back](../readme.md)
+

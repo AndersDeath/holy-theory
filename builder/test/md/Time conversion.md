@@ -15,4 +15,3 @@ function timeConversion(s: string): string {
 }
 ```
 
-* [Go back](../readme.md)

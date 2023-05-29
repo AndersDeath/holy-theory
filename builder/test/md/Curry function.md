@@ -14,4 +14,4 @@ function curry(func: any) {
     return curried;
 }
 ```
-* [Go back](../readme.md)
+

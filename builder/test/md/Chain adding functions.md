@@ -29,4 +29,4 @@ function add(x: number): any {
     return f;
   }
 ```
-* [Go back](../readme.md)
+

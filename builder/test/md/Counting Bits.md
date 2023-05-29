@@ -18,4 +18,4 @@ function countBits(n: number): number[] {
     return result;
 };
 ```
-* [Go back](../readme.md)
+

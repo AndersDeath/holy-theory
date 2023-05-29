@@ -6,4 +6,3 @@ export const symmetricDifference = (...args: any) => [...new Set(args.reduce((ar
 ]))];
 ```
 
-* [Go back](../readme.md)

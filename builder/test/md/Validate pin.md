@@ -7,4 +7,3 @@ const validatePin = (pin: string): boolean  => {
   }
 ```
 **Source: https://codewars.com**
-* [Go back](../readme.md)

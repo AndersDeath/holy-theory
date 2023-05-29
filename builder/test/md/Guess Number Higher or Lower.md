@@ -27,4 +27,3 @@ function guessNumber(n: number): number {
 
 ```
 
-* [Go back](../readme.md)

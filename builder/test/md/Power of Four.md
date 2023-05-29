@@ -15,4 +15,4 @@ function isPowerOfFour(n: number): boolean {
 };
 ```
 
-* [Go back](../readme.md)
+

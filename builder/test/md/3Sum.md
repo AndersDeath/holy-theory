@@ -34,4 +34,4 @@ function threeSum(nums: number[]): number[][] {
 };
 
 ```
-* [Go back](../readme.md)
+

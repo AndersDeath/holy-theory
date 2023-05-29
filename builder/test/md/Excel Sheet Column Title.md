@@ -18,4 +18,3 @@ function convertToTitle(columnNumber: number): string {
 };
 ```
 
-* [Go back](../readme.md)

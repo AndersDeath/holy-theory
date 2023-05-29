@@ -19,4 +19,4 @@ function firstUniqChar(s: string): number {
 };
 ```
 
-* [Go back](../readme.md)
+

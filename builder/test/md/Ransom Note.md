@@ -11,4 +11,4 @@ function canConstruct(ransomNote: string, magazine: string): boolean {
   return true;
 };
 ```
-* [Go back](../readme.md)
+

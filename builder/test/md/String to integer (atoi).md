@@ -40,4 +40,3 @@ var myAtoi = function(s) {
     return number;
 };
 ```
-* [Go back](../readme.md)

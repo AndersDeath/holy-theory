@@ -52,4 +52,3 @@ export class PriorityQueue {
 }
 ```
 
-* [Go back](../readme.md)

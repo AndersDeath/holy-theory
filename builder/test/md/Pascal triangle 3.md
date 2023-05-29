@@ -10,4 +10,4 @@ function getRow(rowIndex: number): number[] {
 };
 ```
 
-* [Go back](../readme.md)
+

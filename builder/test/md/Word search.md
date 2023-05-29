@@ -33,4 +33,3 @@ function backtrack(board, word, i, j,index, row, col) {
 
 }
 ```
-* [Go back](../readme.md)

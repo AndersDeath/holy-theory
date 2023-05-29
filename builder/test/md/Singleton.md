@@ -27,4 +27,3 @@ const singleton = (function() {
 
 ```
 
-* [Go back](../readme.md)

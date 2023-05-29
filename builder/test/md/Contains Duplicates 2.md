@@ -14,4 +14,3 @@ function containsNearbyDuplicate(nums: number[], k: number): boolean {
 ```
 
 **Source: https://leetcode.com**
-* [Go back](../readme.md)

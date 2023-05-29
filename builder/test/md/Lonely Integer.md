@@ -6,4 +6,4 @@ function lonelyInteger(a: number[]): number {
 
 ,,,
 
-* [Go back](../readme.md)
+

@@ -15,4 +15,3 @@ function maxProfit(prices: number[]): number {
 ```
 
 **Source: https://leetcode.com**
-* [Go back](../readme.md)

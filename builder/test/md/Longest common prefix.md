@@ -21,4 +21,4 @@ function longestCommonPrefix(strs: string[]): string {
 ```
 **Source: https://leetcode.com**
 
-* [Go back](../readme.md)
+

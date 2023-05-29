@@ -19,4 +19,4 @@ function moveZeroes(nums: number[]): void {
 };
 ```
 
-* [Go back](../readme.md)
+

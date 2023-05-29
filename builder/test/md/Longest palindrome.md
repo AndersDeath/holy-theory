@@ -43,4 +43,4 @@ function longestPalindrome(s: string): string {
     return s.slice(start, start + maxLength);
 };
 ```
-* [Go back](../readme.md)
+

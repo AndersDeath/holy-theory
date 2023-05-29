@@ -9,4 +9,3 @@ WHERE w1.Temperature > w2.Temperature
 AND datediff(w1.recordDate, w2.recordDate) = 1;
 ```
 
-* [Go back](../readme.md)

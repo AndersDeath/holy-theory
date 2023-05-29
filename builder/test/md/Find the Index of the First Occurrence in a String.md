@@ -14,4 +14,3 @@ function strStr(haystack: string, needle: string): number {
 };
 ```
 **Source: https://leetcode.com**
-* [Go back](../readme.md)

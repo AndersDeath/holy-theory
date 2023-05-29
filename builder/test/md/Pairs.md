@@ -23,4 +23,4 @@ function pairs(k: number, arr: number[]): number {
 ```
 
 ** Source: http://hackerrank.com**
-* [Go back](../readme.md)
+

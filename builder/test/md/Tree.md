@@ -109,4 +109,3 @@ class BinarySearchTree {
 
 ```
 
-* [Go back](../readme.md)

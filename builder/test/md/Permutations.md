@@ -27,4 +27,4 @@ function dfs(nums, index,output) {
 }
 ```
 
-* [Go back](../readme.md)
+

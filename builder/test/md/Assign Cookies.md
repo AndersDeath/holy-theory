@@ -18,4 +18,4 @@ function findContentChildren(g: number[], s: number[]): number {
 };
 
 ```
-* [Go back](../readme.md)
+

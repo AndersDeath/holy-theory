@@ -29,4 +29,4 @@ let q = [a,b,c].reduce((acc:any, f: any) => {
 }, Promise.resolve());
 ```
 
-* [Go back](../readme.md)
+

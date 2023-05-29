@@ -32,4 +32,4 @@ function isPalindrome(head: ListNode | null): boolean {
 
 ```
 
-* [Go back](../readme.md)
+

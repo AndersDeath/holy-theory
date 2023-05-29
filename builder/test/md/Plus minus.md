@@ -22,4 +22,4 @@ function plusMinus(arr: number[]): void {
 }
 ```
 
-* [Go back](../readme.md)
+

@@ -18,4 +18,3 @@ function findDisappearedNumbers(nums: number[]): number[] {
 };
 ```
 
-* [Go back](../readme.md)

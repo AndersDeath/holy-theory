@@ -18,4 +18,4 @@ function processData(input) {
 ,,,
 
 ** Source: http://hackerrank.com**
-* [Go back](../readme.md)
+

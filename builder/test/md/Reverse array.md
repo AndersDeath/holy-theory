@@ -27,4 +27,4 @@ function reverseArray(a: number[]): number[] {
 }
 
 ```
-* [Go back](../readme.md)
+

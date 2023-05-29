@@ -13,4 +13,3 @@ function containsDuplicate(nums: number[]): boolean {
 ```
 
 **Source: https://leetcode.com**
-* [Go back](../readme.md)

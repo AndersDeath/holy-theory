@@ -16,4 +16,3 @@ function isSubsequence(s: string, t: string): boolean {
     return true;
 };
 ```
-* [Go back](../readme.md)

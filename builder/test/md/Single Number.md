@@ -15,4 +15,3 @@ var singleNumber = function(nums) {
     return ans;
 };
 ```
-* [Go back](../readme.md)

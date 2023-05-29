@@ -22,4 +22,4 @@ function generator(result, s, open, close, n) {
 }
 ```
 
-* [Go back](../readme.md)
+

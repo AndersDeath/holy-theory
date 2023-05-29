@@ -32,4 +32,3 @@ var mySqrt = function(x) {
 };
 ```
 
-* [Go back](../readme.md)

@@ -32,4 +32,4 @@ function inorderTraversal(root: TreeNode | null): number[] {
     return list;
 };
 ```
-* [Go back](../readme.md)
+

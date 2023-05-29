@@ -28,4 +28,4 @@ const helper = function (root, res) {
   res.push(root.val);
 };
 ```
-* [Go back](../readme.md)
+

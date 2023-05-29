@@ -28,4 +28,3 @@ const EventBus: IEventBus = {
 }
 ```
 
-* [Go back](../readme.md)

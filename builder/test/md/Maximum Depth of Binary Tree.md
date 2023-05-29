@@ -27,4 +27,3 @@ function maxDepth(root: TreeNode | null): number {
 };
 ```
 **Source: https://leetcode.com**
-* [Go back](../readme.md)

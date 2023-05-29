@@ -25,4 +25,3 @@ function rotate(matrix: number[][]): void {
     }
 };
 ```
-* [Go back](../readme.md)

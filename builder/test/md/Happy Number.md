@@ -24,4 +24,3 @@ const getNextSum = (number) => {
 
 ```
 
-* [Go back](../readme.md)

@@ -89,4 +89,3 @@ res = binary_search(my_list, 3)
 print(my_list[res])
 ```
 
-* [Go back](../readme.md)

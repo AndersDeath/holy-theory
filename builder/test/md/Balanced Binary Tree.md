@@ -34,4 +34,4 @@ function height(node: TreeNode): number {
     return Math.max(left, right) + 1;
 }
 ```
-* [Go back](../readme.md)
+

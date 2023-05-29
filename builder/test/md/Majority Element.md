@@ -21,4 +21,3 @@ function majorityElement(nums: number[]): number {
 };
 ```
 **Source: https://leetcode.com**
-* [Go back](../readme.md)

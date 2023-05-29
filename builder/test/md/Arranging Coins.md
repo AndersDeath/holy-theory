@@ -15,4 +15,4 @@ function arrangeCoins(n: number): number {
     return cnt;
 };
 ```
-* [Go back](../readme.md)
+

@@ -20,4 +20,4 @@ function generate(numRows: number): number[][] {
 };
 ```
 
-* [Go back](../readme.md)
+

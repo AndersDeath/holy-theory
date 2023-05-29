@@ -16,4 +16,3 @@ export function reverseWords(str: string): string {
 ```
 
 **Source: https://codewars.com**
-* [Go back](../readme.md)

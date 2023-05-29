@@ -24,4 +24,4 @@ function lengthOfLongestSubstring(s: string): number {
 };
 ```
 
-* [Go back](../readme.md)
+

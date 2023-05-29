@@ -32,4 +32,3 @@ function swapPairs(head: ListNode | null): ListNode | null {
 };
 ```
 
-* [Go back](../readme.md)

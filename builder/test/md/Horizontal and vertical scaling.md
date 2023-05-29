@@ -5,4 +5,3 @@ Horizontal scaling, or scaling out, means adding more hardware to the existing h
 
 ![Horizontal and vertical scaling](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/01-horizontal-vertical-scaling.png)
 
-* [Go back](../readme.md)

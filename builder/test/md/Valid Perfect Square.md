@@ -11,4 +11,3 @@ function isPerfectSquare(num: number): boolean {
 };
 ```
 **Source: https://leetcode.com**
-* [Go back](../readme.md)

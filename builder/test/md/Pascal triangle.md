@@ -14,4 +14,4 @@ class Solution {
 }
 ```
 
-* [Go back](../readme.md)
+

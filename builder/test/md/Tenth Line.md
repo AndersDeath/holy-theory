@@ -6,4 +6,3 @@
 head -n 10 file.txt | tail -n +10
 ```
 
-* [Go back](../readme.md)

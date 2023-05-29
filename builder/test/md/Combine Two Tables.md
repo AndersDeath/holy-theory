@@ -6,4 +6,3 @@ left join address a on p.personid = a.personid
 
 ```
 
-* [Go back](../readme.md)

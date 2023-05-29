@@ -40,4 +40,3 @@ var newInv = [
 const result =  updateInventory(curInv, newInv);
 console.log(result)
 ```
-* [Go back](../readme.md)

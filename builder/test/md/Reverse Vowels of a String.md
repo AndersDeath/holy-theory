@@ -29,4 +29,3 @@ function reverseVowels(s: string): string {
     return arr.join("");
 };
 ```
-* [Go back](../readme.md)

@@ -35,4 +35,4 @@ function hasPathSum(root: TreeNode | null, targetSum: number): boolean {
 };
 
 ```
-* [Go back](../readme.md)
+

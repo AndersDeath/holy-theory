@@ -9,4 +9,4 @@ function removeDuplicateWords(s: string): string {
     return [...set].join(' ');
   }
 ```
-* [Go back](../readme.md)
+

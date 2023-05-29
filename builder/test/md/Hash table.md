@@ -39,4 +39,3 @@ export class HashTable {
 }
 ```
 
-* [Go back](../readme.md)

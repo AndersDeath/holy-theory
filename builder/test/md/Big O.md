@@ -6,4 +6,3 @@
 
 ** Source: https://github.com/jamiebuilds/itsy-bitsy-data-structures/blob/master/itsy-bitsy-data-structures.js**
 
-* [Go back](../readme.md)

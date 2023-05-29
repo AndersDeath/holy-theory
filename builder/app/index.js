@@ -90,14 +90,14 @@ function Builder() {
             const fileContents = fs.readFileSync(item, 'utf8');
             const { metadata, content } = parseMD(fileContents);
             // console.log(metadata);
-
+            let cleanedContent = content.replace('* [Go back](../readme.md)', '');
             if (metadata.languages.length > 0) {
                 lm.setFromArr(metadata.languages);
             }
             testData.push({
                 title: metadata.title,
-                body: marked.parse(content),
-                bodyMD: content
+                body: marked.parse(cleanedContent),
+                bodyMD: cleanedContent
             });
         }
     })

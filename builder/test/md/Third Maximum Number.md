@@ -8,4 +8,3 @@ function thirdMax(nums: number[]): number {
 };
 ```
 
-* [Go back](../readme.md)

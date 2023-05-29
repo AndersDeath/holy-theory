@@ -79,4 +79,3 @@ class Stack {
 }
 ```
 
-* [Go back](../readme.md)

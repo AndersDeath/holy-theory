@@ -30,4 +30,3 @@ console.log(bubbleSort([2,5,2,6,7,2,22,5,7,9,0,2,3]))
 	}
 ```
 
-* [Go back](../readme.md)

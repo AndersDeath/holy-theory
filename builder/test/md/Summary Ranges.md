@@ -20,4 +20,3 @@ function summaryRanges(nums: number[]): string[] {
     return output;
 };
 ```
-* [Go back](../readme.md)

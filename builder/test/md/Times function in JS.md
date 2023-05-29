@@ -14,4 +14,3 @@ times(() => {
 }, 3);
 ```
 
-* [Go back](../readme.md)

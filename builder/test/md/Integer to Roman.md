@@ -17,4 +17,3 @@ function intToRoman(num: number): string {
 };
 
 ```
-* [Go back](../readme.md)

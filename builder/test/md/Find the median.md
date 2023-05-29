@@ -7,4 +7,4 @@ function findMedian(arr: number[]): number {
 }
 ```
 
-* [Go back](../readme.md)
+

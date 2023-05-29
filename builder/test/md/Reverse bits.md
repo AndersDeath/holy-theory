@@ -12,4 +12,4 @@ var reverseBits = function(n) {
 };
 
 ```
-* [Go back](../readme.md)
+

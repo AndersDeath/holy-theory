@@ -14,4 +14,3 @@ function lengthOfLastWord(s: string): number {
     return counter;
 };
 ```
-* [Go back](../readme.md)

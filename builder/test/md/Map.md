@@ -42,5 +42,5 @@ export class Map {
 }
 ```
 
-* [Go back](../readme.md)
+
   

@@ -26,4 +26,3 @@ function getIntersectionNode(headA: ListNode | null, headB: ListNode | null): Li
 };
 
 ```
-* [Go back](../readme.md)

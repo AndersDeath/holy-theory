@@ -31,4 +31,4 @@ function preorder(root: TreeNode | null, output: any[]) {
 }
 
 ```
-* [Go back](../readme.md)
+

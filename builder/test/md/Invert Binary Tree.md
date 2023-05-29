@@ -25,4 +25,3 @@ function invertTree(root: TreeNode | null): TreeNode | null {
     return root;
 };
 ```
-* [Go back](../readme.md)

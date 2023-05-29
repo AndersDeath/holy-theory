@@ -24,4 +24,3 @@ function maxArea(height: number[]): number {
 ```
 
 **Source: https://leetcode.com**
-* [Go back](../readme.md)

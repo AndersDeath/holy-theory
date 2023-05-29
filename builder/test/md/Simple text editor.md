@@ -31,4 +31,3 @@ function processData(input) {
 ```
 
 **Source: https://hackerrank.com**
-* [Go back](../readme.md)

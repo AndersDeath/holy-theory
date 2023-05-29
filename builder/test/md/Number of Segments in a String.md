@@ -13,4 +13,4 @@ function countSegments(s: string): number {
 
 ```
 
-* [Go back](../readme.md)
+

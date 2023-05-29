@@ -31,4 +31,4 @@ var hasCycle = function(head) {
 };
 ```
 
-* [Go back](../readme.md)
+

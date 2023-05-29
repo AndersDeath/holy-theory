@@ -52,4 +52,4 @@ function addTwoNumbers(l1: ListNode | null, l2: ListNode | null): ListNode | nul
 
 };
 ```
-* [Go back](../readme.md)
+

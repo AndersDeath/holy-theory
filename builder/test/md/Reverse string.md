@@ -14,4 +14,3 @@ function reverseString(s: string[]): void {
 };
 
 ```
-* [Go back](../readme.md)

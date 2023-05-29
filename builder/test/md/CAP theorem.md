@@ -8,4 +8,3 @@ The following image represents what databases guarantee what aspects of the CAP 
 
 ![CAP theorem](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/02-cap-theorem.png)
 
-* [Go back](../readme.md)

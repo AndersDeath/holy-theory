@@ -14,4 +14,4 @@ export function memo(func: any) {
     }
 }
 ```
-* [Go back](../readme.md)
+

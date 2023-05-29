@@ -16,4 +16,4 @@ function isPowerOfTwo(n: number): boolean {
 };
 ```
 
-* [Go back](../readme.md)
+

@@ -15,4 +15,4 @@ function repeatedSubstringPattern(s: string): boolean {
         return false;
 };
 ```
-* [Go back](../readme.md)
+

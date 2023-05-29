@@ -16,4 +16,4 @@ function findTheDifference(s: string, t: string): string {
 
 ```
 
-* [Go back](../readme.md)
+

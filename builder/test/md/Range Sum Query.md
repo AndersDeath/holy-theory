@@ -22,4 +22,4 @@ class NumArray {
  */
 ```
 
-* [Go back](../readme.md)
+

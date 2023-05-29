@@ -9,4 +9,3 @@ Basic Operations:
 
 
 
-* [Go back](../readme.md)

@@ -47,4 +47,3 @@ public class GraphList {
 }
 ```
 
-* [Go back](../readme.md)

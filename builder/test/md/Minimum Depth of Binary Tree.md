@@ -38,5 +38,5 @@ function minDepth(root: TreeNode | null): number {
         return depth;
 };
 ```
-* [Go back](../readme.md)
+
 
