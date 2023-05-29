@@ -1,6 +1,4 @@
 # Interpolation search
----
-# Interpolation search
 
 ```java
 class Solution {

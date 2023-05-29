@@ -1,6 +1,4 @@
 # OOP Principles
----
-# OOP Principles
 
 ## Abstraction
 Abstract means a concept or an Idea which is not associated with any particular instance. Using abstract class/Interface we express the intent of the class rather than the actual implementation. In a way, one class should not know the inner details of another in order to use it, just knowing the interfaces should be good enough.

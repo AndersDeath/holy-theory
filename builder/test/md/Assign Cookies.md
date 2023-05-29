@@ -1,6 +1,4 @@
 # Assign Cookies
----
-# Assign Cookies
 
 ```typescript
 function findContentChildren(g: number[], s: number[]): number {

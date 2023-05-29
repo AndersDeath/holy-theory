@@ -1,6 +1,4 @@
 # Move Zeroes
----
-# Move Zeroes
 
 ```typescript
 /**

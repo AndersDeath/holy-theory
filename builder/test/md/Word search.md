@@ -1,6 +1,4 @@
 # Word search
----
-# Word search
 
 ```typescript
 function exist(board: string[][], word: string): boolean {

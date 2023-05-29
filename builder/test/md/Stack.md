@@ -1,6 +1,4 @@
 # Stack
----
-# Stack
 ![Stack](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/stack.png)
 
 ```typescript

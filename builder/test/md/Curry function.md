@@ -1,6 +1,4 @@
 # Curry function
----
-# Curry function
 
 ```typescript
 function curry(func: any) {

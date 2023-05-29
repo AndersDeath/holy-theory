@@ -109,18 +109,21 @@ function Builder() {
         fs.writeFileSync(`./builder/test/md/${item.title.replace('\/', '-')}.md`, templates.getData()['articleMD'].build(item));
 
     });
+    const nav = templates.getData()['nav'].build();
 
     let o = templates.getData()['layout'].build({
         header: 'Holy Theory',
-        values: articles
+        values: articles,
+        navigation: nav
     })
 
     fs.writeFileSync('./builder/test/index.html', templates.getData()['index'].build(
-      {  navigation:  templates.getData()['nav'].build()}
+        { navigation: nav }
     ))
     fs.writeFileSync('./builder/test/all.html', o)
     fs.writeFileSync('./builder/test/languages.html',
         templates.getData()['languages'].build({
+            navigation: nav,
             values: Object.fromEntries(lm.get())
         }))
 }

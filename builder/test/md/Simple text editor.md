@@ -1,6 +1,4 @@
 # Simple text editor
----
-# Simple text editor
 
 ```javascript
 function processData(input) {

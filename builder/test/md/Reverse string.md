@@ -1,6 +1,4 @@
 # Reverse string
----
-# Reverse string
 
 ```typescript
 

@@ -1,6 +1,4 @@
 # Observer
----
-# Observer
 
 ```typescript
 export class Observer {

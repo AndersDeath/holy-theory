@@ -1,6 +1,4 @@
 # Sqrt(x)
----
-# Sqrt(x)
 
 ```typescript
 /**

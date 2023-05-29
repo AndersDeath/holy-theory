@@ -1,6 +1,4 @@
 # Merge sort
----
-# Merge sort
 
 ## Java
 ```java

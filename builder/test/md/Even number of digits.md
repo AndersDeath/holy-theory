@@ -1,6 +1,4 @@
 # Even number of digits
----
-# Even number of digits
 ```java
 class Solution {
 	int countOfDigits(int number) {

@@ -1,6 +1,4 @@
 # Adjacency matrix to adjacency list
----
-# Adjacency matrix to adjacency list
 
 ```java
 class Solution {

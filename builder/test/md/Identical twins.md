@@ -1,6 +1,4 @@
 # Identical twins
----
-# Identical twins
 ```java
 class Solution {
 	int getIdenticalTwinsCount (int[] arr) {

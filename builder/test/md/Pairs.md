@@ -1,6 +1,4 @@
 # Pairs
----
-# Pairs
 ```typescript
 function pairs(k: number, arr: number[]): number {
     arr.sort((a, b) => a-b);

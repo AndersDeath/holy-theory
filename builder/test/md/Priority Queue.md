@@ -1,6 +1,4 @@
 # Priority Queue
----
-# Priority Queue
 
 ![priority-queue](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/priority-queue.png)
 

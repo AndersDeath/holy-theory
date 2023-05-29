@@ -1,6 +1,4 @@
 # Insertion sort
----
-# Insertion sort
 ## TypeScript
 ```typescript
 function insertionSort(array: number[] | string[]) {

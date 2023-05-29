@@ -1,6 +1,4 @@
 # Graph adjacency list
----
-# Graph adjacency list
 
 ```java
 

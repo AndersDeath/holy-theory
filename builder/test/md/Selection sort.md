@@ -1,6 +1,4 @@
 # Selection sort
----
-# Selection sort
 
 ![Selection sort](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/selection-sort.png)
 

@@ -1,6 +1,4 @@
 # Set
----
-# Set
 
 ```typescript
 export class Set {

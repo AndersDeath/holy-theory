@@ -1,6 +1,4 @@
 # Nim Game
----
-# Nim Game
 
 ```typescript
 

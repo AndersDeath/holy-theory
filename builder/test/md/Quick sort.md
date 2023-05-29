@@ -1,5 +1,3 @@
-# Quick sort
----
 # Quicksort
 ```java
 class Solution {

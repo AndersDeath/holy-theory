@@ -1,6 +1,4 @@
 # Promises sequence
----
-# Promises sequence
 
 ```typescript
 const a = new Promise((resolve: any, reject: any) => {

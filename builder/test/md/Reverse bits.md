@@ -1,6 +1,4 @@
 # Reverse bits
----
-# Reverse bits
 
 ```typescript
 /**

@@ -1,6 +1,4 @@
 # Linked List Cycle
----
-# Linked List Cycle
 
 ```typescript
 /**

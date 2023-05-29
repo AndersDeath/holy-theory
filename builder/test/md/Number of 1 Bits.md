@@ -1,6 +1,4 @@
 # Number of 1 Bits
----
-# Number of 1 Bits
 
 ```typescript
 

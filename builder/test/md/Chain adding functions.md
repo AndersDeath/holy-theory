@@ -1,6 +1,4 @@
 # Chain adding functions
----
-# Chain adding functions
 
 Multiple calls:
 

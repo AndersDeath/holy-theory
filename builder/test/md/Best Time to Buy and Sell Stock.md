@@ -1,6 +1,4 @@
 # Best Time to Buy and Sell Stock
----
-# Best Time to Buy and Sell Stock
 
 ```typescript
 function maxProfit(prices: number[]): number {

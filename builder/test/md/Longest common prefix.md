@@ -1,6 +1,4 @@
 # Longest common prefix
----
-# Longest common prefix
 ```typescript
 function longestCommonPrefix(strs: string[]): string {
     const size = strs.length;

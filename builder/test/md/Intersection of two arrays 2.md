@@ -1,6 +1,4 @@
 # Intersection of two arrays 2
----
-# Intersection of two arrays 2
 
 ```typescript
 

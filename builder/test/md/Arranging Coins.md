@@ -1,6 +1,4 @@
 # Arranging Coins
----
-# Arranging Coins
 
 ```typescript
 function arrangeCoins(n: number): number {

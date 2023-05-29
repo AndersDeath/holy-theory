@@ -1,6 +1,4 @@
 # Longest Palindromic Substring
----
-# Longest Palindromic Substring
 
 ```typescript
 function longestPalindrome(s: string): string {

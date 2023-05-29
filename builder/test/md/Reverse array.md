@@ -1,6 +1,4 @@
 # Reverse array
----
-# Reverse array
 
 Solution Steps
 

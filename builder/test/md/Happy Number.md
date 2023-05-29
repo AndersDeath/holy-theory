@@ -1,6 +1,4 @@
 # Happy Number
----
-# Happy Number
 
 ```typescript
 

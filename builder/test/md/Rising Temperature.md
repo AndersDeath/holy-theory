@@ -1,6 +1,4 @@
 # Rising Temperature
----
-# Rising Temperature
 
 ```SQL
 # Write your MySQL query statement below

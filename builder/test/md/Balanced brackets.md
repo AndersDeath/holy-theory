@@ -1,6 +1,4 @@
 # Balanced brackets
----
-# Balanced brackets
 ```typescript
 
 const tokens = {

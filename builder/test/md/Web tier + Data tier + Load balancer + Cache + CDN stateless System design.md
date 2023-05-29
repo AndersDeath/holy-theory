@@ -1,5 +1,3 @@
-# Web tier + Data tier + Load balancer + Cache + CDN stateless System design
----
 ## Web tier + Data tier + Load balancer + Cache + CDN stateless System design
 
 

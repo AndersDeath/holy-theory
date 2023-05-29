@@ -1,6 +1,4 @@
 # Path Sum
----
-# Path Sum
 
 ```typescript
 

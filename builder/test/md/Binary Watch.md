@@ -1,6 +1,4 @@
 # Binary Watch
----
-# Binary Watch
 
 ```java
 

@@ -1,6 +1,4 @@
 # Time conversion
----
-# Time conversion
 
 ```typescript
 function timeConversion(s: string): string {

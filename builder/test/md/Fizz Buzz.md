@@ -1,6 +1,4 @@
 # Fizz Buzz
----
-# Fizz Buzz
 
 ```typescript
 function fizzBuzz(n: number): string[] {

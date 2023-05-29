@@ -1,6 +1,4 @@
 # Linked list
----
-# Linked list
 
 ![Linked List](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/linked-list.png)
 

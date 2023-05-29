@@ -1,6 +1,4 @@
 # Climbing stairs
----
-# Climbing stairs
 
 ```typescript
 function climbStairs(n: number): number {

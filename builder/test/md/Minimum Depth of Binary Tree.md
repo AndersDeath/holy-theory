@@ -1,6 +1,4 @@
 # Minimum Depth of Binary Tree
----
-# Minimum Depth of Binary Tree
 
 ```typescript
 /**

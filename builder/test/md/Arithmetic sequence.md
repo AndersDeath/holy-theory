@@ -1,6 +1,4 @@
 # Arithmetic sequence
----
-# Arithmetic sequence
 
 ```java
 class Solution {

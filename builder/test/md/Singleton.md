@@ -1,6 +1,4 @@
 # Singleton
----
-# Singleton
 
 ```typescript
 const singleton = (function() {

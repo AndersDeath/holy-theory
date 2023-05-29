@@ -1,6 +1,4 @@
 # First Bad Version
----
-# First Bad Version
 
 ```typescript
 

@@ -1,6 +1,4 @@
 # Validate pin
----
-# Validate pin
 
 ```typescript
 const validatePin = (pin: string): boolean  => {

@@ -1,6 +1,4 @@
 # Memo
----
-# Memo
 
 ```typescript
 export function memo(func: any) {

@@ -1,6 +1,4 @@
 # Palindrome linked list
----
-# Palindrome linked list
 
 ```typescript
 

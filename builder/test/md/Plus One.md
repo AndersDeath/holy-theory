@@ -1,6 +1,4 @@
 # Plus One
----
-# Plus One
 
 ```typescript
 

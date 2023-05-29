@@ -1,6 +1,4 @@
 # Symmetric Tree
----
-# Symmetric Tree
 
 ```typescript
 /**

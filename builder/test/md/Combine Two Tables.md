@@ -1,6 +1,4 @@
 # Combine Two Tables
----
-# Combine Two Tables
 
 ```SQL
 select p.FirstName, p.LastName, a.City, a.State from person p

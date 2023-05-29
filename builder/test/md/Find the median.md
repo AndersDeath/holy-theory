@@ -1,6 +1,4 @@
 # Find the median
----
-# Find the median
 
 ```typescript
 function findMedian(arr: number[]): number {

@@ -1,6 +1,4 @@
 # Valid Phone Numbers
----
-# Valid Phone Numbers
 
 ```bash
 

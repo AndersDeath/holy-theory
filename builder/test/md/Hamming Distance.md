@@ -1,6 +1,4 @@
 # Hamming Distance
----
-# Hamming Distance
 
 ```java
 

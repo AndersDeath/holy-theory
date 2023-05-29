@@ -1,6 +1,4 @@
 # Cumulative Sum
----
-# Cumulative Sum
 
 ```java
 class Solution {

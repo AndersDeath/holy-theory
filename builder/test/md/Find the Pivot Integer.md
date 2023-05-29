@@ -1,6 +1,4 @@
 # Find the Pivot Integer
----
-# Find the Pivot Integer
 
 ```typescript
 function pivotInteger(n: number): number {

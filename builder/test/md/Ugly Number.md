@@ -1,6 +1,4 @@
 # Ugly Number
----
-# Ugly Number
 
 ```typescript
 

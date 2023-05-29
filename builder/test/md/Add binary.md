@@ -1,6 +1,4 @@
 # Add binary
----
-# Add binary
 
 ```typescript
 

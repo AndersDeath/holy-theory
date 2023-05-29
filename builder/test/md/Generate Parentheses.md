@@ -1,6 +1,4 @@
 # Generate Parentheses
----
-# Generate Parentheses
 
 ```typescript
 function generateParenthesis(n: number): string[] {

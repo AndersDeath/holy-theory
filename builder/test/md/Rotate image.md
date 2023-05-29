@@ -1,6 +1,4 @@
 # Rotate image
----
-# Rotate image
 
 ```typescript
 /**

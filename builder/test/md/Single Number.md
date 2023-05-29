@@ -1,6 +1,4 @@
 # Single Number
----
-# Single Number
 
 ```typescript
 /**

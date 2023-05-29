@@ -1,6 +1,4 @@
 # Summary Ranges
----
-# Summary Ranges
 
 ```typescript
 function summaryRanges(nums: number[]): string[] {

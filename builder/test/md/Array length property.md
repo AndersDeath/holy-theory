@@ -1,6 +1,4 @@
 # Array length property
----
-# Array length property
 What is the value of clothes[0]:
 
 ```javascript

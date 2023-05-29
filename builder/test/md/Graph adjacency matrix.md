@@ -1,6 +1,4 @@
 # Graph adjacency matrix
----
-# Graph adjacency matrix
 
 ```java
 public class Graph {

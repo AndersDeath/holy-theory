@@ -1,6 +1,4 @@
 # Find the Difference
----
-# Find the Difference
 
 ```typescript
 

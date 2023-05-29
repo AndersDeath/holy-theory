@@ -1,6 +1,4 @@
 # Tenth Line
----
-# Tenth Line
 
 ```bash
 # Read from the file file.txt and output the tenth line to stdout.

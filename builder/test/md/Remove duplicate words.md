@@ -1,6 +1,4 @@
 # Remove duplicate words
----
-# Remove duplicate words
 
 ```typescript
 function removeDuplicateWords(s: string): string {

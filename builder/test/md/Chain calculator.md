@@ -1,6 +1,4 @@
 # Chain calculator
----
-# Chain calculator
 
 ```typescript
 function ChainCalculator(given) {

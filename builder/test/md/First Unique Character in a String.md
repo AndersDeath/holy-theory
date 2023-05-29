@@ -1,6 +1,4 @@
 # First Unique Character in a String
----
-# First Unique Character in a String
 
 ```typescript
 function firstUniqChar(s: string): number {

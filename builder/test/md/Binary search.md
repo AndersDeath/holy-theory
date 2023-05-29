@@ -1,6 +1,4 @@
 # Binary search
----
-# Binary search
 
 ![Binary search](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/binary-search.png)
 

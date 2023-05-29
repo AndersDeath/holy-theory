@@ -1,6 +1,4 @@
 # Valid parentheses
----
-# Valid parentheses
 
 ```typescript
 function isValid(s: string): boolean {

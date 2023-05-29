@@ -1,6 +1,4 @@
 # Ransom Note
----
-# Ransom Note
 
 ```typescript
 function canConstruct(ransomNote: string, magazine: string): boolean {

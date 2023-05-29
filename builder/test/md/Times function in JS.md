@@ -1,6 +1,4 @@
 # Times function in JS
----
-# Times function in JS
 
 Sometimes, we often find ourselves in need of running a particular function several times.
 

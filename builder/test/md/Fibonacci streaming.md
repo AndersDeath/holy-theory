@@ -1,5 +1,3 @@
-# Fibonacci streaming
----
 # Fibonacci streaming 
 
 ```typescript

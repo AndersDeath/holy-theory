@@ -1,5 +1,3 @@
-# Event Bus
----
 
 # Event Bus
 

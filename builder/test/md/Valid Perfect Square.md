@@ -1,6 +1,4 @@
 # Valid Perfect Square
----
-# Valid Perfect Square
 
 ```typescript
 function isPerfectSquare(num: number): boolean {

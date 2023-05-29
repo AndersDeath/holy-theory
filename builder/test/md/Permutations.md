@@ -1,6 +1,4 @@
 # Permutations
----
-# Permutations
 
 ```typescript
 function permute(nums: number[]): number[][] {

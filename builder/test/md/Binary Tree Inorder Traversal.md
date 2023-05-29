@@ -1,6 +1,4 @@
 # Binary Tree Inorder Traversal
----
-# Binary Tree Inorder Traversal
 
 ```typescript
 /**

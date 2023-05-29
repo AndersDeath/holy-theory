@@ -1,6 +1,4 @@
 # Longest Substring Without Repeating Characters
----
-# Longest Substring Without Repeating Characters
 ```typescript
 function lengthOfLongestSubstring(s: string): number {
     if(s.length === 0) return 0;

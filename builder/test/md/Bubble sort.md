@@ -1,6 +1,4 @@
 # Bubble sort
----
-# Bubble sort
 
 ```typescript
 function bubbleSort(array: number[] | string[]) {

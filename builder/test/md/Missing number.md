@@ -1,6 +1,4 @@
 # Missing number
----
-# Missing number
 
 ```typescript
 

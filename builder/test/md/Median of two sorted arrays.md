@@ -1,6 +1,4 @@
 # Median of two sorted arrays
----
-# Median of two sorted arrays
 
 ```typescript
 function findMedianSortedArrays(nums1: number[], nums2: number[]): number {

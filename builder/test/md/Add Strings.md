@@ -1,6 +1,4 @@
 # Add Strings
----
-# Add Strings
 
 ```typescript
 function addStrings(num1: string, num2: string): string {

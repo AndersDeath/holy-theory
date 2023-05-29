@@ -1,6 +1,4 @@
 # Excel Sheet Column Title
----
-# Excel Sheet Column Title
 
 ```typescript
 function convertToTitle(columnNumber: number): string {

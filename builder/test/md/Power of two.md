@@ -1,6 +1,4 @@
 # Power of two
----
-# Power of two
 
 ```typescript
 function isPowerOfTwo(n: number): boolean {

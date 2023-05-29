@@ -1,6 +1,4 @@
 # Palindrome number
----
-# Palindrome number
 ```java
  class Solution {
     public boolean isPalindrome(int x) {

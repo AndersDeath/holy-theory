@@ -1,6 +1,4 @@
 # Valid Anagram
----
-# Valid Anagram
 
 ```typescript
 function isAnagram(s: string, t: string): boolean {

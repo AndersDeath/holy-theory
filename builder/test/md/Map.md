@@ -1,6 +1,4 @@
 # Map
----
-# Map
 
 ```typescript
 export class Map {

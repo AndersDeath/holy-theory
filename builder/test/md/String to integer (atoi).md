@@ -1,6 +1,4 @@
 # String to integer (atoi)
----
-# String to integer (atoi)
 
 ```typescript
 /**

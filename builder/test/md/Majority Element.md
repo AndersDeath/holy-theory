@@ -1,6 +1,4 @@
 # Majority Element
----
-# Majority Element
 
 ```typescript
 function majorityElement(nums: number[]): number {

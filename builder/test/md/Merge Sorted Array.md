@@ -1,6 +1,4 @@
 # Merge Sorted Array
----
-# Merge Sorted Array
 
 ```typescript
 /**

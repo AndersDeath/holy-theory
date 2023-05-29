@@ -1,6 +1,4 @@
 # Inventory update
----
-# Inventory update
 
 ```typescript
 function updateInventory(arr1: any, arr2: any) {

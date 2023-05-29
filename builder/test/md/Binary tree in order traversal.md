@@ -1,6 +1,4 @@
 # Binary tree in order traversal
----
-# Binary tree in order traversal
 
 ```java
 class Solution {

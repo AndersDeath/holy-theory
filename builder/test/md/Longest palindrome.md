@@ -1,6 +1,4 @@
 # Longest palindrome
----
-# Longest palindrome
 
 ```typescript
 function longestPalindrome(s: string): string {

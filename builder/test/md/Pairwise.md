@@ -1,6 +1,4 @@
 # Pairwise
----
-# Pairwise
 ```typescript
 export function pairwise(arr:number[], arg:number) {
     const index = [];

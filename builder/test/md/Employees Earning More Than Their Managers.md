@@ -1,6 +1,4 @@
 # Employees Earning More Than Their Managers
----
-# Employees Earning More Than Their Managers
 
 ```sql
 SELECT a.Name AS Employee

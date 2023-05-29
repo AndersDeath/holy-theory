@@ -1,6 +1,4 @@
 # Reverse Vowels of a String
----
-# Reverse Vowels of a String
 
 ```typescript
 

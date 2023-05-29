@@ -1,6 +1,4 @@
 # Remove duplicates
----
-# Remove duplicates
 
 ```java
 class Solution {

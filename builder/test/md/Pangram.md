@@ -1,6 +1,4 @@
 # Pangram
----
-# Pangram
 ```typescript
 function isPangram(string:string){
     const set = new Set();

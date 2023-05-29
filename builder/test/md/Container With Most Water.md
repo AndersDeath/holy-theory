@@ -1,6 +1,4 @@
 # Container With Most Water
----
-# Container With Most Water
 
 ```typescript
 function maxArea(height: number[]): number {
