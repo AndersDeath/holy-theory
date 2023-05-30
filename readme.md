@@ -222,5 +222,9 @@
 * [Possible types of function in JS](./javascript/possible-types-of-functions-in-js.md)
 * [Different ways of declaring functions in JS](./javascript/different-ways-of-declaring-a-function-in-js.md)
 
+## Security
+
+* [01-security-expressjs](./security/01-security-expressjs.md)
+
 
 [Eleventy alpha version ](https://eleventy-vladimir-test.netlify.app/)
