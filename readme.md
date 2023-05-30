@@ -210,6 +210,7 @@
 * [23-Least time](/system-design/23-least-time.md)
 * [24-Simplified Continuous integration flow](/system-design/24-simplified-continious-integration-flow.md)
 * [25-Architectural characteristics](./system-design/25-architectual-characteristics.md)
+* [26-antipatterns-microservices](./system-design/26-antipatterns-microservices.md)
 
 ## JavaScript
 
