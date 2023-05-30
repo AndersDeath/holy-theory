@@ -1284,6 +1284,40 @@ The following image represents what databases guarantee what aspects of the CAP 
 <p><img src="https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/24-simplified-continious-integration-flow.png" alt="Least time"></p>
 </span></li><li><h1></h1><hr/><span><h2 id="architectural-characteristics">Architectural characteristics</h2>
 <p><img src="https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/25-architectual-characteristics.png" alt="Least time"></p>
+</span></li><li><h1></h1><hr/><span><h2 id="common-anti-patterns-in-microservices-architecture">Common anti-patterns in microservices architecture</h2>
+<p><img src="https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/26-antipatterns-microservices.png" alt="Common anti-patterns in microservices architecture"></p>
+<ol>
+<li><p><strong>Monolithic Mindset:</strong> Treating microservices as miniature monoliths, where services are tightly coupled and communicate extensively, negating the benefits of independent, autonomous services.</p>
+</li>
+<li><p><strong>Chatty Communication:</strong> Excessive inter-service communication, leading to network congestion, increased latency, and reduced performance. Services should communicate judiciously to minimize network overhead.</p>
+</li>
+<li><p><strong>Lack of Service Boundaries:</strong> Poorly defined or ambiguous service boundaries, resulting in overlapping responsibilities and difficulty in managing and scaling services independently.</p>
+</li>
+<li><p><strong>Data Inconsistency:</strong> Sharing databases or data stores across multiple services without proper coordination, leading to data inconsistency, integrity issues, and coupling between services.</p>
+</li>
+<li><p><strong>Service Sprawl:</strong> Creating an excessive number of microservices without a clear reason or justification, resulting in complexity, operational overhead, and difficulty in managing and coordinating the services effectively.</p>
+</li>
+<li><p><strong>Neglecting Operational Concerns:</strong> Ignoring operational aspects such as monitoring, logging, error handling, and deployment automation, which can hinder observability, maintainability, and reliability of the microservices.</p>
+</li>
+<li><p><strong>Poorly Defined Service Contracts:</strong> Lack of well-defined and stable service contracts or API specifications, making it difficult for consumers to integrate with the services and increasing the likelihood of breaking changes.</p>
+</li>
+<li><p><strong>Inadequate Service Discovery:</strong> Relying on hard-coded service endpoints or manual configuration instead of implementing a robust service discovery mechanism, causing challenges in service deployment, scaling, and fault tolerance.</p>
+</li>
+<li><p><strong>Distributed Data Management:</strong> Attempting to maintain strong consistency across multiple services, leading to complex distributed transactions and increased chances of failures and performance degradation.</p>
+</li>
+<li><p><strong>Neglecting Security:</strong> Failing to implement proper authentication, authorization, and encryption mechanisms, exposing services to security vulnerabilities and unauthorized access.</p>
+</li>
+<li><p><strong>Lack of Testing Strategies:</strong> Insufficient testing strategies for end-to-end integration testing, service contracts, fault tolerance, and failure scenarios, resulting in higher chances of undetected issues in the microservices ecosystem.</p>
+</li>
+<li><p><strong>Insufficient Monitoring and Debugging:</strong> Inadequate monitoring and debugging capabilities across services, making it challenging to identify and troubleshoot issues promptly.</p>
+</li>
+<li><p><strong>Inconsistent Deployment and Release Management:</strong> Lack of standardized deployment processes and release management practices across services, leading to inconsistencies, deployment errors, and versioning issues.</p>
+</li>
+<li><p><strong>Over-optimization:</strong> Premature optimization of individual microservices without considering the overall system performance and bottlenecks, leading to suboptimal performance at the system level.</p>
+</li>
+<li><p><strong>Lack of Governance and Documentation:</strong> Insufficient governance processes, documentation, and guidelines for designing, implementing, and evolving microservices, resulting in inconsistencies and difficulty in maintaining the architecture over time.</p>
+</li>
+</ol>
 </span></li><li><h1></h1><hr/><span><h1 id="3sum">3Sum</h1>
 <pre><code class="hljs language-typescript">
 <span class="hljs-keyword">function</span> <span class="hljs-title function_">threeSum</span>(<span class="hljs-params">nums: <span class="hljs-built_in">number</span>[]</span>): <span class="hljs-built_in">number</span>[][] {
@@ -2431,6 +2465,28 @@ calculator.<span class="hljs-title function_">log</span>().<span class="hljs-tit
     root.<span class="hljs-property">right</span> = <span class="hljs-title function_">invertTree</span>(left);
     <span class="hljs-keyword">return</span> root;
 };
+</code></pre></span></li><li><h1></h1><hr/><span><h1 id="island-perimeter">Island Perimeter</h1>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">islandPerimeter</span>(<span class="hljs-params">grid: <span class="hljs-built_in">number</span>[][]</span>): <span class="hljs-built_in">number</span> {
+  <span class="hljs-keyword">let</span> perimeter = <span class="hljs-number">0</span>;
+
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; grid.<span class="hljs-property">length</span>; i++) {
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> j = <span class="hljs-number">0</span>; j &lt; grid[i].<span class="hljs-property">length</span>; j++) {
+      <span class="hljs-keyword">if</span> (grid[i][j] === <span class="hljs-number">1</span>) {
+        perimeter += <span class="hljs-number">4</span>; 
+
+        <span class="hljs-keyword">if</span> (j &gt; <span class="hljs-number">0</span> &amp;&amp; grid[i][j - <span class="hljs-number">1</span>] === <span class="hljs-number">1</span>) {
+          perimeter -= <span class="hljs-number">2</span>;
+        }
+
+        <span class="hljs-keyword">if</span> (i &gt; <span class="hljs-number">0</span> &amp;&amp; grid[i - <span class="hljs-number">1</span>][j] === <span class="hljs-number">1</span>) {
+          perimeter -= <span class="hljs-number">2</span>;
+        }
+      }
+    }
+  }
+
+  <span class="hljs-keyword">return</span> perimeter;
+};
 </code></pre></span></li><li><h1></h1><hr/><span><h1 id="isomorphic-strings">Isomorphic Strings</h1>
 <pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">isIsomorphic</span>(<span class="hljs-params">s: <span class="hljs-built_in">string</span>, t: <span class="hljs-built_in">string</span></span>): <span class="hljs-built_in">boolean</span> {
        <span class="hljs-keyword">if</span>(s.<span class="hljs-property">length</span> != t.<span class="hljs-property">length</span>) <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
@@ -2860,6 +2916,17 @@ calculator.<span class="hljs-title function_">log</span>().<span class="hljs-tit
 <span class="hljs-keyword">function</span> <span class="hljs-title function_">canWinNim</span>(<span class="hljs-params">n: <span class="hljs-built_in">number</span></span>): <span class="hljs-built_in">boolean</span> {
     <span class="hljs-keyword">return</span> !(n % <span class="hljs-number">4</span> == <span class="hljs-number">0</span>);
 };
+</code></pre></span></li><li><h1></h1><hr/><span><h1 id="number-complement">Number Complement</h1>
+<pre><code class="hljs language-typescript">
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">findComplement</span>(<span class="hljs-params">num: <span class="hljs-built_in">number</span></span>): <span class="hljs-built_in">number</span> {
+  <span class="hljs-keyword">let</span> mask = <span class="hljs-number">1</span>;
+  
+  <span class="hljs-keyword">while</span> (mask &lt; num) {
+    mask = (mask &lt;&lt; <span class="hljs-number">1</span>) | <span class="hljs-number">1</span>;
+  }
+  
+  <span class="hljs-keyword">return</span> num ^ mask;
+}
 </code></pre></span></li><li><h1></h1><hr/><span><h1 id="number-of-1-bits">Number of 1 Bits</h1>
 <pre><code class="hljs language-typescript">
 <span class="hljs-keyword">function</span> <span class="hljs-title function_">hammingWeight</span>(<span class="hljs-params">n: <span class="hljs-built_in">number</span></span>): <span class="hljs-built_in">number</span> {
@@ -3892,4 +3959,38 @@ grep -E <span class="hljs-string">&quot;^(\([0-9]{3}\) |[0-9]{3}\-)[0-9]{3}\-[0-
     <span class="hljs-keyword">return</span> top || right || bottom || left;
 
 }
-</code></pre></span></li></ul>
+</code></pre></span></li><li><h1></h1><hr/><span><h1 id="main-principles-of-security-in-expressjs-server">Main principles of security in ExpressJS server</h1>
+<p><img src="https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/01-security-expressjs.png" alt="Main principles of security in ExpressJS server"></p>
+<ol>
+<li><p><strong>Input Validation:</strong> Validate and sanitize all user input, including parameters, query strings, and request bodies, to prevent common vulnerabilities like SQL injection, cross-site scripting (XSS), and command injection.</p>
+</li>
+<li><p><strong>Authentication:</strong> Implement proper user authentication mechanisms, such as username/password authentication, token-based authentication (JWT), or OAuth, to ensure that only authorized users can access protected resources.</p>
+</li>
+<li><p><strong>Authorization:</strong> Enforce authorization checks to ensure that authenticated users have the appropriate permissions to access specific resources or perform certain actions.</p>
+</li>
+<li><p><strong>Session Management:</strong> Use secure session management techniques, such as setting secure and HTTP-only cookies, implementing session expiration and regeneration, and guarding against session fixation attacks.</p>
+</li>
+<li><p><strong>Secure Communication:</strong> Always use HTTPS (TLS/SSL) to encrypt communication between the server and clients, preventing eavesdropping, data tampering, and man-in-the-middle attacks.</p>
+</li>
+<li><p><strong>Error Handling:</strong> Handle errors carefully to avoid leaking sensitive information in error messages and implement proper error logging to help identify and respond to potential security issues.</p>
+</li>
+<li><p><strong>Secure Headers:</strong> Set secure HTTP response headers, including Content Security Policy (CSP), Strict-Transport-Security (HSTS), X-XSS-Protection, X-Content-Type-Options, and X-Frame-Options, to mitigate common web vulnerabilities.</p>
+</li>
+<li><p><strong>Cross-Site Request Forgery (CSRF) Protection:</strong> Implement CSRF tokens and enforce their usage to protect against CSRF attacks, ensuring that requests made to your server originate from legitimate sources.</p>
+</li>
+<li><p><strong>Security Updates:</strong> Regularly update and patch both Express.js and its dependencies to address any security vulnerabilities that may be discovered.</p>
+</li>
+<li><p><strong>Security Audits and Testing:</strong> Conduct security audits and perform penetration testing to identify potential vulnerabilities and weaknesses in your server, and regularly test your application for security issues.</p>
+</li>
+<li><p><strong>Secure File Uploads:</strong> Implement proper validation and handling of file uploads to prevent malicious files from being uploaded and executed on the server.</p>
+</li>
+<li><p><strong>Rate Limiting:</strong> Implement rate limiting mechanisms to prevent brute force attacks, denial-of-service (DoS) attacks, and other forms of abuse.</p>
+</li>
+<li><p><strong>Database Security:</strong> Implement secure database practices, such as parameterized queries or prepared statements, to prevent SQL injection attacks, and ensure proper access control and encryption of sensitive data.</p>
+</li>
+<li><p><strong>Server Hardening:</strong> Secure the underlying server infrastructure by following best practices for server configuration, firewall settings, and restricting unnecessary services and ports.</p>
+</li>
+<li><p><strong>Regular Monitoring and Logging:</strong> Implement logging and monitoring systems to detect and respond to security incidents, unusual activities, and potential threats in a timely manner.</p>
+</li>
+</ol>
+</span></li></ul>
