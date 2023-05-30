@@ -4,6 +4,9 @@ All notable changes to this project will be documented in this file.
 # [0.0.21] - In Progress
 * add Island Perimeter training in TS
 * add Number Complement training in TS
+* add security section
+* add 01-security-expressjs article
+* add  Common anti-patterns in microservices architecture article
 
 # [0.0.20] - 2023-05-29
 * add Arranging Coins training in TS
