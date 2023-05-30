@@ -172,6 +172,7 @@
 * [Repeated Substring Pattern](./training/repeated-substring-pattern.md) – TypeScript
 * [Hamming Distance](./training/hamming-distance.md) – Java
 * [Island Perimeter](./training/island-perimeter.md) – TypeScript
+* [Number Complement](./training/number-complement.md) – TypeScript
 
 ## Question
 * [01-reverse-number](/questions/01-reverse-number.md) – Java, all languages
