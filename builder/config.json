@@ -36,10 +36,15 @@
       "type": "pug"
     },
     {
-        "path": "./builder/views/nav.pug",
-        "title": "nav",
-        "type": "pug"
-      },
+      "path": "./builder/views/table-of-contents.pug",
+      "title": "table-of-contents",
+      "type": "pug"
+    },
+    {
+      "path": "./builder/views/nav.pug",
+      "title": "nav",
+      "type": "pug"
+    },
     {
       "path": "./builder/views/article.md",
       "title": "articleMD",

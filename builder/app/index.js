@@ -176,6 +176,11 @@ function Builder() {
             navigation: nav,
             values: Object.fromEntries(lm.get())
         }))
+
+    fs.writeFileSync(basePath + '/table-of-contents.html', templates.getData()['table-of-contents'].build({
+        navigation: nav,
+        values: []
+    }))
 }
 
 
