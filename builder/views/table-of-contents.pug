@@ -3,4 +3,7 @@ span!=navigation
 hr
 ul
   each val in values
-    li!= val
+    h1!= val.title
+        each item in items 
+            a(href=`${item.href}`) #{val.title}
+        hr
