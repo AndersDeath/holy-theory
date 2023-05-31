@@ -124,6 +124,7 @@ function Builder() {
     })
 
     let articles = [];
+    let tableOfContents = [];
 
     testData.forEach((item) => {
         console.log(item);
@@ -147,7 +148,7 @@ function Builder() {
             body: item.body
         });
 
-        fs.writeFileSync('./builder/test/' + item.meta.category + '/' + item.meta.fileName.dashed + '.html', html)
+        fs.writeFileSync('./builder/test/' + item.meta.category + '/' + item.meta.fileName.dashed + '.html', html);
 
         articles.push(templates.getData()['article'].build(item));
         if (!fs.existsSync('./builder/test/md')) {
