@@ -6,7 +6,8 @@ All notable changes to this project will be documented in this file.
 * add Number Complement training in TS
 * add security section
 * add 01-security-expressjs article
-* add  Common anti-patterns in microservices architecture article
+* add Common anti-patterns in microservices architecture article
+* add License Key Formatting training in TS
 
 # [0.0.20] - 2023-05-29
 * add Arranging Coins training in TS
