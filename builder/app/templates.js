@@ -11,7 +11,6 @@ class Templates {
 
     load() {
        this.paths.forEach(element => {
-            console.log(element);
             this.data[element.title] = this.build(element);
        });
     }
