@@ -93,6 +93,7 @@ function Builder() {
     let testData = [];
 
     let data = [];
+    let tableOfContents = [];
 
     let lm = new LanguageMap()
 
@@ -110,27 +111,47 @@ function Builder() {
             if (metadata.languages.length > 0) {
                 lm.setFromArr(metadata.languages);
             }
-            testData.push({
+
+            let d = {
                 title: metadata.title,
                 body: marked.parse(cleanedContent),
                 bodyMD: cleanedContent,
 
                 meta: {
                     category: pathObj.dir,
+                    url: baseUrl + pathObj.dir + '/' + pathObj.name.replace(' ', '-').toLowerCase() + '.html',
                     fileName: {
                         original: pathObj.name,
                         dashed: pathObj.name.replace(' ', '-').toLowerCase()
                     }
                 }
-            });
+            };
+
+            if (!tableOfContents.some((value, index) => {
+                return value.category === pathObj.dir;
+            })) {
+                let obj = {
+                    category: pathObj.dir,
+                    title: pathObj.dir.charAt(0).toUpperCase() + pathObj.dir.slice(1),
+                    data: []
+                };
+                obj.data.push(d);
+                tableOfContents.push(obj)
+            } else {
+                tableOfContents.map((value) => {
+                    if (value.category === pathObj.dir) {
+                        value.data.push(d);
+                    }
+                    return value;
+                })
+            }
+
+            testData.push(d);
         }
     })
 
     let articles = [];
-    let tableOfContents = [];
-
     testData.forEach((item) => {
-        console.log(item);
         if (!fs.existsSync(basePath + item.meta.category)) {
             fs.mkdirSync(basePath + item.meta.category, { recursive: true });
         }
@@ -179,7 +200,7 @@ function Builder() {
 
     fs.writeFileSync(basePath + '/table-of-contents.html', templates.getData()['table-of-contents'].build({
         navigation: nav,
-        values: []
+        values: tableOfContents
     }))
 }
 
