@@ -7,6 +7,9 @@ import { getConfig } from './utils.js';
 import { Templates } from './templates.js';
 
 
+const baseUrl = '/builder/test/';
+const basePath = '.' + baseUrl;
+
 const paths = getConfig().templates;
 
 
@@ -14,11 +17,11 @@ const templates = new Templates(paths);
 const nav = templates.getData()['nav'].build({
     values: [
         {
-            href: './',
+            href: baseUrl,
             title: 'Main page'
         },
         {
-            href: './languages.html',
+            href: baseUrl + '/languages.html',
             title: 'Statistics'
         }
     ]
@@ -128,18 +131,18 @@ function Builder() {
 
     testData.forEach((item) => {
         console.log(item);
-        if (!fs.existsSync('./builder/test/' + item.meta.category)) {
-            fs.mkdirSync('./builder/test/' + item.meta.category, { recursive: true });
+        if (!fs.existsSync(basePath + item.meta.category)) {
+            fs.mkdirSync(basePath + item.meta.category, { recursive: true });
         }
         const html = templates.getData()['article'].build({
             navigation: templates.getData()['nav'].build({
                 values: [
                     {
-                        href: '../',
+                        href: baseUrl,
                         title: 'Main page'
                     },
                     {
-                        href: '../languages.html',
+                        href: baseUrl + '/languages.html',
                         title: 'Statistics'
                     }
                 ]
@@ -148,11 +151,11 @@ function Builder() {
             body: item.body
         });
 
-        fs.writeFileSync('./builder/test/' + item.meta.category + '/' + item.meta.fileName.dashed + '.html', html);
+        fs.writeFileSync(basePath + item.meta.category + '/' + item.meta.fileName.dashed + '.html', html);
 
         articles.push(templates.getData()['article'].build(item));
-        if (!fs.existsSync('./builder/test/md')) {
-            fs.mkdirSync('./builder/test/md', { recursive: true });
+        if (!fs.existsSync(basePath + '/md')) {
+            fs.mkdirSync(basePath + '/md', { recursive: true });
         }
         fs.writeFileSync(`./builder/test/md/${item.title.replace('\/', '-')}.md`, templates.getData()['articleMD'].build(item));
 
@@ -164,11 +167,11 @@ function Builder() {
         navigation: nav
     })
 
-    fs.writeFileSync('./builder/test/index.html', templates.getData()['index'].build(
+    fs.writeFileSync(basePath + '/index.html', templates.getData()['index'].build(
         { navigation: nav }
     ))
-    fs.writeFileSync('./builder/test/all.html', o)
-    fs.writeFileSync('./builder/test/languages.html',
+    fs.writeFileSync(basePath + '/all.html', o)
+    fs.writeFileSync(basePath + '/languages.html',
         templates.getData()['languages'].build({
             navigation: nav,
             values: Object.fromEntries(lm.get())
