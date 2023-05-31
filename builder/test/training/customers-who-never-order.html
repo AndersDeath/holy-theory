@@ -1,3 +1,3 @@
-<span><div><ul><li> <a href="./">Main page</a></li><li><a href="./languages.html">Statistics</a></li></ul></div></span><h1></h1><hr/><span><h1 id="customers-who-never-order">Customers Who Never Order</h1>
+<span><div><ul><li> <a href="../">Main page</a></li><li> <a href="../languages.html">Statistics</a></li></ul></div></span><h1></h1><hr/><span><h1 id="customers-who-never-order">Customers Who Never Order</h1>
 <pre><code class="hljs language-SQL"><span class="hljs-keyword">SELECT</span> Name <span class="hljs-keyword">AS</span> Customers <span class="hljs-keyword">FROM</span> Customers <span class="hljs-keyword">WHERE</span> Id <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">IN</span>( <span class="hljs-keyword">SELECT</span> CustomerId <span class="hljs-keyword">FROM</span> Orders);
 </code></pre></span>

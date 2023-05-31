@@ -11,7 +11,18 @@ const paths = getConfig().templates;
 
 
 const templates = new Templates(paths);
-const nav = templates.getData()['nav'].build();
+const nav = templates.getData()['nav'].build({
+    values: [
+        {
+            href: './',
+            title: 'Main page'
+        },
+        {
+            href: './languages.html',
+            title: 'Statistics'
+        }
+    ]
+});
 
 
 function Builder() {
@@ -120,7 +131,18 @@ function Builder() {
             fs.mkdirSync('./builder/test/' + item.meta.category, { recursive: true });
         }
         const html = templates.getData()['article'].build({
-            navigation: nav,
+            navigation: templates.getData()['nav'].build({
+                values: [
+                    {
+                        href: '../',
+                        title: 'Main page'
+                    },
+                    {
+                        href: '../languages.html',
+                        title: 'Statistics'
+                    }
+                ]
+            }),
             title: item.title,
             body: item.body
         });
