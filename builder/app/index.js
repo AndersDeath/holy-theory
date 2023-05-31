@@ -11,6 +11,7 @@ const paths = getConfig().templates;
 
 
 const templates = new Templates(paths);
+const nav = templates.getData()['nav'].build();
 
 
 function Builder() {
@@ -87,6 +88,7 @@ function Builder() {
     data.forEach((group) => {
         for (let index = 0; index < group.length; index++) {
             const item = group[index];
+            const pathObj = path.parse(item);
             const fileContents = fs.readFileSync(item, 'utf8');
             const { metadata, content } = parseMD(fileContents);
             // console.log(metadata);
@@ -97,7 +99,15 @@ function Builder() {
             testData.push({
                 title: metadata.title,
                 body: marked.parse(cleanedContent),
-                bodyMD: cleanedContent
+                bodyMD: cleanedContent,
+                
+                meta: {
+                    category: pathObj.dir,
+                    fileName: {
+                        original: pathObj.name,
+                        dashed: pathObj.name.replace(' ', '-').toLowerCase()
+                    }
+                }
             });
         }
     })
@@ -105,11 +115,11 @@ function Builder() {
     let articles = [];
 
     testData.forEach((item) => {
+        console.log(item);
         articles.push(templates.getData()['article'].build(item));
         fs.writeFileSync(`./builder/test/md/${item.title.replace('\/', '-')}.md`, templates.getData()['articleMD'].build(item));
 
     });
-    const nav = templates.getData()['nav'].build();
 
     let o = templates.getData()['layout'].build({
         header: 'Holy Theory',

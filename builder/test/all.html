@@ -2514,6 +2514,25 @@ calculator.<span class="hljs-title function_">log</span>().<span class="hljs-tit
 
     <span class="hljs-keyword">return</span> counter;
 };
+</code></pre></span></li><li><h1></h1><hr/><span><h1 id="license-key-formatting">License Key Formatting</h1>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">licenseKeyFormatting</span>(<span class="hljs-params">s: <span class="hljs-built_in">string</span>, k: <span class="hljs-built_in">number</span></span>): <span class="hljs-built_in">string</span> {
+  <span class="hljs-keyword">const</span> str = s.<span class="hljs-title function_">replace</span>(<span class="hljs-regexp">/-/g</span>, <span class="hljs-string">&#x27;&#x27;</span>).<span class="hljs-title function_">toUpperCase</span>();
+  
+  <span class="hljs-keyword">let</span> result = <span class="hljs-string">&#x27;&#x27;</span>;
+  <span class="hljs-keyword">let</span> count = <span class="hljs-number">0</span>;
+  
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = str.<span class="hljs-property">length</span> - <span class="hljs-number">1</span>; i &gt;= <span class="hljs-number">0</span>; i--) {
+    result = str[i] + result;
+    count++;
+    
+    <span class="hljs-keyword">if</span> (count === k &amp;&amp; i !== <span class="hljs-number">0</span>) {
+      result = <span class="hljs-string">&#x27;-&#x27;</span> + result;
+      count = <span class="hljs-number">0</span>;
+    }
+  }
+  
+  <span class="hljs-keyword">return</span> result;
+};
 </code></pre></span></li><li><h1></h1><hr/><span><h1 id="linked-list-cycle">Linked List Cycle</h1>
 <pre><code class="hljs language-typescript"><span class="hljs-comment">/**
  * Definition for singly-linked list.
