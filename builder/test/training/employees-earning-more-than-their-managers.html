@@ -1,4 +1,4 @@
-<span></span><h1></h1><hr/><span><h1 id="employees-earning-more-than-their-managers">Employees Earning More Than Their Managers</h1>
+<span><div><ul><li> <a href="./">Main page</a></li><li><a href="./languages.html">Statistics</a></li></ul></div></span><h1></h1><hr/><span><h1 id="employees-earning-more-than-their-managers">Employees Earning More Than Their Managers</h1>
 <pre><code class="hljs language-sql"><span class="hljs-keyword">SELECT</span> a.Name <span class="hljs-keyword">AS</span> Employee
 <span class="hljs-keyword">FROM</span> Employee a, Employee b
 <span class="hljs-keyword">WHERE</span> a.ManagerId <span class="hljs-operator">=</span> b.Id <span class="hljs-keyword">AND</span> a.Salary <span class="hljs-operator">&gt;</span> b.Salary

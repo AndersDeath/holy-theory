@@ -119,8 +119,10 @@ function Builder() {
         if (!fs.existsSync('./builder/test/' + item.meta.category)) {
             fs.mkdirSync('./builder/test/' + item.meta.category, { recursive: true });
         }
-        const html = templates.getData()['article'].build(item, {
-            navigation: nav
+        const html = templates.getData()['article'].build({
+            navigation: nav,
+            title: item.title,
+            body: item.body
         });
 
         fs.writeFileSync('./builder/test/' + item.meta.category + '/' + item.meta.fileName.dashed + '.html', html)
