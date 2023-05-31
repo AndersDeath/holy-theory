@@ -1,0 +1,19 @@
+<span><div><ul><li> <a href="../">Main page</a></li><li> <a href="../languages.html">Statistics</a></li></ul></div></span><h1></h1><hr/><span><h1 id="adjacency-matrix-to-adjacency-list">Adjacency matrix to adjacency list</h1>
+<pre><code class="hljs language-java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {
+    ArrayList&lt;Integer&gt;[] matrixToAdjList(<span class="hljs-type">int</span> n, <span class="hljs-type">int</span>[][] matrix) {
+        ArrayList&lt;Integer&gt;[] adjList = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ArrayList</span> [n];
+        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt; n; i++) {
+            adjList[i] = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ArrayList</span>&lt;Integer&gt;();
+        }
+        
+        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt; n; i++) {
+            <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> <span class="hljs-variable">j</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; j &lt; n; j++) {
+                <span class="hljs-keyword">if</span>(matrix[i][j] == <span class="hljs-number">1</span>) {
+                    adjList[i].add(j);
+                }
+            }
+        }
+        <span class="hljs-keyword">return</span> adjList;
+    }
+}
+</code></pre></span>

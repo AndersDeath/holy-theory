@@ -1,0 +1,16 @@
+<span><div><ul><li> <a href="../">Main page</a></li><li> <a href="../languages.html">Statistics</a></li></ul></div></span><h1></h1><hr/><span><h1 id="merge-sorted-array">Merge Sorted Array</h1>
+<pre><code class="hljs language-typescript"><span class="hljs-comment">/**
+ Do not return anything, modify nums1 in-place instead.
+ */</span>
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">merge</span>(<span class="hljs-params">nums1: <span class="hljs-built_in">number</span>[], m: <span class="hljs-built_in">number</span>, nums2: <span class="hljs-built_in">number</span>[], n: <span class="hljs-built_in">number</span></span>): <span class="hljs-built_in">void</span> {
+    <span class="hljs-keyword">let</span> j = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt;= nums1.<span class="hljs-property">length</span>; i++) {
+        <span class="hljs-keyword">if</span>(nums1[i] === <span class="hljs-number">0</span> &amp;&amp; nums2[j] !== <span class="hljs-literal">undefined</span>) {
+            nums1[i] = nums2[j];
+            j++;
+        }
+    }
+    nums1.<span class="hljs-title function_">sort</span>(<span class="hljs-function">(<span class="hljs-params">a, b</span>) =&gt;</span>  a - b);
+
+};
+</code></pre></span>

@@ -1,0 +1,29 @@
+<span><div><ul><li> <a href="../">Main page</a></li><li> <a href="../languages.html">Statistics</a></li></ul></div></span><h1></h1><hr/><span><h1 id="simple-text-editor">Simple text editor</h1>
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">processData</span>(<span class="hljs-params">input</span>) {
+     <span class="hljs-keyword">const</span> [numOps, ...queries] = input.<span class="hljs-title function_">split</span>(<span class="hljs-string">&#x27;\n&#x27;</span>)
+     <span class="hljs-keyword">const</span> undoStack = [];
+     <span class="hljs-keyword">let</span> str = <span class="hljs-string">&#x27;&#x27;</span>;
+     
+      <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> query <span class="hljs-keyword">of</span> queries) {
+        <span class="hljs-keyword">const</span> [op, param] = query.<span class="hljs-title function_">split</span>(<span class="hljs-string">&#x27; &#x27;</span>)
+        
+        <span class="hljs-keyword">switch</span> (op) {
+            <span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;1&#x27;</span>: 
+                undoStack.<span class="hljs-title function_">push</span>(str)
+                str += param  
+                <span class="hljs-keyword">break</span>
+            <span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;2&#x27;</span>: 
+                undoStack.<span class="hljs-title function_">push</span>(str)
+                str = str.<span class="hljs-title function_">substring</span>(<span class="hljs-number">0</span>, str.<span class="hljs-property">length</span> - <span class="hljs-title class_">Number</span>(param))
+                <span class="hljs-keyword">break</span>
+            <span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;3&#x27;</span>: 
+                <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(str[<span class="hljs-title class_">Number</span>(param) - <span class="hljs-number">1</span>])
+                <span class="hljs-keyword">break</span>
+            <span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;4&#x27;</span>: 
+                str = undoStack.<span class="hljs-title function_">pop</span>()
+                <span class="hljs-keyword">break</span>
+        }
+    }
+} 
+</code></pre><p><strong>Source: <a href="https://hackerrank.com">https://hackerrank.com</a></strong></p>
+</span>

@@ -1,0 +1,43 @@
+<span><div><ul><li> <a href="../">Main page</a></li><li> <a href="../languages.html">Statistics</a></li></ul></div></span><h1></h1><hr/><span><h1 id="longest-palindromic-substring">Longest Palindromic Substring</h1>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">longestPalindrome</span>(<span class="hljs-params">s: <span class="hljs-built_in">string</span></span>): <span class="hljs-built_in">string</span> {
+
+    <span class="hljs-keyword">let</span> length = s.<span class="hljs-property">length</span>;
+    <span class="hljs-keyword">let</span> maxLength = <span class="hljs-number">1</span>;
+    <span class="hljs-keyword">let</span> start = <span class="hljs-number">0</span>;
+
+    <span class="hljs-keyword">let</span> table = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Array</span>(length);
+    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; length; i++) {
+        table[i] = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Array</span>(length);
+    }
+
+    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; length; i++) {
+        table[i][i] = <span class="hljs-literal">true</span>;
+    }
+
+    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; length; i++) {
+        <span class="hljs-keyword">if</span>(s[i] === s[i+<span class="hljs-number">1</span>]) {
+            table[i][i + <span class="hljs-number">1</span>] = <span class="hljs-literal">true</span>;
+            start = i;
+            maxLength = <span class="hljs-number">2</span>;
+        }
+    }
+
+    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> k = <span class="hljs-number">3</span>; k &lt;= length; k++) {
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; length - k + <span class="hljs-number">1</span>; i++) {
+            <span class="hljs-keyword">let</span> j = i + k - <span class="hljs-number">1</span>;
+
+            <span class="hljs-keyword">if</span>(table[i + <span class="hljs-number">1</span>][j - <span class="hljs-number">1</span>] &amp;&amp; s[i] == s[j]) {
+                table[i][j] = <span class="hljs-literal">true</span>;
+                <span class="hljs-keyword">if</span>(k &gt; maxLength) {
+                    start = i;
+                    maxLength = k;
+                }
+
+            }
+        }
+    }
+
+    
+    <span class="hljs-keyword">return</span> s.<span class="hljs-title function_">slice</span>(start, start + maxLength);
+};
+</code></pre></span>

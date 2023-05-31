@@ -1,0 +1,18 @@
+<span><div><ul><li> <a href="../">Main page</a></li><li> <a href="../languages.html">Statistics</a></li></ul></div></span><h1></h1><hr/><span><h1 id="remove-duplicates">Remove duplicates</h1>
+<pre><code class="hljs language-java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {
+    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">removeDuplicates</span><span class="hljs-params">(<span class="hljs-type">int</span>[] nums)</span> {
+        <span class="hljs-keyword">if</span>(nums.length == <span class="hljs-number">0</span>) {
+            <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+        }
+        <span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>, j = <span class="hljs-number">0</span>;
+        nums[j] = nums[i];
+        <span class="hljs-keyword">for</span>(i = <span class="hljs-number">1</span>; i &lt; nums.length; i++) {
+            <span class="hljs-keyword">if</span>(nums[j] != nums[i]) {
+                j = j + <span class="hljs-number">1</span>;
+                nums[j] = nums[i];
+            }
+        }
+        <span class="hljs-keyword">return</span> j + <span class="hljs-number">1</span>;
+    }
+}
+</code></pre></span>

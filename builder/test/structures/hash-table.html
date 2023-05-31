@@ -1,0 +1,38 @@
+<span><div><ul><li> <a href="../">Main page</a></li><li> <a href="../languages.html">Statistics</a></li></ul></div></span><h1></h1><hr/><span><h1 id="hash-table">Hash table</h1>
+<p><img src="https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/hash-table.png" alt="Hash table"></p>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">const</span> <span class="hljs-title function_">superPrimitiveHashingFunc</span> = (<span class="hljs-params"><span class="hljs-built_in">string</span>: <span class="hljs-built_in">string</span></span>) =&gt; {
+    <span class="hljs-keyword">var</span> hash = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-built_in">string</span>.<span class="hljs-property">length</span>; i++) { hash += <span class="hljs-built_in">string</span>.<span class="hljs-title function_">charCodeAt</span>(i); }
+    <span class="hljs-keyword">return</span> hash;
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">HashTable</span> {
+    <span class="hljs-keyword">private</span> <span class="hljs-attr">collection</span>: <span class="hljs-built_in">any</span> = {}
+
+    <span class="hljs-keyword">public</span> <span class="hljs-title function_">add</span>(<span class="hljs-params">key: <span class="hljs-built_in">any</span>, value: <span class="hljs-built_in">any</span></span>) {
+        <span class="hljs-keyword">const</span> theHash = superPrimitiveHashingFunc(key);
+        <span class="hljs-keyword">if</span> (!<span class="hljs-variable language_">this</span>.<span class="hljs-property">collection</span>.<span class="hljs-title function_">hasOwnProperty</span>(theHash)) {
+            <span class="hljs-variable language_">this</span>.<span class="hljs-property">collection</span>[theHash] = {};
+        }
+        <span class="hljs-variable language_">this</span>.<span class="hljs-property">collection</span>[theHash][key] = value;
+    }
+
+    <span class="hljs-keyword">public</span> <span class="hljs-title function_">remove</span>(<span class="hljs-params">key: <span class="hljs-built_in">any</span></span>) {
+        <span class="hljs-keyword">const</span> hashedObj = <span class="hljs-variable language_">this</span>.<span class="hljs-property">collection</span>[superPrimitiveHashingFunc(key)];
+        <span class="hljs-keyword">if</span> (hashedObj.<span class="hljs-title function_">hasOwnProperty</span>(key)) {
+            <span class="hljs-keyword">delete</span> hashedObj[key];
+        }
+        <span class="hljs-keyword">if</span> (!<span class="hljs-title class_">Object</span>.<span class="hljs-title function_">keys</span>(hashedObj).<span class="hljs-property">length</span>) {
+            <span class="hljs-keyword">delete</span> <span class="hljs-variable language_">this</span>.<span class="hljs-property">collection</span>[superPrimitiveHashingFunc(key)];
+        }
+    }
+
+    <span class="hljs-keyword">public</span> <span class="hljs-title function_">lookup</span>(<span class="hljs-params">key: <span class="hljs-built_in">any</span></span>) {
+        <span class="hljs-keyword">var</span> theHash = superPrimitiveHashingFunc(key);
+        <span class="hljs-keyword">if</span> (<span class="hljs-variable language_">this</span>.<span class="hljs-property">collection</span>.<span class="hljs-title function_">hasOwnProperty</span>(theHash)) {
+            <span class="hljs-keyword">return</span> <span class="hljs-variable language_">this</span>.<span class="hljs-property">collection</span>[theHash][key];
+        }
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>
+    }
+}
+</code></pre></span>

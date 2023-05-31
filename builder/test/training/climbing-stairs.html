@@ -1,0 +1,17 @@
+<span><div><ul><li> <a href="../">Main page</a></li><li> <a href="../languages.html">Statistics</a></li></ul></div></span><h1></h1><hr/><span><h1 id="climbing-stairs">Climbing stairs</h1>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">climbStairs</span>(<span class="hljs-params">n: <span class="hljs-built_in">number</span></span>): <span class="hljs-built_in">number</span> {
+    <span class="hljs-keyword">if</span>(n &lt;= <span class="hljs-number">3</span>) {
+        <span class="hljs-keyword">return</span> n;
+    }
+
+    <span class="hljs-keyword">let</span> a = <span class="hljs-number">3</span>;
+    <span class="hljs-keyword">let</span> b = <span class="hljs-number">2</span>;
+
+    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; n -<span class="hljs-number">3</span>; i++) {
+        a = a + b;
+        b = a - b;
+    }
+    <span class="hljs-keyword">return</span> a;
+};
+</code></pre><p><strong>Source: <a href="https://leetcode.com">https://leetcode.com</a></strong></p>
+</span>

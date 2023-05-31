@@ -1,0 +1,27 @@
+<span><div><ul><li> <a href="../">Main page</a></li><li> <a href="../languages.html">Statistics</a></li></ul></div></span><h1></h1><hr/><span><h1 id="symmetric-tree">Symmetric Tree</h1>
+<pre><code class="hljs language-typescript"><span class="hljs-comment">/**
+ * Definition for a binary tree node.
+ * class TreeNode {
+ *     val: number
+ *     left: TreeNode | null
+ *     right: TreeNode | null
+ *     constructor(val?: number, left?: TreeNode | null, right?: TreeNode | null) {
+ *         this.val = (val===undefined ? 0 : val)
+ *         this.left = (left===undefined ? null : left)
+ *         this.right = (right===undefined ? null : right)
+ *     }
+ * }
+ */</span>
+
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">isSymmetric</span>(<span class="hljs-params">root: TreeNode | <span class="hljs-literal">null</span></span>): <span class="hljs-built_in">boolean</span> {
+    <span class="hljs-keyword">return</span> root == <span class="hljs-literal">null</span> || <span class="hljs-title function_">isMirror</span>(root.<span class="hljs-property">left</span>, root.<span class="hljs-property">right</span>); 
+};
+
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">isMirror</span>(<span class="hljs-params">node1: TreeNode, node2: TreeNode</span>): <span class="hljs-built_in">boolean</span> {
+    <span class="hljs-keyword">if</span>(node1 === <span class="hljs-literal">null</span> &amp;&amp; node2 === <span class="hljs-literal">null</span>) <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+    <span class="hljs-keyword">if</span>(node1 === <span class="hljs-literal">null</span> || node2 === <span class="hljs-literal">null</span>) <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+    <span class="hljs-keyword">if</span>(node1.<span class="hljs-property">val</span> !== node2.<span class="hljs-property">val</span>) <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+
+    <span class="hljs-keyword">return</span> <span class="hljs-title function_">isMirror</span>(node1.<span class="hljs-property">left</span>, node2.<span class="hljs-property">right</span>) &amp;&amp; <span class="hljs-title function_">isMirror</span>(node1.<span class="hljs-property">right</span>, node2.<span class="hljs-property">left</span>);
+}
+</code></pre></span>

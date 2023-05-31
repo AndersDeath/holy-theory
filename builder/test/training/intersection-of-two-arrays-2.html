@@ -1,0 +1,23 @@
+<span><div><ul><li> <a href="../">Main page</a></li><li> <a href="../languages.html">Statistics</a></li></ul></div></span><h1></h1><hr/><span><h1 id="intersection-of-two-arrays-2">Intersection of two arrays 2</h1>
+<pre><code class="hljs language-typescript">
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">intersect</span>(<span class="hljs-params">nums1: <span class="hljs-built_in">number</span>[], nums2: <span class="hljs-built_in">number</span>[]</span>): <span class="hljs-built_in">number</span>[] {
+    <span class="hljs-keyword">let</span> <span class="hljs-attr">output</span>: <span class="hljs-built_in">number</span>[] = [];
+    nums1.<span class="hljs-title function_">sort</span>(<span class="hljs-function">(<span class="hljs-params">a,b</span>) =&gt;</span> a-b);
+    nums2.<span class="hljs-title function_">sort</span>(<span class="hljs-function">(<span class="hljs-params">a,b</span>) =&gt;</span> a-b);
+
+    <span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">let</span> j = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">while</span>(i &lt; nums1.<span class="hljs-property">length</span> &amp;&amp; j &lt; nums2.<span class="hljs-property">length</span>) {
+        <span class="hljs-keyword">if</span>(nums1[i] === nums2[j]) {
+            output.<span class="hljs-title function_">push</span>(nums1[i]);
+            i++;
+            j++
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(nums1[i] &lt; nums2[j]) {
+            i++
+        } <span class="hljs-keyword">else</span> {
+            j++
+        }
+    }
+    <span class="hljs-keyword">return</span> output;
+};
+</code></pre></span>

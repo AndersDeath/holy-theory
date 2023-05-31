@@ -1,0 +1,31 @@
+<span><div><ul><li> <a href="../">Main page</a></li><li> <a href="../languages.html">Statistics</a></li></ul></div></span><h1></h1><hr/><span><h1 id="sqrtx">Sqrt(x)</h1>
+<pre><code class="hljs language-typescript"><span class="hljs-comment">/**
+ * <span class="hljs-doctag">@param</span> {<span class="hljs-type">number</span>} <span class="hljs-variable">x</span>
+ * <span class="hljs-doctag">@return</span> {<span class="hljs-type">number</span>}
+ */</span>
+<span class="hljs-keyword">var</span> mySqrt = <span class="hljs-keyword">function</span>(<span class="hljs-params">x</span>) {
+    <span class="hljs-keyword">if</span>(x &lt; <span class="hljs-number">2</span>) <span class="hljs-keyword">return</span> x;
+
+    <span class="hljs-keyword">let</span> start = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">let</span> end = x;
+    <span class="hljs-keyword">while</span>(start &lt;= end) {
+        <span class="hljs-keyword">let</span> mid = (start + end) / <span class="hljs-number">2</span>;
+        mid = <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">floor</span>(mid);
+        
+        <span class="hljs-keyword">if</span>(mid === x/mid) {
+            <span class="hljs-keyword">return</span> mid;
+        }
+       
+       <span class="hljs-keyword">if</span>(mid &lt; x/mid) {
+           start = mid + <span class="hljs-number">1</span>;
+       } <span class="hljs-keyword">else</span> {
+           end = mid - <span class="hljs-number">1</span>;
+       }
+    }
+
+    <span class="hljs-keyword">if</span>(start &gt; x/start) {
+        <span class="hljs-keyword">return</span> start - <span class="hljs-number">1</span>;
+    }
+    <span class="hljs-keyword">return</span> start;
+};
+</code></pre></span>

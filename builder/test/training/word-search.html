@@ -1,0 +1,33 @@
+<span><div><ul><li> <a href="../">Main page</a></li><li> <a href="../languages.html">Statistics</a></li></ul></div></span><h1></h1><hr/><span><h1 id="word-search">Word search</h1>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">exist</span>(<span class="hljs-params">board: <span class="hljs-built_in">string</span>[][], word: <span class="hljs-built_in">string</span></span>): <span class="hljs-built_in">boolean</span> {
+    <span class="hljs-keyword">const</span> row = board.<span class="hljs-property">length</span>;
+    <span class="hljs-keyword">const</span> col = board[<span class="hljs-number">0</span>].<span class="hljs-property">length</span>;
+    <span class="hljs-keyword">let</span> index = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; row; i++) {
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> j = <span class="hljs-number">0</span>; j&lt; col; j++){
+            <span class="hljs-keyword">if</span>(<span class="hljs-title function_">backtrack</span>(board, word, i,j,index, row, col)) {
+                <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>
+            }
+        }
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+};
+
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">backtrack</span>(<span class="hljs-params">board, word, i, j,index, row, col</span>) {
+    <span class="hljs-keyword">if</span>(index === word.<span class="hljs-property">length</span>) <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+    <span class="hljs-keyword">if</span>(i &lt; <span class="hljs-number">0</span> || j &lt; <span class="hljs-number">0</span> || i === row || j === col || board[i][j] !== word[index] || board[i][j] == <span class="hljs-string">&#x27;#&#x27;</span>) <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+
+    <span class="hljs-keyword">let</span> t = board[i][j];
+    board[i][j] = <span class="hljs-string">&#x27;#&#x27;</span>;
+
+    <span class="hljs-keyword">let</span> top = <span class="hljs-title function_">backtrack</span>(board, word, i -<span class="hljs-number">1</span>, j, index + <span class="hljs-number">1</span>, row, col);
+    <span class="hljs-keyword">let</span> right = <span class="hljs-title function_">backtrack</span>(board, word, i, j + <span class="hljs-number">1</span>, index + <span class="hljs-number">1</span>, row, col);
+    <span class="hljs-keyword">let</span> bottom = <span class="hljs-title function_">backtrack</span>(board, word, i + <span class="hljs-number">1</span>, j, index + <span class="hljs-number">1</span>, row, col);
+    <span class="hljs-keyword">let</span> left = <span class="hljs-title function_">backtrack</span>(board, word, i, j - <span class="hljs-number">1</span>, index + <span class="hljs-number">1</span>, row, col);
+
+    board[i][j] = t;
+
+    <span class="hljs-keyword">return</span> top || right || bottom || left;
+
+}
+</code></pre></span>

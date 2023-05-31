@@ -1,6 +1,5 @@
 div
     ul
-        li 
-            a(href="./") Main page
-        li
-            a(href="./languages.html") Statistics
+        each val in values
+            li 
+                a(href=`${val.href}`) #{val.title}

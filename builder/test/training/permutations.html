@@ -1,0 +1,26 @@
+<span><div><ul><li> <a href="../">Main page</a></li><li> <a href="../languages.html">Statistics</a></li></ul></div></span><h1></h1><hr/><span><h1 id="permutations">Permutations</h1>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">permute</span>(<span class="hljs-params">nums: <span class="hljs-built_in">number</span>[]</span>): <span class="hljs-built_in">number</span>[][] {
+    <span class="hljs-keyword">let</span> output = [];
+    <span class="hljs-title function_">dfs</span>(nums, <span class="hljs-number">0</span>, output);
+    <span class="hljs-keyword">return</span> output;
+};
+
+
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">dfs</span>(<span class="hljs-params">nums, index,output</span>) {
+    <span class="hljs-keyword">if</span> (index == nums.<span class="hljs-property">length</span>){
+        <span class="hljs-keyword">let</span> l = [...nums];
+        output.<span class="hljs-title function_">push</span>(l);
+    } <span class="hljs-keyword">else</span> {
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> j = index; j &lt; nums.<span class="hljs-property">length</span>; j++){
+            <span class="hljs-keyword">let</span> tmp = nums[index];
+            nums[index] = nums[j];
+            nums[j] = tmp;
+            
+            <span class="hljs-title function_">dfs</span>(nums, index + <span class="hljs-number">1</span>,output);
+            tmp = nums[index];
+            nums[index] = nums[j];
+            nums[j] = tmp;
+        }
+    }
+}
+</code></pre></span>

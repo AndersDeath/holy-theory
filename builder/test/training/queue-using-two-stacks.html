@@ -1,0 +1,20 @@
+<span><div><ul><li> <a href="../">Main page</a></li><li> <a href="../languages.html">Statistics</a></li></ul></div></span><h1></h1><hr/><span><h1 id="merge-two-sorted-linked-lists">Merge two sorted linked lists</h1>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">processData</span>(<span class="hljs-params">input</span>) {
+    <span class="hljs-keyword">let</span> arr = input.<span class="hljs-title function_">split</span>(<span class="hljs-string">&#x27;\n&#x27;</span>);
+    <span class="hljs-keyword">const</span> stack = [];
+    
+    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; arr.<span class="hljs-property">length</span>; i++) {
+        <span class="hljs-keyword">let</span> [cmd, value] = arr[i].<span class="hljs-title function_">split</span>(<span class="hljs-string">&#x27; &#x27;</span>);
+        <span class="hljs-keyword">if</span>(cmd == <span class="hljs-number">1</span>) {
+            stack.<span class="hljs-title function_">push</span>(value);
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(cmd == <span class="hljs-number">2</span>) {
+            stack.<span class="hljs-title function_">splice</span>(<span class="hljs-number">0</span>,<span class="hljs-number">1</span>);
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(cmd == <span class="hljs-number">3</span>) {
+            <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(stack[<span class="hljs-number">0</span>])
+        }
+    }
+} 
+,,,
+
+** <span class="hljs-title class_">Source</span>: <span class="hljs-attr">http</span>:<span class="hljs-comment">//hackerrank.com**</span>
+</code></pre></span>

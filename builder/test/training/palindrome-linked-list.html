@@ -1,0 +1,30 @@
+<span><div><ul><li> <a href="../">Main page</a></li><li> <a href="../languages.html">Statistics</a></li></ul></div></span><h1></h1><hr/><span><h1 id="palindrome-linked-list">Palindrome linked list</h1>
+<pre><code class="hljs language-typescript">
+<span class="hljs-comment">/**
+ * Definition for singly-linked list.
+ * class ListNode {
+ *     val: number
+ *     next: ListNode | null
+ *     constructor(val?: number, next?: ListNode | null) {
+ *         this.val = (val===undefined ? 0 : val)
+ *         this.next = (next===undefined ? null : next)
+ *     }
+ * }
+ */</span>
+
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">isPalindrome</span>(<span class="hljs-params">head: ListNode | <span class="hljs-literal">null</span></span>): <span class="hljs-built_in">boolean</span> {
+    <span class="hljs-keyword">const</span> <span class="hljs-title function_">isP</span> = (<span class="hljs-params">rHead</span>) =&gt; {
+        <span class="hljs-keyword">if</span> (rHead == <span class="hljs-literal">null</span>) {
+            <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+        }
+
+        <span class="hljs-keyword">const</span> next = <span class="hljs-title function_">isP</span>(rHead.<span class="hljs-property">next</span>);
+
+        <span class="hljs-keyword">const</span> valid = rHead.<span class="hljs-property">val</span> === head.<span class="hljs-property">val</span>;
+
+        head = head.<span class="hljs-property">next</span>;
+        <span class="hljs-keyword">return</span> next &amp;&amp; valid;
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-title function_">isP</span>(head);
+};
+</code></pre></span>

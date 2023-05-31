@@ -1,0 +1,31 @@
+<span><div><ul><li> <a href="../">Main page</a></li><li> <a href="../languages.html">Statistics</a></li></ul></div></span><h1></h1><hr/><span><h1 id="queue">Queue</h1>
+<p><img src="https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/queue.png" alt="Queue"></p>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Queue</span> {
+    <span class="hljs-keyword">private</span> <span class="hljs-attr">collection</span>: <span class="hljs-built_in">any</span>[] = [];
+
+    <span class="hljs-keyword">public</span> <span class="hljs-title function_">print</span>(<span class="hljs-params"></span>) {
+        <span class="hljs-keyword">return</span> <span class="hljs-variable language_">this</span>.<span class="hljs-property">collection</span>;
+    }
+
+    <span class="hljs-keyword">public</span> <span class="hljs-title function_">enqueue</span>(<span class="hljs-params">element: <span class="hljs-built_in">any</span></span>) {
+        <span class="hljs-variable language_">this</span>.<span class="hljs-property">collection</span>.<span class="hljs-title function_">push</span>(element);
+        <span class="hljs-keyword">return</span> element;
+    }
+
+    <span class="hljs-keyword">public</span> <span class="hljs-title function_">dequeue</span>(<span class="hljs-params"></span>) {
+        <span class="hljs-keyword">return</span> <span class="hljs-variable language_">this</span>.<span class="hljs-property">collection</span>.<span class="hljs-title function_">shift</span>();
+    }
+
+    <span class="hljs-keyword">public</span> <span class="hljs-title function_">front</span>(<span class="hljs-params"></span>) {
+        <span class="hljs-keyword">return</span> <span class="hljs-variable language_">this</span>.<span class="hljs-property">collection</span>[<span class="hljs-number">0</span>];
+    }
+
+    <span class="hljs-keyword">public</span> <span class="hljs-title function_">size</span>(<span class="hljs-params"></span>) {
+        <span class="hljs-keyword">return</span> <span class="hljs-variable language_">this</span>.<span class="hljs-property">collection</span>.<span class="hljs-property">length</span>
+    }
+
+    <span class="hljs-keyword">public</span> <span class="hljs-title function_">isEmpty</span>(<span class="hljs-params"></span>) {
+        <span class="hljs-keyword">return</span> !<span class="hljs-variable language_">this</span>.<span class="hljs-property">collection</span>.<span class="hljs-property">length</span>
+    }
+}
+</code></pre></span>

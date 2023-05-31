@@ -1,0 +1,20 @@
+<span><div><ul><li> <a href="../">Main page</a></li><li> <a href="../languages.html">Statistics</a></li></ul></div></span><h1></h1><hr/><span><h1 id="pascal-triangle-2">Pascal triangle 2</h1>
+<pre><code class="hljs language-typescript">
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">generate</span>(<span class="hljs-params">numRows: <span class="hljs-built_in">number</span></span>): <span class="hljs-built_in">number</span>[][] {
+
+        <span class="hljs-keyword">const</span> <span class="hljs-attr">pascal</span>: <span class="hljs-built_in">any</span> = [];
+
+    
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; numRows; i++) {
+            pascal[i] = [];
+            pascal[i][<span class="hljs-number">0</span>] = <span class="hljs-number">1</span>;
+            <span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> j = <span class="hljs-number">1</span>; j &lt; i; j++) {
+                pascal[i][j] = pascal[i - <span class="hljs-number">1</span>][j - <span class="hljs-number">1</span>] + pascal[i - <span class="hljs-number">1</span>][j];
+            }
+            pascal[i][i] = <span class="hljs-number">1</span>;
+        }
+
+        <span class="hljs-keyword">return</span> pascal;
+
+};
+</code></pre></span>

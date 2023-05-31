@@ -1,0 +1,14 @@
+<span><div><ul><li> <a href="../">Main page</a></li><li> <a href="../languages.html">Statistics</a></li></ul></div></span><h1></h1><hr/><span><h1 id="time-conversion">Time conversion</h1>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">timeConversion</span>(<span class="hljs-params">s: <span class="hljs-built_in">string</span></span>): <span class="hljs-built_in">string</span> {
+    <span class="hljs-keyword">const</span> strArr = s.<span class="hljs-title function_">split</span>(<span class="hljs-string">&#x27;:&#x27;</span>);
+    <span class="hljs-keyword">const</span> modifier = strArr[<span class="hljs-number">2</span>].<span class="hljs-title function_">slice</span>(-<span class="hljs-number">2</span>);
+    <span class="hljs-keyword">let</span> hours = strArr[<span class="hljs-number">0</span>];
+    <span class="hljs-keyword">if</span>(modifier === <span class="hljs-string">&quot;PM&quot;</span> &amp;&amp; strArr[<span class="hljs-number">0</span>] !== <span class="hljs-string">&#x27;12&#x27;</span>) {
+        hours = +strArr[<span class="hljs-number">0</span>] + <span class="hljs-number">12</span> + <span class="hljs-string">&#x27;&#x27;</span>;
+    }
+    <span class="hljs-keyword">if</span>(modifier === <span class="hljs-string">&quot;AM&quot;</span> &amp;&amp; strArr[<span class="hljs-number">0</span>] === <span class="hljs-string">&#x27;12&#x27;</span>) {
+        hours = <span class="hljs-string">&quot;00&quot;</span>;
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-string">`<span class="hljs-subst">${hours}</span>:<span class="hljs-subst">${strArr[<span class="hljs-number">1</span>]}</span>:<span class="hljs-subst">${strArr[<span class="hljs-number">2</span>].slice(<span class="hljs-number">0</span>,-<span class="hljs-number">2</span>)}</span>`</span>;
+}
+</code></pre></span>

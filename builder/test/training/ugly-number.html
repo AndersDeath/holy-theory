@@ -1,0 +1,12 @@
+<span><div><ul><li> <a href="../">Main page</a></li><li> <a href="../languages.html">Statistics</a></li></ul></div></span><h1></h1><hr/><span><h1 id="ugly-number">Ugly Number</h1>
+<pre><code class="hljs language-typescript">
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">isUgly</span>(<span class="hljs-params">n: <span class="hljs-built_in">number</span></span>): <span class="hljs-built_in">boolean</span> {
+    <span class="hljs-keyword">if</span>(n == <span class="hljs-number">1</span>) <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+    <span class="hljs-keyword">if</span>(n &lt;= <span class="hljs-number">0</span>) <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+    <span class="hljs-keyword">if</span>(n % <span class="hljs-number">2</span> == <span class="hljs-number">0</span>) <span class="hljs-keyword">return</span> <span class="hljs-title function_">isUgly</span>(n / <span class="hljs-number">2</span>);
+    <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(n % <span class="hljs-number">3</span> == <span class="hljs-number">0</span>) <span class="hljs-keyword">return</span> <span class="hljs-title function_">isUgly</span>(n / <span class="hljs-number">3</span>);
+    <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(n % <span class="hljs-number">5</span> == <span class="hljs-number">0</span>) <span class="hljs-keyword">return</span> <span class="hljs-title function_">isUgly</span>(n / <span class="hljs-number">5</span>);
+    <span class="hljs-keyword">else</span> <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+};
+</code></pre><p><strong>Source: <a href="https://leetcode.com">https://leetcode.com</a></strong></p>
+</span>

@@ -1,0 +1,16 @@
+<span><div><ul><li> <a href="../">Main page</a></li><li> <a href="../languages.html">Statistics</a></li></ul></div></span><h1></h1><hr/><span><h1 id="binary-watch">Binary Watch</h1>
+<pre><code class="hljs language-java">
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {
+    <span class="hljs-keyword">public</span> List&lt;String&gt; <span class="hljs-title function_">readBinaryWatch</span><span class="hljs-params">(<span class="hljs-type">int</span> turnedOn)</span> {
+        List&lt;String&gt; res = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ArrayList</span>&lt;&gt;();
+        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> <span class="hljs-variable">h</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; h &lt; <span class="hljs-number">12</span>; h++){
+            <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> <span class="hljs-variable">m</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; m &lt; <span class="hljs-number">60</span>; m++){
+                <span class="hljs-keyword">if</span>(Integer.bitCount(h) + Integer.bitCount(m) == turnedOn){
+                    res.add(String.format(<span class="hljs-string">&quot;%d:%02d&quot;</span>, h, m));
+                }
+            }
+        }
+        <span class="hljs-keyword">return</span> res;
+    }
+}
+</code></pre></span>

@@ -11,6 +11,18 @@ const paths = getConfig().templates;
 
 
 const templates = new Templates(paths);
+const nav = templates.getData()['nav'].build({
+    values: [
+        {
+            href: './',
+            title: 'Main page'
+        },
+        {
+            href: './languages.html',
+            title: 'Statistics'
+        }
+    ]
+});
 
 
 function Builder() {
@@ -87,6 +99,7 @@ function Builder() {
     data.forEach((group) => {
         for (let index = 0; index < group.length; index++) {
             const item = group[index];
+            const pathObj = path.parse(item);
             const fileContents = fs.readFileSync(item, 'utf8');
             const { metadata, content } = parseMD(fileContents);
             // console.log(metadata);
@@ -97,19 +110,53 @@ function Builder() {
             testData.push({
                 title: metadata.title,
                 body: marked.parse(cleanedContent),
-                bodyMD: cleanedContent
+                bodyMD: cleanedContent,
+
+                meta: {
+                    category: pathObj.dir,
+                    fileName: {
+                        original: pathObj.name,
+                        dashed: pathObj.name.replace(' ', '-').toLowerCase()
+                    }
+                }
             });
         }
     })
 
     let articles = [];
+    let tableOfContents = [];
 
     testData.forEach((item) => {
+        console.log(item);
+        if (!fs.existsSync('./builder/test/' + item.meta.category)) {
+            fs.mkdirSync('./builder/test/' + item.meta.category, { recursive: true });
+        }
+        const html = templates.getData()['article'].build({
+            navigation: templates.getData()['nav'].build({
+                values: [
+                    {
+                        href: '../',
+                        title: 'Main page'
+                    },
+                    {
+                        href: '../languages.html',
+                        title: 'Statistics'
+                    }
+                ]
+            }),
+            title: item.title,
+            body: item.body
+        });
+
+        fs.writeFileSync('./builder/test/' + item.meta.category + '/' + item.meta.fileName.dashed + '.html', html);
+
         articles.push(templates.getData()['article'].build(item));
+        if (!fs.existsSync('./builder/test/md')) {
+            fs.mkdirSync('./builder/test/md', { recursive: true });
+        }
         fs.writeFileSync(`./builder/test/md/${item.title.replace('\/', '-')}.md`, templates.getData()['articleMD'].build(item));
 
     });
-    const nav = templates.getData()['nav'].build();
 
     let o = templates.getData()['layout'].build({
         header: 'Holy Theory',

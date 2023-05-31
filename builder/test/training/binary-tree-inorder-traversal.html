@@ -1,0 +1,32 @@
+<span><div><ul><li> <a href="../">Main page</a></li><li> <a href="../languages.html">Statistics</a></li></ul></div></span><h1></h1><hr/><span><h1 id="binary-tree-inorder-traversal">Binary Tree Inorder Traversal</h1>
+<pre><code class="hljs language-typescript"><span class="hljs-comment">/**
+ * Definition for a binary tree node.
+ * class TreeNode {
+ *     val: number
+ *     left: TreeNode | null
+ *     right: TreeNode | null
+ *     constructor(val?: number, left?: TreeNode | null, right?: TreeNode | null) {
+ *         this.val = (val===undefined ? 0 : val)
+ *         this.left = (left===undefined ? null : left)
+ *         this.right = (right===undefined ? null : right)
+ *     }
+ * }
+ */</span>
+
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">inorderTraversal</span>(<span class="hljs-params">root: TreeNode | <span class="hljs-literal">null</span></span>): <span class="hljs-built_in">number</span>[] {
+    <span class="hljs-keyword">const</span> list = [];
+    <span class="hljs-keyword">const</span> stack = [];
+    <span class="hljs-keyword">let</span> node = root;
+
+    <span class="hljs-keyword">while</span>(node !== <span class="hljs-literal">null</span> || stack.<span class="hljs-property">length</span> &gt; <span class="hljs-number">0</span>) {
+        <span class="hljs-keyword">while</span>(node !== <span class="hljs-literal">null</span>) {
+            stack.<span class="hljs-title function_">push</span>(node);
+            node = node.<span class="hljs-property">left</span>
+        }
+        list.<span class="hljs-title function_">push</span>(stack[stack.<span class="hljs-property">length</span> -<span class="hljs-number">1</span>].<span class="hljs-property">val</span>);
+        <span class="hljs-keyword">let</span> el = stack.<span class="hljs-title function_">pop</span>();
+        node = el.<span class="hljs-property">right</span>;
+    }
+    <span class="hljs-keyword">return</span> list;
+};
+</code></pre></span>

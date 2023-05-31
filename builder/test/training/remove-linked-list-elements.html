@@ -1,0 +1,35 @@
+<span><div><ul><li> <a href="../">Main page</a></li><li> <a href="../languages.html">Statistics</a></li></ul></div></span><h1></h1><hr/><span><h1 id="remove-linked-list-elements">Remove Linked List Elements</h1>
+<pre><code class="hljs language-typescript"><span class="hljs-comment">/**
+ * Definition for singly-linked list.
+ * class ListNode {
+ *     val: number
+ *     next: ListNode | null
+ *     constructor(val?: number, next?: ListNode | null) {
+ *         this.val = (val===undefined ? 0 : val)
+ *         this.next = (next===undefined ? null : next)
+ *     }
+ * }
+ */</span>
+
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">removeElements</span>(<span class="hljs-params">head: ListNode | <span class="hljs-literal">null</span>, val: <span class="hljs-built_in">number</span></span>): <span class="hljs-title class_">ListNode</span> | <span class="hljs-literal">null</span> {
+        <span class="hljs-keyword">while</span> (head != <span class="hljs-literal">null</span> &amp;&amp; head.<span class="hljs-property">val</span> == val) {
+            head = head.<span class="hljs-property">next</span>;
+        }
+
+        <span class="hljs-keyword">if</span> (head == <span class="hljs-literal">null</span>) {
+            <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;
+        }
+
+        <span class="hljs-keyword">let</span> temp = head;
+
+        <span class="hljs-keyword">while</span> (temp.<span class="hljs-property">next</span> != <span class="hljs-literal">null</span>) {
+            <span class="hljs-keyword">const</span> nextNode = temp.<span class="hljs-property">next</span>;
+            <span class="hljs-keyword">if</span> (nextNode.<span class="hljs-property">val</span> == val) {
+                temp.<span class="hljs-property">next</span> = nextNode.<span class="hljs-property">next</span>;
+            } <span class="hljs-keyword">else</span> {
+                temp = temp.<span class="hljs-property">next</span>;
+            }
+        }
+        <span class="hljs-keyword">return</span> head;
+};
+</code></pre></span>
