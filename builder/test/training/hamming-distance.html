@@ -1,0 +1,16 @@
+<span></span><h1></h1><hr/><span><h1 id="hamming-distance">Hamming Distance</h1>
+<pre><code class="hljs language-java">
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {
+    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">hammingDistance</span><span class="hljs-params">(<span class="hljs-type">int</span> x, <span class="hljs-type">int</span> y)</span> {
+        <span class="hljs-type">int</span> <span class="hljs-variable">xor</span> <span class="hljs-operator">=</span> x^y;
+        <span class="hljs-type">int</span> <span class="hljs-variable">count</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">while</span> (xor &gt; <span class="hljs-number">0</span>) {
+            <span class="hljs-keyword">if</span> ((xor&amp;<span class="hljs-number">1</span>) == <span class="hljs-number">1</span>) {
+                count ++;
+            }
+            xor = xor &gt;&gt; <span class="hljs-number">1</span>;
+        }
+        <span class="hljs-keyword">return</span> count; 
+    }
+}
+</code></pre></span>

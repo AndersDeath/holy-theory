@@ -1,0 +1,22 @@
+<span></span><h1></h1><hr/><span><h1 id="binary-tree-in-order-traversal">Binary tree in order traversal</h1>
+<pre><code class="hljs language-java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {
+    
+    
+    List&lt;Integer&gt; <span class="hljs-title function_">getInOrderTraversal</span><span class="hljs-params">(Node root)</span> {
+        List&lt;Integer&gt; list = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ArrayList</span>&lt;Integer&gt;();
+        Stack&lt;Node&gt; stack = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Stack</span>&lt;&gt;();
+        <span class="hljs-type">Node</span> <span class="hljs-variable">node</span> <span class="hljs-operator">=</span> root;
+        
+        <span class="hljs-keyword">while</span>(node != <span class="hljs-literal">null</span> || !stack.isEmpty()) {
+            <span class="hljs-keyword">while</span>(node != <span class="hljs-literal">null</span>) {
+                stack.push(node);
+                node = node.left;
+            }
+            list.add(stack.peek().data);
+            node = stack.pop().right;
+        }
+        
+        <span class="hljs-keyword">return</span> list;
+    }
+}
+</code></pre></span>

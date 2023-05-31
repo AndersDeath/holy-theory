@@ -1,0 +1,14 @@
+<span></span><h1></h1><hr/><span><h1 id="length-of-last-word">Length of Last Word</h1>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">lengthOfLastWord</span>(<span class="hljs-params">s: <span class="hljs-built_in">string</span></span>): <span class="hljs-built_in">number</span> {
+    s = s.<span class="hljs-title function_">trim</span>();
+    <span class="hljs-keyword">let</span> counter = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> i = s.<span class="hljs-property">length</span> - <span class="hljs-number">1</span>; i &gt;= <span class="hljs-number">0</span>; i--) {
+        <span class="hljs-keyword">if</span>(s[i] === <span class="hljs-string">&#x27; &#x27;</span>) {
+            <span class="hljs-keyword">break</span>;
+        }
+        counter++;
+    }
+
+    <span class="hljs-keyword">return</span> counter;
+};
+</code></pre></span>

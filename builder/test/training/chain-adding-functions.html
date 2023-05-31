@@ -1,0 +1,25 @@
+<span></span><h1></h1><hr/><span><h1 id="chain-adding-functions">Chain adding functions</h1>
+<p>Multiple calls:</p>
+<p>add(1)(2)(3); // 6
+add(1)(2)(3)(4); // 10
+add(1)(2)(3)(4)(5); // 15</p>
+<p>Single call:
+add(1); // 1</p>
+<p>Mixed thing:
+let addTwo = add(2);
+addTwo; // 2
+addTwo + 5; // 7
+addTwo(3); // 5
+addTwo(3)(5); // 10</p>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">add</span>(<span class="hljs-params">x: <span class="hljs-built_in">number</span></span>): <span class="hljs-built_in">any</span> {
+    <span class="hljs-keyword">let</span> sum = x;
+    <span class="hljs-keyword">function</span> <span class="hljs-title function_">f</span>(<span class="hljs-params">y: <span class="hljs-built_in">number</span></span>) {
+      sum += y;
+      <span class="hljs-keyword">return</span> f;
+    }
+    f.<span class="hljs-property">toString</span> = <span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) {
+      <span class="hljs-keyword">return</span> sum;
+    };
+    <span class="hljs-keyword">return</span> f;
+  }
+</code></pre></span>

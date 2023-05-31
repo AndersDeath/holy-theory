@@ -1,0 +1,18 @@
+<span></span><h1></h1><hr/><span><h1 id="move-zeroes">Move Zeroes</h1>
+<pre><code class="hljs language-typescript"><span class="hljs-comment">/**
+ Do not return anything, modify nums in-place instead.
+ */</span>
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">moveZeroes</span>(<span class="hljs-params">nums: <span class="hljs-built_in">number</span>[]</span>): <span class="hljs-built_in">void</span> {
+   <span class="hljs-keyword">let</span> j = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; nums.<span class="hljs-property">length</span>; i ++) {
+        <span class="hljs-keyword">if</span> (nums[i] !== <span class="hljs-number">0</span>) {
+            <span class="hljs-keyword">if</span> (i != j) {
+                <span class="hljs-keyword">let</span> tmp = nums[i];
+                nums[i] = nums[j];
+                nums[j] = tmp;
+            }
+            j++;
+        }
+    }
+};
+</code></pre></span>

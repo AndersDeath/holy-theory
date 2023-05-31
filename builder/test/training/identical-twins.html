@@ -1,0 +1,23 @@
+<span></span><h1></h1><hr/><span><h1 id="identical-twins">Identical twins</h1>
+<pre><code class="hljs language-java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {
+    <span class="hljs-type">int</span> <span class="hljs-title function_">getIdenticalTwinsCount</span> <span class="hljs-params">(<span class="hljs-type">int</span>[] arr)</span> {
+        HashMap&lt;Integer, Integer&gt; map = <span class="hljs-keyword">new</span> <span class="hljs-title class_">HashMap</span>&lt;Integer, Integer&gt;();
+        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt; arr.length; i++) {
+            <span class="hljs-type">Integer</span> <span class="hljs-variable">val</span> <span class="hljs-operator">=</span> map.get(arr[i]);
+            <span class="hljs-keyword">if</span>(val == <span class="hljs-literal">null</span>) {
+                map.put(arr[i],<span class="hljs-number">1</span>);
+            } <span class="hljs-keyword">else</span> {
+                map.put(arr[i], ++val);
+            }
+        }
+                
+        <span class="hljs-type">int</span> <span class="hljs-variable">count</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">for</span>(Map.Entry&lt;Integer, Integer&gt; y: map.entrySet()){
+            <span class="hljs-type">int</span> <span class="hljs-variable">x</span> <span class="hljs-operator">=</span> (y.getValue() * (y.getValue() - <span class="hljs-number">1</span>)) / <span class="hljs-number">2</span>;
+            count += x;
+            
+        }
+        <span class="hljs-keyword">return</span> count;
+    }
+}
+</code></pre></span>

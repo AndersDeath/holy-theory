@@ -1,0 +1,23 @@
+<span></span><h1></h1><hr/><span><h1 id="island-perimeter">Island Perimeter</h1>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">islandPerimeter</span>(<span class="hljs-params">grid: <span class="hljs-built_in">number</span>[][]</span>): <span class="hljs-built_in">number</span> {
+  <span class="hljs-keyword">let</span> perimeter = <span class="hljs-number">0</span>;
+
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; grid.<span class="hljs-property">length</span>; i++) {
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> j = <span class="hljs-number">0</span>; j &lt; grid[i].<span class="hljs-property">length</span>; j++) {
+      <span class="hljs-keyword">if</span> (grid[i][j] === <span class="hljs-number">1</span>) {
+        perimeter += <span class="hljs-number">4</span>; 
+
+        <span class="hljs-keyword">if</span> (j &gt; <span class="hljs-number">0</span> &amp;&amp; grid[i][j - <span class="hljs-number">1</span>] === <span class="hljs-number">1</span>) {
+          perimeter -= <span class="hljs-number">2</span>;
+        }
+
+        <span class="hljs-keyword">if</span> (i &gt; <span class="hljs-number">0</span> &amp;&amp; grid[i - <span class="hljs-number">1</span>][j] === <span class="hljs-number">1</span>) {
+          perimeter -= <span class="hljs-number">2</span>;
+        }
+      }
+    }
+  }
+
+  <span class="hljs-keyword">return</span> perimeter;
+};
+</code></pre></span>

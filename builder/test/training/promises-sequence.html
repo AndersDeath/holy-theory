@@ -1,0 +1,28 @@
+<span></span><h1></h1><hr/><span><h1 id="promises-sequence">Promises sequence</h1>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">const</span> a = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Promise</span>(<span class="hljs-function">(<span class="hljs-params">resolve: <span class="hljs-built_in">any</span>, reject: <span class="hljs-built_in">any</span></span>) =&gt;</span> {
+    <span class="hljs-built_in">setTimeout</span>(<span class="hljs-function">() =&gt;</span> {
+        <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;Promise a&#x27;</span>);
+        <span class="hljs-title function_">resolve</span>();
+    }, <span class="hljs-number">5000</span>)
+});
+
+<span class="hljs-keyword">const</span> b = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Promise</span>(<span class="hljs-function">(<span class="hljs-params">resolve: <span class="hljs-built_in">any</span>, reject: <span class="hljs-built_in">any</span></span>) =&gt;</span> {
+    <span class="hljs-built_in">setTimeout</span>(<span class="hljs-function">() =&gt;</span> {
+        <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;Promise b&#x27;</span>);
+        <span class="hljs-title function_">resolve</span>();
+    }, <span class="hljs-number">4000</span>)
+});
+
+<span class="hljs-keyword">const</span> c = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Promise</span>(<span class="hljs-function">(<span class="hljs-params">resolve: <span class="hljs-built_in">any</span>, reject: <span class="hljs-built_in">any</span></span>) =&gt;</span> {
+    <span class="hljs-built_in">setTimeout</span>(<span class="hljs-function">() =&gt;</span> {
+        <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;Promise c&#x27;</span>);
+        <span class="hljs-title function_">resolve</span>();
+    }, <span class="hljs-number">1000</span>)
+});
+
+<span class="hljs-keyword">let</span> q = [a,b,c].<span class="hljs-title function_">reduce</span>(<span class="hljs-function">(<span class="hljs-params">acc:<span class="hljs-built_in">any</span>, f: <span class="hljs-built_in">any</span></span>) =&gt;</span> {
+    <span class="hljs-keyword">return</span> acc.<span class="hljs-title function_">then</span>(<span class="hljs-function">() =&gt;</span> {
+        <span class="hljs-keyword">return</span> f;
+    });
+}, <span class="hljs-title class_">Promise</span>.<span class="hljs-title function_">resolve</span>());
+</code></pre></span>

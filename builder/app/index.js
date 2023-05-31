@@ -100,7 +100,7 @@ function Builder() {
                 title: metadata.title,
                 body: marked.parse(cleanedContent),
                 bodyMD: cleanedContent,
-                
+
                 meta: {
                     category: pathObj.dir,
                     fileName: {
@@ -116,7 +116,19 @@ function Builder() {
 
     testData.forEach((item) => {
         console.log(item);
+        if (!fs.existsSync('./builder/test/' + item.meta.category)) {
+            fs.mkdirSync('./builder/test/' + item.meta.category, { recursive: true });
+        }
+        const html = templates.getData()['article'].build(item, {
+            navigation: nav
+        });
+
+        fs.writeFileSync('./builder/test/' + item.meta.category + '/' + item.meta.fileName.dashed + '.html', html)
+
         articles.push(templates.getData()['article'].build(item));
+        if (!fs.existsSync('./builder/test/md')) {
+            fs.mkdirSync('./builder/test/md', { recursive: true });
+        }
         fs.writeFileSync(`./builder/test/md/${item.title.replace('\/', '-')}.md`, templates.getData()['articleMD'].build(item));
 
     });

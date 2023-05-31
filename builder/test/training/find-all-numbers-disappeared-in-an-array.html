@@ -1,0 +1,17 @@
+<span></span><h1></h1><hr/><span><h1 id="find-all-numbers-disappeared-in-an-array">Find All Numbers Disappeared in an Array</h1>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">findDisappearedNumbers</span>(<span class="hljs-params">nums: <span class="hljs-built_in">number</span>[]</span>): <span class="hljs-built_in">number</span>[] {
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; nums.<span class="hljs-property">length</span>; i ++) {
+        <span class="hljs-keyword">let</span> index = <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">abs</span>(nums[i]) - <span class="hljs-number">1</span>;
+        <span class="hljs-keyword">if</span> (nums[index] &gt; <span class="hljs-number">0</span>) {
+            nums[index] = - nums[index];
+        }        
+    }
+    <span class="hljs-keyword">const</span> result = [];
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; nums.<span class="hljs-property">length</span>; i ++) {
+        <span class="hljs-keyword">if</span> (nums[i] &gt; <span class="hljs-number">0</span>) {
+            result.<span class="hljs-title function_">push</span>(i + <span class="hljs-number">1</span>);
+        }
+    }
+    <span class="hljs-keyword">return</span> result;
+};
+</code></pre></span>

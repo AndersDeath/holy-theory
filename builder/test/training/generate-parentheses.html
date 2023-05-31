@@ -1,0 +1,21 @@
+<span></span><h1></h1><hr/><span><h1 id="generate-parentheses">Generate Parentheses</h1>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">generateParenthesis</span>(<span class="hljs-params">n: <span class="hljs-built_in">number</span></span>): <span class="hljs-built_in">string</span>[] {
+    <span class="hljs-keyword">const</span> result = [];
+    <span class="hljs-title function_">generator</span>(result, <span class="hljs-string">&quot;&quot;</span>, <span class="hljs-number">0</span>,<span class="hljs-number">0</span>,n)
+    <span class="hljs-keyword">return</span> result;
+};
+
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">generator</span>(<span class="hljs-params">result, s, open, close, n</span>) {
+    <span class="hljs-keyword">if</span>(open === n &amp;&amp; close === n) {
+        result.<span class="hljs-title function_">push</span>(s);
+        <span class="hljs-keyword">return</span>;
+    }
+    <span class="hljs-keyword">if</span>(open &lt; n) {
+         <span class="hljs-title function_">generator</span>(result, s + <span class="hljs-string">&#x27;(&#x27;</span>, open +<span class="hljs-number">1</span>, close, n);
+    }
+    <span class="hljs-keyword">if</span>(close &lt; open) {
+         <span class="hljs-title function_">generator</span>(result, s + <span class="hljs-string">&#x27;)&#x27;</span>, open, close + <span class="hljs-number">1</span>, n);
+    }
+    
+}
+</code></pre></span>

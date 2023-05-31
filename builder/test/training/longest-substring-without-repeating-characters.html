@@ -1,0 +1,24 @@
+<span></span><h1></h1><hr/><span><h1 id="longest-substring-without-repeating-characters">Longest Substring Without Repeating Characters</h1>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">lengthOfLongestSubstring</span>(<span class="hljs-params">s: <span class="hljs-built_in">string</span></span>): <span class="hljs-built_in">number</span> {
+    <span class="hljs-keyword">if</span>(s.<span class="hljs-property">length</span> === <span class="hljs-number">0</span>) <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+
+    <span class="hljs-keyword">let</span> start = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">let</span> end = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">let</span> maxLength = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">const</span> stringSet = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Set</span>&lt;<span class="hljs-built_in">string</span>&gt;();
+
+    <span class="hljs-keyword">while</span>(end &lt; s.<span class="hljs-property">length</span>) {
+        <span class="hljs-keyword">if</span>(!stringSet.<span class="hljs-title function_">has</span>(s[end])) {
+            stringSet.<span class="hljs-title function_">add</span>(s[end]);
+            end++;
+            maxLength = <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">max</span>(maxLength, stringSet.<span class="hljs-property">size</span>);
+        } <span class="hljs-keyword">else</span> {
+            stringSet.<span class="hljs-title function_">delete</span>(s[start]);
+            start++;
+        }
+    }
+
+    <span class="hljs-keyword">return</span> maxLength;
+
+};
+</code></pre></span>

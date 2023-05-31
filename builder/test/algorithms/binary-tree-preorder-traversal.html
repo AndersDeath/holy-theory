@@ -1,0 +1,20 @@
+<span></span><h1></h1><hr/><span><h1 id="binary-tree-preorder-traversal">Binary tree preorder traversal</h1>
+<pre><code class="hljs language-java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {
+    
+    <span class="hljs-keyword">void</span> <span class="hljs-title function_">utility</span><span class="hljs-params">(Node root, List&lt;Integer&gt; traversal)</span> {
+        <span class="hljs-keyword">if</span>(root == <span class="hljs-literal">null</span>) {
+            <span class="hljs-keyword">return</span>;
+        }
+        
+        traversal.add(root.data);
+        utility(root.left, traversal);
+        utility(root.right, traversal);
+    }
+    
+    List&lt;Integer&gt; <span class="hljs-title function_">getPreorderTraversal</span><span class="hljs-params">(Node root)</span> {
+        List&lt;Integer&gt; traversal = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ArrayList</span>&lt;Integer&gt;();
+        utility(root, traversal);
+        <span class="hljs-keyword">return</span> traversal;
+    }
+}
+</code></pre></span>

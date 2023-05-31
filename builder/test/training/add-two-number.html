@@ -1,0 +1,52 @@
+<span></span><h1></h1><hr/><span><h1 id="add-two-numbers">Add Two Numbers</h1>
+<pre><code class="hljs language-typescript"><span class="hljs-comment">/**
+ * Definition for singly-linked list.
+ * class ListNode {
+ *     val: number
+ *     next: ListNode | null
+ *     constructor(val?: number, next?: ListNode | null) {
+ *         this.val = (val===undefined ? 0 : val)
+ *         this.next = (next===undefined ? null : next)
+ *     }
+ * }
+ */</span>
+
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">addTwoNumbers</span>(<span class="hljs-params">l1: ListNode | <span class="hljs-literal">null</span>, l2: ListNode | <span class="hljs-literal">null</span></span>): <span class="hljs-title class_">ListNode</span> | <span class="hljs-literal">null</span> {
+
+    <span class="hljs-keyword">let</span> head = <span class="hljs-literal">null</span>
+
+    <span class="hljs-keyword">let</span> temp = <span class="hljs-literal">null</span>;
+
+    <span class="hljs-keyword">let</span> carry = <span class="hljs-number">0</span>;
+
+    <span class="hljs-keyword">while</span>(l1 !== <span class="hljs-literal">null</span> || l2 !== <span class="hljs-literal">null</span>) {
+        <span class="hljs-keyword">let</span> sum = carry;
+        <span class="hljs-keyword">if</span>(l1 !== <span class="hljs-literal">null</span>) {
+            sum += l1.<span class="hljs-property">val</span>;
+            l1 = l1.<span class="hljs-property">next</span>;
+        }
+        <span class="hljs-keyword">if</span>(l2 !== <span class="hljs-literal">null</span>) {
+             sum += l2.<span class="hljs-property">val</span>;
+            l2 = l2.<span class="hljs-property">next</span>;
+        }
+
+        <span class="hljs-keyword">const</span> node = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ListNode</span>(<span class="hljs-title class_">Math</span>.<span class="hljs-title function_">floor</span>(sum) % <span class="hljs-number">10</span>);
+        carry = <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">floor</span>(sum / <span class="hljs-number">10</span>);
+        <span class="hljs-keyword">if</span>(temp === <span class="hljs-literal">null</span>) {
+            temp = node;
+            head = node;
+        } <span class="hljs-keyword">else</span> {
+            temp.<span class="hljs-property">next</span> = node;
+            temp = temp.<span class="hljs-property">next</span>;
+        }
+    }
+
+    <span class="hljs-keyword">if</span>(carry &gt; <span class="hljs-number">0</span>) {
+        temp.<span class="hljs-property">next</span> = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ListNode</span>(carry);
+    }
+
+
+    <span class="hljs-keyword">return</span> head;
+
+};
+</code></pre></span>

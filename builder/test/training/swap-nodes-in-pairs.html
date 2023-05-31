@@ -1,0 +1,31 @@
+<span></span><h1></h1><hr/><span><h1 id="swap-nodes-in-pairs">Swap Nodes in Pairs</h1>
+<pre><code class="hljs language-typescript"><span class="hljs-comment">/**
+ * Definition for singly-linked list.
+ * class ListNode {
+ *     val: number
+ *     next: ListNode | null
+ *     constructor(val?: number, next?: ListNode | null) {
+ *         this.val = (val===undefined ? 0 : val)
+ *         this.next = (next===undefined ? null : next)
+ *     }
+ * }
+ */</span>
+
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">swapPairs</span>(<span class="hljs-params">head: ListNode | <span class="hljs-literal">null</span></span>): <span class="hljs-title class_">ListNode</span> | <span class="hljs-literal">null</span> {
+    <span class="hljs-keyword">const</span> dummy = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ListNode</span>(<span class="hljs-number">0</span>);
+
+    dummy.<span class="hljs-property">next</span> = head;
+    <span class="hljs-keyword">let</span> current = dummy;
+    <span class="hljs-keyword">while</span>(current.<span class="hljs-property">next</span> &amp;&amp; current.<span class="hljs-property">next</span>.<span class="hljs-property">next</span>) {
+        <span class="hljs-keyword">let</span> first = current.<span class="hljs-property">next</span>;
+        <span class="hljs-keyword">let</span> second = current.<span class="hljs-property">next</span>.<span class="hljs-property">next</span>;
+        first.<span class="hljs-property">next</span> = second.<span class="hljs-property">next</span>;
+        current.<span class="hljs-property">next</span> = second;
+        current.<span class="hljs-property">next</span>.<span class="hljs-property">next</span> = first;
+        current = current.<span class="hljs-property">next</span>.<span class="hljs-property">next</span>;
+
+    }
+
+    <span class="hljs-keyword">return</span> dummy.<span class="hljs-property">next</span>;
+};
+</code></pre></span>

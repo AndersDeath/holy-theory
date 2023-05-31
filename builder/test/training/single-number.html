@@ -1,0 +1,15 @@
+<span></span><h1></h1><hr/><span><h1 id="single-number">Single Number</h1>
+<pre><code class="hljs language-typescript"><span class="hljs-comment">/**
+ * <span class="hljs-doctag">@param</span> {<span class="hljs-type">number[]</span>} <span class="hljs-variable">nums</span>
+ * <span class="hljs-doctag">@return</span> {<span class="hljs-type">number</span>}
+ */</span>
+<span class="hljs-keyword">var</span> singleNumber = <span class="hljs-keyword">function</span>(<span class="hljs-params">nums</span>) {
+    <span class="hljs-keyword">let</span> ans = <span class="hljs-number">0</span>;
+
+    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; nums.<span class="hljs-property">length</span>; i++) {
+        ans ^= nums[i];
+    }
+
+    <span class="hljs-keyword">return</span> ans;
+};
+</code></pre></span>

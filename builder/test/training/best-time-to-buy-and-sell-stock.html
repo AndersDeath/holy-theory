@@ -1,0 +1,14 @@
+<span></span><h1></h1><hr/><span><h1 id="best-time-to-buy-and-sell-stock">Best Time to Buy and Sell Stock</h1>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">maxProfit</span>(<span class="hljs-params">prices: <span class="hljs-built_in">number</span>[]</span>): <span class="hljs-built_in">number</span> {
+        <span class="hljs-keyword">let</span> min = <span class="hljs-number">10000</span>;
+        
+        <span class="hljs-keyword">let</span> maxDiff = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; prices.<span class="hljs-property">length</span>; i++){
+            min = <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">min</span>(prices[i], min);
+            maxDiff = <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">max</span>(prices[i] - min, maxDiff);
+         }
+        <span class="hljs-keyword">return</span> maxDiff;
+
+};
+</code></pre><p><strong>Source: <a href="https://leetcode.com">https://leetcode.com</a></strong></p>
+</span>

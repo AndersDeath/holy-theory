@@ -1,0 +1,30 @@
+<span></span><h1></h1><hr/><span><h1 id="linked-list-cycle">Linked List Cycle</h1>
+<pre><code class="hljs language-typescript"><span class="hljs-comment">/**
+ * Definition for singly-linked list.
+ * function ListNode(val) {
+ *     this.val = val;
+ *     this.next = null;
+ * }
+ */</span>
+
+<span class="hljs-comment">/**
+ * <span class="hljs-doctag">@param</span> {<span class="hljs-type">ListNode</span>} <span class="hljs-variable">head</span>
+ * <span class="hljs-doctag">@return</span> {<span class="hljs-type">boolean</span>}
+ */</span>
+<span class="hljs-keyword">var</span> hasCycle = <span class="hljs-keyword">function</span>(<span class="hljs-params">head</span>) {
+
+    <span class="hljs-keyword">let</span> slowNode = head;
+    <span class="hljs-keyword">let</span> fastNode = head;
+
+    <span class="hljs-keyword">while</span>(fastNode !== <span class="hljs-literal">null</span> &amp;&amp; fastNode.<span class="hljs-property">next</span> !== <span class="hljs-literal">null</span>) {
+        fastNode = fastNode.<span class="hljs-property">next</span>.<span class="hljs-property">next</span>;
+        slowNode = slowNode.<span class="hljs-property">next</span>;
+
+        <span class="hljs-keyword">if</span>(fastNode === slowNode) {
+            <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>
+        }
+    }
+    
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+};
+</code></pre></span>

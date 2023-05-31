@@ -1,0 +1,26 @@
+<span></span><h1></h1><hr/><span><h1 id="first-bad-version">First Bad Version</h1>
+<pre><code class="hljs language-typescript">
+<span class="hljs-comment">/**
+ * The knows API is defined in the parent class Relation.
+ * isBadVersion(version: number): boolean {
+ *     ...
+ * };
+ */</span>
+
+<span class="hljs-keyword">var</span> solution = <span class="hljs-keyword">function</span>(<span class="hljs-params">isBadVersion: <span class="hljs-built_in">any</span></span>) {
+
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">function</span>(<span class="hljs-params">n: <span class="hljs-built_in">number</span></span>): <span class="hljs-built_in">number</span> {
+        <span class="hljs-keyword">let</span> left = <span class="hljs-number">1</span>, right = n
+        <span class="hljs-keyword">while</span>(left &lt; right) {
+            <span class="hljs-keyword">const</span> mid = left + <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">floor</span>((right-left)/<span class="hljs-number">2</span>)
+            <span class="hljs-keyword">if</span>(<span class="hljs-title function_">isBadVersion</span>(mid)) {
+                right = mid
+            } <span class="hljs-keyword">else</span> {
+                left = mid + <span class="hljs-number">1</span>
+            }
+        }
+        <span class="hljs-keyword">return</span> left
+    };
+};
+</code></pre><p><strong>Source: <a href="https://leetcode.com">https://leetcode.com</a></strong></p>
+</span>

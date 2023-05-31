@@ -1,0 +1,33 @@
+<span></span><h1></h1><hr/><span><h1 id="binary-tree-paths">Binary Tree Paths</h1>
+<pre><code class="hljs language-typescript"><span class="hljs-comment">/**
+ * Definition for a binary tree node.
+ * class TreeNode {
+ *     val: number
+ *     left: TreeNode | null
+ *     right: TreeNode | null
+ *     constructor(val?: number, left?: TreeNode | null, right?: TreeNode | null) {
+ *         this.val = (val===undefined ? 0 : val)
+ *         this.left = (left===undefined ? null : left)
+ *         this.right = (right===undefined ? null : right)
+ *     }
+ * }
+ */</span>
+
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">binaryTreePaths</span>(<span class="hljs-params">root: TreeNode | <span class="hljs-literal">null</span></span>): <span class="hljs-built_in">string</span>[] {
+    <span class="hljs-keyword">const</span> <span class="hljs-attr">responce</span>: <span class="hljs-built_in">string</span>[] = [];
+    <span class="hljs-title function_">helper</span>(root, <span class="hljs-string">&quot;&quot;</span>, responce);
+    <span class="hljs-keyword">return</span> responce;
+};
+
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">helper</span>(<span class="hljs-params">root: TreeNode, path: <span class="hljs-built_in">string</span>, responce: <span class="hljs-built_in">string</span>[]</span>) {
+    <span class="hljs-keyword">if</span> (root == <span class="hljs-literal">null</span>) { <span class="hljs-keyword">return</span>; }
+
+    <span class="hljs-keyword">if</span> (root.<span class="hljs-property">left</span> == <span class="hljs-literal">null</span> &amp;&amp; root.<span class="hljs-property">right</span> == <span class="hljs-literal">null</span>) {
+        responce.<span class="hljs-title function_">push</span>(path + root.<span class="hljs-property">val</span>);
+        <span class="hljs-keyword">return</span>;
+    }
+
+    <span class="hljs-title function_">helper</span>(root.<span class="hljs-property">left</span>, path + root.<span class="hljs-property">val</span> + <span class="hljs-string">&quot;-&gt;&quot;</span>, responce);
+    <span class="hljs-title function_">helper</span>(root.<span class="hljs-property">right</span>, path + root.<span class="hljs-property">val</span> + <span class="hljs-string">&quot;-&gt;&quot;</span>, responce);
+}
+</code></pre></span>

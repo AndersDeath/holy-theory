@@ -1,0 +1,28 @@
+<span></span><h1></h1><hr/><span><h1 id="pairwise">Pairwise</h1>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">export</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">pairwise</span>(<span class="hljs-params">arr:<span class="hljs-built_in">number</span>[], arg:<span class="hljs-built_in">number</span></span>) {
+    <span class="hljs-keyword">const</span> index = [];
+
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> a <span class="hljs-keyword">in</span> arr) {
+        <span class="hljs-keyword">let</span> temp = arr[a];
+
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">1</span>; i &lt; arr.<span class="hljs-property">length</span>; i++) {
+            <span class="hljs-keyword">let</span> temp2 = arr[i];
+            <span class="hljs-keyword">if</span> (temp + temp2 === arg &amp;&amp; i &gt; +a &amp;&amp; index.<span class="hljs-title function_">indexOf</span>(+a) === -<span class="hljs-number">1</span> &amp;&amp; index.<span class="hljs-title function_">indexOf</span>(+i) === -<span class="hljs-number">1</span>) {
+                index.<span class="hljs-title function_">push</span>(+a, +i);
+                <span class="hljs-keyword">break</span>;
+            }
+        }
+    }
+    <span class="hljs-keyword">if</span> (index.<span class="hljs-property">length</span> &gt;= <span class="hljs-number">1</span>) {
+        <span class="hljs-keyword">const</span> <span class="hljs-title function_">addAll</span> = (<span class="hljs-params">a: <span class="hljs-built_in">any</span>, b: <span class="hljs-built_in">any</span></span>) =&gt; {
+            <span class="hljs-keyword">return</span> a + b;
+        };
+
+        <span class="hljs-keyword">return</span> index.<span class="hljs-title function_">reduce</span>(addAll);
+    } <span class="hljs-keyword">else</span>
+        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+
+<span class="hljs-keyword">let</span> res = <span class="hljs-title function_">pairwise</span>([<span class="hljs-number">1</span>, <span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <span class="hljs-number">4</span>], <span class="hljs-number">4</span>);
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(res);
+</code></pre></span>

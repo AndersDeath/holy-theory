@@ -1,0 +1,37 @@
+<span></span><h1></h1><hr/><span><h1 id="median-of-two-sorted-arrays">Median of two sorted arrays</h1>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">findMedianSortedArrays</span>(<span class="hljs-params">nums1: <span class="hljs-built_in">number</span>[], nums2: <span class="hljs-built_in">number</span>[]</span>): <span class="hljs-built_in">number</span> {
+    <span class="hljs-keyword">if</span>(nums1.<span class="hljs-property">length</span> &gt; nums2.<span class="hljs-property">length</span>) {
+        <span class="hljs-keyword">return</span> <span class="hljs-title function_">findMedianSortedArrays</span>(nums2, nums1);
+    }
+
+    <span class="hljs-keyword">const</span> lengthFirst = nums1.<span class="hljs-property">length</span>;
+    <span class="hljs-keyword">const</span> lengthSecond = nums2.<span class="hljs-property">length</span>;
+
+    <span class="hljs-keyword">let</span> start = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">let</span> end = lengthFirst;
+
+    <span class="hljs-keyword">while</span>(start &lt;= end) {
+        <span class="hljs-keyword">let</span> part1 = <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">floor</span>((start+end)/<span class="hljs-number">2</span>);
+        <span class="hljs-keyword">let</span> part2 = <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">floor</span>((lengthFirst + lengthSecond + <span class="hljs-number">1</span>) / <span class="hljs-number">2</span>) - part1;
+
+        <span class="hljs-keyword">let</span> maxLeftNum1 = part1 === <span class="hljs-number">0</span> ? <span class="hljs-title class_">Number</span>.<span class="hljs-property">MIN_SAFE_INTEGER</span> : nums1[part1 - <span class="hljs-number">1</span>];
+        <span class="hljs-keyword">let</span> minRightNum1 = part1 === lengthFirst ? <span class="hljs-title class_">Number</span>.<span class="hljs-property">MAX_SAFE_INTEGER</span> : nums1[part1];
+
+        <span class="hljs-keyword">let</span> maxLeftNum2 = part2 === <span class="hljs-number">0</span> ? <span class="hljs-title class_">Number</span>.<span class="hljs-property">MIN_SAFE_INTEGER</span> : nums2[part2 - <span class="hljs-number">1</span>];
+        <span class="hljs-keyword">let</span> minRightNum2 = part2 === lengthSecond ? <span class="hljs-title class_">Number</span>.<span class="hljs-property">MAX_SAFE_INTEGER</span> : nums2[part2];
+
+        <span class="hljs-keyword">if</span>(maxLeftNum1 &lt;= minRightNum2 &amp;&amp; maxLeftNum2 &lt;= minRightNum1) {
+            <span class="hljs-keyword">if</span>((lengthFirst + lengthSecond) % <span class="hljs-number">2</span> == <span class="hljs-number">0</span>) {
+                <span class="hljs-keyword">return</span> (<span class="hljs-title class_">Math</span>.<span class="hljs-title function_">max</span>(maxLeftNum1, maxLeftNum2) + <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">min</span>(minRightNum1, minRightNum2)) /<span class="hljs-number">2</span>
+            } <span class="hljs-keyword">else</span> {
+                <span class="hljs-keyword">return</span> <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">max</span>(maxLeftNum1, maxLeftNum2);
+            }
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(maxLeftNum1 &gt; minRightNum2) {
+            end = part1 -<span class="hljs-number">1</span>;
+        } <span class="hljs-keyword">else</span> {
+            start = part1 +<span class="hljs-number">1</span>;
+        }
+    }
+};
+</code></pre><p><strong>Source: <a href="https://leetcode.com">https://leetcode.com</a></strong></p>
+</span>

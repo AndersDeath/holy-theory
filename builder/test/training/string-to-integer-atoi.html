@@ -1,0 +1,40 @@
+<span></span><h1></h1><hr/><span><h1 id="string-to-integer-atoi">String to integer (atoi)</h1>
+<pre><code class="hljs language-typescript"><span class="hljs-comment">/**
+ * <span class="hljs-doctag">@param</span> {<span class="hljs-type">string</span>} <span class="hljs-variable">s</span>
+ * <span class="hljs-doctag">@return</span> {<span class="hljs-type">number</span>}
+ */</span>
+<span class="hljs-keyword">var</span> myAtoi = <span class="hljs-keyword">function</span>(<span class="hljs-params">s</span>) {
+    <span class="hljs-keyword">if</span>(!s) { <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>; }
+
+    s = s.<span class="hljs-title function_">trim</span>();
+    <span class="hljs-keyword">const</span> <span class="hljs-variable constant_">INT_MAX</span> = <span class="hljs-number">2147483647</span>;
+    <span class="hljs-keyword">const</span> <span class="hljs-variable constant_">INT_MIN</span> = -<span class="hljs-number">2147483648</span>;
+    <span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>;
+
+    <span class="hljs-keyword">const</span> isNegative = s[<span class="hljs-number">0</span>] === <span class="hljs-string">&#x27;-&#x27;</span>;
+    <span class="hljs-keyword">const</span> isPositive = s[<span class="hljs-number">0</span>] === <span class="hljs-string">&#x27;+&#x27;</span>;
+
+    <span class="hljs-keyword">if</span> (isNegative) {
+        i++;
+    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (isPositive) {
+        i++;
+    }
+
+    <span class="hljs-keyword">let</span> <span class="hljs-built_in">number</span> = <span class="hljs-number">0</span>;
+
+    <span class="hljs-keyword">while</span>(i &lt; s.<span class="hljs-property">length</span> &amp;&amp; s[i] &gt;= <span class="hljs-string">&#x27;0&#x27;</span> &amp;&amp; s[i] &lt;= <span class="hljs-string">&#x27;9&#x27;</span>) {
+        <span class="hljs-built_in">number</span> = <span class="hljs-built_in">number</span> * <span class="hljs-number">10</span> + (s[i] - <span class="hljs-string">&#x27;0&#x27;</span>);
+        i++;
+    }
+
+    <span class="hljs-built_in">number</span> = isNegative ? -<span class="hljs-built_in">number</span> : <span class="hljs-built_in">number</span>;
+
+    <span class="hljs-keyword">if</span>(<span class="hljs-built_in">number</span> &lt; <span class="hljs-variable constant_">INT_MIN</span>) {
+        <span class="hljs-keyword">return</span> <span class="hljs-variable constant_">INT_MIN</span>;
+    }
+    <span class="hljs-keyword">if</span>(<span class="hljs-built_in">number</span> &gt; <span class="hljs-variable constant_">INT_MAX</span>) {
+        <span class="hljs-keyword">return</span> <span class="hljs-variable constant_">INT_MAX</span>;
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-built_in">number</span>;
+};
+</code></pre></span>

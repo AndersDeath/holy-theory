@@ -1,0 +1,13 @@
+<span></span><h1></h1><hr/><span><h1 id="reverse-words">Reverse words</h1>
+<p>Complete the function that accepts a string parameter, and reverses each word in the string. All spaces in the string should be retained.</p>
+<p>Examples:
+&quot;This is an example!&quot; ==&gt; &quot;sihT si na !elpmaxe&quot;
+&quot;double  spaces&quot;      ==&gt; &quot;elbuod  secaps&quot;`;</p>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">export</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">reverseWords</span>(<span class="hljs-params">str: <span class="hljs-built_in">string</span></span>): <span class="hljs-built_in">string</span> {
+    <span class="hljs-keyword">return</span> str.<span class="hljs-title function_">split</span>(<span class="hljs-string">&#x27; &#x27;</span>).<span class="hljs-title function_">map</span>(<span class="hljs-function">(<span class="hljs-params">word: <span class="hljs-built_in">string</span></span>) =&gt;</span> {
+        <span class="hljs-keyword">let</span> w = word.<span class="hljs-title function_">split</span>(<span class="hljs-string">&#x27;&#x27;</span>).<span class="hljs-title function_">reverse</span>();
+        <span class="hljs-keyword">return</span> w.<span class="hljs-title function_">join</span>(<span class="hljs-string">&#x27;&#x27;</span>)
+    }).<span class="hljs-title function_">join</span>(<span class="hljs-string">&#x27; &#x27;</span>);
+  }
+</code></pre><p><strong>Source: <a href="https://codewars.com">https://codewars.com</a></strong></p>
+</span>

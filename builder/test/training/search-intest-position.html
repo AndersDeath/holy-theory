@@ -1,0 +1,13 @@
+<span></span><h1></h1><hr/><span><h1 id="search-insert-position">Search insert position</h1>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">searchInsert</span>(<span class="hljs-params">nums: <span class="hljs-built_in">number</span>[], target: <span class="hljs-built_in">number</span></span>): <span class="hljs-built_in">number</span> {
+    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; nums.<span class="hljs-property">length</span>; i++) {
+        <span class="hljs-keyword">if</span>(nums[i] === target) {
+            <span class="hljs-keyword">return</span> i;
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(nums[i] &gt; target) {
+            <span class="hljs-keyword">return</span> i;
+        }
+    }
+    <span class="hljs-keyword">return</span> nums.<span class="hljs-property">length</span>;
+};
+</code></pre><p><strong>Source: <a href="https://leetcode.com">https://leetcode.com</a></strong></p>
+</span>

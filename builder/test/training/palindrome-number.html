@@ -1,0 +1,18 @@
+<span></span><h1></h1><hr/><span><h1 id="palindrome-number">Palindrome number</h1>
+<pre><code class="hljs language-java"> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {
+    <span class="hljs-keyword">public</span> <span class="hljs-type">boolean</span> <span class="hljs-title function_">isPalindrome</span><span class="hljs-params">(<span class="hljs-type">int</span> x)</span> {
+        <span class="hljs-keyword">if</span>(x &lt; <span class="hljs-number">0</span>) {
+            <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+        }
+        <span class="hljs-type">int</span> <span class="hljs-variable">number</span> <span class="hljs-operator">=</span> x;
+        <span class="hljs-type">int</span> <span class="hljs-variable">reverse</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">while</span>(number &gt; <span class="hljs-number">0</span>) {
+            reverse = reverse * <span class="hljs-number">10</span> + number % <span class="hljs-number">10</span>;
+            number /= <span class="hljs-number">10</span>;
+        }
+        <span class="hljs-keyword">return</span> x == reverse;
+    }
+}
+,,,
+
+</code></pre></span>

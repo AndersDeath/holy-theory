@@ -1,0 +1,14 @@
+<span></span><h1></h1><hr/><span><h1 id="pascal-triangle">Pascal triangle</h1>
+<pre><code class="hljs language-java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {
+    <span class="hljs-type">int</span>[] pascalTriangleRow(<span class="hljs-type">int</span> rowNo) {
+        <span class="hljs-type">int</span> pascalRow[] = <span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[rowNo];
+        pascalRow[<span class="hljs-number">0</span>] = <span class="hljs-number">1</span>;
+        rowNo--;
+        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">1</span>; i &lt;= rowNo; i++) {
+            <span class="hljs-type">int</span> <span class="hljs-variable">rowElement</span> <span class="hljs-operator">=</span> pascalRow[i-<span class="hljs-number">1</span>] * (rowNo - i + <span class="hljs-number">1</span>) / i;
+            pascalRow[i] = rowElement;
+        }
+        <span class="hljs-keyword">return</span> pascalRow;
+    }
+}
+</code></pre></span>

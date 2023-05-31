@@ -1,0 +1,13 @@
+<span></span><h1></h1><hr/><span><h1 id="pangram">Pangram</h1>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">isPangram</span>(<span class="hljs-params"><span class="hljs-built_in">string</span>:<span class="hljs-built_in">string</span></span>){
+    <span class="hljs-keyword">const</span> set = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Set</span>();
+    <span class="hljs-built_in">string</span>.<span class="hljs-title function_">toLowerCase</span>().<span class="hljs-title function_">split</span>(<span class="hljs-string">&#x27;&#x27;</span>).<span class="hljs-title function_">forEach</span>(<span class="hljs-function">(<span class="hljs-params">letter:<span class="hljs-built_in">string</span></span>) =&gt;</span> {
+      <span class="hljs-keyword">if</span>(<span class="hljs-regexp">/^[A-Za-z]+$/</span>.<span class="hljs-title function_">test</span>(letter)) {
+        set.<span class="hljs-title function_">add</span>(letter);
+      }
+    });
+    <span class="hljs-keyword">return</span> [...set].<span class="hljs-property">length</span> === <span class="hljs-number">26</span>;
+  }
+,,,
+
+</code></pre></span>

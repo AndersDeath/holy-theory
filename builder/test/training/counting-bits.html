@@ -1,0 +1,18 @@
+<span></span><h1></h1><hr/><span><h1 id="counting-bits">Counting Bits</h1>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">countBits</span>(<span class="hljs-params">n: <span class="hljs-built_in">number</span></span>): <span class="hljs-built_in">number</span>[] {
+    <span class="hljs-keyword">let</span> <span class="hljs-attr">result</span>: <span class="hljs-built_in">number</span>[] = [<span class="hljs-number">0</span>];
+    <span class="hljs-keyword">let</span> pow = <span class="hljs-number">1</span>;
+    <span class="hljs-keyword">let</span> offset = <span class="hljs-number">1</span>;
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">1</span>; i &lt;= n; i ++) {
+        <span class="hljs-keyword">if</span> (i == pow) {
+            result[i] = <span class="hljs-number">1</span>;
+            pow = pow &lt;&lt; <span class="hljs-number">1</span>;
+            offset = <span class="hljs-number">1</span>;
+        } <span class="hljs-keyword">else</span> {
+            result[i] = result[offset] + <span class="hljs-number">1</span>;
+            offset++;
+        }
+    }
+    <span class="hljs-keyword">return</span> result;
+};
+</code></pre></span>

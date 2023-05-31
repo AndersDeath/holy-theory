@@ -1,0 +1,23 @@
+<span></span><h1></h1><hr/><span><h1 id="pairs">Pairs</h1>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">pairs</span>(<span class="hljs-params">k: <span class="hljs-built_in">number</span>, arr: <span class="hljs-built_in">number</span>[]</span>): <span class="hljs-built_in">number</span> {
+    arr.<span class="hljs-title function_">sort</span>(<span class="hljs-function">(<span class="hljs-params">a, b</span>) =&gt;</span> a-b);
+    <span class="hljs-keyword">let</span> output = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">let</span> j = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">while</span>(j &lt; arr.<span class="hljs-property">length</span>) {
+        <span class="hljs-keyword">let</span> difference = arr[j] - arr[i];
+        <span class="hljs-keyword">if</span>(difference === k) {
+            output++;
+            j++;
+            i++;
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (difference &gt; k) {
+            i++;
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(difference &lt; k) {
+            j++;
+} }
+    <span class="hljs-keyword">return</span> output;
+}
+
+}
+</code></pre><p>** Source: <a href="http://hackerrank.com">http://hackerrank.com</a>**</p>
+</span>

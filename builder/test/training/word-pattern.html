@@ -1,0 +1,28 @@
+<span></span><h1></h1><hr/><span><h1 id="word-pattern">Word Pattern</h1>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">wordPattern</span>(<span class="hljs-params">pattern: <span class="hljs-built_in">string</span>, s: <span class="hljs-built_in">string</span></span>): <span class="hljs-built_in">boolean</span> {
+    <span class="hljs-keyword">const</span> strArr = s.<span class="hljs-title function_">split</span>(<span class="hljs-string">&#x27; &#x27;</span>);
+    
+    <span class="hljs-keyword">if</span> ( strArr.<span class="hljs-property">length</span> != pattern.<span class="hljs-property">length</span>) {
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+    }
+    
+    <span class="hljs-keyword">let</span> hash = {};
+    
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; strArr.<span class="hljs-property">length</span>; i++) {
+        <span class="hljs-keyword">if</span> (hash[pattern[i]]) {
+            <span class="hljs-keyword">if</span> (hash[pattern[i]] !== strArr[i]) {
+                <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+           } 
+        } <span class="hljs-keyword">else</span> {
+            <span class="hljs-keyword">if</span> (<span class="hljs-title class_">Object</span>.<span class="hljs-title function_">values</span>(hash).<span class="hljs-title function_">indexOf</span>(strArr[i]) !== -<span class="hljs-number">1</span>){
+                <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+            } <span class="hljs-keyword">else</span> {
+                 hash[pattern[i]] = strArr[i];
+            }
+        }
+    }
+    
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+};
+</code></pre><p><strong>Source: <a href="https://codewars.com">https://codewars.com</a></strong></p>
+</span>

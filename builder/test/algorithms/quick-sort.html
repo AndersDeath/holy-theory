@@ -1,0 +1,78 @@
+<span></span><h1></h1><hr/><span><h1 id="quicksort">Quicksort</h1>
+<pre><code class="hljs language-java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {
+    
+    <span class="hljs-type">int</span> <span class="hljs-title function_">makePartition</span><span class="hljs-params">(<span class="hljs-type">int</span> [] arr, <span class="hljs-type">int</span> low, <span class="hljs-type">int</span> high)</span> {
+        <span class="hljs-type">int</span> <span class="hljs-variable">pivot</span> <span class="hljs-operator">=</span> arr[high];
+        <span class="hljs-type">int</span> <span class="hljs-variable">currentIndex</span> <span class="hljs-operator">=</span> low - <span class="hljs-number">1</span>;
+        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> low; i &lt; high; i++) {
+            <span class="hljs-keyword">if</span>(arr[i] &lt; pivot) {
+                currentIndex++;
+                <span class="hljs-type">int</span> <span class="hljs-variable">temp</span> <span class="hljs-operator">=</span> arr[i];
+                arr[i] = arr[currentIndex];
+                arr[currentIndex] = temp;
+            }
+            
+        }
+        <span class="hljs-type">int</span> <span class="hljs-variable">temp</span> <span class="hljs-operator">=</span> arr[high];
+        arr[high] = arr[currentIndex + <span class="hljs-number">1</span>];
+        arr[currentIndex + <span class="hljs-number">1</span>] = temp;
+        <span class="hljs-keyword">return</span> currentIndex + <span class="hljs-number">1</span>;
+    }
+    
+    <span class="hljs-keyword">void</span> <span class="hljs-title function_">quicksort</span><span class="hljs-params">(<span class="hljs-type">int</span>[] arr, <span class="hljs-type">int</span> low, <span class="hljs-type">int</span> high)</span> {
+        <span class="hljs-keyword">if</span>(low &lt; high) {
+            <span class="hljs-type">int</span> <span class="hljs-variable">pivot</span> <span class="hljs-operator">=</span> makePartition(arr, low, high);
+            quicksort(arr, low, pivot - <span class="hljs-number">1</span>);
+            quicksort(arr, pivot + <span class="hljs-number">1</span>, high);
+        }
+    }
+    
+    <span class="hljs-keyword">void</span> <span class="hljs-title function_">quickSort</span> <span class="hljs-params">(<span class="hljs-type">int</span>[] arr)</span> {
+        <span class="hljs-type">int</span> <span class="hljs-variable">n</span> <span class="hljs-operator">=</span> arr.length;
+        quicksort(arr, <span class="hljs-number">0</span>, n - <span class="hljs-number">1</span>);
+    }
+}
+</code></pre><pre><code class="hljs language-python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">quicksort</span>(<span class="hljs-params">arr</span>):
+    <span class="hljs-keyword">if</span> <span class="hljs-built_in">len</span>(arr) &lt; <span class="hljs-number">2</span>:
+        <span class="hljs-keyword">return</span> arr
+    <span class="hljs-keyword">else</span>:
+        pivot = arr[<span class="hljs-built_in">len</span>(arr)/<span class="hljs-number">2</span>]
+        less = [i <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> arr[<span class="hljs-number">1</span>:] <span class="hljs-keyword">if</span> i &lt;= pivot]
+        greater = [i <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> arr[<span class="hljs-number">1</span>:] <span class="hljs-keyword">if</span> i &gt; pivot]
+        <span class="hljs-keyword">return</span> quicksort(less) + [pivot] + quicksort(greater)
+
+<span class="hljs-built_in">print</span>(quicksort([<span class="hljs-number">10</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">1</span>,<span class="hljs-number">5</span>,<span class="hljs-number">4</span>]))
+</code></pre><pre><code class="hljs language-java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {
+    <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">swap</span><span class="hljs-params">(<span class="hljs-type">int</span>[] array, <span class="hljs-type">int</span> i, <span class="hljs-type">int</span> j)</span> {
+        <span class="hljs-type">int</span> <span class="hljs-variable">temp</span> <span class="hljs-operator">=</span> array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
+
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">quickSort</span><span class="hljs-params">(<span class="hljs-type">int</span>[] array, <span class="hljs-type">int</span> start, <span class="hljs-type">int</span> end)</span> {
+        <span class="hljs-keyword">if</span>(end &lt;= start) <span class="hljs-keyword">return</span>; <span class="hljs-comment">// base case</span>
+        
+        <span class="hljs-type">int</span> <span class="hljs-variable">pivot</span> <span class="hljs-operator">=</span> partition(array, start, end);
+        
+        quickSort(array, start, pivot -<span class="hljs-number">1</span>);
+        quickSort(array, pivot + <span class="hljs-number">1</span>, end);
+    }
+
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-type">int</span> <span class="hljs-title function_">partition</span><span class="hljs-params">(<span class="hljs-type">int</span>[] array, <span class="hljs-type">int</span> start, <span class="hljs-type">int</span> end)</span> {
+        <span class="hljs-type">int</span> <span class="hljs-variable">pivot</span> <span class="hljs-operator">=</span> array[end];
+        
+        <span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> start - <span class="hljs-number">1</span>;
+        
+        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> <span class="hljs-variable">j</span> <span class="hljs-operator">=</span> start; j &lt;= end -<span class="hljs-number">1</span>; j++) {
+            <span class="hljs-keyword">if</span>(array[j] &lt; pivot) {
+                i++;
+                swap(array, i, j);
+            }
+        }
+        i++;
+        swap(array, i, end);
+        
+        <span class="hljs-keyword">return</span> i;
+    }
+}
+</code></pre></span>

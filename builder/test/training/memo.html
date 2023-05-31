@@ -1,0 +1,14 @@
+<span></span><h1></h1><hr/><span><h1 id="memo">Memo</h1>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">export</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">memo</span>(<span class="hljs-params">func: <span class="hljs-built_in">any</span></span>) {
+    <span class="hljs-keyword">const</span> <span class="hljs-attr">cache</span>: <span class="hljs-built_in">any</span> = {};
+    <span class="hljs-keyword">return</span> <span class="hljs-function">(<span class="hljs-params">...args: <span class="hljs-built_in">any</span>[]</span>) =&gt;</span>{
+        <span class="hljs-keyword">let</span> key = <span class="hljs-title class_">JSON</span>.<span class="hljs-title function_">stringify</span>(args);
+        <span class="hljs-keyword">if</span>(cache[key]) {
+            <span class="hljs-keyword">return</span> cache[key];
+        }
+        <span class="hljs-keyword">const</span> value = func.<span class="hljs-title function_">apply</span>(<span class="hljs-literal">null</span>, args);
+        cache[key] = value;
+        <span class="hljs-keyword">return</span> value;
+    }
+}
+</code></pre></span>

@@ -1,0 +1,10 @@
+<span></span><h1></h1><hr/><span><h1 id="array-length-property">Array length property</h1>
+<p>What is the value of clothes[0]:</p>
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">const</span> clothes = [<span class="hljs-string">&#x27;jacket&#x27;</span>, <span class="hljs-string">&#x27;t-shirt&#x27;</span>];
+    clothes.<span class="hljs-property">length</span> = <span class="hljs-number">0</span>;
+    clothes[<span class="hljs-number">0</span>];
+</code></pre><p>Reducing the value of the length property has the side-effect of deleting own array elements whose array index is between the old and new length values.
+<a href="https://262.ecma-international.org/6.0/#sec-properties-of-array-instances-length">https://262.ecma-international.org/6.0/#sec-properties-of-array-instances-length</a></p>
+<p>As result when JavaScript executes clothes.length = 0, all clothes items are deleted.</p>
+<p>clothes[0] is undefined, because clothes array has been emptied.</p>
+</span>
