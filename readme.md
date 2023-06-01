@@ -8,6 +8,7 @@
 
 ## Data Structures
 
+* [Common Data Structures](/structures/common-data-structures.md)
 * [Data structures types](/structures/data-structures-types.md)
 * [Array](/structures/array.md)
 * [Hash table](/structures/hash-table.md) – TypeScript
