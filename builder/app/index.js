@@ -30,24 +30,18 @@ const nav = templates.getData()['nav'].build({
 
 function Builder() {
     class Entity {
-
-        constructor(name, category, meta, content) {
-            this.id = this.makeId(name);
-            this.name = name;
+        constructor(title, meta, body, category) {
+            this.id = this.makeId(title);
+            this.title = title;
             this.meta = meta;
-            this.content = content;
+            this.body = body;
             this.category = category;
         }
 
-        setTemplate(path, type) {
-
+        makeId(name) {
+            return ''
         }
-
     }
-
-    let mainOutput = '';
-    let tagsOutput = '';
-    let languageOutput = '';
 
     const entity = {
         meta: {
@@ -94,6 +88,7 @@ function Builder() {
 
     let data = [];
     let tableOfContents = [];
+    let entities = [];
 
     let lm = new LanguageMap()
 
@@ -127,6 +122,13 @@ function Builder() {
                 }
             };
 
+            entities.push(new Entity(
+                metadata.title,
+                {...metadata,...d.meta},
+                cleanedContent,
+                pathObj.dir
+            ));
+
             if (!tableOfContents.some((value, index) => {
                 return value.category === pathObj.dir;
             })) {
@@ -149,6 +151,8 @@ function Builder() {
             testData.push(d);
         }
     })
+
+    console.log(entities);
 
     let articles = [];
     testData.forEach((item) => {
