@@ -119,7 +119,7 @@ function Builder() {
 
                 meta: {
                     category: pathObj.dir,
-                    url: baseUrl + pathObj.dir + '/' + pathObj.name.replace(' ', '-').toLowerCase() + '.html',
+                    url: '/holy-theory' + baseUrl + pathObj.dir + '/' + pathObj.name.replace(' ', '-').toLowerCase() + '.html',
                     fileName: {
                         original: pathObj.name,
                         dashed: pathObj.name.replace(' ', '-').toLowerCase()

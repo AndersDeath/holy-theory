@@ -9,6 +9,7 @@ All notable changes to this project will be documented in this file.
 * add Common anti-patterns in microservices architecture article
 * add License Key Formatting training in TS
 * add Common Data Structures schema
+* add Max Consecutive Ones training in TS
 
 # [0.0.20] - 2023-05-29
 * add Arranging Coins training in TS
