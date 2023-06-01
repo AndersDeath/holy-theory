@@ -2717,6 +2717,23 @@ calculator.<span class="hljs-title function_">log</span>().<span class="hljs-tit
     <span class="hljs-keyword">return</span> res;
 };
 </code></pre><p><strong>Source: <a href="https://leetcode.com">https://leetcode.com</a></strong></p>
+</span></li><li><span></span><h1></h1><hr/><span><h1 id="max-consecutive-ones">Max Consecutive Ones</h1>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">findMaxConsecutiveOnes</span>(<span class="hljs-params">nums: <span class="hljs-built_in">number</span>[]</span>): <span class="hljs-built_in">number</span> {
+  <span class="hljs-keyword">let</span> maxCount = <span class="hljs-number">0</span>;
+  <span class="hljs-keyword">let</span> currentCount = <span class="hljs-number">0</span>;
+
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; nums.<span class="hljs-property">length</span>; i++) {
+    <span class="hljs-keyword">if</span> (nums[i] === <span class="hljs-number">1</span>) {
+      currentCount++;
+      maxCount = <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">max</span>(maxCount, currentCount);
+    } <span class="hljs-keyword">else</span> {
+      currentCount = <span class="hljs-number">0</span>;
+    }
+  }
+
+  <span class="hljs-keyword">return</span> maxCount;
+};
+</code></pre><p><strong>Source: <a href="https://leetcode.com">https://leetcode.com</a></strong></p>
 </span></li><li><span></span><h1></h1><hr/><span><h1 id="maximum-depth-of-binary-tree">Maximum Depth of Binary Tree</h1>
 <pre><code class="hljs language-typescript"><span class="hljs-comment">/**
  * Definition for a binary tree node.
