@@ -17,11 +17,11 @@ const templates = new Templates(paths);
 const nav = templates.getData()['nav'].build({
     values: [
         {
-            href: baseUrl,
+            href: '/holy-theory' + baseUrl,
             title: 'Main page'
         },
         {
-            href: baseUrl + '/languages.html',
+            href: '/holy-theory' + baseUrl + '/languages.html',
             title: 'Statistics'
         }
     ]
@@ -156,18 +156,7 @@ function Builder() {
             fs.mkdirSync(basePath + item.meta.category, { recursive: true });
         }
         const html = templates.getData()['article'].build({
-            navigation: templates.getData()['nav'].build({
-                values: [
-                    {
-                        href: baseUrl,
-                        title: 'Main page'
-                    },
-                    {
-                        href: baseUrl + '/languages.html',
-                        title: 'Statistics'
-                    }
-                ]
-            }),
+            navigation: nav,
             title: item.title,
             body: item.body
         });
