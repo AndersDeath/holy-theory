@@ -152,7 +152,7 @@ function Builder() {
         }
     })
 
-    console.log(entities);
+    // console.log(entities);
 
     let articles = [];
     testData.forEach((item) => {
