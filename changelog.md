@@ -10,6 +10,8 @@ All notable changes to this project will be documented in this file.
 * add License Key Formatting training in TS
 * add Common Data Structures schema
 * add Max Consecutive Ones training in TS
+* add Construct the Rectangle training in TS
+* add Teemo Attacking training in TS
 
 # [0.0.20] - 2023-05-29
 * add Arranging Coins training in TS

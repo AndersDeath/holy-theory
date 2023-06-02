@@ -176,6 +176,8 @@
 * [Number Complement](./training/number-complement.md) – TypeScript
 * [License Key Formatting](./training/license-key-formatting.md) – TypeScript
 * [Max Consecutive Ones](./training/max-consecutive-ones.md) – TypeScript
+* [Construct the Rectangle](./training/construct-the-rectangle.md) – TypeScript
+* [Teemo Attacking](./training/teemo-attacking.md) – TypeScript
 
 ## Question
 * [01-reverse-number](/questions/01-reverse-number.md) – Java, all languages
