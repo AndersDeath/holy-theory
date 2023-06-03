@@ -13,6 +13,7 @@ All notable changes to this project will be documented in this file.
 * add Construct the Rectangle training in TS
 * add Teemo Attacking training in TS
 * add Next Greater Element I training in TS
+* update builder.js
 
 # [0.0.20] - 2023-05-29
 * add Arranging Coins training in TS
