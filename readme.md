@@ -179,6 +179,7 @@
 * [Construct the Rectangle](./training/construct-the-rectangle.md) – TypeScript
 * [Teemo Attacking](./training/teemo-attacking.md) – TypeScript
 * [Next Greater Element I](./training/next-greater-element-i.md) – TypeScript
+* [Keyboard Row](./training/keyboard-row.md) – TypeScript
 
 ## Question
 * [01-reverse-number](/questions/01-reverse-number.md) – Java, all languages
