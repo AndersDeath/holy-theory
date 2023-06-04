@@ -26,4 +26,4 @@ class LanguageMap {
     }
 }
 
-export {LanguageMap};
+export { LanguageMap };

@@ -10,20 +10,20 @@ class Templates {
     }
 
     load() {
-       this.paths.forEach(element => {
+        this.paths.forEach(element => {
             this.data[element.title] = this.build(element);
-       });
+        });
     }
 
     build(element) {
         const file = fs.readFileSync(element.path, 'utf-8');
-        if(element.type === 'pug') {
+        if (element.type === 'pug') {
             return {
                 file: file,
                 build: pug.compile(file)
             }
         }
-        if(element.type === 'md') {
+        if (element.type === 'md') {
             return {
                 file: file,
                 build: compile(file)
