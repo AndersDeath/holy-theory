@@ -1,0 +1,85 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Holy Theory</title><style>body {
+    background: #ccc;
+}</style></head><body><span><span><div><ul><li> <a href="/holy-theory/builder/test/">Main page</a></li><li> <a href="/holy-theory/builder/test//languages.html">Statistics</a></li></ul></div></span><h1></h1><hr/><span><h1 id="find-mode-in-binary-search-tree">Find Mode in Binary Search Tree</h1>
+<pre><code class="hljs language-typescript">
+<span class="hljs-comment">/**
+ * Definition for a binary tree node.
+ * class TreeNode {
+ *     val: number
+ *     left: TreeNode | null
+ *     right: TreeNode | null
+ *     constructor(val?: number, left?: TreeNode | null, right?: TreeNode | null) {
+ *         this.val = (val===undefined ? 0 : val)
+ *         this.left = (left===undefined ? null : left)
+ *         this.right = (right===undefined ? null : right)
+ *     }
+ * }
+ */</span>
+
+
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">ModeCounter</span> {
+  <span class="hljs-attr">maxCount</span>: <span class="hljs-built_in">number</span>;
+  <span class="hljs-attr">currentCount</span>: <span class="hljs-built_in">number</span>;
+  <span class="hljs-attr">currentVal</span>: <span class="hljs-built_in">number</span>;
+  <span class="hljs-attr">modes</span>: <span class="hljs-built_in">number</span>[];
+
+  <span class="hljs-title function_">constructor</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">maxCount</span> = <span class="hljs-number">0</span>;
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">currentCount</span> = <span class="hljs-number">0</span>;
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">currentVal</span> = <span class="hljs-number">0</span>;
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">modes</span> = [];
+  }
+
+  <span class="hljs-title function_">update</span>(<span class="hljs-params">val: <span class="hljs-built_in">number</span></span>) {
+    <span class="hljs-keyword">if</span> (val === <span class="hljs-variable language_">this</span>.<span class="hljs-property">currentVal</span>) {
+      <span class="hljs-variable language_">this</span>.<span class="hljs-property">currentCount</span>++;
+    } <span class="hljs-keyword">else</span> {
+      <span class="hljs-variable language_">this</span>.<span class="hljs-property">currentVal</span> = val;
+      <span class="hljs-variable language_">this</span>.<span class="hljs-property">currentCount</span> = <span class="hljs-number">1</span>;
+    }
+
+    <span class="hljs-keyword">if</span> (<span class="hljs-variable language_">this</span>.<span class="hljs-property">currentCount</span> &gt; <span class="hljs-variable language_">this</span>.<span class="hljs-property">maxCount</span>) {
+      <span class="hljs-variable language_">this</span>.<span class="hljs-property">maxCount</span> = <span class="hljs-variable language_">this</span>.<span class="hljs-property">currentCount</span>;
+      <span class="hljs-variable language_">this</span>.<span class="hljs-property">modes</span> = [<span class="hljs-variable language_">this</span>.<span class="hljs-property">currentVal</span>];
+    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-variable language_">this</span>.<span class="hljs-property">currentCount</span> === <span class="hljs-variable language_">this</span>.<span class="hljs-property">maxCount</span>) {
+      <span class="hljs-variable language_">this</span>.<span class="hljs-property">modes</span>.<span class="hljs-title function_">push</span>(<span class="hljs-variable language_">this</span>.<span class="hljs-property">currentVal</span>);
+    }
+  }
+}
+
+
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">findMode</span>(<span class="hljs-params">root: TreeNode | <span class="hljs-literal">null</span></span>): <span class="hljs-built_in">number</span>[] {
+
+<span class="hljs-keyword">const</span> counter = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ModeCounter</span>();
+  <span class="hljs-keyword">let</span> current = root;
+  <span class="hljs-keyword">let</span> <span class="hljs-attr">prev</span>: <span class="hljs-title class_">TreeNode</span> | <span class="hljs-literal">null</span> = <span class="hljs-literal">null</span>;
+
+  <span class="hljs-keyword">while</span> (current !== <span class="hljs-literal">null</span>) {
+    <span class="hljs-keyword">if</span> (current.<span class="hljs-property">left</span> === <span class="hljs-literal">null</span>) {
+      counter.<span class="hljs-title function_">update</span>(current.<span class="hljs-property">val</span>);
+      current = current.<span class="hljs-property">right</span>;
+    } <span class="hljs-keyword">else</span> {
+      prev = current.<span class="hljs-property">left</span>;
+
+      <span class="hljs-keyword">while</span> (prev.<span class="hljs-property">right</span> !== <span class="hljs-literal">null</span> &amp;&amp; prev.<span class="hljs-property">right</span> !== current) {
+        prev = prev.<span class="hljs-property">right</span>;
+      }
+
+      <span class="hljs-keyword">if</span> (prev.<span class="hljs-property">right</span> === <span class="hljs-literal">null</span>) {
+        prev.<span class="hljs-property">right</span> = current;
+        current = current.<span class="hljs-property">left</span>;
+      } <span class="hljs-keyword">else</span> {
+        prev.<span class="hljs-property">right</span> = <span class="hljs-literal">null</span>;
+        counter.<span class="hljs-title function_">update</span>(current.<span class="hljs-property">val</span>);
+        current = current.<span class="hljs-property">right</span>;
+      }
+    }
+  }
+
+  <span class="hljs-keyword">return</span> counter.<span class="hljs-property">modes</span>;
+}
+
+
+
+
+</code></pre></span></span></body></html>

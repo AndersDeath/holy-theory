@@ -11,6 +11,11 @@
   ],
   "templates": [
     {
+      "path": "./builder/views/main.pug",
+      "title": "main",
+      "type": "pug"
+    },
+    {
       "path": "./builder/views/article.pug",
       "title": "article",
       "type": "pug"

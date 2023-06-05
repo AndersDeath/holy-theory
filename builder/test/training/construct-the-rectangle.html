@@ -1,0 +1,15 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Holy Theory</title><style>body {
+    background: #ccc;
+}</style></head><body><span><span><div><ul><li> <a href="/holy-theory/builder/test/">Main page</a></li><li> <a href="/holy-theory/builder/test//languages.html">Statistics</a></li></ul></div></span><h1></h1><hr/><span><h1 id="construct-the-rectangle">Construct the Rectangle</h1>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">constructRectangle</span>(<span class="hljs-params">area: <span class="hljs-built_in">number</span></span>): <span class="hljs-built_in">number</span>[] {
+  <span class="hljs-keyword">let</span> width = <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">floor</span>(<span class="hljs-title class_">Math</span>.<span class="hljs-title function_">sqrt</span>(area));
+
+  <span class="hljs-keyword">while</span> (area % width !== <span class="hljs-number">0</span>) {
+    width--;
+  }
+
+  <span class="hljs-keyword">const</span> length = area / width;
+  <span class="hljs-keyword">return</span> [length, width];
+};
+</code></pre><p><strong>Source: <a href="https://leetcode.com">https://leetcode.com</a></strong></p>
+</span></span></body></html>
