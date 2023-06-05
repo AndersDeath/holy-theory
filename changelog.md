@@ -15,6 +15,7 @@ All notable changes to this project will be documented in this file.
 * add Next Greater Element I training in TS
 * update builder.js
 * add Keyboard Row training in TS
+* add Find Mode in Binary Search Tree training in TS
 
 # [0.0.20] - 2023-05-29
 * add Arranging Coins training in TS
