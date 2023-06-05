@@ -14,6 +14,7 @@ const paths = getConfig().templates;
 
 
 const templates = new Templates(paths);
+// templates.setIndex('index');
 const nav = templates.getData()['nav'].build({
     values: [
         {
@@ -124,7 +125,7 @@ function Builder() {
 
             entities.push(new Entity(
                 metadata.title,
-                {...metadata,...d.meta},
+                { ...metadata, ...d.meta },
                 cleanedContent,
                 pathObj.dir
             ));
@@ -159,10 +160,12 @@ function Builder() {
         if (!fs.existsSync(basePath + item.meta.category)) {
             fs.mkdirSync(basePath + item.meta.category, { recursive: true });
         }
-        const html = templates.getData()['article'].build({
-            navigation: nav,
-            title: item.title,
-            body: item.body
+        const html = templates.getData()['index'].build({
+            content: templates.getData()['article'].build({
+                navigation: nav,
+                title: item.title,
+                body: item.body
+            })
         });
 
         fs.writeFileSync(basePath + item.meta.category + '/' + item.meta.fileName.dashed + '.html', html);
@@ -181,7 +184,7 @@ function Builder() {
         navigation: nav
     })
 
-    fs.writeFileSync(basePath + '/index.html', templates.getData()['index'].build(
+    fs.writeFileSync(basePath + '/index.html', templates.getData()['main'].build(
         { navigation: nav }
     ))
     fs.writeFileSync(basePath + '/all.html', o)

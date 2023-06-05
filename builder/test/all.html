@@ -1826,7 +1826,19 @@ calculator.<span class="hljs-title function_">log</span>().<span class="hljs-tit
 </span></li><li><span></span><h1></h1><hr/><span><h1 id="combine-two-tables">Combine Two Tables</h1>
 <pre><code class="hljs language-SQL"><span class="hljs-keyword">select</span> p.FirstName, p.LastName, a.City, a.State <span class="hljs-keyword">from</span> person p
 <span class="hljs-keyword">left</span> <span class="hljs-keyword">join</span> address a <span class="hljs-keyword">on</span> p.personid <span class="hljs-operator">=</span> a.personid
-</code></pre></span></li><li><span></span><h1></h1><hr/><span><h1 id="container-with-most-water">Container With Most Water</h1>
+</code></pre></span></li><li><span></span><h1></h1><hr/><span><h1 id="construct-the-rectangle">Construct the Rectangle</h1>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">constructRectangle</span>(<span class="hljs-params">area: <span class="hljs-built_in">number</span></span>): <span class="hljs-built_in">number</span>[] {
+  <span class="hljs-keyword">let</span> width = <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">floor</span>(<span class="hljs-title class_">Math</span>.<span class="hljs-title function_">sqrt</span>(area));
+
+  <span class="hljs-keyword">while</span> (area % width !== <span class="hljs-number">0</span>) {
+    width--;
+  }
+
+  <span class="hljs-keyword">const</span> length = area / width;
+  <span class="hljs-keyword">return</span> [length, width];
+};
+</code></pre><p><strong>Source: <a href="https://leetcode.com">https://leetcode.com</a></strong></p>
+</span></li><li><span></span><h1></h1><hr/><span><h1 id="container-with-most-water">Container With Most Water</h1>
 <pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">maxArea</span>(<span class="hljs-params">height: <span class="hljs-built_in">number</span>[]</span>): <span class="hljs-built_in">number</span> {
 
     <span class="hljs-keyword">let</span> maximumArea = <span class="hljs-title class_">Number</span>.<span class="hljs-property">MIN_SAFE_INTEGER</span>;
@@ -2047,6 +2059,88 @@ calculator.<span class="hljs-title function_">log</span>().<span class="hljs-tit
     }
     <span class="hljs-keyword">return</span> result;
 };
+</code></pre></span></li><li><span></span><h1></h1><hr/><span><h1 id="find-mode-in-binary-search-tree">Find Mode in Binary Search Tree</h1>
+<pre><code class="hljs language-typescript">
+<span class="hljs-comment">/**
+ * Definition for a binary tree node.
+ * class TreeNode {
+ *     val: number
+ *     left: TreeNode | null
+ *     right: TreeNode | null
+ *     constructor(val?: number, left?: TreeNode | null, right?: TreeNode | null) {
+ *         this.val = (val===undefined ? 0 : val)
+ *         this.left = (left===undefined ? null : left)
+ *         this.right = (right===undefined ? null : right)
+ *     }
+ * }
+ */</span>
+
+
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">ModeCounter</span> {
+  <span class="hljs-attr">maxCount</span>: <span class="hljs-built_in">number</span>;
+  <span class="hljs-attr">currentCount</span>: <span class="hljs-built_in">number</span>;
+  <span class="hljs-attr">currentVal</span>: <span class="hljs-built_in">number</span>;
+  <span class="hljs-attr">modes</span>: <span class="hljs-built_in">number</span>[];
+
+  <span class="hljs-title function_">constructor</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">maxCount</span> = <span class="hljs-number">0</span>;
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">currentCount</span> = <span class="hljs-number">0</span>;
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">currentVal</span> = <span class="hljs-number">0</span>;
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">modes</span> = [];
+  }
+
+  <span class="hljs-title function_">update</span>(<span class="hljs-params">val: <span class="hljs-built_in">number</span></span>) {
+    <span class="hljs-keyword">if</span> (val === <span class="hljs-variable language_">this</span>.<span class="hljs-property">currentVal</span>) {
+      <span class="hljs-variable language_">this</span>.<span class="hljs-property">currentCount</span>++;
+    } <span class="hljs-keyword">else</span> {
+      <span class="hljs-variable language_">this</span>.<span class="hljs-property">currentVal</span> = val;
+      <span class="hljs-variable language_">this</span>.<span class="hljs-property">currentCount</span> = <span class="hljs-number">1</span>;
+    }
+
+    <span class="hljs-keyword">if</span> (<span class="hljs-variable language_">this</span>.<span class="hljs-property">currentCount</span> &gt; <span class="hljs-variable language_">this</span>.<span class="hljs-property">maxCount</span>) {
+      <span class="hljs-variable language_">this</span>.<span class="hljs-property">maxCount</span> = <span class="hljs-variable language_">this</span>.<span class="hljs-property">currentCount</span>;
+      <span class="hljs-variable language_">this</span>.<span class="hljs-property">modes</span> = [<span class="hljs-variable language_">this</span>.<span class="hljs-property">currentVal</span>];
+    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-variable language_">this</span>.<span class="hljs-property">currentCount</span> === <span class="hljs-variable language_">this</span>.<span class="hljs-property">maxCount</span>) {
+      <span class="hljs-variable language_">this</span>.<span class="hljs-property">modes</span>.<span class="hljs-title function_">push</span>(<span class="hljs-variable language_">this</span>.<span class="hljs-property">currentVal</span>);
+    }
+  }
+}
+
+
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">findMode</span>(<span class="hljs-params">root: TreeNode | <span class="hljs-literal">null</span></span>): <span class="hljs-built_in">number</span>[] {
+
+<span class="hljs-keyword">const</span> counter = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ModeCounter</span>();
+  <span class="hljs-keyword">let</span> current = root;
+  <span class="hljs-keyword">let</span> <span class="hljs-attr">prev</span>: <span class="hljs-title class_">TreeNode</span> | <span class="hljs-literal">null</span> = <span class="hljs-literal">null</span>;
+
+  <span class="hljs-keyword">while</span> (current !== <span class="hljs-literal">null</span>) {
+    <span class="hljs-keyword">if</span> (current.<span class="hljs-property">left</span> === <span class="hljs-literal">null</span>) {
+      counter.<span class="hljs-title function_">update</span>(current.<span class="hljs-property">val</span>);
+      current = current.<span class="hljs-property">right</span>;
+    } <span class="hljs-keyword">else</span> {
+      prev = current.<span class="hljs-property">left</span>;
+
+      <span class="hljs-keyword">while</span> (prev.<span class="hljs-property">right</span> !== <span class="hljs-literal">null</span> &amp;&amp; prev.<span class="hljs-property">right</span> !== current) {
+        prev = prev.<span class="hljs-property">right</span>;
+      }
+
+      <span class="hljs-keyword">if</span> (prev.<span class="hljs-property">right</span> === <span class="hljs-literal">null</span>) {
+        prev.<span class="hljs-property">right</span> = current;
+        current = current.<span class="hljs-property">left</span>;
+      } <span class="hljs-keyword">else</span> {
+        prev.<span class="hljs-property">right</span> = <span class="hljs-literal">null</span>;
+        counter.<span class="hljs-title function_">update</span>(current.<span class="hljs-property">val</span>);
+        current = current.<span class="hljs-property">right</span>;
+      }
+    }
+  }
+
+  <span class="hljs-keyword">return</span> counter.<span class="hljs-property">modes</span>;
+}
+
+
+
+
 </code></pre></span></li><li><span></span><h1></h1><hr/><span><h1 id="find-the-difference">Find the Difference</h1>
 <pre><code class="hljs language-typescript">
 <span class="hljs-keyword">function</span> <span class="hljs-title function_">findTheDifference</span>(<span class="hljs-params">s: <span class="hljs-built_in">string</span>, t: <span class="hljs-built_in">string</span></span>): <span class="hljs-built_in">string</span> {
@@ -2503,6 +2597,41 @@ calculator.<span class="hljs-title function_">log</span>().<span class="hljs-tit
 
         <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
 };
+</code></pre></span></li><li><span></span><h1></h1><hr/><span><h1 id="keyboard-row">Keyboard Row</h1>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">findWords</span>(<span class="hljs-params">words: <span class="hljs-built_in">string</span>[]</span>): <span class="hljs-built_in">string</span>[] {
+    <span class="hljs-keyword">const</span> <span class="hljs-attr">rowMap</span>: <span class="hljs-title class_">Map</span>&lt;<span class="hljs-built_in">string</span>, <span class="hljs-built_in">number</span>&gt; = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Map</span>([
+[<span class="hljs-string">&#x27;Q&#x27;</span>, <span class="hljs-number">1</span>], [<span class="hljs-string">&#x27;W&#x27;</span>, <span class="hljs-number">1</span>], [<span class="hljs-string">&#x27;E&#x27;</span>, <span class="hljs-number">1</span>], [<span class="hljs-string">&#x27;R&#x27;</span>, <span class="hljs-number">1</span>], [<span class="hljs-string">&#x27;T&#x27;</span>, <span class="hljs-number">1</span>], [<span class="hljs-string">&#x27;Y&#x27;</span>, <span class="hljs-number">1</span>], [<span class="hljs-string">&#x27;U&#x27;</span>, <span class="hljs-number">1</span>], [<span class="hljs-string">&#x27;I&#x27;</span>, <span class="hljs-number">1</span>], [<span class="hljs-string">&#x27;O&#x27;</span>, <span class="hljs-number">1</span>], [<span class="hljs-string">&#x27;P&#x27;</span>, <span class="hljs-number">1</span>], [<span class="hljs-string">&#x27;A&#x27;</span>, <span class="hljs-number">2</span>], [<span class="hljs-string">&#x27;S&#x27;</span>, <span class="hljs-number">2</span>], [<span class="hljs-string">&#x27;D&#x27;</span>, <span class="hljs-number">2</span>], [<span class="hljs-string">&#x27;F&#x27;</span>, <span class="hljs-number">2</span>], [<span class="hljs-string">&#x27;G&#x27;</span>, <span class="hljs-number">2</span>], [<span class="hljs-string">&#x27;H&#x27;</span>, <span class="hljs-number">2</span>], [<span class="hljs-string">&#x27;J&#x27;</span>, <span class="hljs-number">2</span>], [<span class="hljs-string">&#x27;K&#x27;</span>, <span class="hljs-number">2</span>], [<span class="hljs-string">&#x27;L&#x27;</span>, <span class="hljs-number">2</span>], [<span class="hljs-string">&#x27;Z&#x27;</span>, <span class="hljs-number">3</span>], [<span class="hljs-string">&#x27;X&#x27;</span>, <span class="hljs-number">3</span>], [<span class="hljs-string">&#x27;C&#x27;</span>, <span class="hljs-number">3</span>], [<span class="hljs-string">&#x27;V&#x27;</span>, <span class="hljs-number">3</span>], [<span class="hljs-string">&#x27;B&#x27;</span>, <span class="hljs-number">3</span>], [<span class="hljs-string">&#x27;N&#x27;</span>, <span class="hljs-number">3</span>], [<span class="hljs-string">&#x27;M&#x27;</span>, <span class="hljs-number">3</span>]
+    ]);
+
+    <span class="hljs-keyword">const</span> <span class="hljs-attr">result</span>: <span class="hljs-built_in">string</span>[] = [];
+
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">const</span> word <span class="hljs-keyword">of</span> words) {
+        <span class="hljs-keyword">if</span> (<span class="hljs-title function_">isInSameRow</span>(word.<span class="hljs-title function_">toUpperCase</span>(), rowMap)) {
+            result.<span class="hljs-title function_">push</span>(word);
+        }
+    }
+
+    <span class="hljs-keyword">return</span> result;
+}
+
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">isInSameRow</span>(<span class="hljs-params">word: <span class="hljs-built_in">string</span>, rowMap: <span class="hljs-built_in">Map</span>&lt;<span class="hljs-built_in">string</span>, <span class="hljs-built_in">number</span>&gt;</span>): <span class="hljs-built_in">boolean</span> {
+    <span class="hljs-keyword">if</span> (word.<span class="hljs-property">length</span> &lt;= <span class="hljs-number">1</span>) {
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+    }
+
+    <span class="hljs-keyword">const</span> <span class="hljs-attr">rowNumber</span>: <span class="hljs-built_in">number</span> = rowMap.<span class="hljs-title function_">get</span>(word[<span class="hljs-number">0</span>]) || <span class="hljs-number">0</span>;
+
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">1</span>; i &lt; word.<span class="hljs-property">length</span>; i++) {
+        <span class="hljs-keyword">const</span> <span class="hljs-attr">currentChar</span>: <span class="hljs-built_in">string</span> = word[i];
+        <span class="hljs-keyword">const</span> <span class="hljs-attr">currentRowNumber</span>: <span class="hljs-built_in">number</span> = rowMap.<span class="hljs-title function_">get</span>(currentChar) || <span class="hljs-number">0</span>;
+
+        <span class="hljs-keyword">if</span> (currentRowNumber !== rowNumber) {
+            <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+        }
+    }
+
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+}
 </code></pre></span></li><li><span></span><h1></h1><hr/><span><h1 id="length-of-last-word">Length of Last Word</h1>
 <pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">lengthOfLastWord</span>(<span class="hljs-params">s: <span class="hljs-built_in">string</span></span>): <span class="hljs-built_in">number</span> {
     s = s.<span class="hljs-title function_">trim</span>();
@@ -2948,6 +3077,27 @@ calculator.<span class="hljs-title function_">log</span>().<span class="hljs-tit
             j++;
         }
     }
+};
+</code></pre></span></li><li><span></span><h1></h1><hr/><span><h1 id="next-greater-element-i">Next Greater Element I</h1>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">nextGreaterElement</span>(<span class="hljs-params">nums1: <span class="hljs-built_in">number</span>[], nums2: <span class="hljs-built_in">number</span>[]</span>): <span class="hljs-built_in">number</span>[] {
+  <span class="hljs-keyword">const</span> nextGreaterMap = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Map</span>&lt;<span class="hljs-built_in">number</span>, <span class="hljs-built_in">number</span>&gt;(); 
+  <span class="hljs-keyword">const</span> <span class="hljs-attr">stack</span>: <span class="hljs-built_in">number</span>[] = [];
+  
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; nums2.<span class="hljs-property">length</span>; i++) {
+    <span class="hljs-keyword">while</span> (stack.<span class="hljs-property">length</span> &gt; <span class="hljs-number">0</span> &amp;&amp; nums2[i] &gt; stack[stack.<span class="hljs-property">length</span> - <span class="hljs-number">1</span>]) {
+      <span class="hljs-keyword">const</span> smallerNum = stack.<span class="hljs-title function_">pop</span>();
+      nextGreaterMap.<span class="hljs-title function_">set</span>(smallerNum, nums2[i]);
+    }
+    stack.<span class="hljs-title function_">push</span>(nums2[i]);
+  }
+  
+  <span class="hljs-keyword">const</span> <span class="hljs-attr">result</span>: <span class="hljs-built_in">number</span>[] = [];
+  
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> num <span class="hljs-keyword">of</span> nums1) {
+    result.<span class="hljs-title function_">push</span>(nextGreaterMap.<span class="hljs-title function_">get</span>(num) || -<span class="hljs-number">1</span>);
+  }
+  
+  <span class="hljs-keyword">return</span> result;
 };
 </code></pre></span></li><li><span></span><h1></h1><hr/><span><h1 id="nim-game">Nim Game</h1>
 <pre><code class="hljs language-typescript">
@@ -3830,6 +3980,23 @@ calculator.<span class="hljs-title function_">log</span>().<span class="hljs-tit
 
     <span class="hljs-keyword">return</span> <span class="hljs-title function_">isMirror</span>(node1.<span class="hljs-property">left</span>, node2.<span class="hljs-property">right</span>) &amp;&amp; <span class="hljs-title function_">isMirror</span>(node1.<span class="hljs-property">right</span>, node2.<span class="hljs-property">left</span>);
 }
+</code></pre></span></li><li><span></span><h1></h1><hr/><span><h1 id="teemo-attacking">Teemo Attacking</h1>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">findPoisonedDuration</span>(<span class="hljs-params">timeSeries: <span class="hljs-built_in">number</span>[], duration: <span class="hljs-built_in">number</span></span>): <span class="hljs-built_in">number</span> {
+  <span class="hljs-keyword">if</span> (timeSeries.<span class="hljs-property">length</span> === <span class="hljs-number">0</span>) {
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+  }
+
+  <span class="hljs-keyword">let</span> totalDuration = <span class="hljs-number">0</span>;
+  <span class="hljs-keyword">let</span> prevAttackEnd = timeSeries[<span class="hljs-number">0</span>] + duration;
+
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">1</span>; i &lt; timeSeries.<span class="hljs-property">length</span>; i++) {
+    <span class="hljs-keyword">const</span> currentAttackEnd = timeSeries[i] + duration;
+    totalDuration += <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">min</span>(currentAttackEnd - prevAttackEnd, duration);
+    prevAttackEnd = currentAttackEnd;
+  }
+
+  <span class="hljs-keyword">return</span> totalDuration + duration;
+};
 </code></pre></span></li><li><span></span><h1></h1><hr/><span><h1 id="tenth-line">Tenth Line</h1>
 <pre><code class="hljs language-bash"><span class="hljs-comment"># Read from the file file.txt and output the tenth line to stdout.</span>
 
