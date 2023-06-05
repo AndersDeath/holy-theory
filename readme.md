@@ -180,6 +180,7 @@
 * [Teemo Attacking](./training/teemo-attacking.md) – TypeScript
 * [Next Greater Element I](./training/next-greater-element-i.md) – TypeScript
 * [Keyboard Row](./training/keyboard-row.md) – TypeScript
+* [Find Mode in Binary Search Tree](./training/find-mode-in-binary-search-tree.md) – TypeScript
 
 ## Question
 * [01-reverse-number](/questions/01-reverse-number.md) – Java, all languages
