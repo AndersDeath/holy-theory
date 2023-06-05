@@ -3,7 +3,7 @@
 All notable changes to this project will be documented in this file.
 
 # [0.0.22] - In Progress
-* 
+* update builder.js
 # [0.0.21] - 2023-06-05
 * add Island Perimeter training in TS
 * add Number Complement training in TS
