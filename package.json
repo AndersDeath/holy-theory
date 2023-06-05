@@ -1,6 +1,6 @@
 {
   "name": "holy-theory",
-  "version": "0.0.19",
+  "version": "0.0.22",
   "description": "The Book",
   "main": "index.js",
   "type": "module",
