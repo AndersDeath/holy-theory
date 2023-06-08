@@ -183,6 +183,7 @@
 * [Find Mode in Binary Search Tree](./training/find-mode-in-binary-search-tree.md) – TypeScript
 * [Base 7](./training/base-7.md) – TypeScript
 * [Relative Ranks](./training/relative-ranks.md) – TypeScript
+* [Perfect Number](./training/perfect-number.md) – TypeScript
 
 ## Question
 * [01-reverse-number](/questions/01-reverse-number.md) – Java, all languages
