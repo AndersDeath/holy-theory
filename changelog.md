@@ -7,6 +7,7 @@ All notable changes to this project will be documented in this file.
 * add Base 7 training in TS
 * add Relative Ranks training in TS
 * add Perfect Number training in TS
+* add Game Play Analysis I training in SQL
 # [0.0.21] - 2023-06-05
 * add Island Perimeter training in TS
 * add Number Complement training in TS
