@@ -184,6 +184,7 @@
 * [Base 7](./training/base-7.md) – TypeScript
 * [Relative Ranks](./training/relative-ranks.md) – TypeScript
 * [Perfect Number](./training/perfect-number.md) – TypeScript
+* [Game Play Analysis I](./training/game-play-analysis-i.md) – TypeScript
 
 ## Question
 * [01-reverse-number](/questions/01-reverse-number.md) – Java, all languages
