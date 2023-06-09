@@ -1,0 +1,15 @@
+---
+title: Game Play Analysis I
+tags: ['training', 'task']
+languages: ['sql']
+---
+# Game Play Analysis I
+
+```sql
+# Write your MySQL query statement below
+SELECT player_id, MIN(event_date) AS first_login
+FROM Activity
+GROUP BY player_id
+```
+
+* [Go back](../readme.md)
