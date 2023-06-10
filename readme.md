@@ -185,6 +185,7 @@
 * [Relative Ranks](./training/relative-ranks.md) – TypeScript
 * [Perfect Number](./training/perfect-number.md) – TypeScript
 * [Game Play Analysis I](./training/game-play-analysis-i.md) – TypeScript
+* [Detect Capital Use](./training/detect-capital-use.md) – TypeScript
 
 ## Question
 * [01-reverse-number](/questions/01-reverse-number.md) – Java, all languages
