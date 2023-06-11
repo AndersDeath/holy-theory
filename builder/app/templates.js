@@ -3,9 +3,14 @@ import pug from 'pug';
 import { compile } from '@eit6609/markdown-templates';
 
 class Templates {
-    constructor(paths) {
+    constructor(paths, indexName) {
         this.paths = paths;
         this.data = [];
+        if (indexName) {
+            this.indexName = indexName;
+            this.getIndexBuild();
+        }
+        this.indexBuilder;
         this.load();
     }
 
@@ -15,13 +20,37 @@ class Templates {
         });
     }
 
+    getIndexBuild() {
+        const index = this.paths.filter(((el) => el.title === this.indexName))[0];
+        const file = fs.readFileSync(index.path, 'utf-8');
+        this.indexBuilder = pug.compile(file);
+    }
+
     build(element) {
         const file = fs.readFileSync(element.path, 'utf-8');
         if (element.type === 'pug') {
-            return {
-                file: file,
-                build: pug.compile(file)
+            if (this.indexName && element.title !== this.indexName) {
+                // console.log(this.paths);
+                // const wrapToIndexPage = (templatesInstance, target) => {
+                //     return templatesInstance.getData()['index'].build({
+                //         content: target
+                //     });
+                // }
+                return {
+                    file: file,
+                    build: () => {
+                        return this.indexBuilder({
+                            content: pug.compile(file)
+                        })
+                    }
+                }
+            } else {
+                return {
+                    file: file,
+                    build: pug.compile(file)
+                }
             }
+
         }
         if (element.type === 'md') {
             return {
@@ -36,7 +65,6 @@ class Templates {
     getTemplate() {
 
     }
-
 }
 
 export {

@@ -1,33 +1,28 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Holy Theory</title><style>body {
-    background: #ccc;
-}</style></head><body><span><span><div><ul><li> <a href="/holy-theory/builder/test/">Main page</a></li><li> <a href="/holy-theory/builder/test//languages.html">Statistics</a></li></ul></div></span><h1></h1><hr/><span><h1 id="insertion-sort">Insertion sort</h1>
-<h2 id="typescript">TypeScript</h2>
-<pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">insertionSort</span>(<span class="hljs-params">array: <span class="hljs-built_in">number</span>[] | <span class="hljs-built_in">string</span>[]</span>) {
-    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">1</span>; i &lt; array.<span class="hljs-property">length</span>; i++) {
-        <span class="hljs-keyword">let</span> curr = array[i];
-        <span class="hljs-keyword">let</span> j = i - <span class="hljs-number">1</span>;
-        <span class="hljs-keyword">for</span> (j; j &gt;= <span class="hljs-number">0</span> &amp;&amp; array[j] &gt; curr; j--) {
-            array[j + <span class="hljs-number">1</span>] = array[j];
-        }
-        array[j + <span class="hljs-number">1</span>] = curr;
-    }
-    <span class="hljs-keyword">return</span> array;
-}
-
-<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-title function_">insertionSort</span>([<span class="hljs-number">1</span>, <span class="hljs-number">4</span>, <span class="hljs-number">2</span>, <span class="hljs-number">8</span>, <span class="hljs-number">345</span>, <span class="hljs-number">123</span>, <span class="hljs-number">43</span>, <span class="hljs-number">32</span>, <span class="hljs-number">5643</span>, <span class="hljs-number">63</span>, <span class="hljs-number">123</span>, <span class="hljs-number">43</span>, <span class="hljs-number">2</span>, <span class="hljs-number">55</span>, <span class="hljs-number">1</span>, <span class="hljs-number">234</span>, <span class="hljs-number">92</span>]));
-</code></pre><h2 id="java">Java</h2>
-<pre><code class="hljs language-java">    <span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {
-        <span class="hljs-keyword">void</span> <span class="hljs-title function_">insertionSort</span> <span class="hljs-params">(<span class="hljs-type">int</span>[] arr)</span> {
-            <span class="hljs-type">int</span> <span class="hljs-variable">n</span> <span class="hljs-operator">=</span> arr.length;
-            <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">1</span>; i &lt; n; i++) {
-                <span class="hljs-type">int</span> <span class="hljs-variable">current</span> <span class="hljs-operator">=</span> arr[i];
-                <span class="hljs-type">int</span> <span class="hljs-variable">position</span> <span class="hljs-operator">=</span> i - <span class="hljs-number">1</span>;
-                <span class="hljs-keyword">while</span>(position &gt;= <span class="hljs-number">0</span> &amp;&amp; arr[position] &gt; current) {
-                    arr[position + <span class="hljs-number">1</span>] = arr[position];
-                    position--;
-                }
-                arr[position + <span class="hljs-number">1</span>] = current;
-            }
-        }
-    }
-</code></pre></span></span></body></html>
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Holy Theory</title><style>img {
+    max-with: 400px;
+}</style></head><body><span>function template(locals) {var pug_html = "", pug_mixins = {}, pug_interp;var pug_debug_filename, pug_debug_line;try {;
+    var locals_for_with = (locals || {});
+    
+    (function (body, header, navigation) {
+      ;pug_debug_line = 1;
+pug_html = pug_html + "\u003Cspan\u003E";
+;pug_debug_line = 1;
+pug_html = pug_html + (null == (pug_interp = navigation) ? "" : pug_interp) + "\u003C\u002Fspan\u003E";
+;pug_debug_line = 2;
+pug_html = pug_html + "\u003Ch1\u003E";
+;pug_debug_line = 2;
+pug_html = pug_html + (pug.escape(null == (pug_interp = header) ? "" : pug_interp)) + "\u003C\u002Fh1\u003E";
+;pug_debug_line = 3;
+pug_html = pug_html + "\u003Chr\u002F\u003E";
+;pug_debug_line = 4;
+pug_html = pug_html + "\u003Cspan\u003E";
+;pug_debug_line = 4;
+pug_html = pug_html + (null == (pug_interp = body) ? "" : pug_interp) + "\u003C\u002Fspan\u003E";
+    }.call(this, "body" in locals_for_with ?
+        locals_for_with.body :
+        typeof body !== 'undefined' ? body : undefined, "header" in locals_for_with ?
+        locals_for_with.header :
+        typeof header !== 'undefined' ? header : undefined, "navigation" in locals_for_with ?
+        locals_for_with.navigation :
+        typeof navigation !== 'undefined' ? navigation : undefined));
+    ;} catch (err) {pug.rethrow(err, pug_debug_filename, pug_debug_line);};return pug_html;}</span></body></html>

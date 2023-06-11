@@ -1,64 +1,28 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Holy Theory</title><style>body {
-    background: #ccc;
-}</style></head><body><span><span><div><ul><li> <a href="/holy-theory/builder/test/">Main page</a></li><li> <a href="/holy-theory/builder/test//languages.html">Statistics</a></li></ul></div></span><h1></h1><hr/><span><h1 id="merge-two-sorted-linked-lists">Merge two sorted linked lists</h1>
-<h2 id="solution-1">Solution 1</h2>
-<pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">mergeLists</span>(<span class="hljs-params">head1, head2</span>) {
-
-  <span class="hljs-keyword">let</span> newList = <span class="hljs-keyword">new</span> <span class="hljs-title class_">SinglyLinkedList</span>()
-  
- <span class="hljs-keyword">while</span> (head1 &amp;&amp; head2) {
-    <span class="hljs-keyword">if</span> (head1.<span class="hljs-property">data</span> &lt; head2.<span class="hljs-property">data</span>) {
-      newList.<span class="hljs-title function_">insertNode</span>(head1.<span class="hljs-property">data</span>)
-      head1 = head1.<span class="hljs-property">next</span>
-    } <span class="hljs-keyword">else</span> {
-      newList.<span class="hljs-title function_">insertNode</span>(head2.<span class="hljs-property">data</span>)
-      head2 = head2.<span class="hljs-property">next</span>
-    }
-  }
-
-  newList.<span class="hljs-property">tail</span>.<span class="hljs-property">next</span> = (head1) ? head1 : head2
-  <span class="hljs-keyword">return</span> newList.<span class="hljs-property">head</span>;
-}
-</code></pre><h2 id="solution-2">Solution 2</h2>
-<pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">mergeTwoLists</span>(<span class="hljs-params">list1: ListNode | <span class="hljs-literal">null</span>, list2: ListNode | <span class="hljs-literal">null</span></span>): <span class="hljs-title class_">ListNode</span> | <span class="hljs-literal">null</span> {
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Holy Theory</title><style>img {
+    max-with: 400px;
+}</style></head><body><span>function template(locals) {var pug_html = "", pug_mixins = {}, pug_interp;var pug_debug_filename, pug_debug_line;try {;
+    var locals_for_with = (locals || {});
     
-    <span class="hljs-keyword">if</span>(!list1) <span class="hljs-keyword">return</span> list2;
-    <span class="hljs-keyword">if</span>(!list2) <span class="hljs-keyword">return</span> list1;
-
-    <span class="hljs-keyword">let</span> head = <span class="hljs-literal">null</span>;
-    <span class="hljs-keyword">let</span> temp = head;
-
-    <span class="hljs-keyword">if</span> (list1.<span class="hljs-property">val</span> &lt; list2.<span class="hljs-property">val</span>) {
-        temp = head = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ListNode</span>(list1.<span class="hljs-property">val</span>);
-        list1 = list1.<span class="hljs-property">next</span>;
-    } <span class="hljs-keyword">else</span> {
-        temp = head = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ListNode</span>(list2.<span class="hljs-property">val</span>);
-        list2 = list2.<span class="hljs-property">next</span>;
-    }
-
-    <span class="hljs-keyword">while</span> (list1 &amp;&amp; list2) {
-        <span class="hljs-keyword">if</span> (list1.<span class="hljs-property">val</span> &lt; list2.<span class="hljs-property">val</span>) {
-            temp.<span class="hljs-property">next</span> = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ListNode</span>(list1.<span class="hljs-property">val</span>);
-            list1 = list1.<span class="hljs-property">next</span>;
-            temp = temp.<span class="hljs-property">next</span>
-        } <span class="hljs-keyword">else</span> {
-            temp.<span class="hljs-property">next</span> = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ListNode</span>(list2.<span class="hljs-property">val</span>);
-            list2 = list2.<span class="hljs-property">next</span>;
-            temp = temp.<span class="hljs-property">next</span>
-        }
-    }
-    <span class="hljs-keyword">while</span> (list1) {
-        temp.<span class="hljs-property">next</span> = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ListNode</span>(list1.<span class="hljs-property">val</span>);
-        list1 = list1.<span class="hljs-property">next</span>;
-        temp = temp.<span class="hljs-property">next</span>;
-    }
-    <span class="hljs-keyword">while</span> (list2) {
-        temp.<span class="hljs-property">next</span> = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ListNode</span>(list2.<span class="hljs-property">val</span>);
-        list2 = list2.<span class="hljs-property">next</span>;
-        temp = temp.<span class="hljs-property">next</span>;
-    }
-    <span class="hljs-keyword">return</span> head;
-
-};
-</code></pre><p>** Source: <a href="http://hackerrank.com">http://hackerrank.com</a>**</p>
-</span></span></body></html>
+    (function (body, header, navigation) {
+      ;pug_debug_line = 1;
+pug_html = pug_html + "\u003Cspan\u003E";
+;pug_debug_line = 1;
+pug_html = pug_html + (null == (pug_interp = navigation) ? "" : pug_interp) + "\u003C\u002Fspan\u003E";
+;pug_debug_line = 2;
+pug_html = pug_html + "\u003Ch1\u003E";
+;pug_debug_line = 2;
+pug_html = pug_html + (pug.escape(null == (pug_interp = header) ? "" : pug_interp)) + "\u003C\u002Fh1\u003E";
+;pug_debug_line = 3;
+pug_html = pug_html + "\u003Chr\u002F\u003E";
+;pug_debug_line = 4;
+pug_html = pug_html + "\u003Cspan\u003E";
+;pug_debug_line = 4;
+pug_html = pug_html + (null == (pug_interp = body) ? "" : pug_interp) + "\u003C\u002Fspan\u003E";
+    }.call(this, "body" in locals_for_with ?
+        locals_for_with.body :
+        typeof body !== 'undefined' ? body : undefined, "header" in locals_for_with ?
+        locals_for_with.header :
+        typeof header !== 'undefined' ? header : undefined, "navigation" in locals_for_with ?
+        locals_for_with.navigation :
+        typeof navigation !== 'undefined' ? navigation : undefined));
+    ;} catch (err) {pug.rethrow(err, pug_debug_filename, pug_debug_line);};return pug_html;}</span></body></html>
