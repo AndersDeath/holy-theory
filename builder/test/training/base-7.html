@@ -1,0 +1,25 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Holy Theory</title><style>body {
+    background: #ccc;
+}</style></head><body><span><span><div><ul><li> <a href="/holy-theory/builder/test/">Main page</a></li><li> <a href="/holy-theory/builder/test//languages.html">Statistics</a></li></ul></div></span><h1></h1><hr/><span><h1 id="base-7">Base 7</h1>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">convertToBase7</span>(<span class="hljs-params">num: <span class="hljs-built_in">number</span></span>): <span class="hljs-built_in">string</span> {
+  <span class="hljs-keyword">if</span> (num === <span class="hljs-number">0</span>) {
+        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;0&quot;</span>;
+    }
+
+    <span class="hljs-keyword">let</span> isNegative = num &lt; <span class="hljs-number">0</span>;
+    num = <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">abs</span>(num);
+    <span class="hljs-keyword">let</span> base7 = <span class="hljs-string">&quot;&quot;</span>;
+
+    <span class="hljs-keyword">while</span> (num &gt; <span class="hljs-number">0</span>) {
+        base7 = (num % <span class="hljs-number">7</span>).<span class="hljs-title function_">toString</span>() + base7;
+        num = <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">floor</span>(num / <span class="hljs-number">7</span>);
+    }
+
+    <span class="hljs-keyword">if</span> (isNegative) {
+        base7 = <span class="hljs-string">&quot;-&quot;</span> + base7;
+    }
+
+    <span class="hljs-keyword">return</span> base7;
+};
+</code></pre><p><strong>Source: <a href="https://leetcode.com">https://leetcode.com</a></strong></p>
+</span></span></body></html>

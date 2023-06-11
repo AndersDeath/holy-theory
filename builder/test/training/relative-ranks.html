@@ -1,0 +1,24 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Holy Theory</title><style>body {
+    background: #ccc;
+}</style></head><body><span><span><div><ul><li> <a href="/holy-theory/builder/test/">Main page</a></li><li> <a href="/holy-theory/builder/test//languages.html">Statistics</a></li></ul></div></span><h1></h1><hr/><span><h1 id="relative-ranks">Relative Ranks</h1>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">findRelativeRanks</span>(<span class="hljs-params">score: <span class="hljs-built_in">number</span>[]</span>): <span class="hljs-built_in">string</span>[] {
+ <span class="hljs-keyword">const</span> sortedNums = [...score].<span class="hljs-title function_">sort</span>(<span class="hljs-function">(<span class="hljs-params">a, b</span>) =&gt;</span> b - a);
+    <span class="hljs-keyword">const</span> <span class="hljs-attr">ranks</span>: <span class="hljs-built_in">string</span>[] = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Array</span>(score.<span class="hljs-property">length</span>);
+
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; score.<span class="hljs-property">length</span>; i++) {
+        <span class="hljs-keyword">const</span> rank = sortedNums.<span class="hljs-title function_">indexOf</span>(score[i]) + <span class="hljs-number">1</span>;
+
+        <span class="hljs-keyword">if</span> (rank === <span class="hljs-number">1</span>) {
+            ranks[i] = <span class="hljs-string">&quot;Gold Medal&quot;</span>;
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (rank === <span class="hljs-number">2</span>) {
+            ranks[i] = <span class="hljs-string">&quot;Silver Medal&quot;</span>;
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (rank === <span class="hljs-number">3</span>) {
+            ranks[i] = <span class="hljs-string">&quot;Bronze Medal&quot;</span>;
+        } <span class="hljs-keyword">else</span> {
+            ranks[i] = rank.<span class="hljs-title function_">toString</span>();
+        }
+    }
+
+    <span class="hljs-keyword">return</span> ranks;
+};
+</code></pre></span></span></body></html>
