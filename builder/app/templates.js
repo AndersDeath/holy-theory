@@ -30,12 +30,6 @@ class Templates {
         const file = fs.readFileSync(element.path, 'utf-8');
         if (element.type === 'pug') {
             if (this.indexName && element.title !== this.indexName) {
-                // console.log(this.paths);
-                // const wrapToIndexPage = (templatesInstance, target) => {
-                //     return templatesInstance.getData()['index'].build({
-                //         content: target
-                //     });
-                // }
                 return {
                     file: file,
                     build: () => {
