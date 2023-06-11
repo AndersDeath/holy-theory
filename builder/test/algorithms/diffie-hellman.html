@@ -1,47 +1,28 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Holy Theory</title><style>body {
-    background: #ccc;
-}</style></head><body><span><span><div><ul><li> <a href="/holy-theory/builder/test/">Main page</a></li><li> <a href="/holy-theory/builder/test//languages.html">Statistics</a></li></ul></div></span><h1></h1><hr/><span><h1 id="diffie-hellman-algorithm">Diffie hellman algorithm</h1>
-<pre><code class="hljs language-javascript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">power</span>(<span class="hljs-params">a: any, b: any, p: any</span>) {
-    <span class="hljs-keyword">if</span>(b === <span class="hljs-number">1</span>) {
-        <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>
-    } <span class="hljs-keyword">else</span> {
-        <span class="hljs-keyword">return</span> <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">pow</span>(a,b) % p
-    }
-}
-
-
-<span class="hljs-keyword">function</span> <span class="hljs-title function_">DiffieHellman</span>(<span class="hljs-params"></span>) {
-
-    <span class="hljs-keyword">let</span> P, G, x, a, y, b, ka, kb;
-
-    P = <span class="hljs-number">23</span>
-
-    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&quot;The value of P :&quot;</span>, P);
-
-    G = <span class="hljs-number">9</span>;
-
-    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&quot;The value of G :&quot;</span>, G);
-
-    a = <span class="hljs-number">4</span>;
-
-    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&quot;The private key a for Alice : &quot;</span>, a);
-
-    x = <span class="hljs-title function_">power</span>(G,a,P);
-
-    b = <span class="hljs-number">3</span>;
-
-    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&quot;The private key a for Bob : &quot;</span>, b);
-
-    y = <span class="hljs-title function_">power</span>(G,b,P);
-
-
-    ka = <span class="hljs-title function_">power</span>(y, a, P);
-    kb = <span class="hljs-title function_">power</span>(x, b, P);
-
-    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&quot;Secret key for the Alice is : &quot;</span>, ka);
-    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&quot;Secret key for the Bob is : &quot;</span>, kb);
-}
-
-
-<span class="hljs-title class_">DiffieHellman</span>()
-</code></pre></span></span></body></html>
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Holy Theory</title><style>img {
+    max-with: 400px;
+}</style></head><body><span>function template(locals) {var pug_html = "", pug_mixins = {}, pug_interp;var pug_debug_filename, pug_debug_line;try {;
+    var locals_for_with = (locals || {});
+    
+    (function (body, header, navigation) {
+      ;pug_debug_line = 1;
+pug_html = pug_html + "\u003Cspan\u003E";
+;pug_debug_line = 1;
+pug_html = pug_html + (null == (pug_interp = navigation) ? "" : pug_interp) + "\u003C\u002Fspan\u003E";
+;pug_debug_line = 2;
+pug_html = pug_html + "\u003Ch1\u003E";
+;pug_debug_line = 2;
+pug_html = pug_html + (pug.escape(null == (pug_interp = header) ? "" : pug_interp)) + "\u003C\u002Fh1\u003E";
+;pug_debug_line = 3;
+pug_html = pug_html + "\u003Chr\u002F\u003E";
+;pug_debug_line = 4;
+pug_html = pug_html + "\u003Cspan\u003E";
+;pug_debug_line = 4;
+pug_html = pug_html + (null == (pug_interp = body) ? "" : pug_interp) + "\u003C\u002Fspan\u003E";
+    }.call(this, "body" in locals_for_with ?
+        locals_for_with.body :
+        typeof body !== 'undefined' ? body : undefined, "header" in locals_for_with ?
+        locals_for_with.header :
+        typeof header !== 'undefined' ? header : undefined, "navigation" in locals_for_with ?
+        locals_for_with.navigation :
+        typeof navigation !== 'undefined' ? navigation : undefined));
+    ;} catch (err) {pug.rethrow(err, pug_debug_filename, pug_debug_line);};return pug_html;}</span></body></html>

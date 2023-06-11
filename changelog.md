@@ -10,6 +10,7 @@ All notable changes to this project will be documented in this file.
 * add Game Play Analysis I training in SQL
 * add Detect Capital Use training in TS
 * add Longest Uncommon Subsequence I training in TS
+* add testing section and 01-what-is-stress-test question
 # [0.0.21] - 2023-06-05
 * add Island Perimeter training in TS
 * add Number Complement training in TS

@@ -13,8 +13,8 @@ const basePath = '.' + baseUrl;
 const paths = getConfig().templates;
 
 
-const templates = new Templates(paths);
-// templates.setIndex('index');
+const templates = new Templates(paths, 'index');
+
 const nav = templates.getData()['nav'].build({
     values: [
         {
@@ -27,7 +27,6 @@ const nav = templates.getData()['nav'].build({
         }
     ]
 });
-
 
 function Builder() {
     class Entity {
@@ -160,13 +159,13 @@ function Builder() {
         if (!fs.existsSync(basePath + item.meta.category)) {
             fs.mkdirSync(basePath + item.meta.category, { recursive: true });
         }
-        const html = templates.getData()['index'].build({
-            content: templates.getData()['article'].build({
-                navigation: nav,
-                title: item.title,
-                body: item.body
-            })
+
+        const html = templates.getData()['article'].build({
+            navigation: nav,
+            title: item.title,
+            body: item.body
         });
+  
 
         fs.writeFileSync(basePath + item.meta.category + '/' + item.meta.fileName.dashed + '.html', html);
 
