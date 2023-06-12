@@ -187,6 +187,7 @@
 * [Game Play Analysis I](./training/game-play-analysis-i.md) – TypeScript
 * [Detect Capital Use](./training/detect-capital-use.md) – TypeScript
 * [Longest Uncommon Subsequence I](./training/longest-uncommon-subsequence-i.md) – TypeScript
+* [Minimum Absolute Difference in BST](./training/minimum-absolute-difference-in-bst.md) – TypeScript
 
 ## Question
 * [01-reverse-number](/questions/01-reverse-number.md) – Java, all languages
