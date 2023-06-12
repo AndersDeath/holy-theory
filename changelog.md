@@ -2,7 +2,9 @@
 
 All notable changes to this project will be documented in this file.
 
-# [0.0.22] - In Progress
+# [0.0.23] - In Progress
+
+# [0.0.22] - 2023-06-12
 * update builder.js
 * add Base 7 training in TS
 * add Relative Ranks training in TS
@@ -11,6 +13,7 @@ All notable changes to this project will be documented in this file.
 * add Detect Capital Use training in TS
 * add Longest Uncommon Subsequence I training in TS
 * add testing section and 01-what-is-stress-test question
+* add Minimum Absolute Difference in BST training in TS
 # [0.0.21] - 2023-06-05
 * add Island Perimeter training in TS
 * add Number Complement training in TS
