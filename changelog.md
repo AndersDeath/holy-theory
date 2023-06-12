@@ -3,6 +3,7 @@
 All notable changes to this project will be documented in this file.
 
 # [0.0.23] - In Progress
+* add What does API gateway do? abstract
 
 # [0.0.22] - 2023-06-12
 * update builder.js
