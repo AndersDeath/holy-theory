@@ -2,7 +2,9 @@
 
 All notable changes to this project will be documented in this file.
 
-# [0.0.22] - In Progress
+# [0.0.23] - In Progress
+
+# [0.0.22] - 2023-06-12
 * update builder.js
 * add Base 7 training in TS
 * add Relative Ranks training in TS
