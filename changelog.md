@@ -5,6 +5,7 @@ All notable changes to this project will be documented in this file.
 # [0.0.23] - In Progress
 * add What does API gateway do? abstract
 * add Reverse String II training in TS
+* add Regular Expression Matching training in TS
 # [0.0.22] - 2023-06-12
 * update builder.js
 * add Base 7 training in TS
