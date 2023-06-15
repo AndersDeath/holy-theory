@@ -189,6 +189,7 @@
 * [Longest Uncommon Subsequence I](./training/longest-uncommon-subsequence-i.md) – TypeScript
 * [Minimum Absolute Difference in BST](./training/minimum-absolute-difference-in-bst.md) – TypeScript
 * [Reverse String II](./training/reverse-string-2.md) – TypeScript
+* [Regular Expression Matching](./training/regular-expression-matching.md) – TypeScript
 
 ## Question
 * [01-reverse-number](/questions/01-reverse-number.md) – Java, all languages
