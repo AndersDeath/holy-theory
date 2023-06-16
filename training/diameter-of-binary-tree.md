@@ -1,28 +1,46 @@
 ---
-title: Detect Capital Use
-tags: ['training', 'task']
-languages: ['typescript']
+title: Diameter of Binary Tree
+tags: ["training", "task"]
+languages: ["typescript"]
 ---
-# Detect Capital Use
+
+# Diameter of Binary Tree
 
 ```typescript
-function detectCapitalUse(word: string): boolean {
-  const isUpperCase = (ch: string): boolean => ch === ch.toUpperCase();
+/**
+ * Definition for a binary tree node.
+ * class TreeNode {
+ *     val: number
+ *     left: TreeNode | null
+ *     right: TreeNode | null
+ *     constructor(val?: number, left?: TreeNode | null, right?: TreeNode | null) {
+ *         this.val = (val===undefined ? 0 : val)
+ *         this.left = (left===undefined ? null : left)
+ *         this.right = (right===undefined ? null : right)
+ *     }
+ * }
+ */
 
-    if (word === word.toUpperCase()) {
-        return true;
+function diameterOfBinaryTree(root: TreeNode | null): number {
+  let diameter = 0;
+
+  function depth(node: TreeNode | null): number {
+    if (node === null) {
+      return 0;
     }
 
-    if (word === word.toLowerCase()) {
-        return true;
-    }
+    const leftDepth = depth(node.left);
+    const rightDepth = depth(node.right);
 
-    if (isUpperCase(word[0]) && word.slice(1) === word.slice(1).toLowerCase()) {
-        return true;
-    }
+    diameter = Math.max(diameter, leftDepth + rightDepth);
 
-    return false;
-};
+    return Math.max(leftDepth, rightDepth) + 1;
+  }
+
+  depth(root);
+
+  return diameter;
+}
 ```
 
-* [Go back](../readme.md)
+- [Go back](../readme.md)
