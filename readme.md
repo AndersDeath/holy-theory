@@ -191,6 +191,7 @@
 * [Reverse String II](./training/reverse-string-2.md) – TypeScript
 * [Regular Expression Matching](./training/regular-expression-matching.md) – TypeScript
 * [3Sum Closest](./training/3sum-closest.md) – TypeScript
+* [Diameter of Binary Tree](./training/diameter-of-binary-tree.md) – TypeScript
 
 ## Question
 * [01-reverse-number](/questions/01-reverse-number.md) – Java, all languages
