@@ -192,6 +192,7 @@
 * [Regular Expression Matching](./training/regular-expression-matching.md) – TypeScript
 * [3Sum Closest](./training/3sum-closest.md) – TypeScript
 * [Diameter of Binary Tree](./training/diameter-of-binary-tree.md) – TypeScript
+* [Fibonacci Number](./training/fibonacci-number.md) – TypeScript
 
 ## Question
 * [01-reverse-number](/questions/01-reverse-number.md) – Java, all languages

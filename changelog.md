@@ -8,6 +8,7 @@ All notable changes to this project will be documented in this file.
 * add Regular Expression Matching training in TS
 * add 3Sum Closest training in TS
 * add Diameter of Binary Tree training in TS
+* add Fibonacci Number training in TS
 # [0.0.22] - 2023-06-12
 * update builder.js
 * add Base 7 training in TS
