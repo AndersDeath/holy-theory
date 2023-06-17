@@ -10,7 +10,21 @@ img {
 .main {
     max-width: 800px;
     margin: 0 auto;
-}</style></head><body><div class="main"><span><div><ul><li> <a href="/holy-theory/builder/test/">Main page</a></li><li> <a href="/holy-theory/builder/test//languages.html">Statistics</a></li></ul></div></span><h1></h1><hr/><span><h1 id="memo">Memo</h1>
+}
+.navigation {
+    display: flex;
+    flex-direction: row;
+}
+
+.navigation ul {
+    display: flex;
+    flex-direction: row;
+}
+
+.navigation ul li {
+    display: flex;
+    list-style: none;
+}</style></head><body><div class="main"><span><nav class="navigation"><ul><li> <a href="/holy-theory/builder/test/">Main page</a></li><li> <a href="/holy-theory/builder/test//languages.html">Statistics</a></li></ul></nav></span><h1></h1><hr/><span><h1 id="memo">Memo</h1>
 <pre><code class="hljs language-typescript"><span class="hljs-keyword">export</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">memo</span>(<span class="hljs-params">func: <span class="hljs-built_in">any</span></span>) {
     <span class="hljs-keyword">const</span> <span class="hljs-attr">cache</span>: <span class="hljs-built_in">any</span> = {};
     <span class="hljs-keyword">return</span> <span class="hljs-function">(<span class="hljs-params">...args: <span class="hljs-built_in">any</span>[]</span>) =&gt;</span>{

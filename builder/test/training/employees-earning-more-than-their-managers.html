@@ -10,7 +10,21 @@ img {
 .main {
     max-width: 800px;
     margin: 0 auto;
-}</style></head><body><div class="main"><span><div><ul><li> <a href="/holy-theory/builder/test/">Main page</a></li><li> <a href="/holy-theory/builder/test//languages.html">Statistics</a></li></ul></div></span><h1></h1><hr/><span><h1 id="employees-earning-more-than-their-managers">Employees Earning More Than Their Managers</h1>
+}
+.navigation {
+    display: flex;
+    flex-direction: row;
+}
+
+.navigation ul {
+    display: flex;
+    flex-direction: row;
+}
+
+.navigation ul li {
+    display: flex;
+    list-style: none;
+}</style></head><body><div class="main"><span><nav class="navigation"><ul><li> <a href="/holy-theory/builder/test/">Main page</a></li><li> <a href="/holy-theory/builder/test//languages.html">Statistics</a></li></ul></nav></span><h1></h1><hr/><span><h1 id="employees-earning-more-than-their-managers">Employees Earning More Than Their Managers</h1>
 <pre><code class="hljs language-sql"><span class="hljs-keyword">SELECT</span> a.Name <span class="hljs-keyword">AS</span> Employee
 <span class="hljs-keyword">FROM</span> Employee a, Employee b
 <span class="hljs-keyword">WHERE</span> a.ManagerId <span class="hljs-operator">=</span> b.Id <span class="hljs-keyword">AND</span> a.Salary <span class="hljs-operator">&gt;</span> b.Salary

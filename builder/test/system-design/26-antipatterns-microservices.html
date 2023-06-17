@@ -10,7 +10,21 @@ img {
 .main {
     max-width: 800px;
     margin: 0 auto;
-}</style></head><body><div class="main"><span><div><ul><li> <a href="/holy-theory/builder/test/">Main page</a></li><li> <a href="/holy-theory/builder/test//languages.html">Statistics</a></li></ul></div></span><h1></h1><hr/><span><h2 id="common-anti-patterns-in-microservices-architecture">Common anti-patterns in microservices architecture</h2>
+}
+.navigation {
+    display: flex;
+    flex-direction: row;
+}
+
+.navigation ul {
+    display: flex;
+    flex-direction: row;
+}
+
+.navigation ul li {
+    display: flex;
+    list-style: none;
+}</style></head><body><div class="main"><span><nav class="navigation"><ul><li> <a href="/holy-theory/builder/test/">Main page</a></li><li> <a href="/holy-theory/builder/test//languages.html">Statistics</a></li></ul></nav></span><h1></h1><hr/><span><h2 id="common-anti-patterns-in-microservices-architecture">Common anti-patterns in microservices architecture</h2>
 <p><img src="https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/26-antipatterns-microservices.png" alt="Common anti-patterns in microservices architecture"></p>
 <ol>
 <li><p><strong>Monolithic Mindset:</strong> Treating microservices as miniature monoliths, where services are tightly coupled and communicate extensively, negating the benefits of independent, autonomous services.</p>

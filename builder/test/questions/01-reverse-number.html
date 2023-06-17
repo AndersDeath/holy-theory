@@ -10,7 +10,21 @@ img {
 .main {
     max-width: 800px;
     margin: 0 auto;
-}</style></head><body><div class="main"><span><div><ul><li> <a href="/holy-theory/builder/test/">Main page</a></li><li> <a href="/holy-theory/builder/test//languages.html">Statistics</a></li></ul></div></span><h1></h1><hr/><span><h1 id="how-to-reverse-a-number">How to reverse a number?</h1>
+}
+.navigation {
+    display: flex;
+    flex-direction: row;
+}
+
+.navigation ul {
+    display: flex;
+    flex-direction: row;
+}
+
+.navigation ul li {
+    display: flex;
+    list-style: none;
+}</style></head><body><div class="main"><span><nav class="navigation"><ul><li> <a href="/holy-theory/builder/test/">Main page</a></li><li> <a href="/holy-theory/builder/test//languages.html">Statistics</a></li></ul></nav></span><h1></h1><hr/><span><h1 id="how-to-reverse-a-number">How to reverse a number?</h1>
 <p>To invert a number in Java, you need to divide the number by 10 in the loop until it equals 0. And in the body of the loop find the remainder of the division by 10 and add to the result from the previous step, increased by a factor of 10.</p>
 <pre><code class="hljs language-java">    <span class="hljs-type">int</span> <span class="hljs-variable">number</span> <span class="hljs-operator">=</span> <span class="hljs-number">12132</span>;
     <span class="hljs-type">int</span> <span class="hljs-variable">reverse</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>;
