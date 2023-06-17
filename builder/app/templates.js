@@ -6,11 +6,12 @@ class Templates {
     constructor(paths, indexName) {
         this.paths = paths;
         this.data = [];
+        this.indexBuilder;
         if (indexName) {
             this.indexName = indexName;
             this.getIndexBuild();
         }
-        this.indexBuilder;
+        
         this.load();
     }
 
@@ -32,10 +33,10 @@ class Templates {
             if (this.indexName && element.title !== this.indexName) {
                 return {
                     file: file,
-                    build: () => {
+                    build: (params) => {
                         return this.indexBuilder({
-                            content: pug.compile(file)
-                        })
+                            content: pug.compile(file)(params)
+                        });
                     }
                 }
             } else {

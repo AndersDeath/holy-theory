@@ -6,7 +6,7 @@ During a stress test, the software system is intentionally pushed to its limits 
 
 The stress test simulates conditions that go beyond the typical usage patterns and aims to answer questions like:
 
-1.  How does the system behave when a significantly higher number of users access it simultaneously?
+1. How does the system behave when a significantly higher number of users access it simultaneously?
 2. Does the system respond within acceptable time frames under high load?
 3. Does the system handle sudden spikes in traffic without crashing or experiencing performance degradation?
 4. Can the system recover gracefully from resource exhaustion or failures?

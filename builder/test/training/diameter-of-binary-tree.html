@@ -1,0 +1,39 @@
+<span><div><ul><li> <a href="/holy-theory/builder/test/">Main page</a></li><li> <a href="/holy-theory/builder/test//languages.html">Statistics</a></li></ul></div></span><h1></h1><hr/><span><h1 id="diameter-of-binary-tree">Diameter of Binary Tree</h1>
+<pre><code class="hljs language-typescript"><span class="hljs-comment">/**
+ * Definition for a binary tree node.
+ * class TreeNode {
+ *     val: number
+ *     left: TreeNode | null
+ *     right: TreeNode | null
+ *     constructor(val?: number, left?: TreeNode | null, right?: TreeNode | null) {
+ *         this.val = (val===undefined ? 0 : val)
+ *         this.left = (left===undefined ? null : left)
+ *         this.right = (right===undefined ? null : right)
+ *     }
+ * }
+ */</span>
+
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">diameterOfBinaryTree</span>(<span class="hljs-params">root: TreeNode | <span class="hljs-literal">null</span></span>): <span class="hljs-built_in">number</span> {
+  <span class="hljs-keyword">let</span> diameter = <span class="hljs-number">0</span>;
+
+  <span class="hljs-keyword">function</span> <span class="hljs-title function_">depth</span>(<span class="hljs-params">node: TreeNode | <span class="hljs-literal">null</span></span>): <span class="hljs-built_in">number</span> {
+    <span class="hljs-keyword">if</span> (node === <span class="hljs-literal">null</span>) {
+      <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+    }
+
+    <span class="hljs-keyword">const</span> leftDepth = <span class="hljs-title function_">depth</span>(node.<span class="hljs-property">left</span>);
+    <span class="hljs-keyword">const</span> rightDepth = <span class="hljs-title function_">depth</span>(node.<span class="hljs-property">right</span>);
+
+    diameter = <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">max</span>(diameter, leftDepth + rightDepth);
+
+    <span class="hljs-keyword">return</span> <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">max</span>(leftDepth, rightDepth) + <span class="hljs-number">1</span>;
+  }
+
+  <span class="hljs-title function_">depth</span>(root);
+
+  <span class="hljs-keyword">return</span> diameter;
+}
+</code></pre><ul>
+<li><a href="../readme.md">Go back</a></li>
+</ul>
+</span>

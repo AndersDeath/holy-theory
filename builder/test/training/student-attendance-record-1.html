@@ -1,0 +1,30 @@
+<span><div><ul><li> <a href="/holy-theory/builder/test/">Main page</a></li><li> <a href="/holy-theory/builder/test//languages.html">Statistics</a></li></ul></div></span><h1></h1><hr/><span><h1 id="student-attendance-record-i">Student Attendance Record I</h1>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">checkRecord</span>(<span class="hljs-params">s: <span class="hljs-built_in">string</span></span>): <span class="hljs-built_in">boolean</span> {
+  <span class="hljs-keyword">let</span> absentCount = <span class="hljs-number">0</span>;
+  <span class="hljs-keyword">let</span> lateCount = <span class="hljs-number">0</span>;
+
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; s.<span class="hljs-property">length</span>; i++) {
+    <span class="hljs-keyword">const</span> char = s[i];
+
+    <span class="hljs-keyword">if</span> (char === <span class="hljs-string">&quot;A&quot;</span>) {
+      absentCount++;
+
+      <span class="hljs-keyword">if</span> (absentCount &gt; <span class="hljs-number">1</span>) {
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+      }
+    }
+
+    <span class="hljs-keyword">if</span> (char === <span class="hljs-string">&quot;L&quot;</span>) {
+      lateCount++;
+
+      <span class="hljs-keyword">if</span> (lateCount &gt; <span class="hljs-number">2</span> &amp;&amp; s[i - <span class="hljs-number">1</span>] === <span class="hljs-string">&quot;L&quot;</span> &amp;&amp; s[i - <span class="hljs-number">2</span>] === <span class="hljs-string">&quot;L&quot;</span>) {
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+      }
+    } <span class="hljs-keyword">else</span> {
+      lateCount = <span class="hljs-number">0</span>;
+    }
+  }
+
+  <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+};
+</code></pre></span>
