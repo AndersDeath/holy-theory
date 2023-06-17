@@ -30,7 +30,7 @@ class Templates {
     build(element) {
         const file = fs.readFileSync(element.path, 'utf-8');
         if (element.type === 'pug') {
-            if (this.indexName && element.title !== this.indexName) {
+            if (this.indexName && element.title !== this.indexName && !element.noIndex) {
                 return {
                     file: file,
                     build: (params) => {
