@@ -6,8 +6,18 @@ html(lang="en")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title Holy Theory
         style.
+            body {
+                margin: 0;
+                padding: 0;
+            }
+
             img {
-                max-with: 400px;
+                max-width: 400px;
+            }
+
+            .main {
+                max-width: 800px;
+                margin: 0 auto;
             }
     body
-        span!=content
+        div( class="main" )!=content

@@ -10,6 +10,7 @@ All notable changes to this project will be documented in this file.
 * add Diameter of Binary Tree training in TS
 * add Fibonacci Number training in TS
 * add Student Attendance Record I training in TS
+* update builder.js
 # [0.0.22] - 2023-06-12
 * update builder.js
 * add Base 7 training in TS

@@ -6,11 +6,12 @@ class Templates {
     constructor(paths, indexName) {
         this.paths = paths;
         this.data = [];
+        this.indexBuilder;
         if (indexName) {
             this.indexName = indexName;
             this.getIndexBuild();
         }
-        this.indexBuilder;
+        
         this.load();
     }
 
@@ -29,13 +30,13 @@ class Templates {
     build(element) {
         const file = fs.readFileSync(element.path, 'utf-8');
         if (element.type === 'pug') {
-            if (this.indexName && element.title !== this.indexName) {
+            if (this.indexName && element.title !== this.indexName && !element.noIndex) {
                 return {
                     file: file,
-                    build: () => {
+                    build: (params) => {
                         return this.indexBuilder({
-                            content: pug.compile(file)
-                        })
+                            content: pug.compile(file)(params)
+                        });
                     }
                 }
             } else {

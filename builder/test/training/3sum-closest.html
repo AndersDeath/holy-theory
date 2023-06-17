@@ -1,0 +1,43 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Holy Theory</title><style>body {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 400px;
+}
+
+.main {
+    max-width: 800px;
+    margin: 0 auto;
+}</style></head><body><div class="main"><span><div><ul><li> <a href="/holy-theory/builder/test/">Main page</a></li><li> <a href="/holy-theory/builder/test//languages.html">Statistics</a></li></ul></div></span><h1></h1><hr/><span><h1 id="3sum-closest">3Sum Closest</h1>
+<pre><code class="hljs language-typescript">
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">threeSumClosest</span>(<span class="hljs-params">nums: <span class="hljs-built_in">number</span>[], target: <span class="hljs-built_in">number</span></span>): <span class="hljs-built_in">number</span> {
+  nums.<span class="hljs-title function_">sort</span>(<span class="hljs-function">(<span class="hljs-params">a, b</span>) =&gt;</span> a - b);
+
+  <span class="hljs-keyword">let</span> closestSum = nums[<span class="hljs-number">0</span>] + nums[<span class="hljs-number">1</span>] + nums[<span class="hljs-number">2</span>];
+
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; nums.<span class="hljs-property">length</span> - <span class="hljs-number">2</span>; i++) {
+    <span class="hljs-keyword">let</span> left = i + <span class="hljs-number">1</span>;
+    <span class="hljs-keyword">let</span> right = nums.<span class="hljs-property">length</span> - <span class="hljs-number">1</span>;
+
+    <span class="hljs-keyword">while</span> (left &lt; right) {
+      <span class="hljs-keyword">const</span> sum = nums[i] + nums[left] + nums[right];
+
+      <span class="hljs-keyword">if</span> (<span class="hljs-title class_">Math</span>.<span class="hljs-title function_">abs</span>(sum - target) &lt; <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">abs</span>(closestSum - target)) {
+        closestSum = sum;
+      }
+
+      <span class="hljs-keyword">if</span> (sum &lt; target) {
+        left++;
+      } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (sum &gt; target) {
+        right--;
+      } <span class="hljs-keyword">else</span> {
+        <span class="hljs-keyword">return</span> sum;
+      }
+    }
+  }
+
+  <span class="hljs-keyword">return</span> closestSum;
+};
+</code></pre></span></div></body></html>

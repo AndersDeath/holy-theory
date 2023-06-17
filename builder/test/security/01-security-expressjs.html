@@ -1,28 +1,47 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Holy Theory</title><style>img {
-    max-with: 400px;
-}</style></head><body><span>function template(locals) {var pug_html = "", pug_mixins = {}, pug_interp;var pug_debug_filename, pug_debug_line;try {;
-    var locals_for_with = (locals || {});
-    
-    (function (body, header, navigation) {
-      ;pug_debug_line = 1;
-pug_html = pug_html + "\u003Cspan\u003E";
-;pug_debug_line = 1;
-pug_html = pug_html + (null == (pug_interp = navigation) ? "" : pug_interp) + "\u003C\u002Fspan\u003E";
-;pug_debug_line = 2;
-pug_html = pug_html + "\u003Ch1\u003E";
-;pug_debug_line = 2;
-pug_html = pug_html + (pug.escape(null == (pug_interp = header) ? "" : pug_interp)) + "\u003C\u002Fh1\u003E";
-;pug_debug_line = 3;
-pug_html = pug_html + "\u003Chr\u002F\u003E";
-;pug_debug_line = 4;
-pug_html = pug_html + "\u003Cspan\u003E";
-;pug_debug_line = 4;
-pug_html = pug_html + (null == (pug_interp = body) ? "" : pug_interp) + "\u003C\u002Fspan\u003E";
-    }.call(this, "body" in locals_for_with ?
-        locals_for_with.body :
-        typeof body !== 'undefined' ? body : undefined, "header" in locals_for_with ?
-        locals_for_with.header :
-        typeof header !== 'undefined' ? header : undefined, "navigation" in locals_for_with ?
-        locals_for_with.navigation :
-        typeof navigation !== 'undefined' ? navigation : undefined));
-    ;} catch (err) {pug.rethrow(err, pug_debug_filename, pug_debug_line);};return pug_html;}</span></body></html>
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Holy Theory</title><style>body {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 400px;
+}
+
+.main {
+    max-width: 800px;
+    margin: 0 auto;
+}</style></head><body><div class="main"><span><div><ul><li> <a href="/holy-theory/builder/test/">Main page</a></li><li> <a href="/holy-theory/builder/test//languages.html">Statistics</a></li></ul></div></span><h1></h1><hr/><span><h1 id="main-principles-of-security-in-expressjs-server">Main principles of security in ExpressJS server</h1>
+<p><img src="https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/01-security-expressjs.png" alt="Main principles of security in ExpressJS server"></p>
+<ol>
+<li><p><strong>Input Validation:</strong> Validate and sanitize all user input, including parameters, query strings, and request bodies, to prevent common vulnerabilities like SQL injection, cross-site scripting (XSS), and command injection.</p>
+</li>
+<li><p><strong>Authentication:</strong> Implement proper user authentication mechanisms, such as username/password authentication, token-based authentication (JWT), or OAuth, to ensure that only authorized users can access protected resources.</p>
+</li>
+<li><p><strong>Authorization:</strong> Enforce authorization checks to ensure that authenticated users have the appropriate permissions to access specific resources or perform certain actions.</p>
+</li>
+<li><p><strong>Session Management:</strong> Use secure session management techniques, such as setting secure and HTTP-only cookies, implementing session expiration and regeneration, and guarding against session fixation attacks.</p>
+</li>
+<li><p><strong>Secure Communication:</strong> Always use HTTPS (TLS/SSL) to encrypt communication between the server and clients, preventing eavesdropping, data tampering, and man-in-the-middle attacks.</p>
+</li>
+<li><p><strong>Error Handling:</strong> Handle errors carefully to avoid leaking sensitive information in error messages and implement proper error logging to help identify and respond to potential security issues.</p>
+</li>
+<li><p><strong>Secure Headers:</strong> Set secure HTTP response headers, including Content Security Policy (CSP), Strict-Transport-Security (HSTS), X-XSS-Protection, X-Content-Type-Options, and X-Frame-Options, to mitigate common web vulnerabilities.</p>
+</li>
+<li><p><strong>Cross-Site Request Forgery (CSRF) Protection:</strong> Implement CSRF tokens and enforce their usage to protect against CSRF attacks, ensuring that requests made to your server originate from legitimate sources.</p>
+</li>
+<li><p><strong>Security Updates:</strong> Regularly update and patch both Express.js and its dependencies to address any security vulnerabilities that may be discovered.</p>
+</li>
+<li><p><strong>Security Audits and Testing:</strong> Conduct security audits and perform penetration testing to identify potential vulnerabilities and weaknesses in your server, and regularly test your application for security issues.</p>
+</li>
+<li><p><strong>Secure File Uploads:</strong> Implement proper validation and handling of file uploads to prevent malicious files from being uploaded and executed on the server.</p>
+</li>
+<li><p><strong>Rate Limiting:</strong> Implement rate limiting mechanisms to prevent brute force attacks, denial-of-service (DoS) attacks, and other forms of abuse.</p>
+</li>
+<li><p><strong>Database Security:</strong> Implement secure database practices, such as parameterized queries or prepared statements, to prevent SQL injection attacks, and ensure proper access control and encryption of sensitive data.</p>
+</li>
+<li><p><strong>Server Hardening:</strong> Secure the underlying server infrastructure by following best practices for server configuration, firewall settings, and restricting unnecessary services and ports.</p>
+</li>
+<li><p><strong>Regular Monitoring and Logging:</strong> Implement logging and monitoring systems to detect and respond to security incidents, unusual activities, and potential threats in a timely manner.</p>
+</li>
+</ol>
+</span></div></body></html>

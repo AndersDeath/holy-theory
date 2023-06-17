@@ -1,28 +1,26 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Holy Theory</title><style>img {
-    max-with: 400px;
-}</style></head><body><span>function template(locals) {var pug_html = "", pug_mixins = {}, pug_interp;var pug_debug_filename, pug_debug_line;try {;
-    var locals_for_with = (locals || {});
-    
-    (function (body, header, navigation) {
-      ;pug_debug_line = 1;
-pug_html = pug_html + "\u003Cspan\u003E";
-;pug_debug_line = 1;
-pug_html = pug_html + (null == (pug_interp = navigation) ? "" : pug_interp) + "\u003C\u002Fspan\u003E";
-;pug_debug_line = 2;
-pug_html = pug_html + "\u003Ch1\u003E";
-;pug_debug_line = 2;
-pug_html = pug_html + (pug.escape(null == (pug_interp = header) ? "" : pug_interp)) + "\u003C\u002Fh1\u003E";
-;pug_debug_line = 3;
-pug_html = pug_html + "\u003Chr\u002F\u003E";
-;pug_debug_line = 4;
-pug_html = pug_html + "\u003Cspan\u003E";
-;pug_debug_line = 4;
-pug_html = pug_html + (null == (pug_interp = body) ? "" : pug_interp) + "\u003C\u002Fspan\u003E";
-    }.call(this, "body" in locals_for_with ?
-        locals_for_with.body :
-        typeof body !== 'undefined' ? body : undefined, "header" in locals_for_with ?
-        locals_for_with.header :
-        typeof header !== 'undefined' ? header : undefined, "navigation" in locals_for_with ?
-        locals_for_with.navigation :
-        typeof navigation !== 'undefined' ? navigation : undefined));
-    ;} catch (err) {pug.rethrow(err, pug_debug_filename, pug_debug_line);};return pug_html;}</span></body></html>
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Holy Theory</title><style>body {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 400px;
+}
+
+.main {
+    max-width: 800px;
+    margin: 0 auto;
+}</style></head><body><div class="main"><span><div><ul><li> <a href="/holy-theory/builder/test/">Main page</a></li><li> <a href="/holy-theory/builder/test//languages.html">Statistics</a></li></ul></div></span><h1></h1><hr/><span><h1 id="intersection-of-two-arrays">Intersection of two arrays</h1>
+<pre><code class="hljs language-typescript">
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">intersection</span>(<span class="hljs-params">nums1: <span class="hljs-built_in">number</span>[], nums2: <span class="hljs-built_in">number</span>[]</span>) {
+    <span class="hljs-keyword">let</span> nums1Map = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Set</span>(nums1);
+    <span class="hljs-keyword">let</span> result = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Set</span>();
+    nums2.<span class="hljs-title function_">forEach</span>(<span class="hljs-function"><span class="hljs-params">item</span> =&gt;</span> {
+        <span class="hljs-keyword">if</span>(nums1Map.<span class="hljs-title function_">has</span>(item)){
+            result.<span class="hljs-title function_">add</span>(item)
+        }
+    });
+    <span class="hljs-keyword">return</span> <span class="hljs-title class_">Array</span>.<span class="hljs-title function_">from</span>(result);
+};
+
+</code></pre></span></div></body></html>

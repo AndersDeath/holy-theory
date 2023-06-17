@@ -1,28 +1,48 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Holy Theory</title><style>img {
-    max-with: 400px;
-}</style></head><body><span>function template(locals) {var pug_html = "", pug_mixins = {}, pug_interp;var pug_debug_filename, pug_debug_line;try {;
-    var locals_for_with = (locals || {});
-    
-    (function (body, header, navigation) {
-      ;pug_debug_line = 1;
-pug_html = pug_html + "\u003Cspan\u003E";
-;pug_debug_line = 1;
-pug_html = pug_html + (null == (pug_interp = navigation) ? "" : pug_interp) + "\u003C\u002Fspan\u003E";
-;pug_debug_line = 2;
-pug_html = pug_html + "\u003Ch1\u003E";
-;pug_debug_line = 2;
-pug_html = pug_html + (pug.escape(null == (pug_interp = header) ? "" : pug_interp)) + "\u003C\u002Fh1\u003E";
-;pug_debug_line = 3;
-pug_html = pug_html + "\u003Chr\u002F\u003E";
-;pug_debug_line = 4;
-pug_html = pug_html + "\u003Cspan\u003E";
-;pug_debug_line = 4;
-pug_html = pug_html + (null == (pug_interp = body) ? "" : pug_interp) + "\u003C\u002Fspan\u003E";
-    }.call(this, "body" in locals_for_with ?
-        locals_for_with.body :
-        typeof body !== 'undefined' ? body : undefined, "header" in locals_for_with ?
-        locals_for_with.header :
-        typeof header !== 'undefined' ? header : undefined, "navigation" in locals_for_with ?
-        locals_for_with.navigation :
-        typeof navigation !== 'undefined' ? navigation : undefined));
-    ;} catch (err) {pug.rethrow(err, pug_debug_filename, pug_debug_line);};return pug_html;}</span></body></html>
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Holy Theory</title><style>body {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 400px;
+}
+
+.main {
+    max-width: 800px;
+    margin: 0 auto;
+}</style></head><body><div class="main"><span><div><ul><li> <a href="/holy-theory/builder/test/">Main page</a></li><li> <a href="/holy-theory/builder/test//languages.html">Statistics</a></li></ul></div></span><h1></h1><hr/><span><h1 id="keyboard-row">Keyboard Row</h1>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">findWords</span>(<span class="hljs-params">words: <span class="hljs-built_in">string</span>[]</span>): <span class="hljs-built_in">string</span>[] {
+    <span class="hljs-keyword">const</span> <span class="hljs-attr">rowMap</span>: <span class="hljs-title class_">Map</span>&lt;<span class="hljs-built_in">string</span>, <span class="hljs-built_in">number</span>&gt; = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Map</span>([
+[<span class="hljs-string">&#x27;Q&#x27;</span>, <span class="hljs-number">1</span>], [<span class="hljs-string">&#x27;W&#x27;</span>, <span class="hljs-number">1</span>], [<span class="hljs-string">&#x27;E&#x27;</span>, <span class="hljs-number">1</span>], [<span class="hljs-string">&#x27;R&#x27;</span>, <span class="hljs-number">1</span>], [<span class="hljs-string">&#x27;T&#x27;</span>, <span class="hljs-number">1</span>], [<span class="hljs-string">&#x27;Y&#x27;</span>, <span class="hljs-number">1</span>], [<span class="hljs-string">&#x27;U&#x27;</span>, <span class="hljs-number">1</span>], [<span class="hljs-string">&#x27;I&#x27;</span>, <span class="hljs-number">1</span>], [<span class="hljs-string">&#x27;O&#x27;</span>, <span class="hljs-number">1</span>], [<span class="hljs-string">&#x27;P&#x27;</span>, <span class="hljs-number">1</span>], [<span class="hljs-string">&#x27;A&#x27;</span>, <span class="hljs-number">2</span>], [<span class="hljs-string">&#x27;S&#x27;</span>, <span class="hljs-number">2</span>], [<span class="hljs-string">&#x27;D&#x27;</span>, <span class="hljs-number">2</span>], [<span class="hljs-string">&#x27;F&#x27;</span>, <span class="hljs-number">2</span>], [<span class="hljs-string">&#x27;G&#x27;</span>, <span class="hljs-number">2</span>], [<span class="hljs-string">&#x27;H&#x27;</span>, <span class="hljs-number">2</span>], [<span class="hljs-string">&#x27;J&#x27;</span>, <span class="hljs-number">2</span>], [<span class="hljs-string">&#x27;K&#x27;</span>, <span class="hljs-number">2</span>], [<span class="hljs-string">&#x27;L&#x27;</span>, <span class="hljs-number">2</span>], [<span class="hljs-string">&#x27;Z&#x27;</span>, <span class="hljs-number">3</span>], [<span class="hljs-string">&#x27;X&#x27;</span>, <span class="hljs-number">3</span>], [<span class="hljs-string">&#x27;C&#x27;</span>, <span class="hljs-number">3</span>], [<span class="hljs-string">&#x27;V&#x27;</span>, <span class="hljs-number">3</span>], [<span class="hljs-string">&#x27;B&#x27;</span>, <span class="hljs-number">3</span>], [<span class="hljs-string">&#x27;N&#x27;</span>, <span class="hljs-number">3</span>], [<span class="hljs-string">&#x27;M&#x27;</span>, <span class="hljs-number">3</span>]
+    ]);
+
+    <span class="hljs-keyword">const</span> <span class="hljs-attr">result</span>: <span class="hljs-built_in">string</span>[] = [];
+
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">const</span> word <span class="hljs-keyword">of</span> words) {
+        <span class="hljs-keyword">if</span> (<span class="hljs-title function_">isInSameRow</span>(word.<span class="hljs-title function_">toUpperCase</span>(), rowMap)) {
+            result.<span class="hljs-title function_">push</span>(word);
+        }
+    }
+
+    <span class="hljs-keyword">return</span> result;
+}
+
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">isInSameRow</span>(<span class="hljs-params">word: <span class="hljs-built_in">string</span>, rowMap: <span class="hljs-built_in">Map</span>&lt;<span class="hljs-built_in">string</span>, <span class="hljs-built_in">number</span>&gt;</span>): <span class="hljs-built_in">boolean</span> {
+    <span class="hljs-keyword">if</span> (word.<span class="hljs-property">length</span> &lt;= <span class="hljs-number">1</span>) {
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+    }
+
+    <span class="hljs-keyword">const</span> <span class="hljs-attr">rowNumber</span>: <span class="hljs-built_in">number</span> = rowMap.<span class="hljs-title function_">get</span>(word[<span class="hljs-number">0</span>]) || <span class="hljs-number">0</span>;
+
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">1</span>; i &lt; word.<span class="hljs-property">length</span>; i++) {
+        <span class="hljs-keyword">const</span> <span class="hljs-attr">currentChar</span>: <span class="hljs-built_in">string</span> = word[i];
+        <span class="hljs-keyword">const</span> <span class="hljs-attr">currentRowNumber</span>: <span class="hljs-built_in">number</span> = rowMap.<span class="hljs-title function_">get</span>(currentChar) || <span class="hljs-number">0</span>;
+
+        <span class="hljs-keyword">if</span> (currentRowNumber !== rowNumber) {
+            <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+        }
+    }
+
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+}
+</code></pre></span></div></body></html>
