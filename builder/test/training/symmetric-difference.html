@@ -1,8 +1,18 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Holy Theory</title><style>img {
-    max-with: 400px;
-}</style></head><body><span><span><div><ul><li> <a href="/holy-theory/builder/test/">Main page</a></li><li> <a href="/holy-theory/builder/test//languages.html">Statistics</a></li></ul></div></span><h1></h1><hr/><span><h1 id="symmetric-difference">Symmetric difference</h1>
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Holy Theory</title><style>body {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 400px;
+}
+
+.main {
+    max-width: 800px;
+    margin: 0 auto;
+}</style></head><body><div class="main"><span><div><ul><li> <a href="/holy-theory/builder/test/">Main page</a></li><li> <a href="/holy-theory/builder/test//languages.html">Statistics</a></li></ul></div></span><h1></h1><hr/><span><h1 id="symmetric-difference">Symmetric difference</h1>
 <pre><code class="hljs language-typescript"><span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> <span class="hljs-title function_">symmetricDifference</span> = (<span class="hljs-params">...args: <span class="hljs-built_in">any</span></span>) =&gt; [...<span class="hljs-keyword">new</span> <span class="hljs-title class_">Set</span>(args.<span class="hljs-title function_">reduce</span>(<span class="hljs-function">(<span class="hljs-params">arr1: <span class="hljs-built_in">any</span>, arr2: <span class="hljs-built_in">any</span></span>) =&gt;</span> [
   ...arr1.<span class="hljs-title function_">filter</span>(<span class="hljs-function">(<span class="hljs-params">e: <span class="hljs-built_in">any</span></span>) =&gt;</span> !arr2.<span class="hljs-title function_">includes</span>(e)),
   ...arr2.<span class="hljs-title function_">filter</span>(<span class="hljs-function">(<span class="hljs-params">e: <span class="hljs-built_in">any</span></span>) =&gt;</span> !arr1.<span class="hljs-title function_">includes</span>(e))
 ]))];
-</code></pre></span></span></body></html>
+</code></pre></span></div></body></html>
