@@ -10,7 +10,25 @@ img {
 .main {
     max-width: 800px;
     margin: 0 auto;
-}</style></head><body><div class="main"><span><div><ul><li> <a href="/holy-theory/builder/test/">Main page</a></li><li> <a href="/holy-theory/builder/test//languages.html">Statistics</a></li></ul></div></span><h1></h1><hr/><span><h1 id="horizontal-and-vertical-scaling">Horizontal and vertical scaling</h1>
+}
+.navigation {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #000;
+}
+
+.navigation ul {
+    display: flex;
+    padding: 0;
+    flex-direction: row;
+    margin: 0;
+}
+
+.navigation ul li {
+    display: flex;
+    list-style: none;
+    padding: 10px;
+}</style></head><body><div class="main"><span><nav class="navigation"><ul><li> <a href="/holy-theory/builder/test/">Main page</a></li><li> <a href="/holy-theory/builder/test//languages.html">Statistics</a></li></ul></nav></span><h1></h1><span><h1 id="horizontal-and-vertical-scaling">Horizontal and vertical scaling</h1>
 <p>Scalability refers to an application’s ability to handle and withstand an increased workload without sacrificing latency. An application needs solid computing power to scale well. The servers should be powerful enough to handle increased traffic loads. There are two main ways to scale an application: horizontally and vertically.</p>
 <p>Horizontal scaling, or scaling out, means adding more hardware to the existing hardware resource pool. It increases the computational power of the system as a whole. Vertical scaling, or scaling up, means adding more power to your server. It increases the power of the hardware running the application.</p>
 <p><img src="https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/01-horizontal-vertical-scaling.png" alt="Horizontal and vertical scaling"></p>

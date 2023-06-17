@@ -10,7 +10,25 @@ img {
 .main {
     max-width: 800px;
     margin: 0 auto;
-}</style></head><body><div class="main"><span><div><ul><li> <a href="/holy-theory/builder/test/">Main page</a></li><li> <a href="/holy-theory/builder/test//languages.html">Statistics</a></li></ul></div></span><h1></h1><hr/><span><h1 id="primes-upon-to-n">Primes upon to N</h1>
+}
+.navigation {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #000;
+}
+
+.navigation ul {
+    display: flex;
+    padding: 0;
+    flex-direction: row;
+    margin: 0;
+}
+
+.navigation ul li {
+    display: flex;
+    list-style: none;
+    padding: 10px;
+}</style></head><body><div class="main"><span><nav class="navigation"><ul><li> <a href="/holy-theory/builder/test/">Main page</a></li><li> <a href="/holy-theory/builder/test//languages.html">Statistics</a></li></ul></nav></span><h1></h1><span><h1 id="primes-upon-to-n">Primes upon to N</h1>
 <pre><code class="hljs language-java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {
     List&lt;Integer&gt; <span class="hljs-title function_">primesUptoN</span><span class="hljs-params">(<span class="hljs-type">int</span> n)</span> {
         <span class="hljs-type">boolean</span> isPrime[] = <span class="hljs-keyword">new</span> <span class="hljs-title class_">boolean</span>[n + <span class="hljs-number">1</span>];

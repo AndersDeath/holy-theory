@@ -19,5 +19,23 @@ html(lang="en")
                 max-width: 800px;
                 margin: 0 auto;
             }
+            .navigation {
+                display: flex;
+                flex-direction: row;
+                border: 1px solid #000;
+            }
+
+            .navigation ul {
+                display: flex;
+                padding: 0;
+                flex-direction: row;
+                margin: 0;
+            }
+
+            .navigation ul li {
+                display: flex;
+                list-style: none;
+                padding: 10px;
+            }
     body
         div( class="main" )!=content

@@ -10,6 +10,24 @@ img {
 .main {
     max-width: 800px;
     margin: 0 auto;
-}</style></head><body><div class="main"><span><div><ul><li> <a href="/holy-theory/builder/test/">Main page</a></li><li> <a href="/holy-theory/builder/test//languages.html">Statistics</a></li></ul></div></span><h1></h1><hr/><span><h1 id="duplicate-emails">Duplicate Emails</h1>
+}
+.navigation {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #000;
+}
+
+.navigation ul {
+    display: flex;
+    padding: 0;
+    flex-direction: row;
+    margin: 0;
+}
+
+.navigation ul li {
+    display: flex;
+    list-style: none;
+    padding: 10px;
+}</style></head><body><div class="main"><span><nav class="navigation"><ul><li> <a href="/holy-theory/builder/test/">Main page</a></li><li> <a href="/holy-theory/builder/test//languages.html">Statistics</a></li></ul></nav></span><h1></h1><span><h1 id="duplicate-emails">Duplicate Emails</h1>
 <pre><code class="hljs language-sql"><span class="hljs-keyword">select</span> `Email` <span class="hljs-keyword">from</span> `Person` <span class="hljs-keyword">group</span> <span class="hljs-keyword">by</span> `Email` <span class="hljs-keyword">having</span> <span class="hljs-built_in">count</span>(<span class="hljs-operator">*</span>) <span class="hljs-operator">&gt;</span> <span class="hljs-number">1</span>
 </code></pre></span></div></body></html>
