@@ -14,16 +14,20 @@ img {
 .navigation {
     display: flex;
     flex-direction: row;
+    border: 1px solid #000;
 }
 
 .navigation ul {
     display: flex;
+    padding: 0;
     flex-direction: row;
+    margin: 0;
 }
 
 .navigation ul li {
     display: flex;
     list-style: none;
-}</style></head><body><div class="main"><span><nav class="navigation"><ul><li> <a href="/holy-theory/builder/test/">Main page</a></li><li> <a href="/holy-theory/builder/test//languages.html">Statistics</a></li></ul></nav></span><h1></h1><hr/><span><h1 id="big-countries">Big countries</h1>
+    padding: 10px;
+}</style></head><body><div class="main"><span><nav class="navigation"><ul><li> <a href="/holy-theory/builder/test/">Main page</a></li><li> <a href="/holy-theory/builder/test//languages.html">Statistics</a></li></ul></nav></span><h1></h1><span><h1 id="big-countries">Big countries</h1>
 <pre><code class="hljs language-sql"><span class="hljs-keyword">SELECT</span> name, population, area <span class="hljs-keyword">FROM</span> World <span class="hljs-keyword">WHERE</span> population <span class="hljs-operator">&gt;=</span> <span class="hljs-number">25000000</span> <span class="hljs-keyword">OR</span> area <span class="hljs-operator">&gt;=</span> <span class="hljs-number">3000000</span>;
 </code></pre></span></div></body></html>

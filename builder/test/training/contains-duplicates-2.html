@@ -14,17 +14,21 @@ img {
 .navigation {
     display: flex;
     flex-direction: row;
+    border: 1px solid #000;
 }
 
 .navigation ul {
     display: flex;
+    padding: 0;
     flex-direction: row;
+    margin: 0;
 }
 
 .navigation ul li {
     display: flex;
     list-style: none;
-}</style></head><body><div class="main"><span><nav class="navigation"><ul><li> <a href="/holy-theory/builder/test/">Main page</a></li><li> <a href="/holy-theory/builder/test//languages.html">Statistics</a></li></ul></nav></span><h1></h1><hr/><span><h1 id="contains-duplicates-2">Contains Duplicates 2</h1>
+    padding: 10px;
+}</style></head><body><div class="main"><span><nav class="navigation"><ul><li> <a href="/holy-theory/builder/test/">Main page</a></li><li> <a href="/holy-theory/builder/test//languages.html">Statistics</a></li></ul></nav></span><h1></h1><span><h1 id="contains-duplicates-2">Contains Duplicates 2</h1>
 <pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">containsNearbyDuplicate</span>(<span class="hljs-params">nums: <span class="hljs-built_in">number</span>[], k: <span class="hljs-built_in">number</span></span>): <span class="hljs-built_in">boolean</span> {
     <span class="hljs-keyword">const</span> <span class="hljs-attr">seen</span>: <span class="hljs-built_in">any</span> = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Map</span>();
     <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; nums.<span class="hljs-property">length</span>; ++i) {

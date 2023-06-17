@@ -14,17 +14,21 @@ img {
 .navigation {
     display: flex;
     flex-direction: row;
+    border: 1px solid #000;
 }
 
 .navigation ul {
     display: flex;
+    padding: 0;
     flex-direction: row;
+    margin: 0;
 }
 
 .navigation ul li {
     display: flex;
     list-style: none;
-}</style></head><body><div class="main"><span><nav class="navigation"><ul><li> <a href="/holy-theory/builder/test/">Main page</a></li><li> <a href="/holy-theory/builder/test//languages.html">Statistics</a></li></ul></nav></span><h1></h1><hr/><span><h1 id="longest-substring-without-repeating-characters">Longest Substring Without Repeating Characters</h1>
+    padding: 10px;
+}</style></head><body><div class="main"><span><nav class="navigation"><ul><li> <a href="/holy-theory/builder/test/">Main page</a></li><li> <a href="/holy-theory/builder/test//languages.html">Statistics</a></li></ul></nav></span><h1></h1><span><h1 id="longest-substring-without-repeating-characters">Longest Substring Without Repeating Characters</h1>
 <pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">lengthOfLongestSubstring</span>(<span class="hljs-params">s: <span class="hljs-built_in">string</span></span>): <span class="hljs-built_in">number</span> {
     <span class="hljs-keyword">if</span>(s.<span class="hljs-property">length</span> === <span class="hljs-number">0</span>) <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
 
