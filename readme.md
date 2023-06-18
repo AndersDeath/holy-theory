@@ -194,6 +194,7 @@
 * [Diameter of Binary Tree](./training/diameter-of-binary-tree.md) – TypeScript
 * [Fibonacci Number](./training/fibonacci-number.md) – TypeScript
 * [Student Attendance Record I](./training/student-attendance-record-1.md) – TypeScript
+* [Reverse Words in a String 3](./training/reverse-words-in-a-string-3.md) – TypeScript
 
 ## Question
 * [01-reverse-number](/questions/01-reverse-number.md) – Java, all languages
