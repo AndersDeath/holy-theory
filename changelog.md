@@ -12,6 +12,7 @@ All notable changes to this project will be documented in this file.
 * add Student Attendance Record I training in TS
 * update builder.js
 * add Reverse Words in a String 3 training in TS
+* add Maximum Depth of N-ary Tree training in TS
 # [0.0.22] - 2023-06-12
 * update builder.js
 * add Base 7 training in TS
