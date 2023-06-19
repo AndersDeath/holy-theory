@@ -2,7 +2,9 @@
 
 All notable changes to this project will be documented in this file.
 
-# [0.0.23] - In Progress
+# [0.0.24] - In progress
+
+# [0.0.23] - 2023-06-19
 * add What does API gateway do? abstract
 * add Reverse String II training in TS
 * add Regular Expression Matching training in TS
@@ -12,6 +14,7 @@ All notable changes to this project will be documented in this file.
 * add Student Attendance Record I training in TS
 * update builder.js
 * add Reverse Words in a String 3 training in TS
+* add Maximum Depth of N-ary Tree training in TS
 # [0.0.22] - 2023-06-12
 * update builder.js
 * add Base 7 training in TS
