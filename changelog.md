@@ -3,6 +3,7 @@
 All notable changes to this project will be documented in this file.
 
 # [0.0.24] - In progress
+* 
 
 # [0.0.23] - 2023-06-19
 * add What does API gateway do? abstract
