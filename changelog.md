@@ -4,7 +4,8 @@ All notable changes to this project will be documented in this file.
 
 # [0.0.24] - In progress
 * add Array Partition training in TS
-* add Binary Tree Tilt
+* add Binary Tree Tilt training in TS
+* add Reshape the Matrix training in TS
 # [0.0.23] - 2023-06-19
 * add What does API gateway do? abstract
 * add Reverse String II training in TS
