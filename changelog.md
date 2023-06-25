@@ -8,6 +8,7 @@ All notable changes to this project will be documented in this file.
 * add Reshape the Matrix training in TS
 * add Subtree of Another Tree training in TS
 * add Distribute Candies training in TS
+* add Employee Bonus training in SQL
 # [0.0.23] - 2023-06-19
 * add What does API gateway do? abstract
 * add Reverse String II training in TS
