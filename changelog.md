@@ -3,6 +3,7 @@
 All notable changes to this project will be documented in this file.
 
 # [0.0.25] - In progress
+* update 3Sum Closest training, added explanation of the solution
 
 # [0.0.24] - 2023-06-26
 * add Array Partition training in TS
