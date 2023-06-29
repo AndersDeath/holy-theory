@@ -3561,7 +3561,70 @@ img {
 
   <span class="hljs-keyword">return</span> closestSum;
 };
-</code></pre></span></div></body></html></li><li><!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Holy Theory</title><style>body {
+</code></pre><p><strong>Solution:</strong></p>
+<p>The <code>threeSumClosest</code> function aims to find the sum of three numbers in an array (<code>nums</code>) that is closest to a target sum (<code>target</code>). Below are the step-by-step explanations of the code:</p>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>The function <code>threeSumClosest</code> is defined, taking two parameters: <code>nums</code> (an array of numbers) and <code>target</code> (the target sum).</td>
+</tr>
+<tr>
+<td>2</td>
+<td>The <code>nums</code> array is sorted in ascending order using the <code>sort</code> method. This ensures that the array is arranged numerically.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>A variable named <code>closestSum</code> is initialized with the sum of the first three numbers in the sorted array (<code>nums[0] + nums[1] + nums[2]</code>). This initial sum serves as the closest sum.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>The code enters a <code>for</code> loop that iterates over the array <code>nums</code> from the first element to the third-to-last element (<code>nums.length - 2</code>).</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Inside the <code>for</code> loop, two pointers named <code>left</code> and <code>right</code> are initialized. <code>left</code> is set to <code>i + 1</code> (the next index after <code>i</code>), and <code>right</code> is set to the last index of the array (<code>nums.length - 1</code>).</td>
+</tr>
+<tr>
+<td>6</td>
+<td>A <code>while</code> loop is used to iterate as long as the <code>left</code> pointer is less than the <code>right</code> pointer.</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Inside the <code>while</code> loop, the code calculates the sum of three elements: <code>nums[i]</code>, <code>nums[left]</code>, and <code>nums[right]</code>, and stores it in a variable named <code>sum</code>.</td>
+</tr>
+<tr>
+<td>8</td>
+<td>The code checks if the absolute difference between <code>sum</code> and <code>target</code> is less than the absolute difference between <code>closestSum</code> and <code>target</code>. If it is, then the <code>closestSum</code> is updated with the new <code>sum</code>. This ensures that we keep track of the sum closest to the target.</td>
+</tr>
+<tr>
+<td>9</td>
+<td>The code then checks three conditions: <ul><li>If <code>sum</code> is less than <code>target</code>, it means we need to increase the sum, so the <code>left</code> pointer is incremented by 1.</li><li>If <code>sum</code> is greater than <code>target</code>, it means we need to decrease the sum, so the <code>right</code> pointer is decremented by 1.</li><li>If <code>sum</code> is equal to <code>target</code>, it means we have found the exact sum we were looking for, so it is returned immediately.</li></ul></td>
+</tr>
+<tr>
+<td>10</td>
+<td>After the <code>while</code> loop ends, the <code>for</code> loop continues to the next iteration, and the process is repeated with a new <code>i</code> value.</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Once all iterations of the <code>for</code> loop are complete, the function returns the <code>closestSum</code>, which represents the sum closest to the target.</td>
+</tr>
+</tbody></table>
+<p><strong>Techniques used:</strong></p>
+<p>The following techniques are utilized within the code:</p>
+<ol>
+<li>Sorting an array using the <code>sort</code> method.</li>
+<li>Using two pointers (<code>left</code> and <code>right</code>) to traverse the array.</li>
+<li>Calculating the sum of three numbers.</li>
+<li>Using a <code>for</code> loop to iterate over an array.</li>
+<li>Using a <code>while</code> loop for</li>
+</ol>
+</span></div></body></html></li><li><!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Holy Theory</title><style>body {
     margin: 0;
     padding: 0;
 }
@@ -3623,7 +3686,67 @@ img {
     }
     <span class="hljs-keyword">return</span> triplets;
 };
-</code></pre></span></div></body></html></li><li><!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Holy Theory</title><style>body {
+</code></pre><p><strong>Solution:</strong>
+Below are the step-by-step explanations of the code:</p>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>The function <code>threeSum</code> is defined, taking one parameter: <code>nums</code> (an array of numbers).</td>
+</tr>
+<tr>
+<td>2</td>
+<td>The <code>nums</code> array is sorted in ascending order using the <code>sort</code> method. This ensures that the array is arranged numerically.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>An empty array named <code>triplets</code> is initialized to store the found triplets.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>The code enters a <code>for</code> loop that iterates over the array <code>nums</code> from the first element to the last element.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Inside the <code>for</code> loop, the code first checks if the current element is a duplicate by comparing it with the previous element. If they are the same, the loop skips to the next iteration using the <code>continue</code> statement. This ensures that duplicate triplets are avoided.</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Two pointers, <code>j</code> and <code>k</code>, are initialized. <code>j</code> is set to <code>i + 1</code> (the next index after <code>i</code>), and <code>k</code> is set to the last index of the array (<code>nums.length - 1</code>).</td>
+</tr>
+<tr>
+<td>7</td>
+<td>A <code>while</code> loop is used to iterate as long as <code>j</code> is less than <code>k</code>.</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Inside the <code>while</code> loop, the code checks three conditions: <ul><li>If the sum of the current element (<code>nums[i]</code>), <code>nums[j]</code>, and <code>nums[k]</code> is equal to zero, a triplet is found. The triplet is added to the <code>triplets</code> array using the <code>push</code> method. <code>j</code> is incremented by 1 to move to the next element.</li><li>If the current sum is less than zero, <code>j</code> is incremented by 1 to increase the sum.</li><li>If the current sum is greater than zero, <code>k</code> is decremented by 1 to decrease the sum.</li></ul></td>
+</tr>
+<tr>
+<td>9</td>
+<td>After the inner <code>while</code> loop ends, the <code>for</code> loop continues to the next iteration, and the process is repeated with a new <code>i</code> value.</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Once all iterations of the <code>for</code> loop are complete, the function returns the <code>triplets</code> array, which contains all unique triplets that sum up to zero.</td>
+</tr>
+</tbody></table>
+<p><strong>Techniques used:</strong></p>
+<p>The following techniques are utilized within the code:</p>
+<ol>
+<li>Sorting an array using the <code>sort</code> method.</li>
+<li>Using a <code>for</code> loop to iterate over an array.</li>
+<li>Using conditional statements (<code>if</code>, <code>else if</code>, <code>else</code>) to handle different cases.</li>
+<li>Using a <code>while</code> loop for iterative calculations.</li>
+<li>Skipping to the next iteration using the <code>continue</code> statement.</li>
+<li>Adding elements to an array using the <code>push</code> method.</li>
+</ol>
+</span></div></body></html></li><li><!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Holy Theory</title><style>body {
     margin: 0;
     padding: 0;
 }
@@ -3683,6 +3806,65 @@ img {
 };
 </code></pre><p>Time complexity: O(n)
 Space complexity: O(n)</p>
+<p>Apologies for the oversight. Here&#39;s the revised explanation of the <code>addBinary</code> code, including a Markdown table for better clarity:</p>
+<p><strong>Solution:</strong></p>
+<p>The provided code solves the task by performing binary addition on the input strings <code>a</code> and <code>b</code>. Here&#39;s a step-by-step breakdown:</p>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>The <code>addBinary</code> function is defined, taking two parameters: <code>a</code> (a binary string) and <code>b</code> (another binary string).</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Several variables are initialized: <ul><li><code>result</code> is initialized as an empty string to store the result of the binary addition.</li><li><code>i</code> is set to the index of the last character in string <code>a</code>.</li><li><code>j</code> is set to the index of the last character in string <code>b</code>.</li><li><code>carry</code> is initialized as 0 to hold the carry value during addition.</li></ul></td>
+</tr>
+<tr>
+<td>3</td>
+<td>A <code>while</code> loop is used to iterate as long as either <code>i</code> or <code>j</code> is greater than or equal to 0.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Inside the <code>while</code> loop, the variable <code>sum</code> is initialized with the value of <code>carry</code>. This represents the current sum at each iteration.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Conditional statements are used to add the respective binary digits of strings <code>a</code> and <code>b</code> to the <code>sum</code>: <ul><li>If <code>i</code> is greater than or equal to 0, the current binary digit from <code>a</code> is added to <code>sum</code> by converting it from a character to a number using the expression <code>a[i--] - &#39;0&#39;</code>.</li><li>If <code>j</code> is greater than or equal to 0, the current binary digit from <code>b</code> is added to <code>sum</code> using the same conversion.</li></ul></td>
+</tr>
+<tr>
+<td>6</td>
+<td>The current binary digit of the sum, obtained by taking the modulo 2 (<code>sum % 2</code>), is concatenated to the left side of the <code>result</code> string.</td>
+</tr>
+<tr>
+<td>7</td>
+<td>The carry value for the next iteration is updated by dividing the sum by 2 and parsing the integer value using <code>parseInt</code>.</td>
+</tr>
+<tr>
+<td>8</td>
+<td>If there is a remaining carry after the <code>while</code> loop ends (i.e., <code>carry &gt; 0</code>), a &#39;1&#39; is concatenated to the left side of the <code>result</code> string.</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Finally, the <code>result</code> string, which represents the sum of the binary strings <code>a</code> and <code>b</code>, is returned.</td>
+</tr>
+</tbody></table>
+<p><strong>Techniques used:</strong></p>
+<p>The following techniques are utilized within the code:</p>
+<ol>
+<li>Iterating over a string using a <code>while</code> loop.</li>
+<li>Accessing characters in a string using indices.</li>
+<li>Converting a character to a number using subtraction (<code>&#39;0&#39;</code>).</li>
+<li>Concatenating strings using the <code>+</code> operator.</li>
+<li>Performing arithmetic operations (addition, modulo, division) on numbers.</li>
+<li>Handling carry values during addition.</li>
+<li>Checking conditions using <code>if</code> statements.</li>
+<li>Updating variables with post-increment (<code>i--</code>) and assignment (<code>=</code>) operations.</li>
+</ol>
 </span></div></body></html></li><li><!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Holy Theory</title><style>body {
     margin: 0;
     padding: 0;
@@ -4006,6 +4188,47 @@ img {
     }
     
     <span class="hljs-keyword">return</span> cnt;
+};
+</code></pre></span></div></body></html></li><li><!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Holy Theory</title><style>body {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 400px;
+}
+
+.main {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.navigation {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #000;
+}
+
+.navigation ul {
+    display: flex;
+    padding: 0;
+    flex-direction: row;
+    margin: 0;
+}
+
+.navigation ul li {
+    display: flex;
+    list-style: none;
+    padding: 10px;
+}</style></head><body><div class="main"><span></span><h1></h1><span><h1 id="array-partition">Array Partition</h1>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">arrayPairSum</span>(<span class="hljs-params">nums: <span class="hljs-built_in">number</span>[]</span>): <span class="hljs-built_in">number</span> {
+  nums.<span class="hljs-title function_">sort</span>(<span class="hljs-function">(<span class="hljs-params">a, b</span>) =&gt;</span> a - b);
+  <span class="hljs-keyword">let</span> sum = <span class="hljs-number">0</span>;
+  
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; nums.<span class="hljs-property">length</span>; i += <span class="hljs-number">2</span>) {
+    sum += nums[i];
+  }
+  
+  <span class="hljs-keyword">return</span> sum;
 };
 </code></pre></span></div></body></html></li><li><!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Holy Theory</title><style>body {
     margin: 0;
@@ -4547,6 +4770,71 @@ img {
     <span class="hljs-title function_">preorder</span>(root.<span class="hljs-property">left</span>, output);
     <span class="hljs-title function_">preorder</span>(root.<span class="hljs-property">right</span>, output);
 }
+</code></pre></span></div></body></html></li><li><!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Holy Theory</title><style>body {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 400px;
+}
+
+.main {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.navigation {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #000;
+}
+
+.navigation ul {
+    display: flex;
+    padding: 0;
+    flex-direction: row;
+    margin: 0;
+}
+
+.navigation ul li {
+    display: flex;
+    list-style: none;
+    padding: 10px;
+}</style></head><body><div class="main"><span></span><h1></h1><span><h1 id="binary-tree-tilt">Binary Tree Tilt</h1>
+<pre><code class="hljs language-typescript"><span class="hljs-comment">/**
+ * Definition for a binary tree node.
+ * class TreeNode {
+ *     val: number
+ *     left: TreeNode | null
+ *     right: TreeNode | null
+ *     constructor(val?: number, left?: TreeNode | null, right?: TreeNode | null) {
+ *         this.val = (val===undefined ? 0 : val)
+ *         this.left = (left===undefined ? null : left)
+ *         this.right = (right===undefined ? null : right)
+ *     }
+ * }
+ */</span>
+
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">findTilt</span>(<span class="hljs-params">root: TreeNode | <span class="hljs-literal">null</span></span>): <span class="hljs-built_in">number</span> {
+  <span class="hljs-keyword">let</span> tilt = <span class="hljs-number">0</span>;
+
+  <span class="hljs-keyword">function</span> <span class="hljs-title function_">calculateTiltAndSum</span>(<span class="hljs-params">node: TreeNode | <span class="hljs-literal">null</span></span>): <span class="hljs-built_in">number</span> {
+    <span class="hljs-keyword">if</span> (node === <span class="hljs-literal">null</span>) {
+      <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+    }
+
+    <span class="hljs-keyword">const</span> leftSum = <span class="hljs-title function_">calculateTiltAndSum</span>(node.<span class="hljs-property">left</span>);
+    <span class="hljs-keyword">const</span> rightSum = <span class="hljs-title function_">calculateTiltAndSum</span>(node.<span class="hljs-property">right</span>);
+
+    tilt += <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">abs</span>(leftSum - rightSum);
+
+    <span class="hljs-keyword">return</span> node.<span class="hljs-property">val</span> + leftSum + rightSum;
+  }
+
+  <span class="hljs-title function_">calculateTiltAndSum</span>(root);
+
+  <span class="hljs-keyword">return</span> tilt;
+};
 </code></pre></span></div></body></html></li><li><!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Holy Theory</title><style>body {
     margin: 0;
     padding: 0;
@@ -5401,8 +5689,80 @@ img {
     display: flex;
     list-style: none;
     padding: 10px;
+}</style></head><body><div class="main"><span></span><h1></h1><span><h1 id="distribute-candies">Distribute Candies</h1>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">distributeCandies</span>(<span class="hljs-params">candyType: <span class="hljs-built_in">number</span>[]</span>): <span class="hljs-built_in">number</span> {
+  <span class="hljs-keyword">const</span> uniqueCandies = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Set</span>(candyType);
+  <span class="hljs-keyword">const</span> maxCandies = candyType.<span class="hljs-property">length</span> / <span class="hljs-number">2</span>;
+  
+  <span class="hljs-keyword">return</span> <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">min</span>(uniqueCandies.<span class="hljs-property">size</span>, maxCandies);
+};
+</code></pre></span></div></body></html></li><li><!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Holy Theory</title><style>body {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 400px;
+}
+
+.main {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.navigation {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #000;
+}
+
+.navigation ul {
+    display: flex;
+    padding: 0;
+    flex-direction: row;
+    margin: 0;
+}
+
+.navigation ul li {
+    display: flex;
+    list-style: none;
+    padding: 10px;
 }</style></head><body><div class="main"><span></span><h1></h1><span><h1 id="duplicate-emails">Duplicate Emails</h1>
 <pre><code class="hljs language-sql"><span class="hljs-keyword">select</span> `Email` <span class="hljs-keyword">from</span> `Person` <span class="hljs-keyword">group</span> <span class="hljs-keyword">by</span> `Email` <span class="hljs-keyword">having</span> <span class="hljs-built_in">count</span>(<span class="hljs-operator">*</span>) <span class="hljs-operator">&gt;</span> <span class="hljs-number">1</span>
+</code></pre></span></div></body></html></li><li><!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Holy Theory</title><style>body {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 400px;
+}
+
+.main {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.navigation {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #000;
+}
+
+.navigation ul {
+    display: flex;
+    padding: 0;
+    flex-direction: row;
+    margin: 0;
+}
+
+.navigation ul li {
+    display: flex;
+    list-style: none;
+    padding: 10px;
+}</style></head><body><div class="main"><span></span><h1></h1><span><h1 id="employee-bonus">Employee Bonus</h1>
+<pre><code class="hljs language-sql"><span class="hljs-keyword">SELECT</span> Employee.name, Bonus.bonus
+<span class="hljs-keyword">FROM</span> Employee
+<span class="hljs-keyword">LEFT</span> <span class="hljs-keyword">JOIN</span> Bonus <span class="hljs-keyword">ON</span> Employee.empId <span class="hljs-operator">=</span> Bonus.empId
+<span class="hljs-keyword">WHERE</span> Bonus.bonus <span class="hljs-operator">&lt;</span> <span class="hljs-number">1000</span> <span class="hljs-keyword">OR</span> Bonus.bonus <span class="hljs-keyword">IS</span> <span class="hljs-keyword">NULL</span>;
 </code></pre></span></div></body></html></li><li><!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Holy Theory</title><style>body {
     margin: 0;
     padding: 0;
@@ -5685,6 +6045,40 @@ img {
     }
     <span class="hljs-keyword">return</span> result;
 };
+</code></pre></span></div></body></html></li><li><!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Holy Theory</title><style>body {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 400px;
+}
+
+.main {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.navigation {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #000;
+}
+
+.navigation ul {
+    display: flex;
+    padding: 0;
+    flex-direction: row;
+    margin: 0;
+}
+
+.navigation ul li {
+    display: flex;
+    list-style: none;
+    padding: 10px;
+}</style></head><body><div class="main"><span></span><h1></h1><span><h1 id="find-customer-referee">Find Customer Referee</h1>
+<pre><code class="hljs language-sql"><span class="hljs-keyword">SELECT</span> name
+<span class="hljs-keyword">FROM</span> customer
+<span class="hljs-keyword">WHERE</span> referee_id <span class="hljs-keyword">IS</span> <span class="hljs-keyword">NULL</span> <span class="hljs-keyword">OR</span> referee_id <span class="hljs-operator">!=</span> <span class="hljs-number">2</span>;
 </code></pre></span></div></body></html></li><li><!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Holy Theory</title><style>body {
     margin: 0;
     padding: 0;
@@ -7636,6 +8030,64 @@ img {
         <span class="hljs-keyword">else</span> <span class="hljs-keyword">return</span> rightDepth + <span class="hljs-number">1</span>;
     }
 
+};
+</code></pre><p><strong>Source: <a href="https://leetcode.com">https://leetcode.com</a></strong></p>
+</span></div></body></html></li><li><!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Holy Theory</title><style>body {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 400px;
+}
+
+.main {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.navigation {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #000;
+}
+
+.navigation ul {
+    display: flex;
+    padding: 0;
+    flex-direction: row;
+    margin: 0;
+}
+
+.navigation ul li {
+    display: flex;
+    list-style: none;
+    padding: 10px;
+}</style></head><body><div class="main"><span></span><h1></h1><span><h1 id="maximum-depth-of-n-ary-tree">Maximum Depth of N-ary Tree</h1>
+<pre><code class="hljs language-typescript"><span class="hljs-comment">/**
+ * Definition for Node.
+ * class Node {
+ *     val: number
+ *     children: Node[]
+ *     constructor(val?: number, children?: Node[]) {
+ *         this.val = (val===undefined ? 0 : val)
+ *         this.children = (children===undefined ? [] : children)
+ *     }
+ * }
+ */</span>
+
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">maxDepth</span>(<span class="hljs-params">root: Node | <span class="hljs-literal">null</span></span>): <span class="hljs-built_in">number</span> {
+   <span class="hljs-keyword">if</span> (root === <span class="hljs-literal">null</span>) {
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+  }
+  
+  <span class="hljs-keyword">let</span> maxChildDepth = <span class="hljs-number">0</span>;
+  
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> child <span class="hljs-keyword">of</span> root.<span class="hljs-property">children</span>) {
+    <span class="hljs-keyword">const</span> childDepth = <span class="hljs-title function_">maxDepth</span>(child);
+    maxChildDepth = <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">max</span>(maxChildDepth, childDepth);
+  }
+  
+  <span class="hljs-keyword">return</span> maxChildDepth + <span class="hljs-number">1</span>;  
 };
 </code></pre><p><strong>Source: <a href="https://leetcode.com">https://leetcode.com</a></strong></p>
 </span></div></body></html></li><li><!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Holy Theory</title><style>body {
@@ -9671,6 +10123,61 @@ img {
     display: flex;
     list-style: none;
     padding: 10px;
+}</style></head><body><div class="main"><span></span><h1></h1><span><h1 id="reshape-the-matrix">Reshape the Matrix</h1>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">matrixReshape</span>(<span class="hljs-params">mat: <span class="hljs-built_in">number</span>[][], r: <span class="hljs-built_in">number</span>, c: <span class="hljs-built_in">number</span></span>): <span class="hljs-built_in">number</span>[][] {
+  <span class="hljs-keyword">const</span> m = mat.<span class="hljs-property">length</span>;
+  <span class="hljs-keyword">const</span> n = mat[<span class="hljs-number">0</span>].<span class="hljs-property">length</span>;
+  
+  <span class="hljs-keyword">if</span> (m * n !== r * c) {
+    <span class="hljs-keyword">return</span> mat;
+  }
+  
+  <span class="hljs-keyword">const</span> <span class="hljs-attr">reshapedMatrix</span>: <span class="hljs-built_in">number</span>[][] = [];
+  <span class="hljs-keyword">let</span> <span class="hljs-attr">row</span>: <span class="hljs-built_in">number</span>[] = [];
+  
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; m; i++) {
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> j = <span class="hljs-number">0</span>; j &lt; n; j++) {
+      row.<span class="hljs-title function_">push</span>(mat[i][j]);
+      
+      <span class="hljs-keyword">if</span> (row.<span class="hljs-property">length</span> === c) {
+        reshapedMatrix.<span class="hljs-title function_">push</span>(row);
+        row = [];
+      }
+    }
+  }
+  
+  <span class="hljs-keyword">return</span> reshapedMatrix;
+};
+</code></pre></span></div></body></html></li><li><!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Holy Theory</title><style>body {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 400px;
+}
+
+.main {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.navigation {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #000;
+}
+
+.navigation ul {
+    display: flex;
+    padding: 0;
+    flex-direction: row;
+    margin: 0;
+}
+
+.navigation ul li {
+    display: flex;
+    list-style: none;
+    padding: 10px;
 }</style></head><body><div class="main"><span></span><h1></h1><span><h1 id="reverse-array">Reverse array</h1>
 <p>Solution Steps</p>
 <ol>
@@ -9883,6 +10390,49 @@ img {
     }
 
     <span class="hljs-keyword">return</span> arr.<span class="hljs-title function_">join</span>(<span class="hljs-string">&quot;&quot;</span>);
+};
+</code></pre></span></div></body></html></li><li><!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Holy Theory</title><style>body {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 400px;
+}
+
+.main {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.navigation {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #000;
+}
+
+.navigation ul {
+    display: flex;
+    padding: 0;
+    flex-direction: row;
+    margin: 0;
+}
+
+.navigation ul li {
+    display: flex;
+    list-style: none;
+    padding: 10px;
+}</style></head><body><div class="main"><span></span><h1></h1><span><h1 id="reverse-words-in-a-string-3">Reverse Words in a String 3</h1>
+<pre><code class="hljs language-typescript">
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">reverseWords</span>(<span class="hljs-params">s: <span class="hljs-built_in">string</span></span>): <span class="hljs-built_in">string</span> {
+  <span class="hljs-keyword">const</span> words = s.<span class="hljs-title function_">split</span>(<span class="hljs-string">&#x27; &#x27;</span>);
+  <span class="hljs-keyword">const</span> reversedWords = [];
+
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> word <span class="hljs-keyword">of</span> words) {
+    <span class="hljs-keyword">const</span> reversedWord = word.<span class="hljs-title function_">split</span>(<span class="hljs-string">&#x27;&#x27;</span>).<span class="hljs-title function_">reverse</span>().<span class="hljs-title function_">join</span>(<span class="hljs-string">&#x27;&#x27;</span>);
+    reversedWords.<span class="hljs-title function_">push</span>(reversedWord);
+  }
+
+  <span class="hljs-keyword">return</span> reversedWords.<span class="hljs-title function_">join</span>(<span class="hljs-string">&#x27; &#x27;</span>);
 };
 </code></pre></span></div></body></html></li><li><!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Holy Theory</title><style>body {
     margin: 0;
@@ -10435,6 +10985,79 @@ img {
     }
     <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
 };
+</code></pre></span></div></body></html></li><li><!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Holy Theory</title><style>body {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 400px;
+}
+
+.main {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.navigation {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #000;
+}
+
+.navigation ul {
+    display: flex;
+    padding: 0;
+    flex-direction: row;
+    margin: 0;
+}
+
+.navigation ul li {
+    display: flex;
+    list-style: none;
+    padding: 10px;
+}</style></head><body><div class="main"><span></span><h1></h1><span><h1 id="subtree-of-another-tree">Subtree of Another Tree</h1>
+<pre><code class="hljs language-typescript"><span class="hljs-comment">/**
+ * Definition for a binary tree node.
+ * class TreeNode {
+ *     val: number
+ *     left: TreeNode | null
+ *     right: TreeNode | null
+ *     constructor(val?: number, left?: TreeNode | null, right?: TreeNode | null) {
+ *         this.val = (val===undefined ? 0 : val)
+ *         this.left = (left===undefined ? null : left)
+ *         this.right = (right===undefined ? null : right)
+ *     }
+ * }
+ */</span>
+
+
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">isSubtree</span>(<span class="hljs-params">s: TreeNode | <span class="hljs-literal">null</span>, t: TreeNode | <span class="hljs-literal">null</span></span>): <span class="hljs-built_in">boolean</span> {
+  <span class="hljs-keyword">if</span> (s === <span class="hljs-literal">null</span>) {
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+  }
+
+  <span class="hljs-keyword">if</span> (<span class="hljs-title function_">isSameTree</span>(s, t)) {
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+  }
+
+  <span class="hljs-keyword">return</span> <span class="hljs-title function_">isSubtree</span>(s.<span class="hljs-property">left</span>, t) || <span class="hljs-title function_">isSubtree</span>(s.<span class="hljs-property">right</span>, t);
+}
+
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">isSameTree</span>(<span class="hljs-params">s: TreeNode | <span class="hljs-literal">null</span>, t: TreeNode | <span class="hljs-literal">null</span></span>): <span class="hljs-built_in">boolean</span> {
+  <span class="hljs-keyword">if</span> (s === <span class="hljs-literal">null</span> &amp;&amp; t === <span class="hljs-literal">null</span>) {
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+  }
+
+  <span class="hljs-keyword">if</span> (s === <span class="hljs-literal">null</span> || t === <span class="hljs-literal">null</span>) {
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+  }
+
+  <span class="hljs-keyword">if</span> (s.<span class="hljs-property">val</span> !== t.<span class="hljs-property">val</span>) {
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+  }
+
+  <span class="hljs-keyword">return</span> <span class="hljs-title function_">isSameTree</span>(s.<span class="hljs-property">left</span>, t.<span class="hljs-property">left</span>) &amp;&amp; <span class="hljs-title function_">isSameTree</span>(s.<span class="hljs-property">right</span>, t.<span class="hljs-property">right</span>);
+}
 </code></pre></span></div></body></html></li><li><!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Holy Theory</title><style>body {
     margin: 0;
     padding: 0;

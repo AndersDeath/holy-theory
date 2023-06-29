@@ -67,5 +67,4 @@ The following techniques are utilized within the code:
 5. Skipping to the next iteration using the `continue` statement.
 6. Adding elements to an array using the `push` method.
 
-Please let me know if you need any further clarification or have additional questions!
 * [Go back](../readme.md)

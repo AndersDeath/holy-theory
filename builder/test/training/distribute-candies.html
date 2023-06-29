@@ -1,0 +1,38 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Holy Theory</title><style>body {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 400px;
+}
+
+.main {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.navigation {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #000;
+}
+
+.navigation ul {
+    display: flex;
+    padding: 0;
+    flex-direction: row;
+    margin: 0;
+}
+
+.navigation ul li {
+    display: flex;
+    list-style: none;
+    padding: 10px;
+}</style></head><body><div class="main"><span><nav class="navigation"><ul><li> <a href="/holy-theory/builder/test/">Main page</a></li><li> <a href="/holy-theory/builder/test//languages.html">Statistics</a></li></ul></nav></span><h1></h1><span><h1 id="distribute-candies">Distribute Candies</h1>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">distributeCandies</span>(<span class="hljs-params">candyType: <span class="hljs-built_in">number</span>[]</span>): <span class="hljs-built_in">number</span> {
+  <span class="hljs-keyword">const</span> uniqueCandies = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Set</span>(candyType);
+  <span class="hljs-keyword">const</span> maxCandies = candyType.<span class="hljs-property">length</span> / <span class="hljs-number">2</span>;
+  
+  <span class="hljs-keyword">return</span> <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">min</span>(uniqueCandies.<span class="hljs-property">size</span>, maxCandies);
+};
+</code></pre></span></div></body></html>
