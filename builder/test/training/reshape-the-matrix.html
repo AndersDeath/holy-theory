@@ -1,0 +1,56 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Holy Theory</title><style>body {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 400px;
+}
+
+.main {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.navigation {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #000;
+}
+
+.navigation ul {
+    display: flex;
+    padding: 0;
+    flex-direction: row;
+    margin: 0;
+}
+
+.navigation ul li {
+    display: flex;
+    list-style: none;
+    padding: 10px;
+}</style></head><body><div class="main"><span><nav class="navigation"><ul><li> <a href="/holy-theory/builder/test/">Main page</a></li><li> <a href="/holy-theory/builder/test//languages.html">Statistics</a></li></ul></nav></span><h1></h1><span><h1 id="reshape-the-matrix">Reshape the Matrix</h1>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">matrixReshape</span>(<span class="hljs-params">mat: <span class="hljs-built_in">number</span>[][], r: <span class="hljs-built_in">number</span>, c: <span class="hljs-built_in">number</span></span>): <span class="hljs-built_in">number</span>[][] {
+  <span class="hljs-keyword">const</span> m = mat.<span class="hljs-property">length</span>;
+  <span class="hljs-keyword">const</span> n = mat[<span class="hljs-number">0</span>].<span class="hljs-property">length</span>;
+  
+  <span class="hljs-keyword">if</span> (m * n !== r * c) {
+    <span class="hljs-keyword">return</span> mat;
+  }
+  
+  <span class="hljs-keyword">const</span> <span class="hljs-attr">reshapedMatrix</span>: <span class="hljs-built_in">number</span>[][] = [];
+  <span class="hljs-keyword">let</span> <span class="hljs-attr">row</span>: <span class="hljs-built_in">number</span>[] = [];
+  
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; m; i++) {
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> j = <span class="hljs-number">0</span>; j &lt; n; j++) {
+      row.<span class="hljs-title function_">push</span>(mat[i][j]);
+      
+      <span class="hljs-keyword">if</span> (row.<span class="hljs-property">length</span> === c) {
+        reshapedMatrix.<span class="hljs-title function_">push</span>(row);
+        row = [];
+      }
+    }
+  }
+  
+  <span class="hljs-keyword">return</span> reshapedMatrix;
+};
+</code></pre></span></div></body></html>
