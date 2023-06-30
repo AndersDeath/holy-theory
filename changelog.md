@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file.
 * update 3Sum Closest training, added explanation of the solution
 * update 3Sum training, add explanation of the solution
 * update add binary training, add explanation of solution
+* update add strings training, add explanation of solution
 
 # [0.0.24] - 2023-06-26
 * add Array Partition training in TS
