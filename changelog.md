@@ -9,6 +9,7 @@ All notable changes to this project will be documented in this file.
 * update add strings training, add explanation of solution
 * add code highlighter to builder.js
 * update add two numbers training, add explanation of solution
+* update adjacency list to adjacency matrix training, add explanation of solution
 
 # [0.0.24] - 2023-06-26
 * add Array Partition training in TS
