@@ -2,7 +2,9 @@
 
 All notable changes to this project will be documented in this file.
 
-# [0.0.25] - In progress
+# [0.0.26] - 2023-07-03
+
+# [0.0.25] - 2023-07-03
 * update 3Sum Closest training, added explanation of the solution
 * update 3Sum training, add explanation of the solution
 * update add binary training, add explanation of solution
