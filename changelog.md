@@ -12,6 +12,7 @@ All notable changes to this project will be documented in this file.
 * update adjacency list to adjacency matrix training, add explanation of solution
 * update update adjacency matrix to adjacency list training, add explanation of solution
 * update arithmetic sequence training, add explanation of solution
+* update arranging Coins training, add explanation of solution
 
 # [0.0.24] - 2023-06-26
 * add Array Partition training in TS
