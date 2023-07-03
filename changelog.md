@@ -2,7 +2,9 @@
 
 All notable changes to this project will be documented in this file.
 
-# [0.0.25] - In progress
+# [0.0.26] - 2023-07-03
+
+# [0.0.25] - 2023-07-03
 * update 3Sum Closest training, added explanation of the solution
 * update 3Sum training, add explanation of the solution
 * update add binary training, add explanation of solution
@@ -12,6 +14,7 @@ All notable changes to this project will be documented in this file.
 * update adjacency list to adjacency matrix training, add explanation of solution
 * update update adjacency matrix to adjacency list training, add explanation of solution
 * update arithmetic sequence training, add explanation of solution
+* update arranging Coins training, add explanation of solution
 
 # [0.0.24] - 2023-06-26
 * add Array Partition training in TS
