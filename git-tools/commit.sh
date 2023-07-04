@@ -30,14 +30,17 @@ do
         "Update readme and changelog")
             read
             echo "$REPLY"
+            break
             ;;
         "Push everything")
             git push
+            break
             ;;
         "Commit and push everything")
             git add .
             git commit -m"unknown update"
             git push
+            break
             ;;
         "Quit")
             break
