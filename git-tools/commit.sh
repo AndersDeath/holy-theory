@@ -2,7 +2,7 @@
 
 
 PS3='What I need to commit?: '
-options=("Update training" "Add new training" "Update readme" "Update changelog" "Update readme and changelog")
+options=("Update training" "Add new training" "Update readme" "Update changelog" "Update readme and changelog" "Push everything" "Commit and push everything" "Quit")
 select opt in "${options[@]}"
 do
     case $opt in
@@ -30,6 +30,14 @@ do
         "Update readme and changelog")
             read
             echo "$REPLY"
+            ;;
+        "Push everything")
+            git push
+            ;;
+        "Commit and push everything")
+            git add .
+            git commit -m"unknown update"
+            git push
             ;;
         "Quit")
             break
