@@ -14,21 +14,22 @@ do
             break;
             ;;
         "Add new training")
-            echo "you chose choice 2"
+            echo "In progress"
             break;
             ;;
         "Update readme")
             read
-            echo "you chose choice $REPLY which is $opt"
+            echo "$REPLY"
             break;
             ;;
         "Update changelog")
-            echo "you chose choice $REPLY which is $opt"
+            git add .
+            git commit -m"update changelog"
             break;
             ;;
         "Update readme and changelog")
-            echo "you chose choice $REPLY which is $opt"
-            break;
+            read
+            echo "$REPLY"
             ;;
         "Quit")
             break
