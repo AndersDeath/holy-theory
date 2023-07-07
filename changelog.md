@@ -7,6 +7,8 @@ All notable changes to this project will be documented in this file.
 * update Assign Cookies training, add explanation of solution
 * update Balanced Binary Tree training, add explanation of solution
 * update Balanced brackets training, add explanation of solution
+* update Base 7 training, add explanation of solution
+* update Best Time to Buy and Sell Stock training, add explanation of solution
 
 # [0.0.25] - 2023-07-03
 * update 3Sum Closest training, added explanation of the solution
