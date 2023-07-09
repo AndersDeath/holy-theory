@@ -12,6 +12,7 @@ All notable changes to this project will be documented in this file.
 * update Big countries training, add explanation of solution
 * update Binary Tree Inorder Traversal training, add explanation of solution
 * update Binary Tree Paths training, add explanation of solution
+* update Binary Tree Postorder Traversal training, add explanation of solution
 
 # [0.0.25] - 2023-07-03
 * update 3Sum Closest training, added explanation of the solution
