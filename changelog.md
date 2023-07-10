@@ -15,6 +15,7 @@ All notable changes to this project will be documented in this file.
 * update Binary Tree Postorder Traversal training, add explanation of solution
 * update Binary Tree Preorder Traversal training, add explanation of solution
 * update Binary Tree Tilt training, add explanation of solution
+* update Chain adding functions training, add explanation of solution
 
 # [0.0.25] - 2023-07-03
 * update 3Sum Closest training, added explanation of the solution
