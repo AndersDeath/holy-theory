@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file.
 * update Climbing stairs training, add explanation of solution
 * update Combine Two Tables training, add explanation of solution
 * update Construct the Rectangle training, add explanation of solution
+* update Container With Most Water training, add explanation of solution
 # [0.0.26] - 2023-07-10
 * update arranging Coins training, add explanation of solution
 * update Assign Cookies training, add explanation of solution
