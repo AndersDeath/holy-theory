@@ -9,6 +9,10 @@ All notable changes to this project will be documented in this file.
 * update Container With Most Water training, add explanation of solution
 * update Contains Duplicates 2 training, add explanation of solution
 * update Contains Duplicate training, add explanation of solution
+* update Convert a Number to Hexadecimal training, add explanation of solution
+* update Convert Sorted Array to Binary Search Tree training, add explanation of solution
+* update Counting Bits training, add explanation of solution
+* update Cumulative Sum training, add explanation of solution
 # [0.0.26] - 2023-07-10
 * update arranging Coins training, add explanation of solution
 * update Assign Cookies training, add explanation of solution
