@@ -14,6 +14,7 @@ All notable changes to this project will be documented in this file.
 * update Counting Bits training, add explanation of solution
 * update Cumulative Sum training, add explanation of solution
 * update Curry function training, add explanation of solution
+* update Customers Who Never Order training, add explanation of solution
 # [0.0.26] - 2023-07-10
 * update arranging Coins training, add explanation of solution
 * update Assign Cookies training, add explanation of solution
