@@ -1,7 +1,9 @@
 # Changelog
 
 All notable changes to this project will be documented in this file.
-# [0.0.27] - In progress
+
+# [0.0.28] - In progress
+# [0.0.27] - 2023-07-17
 * update Chain calculator training, add explanation of solution
 * update Climbing stairs training, add explanation of solution
 * update Combine Two Tables training, add explanation of solution
@@ -14,6 +16,7 @@ All notable changes to this project will be documented in this file.
 * update Counting Bits training, add explanation of solution
 * update Cumulative Sum training, add explanation of solution
 * update Curry function training, add explanation of solution
+* update Customers Who Never Order training, add explanation of solution
 # [0.0.26] - 2023-07-10
 * update arranging Coins training, add explanation of solution
 * update Assign Cookies training, add explanation of solution
