@@ -5,6 +5,7 @@ All notable changes to this project will be documented in this file.
 # [0.0.28] - In progress
 * update Delete Duplicate Emails training, add explanation of solution
 * update Detect Capital Use training, add explanation of solution
+* update Diameter of Binary Tree training, add explanation of solution
 # [0.0.27] - 2023-07-17
 * update Chain calculator training, add explanation of solution
 * update Climbing stairs training, add explanation of solution
