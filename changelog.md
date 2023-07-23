@@ -18,6 +18,7 @@ All notable changes to this project will be documented in this file.
 * update Find Customer Referee training, add explanation of solution
 * update Find Mode in Binary Search Tree training, add explanation of solution
 * update Find the Difference training, add explanation of solution
+* update Find the Index of the First Occurrence in a String training, add explanation of solution
 # [0.0.27] - 2023-07-17
 * update Chain calculator training, add explanation of solution
 * update Climbing stairs training, add explanation of solution
