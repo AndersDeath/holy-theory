@@ -12,6 +12,7 @@ All notable changes to this project will be documented in this file.
 * update Employees Earning More Than Their Managers training, add explanation of solution
 * update Even number of digits training, add explanation of solution
 * update Excel Sheet Column Title training, add explanation of solution
+* update Fibonacci Number training, add explanation of solution
 # [0.0.27] - 2023-07-17
 * update Chain calculator training, add explanation of solution
 * update Climbing stairs training, add explanation of solution
