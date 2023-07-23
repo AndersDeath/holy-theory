@@ -15,6 +15,7 @@ All notable changes to this project will be documented in this file.
 * update Fibonacci Number training, add explanation of solution
 * update Fibonacci streaming  training, add explanation of solution
 * update Find All Numbers Disappeared in an Array training, add explanation of solution
+* update Find Customer Referee training, add explanation of solution
 # [0.0.27] - 2023-07-17
 * update Chain calculator training, add explanation of solution
 * update Climbing stairs training, add explanation of solution
