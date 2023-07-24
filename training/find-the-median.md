@@ -14,7 +14,7 @@ function findMedian(arr: number[]): number {
 
 **Solution:**
 
-The provided function `findMedian` takes an array of numbers `arr` as input and returns the median of the array.
+The function `findMedian` takes an array of numbers `arr` as input and returns the median of the array.
 
 **Steps:**
 
