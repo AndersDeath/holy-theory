@@ -213,6 +213,7 @@
 * [06-software-categories](/questions/06-software-categories.md)
 * [07-software-characteristics](/questions/07-software-characteristics.md)
 * [08-sdlc](/questions/08-sdlc.md)
+* [09-design-patterns](/questions/09-design-patterns.md)
 ## System design
 
 * [01-horizontal-vertical-scaling](/system-design/01-horizontal-vertical-scaling.md)
