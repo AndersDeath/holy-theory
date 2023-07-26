@@ -4,6 +4,7 @@ All notable changes to this project will be documented in this file.
 
 # [0.0.29] - In progress
 * add Design patterns
+* add SOLID
 
 # [0.0.28] - 2023-07-24
 * update Delete Duplicate Emails training, add explanation of solution
