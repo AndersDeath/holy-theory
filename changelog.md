@@ -5,6 +5,8 @@ All notable changes to this project will be documented in this file.
 # [0.0.29] - In progress
 * add Design patterns
 * add SOLID
+* update Find the Pivot Integer training, add explanation of solution
+* update First Unique Character in a String training, add explanation of solution
 
 # [0.0.28] - 2023-07-24
 * update Delete Duplicate Emails training, add explanation of solution
