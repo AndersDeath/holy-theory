@@ -7,6 +7,8 @@ All notable changes to this project will be documented in this file.
 * add SOLID
 * update Find the Pivot Integer training, add explanation of solution
 * update First Unique Character in a String training, add explanation of solution
+* update First Bad Version training, add explanation of solution
+* update Fizz Buzz training, add explanation of solution
 
 # [0.0.28] - 2023-07-24
 * update Delete Duplicate Emails training, add explanation of solution
