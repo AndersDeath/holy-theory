@@ -14,6 +14,7 @@ All notable changes to this project will be documented in this file.
 * update Guess Number Higher or Lower training, add explanation of solution
 * update Hamming Distance training, add explanation of solution
 * update Happy Number training, add explanation of solution
+* add GRASP to questions section
 
 # [0.0.28] - 2023-07-24
 * update Delete Duplicate Emails training, add explanation of solution
