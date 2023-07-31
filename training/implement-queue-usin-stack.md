@@ -71,5 +71,5 @@ Techniques used in this code include:
 - Implementing a queue using two stacks to efficiently perform queue operations (enqueue, dequeue, and peek).
 - Utilizing the LIFO (Last-In-First-Out) property of stacks to reverse the order of elements when moving them from `stack1` to `stack2`.
 - Ensuring that elements are moved to `stack2` only when necessary (on calls to `pop` and `peek`) to avoid unnecessary element transfers.
-- 
+  
 * [Go back](../readme.md)
