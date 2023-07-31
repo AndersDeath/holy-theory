@@ -1,8 +1,9 @@
 # Changelog
 
 All notable changes to this project will be documented in this file.
+# [0.0.30] - In progress
 
-# [0.0.29] - In progress
+# [0.0.29] - 2023-07-31
 * add Design patterns
 * add SOLID
 * update Find the Pivot Integer training, add explanation of solution
@@ -10,6 +11,13 @@ All notable changes to this project will be documented in this file.
 * update First Bad Version training, add explanation of solution
 * update Fizz Buzz training, add explanation of solution
 * update Game Play Analysis I training, add explanation of solution
+* update Generate Parentheses training, add explanation of solution
+* update Guess Number Higher or Lower training, add explanation of solution
+* update Hamming Distance training, add explanation of solution
+* update Happy Number training, add explanation of solution
+* add GRASP to questions section
+* update Identical twins training, add explanation of solution
+* update Implement Queue using Stacks training, add explanation of solution
 
 # [0.0.28] - 2023-07-24
 * update Delete Duplicate Emails training, add explanation of solution

@@ -28,8 +28,8 @@ do
             break;
             ;;
         "Update readme and changelog")
-            read
-            echo "$REPLY"
+            git add .
+            git commit -m"update readme and changelog"
             break
             ;;
         "Push everything")
