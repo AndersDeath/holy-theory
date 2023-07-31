@@ -16,6 +16,7 @@ All notable changes to this project will be documented in this file.
 * update Happy Number training, add explanation of solution
 * add GRASP to questions section
 * update Identical twins training, add explanation of solution
+* update Implement Queue using Stacks training, add explanation of solution
 
 # [0.0.28] - 2023-07-24
 * update Delete Duplicate Emails training, add explanation of solution
