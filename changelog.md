@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 # [0.0.30] - In progress
-* 
+* update Implement Stack using Queues training, add explanation of solution
 
 # [0.0.29] - 2023-07-31
 * add Design patterns
