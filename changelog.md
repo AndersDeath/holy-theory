@@ -11,6 +11,7 @@ All notable changes to this project will be documented in this file.
 * update Invert Binary Tree training, add explanation of solution
 * update Island Perimeter training, add explanation of solution
 * update Isomorphic Strings training, add explanation of solution
+* update Keyboard Row training, add explanation of solution
 
 # [0.0.29] - 2023-07-31
 * add Design patterns
