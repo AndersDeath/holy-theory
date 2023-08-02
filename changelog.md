@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 # [0.0.30] - In progress
 * update Implement Stack using Queues training, add explanation of solution
 * update Integer to Roman training, add explanation of solution
+* update Intersection of two arrays 2 training, add explanation of solution
+* update Intersection of Two Linked Lists training, add explanation of solution
+* update Intersection of two arrays  training, add explanation of solution
+* update Inventory update training, add explanation of solution
+* update Invert Binary Tree training, add explanation of solution
+* update Island Perimeter training, add explanation of solution
+* update Isomorphic Strings training, add explanation of solution
+* update Keyboard Row training, add explanation of solution
 
 # [0.0.29] - 2023-07-31
 * add Design patterns
