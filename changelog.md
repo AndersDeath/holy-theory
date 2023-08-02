@@ -8,6 +8,7 @@ All notable changes to this project will be documented in this file.
 * update Intersection of Two Linked Lists training, add explanation of solution
 * update Intersection of two arrays  training, add explanation of solution
 * update Inventory update training, add explanation of solution
+* update Invert Binary Tree training, add explanation of solution
 
 # [0.0.29] - 2023-07-31
 * add Design patterns
