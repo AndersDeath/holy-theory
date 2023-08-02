@@ -5,6 +5,7 @@ All notable changes to this project will be documented in this file.
 * update Implement Stack using Queues training, add explanation of solution
 * update Integer to Roman training, add explanation of solution
 * update Intersection of two arrays 2 training, add explanation of solution
+* update Intersection of Two Linked Lists training, add explanation of solution
 
 # [0.0.29] - 2023-07-31
 * add Design patterns
