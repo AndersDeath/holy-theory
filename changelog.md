@@ -21,6 +21,7 @@ All notable changes to this project will be documented in this file.
 * update Longest Palindromic Substring training, add explanation of solution
 * update Longest Substring Without Repeating Characters training, add explanation of solution
 * update Longest Uncommon Subsequence I training, add explanation of solution
+* update Majority Element training, add explanation of solution
 
 # [0.0.29] - 2023-07-31
 * add Design patterns
