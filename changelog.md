@@ -25,6 +25,7 @@ All notable changes to this project will be documented in this file.
 * update Max Consecutive Ones training, add explanation of solution
 * update Maximum Depth of Binary Tree training, add explanation of solution
 * update Maximum Depth of N-ary Tree training, add explanation of solution
+* update Median of two sorted arrays training, add explanation of solution
 
 # [0.0.29] - 2023-07-31
 * add Design patterns
