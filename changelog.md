@@ -27,6 +27,7 @@ All notable changes to this project will be documented in this file.
 * update Maximum Depth of N-ary Tree training, add explanation of solution
 * update Median of two sorted arrays training, add explanation of solution
 * update Memo training, add explanation of solution
+* add 12-browser-url-search question
 
 # [0.0.29] - 2023-07-31
 * add Design patterns
