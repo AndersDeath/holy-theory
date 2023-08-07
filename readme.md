@@ -216,6 +216,7 @@
 * [09-design-patterns](/questions/09-design-patterns.md)
 * [10-solid](/questions/10-solid.md)
 * [11-grasp](/questions/11-grasp.md)
+* [12-browser-url-search](/questions/12-browser-url-search.md)
 ## System design
 
 * [01-horizontal-vertical-scaling](/system-design/01-horizontal-vertical-scaling.md)
