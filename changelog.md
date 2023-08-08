@@ -3,6 +3,7 @@
 All notable changes to this project will be documented in this file.
 
 # [0.0.31] - In progress
+* update Merge Sorted Array training, add explanation of solution
 # [0.0.30] - 2023-08-07
 * update Implement Stack using Queues training, add explanation of solution
 * update Integer to Roman training, add explanation of solution
