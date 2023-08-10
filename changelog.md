@@ -10,6 +10,7 @@ All notable changes to this project will be documented in this file.
 * update Missing number training, add explanation of solution
 * update Move Zeroes training, add explanation of solution
 * update Next Greater Element I training, add explanation of solution
+* update Nim Game training, add explanation of solution
 # [0.0.30] - 2023-08-07
 * update Implement Stack using Queues training, add explanation of solution
 * update Integer to Roman training, add explanation of solution
