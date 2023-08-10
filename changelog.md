@@ -12,6 +12,7 @@ All notable changes to this project will be documented in this file.
 * update Next Greater Element I training, add explanation of solution
 * update Nim Game training, add explanation of solution
 * update Number Complement training, add explanation of solution
+* update Number of 1 Bits training, add explanation of solution
 # [0.0.30] - 2023-08-07
 * update Implement Stack using Queues training, add explanation of solution
 * update Integer to Roman training, add explanation of solution
