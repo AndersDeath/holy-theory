@@ -29,6 +29,7 @@ All notable changes to this project will be documented in this file.
 * update Plus One training, add explanation of solution
 * update Power of Four training, add explanation of solution
 * update Power of two training, add explanation of solution
+* update Primes upon to N training, add explanation of solution
 
 # [0.0.30] - 2023-08-07
 * update Implement Stack using Queues training, add explanation of solution
