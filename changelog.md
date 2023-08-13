@@ -24,6 +24,7 @@ All notable changes to this project will be documented in this file.
 * update Pascal triangle training, add explanation of solution
 * update Path Sum training, add explanation of solution
 * update Perfect Number training, add explanation of solution
+* update Permutations training, add explanation of solution
 
 # [0.0.30] - 2023-08-07
 * update Implement Stack using Queues training, add explanation of solution
