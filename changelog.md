@@ -6,6 +6,13 @@ All notable changes to this project will be documented in this file.
 * update Range Sum Query training, add explanation of solution
 * update Ransom Note training, add explanation of solution
 * update Regular Expression Matching training, add explanation of solution
+* update Relative Ranks training, add explanation of solution
+* update Remove duplicate words training, add explanation of solution
+* update Remove duplicates training, add explanation of solution
+* update Remove element in place training, add explanation of solution
+* update Remove Linked List Elements training, add explanation of solution
+* update Repeated Substring Pattern training, add explanation of solution
+* update Reshape the Matrix training, add explanation of solution
 # [0.0.31] - 2023-08-14
 * update Merge Sorted Array training, add explanation of solution
 * update Merge two sorted linked lists training, add explanation of solution
