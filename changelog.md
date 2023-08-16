@@ -9,6 +9,7 @@ All notable changes to this project will be documented in this file.
 * update Relative Ranks training, add explanation of solution
 * update Remove duplicate words training, add explanation of solution
 * update Remove duplicates training, add explanation of solution
+* update Remove element in place training, add explanation of solution
 # [0.0.31] - 2023-08-14
 * update Merge Sorted Array training, add explanation of solution
 * update Merge two sorted linked lists training, add explanation of solution
