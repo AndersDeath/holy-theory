@@ -15,6 +15,7 @@ All notable changes to this project will be documented in this file.
 * update Reshape the Matrix training, add explanation of solution
 * update Reverse bits training, add explanation of solution
 * update Reverse String II training, add explanation of solution
+* update Reverse string training, add explanation of solution
 # [0.0.31] - 2023-08-14
 * update Merge Sorted Array training, add explanation of solution
 * update Merge two sorted linked lists training, add explanation of solution
