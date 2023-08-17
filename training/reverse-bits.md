@@ -16,7 +16,7 @@ var reverseBits = function(n) {
     return  parseInt(reversedArray.join(""),2) 
 };
 
-```
+``` 
 
 1. **Function Input and Output**: The `reverseBits` function takes a positive integer `n` as input and returns another positive integer, which is the result of reversing the binary representation of `n`.
 
