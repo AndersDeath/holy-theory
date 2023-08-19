@@ -31,6 +31,7 @@ All notable changes to this project will be documented in this file.
 * update Submission Detail training, add explanation of solution
 * update Subtree of Another Tree training, add explanation of solution
 * update Sum of Left Leaves training, add explanation of solution
+* update Summary Ranges training, add explanation of solution
 # [0.0.31] - 2023-08-14
 * update Merge Sorted Array training, add explanation of solution
 * update Merge two sorted linked lists training, add explanation of solution
