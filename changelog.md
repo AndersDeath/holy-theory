@@ -24,6 +24,16 @@ All notable changes to this project will be documented in this file.
 * update Same tree training, add explanation of solution
 * update Search insert position training, add explanation of solution
 * update Simple text editor training, add explanation of solution
+* update Single Number training, add explanation of solution
+* update Sqrt(x) training, add explanation of solution
+* update String to integer (atoi) training, add explanation of solution
+* update Student Attendance Record I training, add explanation of solution
+* update Submission Detail training, add explanation of solution
+* update Subtree of Another Tree training, add explanation of solution
+* update Sum of Left Leaves training, add explanation of solution
+* update Summary Ranges training, add explanation of solution
+* update Swap Nodes in Pairs training, add explanation of solution
+* update Symmetric difference training, add explanation of solution
 # [0.0.31] - 2023-08-14
 * update Merge Sorted Array training, add explanation of solution
 * update Merge two sorted linked lists training, add explanation of solution
