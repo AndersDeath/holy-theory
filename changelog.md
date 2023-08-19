@@ -25,6 +25,7 @@ All notable changes to this project will be documented in this file.
 * update Search insert position training, add explanation of solution
 * update Simple text editor training, add explanation of solution
 * update Single Number training, add explanation of solution
+* update Sqrt(x) training, add explanation of solution
 # [0.0.31] - 2023-08-14
 * update Merge Sorted Array training, add explanation of solution
 * update Merge two sorted linked lists training, add explanation of solution
