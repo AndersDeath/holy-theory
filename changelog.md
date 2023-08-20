@@ -35,6 +35,7 @@ All notable changes to this project will be documented in this file.
 * update Swap Nodes in Pairs training, add explanation of solution
 * update Symmetric difference training, add explanation of solution
 * update Symmetric Tree training, add explanation of solution
+* update Teemo Attacking training, add explanation of solution
 # [0.0.31] - 2023-08-14
 * update Merge Sorted Array training, add explanation of solution
 * update Merge two sorted linked lists training, add explanation of solution
