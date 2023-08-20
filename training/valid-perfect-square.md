@@ -17,7 +17,7 @@ function isPerfectSquare(num: number): boolean {
 }
 ```
 
-- **Input**:
+- **Input**: 
 
   - `num`: A non-negative integer.
 
