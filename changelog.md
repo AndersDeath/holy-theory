@@ -39,6 +39,7 @@ All notable changes to this project will be documented in this file.
 * update Tenth Line training, add explanation of solution
 * update Third Maximum Number training, add explanation of solution
 * update Time conversion training, add explanation of solution
+* update Times function in JS training, add explanation of solution
 # [0.0.31] - 2023-08-14
 * update Merge Sorted Array training, add explanation of solution
 * update Merge two sorted linked lists training, add explanation of solution
