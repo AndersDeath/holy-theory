@@ -13,8 +13,6 @@ const validatePin = (pin: string): boolean => {
 };
 ```
 
-Here's the breakdown of the provided code:
-
 - **Input**:
 
   - `pin`: A string representing a PIN code.
