@@ -43,6 +43,7 @@ All notable changes to this project will be documented in this file.
 * update Ugly Number training, add explanation of solution
 * update Valid Anagram training, add explanation of solution
 * update Valid parentheses training, add explanation of solution
+* update Valid Perfect Square training, add explanation of solution
 # [0.0.31] - 2023-08-14
 * update Merge Sorted Array training, add explanation of solution
 * update Merge two sorted linked lists training, add explanation of solution
