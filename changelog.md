@@ -46,6 +46,7 @@ All notable changes to this project will be documented in this file.
 * update Valid Perfect Square training, add explanation of solution
 * update Validate pin training, add explanation of solution
 * update Word Pattern training, add explanation of solution
+* update Word search training, add explanation of solution
 
 # [0.0.31] - 2023-08-14
 * update Merge Sorted Array training, add explanation of solution
