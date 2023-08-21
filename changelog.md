@@ -1,8 +1,9 @@
 # Changelog
 
 All notable changes to this project will be documented in this file.
+# [0.0.33] - In progress
 
-# [0.0.32] - In progress
+# [0.0.32] - 2023-08-21
 * update Range Sum Query training, add explanation of solution
 * update Ransom Note training, add explanation of solution
 * update Regular Expression Matching training, add explanation of solution
