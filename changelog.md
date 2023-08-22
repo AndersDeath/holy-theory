@@ -2,6 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 # [0.0.33] - In progress
+* update test build
 
 # [0.0.32] - 2023-08-21
 * update Range Sum Query training, add explanation of solution
