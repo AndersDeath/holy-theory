@@ -31,7 +31,9 @@
   },
   "homepage": "https://github.com/AndersDeath/holy-theory#readme",
   "devDependencies": {
-    "parse-md": "^3.0.3"
+    "@types/marked": "^5.0.1",
+    "parse-md": "^3.0.3",
+    "ts-node": "^10.9.1"
   },
   "dependencies": {
     "@eit6609/markdown-templates": "^1.0.0",
