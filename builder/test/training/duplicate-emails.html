@@ -30,4 +30,31 @@ img {
     padding: 10px;
 }</style></head><body><div class="main"><span><nav class="navigation"><ul><li> <a href="/holy-theory/builder/test/">Main page</a></li><li> <a href="/holy-theory/builder/test//languages.html">Statistics</a></li></ul></nav></span><h1></h1><span><h1 id="duplicate-emails">Duplicate Emails</h1>
 <pre><code class="hljs language-sql"><span class="hljs-keyword">select</span> `Email` <span class="hljs-keyword">from</span> `Person` <span class="hljs-keyword">group</span> <span class="hljs-keyword">by</span> `Email` <span class="hljs-keyword">having</span> <span class="hljs-built_in">count</span>(<span class="hljs-operator">*</span>) <span class="hljs-operator">&gt;</span> <span class="hljs-number">1</span>
-</code></pre></span></div></body></html>
+</code></pre><p><strong>Solution:</strong></p>
+<p>Step-by-step breakdown of the query:</p>
+<ol>
+<li><p><code>SELECT Email</code>: This part of the query selects the <code>Email</code> column from the <code>Person</code> table.</p>
+</li>
+<li><p><code>FROM Person</code>: This part of the query specifies the source table, which is <code>Person</code> in this case.</p>
+</li>
+<li><p><code>GROUP BY Email</code>: This part of the query groups the results based on the values in the <code>Email</code> column. It combines rows with the same email into a single group.</p>
+</li>
+<li><p><code>HAVING COUNT(*) &gt; 1</code>: This part of the query filters the groups after the grouping has been done. It retains only those groups that have a count (number of occurrences) greater than 1. In other words, it selects only those email addresses that appear more than once in the <code>Person</code> table.</p>
+</li>
+<li><p>The query execution returns the <code>Email</code> values that satisfy the condition of having a count greater than 1.</p>
+</li>
+</ol>
+<p>Techniques used:</p>
+<ol>
+<li><p>SQL Query Language: The code uses SQL (Structured Query Language) to interact with the database. SQL is a standard language used for querying and manipulating relational databases.</p>
+</li>
+<li><p>SELECT Statement: The query uses the <code>SELECT</code> statement to specify the columns to be retrieved from the database.</p>
+</li>
+<li><p>GROUP BY Clause: The query uses the <code>GROUP BY</code> clause to group the rows based on the values in the <code>Email</code> column.</p>
+</li>
+<li><p>HAVING Clause: The query uses the <code>HAVING</code> clause to filter the groups based on the condition that the count of rows in each group (<code>COUNT(*)</code>) is greater than 1.</p>
+</li>
+</ol>
+<p>Summary:</p>
+<p>The provided SQL query retrieves the <code>Email</code> values from the <code>Person</code> table, groups them by <code>Email</code>, and then selects only those groups where the <code>Email</code> occurs more than once in the table.</p>
+</span></div></body></html>

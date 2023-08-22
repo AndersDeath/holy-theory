@@ -45,4 +45,32 @@ img {
         }
         <span class="hljs-keyword">return</span> output;
 };
-</code></pre></span></div></body></html>
+</code></pre><p>The function <code>fizzBuzz</code> takes an integer <code>n</code> as input and returns an array of strings with the following conditions:</p>
+<ol>
+<li>If the number is divisible by 3 and 5 (i.e., a multiple of 15), it adds &quot;FizzBuzz&quot; to the array.</li>
+<li>If the number is divisible by 3 (i.e., a multiple of 3), it adds &quot;Fizz&quot; to the array.</li>
+<li>If the number is divisible by 5 (i.e., a multiple of 5), it adds &quot;Buzz&quot; to the array.</li>
+<li>Otherwise, it adds the number itself as a string to the array.</li>
+</ol>
+<p>Here&#39;s a step-by-step explanation of the code:</p>
+<ol>
+<li><p>Initialize an empty array called <code>output</code> to store the result.</p>
+</li>
+<li><p>Use a <code>for</code> loop to iterate from <code>1</code> to <code>n</code>, inclusive.</p>
+</li>
+<li><p>Inside the loop, check the following conditions:</p>
+<ul>
+<li>If the current number <code>i</code> is divisible by both 3 and 5 (i.e., <code>i % 15 === 0</code>), add &quot;FizzBuzz&quot; to the <code>output</code> array.</li>
+<li>Else, if the current number <code>i</code> is divisible by 3 (i.e., <code>i % 3 === 0</code>), add &quot;Fizz&quot; to the <code>output</code> array.</li>
+<li>Else, if the current number <code>i</code> is divisible by 5 (i.e., <code>i % 5 === 0</code>), add &quot;Buzz&quot; to the <code>output</code> array.</li>
+<li>If none of the above conditions are true, add the current number <code>i</code> as a string to the <code>output</code> array.</li>
+</ul>
+</li>
+<li><p>After the loop completes, return the <code>output</code> array containing the FizzBuzz sequence for the numbers from <code>1</code> to <code>n</code>.</p>
+</li>
+</ol>
+<p>The technique used in this code is:</p>
+<ul>
+<li>Iteration: The code uses a <code>for</code> loop to iterate through the numbers from <code>1</code> to <code>n</code>, applying the FizzBuzz conditions and adding the corresponding strings to the <code>output</code> array.</li>
+</ul>
+</span></div></body></html>

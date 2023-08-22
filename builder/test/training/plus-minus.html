@@ -30,22 +30,52 @@ img {
     padding: 10px;
 }</style></head><body><div class="main"><span><nav class="navigation"><ul><li> <a href="/holy-theory/builder/test/">Main page</a></li><li> <a href="/holy-theory/builder/test//languages.html">Statistics</a></li></ul></nav></span><h1></h1><span><h1 id="plus-minus">Plus minus</h1>
 <pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">plusMinus</span>(<span class="hljs-params">arr: <span class="hljs-built_in">number</span>[]</span>): <span class="hljs-built_in">void</span> {
-    <span class="hljs-comment">// Write your code here</span>
-    <span class="hljs-keyword">const</span> length = arr.<span class="hljs-property">length</span>;
-    <span class="hljs-keyword">let</span> <span class="hljs-attr">tempArr</span>: <span class="hljs-built_in">number</span>[] = [<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>];
-    
-    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; length; i++) {
-        <span class="hljs-keyword">if</span>(arr[i] &gt; <span class="hljs-number">0</span>) {
-            tempArr[<span class="hljs-number">0</span>]++;
-        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(arr[i] &lt; <span class="hljs-number">0</span>) {
-            tempArr[<span class="hljs-number">1</span>]++;
-        } <span class="hljs-keyword">else</span> {
-            tempArr[<span class="hljs-number">2</span>]++;
-        }
-    }
+  <span class="hljs-comment">// Write your code here</span>
+  <span class="hljs-keyword">const</span> length = arr.<span class="hljs-property">length</span>;
+  <span class="hljs-keyword">let</span> <span class="hljs-attr">tempArr</span>: <span class="hljs-built_in">number</span>[] = [<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>];
 
-    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>((tempArr[<span class="hljs-number">0</span>]/length).<span class="hljs-title function_">toFixed</span>(<span class="hljs-number">6</span>));
-    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>((tempArr[<span class="hljs-number">1</span>]/length).<span class="hljs-title function_">toFixed</span>(<span class="hljs-number">6</span>));
-    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>((tempArr[<span class="hljs-number">2</span>]/length).<span class="hljs-title function_">toFixed</span>(<span class="hljs-number">6</span>));
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; length; i++) {
+    <span class="hljs-keyword">if</span> (arr[i] &gt; <span class="hljs-number">0</span>) {
+      tempArr[<span class="hljs-number">0</span>]++;
+    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (arr[i] &lt; <span class="hljs-number">0</span>) {
+      tempArr[<span class="hljs-number">1</span>]++;
+    } <span class="hljs-keyword">else</span> {
+      tempArr[<span class="hljs-number">2</span>]++;
+    }
+  }
+
+  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>((tempArr[<span class="hljs-number">0</span>] / length).<span class="hljs-title function_">toFixed</span>(<span class="hljs-number">6</span>));
+  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>((tempArr[<span class="hljs-number">1</span>] / length).<span class="hljs-title function_">toFixed</span>(<span class="hljs-number">6</span>));
+  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>((tempArr[<span class="hljs-number">2</span>] / length).<span class="hljs-title function_">toFixed</span>(<span class="hljs-number">6</span>));
 }
-</code></pre></span></div></body></html>
+</code></pre><p>The code defines a function <code>plusMinus</code> that calculates the fractions of positive, negative, and zero elements in an array. It then prints these fractions with a precision of 6 decimal places.</p>
+<p>Here&#39;s how the code works:</p>
+<ol>
+<li><p>The function <code>plusMinus</code> takes an array of numbers <code>arr</code> as input.</p>
+</li>
+<li><p>It initializes an array <code>tempArr</code> with three elements representing the counts of positive, negative, and zero elements, respectively. The initial values of all elements are set to 0.</p>
+</li>
+<li><p>A loop iterates through each element of the input array <code>arr</code>.</p>
+</li>
+<li><p>Inside the loop, the code checks whether the current element is positive, negative, or zero. Based on the comparison, the corresponding element in <code>tempArr</code> is incremented.</p>
+</li>
+<li><p>After the loop, the code calculates the fractions by dividing the count of positive, negative, and zero elements by the total length of the array.</p>
+</li>
+<li><p>The <code>toFixed(6)</code> method is used to format the fractions with a precision of 6 decimal places.</p>
+</li>
+<li><p>Finally, the code prints the calculated fractions using the <code>console.log</code> function.</p>
+</li>
+</ol>
+<p><strong>Techniques Used:</strong></p>
+<ul>
+<li><p><strong>Looping:</strong> The code uses a loop to iterate through each element of the input array.</p>
+</li>
+<li><p><strong>Conditional Statements:</strong> Conditional statements (if-else) are used to determine whether each element is positive, negative, or zero and update the corresponding count.</p>
+</li>
+</ul>
+<p><strong>Summary:</strong></p>
+<p>The <code>plusMinus</code> function calculates and prints the fractions of positive, negative, and zero elements in an array, each with a precision of 6 decimal places. It provides insights into the distribution of elements in the array.</p>
+<ul>
+<li><a href="../readme.md">Go back</a></li>
+</ul>
+</span></div></body></html>

@@ -41,4 +41,45 @@ img {
     };
     <span class="hljs-keyword">return</span> curried;
 }
-</code></pre></span></div></body></html>
+</code></pre><p><strong>Solution:</strong></p>
+<p>Step-by-step breakdown of the code:</p>
+<ol>
+<li><p>The <code>curry</code> function takes a function <code>func</code> as input and returns a curried version of the function.</p>
+</li>
+<li><p>Inside the <code>curry</code> function, a new function <code>curried</code> is defined using arrow function syntax. This function will be the curried version of the original function.</p>
+</li>
+<li><p>The <code>curried</code> function accepts any number of arguments using the rest parameter syntax <code>...args</code>. These arguments will be passed to the original function <code>func</code>.</p>
+</li>
+<li><p>Inside the <code>curried</code> function, a check is performed to determine if the number of arguments passed (<code>args.length</code>) is greater than or equal to the expected number of arguments of the original function (<code>func.length</code>).</p>
+</li>
+<li><p>If the condition is true:</p>
+<ul>
+<li>The original function <code>func</code> is called using the <code>apply</code> method, passing <code>this</code> as the context and <code>args</code> as the arguments.</li>
+<li>The result of the function call is returned.</li>
+</ul>
+</li>
+<li><p>If the condition is false:</p>
+<ul>
+<li>A new function is returned using arrow function syntax. This new function accepts additional arguments <code>args2</code>.</li>
+<li>The <code>curried</code> function is recursively called with the combined arguments of <code>args</code> and <code>args2</code> using the <code>apply</code> method.</li>
+</ul>
+</li>
+<li><p>The process of checking the number of arguments and either returning the result or returning a new function is repeated until the required number of arguments is met.</p>
+</li>
+<li><p>The curried function <code>curried</code> is returned.</p>
+</li>
+</ol>
+<p>Techniques used:</p>
+<ol>
+<li><p>Higher-Order Functions: The <code>curry</code> function takes a function <code>func</code> as input and returns a new function <code>curried</code> as the result.</p>
+</li>
+<li><p>Rest Parameter: The rest parameter syntax <code>...args</code> allows the <code>curried</code> function to accept any number of arguments and collect them into an array.</p>
+</li>
+<li><p>Arrow Function: The arrow function syntax is used to define the <code>curried</code> function, which simplifies the syntax and provides lexical scoping of <code>this</code>.</p>
+</li>
+<li><p>Conditional Statements: The code uses a conditional statement to check the number of arguments and determine whether to return the result or a new curried function.</p>
+</li>
+</ol>
+<p>Summary:</p>
+<p>The provided solution implements the concept of currying by creating a curried version of a function. It allows the function to be called with a partial set of arguments, returning a new function that accepts the remaining arguments until the required number of arguments is provided.</p>
+</span></div></body></html>

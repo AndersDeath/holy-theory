@@ -40,5 +40,38 @@ img {
         <span class="hljs-keyword">return</span> maxDiff;
 
 };
-</code></pre><p><strong>Source: <a href="https://leetcode.com">https://leetcode.com</a></strong></p>
+</code></pre><p><strong>Solution:</strong>
+Below are the step-by-step explanations of the code:</p>
+<ol>
+<li><p>The <code>maxProfit</code> function is defined, which takes one parameter:</p>
+<ul>
+<li><code>prices</code>: an array of numbers representing the stock prices.</li>
+</ul>
+</li>
+<li><p>A variable <code>min</code> is initialized to a high value, 10000, to track the minimum price encountered during the iteration. It will be updated as a new minimum price is found.</p>
+</li>
+<li><p>A variable <code>maxDiff</code> is initialized to 0, which will store the maximum difference (profit) encountered during the iteration. It will be updated if a higher difference is found.</p>
+</li>
+<li><p>A <code>for</code> loop is used to iterate over the elements of the <code>prices</code> array.</p>
+</li>
+<li><p>Inside the loop, the minimum value between the current price (<code>prices[i]</code>) and the current minimum (<code>min</code>) is calculated using <code>Math.min(prices[i], min)</code>. This updates the <code>min</code> variable to track the new minimum price encountered.</p>
+</li>
+<li><p>The maximum difference (profit) between the current price and the minimum price (<code>prices[i] - min</code>) is calculated using <code>Math.max(prices[i] - min, maxDiff)</code>. This updates the <code>maxDiff</code> variable if a higher difference is found.</p>
+</li>
+<li><p>The loop continues until all prices in the array are processed.</p>
+</li>
+<li><p>Once the loop exits, the final value of <code>maxDiff</code> represents the maximum possible profit that can be obtained by buying and selling the stock.</p>
+</li>
+<li><p>The <code>maxDiff</code> value is returned as the result.</p>
+</li>
+</ol>
+<p><strong>Techniques used:</strong></p>
+<p>The following techniques are utilized within the code:</p>
+<ol>
+<li>Initializing variables to track minimum prices and maximum differences.</li>
+<li>Iterating over array elements using a <code>for</code> loop.</li>
+<li>Updating variables based on conditions using <code>Math.min</code> and <code>Math.max</code>.</li>
+<li>Returning a calculated result.</li>
+</ol>
+<p><strong>Source: <a href="https://leetcode.com">https://leetcode.com</a></strong></p>
 </span></div></body></html>

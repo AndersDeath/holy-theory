@@ -46,4 +46,60 @@ img {
   
   <span class="hljs-keyword">return</span> chars.<span class="hljs-title function_">join</span>(<span class="hljs-string">&#x27;&#x27;</span>);
 };
-</code></pre></span></div></body></html>
+</code></pre><ol>
+<li><p><strong>Function Input and Output</strong>:</p>
+<ul>
+<li><strong>Input</strong>: The <code>reverseStr</code> function takes a string <code>s</code> and an integer <code>k</code> as input.</li>
+<li><strong>Output</strong>: It returns a modified string where every block of <code>k</code> characters is reversed, starting from the beginning.</li>
+</ul>
+</li>
+<li><p><strong>String to Character Array Conversion</strong>:</p>
+<ul>
+<li>The input string <code>s</code> is split into an array of individual characters using the <code>split(&#39;&#39;)</code> method.</li>
+</ul>
+</li>
+<li><p><strong>Reversing Blocks of Characters</strong>:</p>
+<ul>
+<li>The function iterates through the array of characters with a step size of <code>2 * k</code>.</li>
+<li>For each block, <code>start</code> is set as the current index <code>i</code>, and <code>end</code> is set as the minimum of <code>(i + k - 1)</code> and <code>(chars.length - 1)</code>.</li>
+</ul>
+</li>
+<li><p><strong>Two-Pointer Character Reversal</strong>:</p>
+<ul>
+<li>Inside each block, characters at <code>start</code> and <code>end</code> indices are swapped using array destructuring.</li>
+<li>The pointers <code>start</code> and <code>end</code> move towards each other until they meet, effectively reversing the characters within the block.</li>
+</ul>
+</li>
+<li><p><strong>Character Array to String Conversion</strong>:</p>
+<ul>
+<li>After reversing the characters, the modified character array is joined back into a string using the <code>join(&#39;&#39;)</code> method.</li>
+</ul>
+</li>
+<li><p><strong>Return Result</strong>:</p>
+<ul>
+<li>The modified string, where every block of <code>k</code> characters has been reversed, is returned as the output.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Techniques Used</strong>:</p>
+<ol>
+<li><p>Looping and Array Manipulation:</p>
+<ul>
+<li>Iterating through the character array with a step size.</li>
+<li>Reversing characters within each block using two pointers.</li>
+</ul>
+</li>
+<li><p>Swapping Variables:</p>
+<ul>
+<li>Using array destructuring to swap characters at <code>start</code> and <code>end</code> indices.</li>
+</ul>
+</li>
+<li><p>String Manipulation:</p>
+<ul>
+<li>Converting the input string to an array of characters.</li>
+<li>Joining the character array back into a string to form the modified string.</li>
+</ul>
+</li>
+</ol>
+<p>This TypeScript function takes a string and an integer, reverses blocks of characters within the string, and returns the modified string.</p>
+</span></div></body></html>

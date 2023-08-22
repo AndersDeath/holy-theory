@@ -40,4 +40,37 @@ img {
         <span class="hljs-keyword">return</span> out;
     }
 }
-</code></pre></span></div></body></html>
+</code></pre><p><strong>Solution:</strong></p>
+<p>Step-by-step breakdown of the code:</p>
+<ol>
+<li><p>The <code>getCumulativeSum</code> function takes an integer array <code>arr</code> as input and returns a new array <code>out</code> where each element represents the cumulative sum of elements up to that index.</p>
+</li>
+<li><p>Initialize a new integer array <code>out</code> with the same length as the input array <code>arr</code>.</p>
+</li>
+<li><p>Initialize a variable <code>total</code> to keep track of the running total. Set it to 0.</p>
+</li>
+<li><p>Iterate through each element of the input array <code>arr</code> using a for loop.</p>
+</li>
+<li><p>Inside the loop:</p>
+<ul>
+<li>Add the current element <code>arr[i]</code> to the <code>total</code> variable, updating the running sum.</li>
+<li>Assign the value of <code>total</code> to the corresponding index <code>out[i]</code> in the output array.</li>
+</ul>
+</li>
+<li><p>Repeat steps 5 for each element in the input array until the loop completes.</p>
+</li>
+<li><p>Return the resulting output array <code>out</code>, which contains the cumulative sum of elements up to each index.</p>
+</li>
+</ol>
+<p>Techniques used:</p>
+<ol>
+<li><p>Array Manipulation: The code initializes and updates the elements of the <code>out</code> array to store the cumulative sum values.</p>
+</li>
+<li><p>Looping: The code utilizes a for loop to iterate through each element of the input array and perform the necessary calculations.</p>
+</li>
+<li><p>Accumulation: The code calculates the cumulative sum by continuously adding the current element to the running total.</p>
+</li>
+</ol>
+<p>Summary:</p>
+<p>The provided solution efficiently calculates the cumulative sum of the input array by iteratively summing up the elements and storing the cumulative sum at each index in a new array. This approach allows for quick access to the cumulative sum at any given index.</p>
+</span></div></body></html>

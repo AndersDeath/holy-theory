@@ -45,4 +45,39 @@ img {
   
   <span class="hljs-keyword">return</span> curr;
 };
-</code></pre></span></div></body></html>
+</code></pre><p><strong>Solution:</strong></p>
+<p>Step-by-step breakdown of the code:</p>
+<ol>
+<li><p><code>if (n &lt;= 1) {</code>: This condition checks if the input <code>n</code> is less than or equal to 1. If <code>n</code> is 0 or 1, the function returns <code>n</code> itself as the Fibonacci number.</p>
+</li>
+<li><p><code>let prev = 0;</code>: This initializes a variable <code>prev</code> to store the Fibonacci number from the previous iteration.</p>
+</li>
+<li><p><code>let curr = 1;</code>: This initializes a variable <code>curr</code> to store the current Fibonacci number.</p>
+</li>
+<li><p>The loop <code>for (let i = 2; i &lt;= n; i++) {</code> starts from <code>i = 2</code> because we have already handled the cases when <code>n</code> is 0 or 1.</p>
+</li>
+<li><p><code>const temp = curr;</code>: This creates a temporary variable <code>temp</code> to store the current <code>curr</code> value before updating it.</p>
+</li>
+<li><p><code>curr = prev + curr;</code>: This updates the <code>curr</code> variable by adding the previous Fibonacci number (<code>prev</code>) to the current one (<code>curr</code>). This step calculates the next Fibonacci number in the sequence.</p>
+</li>
+<li><p><code>prev = temp;</code>: This updates the <code>prev</code> variable with the previous <code>curr</code> value stored in <code>temp</code>. This prepares the <code>prev</code> variable for the next iteration.</p>
+</li>
+<li><p>The loop continues until <code>i</code> reaches the input <code>n</code>, and the Fibonacci numbers are calculated iteratively.</p>
+</li>
+<li><p>Finally, the function returns the value of <code>curr</code>, which is the nth Fibonacci number.</p>
+</li>
+</ol>
+<p>Summary:</p>
+<p>The provided TypeScript function <code>fib</code> calculates the nth Fibonacci number using an iterative approach. It starts with <code>prev = 0</code> and <code>curr = 1</code>, then iteratively calculates the next Fibonacci number by adding the previous two numbers. If the input <code>n</code> is less than or equal to 1, the function returns <code>n</code> itself as the Fibonacci number.</p>
+<p>Techniques used:</p>
+<ol>
+<li><p>TypeScript: The code is written in the TypeScript programming language, which is a superset of JavaScript with added type annotations.</p>
+</li>
+<li><p>Loop: The code uses a <code>for</code> loop to iteratively calculate the Fibonacci numbers from <code>2</code> to <code>n</code>.</p>
+</li>
+<li><p>Variables: The variables <code>prev</code> and <code>curr</code> are used to store the current and previous Fibonacci numbers, respectively.</p>
+</li>
+<li><p>Iterative approach: The function uses an iterative method to calculate the Fibonacci numbers rather than a recursive approach.</p>
+</li>
+</ol>
+</span></div></body></html>

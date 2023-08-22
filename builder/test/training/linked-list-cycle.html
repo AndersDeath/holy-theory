@@ -57,4 +57,26 @@ img {
     
     <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
 };
-</code></pre></span></div></body></html>
+</code></pre><p>The code is a JavaScript function that determines whether a singly-linked list has a cycle (a loop) or not. It uses the &quot;tortoise and hare&quot; approach, also known as Floyd&#39;s Cycle Detection Algorithm, to detect cycles in a linked list.</p>
+<p>Here&#39;s a step-by-step explanation of the code:</p>
+<ol>
+<li><p>The <code>hasCycle</code> function takes a single parameter <code>head</code>, which represents the head of the linked list.</p>
+</li>
+<li><p>It initializes two pointers: <code>slowNode</code> and <code>fastNode</code>, both pointing to the <code>head</code> of the linked list.</p>
+</li>
+<li><p>It enters a <code>while</code> loop that continues as long as <code>fastNode</code> is not <code>null</code> and <code>fastNode.next</code> is not <code>null</code>. This condition ensures that the fast pointer can make a valid move without encountering a null reference.</p>
+</li>
+<li><p>Inside the loop:</p>
+<ul>
+<li>The <code>fastNode</code> pointer moves two steps ahead by accessing its <code>.next.next</code> reference. This simulates the &quot;hare&quot; moving faster in the linked list.</li>
+<li>The <code>slowNode</code> pointer moves one step ahead by accessing its <code>.next</code> reference. This simulates the &quot;tortoise&quot; moving slower in the linked list.</li>
+</ul>
+</li>
+<li><p>After each iteration of the loop, the code checks whether the <code>fastNode</code> and <code>slowNode</code> pointers are pointing to the same node. If they are, it means a cycle has been detected, and the function returns <code>true</code>.</p>
+</li>
+<li><p>If the loop completes without finding a cycle, the function returns <code>false</code>.</p>
+</li>
+</ol>
+<p>The technique used in this code is the &quot;tortoise and hare&quot; algorithm for cycle detection in linked lists. This algorithm is based on the idea that if there is a cycle in the linked list, the fast and slow pointers will eventually meet at some point within the cycle. If there is no cycle, the fast pointer will reach the end of the list without encountering a null reference.</p>
+<p>Overall, this algorithm has a time complexity of O(n), where n is the number of nodes in the linked list, and a space complexity of O(1), as it only uses a constant amount of extra space for the two pointers.</p>
+</span></div></body></html>

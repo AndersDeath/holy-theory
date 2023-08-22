@@ -45,4 +45,40 @@ img {
     }
     <span class="hljs-keyword">return</span> result;
 };
-</code></pre></span></div></body></html>
+</code></pre><p><strong>Solution:</strong></p>
+<p>Step-by-step breakdown of the code:</p>
+<ol>
+<li><p>The <code>countBits</code> function takes an integer <code>n</code> as input and returns an array where each element represents the number of 1-bits in the binary representation of the corresponding index.</p>
+</li>
+<li><p>Initialize an array <code>result</code> with the first element set to 0. This array will store the count of 1-bits for each index.</p>
+</li>
+<li><p>Initialize variables <code>pow</code> and <code>offset</code> to keep track of the power of 2 and the current offset, respectively. Start with <code>pow</code> set to 1 and <code>offset</code> set to 1.</p>
+</li>
+<li><p>Iterate from <code>i = 1</code> to <code>n</code>.</p>
+</li>
+<li><p>Check if <code>i</code> is equal to <code>pow</code>. If it is, it means that <code>i</code> is a power of 2. In this case:</p>
+<ul>
+<li>Set <code>result[i]</code> to 1, as a power of 2 always has a single 1-bit in its binary representation.</li>
+<li>Update <code>pow</code> by left-shifting it by 1 to get the next power of 2.</li>
+<li>Reset <code>offset</code> to 1.</li>
+</ul>
+</li>
+<li><p>If <code>i</code> is not a power of 2:</p>
+<ul>
+<li>Set <code>result[i]</code> to <code>result[offset] + 1</code>. This means that the number of 1-bits in <code>i</code> is equal to the number of 1-bits in the number at the corresponding offset in the array, plus 1.</li>
+<li>Increment <code>offset</code> by 1 to move to the next offset.</li>
+</ul>
+</li>
+<li><p>Return the <code>result</code> array containing the counts of 1-bits for each index.</p>
+</li>
+</ol>
+<p>Techniques used:</p>
+<ol>
+<li><p>Bitwise Operations: The code utilizes the bitwise left shift operator (<code>&lt;&lt;</code>) to update the <code>pow</code> variable by shifting it to the left, effectively calculating the next power of 2.</p>
+</li>
+<li><p>Binary Representation: The solution leverages the binary representation of numbers to count the number of 1-bits at each index.</p>
+</li>
+</ol>
+<p>Summary:</p>
+<p>The provided solution efficiently counts the number of 1-bits in the binary representation of each number from 0 to <code>n</code> and stores the counts in an array. It achieves this by identifying powers of 2 and updating the count based on the previously calculated counts using bitwise operations.</p>
+</span></div></body></html>

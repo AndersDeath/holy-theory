@@ -44,7 +44,6 @@ img {
         
     
     List&lt;Integer&gt; <span class="hljs-title function_">getEvenDigitNumbers</span> <span class="hljs-params">(<span class="hljs-type">int</span>[] arr)</span> {
-        <span class="hljs-comment">// add your logic here</span>
         List&lt;Integer&gt; output = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ArrayList</span>&lt;Integer&gt;();
 
         <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt; arr.length; i++) {
@@ -55,4 +54,41 @@ img {
         <span class="hljs-keyword">return</span> output; 
     }
 }
-</code></pre></span></div></body></html>
+</code></pre><p><strong>Solution:</strong></p>
+<p>Step-by-step breakdown of the code:</p>
+<ol>
+<li><p><code>int countOfDigits(int number)</code>: This method takes an integer <code>number</code> as input and calculates the number of digits in that integer.</p>
+</li>
+<li><p><code>if(number == 0) { return 1; }</code>: This is a special case check. If the input number is 0, the method returns 1, as 0 has a single digit.</p>
+</li>
+<li><p><code>int count = 0;</code>: This variable <code>count</code> is used to keep track of the number of digits in the input number.</p>
+</li>
+<li><p><code>while(number &gt; 0) { count++; number /= 10; }</code>: This loop iterates until the <code>number</code> becomes 0. In each iteration, the <code>count</code> is incremented, and the <code>number</code> is divided by 10 to remove the rightmost digit. This process continues until all the digits are counted.</p>
+</li>
+<li><p><code>return count;</code>: Once the loop is completed, the method returns the <code>count</code>, which represents the number of digits in the input number.</p>
+</li>
+<li><p><code>List&lt;Integer&gt; getEvenDigitNumbers (int[] arr)</code>: This method takes an array of integers <code>arr</code> as input and returns a list of integers that have an even number of digits.</p>
+</li>
+<li><p><code>List&lt;Integer&gt; output = new ArrayList&lt;Integer&gt;();</code>: This initializes an <code>ArrayList</code> called <code>output</code> to store the integers with an even number of digits.</p>
+</li>
+<li><p><code>for(int i = 0; i &lt; arr.length; i++) {</code>: This loop iterates through each element in the input array.</p>
+</li>
+<li><p><code>if(countOfDigits(arr[i]) % 2 == 0) { output.add(arr[i]); }</code>: This line checks if the number of digits in the current element <code>arr[i]</code> is even. If it is, the element is added to the <code>output</code> list.</p>
+</li>
+<li><p>After processing all elements in the input array, the method returns the <code>output</code> list, which contains the integers with an even number of digits.</p>
+</li>
+</ol>
+<p>Techniques used:</p>
+<ol>
+<li><p>Java Programming Language: The code is written in the Java programming language, a widely used language for building various applications.</p>
+</li>
+<li><p>ArrayList: The <code>ArrayList</code> data structure from the <code>java.util</code> package is used to store the integers with an even number of digits.</p>
+</li>
+<li><p>Loop: The code uses a <code>while</code> loop to count the number of digits in the input integer and a <code>for</code> loop to iterate through the elements in the input array.</p>
+</li>
+<li><p>Conditional Statement: The <code>if</code> statement is used to check if the number of digits in an integer is even.</p>
+</li>
+</ol>
+<p>Summary:</p>
+<p>The provided Java code contains two methods: <code>countOfDigits</code>, which calculates the number of digits in an integer, and <code>getEvenDigitNumbers</code>, which returns a list of integers with an even number of digits from the input array.</p>
+</span></div></body></html>

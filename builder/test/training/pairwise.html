@@ -55,4 +55,33 @@ img {
 
 <span class="hljs-keyword">let</span> res = <span class="hljs-title function_">pairwise</span>([<span class="hljs-number">1</span>, <span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <span class="hljs-number">4</span>], <span class="hljs-number">4</span>);
 <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(res);
-</code></pre></span></div></body></html>
+</code></pre><p>The <code>pairwise</code> function takes an array of integers <code>arr</code> and an integer <code>arg</code> as input, and it returns the sum of the indices of pairs in the array that add up to the given <code>arg</code>.</p>
+<p>Here&#39;s how the function works:</p>
+<ol>
+<li><p>It initializes an empty array <code>index</code> to store the indices of pairs that satisfy the condition.</p>
+</li>
+<li><p>It uses a nested loop to iterate over each element in the array. The outer loop iterates over the elements with index <code>a</code>, and the inner loop iterates over the elements starting from index <code>i = 1</code>. This is done to find pairs that haven&#39;t been considered before.</p>
+</li>
+<li><p>Inside the inner loop, it calculates the sum of the current element <code>temp</code> and the element at index <code>i</code> (<code>temp2</code>). If the sum is equal to the target <code>arg</code>, and the indices <code>i</code> and <code>a</code> are valid (i.e., <code>i &gt; +a</code>), and the indices <code>a</code> and <code>i</code> are not already present in the <code>index</code> array, then it adds both <code>a</code> and <code>i</code> to the <code>index</code> array and breaks out of the loop.</p>
+</li>
+<li><p>After finding all the valid pairs, it checks if there is at least one pair in the <code>index</code> array.</p>
+</li>
+<li><p>If there are pairs in the <code>index</code> array, it defines a helper function <code>addAll</code> that takes two arguments and returns their sum. Then, it uses the <code>reduce</code> function with the <code>addAll</code> function to calculate the sum of all the indices in the <code>index</code> array and returns the result.</p>
+</li>
+<li><p>If there are no valid pairs, it returns 0.</p>
+</li>
+<li><p>Finally, it calls the <code>pairwise</code> function with the example input <code>[1, 3, 2, 4]</code> and <code>4</code>, and logs the result to the console.</p>
+</li>
+</ol>
+<p><strong>Techniques Used:</strong></p>
+<ul>
+<li><p><strong>Nested Loops:</strong> The function uses nested loops to compare each pair of elements in the array to find pairs with the desired sum.</p>
+</li>
+<li><p><strong>Array Manipulation:</strong> The function manipulates the <code>index</code> array to keep track of the indices of valid pairs.</p>
+</li>
+<li><p><strong>Reduce Function:</strong> The function uses the <code>reduce</code> function to calculate the sum of the indices in the <code>index</code> array.</p>
+</li>
+</ul>
+<p><strong>Summary:</strong></p>
+<p>The <code>pairwise</code> function effectively finds pairs of elements in the array that add up to the given target <code>arg</code>, calculates the sum of their indices, and returns the result. It uses nested loops, array manipulation, and the <code>reduce</code> function to achieve this.</p>
+</span></div></body></html>

@@ -36,4 +36,30 @@ img {
         <span class="hljs-keyword">return</span> <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">max</span>(a.<span class="hljs-property">length</span>, b.<span class="hljs-property">length</span>);
     }
 };
-</code></pre></span></div></body></html>
+</code></pre><p><strong>Step-by-Step solution:</strong></p>
+<ol>
+<li><p>Define a function <code>findLUSlength</code> that takes two strings <code>a</code> and <code>b</code> as input.</p>
+</li>
+<li><p>Check if strings <code>a</code> and <code>b</code> are equal:</p>
+<ul>
+<li>If <code>a</code> is equal to <code>b</code>, return -1. This is because a common subsequence cannot be longer than the strings themselves, so there can be no uncommon subsequence.</li>
+</ul>
+</li>
+<li><p>If <code>a</code> and <code>b</code> are not equal:</p>
+<ul>
+<li>Return the maximum length between the lengths of strings <code>a</code> and <code>b</code>. This is because if the two strings are not equal, the longer string itself is the longest uncommon subsequence.</li>
+</ul>
+</li>
+<li><p>The function returns the length of the longest uncommon subsequence.</p>
+</li>
+</ol>
+<p><strong>Techniques Used:</strong></p>
+<ol>
+<li><p><strong>Conditional Logic:</strong> The algorithm uses conditional statements to check if the input strings are equal and returns the appropriate result based on the condition.</p>
+</li>
+<li><p><strong>Math.max:</strong> The algorithm uses the <code>Math.max</code> function to compare the lengths of strings <code>a</code> and <code>b</code> and return the maximum length.</p>
+</li>
+</ol>
+<p><strong>Summary:</strong></p>
+<p>The <code>findLUSlength</code> function determines the length of the longest uncommon subsequence between two input strings <code>a</code> and <code>b</code>. If the two strings are equal, it returns -1, indicating that there is no uncommon subsequence. If the strings are not equal, it returns the maximum length between the lengths of the two strings, as the longer string itself is the longest uncommon subsequence. The algorithm uses simple conditional logic and the <code>Math.max</code> function to achieve this.</p>
+</span></div></body></html>

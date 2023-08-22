@@ -53,5 +53,24 @@ img {
     }
 
 };
-</code></pre><p><strong>Source: <a href="https://leetcode.com">https://leetcode.com</a></strong></p>
+</code></pre><p><strong>Step-by-Step solution:</strong></p>
+<ol>
+<li><p>Define a function <code>maxDepth</code> that takes a binary tree node <code>root</code> as input.</p>
+</li>
+<li><p>Check if the <code>root</code> is <code>null</code> (indicating an empty subtree). If so, return 0 as the depth of the subtree is 0.</p>
+</li>
+<li><p>If the <code>root</code> is not <code>null</code>, recursively calculate the maximum depth of the left and right subtrees using two recursive calls to <code>maxDepth(root.left)</code> and <code>maxDepth(root.right)</code>.</p>
+</li>
+<li><p>Compare the depths of the left and right subtrees. If the <code>leftDepth</code> is greater than the <code>rightDepth</code>, return <code>leftDepth + 1</code>, indicating the maximum depth of the current subtree. Otherwise, return <code>rightDepth + 1</code>.</p>
+</li>
+</ol>
+<p><strong>Techniques Used:</strong></p>
+<ol>
+<li><p><strong>Recursion:</strong> The algorithm uses recursion to calculate the maximum depth of the binary tree. It breaks down the problem by considering the left and right subtrees.</p>
+</li>
+<li><p><strong>Conditional Logic:</strong> The algorithm uses conditional statements to compare the depths of the left and right subtrees and determine the maximum depth of the current subtree.</p>
+</li>
+</ol>
+<p><strong>Summary:</strong></p>
+<p>The <code>maxDepth</code> function calculates the maximum depth of a binary tree using a recursive approach. It handles both the base case (empty subtree) and the recursive case (non-empty subtree) to calculate the maximum depth. The algorithm returns the maximum depth of the given binary tree.</p>
 </span></div></body></html>

@@ -31,4 +31,32 @@ img {
 }</style></head><body><div class="main"><span><nav class="navigation"><ul><li> <a href="/holy-theory/builder/test/">Main page</a></li><li> <a href="/holy-theory/builder/test//languages.html">Statistics</a></li></ul></nav></span><h1></h1><span><h1 id="combine-two-tables">Combine Two Tables</h1>
 <pre><code class="hljs language-SQL"><span class="hljs-keyword">select</span> p.FirstName, p.LastName, a.City, a.State <span class="hljs-keyword">from</span> person p
 <span class="hljs-keyword">left</span> <span class="hljs-keyword">join</span> address a <span class="hljs-keyword">on</span> p.personid <span class="hljs-operator">=</span> a.personid
-</code></pre></span></div></body></html>
+</code></pre><p>The SQL query retrieves the <code>FirstName</code> and <code>LastName</code> columns from the <code>person</code> table, along with the <code>City</code> and <code>State</code> columns from the <code>address</code> table. It performs a <code>LEFT JOIN</code> operation between the <code>person</code> and <code>address</code> tables using the <code>personid</code> column as the join condition.</p>
+<p>Here&#39;s a breakdown of the query:</p>
+<ol>
+<li><p>The <code>SELECT</code> statement specifies the columns to be retrieved from the tables.</p>
+</li>
+<li><p><code>p.FirstName</code> retrieves the <code>FirstName</code> column from the <code>person</code> table.</p>
+</li>
+<li><p><code>p.LastName</code> retrieves the <code>LastName</code> column from the <code>person</code> table.</p>
+</li>
+<li><p><code>a.City</code> retrieves the <code>City</code> column from the <code>address</code> table.</p>
+</li>
+<li><p><code>a.State</code> retrieves the <code>State</code> column from the <code>address</code> table.</p>
+</li>
+<li><p>The <code>FROM</code> clause specifies the source tables for the query.</p>
+</li>
+<li><p><code>person p</code> specifies the <code>person</code> table with an alias of <code>p</code>.</p>
+</li>
+<li><p>The <code>LEFT JOIN</code> keyword performs a left outer join operation between the <code>person</code> and <code>address</code> tables.</p>
+</li>
+<li><p><code>address a</code> specifies the <code>address</code> table with an alias of <code>a</code>.</p>
+</li>
+<li><p>The <code>ON</code> keyword specifies the join condition between the <code>person</code> and <code>address</code> tables. In this case, the join is based on matching values in the <code>personid</code> column.</p>
+</li>
+</ol>
+<p>The result of the query will contain rows with the <code>FirstName</code> and <code>LastName</code> values from the <code>person</code> table, along with the corresponding <code>City</code> and <code>State</code> values from the <code>address</code> table. If there is no matching address for a person, the <code>City</code> and <code>State</code> values will be <code>NULL</code> for that person.</p>
+<ul>
+<li><a href="../readme.md">Go back</a></li>
+</ul>
+</span></div></body></html>

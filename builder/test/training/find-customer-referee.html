@@ -32,4 +32,28 @@ img {
 <pre><code class="hljs language-sql"><span class="hljs-keyword">SELECT</span> name
 <span class="hljs-keyword">FROM</span> customer
 <span class="hljs-keyword">WHERE</span> referee_id <span class="hljs-keyword">IS</span> <span class="hljs-keyword">NULL</span> <span class="hljs-keyword">OR</span> referee_id <span class="hljs-operator">!=</span> <span class="hljs-number">2</span>;
-</code></pre></span></div></body></html>
+</code></pre><p><strong>Solution:</strong></p>
+<p>This SQL query is used to retrieve the names of customers from the <code>customer</code> table based on certain conditions.</p>
+<p><strong>Query breakdown:</strong></p>
+<ol>
+<li><p><code>SELECT name</code>: This part of the query specifies that we want to retrieve the <code>name</code> column from the <code>customer</code> table.</p>
+</li>
+<li><p><code>FROM customer</code>: This part of the query specifies the table from which we want to retrieve the data, which is the <code>customer</code> table.</p>
+</li>
+<li><p><code>WHERE referee_id IS NULL OR referee_id != 2</code>: This part of the query specifies the condition for filtering the data. The query retrieves customer names where either of the following conditions is true:</p>
+<ul>
+<li><code>referee_id</code> is <code>NULL</code> (i.e., the customer does not have a referee).</li>
+<li><code>referee_id</code> is not equal to <code>2</code> (i.e., the customer&#39;s referee is not with an ID of <code>2</code>).</li>
+</ul>
+</li>
+</ol>
+<p><strong>Summary:</strong></p>
+<p>The SQL query retrieves the names of customers from the <code>customer</code> table where either the <code>referee_id</code> is <code>NULL</code> (indicating no referee) or the <code>referee_id</code> is not equal to <code>2</code> (indicating a different referee from the one with an ID of <code>2</code>).</p>
+<p>Techniques used:</p>
+<ol>
+<li><p>SQL SELECT statement: The query uses the <code>SELECT</code> statement to specify the columns to retrieve from the table.</p>
+</li>
+<li><p>SQL WHERE clause: The query uses the <code>WHERE</code> clause to specify the conditions for filtering the data.</p>
+</li>
+</ol>
+</span></div></body></html>

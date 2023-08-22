@@ -41,4 +41,34 @@ img {
     }
   } 
 };
-</code></pre></span></div></body></html>
+</code></pre><p><strong>Solution:</strong></p>
+<p>The provided function <code>findTheDifference</code> takes two strings <code>s</code> and <code>t</code> as input and returns a string representing the character that is added to <code>t</code> and not present in <code>s</code>. In other words, it finds the difference between the two strings.</p>
+<p><strong>Steps:</strong></p>
+<ol>
+<li><p>Create two arrays, <code>sArr</code> and <code>tArr</code>, by splitting the input strings <code>s</code> and <code>t</code> into individual characters and sorting them.</p>
+</li>
+<li><p>Use a loop to iterate through the characters of the <code>tArr</code> array.</p>
+</li>
+<li><p>Inside the loop, compare the characters at the same index in <code>sArr</code> and <code>tArr</code>. If they are not equal, it means the current character in <code>tArr</code> is the added character (difference).</p>
+</li>
+<li><p>Return the character that is different (added) in <code>tArr</code>.</p>
+</li>
+</ol>
+<p><strong>Example:</strong></p>
+<ul>
+<li>Input: <code>s = &quot;abcd&quot;</code>, <code>t = &quot;abcde&quot;</code></li>
+<li>After splitting and sorting, <code>sArr = [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;]</code> and <code>tArr = [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;]</code>.</li>
+<li>The loop iterates through the arrays, and when it reaches the last element, <code>sArr[i]</code> is <code>&#39;d&#39;</code>, and <code>tArr[i]</code> is <code>&#39;e&#39;</code>. Since <code>&#39;d&#39;</code> is not equal to <code>&#39;e&#39;</code>, the function returns <code>&#39;e&#39;</code>.</li>
+</ul>
+<p><strong>Note:</strong></p>
+<p>The given code assumes that the input strings <code>s</code> and <code>t</code> are valid, and <code>t</code> is formed by adding a single character to <code>s</code>.</p>
+<p><strong>Techniques used:</strong></p>
+<ol>
+<li><p>Array Manipulation: The code splits the input strings <code>s</code> and <code>t</code> into arrays of characters using the <code>split()</code> function and then sorts the arrays.</p>
+</li>
+<li><p>Looping: The function uses a <code>for</code> loop to iterate through the characters of the <code>tArr</code> array and compare them with the characters of the <code>sArr</code> array.</p>
+</li>
+<li><p>String Comparison: The code compares characters at the same index in <code>sArr</code> and <code>tArr</code> to find the difference.</p>
+</li>
+</ol>
+</span></div></body></html>

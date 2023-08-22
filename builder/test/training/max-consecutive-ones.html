@@ -44,5 +44,34 @@ img {
 
   <span class="hljs-keyword">return</span> maxCount;
 };
-</code></pre><p><strong>Source: <a href="https://leetcode.com">https://leetcode.com</a></strong></p>
+</code></pre><p><strong>Step-by-Step solution:</strong></p>
+<ol>
+<li><p>Define a function <code>findMaxConsecutiveOnes</code> that takes an array of integers <code>nums</code> as input.</p>
+</li>
+<li><p>Initialize two variables:</p>
+<ul>
+<li><code>maxCount</code>: To keep track of the maximum consecutive count of ones encountered so far.</li>
+<li><code>currentCount</code>: To keep track of the current consecutive count of ones being processed.</li>
+</ul>
+</li>
+<li><p>Iterate through each element in the array <code>nums</code> using a for loop:</p>
+<ul>
+<li>If the current element <code>nums[i]</code> is equal to 1, increment the <code>currentCount</code> by 1 and update <code>maxCount</code> to the maximum of <code>maxCount</code> and <code>currentCount</code>. This ensures that <code>maxCount</code> always holds the maximum consecutive count of ones.</li>
+<li>If the current element <code>nums[i]</code> is not equal to 1 (i.e., it&#39;s 0), reset <code>currentCount</code> to 0. This effectively breaks the consecutive count of ones sequence.</li>
+</ul>
+</li>
+<li><p>After iterating through the entire array, return the final value of <code>maxCount</code>, which represents the maximum consecutive count of ones.</p>
+</li>
+</ol>
+<p><strong>Techniques Used:</strong></p>
+<ol>
+<li><p><strong>Loop Iteration:</strong> The algorithm uses a <code>for</code> loop to iterate through the elements of the input array.</p>
+</li>
+<li><p><strong>Conditional Logic:</strong> The algorithm uses conditional statements to increment and reset the <code>currentCount</code> based on the value of the current element.</p>
+</li>
+<li><p><strong>Math.max:</strong> The <code>Math.max</code> function is used to update the <code>maxCount</code> with the maximum value between the current <code>maxCount</code> and <code>currentCount</code>.</p>
+</li>
+</ol>
+<p><strong>Summary:</strong></p>
+<p>The <code>findMaxConsecutiveOnes</code> function aims to find the maximum consecutive count of ones in an array of integers. It iterates through the array, keeping track of the current consecutive count of ones and updating the maximum count encountered so far. The algorithm efficiently determines the maximum consecutive ones count and returns the result.</p>
 </span></div></body></html>

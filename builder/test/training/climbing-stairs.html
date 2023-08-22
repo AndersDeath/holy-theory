@@ -43,5 +43,36 @@ img {
     }
     <span class="hljs-keyword">return</span> a;
 };
-</code></pre><p><strong>Source: <a href="https://leetcode.com">https://leetcode.com</a></strong></p>
+</code></pre><p><strong>Solution:</strong>
+Below is the step-by-step breakdown of the code:</p>
+<ol>
+<li><p>The <code>climbStairs</code> function takes an integer <code>n</code> as input.</p>
+</li>
+<li><p>If <code>n</code> is less than or equal to 3, there are <code>n</code> distinct ways to climb the stairs. In this case, <code>n</code> is directly returned.</p>
+</li>
+<li><p>If <code>n</code> is greater than 3, two variables <code>a</code> and <code>b</code> are initialized. <code>a</code> represents the number of distinct ways to reach the current step, and <code>b</code> represents the number of distinct ways to reach the previous step.</p>
+</li>
+<li><p>A loop is started from 0 up to <code>n - 3</code> (since the cases for <code>n &lt;= 3</code> are handled separately).</p>
+</li>
+<li><p>Inside the loop, <code>a</code> is updated to the sum of its current value and <code>b</code>. This represents the number of distinct ways to reach the current step based on the number of ways to reach the previous step and the step before that.</p>
+</li>
+<li><p>The value of <code>b</code> is updated to <code>a - b</code>, which becomes the number of distinct ways to reach the previous step for the next iteration.</p>
+</li>
+<li><p>Once the loop completes, the value of <code>a</code> represents the total number of distinct ways to climb the stairs with <code>n</code> steps.</p>
+</li>
+<li><p>The final value of <code>a</code> is returned as the result.</p>
+</li>
+</ol>
+<p><strong>Techniques used:</strong></p>
+<p>The following techniques are utilized within the code:</p>
+<ol>
+<li>Conditional branching using <code>if</code> statement.</li>
+<li>Iterative loop using <code>for</code> loop.</li>
+<li>Updating variables to store intermediate results.</li>
+<li>Mathematical computation to calculate the number of distinct ways.</li>
+<li>Efficient variable swapping using <code>a = a + b; b = a - b;</code>.</li>
+</ol>
+<p>This approach uses a dynamic programming-like approach to solve the problem, avoiding the need for recursion or maintaining an array. By iteratively updating the number of ways to reach each step based on the previous steps, the code calculates the total number of distinct ways to climb the stairs.</p>
+<p>The time complexity of this solution is O(n) since the loop iterates <code>n - 3</code> times. It has a constant space complexity since it only requires two variables to store the intermediate results.</p>
+<p><strong>Source: <a href="https://leetcode.com">https://leetcode.com</a></strong></p>
 </span></div></body></html>

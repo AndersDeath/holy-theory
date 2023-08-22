@@ -42,4 +42,43 @@ img {
     
     <span class="hljs-keyword">return</span> cnt;
 };
-</code></pre></span></div></body></html>
+</code></pre><p><strong>Solution:</strong>
+Below are the step-by-step explanations of the code:</p>
+<ol>
+<li><p>The <code>arrangeCoins</code> function is defined, which takes one parameter:</p>
+<ul>
+<li><code>n</code>: a number representing the total number of coins.</li>
+</ul>
+</li>
+<li><p>Three variables are initialized:</p>
+<ul>
+<li><code>i</code> is set to 1 and represents the number of coins in the current row.</li>
+<li><code>coins</code> is set to 0 and will keep track of the total number of coins arranged.</li>
+<li><code>cnt</code> is set to 0 and will be used to count the number of complete rows.</li>
+</ul>
+</li>
+<li><p>A <code>while</code> loop is used to iterate while the number of remaining coins (<code>n-coins</code>) is greater than or equal to the number of coins in the current row (<code>i</code>).</p>
+</li>
+<li><p>Inside the loop, the number of coins in the current row (<code>i</code>) is added to the <code>coins</code> variable, representing the accumulation of coins as each row is added.</p>
+</li>
+<li><p>The <code>i</code> variable is incremented by 1 to move to the next row.</p>
+</li>
+<li><p>The <code>cnt</code> variable is incremented by 1 to count the completion of a full row.</p>
+</li>
+<li><p>The loop continues until the number of remaining coins is no longer sufficient to form a complete row.</p>
+</li>
+<li><p>Once the loop exits, the final value of <code>cnt</code> represents the maximum number of complete rows that can be arranged.</p>
+</li>
+<li><p>The <code>cnt</code> value is returned as the result.</p>
+</li>
+</ol>
+<p><strong>Techniques used:</strong></p>
+<p>The following techniques are utilized within the code:</p>
+<ol>
+<li>Variable initialization and assignment.</li>
+<li>Incrementing a variable using the <code>++</code> operator.</li>
+<li>Comparison and subtraction operations to control the <code>while</code> loop.</li>
+<li>Accumulation of values using the <code>+=</code> operator.</li>
+<li>Returning a calculated result.</li>
+</ol>
+</span></div></body></html>

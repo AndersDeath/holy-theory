@@ -32,7 +32,27 @@ img {
 <pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">lonelyInteger</span>(<span class="hljs-params">a: <span class="hljs-built_in">number</span>[]</span>): <span class="hljs-built_in">number</span> {
     <span class="hljs-keyword">return</span> a.<span class="hljs-title function_">reduce</span>(<span class="hljs-function">(<span class="hljs-params">a: <span class="hljs-built_in">number</span>, b: <span class="hljs-built_in">number</span></span>) =&gt;</span> a^b);
 }
-
-,,,
-
-</code></pre></span></div></body></html>
+</code></pre><p>The code is a TypeScript function that finds the &quot;lonely integer&quot; in an array of integers. A &quot;lonely integer&quot; is an element that appears only once in the array, while all other elements appear in pairs.</p>
+<p>Here&#39;s a step-by-step explanation of the code:</p>
+<ol>
+<li><p>The <code>lonelyInteger</code> function takes a single parameter <code>a</code>, which is an array of integers.</p>
+</li>
+<li><p>It uses the <code>reduce</code> method to iterate through the array and apply the XOR (^) operation on each element.</p>
+<ul>
+<li>The XOR operation returns 0 when two identical numbers are XORed together (even number of times).</li>
+<li>If a number is XORed with 0, it remains unchanged.</li>
+<li>XOR is commutative, so the order of the operands doesn&#39;t matter.</li>
+</ul>
+</li>
+<li><p>The initial value for the accumulator <code>a</code> is set to 0.</p>
+</li>
+<li><p>For each element <code>b</code> in the array, the XOR operation is applied between the current accumulator value <code>a</code> and the current array element <code>b</code>. The result is assigned back to the accumulator <code>a</code>.</p>
+</li>
+<li><p>The final result of the <code>reduce</code> operation is the XOR of all elements in the array.</p>
+</li>
+<li><p>The function returns the computed XOR value, which corresponds to the lonely integer in the array.</p>
+</li>
+</ol>
+<p>This solution works based on the property of the XOR operation where XORing a number with itself results in 0. Therefore, when XORing all pairs of identical integers, they cancel out, leaving only the lonely integer.</p>
+<p>The technique used in this code is the XOR operation to efficiently find the lonely integer in an array. The XOR operation has the property that it is both commutative and associative, making it a suitable choice for this problem. The time complexity of this solution is O(n), where n is the number of elements in the array.</p>
+</span></div></body></html>

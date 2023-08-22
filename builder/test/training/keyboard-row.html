@@ -63,4 +63,43 @@ img {
 
     <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
 }
-</code></pre></span></div></body></html>
+</code></pre><p>The code is a TypeScript function that takes an array of words and returns an array of words that can be typed using only one row of a keyboard. The function checks if the characters of each word are all located in the same row of the keyboard.</p>
+<p>Here&#39;s a step-by-step explanation of the code:</p>
+<ol>
+<li><p>The <code>findWords</code> function takes an array of <code>words</code> as a parameter.</p>
+</li>
+<li><p>It initializes a <code>rowMap</code> using a <code>Map</code> data structure. Each key in the map represents a character, and the corresponding value represents the row number on the keyboard where the character is located.</p>
+</li>
+<li><p>It initializes an empty array called <code>result</code> to store the words that can be typed using a single row of the keyboard.</p>
+</li>
+<li><p>The function uses a <code>for...of</code> loop to iterate through each <code>word</code> in the input <code>words</code> array.</p>
+</li>
+<li><p>Inside the loop, it calls the <code>isInSameRow</code> function with the uppercase version of the current <code>word</code> and the <code>rowMap</code>.</p>
+</li>
+<li><p>If the <code>isInSameRow</code> function returns <code>true</code> for the current <code>word</code>, it means that all characters in the word can be typed using the same row of the keyboard. Therefore, the <code>word</code> is added to the <code>result</code> array.</p>
+</li>
+<li><p>After iterating through all words, the function returns the <code>result</code> array.</p>
+</li>
+<li><p>The <code>isInSameRow</code> function takes a <code>word</code> and the <code>rowMap</code> as parameters.</p>
+</li>
+<li><p>If the length of the <code>word</code> is less than or equal to 1, the function immediately returns <code>true</code> because a word with one or zero characters can be typed using a single row.</p>
+</li>
+<li><p>The function retrieves the row number of the first character of the <code>word</code> using the <code>rowMap</code>.</p>
+</li>
+<li><p>It then iterates through the remaining characters of the <code>word</code> using a <code>for</code> loop.</p>
+</li>
+<li><p>For each character, it retrieves its row number from the <code>rowMap</code>.</p>
+</li>
+<li><p>If the row number of the current character does not match the row number of the first character, the function returns <code>false</code>, indicating that the characters are not in the same row.</p>
+</li>
+<li><p>If the loop completes without returning <code>false</code>, it means all characters are in the same row, and the function returns <code>true</code>.</p>
+</li>
+</ol>
+<p>Techniques used in this code include:</p>
+<ul>
+<li>Using a <code>Map</code> data structure to store keyboard rows and characters.</li>
+<li>Iterating through arrays using <code>for...of</code> and <code>for</code> loops.</li>
+<li>Converting strings to uppercase using the <code>toUpperCase</code> method.</li>
+<li>Checking conditions and returning boolean values.</li>
+</ul>
+</span></div></body></html>

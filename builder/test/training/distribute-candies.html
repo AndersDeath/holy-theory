@@ -35,4 +35,27 @@ img {
   
   <span class="hljs-keyword">return</span> <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">min</span>(uniqueCandies.<span class="hljs-property">size</span>, maxCandies);
 };
-</code></pre></span></div></body></html>
+</code></pre><p><strong>Solution:</strong></p>
+<p>Step-by-step breakdown of the code:</p>
+<ol>
+<li><p>The function <code>distributeCandies</code> takes an array <code>candyType</code> representing the types of candies available and returns the maximum number of unique candies the sister can receive.</p>
+</li>
+<li><p>The function creates a <code>Set</code> called <code>uniqueCandies</code> to store the unique types of candies available in the <code>candyType</code> array. The <code>Set</code> automatically eliminates duplicates, so it contains only unique candy types.</p>
+</li>
+<li><p>The variable <code>maxCandies</code> is assigned the value of half the length of the <code>candyType</code> array (<code>candyType.length / 2</code>). This represents the maximum number of candies the sister can receive if the candies are distributed equally between her and her brother.</p>
+</li>
+<li><p>The function returns the minimum value between the size of the <code>uniqueCandies</code> set and <code>maxCandies</code>. This step ensures that the sister receives the maximum possible unique candies while adhering to the constraint that she cannot receive more than half of the total candies.</p>
+</li>
+<li><p>The function returns the calculated maximum number of unique candies that the sister can receive.</p>
+</li>
+</ol>
+<p>Techniques used:</p>
+<ol>
+<li><p>Data Structure - Set: The code uses a <code>Set</code> to store the unique types of candies available in the <code>candyType</code> array. The <code>Set</code> ensures that only unique candy types are present in the collection.</p>
+</li>
+<li><p>Mathematical Calculation: The code calculates the maximum number of candies the sister can receive (half of the total candies) and compares it with the number of unique candies available. The minimum value of these two is returned as the result.</p>
+</li>
+</ol>
+<p>Summary:</p>
+<p>The provided TypeScript code calculates the maximum number of unique candies that the sister can receive when the candies are distributed equally between her and her brother. It ensures that she receives the maximum possible unique candies without exceeding half of the total candies.</p>
+</span></div></body></html>

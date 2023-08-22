@@ -55,5 +55,32 @@ img {
   
   <span class="hljs-keyword">return</span> maxChildDepth + <span class="hljs-number">1</span>;  
 };
-</code></pre><p><strong>Source: <a href="https://leetcode.com">https://leetcode.com</a></strong></p>
+</code></pre><p><strong>Step-by-Step solution:</strong></p>
+<ol>
+<li><p>Define a function <code>maxDepth</code> that takes a node of type <code>Node</code> (representing a node in a tree) as input.</p>
+</li>
+<li><p>Check if the <code>root</code> node is <code>null</code> (indicating an empty subtree). If so, return 0 as the depth of the subtree is 0.</p>
+</li>
+<li><p>If the <code>root</code> node is not <code>null</code>, initialize a variable <code>maxChildDepth</code> to keep track of the maximum depth among the children of the current node.</p>
+</li>
+<li><p>Iterate through each child node of the <code>root</code> node using a <code>for...of</code> loop.</p>
+</li>
+<li><p>For each child node, recursively calculate its depth using a recursive call to <code>maxDepth(child)</code>.</p>
+</li>
+<li><p>Update the value of <code>maxChildDepth</code> by taking the maximum between its current value and the depth of the current child node (<code>childDepth</code>).</p>
+</li>
+<li><p>After iterating through all the children nodes, return <code>maxChildDepth + 1</code>, indicating the maximum depth of the current subtree.</p>
+</li>
+</ol>
+<p><strong>Techniques Used:</strong></p>
+<ol>
+<li><p><strong>Recursion:</strong> The algorithm uses recursion to traverse the tree and calculate the maximum depth. The recursive function is applied to each child node.</p>
+</li>
+<li><p><strong>Looping:</strong> The algorithm uses a <code>for...of</code> loop to iterate through the children of the current node.</p>
+</li>
+<li><p><strong>Math.max:</strong> The algorithm uses the <code>Math.max</code> function to compare and update the maximum child depth.</p>
+</li>
+</ol>
+<p><strong>Summary:</strong></p>
+<p>The <code>maxDepth</code> function calculates the maximum depth of a tree represented by nodes of type <code>Node</code>. It handles both the base case (empty subtree) and the recursive case (non-empty subtree) to calculate the maximum depth. The algorithm returns the maximum depth of the given tree.</p>
 </span></div></body></html>

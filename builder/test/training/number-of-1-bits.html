@@ -40,4 +40,24 @@ img {
         }
         <span class="hljs-keyword">return</span> sum;
 };
-</code></pre></span></div></body></html>
+</code></pre><p>The <code>hammingWeight</code> function takes an integer <code>n</code> as input and returns the number of &#39;1&#39; bits (also known as the Hamming weight) in its binary representation.</p>
+<p>Here&#39;s how the function works:</p>
+<ol>
+<li><p>It initializes a variable <code>pivot</code> to 1. This will be used to create a bitmask with only one bit set at a particular position.</p>
+</li>
+<li><p>It initializes a variable <code>sum</code> to 0. This will be used to keep track of the number of &#39;1&#39; bits.</p>
+</li>
+<li><p>It enters a loop that iterates 32 times (since an integer in JavaScript is represented using 32 bits). In each iteration, it shifts the <code>pivot</code> left by <code>i</code> positions to create a bitmask with only the <code>i</code>-th bit set to 1.</p>
+</li>
+<li><p>It performs a bitwise AND operation (<code>&amp;</code>) between the input integer <code>n</code> and the bitmask <code>p</code>. If the result of this operation is equal to <code>p</code>, it means that the <code>i</code>-th bit of <code>n</code> is a &#39;1&#39;, so the <code>sum</code> is incremented.</p>
+</li>
+<li><p>After the loop, the <code>sum</code> variable contains the count of &#39;1&#39; bits in the binary representation of the input integer, and this value is returned.</p>
+</li>
+</ol>
+<p><strong>Techniques Used:</strong></p>
+<ul>
+<li><strong>Bit Manipulation:</strong> The function uses bitwise shifting and bitwise AND operations to check the individual bits of the input integer and count the &#39;1&#39; bits.</li>
+</ul>
+<p><strong>Summary:</strong></p>
+<p>The <code>hammingWeight</code> function effectively counts the number of &#39;1&#39; bits in the binary representation of an integer using bitwise manipulation techniques. It iterates through each bit position and checks if the bit is set, incrementing the count accordingly.</p>
+</span></div></body></html>

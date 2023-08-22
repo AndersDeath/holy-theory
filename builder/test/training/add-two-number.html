@@ -79,4 +79,46 @@ img {
     <span class="hljs-keyword">return</span> head;
 
 };
-</code></pre></span></div></body></html>
+</code></pre><p><strong>Solution:</strong>
+Below are the step-by-step explanations of the code:</p>
+<ol>
+<li><p>The code begins with the definition of the <code>ListNode</code> class, representing a node in the singly-linked list. It has a <code>val</code> property to store the node value and a <code>next</code> property to reference the next node in the list.</p>
+</li>
+<li><p>The <code>addTwoNumbers</code> function is defined, taking two parameters: <code>l1</code> (a ListNode representing the first linked list) and <code>l2</code> (a ListNode representing the second linked list). It returns a ListNode representing the sum of the two linked lists.</p>
+</li>
+<li><p>Several variables are initialized:</p>
+<ul>
+<li><code>head</code> is initially set to <code>null</code> and will be used to keep track of the head node of the resulting linked list.</li>
+<li><code>temp</code> is initially set to <code>null</code> and will be used to traverse the linked list and add new nodes.</li>
+<li><code>carry</code> is initially set to 0 and will hold the carry value during addition.</li>
+</ul>
+</li>
+<li><p>A <code>while</code> loop is used to iterate as long as either <code>l1</code> or <code>l2</code> is not <code>null</code>.</p>
+</li>
+<li><p>Inside the <code>while</code> loop, the variable <code>sum</code> is initialized with the current carry value.</p>
+</li>
+<li><p>Conditional statements are used to handle cases where either <code>l1</code> or <code>l2</code> is not <code>null</code>. If <code>l1</code> is not <code>null</code>, the value of <code>l1</code> is added to <code>sum</code>, and <code>l1</code> is moved to the next node. Similarly, if <code>l2</code> is not <code>null</code>, the value of <code>l2</code> is added to <code>sum</code>, and <code>l2</code> is moved to the next node.</p>
+</li>
+<li><p>A new <code>ListNode</code> is created with the value of <code>Math.floor(sum) % 10</code> (to handle carry) and assigned to the <code>node</code> variable.</p>
+</li>
+<li><p>The carry value is updated by calculating <code>Math.floor(sum / 10)</code>.</p>
+</li>
+<li><p>Depending on whether <code>temp</code> is <code>null</code> or not, the <code>node</code> is either assigned to <code>temp</code> and <code>head</code> (in the case of the first node), or it is assigned to <code>temp.next</code> (for subsequent nodes), and <code>temp</code> is moved to the next node.</p>
+</li>
+<li><p>After the <code>while</code> loop ends, if there is a remaining carry (i.e., <code>carry &gt; 0</code>), a new <code>ListNode</code> with the carry value is appended to the linked list by assigning it to <code>temp.next</code>.</p>
+</li>
+<li><p>Finally, the <code>head</code> node of the resulting linked list is returned.</p>
+</li>
+</ol>
+<p><strong>Techniques used:</strong></p>
+<p>The following techniques are utilized within the code:</p>
+<ol>
+<li>Definition and usage of a <code>ListNode</code> class for representing a node in a singly-linked list.</li>
+<li>Iterating over linked lists using a <code>while</code> loop.</li>
+<li>Accessing properties (<code>val</code> and <code>next</code>) of a linked list node.</li>
+<li>Performing arithmetic operations (addition, modulo, division) on numbers.</li>
+<li>Handling carry values during addition.</li>
+<li>Creating new linked list nodes using the <code>ListNode</code> constructor.</li>
+<li>Updating references between linked list nodes to form the resulting linked list.</li>
+</ol>
+</span></div></body></html>

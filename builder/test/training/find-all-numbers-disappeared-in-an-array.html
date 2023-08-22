@@ -44,4 +44,35 @@ img {
     }
     <span class="hljs-keyword">return</span> result;
 };
-</code></pre></span></div></body></html>
+</code></pre><p><strong>Solution:</strong></p>
+<p>Step-by-step breakdown of the code:</p>
+<ol>
+<li><p>The function <code>findDisappearedNumbers</code> takes an array <code>nums</code> as input, which contains integers.</p>
+</li>
+<li><p>The function uses an in-place approach to mark the visited numbers in the array.</p>
+</li>
+<li><p>In the first loop, it iterates through the <code>nums</code> array. For each element, it calculates the index where the corresponding number should be. It uses <code>Math.abs(nums[i]) - 1</code> to get the index (since the array is 0-indexed and the numbers are positive).</p>
+</li>
+<li><p>It checks if the value at the calculated index is positive. If it is, it means that the number at that index has not been visited yet. So, it updates the value at that index to its negative counterpart to mark it as visited.</p>
+</li>
+<li><p>After the first loop, all the numbers that appear in the array will be marked as negative, and the numbers that are not present will remain positive.</p>
+</li>
+<li><p>In the second loop, it iterates through the <code>nums</code> array again. For each element, if the value is positive, it means that the corresponding number is missing. So, it pushes <code>i + 1</code> (since the array is 0-indexed) to the <code>result</code> array.</p>
+</li>
+<li><p>After both loops, the <code>result</code> array will contain the numbers that are missing from the original array.</p>
+</li>
+<li><p>The function returns the <code>result</code> array containing the disappeared numbers.</p>
+</li>
+</ol>
+<p>Summary:</p>
+<p>The provided TypeScript function <code>findDisappearedNumbers</code> finds the disappeared numbers from an array of integers by using an in-place approach. It iterates through the array, marks the visited numbers by updating their values to negative, and then finds the missing numbers by looking for positive values in the array.</p>
+<p>Techniques used:</p>
+<ol>
+<li><p>TypeScript: The code is written in the TypeScript programming language, which is a superset of JavaScript with added type annotations.</p>
+</li>
+<li><p>Array manipulation: The function modifies the input array to mark visited numbers and then finds the missing numbers in a second loop.</p>
+</li>
+<li><p>Negative numbers as markers: The function uses negative values as markers to keep track of visited numbers in the array.</p>
+</li>
+</ol>
+</span></div></body></html>

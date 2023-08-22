@@ -29,7 +29,6 @@ img {
     list-style: none;
     padding: 10px;
 }</style></head><body><div class="main"><span><nav class="navigation"><ul><li> <a href="/holy-theory/builder/test/">Main page</a></li><li> <a href="/holy-theory/builder/test//languages.html">Statistics</a></li></ul></nav></span><h1></h1><span><h1 id="times-function-in-js">Times function in JS</h1>
-<p>Sometimes, we often find ourselves in need of running a particular function several times.</p>
 <pre><code class="hljs language-javascript"><span class="hljs-keyword">const</span> <span class="hljs-title function_">times</span> = (<span class="hljs-params">func, n</span>) =&gt; {
   <span class="hljs-title class_">Array</span>.<span class="hljs-title function_">from</span>(<span class="hljs-title class_">Array</span>(n)).<span class="hljs-title function_">forEach</span>(<span class="hljs-function">() =&gt;</span> {
     <span class="hljs-title function_">func</span>();
@@ -39,4 +38,49 @@ img {
 <span class="hljs-title function_">times</span>(<span class="hljs-function">() =&gt;</span> {
   <span class="hljs-title function_">randomFunction</span>();
 }, <span class="hljs-number">3</span>);
-</code></pre></span></div></body></html>
+</code></pre><ul>
+<li><p><strong>Input</strong>:</p>
+<ul>
+<li><code>func</code>: A function to be executed <code>n</code> times.</li>
+<li><code>n</code>: The number of times the <code>func</code> function should be executed.</li>
+</ul>
+</li>
+<li><p><strong>Output</strong>: None (as it performs actions but doesn&#39;t return any value).</p>
+</li>
+</ul>
+<ol>
+<li><p><strong>Define the <code>times</code> Function</strong>:</p>
+<ul>
+<li>Create a function named <code>times</code> that takes two arguments: <code>func</code> and <code>n</code>.</li>
+</ul>
+</li>
+<li><p><strong>Execute the Function <code>n</code> Times</strong>:</p>
+<ul>
+<li>Create an array of length <code>n</code> using <code>Array.from(Array(n))</code>.</li>
+<li>Use the <code>forEach</code> method to iterate over the array and execute the <code>func</code> function for each iteration.</li>
+<li>The <code>randomFunction()</code> is called within each iteration, simulating the execution of a random function.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Techniques Used</strong>:</p>
+<ul>
+<li><strong>Higher-Order Function</strong>: The <code>times</code> function takes another function as an argument and executes it a specified number of times.</li>
+<li><strong>Array Iteration</strong>: Using the <code>forEach</code> method to iterate over an array.</li>
+</ul>
+<p><strong>Algorithm</strong>:</p>
+<ol>
+<li>Define the <code>times</code> function that takes <code>func</code> and <code>n</code> as arguments.</li>
+<li>Create an array of length <code>n</code> using <code>Array.from(Array(n))</code>.</li>
+<li>Iterate over the array using the <code>forEach</code> method.</li>
+<li>Inside each iteration, call the <code>func</code> function.</li>
+</ol>
+<p><strong>Time Complexity</strong>:</p>
+<ul>
+<li>The time complexity of the <code>times</code> function is O(n) due to the iteration.</li>
+</ul>
+<p><strong>Space Complexity</strong>:</p>
+<ul>
+<li>The space complexity is O(n) due to the array created using <code>Array.from(Array(n))</code>.</li>
+<li><a href="../readme.md">Go back</a></li>
+</ul>
+</span></div></body></html>

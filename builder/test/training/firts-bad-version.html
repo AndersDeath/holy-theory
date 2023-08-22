@@ -52,5 +52,33 @@ img {
         <span class="hljs-keyword">return</span> left
     };
 };
-</code></pre><p><strong>Source: <a href="https://leetcode.com">https://leetcode.com</a></strong></p>
+</code></pre><p>This is a classic example of the Binary Search algorithm. Let&#39;s break down the code step by step:</p>
+<ol>
+<li><p>The function <code>solution</code> takes a parameter <code>isBadVersion</code>, which is a function that returns a boolean value indicating whether a given version is a bad version or not.</p>
+</li>
+<li><p>The <code>solution</code> function returns an anonymous function that takes a parameter <code>n</code>, which represents the total number of versions.</p>
+</li>
+<li><p>Inside the anonymous function, two variables <code>left</code> and <code>right</code> are initialized with <code>1</code> and <code>n</code> respectively. These variables will be used to define the search space for the bad version.</p>
+</li>
+<li><p>A while loop is used to perform binary search on the versions.</p>
+</li>
+<li><p>In each iteration of the loop, the midpoint <code>mid</code> of the current search space is calculated using <code>left + Math.floor((right - left) / 2)</code>.</p>
+</li>
+<li><p>The <code>isBadVersion</code> function is called with the <code>mid</code> version to determine if it is a bad version or not.</p>
+</li>
+<li><p>If <code>isBadVersion(mid)</code> returns <code>true</code>, it means the bad version is in the first half of the search space. So, the <code>right</code> pointer is updated to <code>mid</code> to narrow down the search space.</p>
+</li>
+<li><p>If <code>isBadVersion(mid)</code> returns <code>false</code>, it means the bad version is in the second half of the search space. So, the <code>left</code> pointer is updated to <code>mid + 1</code> to narrow down the search space.</p>
+</li>
+<li><p>The loop continues until <code>left</code> is no longer less than <code>right</code>. At this point, the search space has been narrowed down to a single version, which is the first bad version.</p>
+</li>
+<li><p>The function returns the value of <code>left</code>, which represents the first bad version.</p>
+</li>
+</ol>
+<p>Techniques used in this code:</p>
+<ul>
+<li>Binary Search: The algorithm uses binary search to find the first bad version among a given range of versions. The search space is repeatedly halved until the first bad version is found.</li>
+<li>Mathematical calculation: The midpoint <code>mid</code> is calculated as <code>left + Math.floor((right - left) / 2)</code> to avoid integer overflow and provide the correct mid value during the binary search.</li>
+</ul>
+<p><strong>Source: <a href="https://leetcode.com">https://leetcode.com</a></strong></p>
 </span></div></body></html>
