@@ -47,5 +47,33 @@ img {
     }
     <span class="hljs-keyword">return</span> res;
 };
-</code></pre><p><strong>Source: <a href="https://leetcode.com">https://leetcode.com</a></strong></p>
+</code></pre><p><strong>Step-by-Step solution:</strong></p>
+<ol>
+<li><p>Define a function <code>majorityElement</code> that takes an array of integers <code>nums</code> as input.</p>
+</li>
+<li><p>Initialize two variables:</p>
+<ul>
+<li><code>count</code>: To keep track of the count of the current majority element.</li>
+<li><code>res</code>: To store the potential majority element.</li>
+</ul>
+</li>
+<li><p>Iterate through each element in the array <code>nums</code> using a for loop:</p>
+<ul>
+<li>If <code>count</code> is 0, set <code>res</code> to the current element <code>nums[i]</code>. This is because we are looking for a majority element, which appears more than half the time. By setting <code>res</code> to the current element, we are starting a potential majority count.</li>
+<li>If the current element <code>nums[i]</code> is not equal to <code>res</code>, decrement the <code>count</code>. This indicates that the current element is different from the potential majority element, reducing its count.</li>
+<li>If the current element <code>nums[i]</code> is equal to <code>res</code>, increment the <code>count</code>. This indicates that the current element matches the potential majority element.</li>
+</ul>
+</li>
+<li><p>After iterating through the array, return the final value of <code>res</code>, which should represent the majority element.</p>
+</li>
+</ol>
+<p><strong>Techniques Used:</strong></p>
+<ol>
+<li><p><strong>Loop Iteration:</strong> The algorithm uses a <code>for</code> loop to iterate through the elements of the input array.</p>
+</li>
+<li><p><strong>Conditional Logic:</strong> The algorithm uses conditional statements to update the <code>res</code> and <code>count</code> variables based on the conditions specified in the problem.</p>
+</li>
+</ol>
+<p><strong>Summary:</strong></p>
+<p>The <code>majorityElement</code> function aims to find the majority element in an array of integers. It iterates through the array and uses <code>res</code> and <code>count</code> variables to keep track of a potential majority element and its count. The algorithm follows a simple logic to identify the majority element and returns the final result.</p>
 </span></div></body></html>

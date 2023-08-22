@@ -38,5 +38,32 @@ img {
         }
         <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
 };
-</code></pre><p><strong>Source: <a href="https://leetcode.com">https://leetcode.com</a></strong></p>
+</code></pre><p><strong>Solution:</strong>
+Below is the step-by-step breakdown of the code:</p>
+<ol>
+<li><p>The <code>containsDuplicate</code> function takes an array <code>nums</code> as input.</p>
+</li>
+<li><p>The <code>sort</code> method is called on the <code>nums</code> array using a comparison function <code>(a: any, b: any) =&gt; a - b</code>. This sorts the array in ascending order.</p>
+</li>
+<li><p>A <code>for</code> loop is used to iterate over the elements of the <code>nums</code> array from index 0 to <code>nums.length - 1</code>.</p>
+</li>
+<li><p>Inside the loop, the code compares each element <code>nums[i]</code> with its adjacent element <code>nums[i+1]</code>.</p>
+</li>
+<li><p>If a duplicate element is found (i.e., <code>nums[i] === nums[i+1]</code>), the function immediately returns <code>true</code> to indicate the presence of duplicates.</p>
+</li>
+<li><p>If no duplicates are found after the loop completes, the function returns <code>false</code> to indicate the absence of duplicates.</p>
+</li>
+</ol>
+<p><strong>Techniques used:</strong></p>
+<p>The following techniques are utilized within the code:</p>
+<ol>
+<li><p>Sorting: The <code>sort</code> method is used to sort the <code>nums</code> array in ascending order. This brings duplicate elements next to each other, simplifying the duplicate check.</p>
+</li>
+<li><p>Iteration: The <code>for</code> loop is used to iterate over the elements of the <code>nums</code> array.</p>
+</li>
+<li><p>Conditional branching: An <code>if</code> statement is used to compare adjacent elements and check for duplicates.</p>
+</li>
+</ol>
+<p>The provided solution sorts the array to bring duplicate elements together, allowing for a simple comparison of adjacent elements to determine duplicates. This approach has a time complexity of O(n log n) due to the sorting operation and a space complexity of O(1) since no additional data structures are used.</p>
+<p><strong>Source: <a href="https://leetcode.com">https://leetcode.com</a></strong></p>
 </span></div></body></html>

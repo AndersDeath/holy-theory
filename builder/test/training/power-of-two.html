@@ -30,16 +30,45 @@ img {
     padding: 10px;
 }</style></head><body><div class="main"><span><nav class="navigation"><ul><li> <a href="/holy-theory/builder/test/">Main page</a></li><li> <a href="/holy-theory/builder/test//languages.html">Statistics</a></li></ul></nav></span><h1></h1><span><h1 id="power-of-two">Power of two</h1>
 <pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">isPowerOfTwo</span>(<span class="hljs-params">n: <span class="hljs-built_in">number</span></span>): <span class="hljs-built_in">boolean</span> {
-    <span class="hljs-keyword">if</span> (n &lt;= <span class="hljs-number">0</span>) {
-        <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
-    }
-    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">32</span>; i ++) {
-        <span class="hljs-keyword">if</span> ((n&amp;<span class="hljs-number">1</span>) == <span class="hljs-number">1</span>) {
-            <span class="hljs-keyword">break</span>;
-        }
-        n = n &gt;&gt;&gt; <span class="hljs-number">1</span>;
+  <span class="hljs-keyword">if</span> (n &lt;= <span class="hljs-number">0</span>) {
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+  }
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">32</span>; i++) {
+    <span class="hljs-keyword">if</span> ((n &amp; <span class="hljs-number">1</span>) == <span class="hljs-number">1</span>) {
+      <span class="hljs-keyword">break</span>;
     }
     n = n &gt;&gt;&gt; <span class="hljs-number">1</span>;
-    <span class="hljs-keyword">return</span> n == <span class="hljs-number">0</span>;
-};
-</code></pre></span></div></body></html>
+  }
+  n = n &gt;&gt;&gt; <span class="hljs-number">1</span>;
+  <span class="hljs-keyword">return</span> n == <span class="hljs-number">0</span>;
+}
+</code></pre><p>This JavaScript code defines a function <code>isPowerOfTwo</code> that checks if a given number is a power of 2. Here&#39;s how the code works:</p>
+<ol>
+<li><p>The function <code>isPowerOfTwo</code> takes an integer <code>n</code> as input.</p>
+</li>
+<li><p>It first checks if <code>n</code> is less than or equal to 0. If it is, the function immediately returns <code>false</code> since negative numbers and zero are not powers of 2.</p>
+</li>
+<li><p>The code enters a <code>for</code> loop that runs for 32 iterations. This loop is used to check if all bits of <code>n</code> are zero after repeatedly right-shifting <code>n</code> by one bit.</p>
+</li>
+<li><p>Inside the loop, it checks if the least significant bit of <code>n</code> is 1 using the bitwise AND operator (<code>&amp;</code>). If the least significant bit is 1, it indicates that <code>n</code> is not a power of 2, so the loop is exited.</p>
+</li>
+<li><p>If the least significant bit of <code>n</code> is 0, the code right-shifts <code>n</code> by one bit (equivalent to dividing by 2).</p>
+</li>
+<li><p>After the loop, the code performs one more right-shift operation on <code>n</code>.</p>
+</li>
+<li><p>Finally, the code returns <code>true</code> if <code>n</code> is 0 after the right-shift operations, indicating that all bits of <code>n</code> were zero and it is a power of 2. Otherwise, it returns <code>false</code>.</p>
+</li>
+</ol>
+<p><strong>Techniques Used:</strong></p>
+<ul>
+<li><p><strong>Looping:</strong> The code uses a <code>for</code> loop to iterate through the bits of <code>n</code> and check if any of them are set.</p>
+</li>
+<li><p><strong>Bitwise Operations:</strong> The code uses bitwise AND (<code>&amp;</code>) and bitwise right shift (<code>&gt;&gt;&gt;</code>) operations to manipulate and check the bits of <code>n</code>.</p>
+</li>
+</ul>
+<p><strong>Summary:</strong></p>
+<p>The <code>isPowerOfTwo</code> function determines whether a given number is a power of 2 by repeatedly right-shifting the number&#39;s bits and checking if any of them are set. If all bits become zero after the operations, the function returns <code>true</code>, indicating that the number is a power of 2; otherwise, it returns <code>false</code>.</p>
+<ul>
+<li><a href="../readme.md">Go back</a></li>
+</ul>
+</span></div></body></html>

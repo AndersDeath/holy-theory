@@ -49,5 +49,47 @@ img {
 
     <span class="hljs-keyword">return</span> base7;
 };
-</code></pre><p><strong>Source: <a href="https://leetcode.com">https://leetcode.com</a></strong></p>
+</code></pre><p><strong>Solution:</strong>
+Below are the step-by-step explanations of the code:</p>
+<ol>
+<li><p>The <code>convertToBase7</code> function is defined, which takes one parameter:</p>
+<ul>
+<li><code>num</code>: a number to be converted to base-7.</li>
+</ul>
+</li>
+<li><p>The first condition checks if <code>num</code> is equal to 0. If it is, it means the input number is already 0, so the function returns the string &quot;0&quot; as the base-7 representation of 0.</p>
+</li>
+<li><p>A variable <code>isNegative</code> is initialized to <code>true</code> if <code>num</code> is less than 0, indicating a negative number. This is used to determine the sign of the base-7 representation.</p>
+</li>
+<li><p>The <code>num</code> is converted to its absolute value using <code>Math.abs(num)</code> to ensure positive values for further calculations.</p>
+</li>
+<li><p>A variable <code>base7</code> is initialized as an empty string. It will store the base-7 representation of <code>num</code>.</p>
+</li>
+<li><p>A <code>while</code> loop is used to iterate as long as <code>num</code> is greater than 0.</p>
+</li>
+<li><p>Inside the loop, the remainder of <code>num</code> divided by 7 (<code>num % 7</code>) is computed and converted to a string using <code>.toString()</code>. This represents the next digit in the base-7 representation.</p>
+</li>
+<li><p>The obtained digit is appended to the front of the <code>base7</code> string using <code>base7 = (num % 7).toString() + base7</code>.</p>
+</li>
+<li><p>The <code>num</code> is updated by performing integer division (<code>Math.floor(num / 7)</code>), effectively removing the last digit in the base-7 representation.</p>
+</li>
+<li><p>Steps 7-9 are repeated until <code>num</code> becomes 0.</p>
+</li>
+<li><p>After the loop ends, the base-7 representation, stored in the <code>base7</code> string, is ready.</p>
+</li>
+<li><p>If the original <code>num</code> was negative (<code>isNegative</code> is <code>true</code>), a &quot;-&quot; sign is prefixed to the <code>base7</code> string to indicate the negative sign.</p>
+</li>
+<li><p>The final <code>base7</code> string is returned as the result.</p>
+</li>
+</ol>
+<p><strong>Techniques used:</strong></p>
+<p>The following techniques are utilized within the code:</p>
+<ol>
+<li>Conditional branching using <code>if</code> statements.</li>
+<li>Manipulating variables to track the sign and absolute value of a number.</li>
+<li>Performing mathematical operations, such as modulus and integer division.</li>
+<li>Concatenating strings to build the base-7 representation.</li>
+<li>Returning a calculated result.</li>
+</ol>
+<p><strong>Source: <a href="https://leetcode.com">https://leetcode.com</a></strong></p>
 </span></div></body></html>

@@ -39,4 +39,22 @@ img {
   
   <span class="hljs-keyword">return</span> num ^ mask;
 }
-</code></pre></span></div></body></html>
+</code></pre><p>The <code>findComplement</code> function takes an integer <code>num</code> as input and returns its bitwise complement. The bitwise complement of an integer is obtained by flipping all its binary digits, changing 0s to 1s and vice versa.</p>
+<p>Here&#39;s how the function works:</p>
+<ol>
+<li><p>It initializes a variable <code>mask</code> to 1. This mask will be used to set all the bits in the binary representation of <code>num</code> to 1.</p>
+</li>
+<li><p>It enters a loop that continues as long as <code>mask</code> is less than <code>num</code>. In each iteration of the loop, the value of <code>mask</code> is shifted left by 1 (effectively adding a 0 at the least significant bit) and then a bitwise OR operation with 1 is performed. This sets all the bits of <code>mask</code> to 1 up to the highest bit position where <code>num</code> has a 1.</p>
+</li>
+<li><p>After the loop, the bitwise XOR operation (<code>^</code>) is performed between <code>num</code> and <code>mask</code>. This effectively flips all the bits in the binary representation of <code>num</code> where <code>mask</code> has 1s.</p>
+</li>
+<li><p>The final result of the XOR operation is the bitwise complement of <code>num</code>, and this value is returned.</p>
+</li>
+</ol>
+<p><strong>Techniques Used:</strong></p>
+<ul>
+<li><strong>Bit Manipulation:</strong> The function uses bitwise shifting and bitwise XOR operations to manipulate the individual bits of the input integer to find its complement.</li>
+</ul>
+<p><strong>Summary:</strong></p>
+<p>The <code>findComplement</code> function employs bit manipulation techniques to efficiently compute the bitwise complement of an integer. It does so by using a mask that has 1s in positions corresponding to the significant bits of the input integer and then performing a bitwise XOR operation to flip the bits.</p>
+</span></div></body></html>

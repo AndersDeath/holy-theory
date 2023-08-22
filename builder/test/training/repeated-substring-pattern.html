@@ -42,4 +42,24 @@ img {
         }
         <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
 };
-</code></pre></span></div></body></html>
+</code></pre><ol>
+<li><p><strong>Input and Loop</strong>: The function <code>repeatedSubstringPattern</code> takes a string <code>s</code> as input and aims to determine whether the string can be formed by repeatedly concatenating a substring. It uses a <code>for</code> loop to iterate through different sizes of substrings, starting from size 1 up to <code>s.length / 2</code>.</p>
+</li>
+<li><p><strong>Size-based Division Check</strong>: For each substring size, it checks if the total length of the string is divisible by the current size (i.e., <code>s.length % size == 0</code>). If not, the substring of the current size cannot be repeated to form the entire string, so the loop proceeds to the next size.</p>
+</li>
+<li><p><strong>Substring Formation Check</strong>: If the string length is divisible by the current size, it attempts to form the string by repeatedly concatenating the substring of the current size (<code>curr</code>). It uses a <code>while</code> loop with an index <code>j</code> starting from the size to traverse the string in chunks of the current size. Inside the loop, it compares the substring from index <code>j</code> to <code>j + size</code> with the <code>curr</code> substring. If they match, it increments <code>j</code> by the current size.</p>
+</li>
+<li><p><strong>Final Comparison</strong>: If the <code>while</code> loop completes successfully (i.e., <code>j</code> reaches the end of the string), it means the string can be formed by repeatedly concatenating the current substring size. In this case, the function returns <code>true</code>.</p>
+</li>
+<li><p><strong>Returning False</strong>: If none of the substring sizes can form the entire string, the function returns <code>false</code>.</p>
+</li>
+</ol>
+<p><strong>Techniques Used</strong>:</p>
+<ol>
+<li>Looping (<code>for</code> loop and <code>while</code> loop): Iterating through different substring sizes and traversing the string to compare substrings.</li>
+<li>Substring Comparison (<code>s.substring()</code>): Checking if substrings match by comparing them using the <code>===</code> operator.</li>
+<li>Divisibility Check (<code>s.length % size == 0</code>): Checking if the string length is divisible by the current substring size.</li>
+<li>String Concatenation (<code>curr = s.substring(0, size)</code>): Forming substrings of the current size to attempt to construct the entire string.</li>
+</ol>
+<p>This function checks if a given string can be formed by repeatedly concatenating a substring of various sizes. If so, it returns <code>true</code>; otherwise, it returns <code>false</code>.</p>
+</span></div></body></html>

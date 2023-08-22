@@ -39,4 +39,35 @@ img {
   
   <span class="hljs-keyword">return</span> sum;
 };
-</code></pre></span></div></body></html>
+</code></pre><p><strong>Solution:</strong>
+Below are the step-by-step explanations of the code:</p>
+<ol>
+<li><p>The <code>arrayPairSum</code> function is defined, which takes one parameter:</p>
+<ul>
+<li><code>nums</code>: an array of numbers.</li>
+</ul>
+</li>
+<li><p>The <code>sort</code> method is called on the <code>nums</code> array with a comparator function <code>(a, b) =&gt; a - b</code>. This sorts the array in ascending order.</p>
+</li>
+<li><p>A variable <code>sum</code> is initialized to 0, which will store the sum of the pairs.</p>
+</li>
+<li><p>A <code>for</code> loop is used to iterate over the elements of the <code>nums</code> array with a step size of 2. This means it will process elements at indices 0, 2, 4, and so on.</p>
+</li>
+<li><p>Inside the loop, the current element at index <code>i</code> is added to the <code>sum</code>.</p>
+</li>
+<li><p>The loop continues until <code>i</code> reaches the end of the <code>nums</code> array.</p>
+</li>
+<li><p>Once the loop exits, the final value of <code>sum</code> represents the maximum possible sum of the pairs formed from the array.</p>
+</li>
+<li><p>The <code>sum</code> value is returned as the result.</p>
+</li>
+</ol>
+<p><strong>Techniques used:</strong></p>
+<p>The following techniques are utilized within the code:</p>
+<ol>
+<li>Sorting an array using the <code>sort</code> method with a comparator function.</li>
+<li>Iterating over array elements using a <code>for</code> loop with a step size.</li>
+<li>Accumulating values using the <code>+=</code> operator.</li>
+<li>Returning a calculated result.</li>
+</ol>
+</span></div></body></html>

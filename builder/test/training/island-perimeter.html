@@ -50,4 +50,27 @@ img {
 
   <span class="hljs-keyword">return</span> perimeter;
 };
-</code></pre></span></div></body></html>
+</code></pre><p>The code is a TypeScript function that calculates the perimeter of an island represented by a grid. The grid is a two-dimensional array where each cell contains either 0 or 1. The function calculates the perimeter of the island by counting the number of sides that form the boundary of the island.</p>
+<p>Here&#39;s a step-by-step explanation of the code:</p>
+<ol>
+<li><p>The function <code>islandPerimeter</code> takes a single parameter <code>grid</code>, which is a 2D array representing the island.</p>
+</li>
+<li><p>It initializes the <code>perimeter</code> variable to 0. This variable will hold the final perimeter count.</p>
+</li>
+<li><p>The code then uses nested loops to iterate through each cell in the grid. The outer loop iterates through the rows, and the inner loop iterates through the columns.</p>
+</li>
+<li><p>For each cell <code>(i, j)</code> in the grid, if it is land (i.e., <code>grid[i][j]</code> is equal to 1), the perimeter is increased by 4. This is because each land cell contributes 4 sides to the perimeter.</p>
+</li>
+<li><p>The code then checks adjacent cells to see if they are also land cells. If the cell to the left <code>(i, j - 1)</code> is also land, then the perimeter is decreased by 2. Similarly, if the cell above <code>(i - 1, j)</code> is also land, the perimeter is decreased by 2. This adjustment is made because each common side between two adjacent land cells contributes 2 sides to the total perimeter.</p>
+</li>
+<li><p>The iteration continues until all cells in the grid have been visited.</p>
+</li>
+<li><p>Finally, the function returns the calculated <code>perimeter</code>, which represents the total perimeter of the island.</p>
+</li>
+</ol>
+<p>Techniques used in this code include:</p>
+<ul>
+<li>Nested loops to iterate through a 2D array.</li>
+<li>Conditional statements to check cell values and adjust perimeter accordingly.</li>
+</ul>
+</span></div></body></html>

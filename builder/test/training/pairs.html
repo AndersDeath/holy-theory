@@ -30,24 +30,56 @@ img {
     padding: 10px;
 }</style></head><body><div class="main"><span><nav class="navigation"><ul><li> <a href="/holy-theory/builder/test/">Main page</a></li><li> <a href="/holy-theory/builder/test//languages.html">Statistics</a></li></ul></nav></span><h1></h1><span><h1 id="pairs">Pairs</h1>
 <pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">pairs</span>(<span class="hljs-params">k: <span class="hljs-built_in">number</span>, arr: <span class="hljs-built_in">number</span>[]</span>): <span class="hljs-built_in">number</span> {
-    arr.<span class="hljs-title function_">sort</span>(<span class="hljs-function">(<span class="hljs-params">a, b</span>) =&gt;</span> a-b);
-    <span class="hljs-keyword">let</span> output = <span class="hljs-number">0</span>;
-    <span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>;
-    <span class="hljs-keyword">let</span> j = <span class="hljs-number">0</span>;
-    <span class="hljs-keyword">while</span>(j &lt; arr.<span class="hljs-property">length</span>) {
-        <span class="hljs-keyword">let</span> difference = arr[j] - arr[i];
-        <span class="hljs-keyword">if</span>(difference === k) {
-            output++;
-            j++;
-            i++;
-        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (difference &gt; k) {
-            i++;
-        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(difference &lt; k) {
-            j++;
-} }
-    <span class="hljs-keyword">return</span> output;
+  arr.<span class="hljs-title function_">sort</span>(<span class="hljs-function">(<span class="hljs-params">a, b</span>) =&gt;</span> a - b);
+  <span class="hljs-keyword">let</span> output = <span class="hljs-number">0</span>;
+  <span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>;
+  <span class="hljs-keyword">let</span> j = <span class="hljs-number">0</span>;
+  <span class="hljs-keyword">while</span> (j &lt; arr.<span class="hljs-property">length</span>) {
+    <span class="hljs-keyword">let</span> difference = arr[j] - arr[i];
+    <span class="hljs-keyword">if</span> (difference === k) {
+      output++;
+      j++;
+      i++;
+    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (difference &gt; k) {
+      i++;
+    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (difference &lt; k) {
+      j++;
+    }
+  }
+  <span class="hljs-keyword">return</span> output;
 }
-
-}
-</code></pre><p>** Source: <a href="http://hackerrank.com">http://hackerrank.com</a>**</p>
+</code></pre><p>The <code>pairs</code> function takes an integer <code>k</code> and an array of integers <code>arr</code> as input, and it returns the count of pairs of integers from the array whose absolute difference is equal to <code>k</code>.</p>
+<p>Here&#39;s how the function works:</p>
+<ol>
+<li><p>It first sorts the input array <code>arr</code> in ascending order using the <code>sort</code> method and a comparator function.</p>
+</li>
+<li><p>It initializes variables <code>output</code> to 0, <code>i</code> to 0, and <code>j</code> to 0. These variables are used to keep track of the indices of the elements being compared.</p>
+</li>
+<li><p>It enters a <code>while</code> loop that continues as long as the <code>j</code> index is less than the length of the array.</p>
+</li>
+<li><p>Inside the loop, it calculates the absolute difference between the elements at indices <code>i</code> and <code>j</code>, which is <code>arr[j] - arr[i]</code>.</p>
+</li>
+<li><p>If the difference is equal to <code>k</code>, it means a valid pair is found, so it increments the <code>output</code> counter and increments both <code>i</code> and <code>j</code> indices to explore the next possible pair.</p>
+</li>
+<li><p>If the difference is greater than <code>k</code>, it increments the <code>i</code> index to move towards a smaller difference.</p>
+</li>
+<li><p>If the difference is less than <code>k</code>, it increments the <code>j</code> index to move towards a larger difference.</p>
+</li>
+<li><p>The loop continues until all possible pairs have been considered.</p>
+</li>
+<li><p>Finally, the function returns the value of the <code>output</code> counter, which represents the count of pairs with an absolute difference of <code>k</code>.</p>
+</li>
+</ol>
+<p><strong>Techniques Used:</strong></p>
+<ul>
+<li><p><strong>Array Sorting:</strong> The function sorts the input array in ascending order to make it easier to find pairs with a specific difference.</p>
+</li>
+<li><p><strong>Two-Pointers Approach:</strong> The function uses two pointers, <code>i</code> and <code>j</code>, to traverse the sorted array and find pairs with the desired difference.</p>
+</li>
+</ul>
+<p><strong>Summary:</strong></p>
+<p>The <code>pairs</code> function effectively counts and returns the number of pairs of integers in the sorted array that have an absolute difference of <code>k</code>. It uses array sorting and a two-pointers approach to achieve this efficiently.</p>
+<ul>
+<li><a href="../readme.md">Go back</a></li>
+</ul>
 </span></div></body></html>

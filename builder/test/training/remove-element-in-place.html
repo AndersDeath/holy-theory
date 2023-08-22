@@ -38,4 +38,26 @@ img {
     }
     <span class="hljs-keyword">return</span> count;
 };
-</code></pre></span></div></body></html>
+</code></pre><ol>
+<li><p><strong>Input Array Modification</strong>: The function <code>removeElement</code> takes an array of integers <code>nums</code> and an integer <code>val</code> as input. It aims to remove all instances of <code>val</code> from the array.</p>
+</li>
+<li><p><strong>Count Initialization</strong>: A variable <code>count</code> is initialized to 0. This variable will be used to keep track of the valid (non-val) elements in the modified array.</p>
+</li>
+<li><p><strong>Loop Through Array</strong>: A <code>for</code> loop is used to iterate through the input array <code>nums</code>.</p>
+</li>
+<li><p><strong>Valid Element Check</strong>: For each element at index <code>i</code> in the array, it is checked whether the element is not equal to the given value <code>val</code>. If the element is valid (not equal to <code>val</code>), the next steps are performed.</p>
+</li>
+<li><p><strong>Updating Array</strong>: The valid element at index <code>i</code> is assigned to the position <code>count</code> in the array, effectively overwriting the element at index <code>count</code> with the valid element. Then, <code>count</code> is incremented by 1 to mark the next position for a valid element.</p>
+</li>
+<li><p><strong>Returning New Length</strong>: After iterating through the array, the value of <code>count</code> represents the new length of the array with the specified element (<code>val</code>) removed. This new length is returned.</p>
+</li>
+</ol>
+<p><strong>Techniques Used</strong>:</p>
+<ol>
+<li>Looping (<code>for</code> loop): Iterating through an array.</li>
+<li>Element Comparison (<code>nums[i] !== val</code>): Comparing an array element with a given value.</li>
+<li>Updating Array (<code>nums[count++] = nums[i]</code>): Assigning array elements to new positions while updating a counter.</li>
+<li>Returning Length: Calculating and returning the new length of the array after removal.</li>
+</ol>
+<p>This function removes all instances of a specified value from an input array of integers and returns the new length of the array with the specified value removed.</p>
+</span></div></body></html>

@@ -51,4 +51,45 @@ img {
     <span class="hljs-keyword">return</span> maxLength;
 
 };
-</code></pre></span></div></body></html>
+</code></pre><p><strong>Step-by-Step solution:</strong></p>
+<ol>
+<li><p>Define a function <code>lengthOfLongestSubstring</code> that takes a string <code>s</code> as input.</p>
+</li>
+<li><p>Handle the base case: If the input string&#39;s length is 0, return 0.</p>
+</li>
+<li><p>Initialize variables:</p>
+<ul>
+<li><code>start</code>: The starting index of the current substring.</li>
+<li><code>end</code>: The ending index of the current substring.</li>
+<li><code>maxLength</code>: The length of the longest substring without repeating characters.</li>
+<li><code>stringSet</code>: A set to store unique characters within the current substring.</li>
+</ul>
+</li>
+<li><p>Enter a loop that iterates through the characters of the input string while <code>end</code> is within the string&#39;s length:</p>
+<p>a. If the character at <code>end</code> is not already in <code>stringSet</code>:</p>
+<ul>
+<li>Add the character to <code>stringSet</code>.</li>
+<li>Increment <code>end</code>.</li>
+<li>Update <code>maxLength</code> to the maximum of its current value and the size of <code>stringSet</code>.</li>
+</ul>
+<p>b. If the character at <code>end</code> is already in <code>stringSet</code>:</p>
+<ul>
+<li>Remove the character at <code>start</code> from <code>stringSet</code>.</li>
+<li>Increment <code>start</code>.</li>
+</ul>
+</li>
+<li><p>After the loop completes, return the value of <code>maxLength</code>, which represents the length of the longest substring without repeating characters.</p>
+</li>
+</ol>
+<p><strong>Techniques Used:</strong></p>
+<ol>
+<li><p><strong>Sliding Window:</strong> The algorithm utilizes the sliding window technique to efficiently handle substrings and track the current substring&#39;s start and end indices.</p>
+</li>
+<li><p><strong>Set Data Structure:</strong> The algorithm uses a <code>Set</code> to keep track of unique characters within the current substring, enabling efficient character uniqueness checking.</p>
+</li>
+<li><p><strong>Looping and Conditional Logic:</strong> The solution involves iterating through the input string and using conditional logic to update the sliding window and track the longest substring.</p>
+</li>
+</ol>
+<p><strong>Summary:</strong></p>
+<p>The <code>lengthOfLongestSubstring</code> function employs the sliding window technique along with a set to efficiently find the length of the longest substring without repeating characters in the given input string. By maintaining a sliding window and checking character uniqueness using a set, the algorithm optimally identifies the desired substring length. The use of looping, conditional logic, and a set data structure ensures an effective solution for this problem.</p>
+</span></div></body></html>

@@ -30,27 +30,56 @@ img {
     padding: 10px;
 }</style></head><body><div class="main"><span><nav class="navigation"><ul><li> <a href="/holy-theory/builder/test/">Main page</a></li><li> <a href="/holy-theory/builder/test//languages.html">Statistics</a></li></ul></nav></span><h1></h1><span><h1 id="permutations">Permutations</h1>
 <pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">permute</span>(<span class="hljs-params">nums: <span class="hljs-built_in">number</span>[]</span>): <span class="hljs-built_in">number</span>[][] {
-    <span class="hljs-keyword">let</span> output = [];
-    <span class="hljs-title function_">dfs</span>(nums, <span class="hljs-number">0</span>, output);
-    <span class="hljs-keyword">return</span> output;
-};
-
-
-<span class="hljs-keyword">function</span> <span class="hljs-title function_">dfs</span>(<span class="hljs-params">nums, index,output</span>) {
-    <span class="hljs-keyword">if</span> (index == nums.<span class="hljs-property">length</span>){
-        <span class="hljs-keyword">let</span> l = [...nums];
-        output.<span class="hljs-title function_">push</span>(l);
-    } <span class="hljs-keyword">else</span> {
-        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> j = index; j &lt; nums.<span class="hljs-property">length</span>; j++){
-            <span class="hljs-keyword">let</span> tmp = nums[index];
-            nums[index] = nums[j];
-            nums[j] = tmp;
-            
-            <span class="hljs-title function_">dfs</span>(nums, index + <span class="hljs-number">1</span>,output);
-            tmp = nums[index];
-            nums[index] = nums[j];
-            nums[j] = tmp;
-        }
-    }
+  <span class="hljs-keyword">let</span> output = [];
+  <span class="hljs-title function_">dfs</span>(nums, <span class="hljs-number">0</span>, output);
+  <span class="hljs-keyword">return</span> output;
 }
-</code></pre></span></div></body></html>
+
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">dfs</span>(<span class="hljs-params">nums, index, output</span>) {
+  <span class="hljs-keyword">if</span> (index == nums.<span class="hljs-property">length</span>) {
+    <span class="hljs-keyword">let</span> l = [...nums];
+    output.<span class="hljs-title function_">push</span>(l);
+  } <span class="hljs-keyword">else</span> {
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> j = index; j &lt; nums.<span class="hljs-property">length</span>; j++) {
+      <span class="hljs-keyword">let</span> tmp = nums[index];
+      nums[index] = nums[j];
+      nums[j] = tmp;
+
+      <span class="hljs-title function_">dfs</span>(nums, index + <span class="hljs-number">1</span>, output);
+      tmp = nums[index];
+      nums[index] = nums[j];
+      nums[j] = tmp;
+    }
+  }
+}
+</code></pre><p>The code defines a recursive algorithm to generate all possible permutations of a given array of numbers <code>nums</code>.</p>
+<p>Here&#39;s how the code works:</p>
+<ol>
+<li><p>The <code>permute</code> function takes an array <code>nums</code> as input and initializes an empty array <code>output</code> to store the generated permutations. It then calls the <code>dfs</code> function to start the recursive process.</p>
+</li>
+<li><p>The <code>dfs</code> function performs depth-first search to generate permutations. It takes three parameters: <code>nums</code> (the array of numbers), <code>index</code> (the current index being considered), and <code>output</code> (the array to store permutations).</p>
+</li>
+<li><p>The base case of the recursion is when <code>index</code> is equal to the length of the <code>nums</code> array. In this case, a copy of the <code>nums</code> array is added to the <code>output</code> array.</p>
+</li>
+<li><p>If the base case is not met, the function iterates over the remaining elements in the array starting from index <code>j</code>. It swaps the element at index <code>index</code> with the element at index <code>j</code> to generate a new permutation.</p>
+</li>
+<li><p>The function then recursively calls itself with <code>index + 1</code> to generate permutations for the remaining elements.</p>
+</li>
+<li><p>After the recursive call, the elements are swapped back to their original positions to backtrack and explore other possibilities.</p>
+</li>
+<li><p>Overall, the code uses a depth-first search approach to generate all permutations of the input array <code>nums</code>.</p>
+</li>
+</ol>
+<p><strong>Techniques Used:</strong></p>
+<ul>
+<li><p><strong>Recursion:</strong> The code uses recursion to systematically generate all possible permutations of the input array.</p>
+</li>
+<li><p><strong>Backtracking:</strong> The swapping of elements and then swapping them back after the recursive call is a backtracking technique to explore different possibilities.</p>
+</li>
+</ul>
+<p><strong>Summary:</strong></p>
+<p>The <code>permute</code> function generates all possible permutations of a given array of numbers using a depth-first search and backtracking approach. It starts with the <code>dfs</code> function, which explores different element positions and swaps them to create permutations. The base case is reached when all positions are filled, and a copy of the current permutation is added to the output array.</p>
+<ul>
+<li><a href="../readme.md">Go back</a></li>
+</ul>
+</span></div></body></html>

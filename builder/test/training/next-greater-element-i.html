@@ -49,4 +49,36 @@ img {
   
   <span class="hljs-keyword">return</span> result;
 };
-</code></pre></span></div></body></html>
+</code></pre><p>The <code>nextGreaterElement</code> function is designed to find the next greater element for each element in <code>nums1</code> within the array <code>nums2</code>. It uses a stack-based approach and a map to achieve this. Let&#39;s break down the function step by step:</p>
+<ol>
+<li><p>The function initializes a map named <code>nextGreaterMap</code>, which will store the next greater element for each element in <code>nums2</code>. It also initializes an empty stack named <code>stack</code>.</p>
+</li>
+<li><p>The function then loops through each element in <code>nums2</code>.</p>
+</li>
+<li><p>Inside the loop, the function checks if the <code>stack</code> is not empty and the current element in <code>nums2</code> (<code>nums2[i]</code>) is greater than the top element of the <code>stack</code>. If this condition is met, it means that the current element is the next greater element for the top element(s) in the stack. The function repeatedly pops elements from the stack and updates their next greater element in the <code>nextGreaterMap</code> until the condition is no longer satisfied.</p>
+</li>
+<li><p>After updating the <code>nextGreaterMap</code>, the current element is pushed onto the stack.</p>
+</li>
+<li><p>Once the loop through <code>nums2</code> is complete, the <code>nextGreaterMap</code> will contain the next greater element for each element in <code>nums2</code>.</p>
+</li>
+<li><p>The function initializes an empty array named <code>result</code>, which will store the next greater elements for each element in <code>nums1</code>.</p>
+</li>
+<li><p>The function loops through each element in <code>nums1</code>.</p>
+</li>
+<li><p>Inside the loop, the function uses the <code>nextGreaterMap</code> to retrieve the next greater element for the current element in <code>nums1</code>. If the element is found in the map, it is pushed onto the <code>result</code> array. If the element is not found, <code>-1</code> is pushed onto the array.</p>
+</li>
+<li><p>After processing all elements in <code>nums1</code>, the <code>result</code> array will contain the next greater elements for each element.</p>
+</li>
+<li><p>Finally, the function returns the <code>result</code> array.</p>
+</li>
+</ol>
+<p><strong>Techniques Used:</strong></p>
+<ol>
+<li><p><strong>Stack:</strong> The function uses a stack to keep track of elements in descending order while finding the next greater element in <code>nums2</code>.</p>
+</li>
+<li><p><strong>Map:</strong> The function uses a map (<code>nextGreaterMap</code>) to store the next greater element for each element in <code>nums2</code>, allowing quick lookups when processing <code>nums1</code>.</p>
+</li>
+</ol>
+<p><strong>Summary:</strong></p>
+<p>The <code>nextGreaterElement</code> function efficiently finds the next greater element for each element in <code>nums1</code> using a stack-based approach and a map to store the results. It provides a solution with a time complexity of O(N), where N is the length of <code>nums2</code>.</p>
+</span></div></body></html>

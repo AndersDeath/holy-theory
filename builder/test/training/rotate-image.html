@@ -52,4 +52,48 @@ img {
         }
     }
 };
-</code></pre></span></div></body></html>
+</code></pre><p><strong>Description:</strong></p>
+<ol>
+<li><p><strong>Input Validation</strong>:</p>
+<ul>
+<li>The function takes a 2D matrix <code>matrix</code> as input.</li>
+<li>It performs initial checks to ensure the matrix is not null, and that it has non-zero dimensions. If any of these conditions is met, the function returns immediately.</li>
+</ul>
+</li>
+<li><p><strong>Rows and Columns</strong>:</p>
+<ul>
+<li>The number of rows and columns in the matrix is stored in variables <code>rows</code> and <code>cols</code>, respectively.</li>
+</ul>
+</li>
+<li><p><strong>Matrix Vertical Reflection (Step 1)</strong>:</p>
+<ul>
+<li>A loop iterates over the top half of the matrix&#39;s rows (up to <code>rows / 2</code>).</li>
+<li>In each iteration, the rows at index <code>first</code> and <code>last</code> are swapped using a temporary variable <code>tmp</code>.</li>
+<li>This step effectively reflects the matrix vertically along its horizontal center.</li>
+</ul>
+</li>
+<li><p><strong>Matrix Transposition (Step 2)</strong>:</p>
+<ul>
+<li>A nested loop iterates over each element above the main diagonal (where <code>i &lt; j</code>).</li>
+<li>In each iteration, the element at <code>matrix[i][j]</code> is swapped with the element at <code>matrix[j][i]</code> using a temporary variable <code>tmp</code>.</li>
+<li>This step effectively transposes the matrix along its main diagonal.</li>
+</ul>
+</li>
+<li><p><strong>In-Place Rotation Completed</strong>:</p>
+<ul>
+<li>After both steps, the matrix has been rotated 90 degrees clockwise in-place.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Techniques used:</strong></p>
+<ol>
+<li>In-place manipulation of the matrix elements.</li>
+<li>Swapping elements using temporary variables.</li>
+</ol>
+<p><strong>Algorithm Complexity:</strong></p>
+<ul>
+<li>Time Complexity: O(N^2), where N is the number of rows or columns in the matrix.</li>
+<li>Space Complexity: O(1), as the operations are performed in-place without using extra space.</li>
+</ul>
+<p>This code performs a two-step process: vertical reflection and matrix transposition, to achieve the desired 90-degree clockwise rotation of the given matrix in-place.</p>
+</span></div></body></html>

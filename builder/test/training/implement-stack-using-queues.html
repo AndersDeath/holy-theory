@@ -65,4 +65,26 @@ img {
  * var param_3 = obj.top()
  * var param_4 = obj.empty()
  */</span>
-</code></pre></span></div></body></html>
+</code></pre><p>The code is a TypeScript implementation of a stack data structure using a single array. It defines a class <code>MyStack</code> with various stack operations implemented using the array <code>arr</code>.</p>
+<p>Here&#39;s a step-by-step explanation of the code:</p>
+<ol>
+<li><p>The class <code>MyStack</code> is defined, which represents a stack data structure.</p>
+</li>
+<li><p>The constructor function is defined, but it doesn&#39;t do anything since the stack array (<code>arr</code>) is already initialized as an empty array.</p>
+</li>
+<li><p>The <code>push</code> method allows adding an element to the stack. It creates a new array <code>newq</code>, pushes the given element <code>x</code> to it, and then iteratively pops elements from the existing <code>arr</code> and pushes them to <code>newq</code>. This process effectively reverses the order of elements, making the newly pushed element <code>x</code> the top of the stack. Finally, it updates <code>arr</code> to be the new reversed array <code>newq</code>.</p>
+</li>
+<li><p>The <code>pop</code> method removes and returns the top element from the stack. It does this by using the <code>shift</code> method, which removes the first element (top) of the array <code>arr</code>, effectively simulating the behavior of popping the top element from the stack.</p>
+</li>
+<li><p>The <code>top</code> method returns the top element of the stack without removing it. It simply accesses the first element (top) of the array <code>arr</code>.</p>
+</li>
+<li><p>The <code>empty</code> method checks if the stack is empty. It returns <code>true</code> if the array <code>arr</code> is empty, indicating that the stack has no elements.</p>
+</li>
+</ol>
+<p>Techniques used in this code include:</p>
+<ul>
+<li>Implementing a stack using a single array.</li>
+<li>Reversing the order of elements in the array using another array to achieve stack behavior (LIFO - Last-In-First-Out).</li>
+<li>Utilizing array methods <code>push</code>, <code>shift</code>, and array indexing to perform stack operations efficiently.</li>
+</ul>
+</span></div></body></html>

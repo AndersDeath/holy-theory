@@ -41,4 +41,29 @@ img {
 
     <span class="hljs-keyword">return</span> counter;
 };
-</code></pre></span></div></body></html>
+</code></pre><p>The code is a TypeScript function that calculates the length of the last word in a given string. It does this by iterating through the string from the end and counting the characters of the last word until a space character is encountered.</p>
+<p>Here&#39;s a step-by-step explanation of the code:</p>
+<ol>
+<li><p>The <code>lengthOfLastWord</code> function takes a single parameter <code>s</code>, which is the input string.</p>
+</li>
+<li><p>It first trims the input string using the <code>trim</code> method to remove any leading or trailing whitespace.</p>
+</li>
+<li><p>It initializes a variable <code>counter</code> to keep track of the length of the last word.</p>
+</li>
+<li><p>The function uses a <code>for</code> loop to iterate through the characters of the trimmed string in reverse order, starting from the end of the string (<code>s.length - 1</code>) and going backward.</p>
+</li>
+<li><p>Inside the loop, it checks if the current character (<code>s[i]</code>) is a space character (&#39; &#39;). If a space character is encountered, it means the last word has been counted, and the loop is terminated using the <code>break</code> statement.</p>
+</li>
+<li><p>If the current character is not a space character, the <code>counter</code> is incremented.</p>
+</li>
+<li><p>After the loop completes, the function returns the value of the <code>counter</code>, which represents the length of the last word.</p>
+</li>
+</ol>
+<p>Techniques used in this code include:</p>
+<ul>
+<li>Using the <code>trim</code> method to remove leading and trailing whitespace from a string.</li>
+<li>Iterating through a string in reverse order using a <code>for</code> loop.</li>
+<li>Using conditional statements (<code>if</code>) to check characters and control the loop.</li>
+<li>Using the <code>break</code> statement to exit a loop prematurely.</li>
+</ul>
+</span></div></body></html>

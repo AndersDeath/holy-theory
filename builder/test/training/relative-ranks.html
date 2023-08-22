@@ -49,4 +49,30 @@ img {
 
     <span class="hljs-keyword">return</span> ranks;
 };
-</code></pre></span></div></body></html>
+</code></pre><ol>
+<li><p><strong>Sorting the Array</strong>: The input <code>score</code> array is copied using the spread operator <code>[...score]</code> to create a new array <code>sortedNums</code>. This new array is sorted in descending order using the <code>sort()</code> method, which takes a comparison function <code>(a, b) =&gt; b - a</code>. This ensures that the largest scores come first in the sorted array.</p>
+</li>
+<li><p><strong>Initializing an Empty Array</strong>: An empty array <code>ranks</code> is created with a length equal to the length of the input <code>score</code> array. This array will store the corresponding rank or medal label for each score.</p>
+</li>
+<li><p><strong>Iterating Through the Scores</strong>: A <code>for</code> loop is used to iterate through each element in the <code>score</code> array. The loop variable <code>i</code> represents the index of the current score being processed.</p>
+</li>
+<li><p><strong>Calculating Rank</strong>: The <code>indexOf()</code> method is used on the <code>sortedNums</code> array to find the index of the current score within the sorted array. Adding 1 to this index gives the rank of the current score.</p>
+</li>
+<li><p><strong>Assigning Medals or Rank</strong>: Conditional statements (<code>if</code>, <code>else if</code>, <code>else</code>) are used to assign the appropriate medal or rank label to the <code>ranks</code> array based on the calculated rank value. If the rank is 1, &quot;Gold Medal&quot; is assigned; if the rank is 2, &quot;Silver Medal&quot; is assigned; if the rank is 3, &quot;Bronze Medal&quot; is assigned; otherwise, the rank is converted to a string using <code>toString()</code> and assigned.</p>
+</li>
+<li><p><strong>Returning the Result</strong>: After iterating through all scores and assigning their corresponding ranks or medal labels, the <code>ranks</code> array is returned as the output of the function.</p>
+</li>
+</ol>
+<p><strong>Techniques Used</strong>:</p>
+<ol>
+<li>Array Copy (<code>[...score]</code>): Copying an array using the spread operator.</li>
+<li>Array Sorting (<code>sort()</code>): Sorting an array in descending order using a comparison function.</li>
+<li>Array Initialization (<code>new Array()</code>): Creating an empty array with a specified length.</li>
+<li>Iterative Looping (<code>for</code> loop): Iterating through elements of an array using a loop.</li>
+<li>Array Indexing (<code>indexOf()</code>): Finding the index of an element within an array.</li>
+<li>Conditional Statements (<code>if</code>, <code>else if</code>, <code>else</code>): Making decisions based on different conditions.</li>
+<li>String Conversion (<code>toString()</code>): Converting a value to a string.</li>
+<li>Returning a Value: Using the <code>return</code> statement to provide a function&#39;s output.</li>
+</ol>
+<p>This function processes an array of scores, calculates ranks, and assigns medal labels or rank values based on the calculated ranks, returning an array with the corresponding information.</p>
+</span></div></body></html>

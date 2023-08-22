@@ -35,4 +35,34 @@ img {
 <span class="hljs-keyword">FROm</span> Weather w1, Weather w2
 <span class="hljs-keyword">WHERE</span> w1.Temperature <span class="hljs-operator">&gt;</span> w2.Temperature
 <span class="hljs-keyword">AND</span> datediff(w1.recordDate, w2.recordDate) <span class="hljs-operator">=</span> <span class="hljs-number">1</span>;
-</code></pre></span></div></body></html>
+</code></pre><ol>
+<li><p><strong>SELECT Statement</strong>:</p>
+<ul>
+<li>The query starts with the <code>SELECT</code> statement, indicating that we want to retrieve certain columns from the database.</li>
+</ul>
+</li>
+<li><p><strong>Column Selection</strong>:</p>
+<ul>
+<li>The column selected in the query is <code>w1.id</code>. This suggests that we are interested in fetching the <code>id</code> values from the <code>Weather</code> table.</li>
+</ul>
+</li>
+<li><p><strong>FROM Clause</strong>:</p>
+<ul>
+<li>The <code>FROM</code> clause specifies the tables involved in the query. In this case, it lists two instances of the <code>Weather</code> table: <code>w1</code> and <code>w2</code>. These instances are used as aliases to differentiate between two separate occurrences of the same table.</li>
+</ul>
+</li>
+<li><p><strong>WHERE Clause</strong>:</p>
+<ul>
+<li>The <code>WHERE</code> clause specifies the conditions that the data must satisfy for the query to return results.</li>
+<li><code>w1.Temperature &gt; w2.Temperature</code>: This condition checks if the temperature of <code>w1</code> is greater than the temperature of <code>w2</code>.</li>
+<li><code>datediff(w1.recordDate, w2.recordDate) = 1</code>: This condition checks if the difference in days between the <code>recordDate</code> of <code>w1</code> and <code>w2</code> is equal to 1. This effectively checks if the two records have consecutive dates.</li>
+</ul>
+</li>
+<li><p><strong>Result</strong>:</p>
+<ul>
+<li>The query will retrieve the <code>id</code> values from the <code>Weather</code> table where the temperature of the first record (<code>w1</code>) is greater than the temperature of the second record (<code>w2</code>) and the dates of the two records are consecutive.</li>
+</ul>
+</li>
+</ol>
+<p>In summary, this SQL query retrieves the <code>id</code> values of records from the <code>Weather</code> table where the temperature of the first record is higher than the temperature of the next consecutive record. It essentially finds records with a temperature increase between consecutive days.</p>
+</span></div></body></html>

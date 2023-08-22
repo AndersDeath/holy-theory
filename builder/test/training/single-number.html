@@ -33,13 +33,46 @@ img {
  * <span class="hljs-doctag">@param</span> {<span class="hljs-type">number[]</span>} <span class="hljs-variable">nums</span>
  * <span class="hljs-doctag">@return</span> {<span class="hljs-type">number</span>}
  */</span>
-<span class="hljs-keyword">var</span> singleNumber = <span class="hljs-keyword">function</span>(<span class="hljs-params">nums</span>) {
-    <span class="hljs-keyword">let</span> ans = <span class="hljs-number">0</span>;
+<span class="hljs-keyword">const</span> singleNumber = <span class="hljs-keyword">function</span> (<span class="hljs-params">nums</span>) {
+  <span class="hljs-keyword">let</span> ans = <span class="hljs-number">0</span>;
 
-    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; nums.<span class="hljs-property">length</span>; i++) {
-        ans ^= nums[i];
-    }
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; nums.<span class="hljs-property">length</span>; i++) {
+    ans ^= nums[i];
+  }
 
-    <span class="hljs-keyword">return</span> ans;
+  <span class="hljs-keyword">return</span> ans;
 };
-</code></pre></span></div></body></html>
+</code></pre><p><strong>Description:</strong></p>
+<ol>
+<li><p><strong>Input and Output</strong>:</p>
+<ul>
+<li>The <code>singleNumber</code> function takes an array of integers <code>nums</code> as input and returns the integer that appears only once in the array.</li>
+</ul>
+</li>
+<li><p><strong>Bitwise XOR Operation</strong>:</p>
+<ul>
+<li>The <code>ans</code> variable is initialized to <code>0</code>. The XOR operation has a property that if the same number is XORed twice, it becomes 0. XORing any number with 0 gives the number itself.</li>
+<li>The loop iterates over each element in the <code>nums</code> array.</li>
+<li>For each element <code>nums[i]</code>, it performs the XOR operation with the current value of <code>ans</code>. This effectively cancels out all duplicate numbers and leaves only the single number.</li>
+</ul>
+</li>
+<li><p><strong>Result</strong>:</p>
+<ul>
+<li>The final value of <code>ans</code> will be the single number that appears only once in the array, as all other duplicate numbers will cancel out due to the XOR property.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Techniques used:</strong></p>
+<ol>
+<li>Bitwise XOR operation for finding the unique number.</li>
+</ol>
+<p><strong>Algorithm Complexity:</strong></p>
+<ul>
+<li>Time Complexity: O(n), where n is the number of elements in the <code>nums</code> array. Each element is processed once.</li>
+<li>Space Complexity: O(1), as only a constant amount of extra space is used (for the <code>ans</code> variable).</li>
+</ul>
+<p>This code efficiently finds the single number in the array using the bitwise XOR operation, leveraging the XOR property to eliminate duplicate numbers and keep only the unique one.</p>
+<ul>
+<li><a href="../readme.md">Go back</a></li>
+</ul>
+</span></div></body></html>

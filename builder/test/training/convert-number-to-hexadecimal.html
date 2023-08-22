@@ -42,4 +42,36 @@ img {
         <span class="hljs-keyword">return</span> sb.toString();
     }
 }
-</code></pre></span></div></body></html>
+</code></pre><p><strong>Solution:</strong>
+Below is the step-by-step breakdown of the code:</p>
+<ol>
+<li><p>The <code>toHex</code> method takes an integer <code>num</code> as input and returns its hexadecimal representation as a string.</p>
+</li>
+<li><p>The code checks if <code>num</code> is equal to 0. If it is, the method immediately returns the string &quot;0&quot; since the hexadecimal representation of 0 is &quot;0&quot;.</p>
+</li>
+<li><p>An array <code>map</code> is initialized with characters representing the hexadecimal digits from 0 to 15. This array allows easy mapping between decimal values and their corresponding hexadecimal characters.</p>
+</li>
+<li><p>A <code>StringBuilder</code> object named <code>sb</code> is created to build the hexadecimal string.</p>
+</li>
+<li><p>The code enters a <code>while</code> loop that continues until <code>num</code> becomes 0.</p>
+</li>
+<li><p>Inside the loop, the code performs the following operations:</p>
+<ul>
+<li>It extracts the last 4 bits of <code>num</code> using the bitwise AND operation <code>num &amp; 15</code>. The number 15 is represented in binary as 0000 1111, so the AND operation with 15 extracts the rightmost 4 bits.</li>
+<li>It inserts the hexadecimal character corresponding to the extracted value at the beginning of the <code>sb</code> using <code>sb.insert(0, map[num &amp; 15])</code>.</li>
+<li>It right shifts <code>num</code> by 4 bits using the logical right shift operator <code>num &gt;&gt;&gt; 4</code> to discard the processed bits.</li>
+</ul>
+</li>
+<li><p>After the loop completes, the <code>sb</code> contains the hexadecimal representation of the input <code>num</code>. It is converted to a string using <code>sb.toString()</code> and returned as the result.</p>
+</li>
+</ol>
+<p><strong>Techniques used:</strong></p>
+<p>The following techniques are utilized within the code:</p>
+<ol>
+<li><p>Bitwise operations: The code uses the bitwise AND operation <code>num &amp; 15</code> to extract the last 4 bits of <code>num</code> and convert them to a hexadecimal digit. It also uses the logical right shift operator <code>num &gt;&gt;&gt; 4</code> to discard processed bits during each iteration.</p>
+</li>
+<li><p>StringBuilder: The <code>StringBuilder</code> object <code>sb</code> is used to efficiently build the hexadecimal string by inserting characters at the beginning.</p>
+</li>
+</ol>
+<p>The provided solution efficiently converts an integer to its hexadecimal representation by extracting the bits and mapping them to their corresponding hexadecimal characters. It utilizes bitwise operations and a <code>StringBuilder</code> object to perform the conversion.</p>
+</span></div></body></html>

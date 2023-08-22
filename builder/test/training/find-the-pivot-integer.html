@@ -40,4 +40,61 @@ img {
     }
     <span class="hljs-keyword">return</span> -<span class="hljs-number">1</span>;
 };
-</code></pre></span></div></body></html>
+</code></pre><p><strong>Solution:</strong></p>
+<p>The provided function <code>pivotInteger</code> takes an integer <code>n</code> as input and finds the pivot point (also known as equilibrium point) in a sequence of consecutive integers from 1 to <code>n</code> (inclusive). The pivot point is the integer at which the sum of all integers before it is equal to the sum of all integers after it.</p>
+<p><strong>Steps:</strong></p>
+<ol>
+<li><p>Calculate the total sum of all integers from 1 to <code>n</code> using the formula <code>total = (n * (n + 1)) / 2</code>.</p>
+</li>
+<li><p>Initialize a variable <code>sum</code> to 0, which will keep track of the sum of integers encountered while iterating.</p>
+</li>
+<li><p>Iterate through integers from 1 to <code>n</code> (inclusive) using a for loop.</p>
+</li>
+<li><p>In each iteration, add the current integer <code>i</code> to the <code>sum</code> variable.</p>
+</li>
+<li><p>Check if the current sum is equal to <code>total - sum + i</code>. If it is, this means the current integer is the pivot point, and it divides the sequence into two parts with equal sums.</p>
+</li>
+<li><p>If a pivot point is found, return the value of <code>i</code>.</p>
+</li>
+<li><p>If no pivot point is found after the loop, return <code>-1</code>.</p>
+</li>
+</ol>
+<p><strong>Example:</strong></p>
+<ul>
+<li>Input: <code>n = 7</code></li>
+<li>Total sum of integers from 1 to 7: <code>(7 * (7 + 1)) / 2 = 28</code></li>
+<li>Iterate through the integers:<ul>
+<li><code>i = 1</code>: <code>sum = 1</code>, check if <code>sum === (28 - 1 + 1)</code>, not equal</li>
+<li><code>i = 2</code>: <code>sum = 3</code>, check if <code>sum === (28 - 3 + 2)</code>, not equal</li>
+<li><code>i = 3</code>: <code>sum = 6</code>, check if <code>sum === (28 - 6 + 3)</code>, not equal</li>
+<li><code>i = 4</code>: <code>sum = 10</code>, check if <code>sum === (28 - 10 + 4)</code>, not equal</li>
+<li><code>i = 5</code>: <code>sum = 15</code>, check if <code>sum === (28 - 15 + 5)</code>, not equal</li>
+<li><code>i = 6</code>: <code>sum = 21</code>, check if <code>sum === (28 - 21 + 6)</code>, not equal</li>
+<li><code>i = 7</code>: <code>sum = 28</code>, check if <code>sum === (28 - 28 + 7)</code>, not equal</li>
+</ul>
+</li>
+<li>No pivot point is found, so the function returns <code>-1</code>.</li>
+</ul>
+<p><strong>Note:</strong></p>
+<p>The given code assumes that the input <code>n</code> is a positive integer.</p>
+<p><strong>Techniques used:</strong></p>
+<ol>
+<li><p><strong>Iteration:</strong> The function iterates through integers from 1 to <code>n</code> (inclusive) using a for loop to calculate the sum and find the pivot point.</p>
+</li>
+<li><p><strong>Mathematical Operation:</strong> The function uses mathematical formulas to calculate the total sum of integers from 1 to <code>n</code>.</p>
+</li>
+<li><p><strong>Conditional Statement:</strong> The function uses a conditional statement (<code>if</code> statement) to check if the current sum is equal to <code>total - sum + i</code>, which helps identify the pivot point.</p>
+</li>
+<li><p><strong>Variable Manipulation:</strong> The function uses variables such as <code>total</code>, <code>sum</code>, and <code>i</code> to keep track of the calculated values during the iteration and calculation process.</p>
+</li>
+<li><p><strong>Comparison Operator:</strong> The function uses the equality comparison operator (<code>===</code>) to compare the sum with the calculated value and determine if a pivot point is found.</p>
+</li>
+<li><p><strong>Returning a Value:</strong> The function returns a value (<code>i</code>) when a pivot point is found, or it returns <code>-1</code> if no pivot point is found.</p>
+</li>
+<li><p><strong>Arithmetic Operators:</strong> The function uses arithmetic operators (<code>+</code>, <code>-</code>, <code>/</code>) to calculate the total sum and update the <code>sum</code> variable.</p>
+</li>
+<li><p><strong>Math.floor Function:</strong> Although not explicitly used in the provided code, the <code>Math.floor</code> function is commonly used when dealing with floating-point values to ensure we get the nearest lower integer value.</p>
+</li>
+</ol>
+<p>These techniques collectively enable the function to efficiently find the pivot point in the sequence of consecutive integers from 1 to <code>n</code>.</p>
+</span></div></body></html>

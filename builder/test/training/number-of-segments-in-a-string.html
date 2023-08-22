@@ -38,4 +38,27 @@ img {
         <span class="hljs-keyword">return</span> s.<span class="hljs-title function_">replace</span>(<span class="hljs-regexp">/  +/g</span>, <span class="hljs-string">&#x27; &#x27;</span>).<span class="hljs-title function_">trim</span>().<span class="hljs-title function_">split</span>(<span class="hljs-string">&#x27; &#x27;</span>).<span class="hljs-property">length</span>
     }
 };
-</code></pre></span></div></body></html>
+</code></pre><p>The <code>countSegments</code> function takes a string <code>s</code> as input and returns the number of segments in the string, where a segment is defined as a contiguous sequence of non-space characters.</p>
+<p>Here&#39;s how the function works:</p>
+<ol>
+<li><p>It trims the input string <code>s</code> using the <code>trim</code> method to remove leading and trailing whitespace.</p>
+</li>
+<li><p>It checks if the trimmed string has a length of 0. If it does, it means there are no segments, so the function returns 0.</p>
+</li>
+<li><p>Otherwise, it uses regular expressions to replace multiple consecutive spaces with a single space using the <code>replace</code> method and the regular expression <code>/  +/g</code>. This ensures that there is only one space between each segment.</p>
+</li>
+<li><p>It then trims the modified string again to remove any leading or trailing spaces.</p>
+</li>
+<li><p>Finally, it splits the trimmed string into an array of segments using the <code>split</code> method with a space (&#39; &#39;) as the delimiter. The length of the resulting array is the number of segments, and this value is returned.</p>
+</li>
+</ol>
+<p><strong>Techniques Used:</strong></p>
+<ul>
+<li><p><strong>String Manipulation:</strong> The function uses string manipulation techniques such as trimming, replacing, and splitting to process the input string and count the segments.</p>
+</li>
+<li><p><strong>Regular Expressions:</strong> Regular expressions are used to replace multiple consecutive spaces with a single space.</p>
+</li>
+</ul>
+<p><strong>Summary:</strong></p>
+<p>The <code>countSegments</code> function effectively counts the number of segments in a given string by trimming, processing, and splitting the string based on spaces. It uses string manipulation and regular expressions to achieve this.</p>
+</span></div></body></html>

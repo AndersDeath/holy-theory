@@ -29,7 +29,7 @@ img {
     list-style: none;
     padding: 10px;
 }</style></head><body><div class="main"><span><nav class="navigation"><ul><li> <a href="/holy-theory/builder/test/">Main page</a></li><li> <a href="/holy-theory/builder/test//languages.html">Statistics</a></li></ul></nav></span><h1></h1><span><h1 id="reverse-bits">Reverse bits</h1>
-<pre><code class="hljs language-typescript"><span class="hljs-comment">/**
+<pre><code class="hljs language-javascript"><span class="hljs-comment">/**
  * <span class="hljs-doctag">@param</span> {<span class="hljs-type">number</span>} <span class="hljs-variable">n</span> - a positive integer
  * <span class="hljs-doctag">@return</span> {<span class="hljs-type">number</span>} - a positive integer
  */</span>
@@ -38,4 +38,28 @@ img {
     <span class="hljs-keyword">while</span>(reversedArray.<span class="hljs-property">length</span> &lt;<span class="hljs-number">32</span>){ reversedArray.<span class="hljs-title function_">push</span>(<span class="hljs-string">&#x27;0&#x27;</span>)}
     <span class="hljs-keyword">return</span>  <span class="hljs-built_in">parseInt</span>(reversedArray.<span class="hljs-title function_">join</span>(<span class="hljs-string">&quot;&quot;</span>),<span class="hljs-number">2</span>) 
 };
-</code></pre></span></div></body></html>
+</code></pre><ol>
+<li><p><strong>Function Input and Output</strong>: The <code>reverseBits</code> function takes a positive integer <code>n</code> as input and returns another positive integer, which is the result of reversing the binary representation of <code>n</code>.</p>
+</li>
+<li><p><strong>Binary Conversion and Reversal</strong>:</p>
+<ul>
+<li><code>n.toString(2)</code>: The input integer <code>n</code> is converted to its binary representation as a string.</li>
+<li><code>.split(&quot;&quot;)</code>: The binary string is split into an array of characters.</li>
+<li><code>.reverse()</code>: The array of binary digits is reversed to obtain the reversed binary representation.</li>
+</ul>
+</li>
+<li><p><strong>Padding to 32 Bits</strong>: While the length of the reversed binary array is less than 32 (since JavaScript uses 32-bit representation for integers), the array is padded with <code>&#39;0&#39;</code> at the end to ensure it has a total of 32 bits.</p>
+</li>
+<li><p><strong>Binary to Integer Conversion</strong>: The reversed binary array is then joined back into a string and converted to an integer using <code>parseInt</code> with base 2, which represents binary.</p>
+</li>
+<li><p><strong>Return Result</strong>: The final integer, which is the result of reversing the binary representation of the input integer <code>n</code>, is returned.</p>
+</li>
+</ol>
+<p><strong>Techniques Used</strong>:</p>
+<ol>
+<li>String Manipulation: Converting the integer to binary string, splitting, and joining it for reversing and padding.</li>
+<li>Looping and Array Manipulation: Adding <code>&#39;0&#39;</code> padding to the binary array until it reaches a length of 32.</li>
+<li>Integer Conversion (<code>parseInt</code>): Converting the reversed binary string back to an integer using base 2.</li>
+</ol>
+<p>This function essentially takes a positive integer, reverses its binary representation, and returns the resulting integer.</p>
+</span></div></body></html>

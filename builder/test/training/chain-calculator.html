@@ -52,4 +52,41 @@ img {
 <span class="hljs-keyword">const</span> calculator = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ChainCalculator</span>();
 
 calculator.<span class="hljs-title function_">log</span>().<span class="hljs-title function_">sum</span>(<span class="hljs-number">15</span>).<span class="hljs-title function_">log</span>().<span class="hljs-title function_">sum</span>(<span class="hljs-number">10</span>).<span class="hljs-title function_">log</span>().<span class="hljs-title function_">finish</span>().<span class="hljs-title function_">log</span>()
-</code></pre></span></div></body></html>
+</code></pre><p>The code above defines a <code>ChainCalculator</code> constructor function that creates calculator objects with chainable operations. The calculator can perform various mathematical operations on a number value and supports method chaining. The operations are defined as properties of the calculator object, and each operation returns the calculator object itself, allowing for sequential method calls.</p>
+<p>Here&#39;s a step-by-step breakdown of the code:</p>
+<ol>
+<li><p>The <code>ChainCalculator</code> constructor function is defined, which takes an optional parameter <code>given</code> (defaults to 0). This parameter represents the initial value of the calculator.</p>
+</li>
+<li><p>Inside the constructor function, the <code>num</code> property is assigned the value of <code>given</code>. This property holds the current number value.</p>
+</li>
+<li><p>The <code>actions</code> object is defined, which maps operation names to their corresponding code strings. Each code string is an array of statements that modify the <code>num</code> property and return the calculator object.</p>
+</li>
+<li><p>A loop is used to iterate over each key (operation name) in the <code>actions</code> object.</p>
+</li>
+<li><p>For each key, a new function is created using the <code>Function</code> constructor. The code string for the corresponding operation is passed as arguments to the <code>Function</code> constructor to create the function.</p>
+</li>
+<li><p>The newly created function is assigned as a property of the calculator object using the current key (operation name).</p>
+</li>
+<li><p>The <code>...actions[key]</code> syntax is used to spread the code string array elements as separate arguments to the <code>Function</code> constructor. This allows the function to be defined with the statements from the code string.</p>
+</li>
+<li><p>After the loop, an instance of the <code>ChainCalculator</code> is created using the <code>new</code> keyword, without passing any arguments. This creates a calculator object with an initial value of 0.</p>
+</li>
+<li><p>The <code>calculator</code> object is used to chain method calls, performing various operations on the number value.</p>
+</li>
+<li><p>The <code>log()</code> method is called on the <code>calculator</code> object, which logs the current number value to the console. It returns the <code>calculator</code> object itself.</p>
+</li>
+<li><p>The <code>sum(15)</code> method is called on the <code>calculator</code> object, which adds 15 to the current number value. It returns the <code>calculator</code> object itself.</p>
+</li>
+<li><p>The <code>log()</code> method is called again, logging the updated number value to the console.</p>
+</li>
+<li><p>The <code>sum(10)</code> method is called, adding 10 to the current number value.</p>
+</li>
+<li><p>The <code>log()</code> method is called once more, logging the final number value to the console.</p>
+</li>
+<li><p>The <code>finish()</code> method is called, which returns the final number value.</p>
+</li>
+<li><p>The <code>log()</code> method is called again, but since it doesn&#39;t return the <code>calculator</code> object, it doesn&#39;t have any effect.</p>
+</li>
+</ol>
+<p>Please note that the code provided uses the <code>Function</code> constructor to dynamically create functions from code strings. While this approach offers flexibility, it can also be potentially unsafe if the code strings come from untrusted sources. It&#39;s important to ensure that the code strings used in this manner are secure and not susceptible to code injection vulnerabilities.</p>
+</span></div></body></html>

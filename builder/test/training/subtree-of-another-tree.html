@@ -43,7 +43,6 @@ img {
  * }
  */</span>
 
-
 <span class="hljs-keyword">function</span> <span class="hljs-title function_">isSubtree</span>(<span class="hljs-params">s: TreeNode | <span class="hljs-literal">null</span>, t: TreeNode | <span class="hljs-literal">null</span></span>): <span class="hljs-built_in">boolean</span> {
   <span class="hljs-keyword">if</span> (s === <span class="hljs-literal">null</span>) {
     <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
@@ -71,4 +70,56 @@ img {
 
   <span class="hljs-keyword">return</span> <span class="hljs-title function_">isSameTree</span>(s.<span class="hljs-property">left</span>, t.<span class="hljs-property">left</span>) &amp;&amp; <span class="hljs-title function_">isSameTree</span>(s.<span class="hljs-property">right</span>, t.<span class="hljs-property">right</span>);
 }
-</code></pre></span></div></body></html>
+</code></pre><p><strong>Description:</strong></p>
+<ol>
+<li><p><strong>Input and Output</strong>:</p>
+<ul>
+<li>The <code>isSubtree</code> function takes two binary tree nodes, <code>s</code> and <code>t</code>, and returns a boolean value indicating whether <code>t</code> is a subtree of <code>s</code>.</li>
+</ul>
+</li>
+<li><p><strong>Base Case</strong>:</p>
+<ul>
+<li>If <code>s</code> is null, there&#39;s no way <code>t</code> can be a subtree, so the function returns <code>false</code>.</li>
+</ul>
+</li>
+<li><p><strong>Check Same Tree</strong>:</p>
+<ul>
+<li>The code first checks if <code>t</code> is the same as <code>s</code>. This is done using the <code>isSameTree</code> helper function.</li>
+<li>If <code>t</code> is found to be the same as <code>s</code>, it means that <code>t</code> is a subtree of <code>s</code>, so the function returns <code>true</code>.</li>
+</ul>
+</li>
+<li><p><strong>Recursion</strong>:</p>
+<ul>
+<li>If <code>t</code> is not the same as <code>s</code>, the code recursively checks whether <code>t</code> is a subtree of <code>s</code>&#39;s left child or right child.</li>
+<li>This is done by calling the <code>isSubtree</code> function recursively on <code>s</code>&#39;s left and right subtrees.</li>
+</ul>
+</li>
+<li><p><strong>Helper Function <code>isSameTree</code></strong>:</p>
+<ul>
+<li>This function checks if two binary trees, <code>s</code> and <code>t</code>, are the same.</li>
+<li>It handles the base cases when both <code>s</code> and <code>t</code> are null, and when one of them is null and the other is not.</li>
+<li>It compares the values of the nodes and recursively checks the left and right subtrees.</li>
+</ul>
+</li>
+<li><p><strong>Return Result</strong>:</p>
+<ul>
+<li>If none of the above conditions are met, the function returns <code>false</code>, indicating that <code>t</code> is not a subtree of <code>s</code>.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Techniques used:</strong></p>
+<ol>
+<li>Recursion to traverse and compare binary trees.</li>
+<li>Base case handling for null nodes.</li>
+<li>Node value comparison.</li>
+</ol>
+<p><strong>Algorithm Complexity:</strong></p>
+<ul>
+<li>Time Complexity: O(m _ n), where <code>m</code> is the number of nodes in tree <code>s</code> and <code>n</code> is the number of nodes in tree <code>t</code>. In the worst case, the <code>isSameTree</code> function can be called <code>m _ n</code> times.</li>
+<li>Space Complexity: O(max(m, n)), where <code>m</code> and <code>n</code> are the heights of trees <code>s</code> and <code>t</code>, respectively. The maximum space used by the recursive call stack is determined by the height of the taller tree.</li>
+</ul>
+<p>This code efficiently determines whether binary tree <code>t</code> is a subtree of binary tree <code>s</code>.</p>
+<ul>
+<li><a href="../readme.md">Go back</a></li>
+</ul>
+</span></div></body></html>

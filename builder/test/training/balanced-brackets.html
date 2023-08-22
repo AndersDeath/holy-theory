@@ -62,5 +62,53 @@ img {
    }
    <span class="hljs-keyword">return</span> stack.<span class="hljs-property">length</span> === <span class="hljs-number">0</span> ? <span class="hljs-string">&#x27;YES&#x27;</span> : <span class="hljs-string">&#x27;NO&#x27;</span>
 }
-</code></pre><p>** Source: <a href="http://hackerrank.com">http://hackerrank.com</a>**</p>
+</code></pre><p><strong>Solution:</strong>
+Below are the step-by-step explanations of the code:</p>
+<ol>
+<li><p>The <code>tokens</code> object is defined, which maps opening parentheses, braces, and brackets to their corresponding closing counterparts.</p>
+</li>
+<li><p>The <code>isOpenTerm</code> function is defined, which takes one parameter:</p>
+<ul>
+<li><code>s</code>: a character representing an opening term.</li>
+</ul>
+</li>
+<li><p>The <code>isOpenTerm</code> function returns the corresponding closing term from the <code>tokens</code> object by accessing <code>tokens[s]</code>. If the opening term exists in the <code>tokens</code> object, its corresponding closing term is returned; otherwise, <code>undefined</code> is returned.</p>
+</li>
+<li><p>The <code>matches</code> function is defined, which takes two parameters:</p>
+<ul>
+<li><code>first</code>: a character representing an opening term.</li>
+<li><code>second</code>: a character representing a closing term.</li>
+</ul>
+</li>
+<li><p>The <code>matches</code> function iterates over the properties of the <code>tokens</code> object using a <code>for...in</code> loop. For each property, it checks if <code>item</code> (the opening term) is equal to <code>first</code>. If there is a match, it compares <code>tokens[item]</code> (the corresponding closing term) with <code>second</code> and returns <code>true</code> if they match; otherwise, it returns <code>false</code>.</p>
+</li>
+<li><p>If no match is found in the <code>tokens</code> object, the <code>matches</code> function returns <code>false</code>.</p>
+</li>
+<li><p>The <code>isBalanced</code> function is defined, which takes one parameter:</p>
+<ul>
+<li><code>s</code>: a string of parentheses, braces, and brackets.</li>
+</ul>
+</li>
+<li><p>A stack data structure, <code>stack</code>, is initialized as an empty array. It will be used to track opening terms.</p>
+</li>
+<li><p>The function iterates over each character of the input string using a <code>for</code> loop.</p>
+</li>
+<li><p>For each character, it checks if it is an opening term by calling the <code>isOpenTerm</code> function. If it is an opening term, it is pushed onto the stack.</p>
+</li>
+<li><p>If the character is not an opening term, it means it is a closing term. In this case, it checks if the stack is empty or if the closing term matches the last opening term on the stack using the <code>matches</code> function. If either condition fails, indicating unbalanced terms, it returns <code>&#39;NO&#39;</code>.</p>
+</li>
+<li><p>After processing all characters, the function checks if the stack is empty. If it is empty, it means all opening terms have been matched with their corresponding closing terms, and it returns <code>&#39;YES&#39;</code>. Otherwise, it returns <code>&#39;NO&#39;</code>.</p>
+</li>
+</ol>
+<p><strong>Techniques used:</strong></p>
+<p>The following techniques are utilized within the code:</p>
+<ol>
+<li>Defining an object to store mappings between opening and closing terms.</li>
+<li>Accessing object properties using dot notation and square bracket notation.</li>
+<li>Iterating over object properties using a <code>for...in</code> loop.</li>
+<li>Conditional branching using <code>if</code> statements.</li>
+<li>Manipulating an array-based stack by pushing and popping elements.</li>
+<li>Returning results based on conditions.</li>
+</ol>
+<p>** Source: <a href="http://hackerrank.com">http://hackerrank.com</a>**</p>
 </span></div></body></html>

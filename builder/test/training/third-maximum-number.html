@@ -30,8 +30,65 @@ img {
     padding: 10px;
 }</style></head><body><div class="main"><span><nav class="navigation"><ul><li> <a href="/holy-theory/builder/test/">Main page</a></li><li> <a href="/holy-theory/builder/test//languages.html">Statistics</a></li></ul></nav></span><h1></h1><span><h1 id="third-maximum-number">Third Maximum Number</h1>
 <pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">thirdMax</span>(<span class="hljs-params">nums: <span class="hljs-built_in">number</span>[]</span>): <span class="hljs-built_in">number</span> {
- <span class="hljs-keyword">const</span> output = [...<span class="hljs-keyword">new</span> <span class="hljs-title class_">Set</span>(nums)]
- output.<span class="hljs-title function_">sort</span>(<span class="hljs-function">(<span class="hljs-params">a, b</span>) =&gt;</span> b - a)
-    <span class="hljs-keyword">return</span> output[<span class="hljs-number">2</span>] !== <span class="hljs-literal">undefined</span> ? output[<span class="hljs-number">2</span>] : output[<span class="hljs-number">0</span>]
-};
-</code></pre></span></div></body></html>
+  <span class="hljs-keyword">const</span> output = [...<span class="hljs-keyword">new</span> <span class="hljs-title class_">Set</span>(nums)];
+  output.<span class="hljs-title function_">sort</span>(<span class="hljs-function">(<span class="hljs-params">a, b</span>) =&gt;</span> b - a);
+  <span class="hljs-keyword">return</span> output[<span class="hljs-number">2</span>] !== <span class="hljs-literal">undefined</span> ? output[<span class="hljs-number">2</span>] : output[<span class="hljs-number">0</span>];
+}
+</code></pre><ul>
+<li><p><strong>Input</strong>: An array of integers (<code>nums</code>).</p>
+</li>
+<li><p><strong>Output</strong>: The third maximum number in the array.</p>
+</li>
+</ul>
+<ol>
+<li><p><strong>Create a Set for Uniqueness</strong>:</p>
+<ul>
+<li>A <code>Set</code> is used to eliminate duplicate numbers from the input array.</li>
+<li>This ensures that only unique values are considered further.</li>
+</ul>
+</li>
+<li><p><strong>Sort Unique Values</strong>:</p>
+<ul>
+<li>The unique values in the <code>Set</code> are sorted in descending order using the <code>.sort()</code> function.</li>
+<li>Custom comparator <code>(a, b) =&gt; b - a</code> is used to sort in descending order.</li>
+</ul>
+</li>
+<li><p><strong>Return Third Maximum or Maximum Value</strong>:</p>
+<ul>
+<li>Check if the third maximum value exists (<code>output[2]</code>):<ul>
+<li>If yes, return the third maximum value.</li>
+<li>If not, return the maximum value (<code>output[0]</code>).</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p><strong>Techniques Used</strong>:</p>
+<ul>
+<li><strong>Set</strong>: Used to store unique numbers and remove duplicates.</li>
+<li><strong>Sorting</strong>: Sorts unique numbers in descending order.</li>
+<li><strong>Ternary Operator</strong>: Used to conditionally choose between the third maximum and maximum value.</li>
+</ul>
+<p><strong>Algorithm</strong>:</p>
+<ol>
+<li>Use a <code>Set</code> to remove duplicate numbers from <code>nums</code>.</li>
+<li>Sort the unique values in descending order.</li>
+<li>Return either the third maximum value (if exists) or the maximum value from the sorted array.</li>
+</ol>
+<p><strong>Time Complexity</strong>:</p>
+<ul>
+<li>Removing duplicates using a <code>Set</code>: O(n)</li>
+<li>Sorting unique values: O(n log n)</li>
+<li>Accessing third maximum value or maximum value: O(1)</li>
+</ul>
+<p>Overall time complexity: O(n log n)</p>
+<p><strong>Space Complexity</strong>:</p>
+<ul>
+<li>Space for the <code>Set</code> to store unique numbers: O(n)</li>
+<li>Space for the sorted array: O(n)</li>
+</ul>
+<p>Overall space complexity: O(n)</p>
+<ul>
+<li><a href="../readme.md">Go back</a></li>
+</ul>
+</span></div></body></html>

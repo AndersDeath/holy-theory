@@ -32,4 +32,14 @@ img {
 <pre><code class="hljs language-bash"><span class="hljs-comment"># Read from the file file.txt and output the tenth line to stdout.</span>
 
 <span class="hljs-built_in">head</span> -n 10 file.txt | <span class="hljs-built_in">tail</span> -n +10
-</code></pre></span></div></body></html>
+</code></pre><p>The shell command <code>head -n 10 file.txt | tail -n +10</code> is used to display lines from a file in a specific range. Let&#39;s break down how this command works:</p>
+<ol>
+<li><p><code>head -n 10 file.txt</code>: This part of the command uses the <code>head</code> command to display the first 10 lines of the file named <code>file.txt</code>. The <code>-n</code> option specifies the number of lines to display.</p>
+</li>
+<li><p><code>|</code>: This is known as a pipe operator. It takes the output from the command on its left and uses it as the input for the command on its right.</p>
+</li>
+<li><p><code>tail -n +10</code>: This part of the command uses the <code>tail</code> command to display lines from the 10th line onwards. The <code>-n</code> option specifies the number of lines to display, and the <code>+10</code> means starting from the 10th line.</p>
+</li>
+</ol>
+<p>In summary, the combination of <code>head -n 10 file.txt</code> extracts the first 10 lines from the file, and then the output of this is piped to <code>tail -n +10</code>, which displays lines starting from the 10th line of the extracted lines. This effectively shows lines 10 to the end from the original file.</p>
+</span></div></body></html>

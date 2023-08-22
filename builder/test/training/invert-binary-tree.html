@@ -52,4 +52,29 @@ img {
     root.<span class="hljs-property">right</span> = <span class="hljs-title function_">invertTree</span>(left);
     <span class="hljs-keyword">return</span> root;
 };
-</code></pre></span></div></body></html>
+</code></pre><p>The code is a TypeScript function that inverts a binary tree. It takes the root of a binary tree as input and returns the root of the inverted binary tree.</p>
+<p>Here&#39;s a step-by-step explanation of the code:</p>
+<ol>
+<li><p>The function <code>invertTree</code> takes a single parameter <code>root</code>, which represents the root of the binary tree to be inverted.</p>
+</li>
+<li><p>The base case of the recursion is handled at the beginning: if <code>root</code> is <code>null</code>, indicating an empty subtree, the function immediately returns <code>null</code>.</p>
+</li>
+<li><p>If <code>root</code> is not <code>null</code>, the code proceeds to swap the left and right subtrees of the current node, effectively inverting its children.</p>
+</li>
+<li><p>The values of the <code>left</code> and <code>right</code> children of the current node are stored in the variables <code>left</code> and <code>right</code>, respectively.</p>
+</li>
+<li><p>The <code>left</code> child of the current node is set to the result of recursively calling <code>invertTree</code> on the original <code>right</code> child. This step inverts the right subtree and assigns it to the left child position.</p>
+</li>
+<li><p>Similarly, the <code>right</code> child of the current node is set to the result of recursively calling <code>invertTree</code> on the original <code>left</code> child. This step inverts the left subtree and assigns it to the right child position.</p>
+</li>
+<li><p>After swapping the subtrees, the <code>root</code> of the inverted subtree is returned.</p>
+</li>
+</ol>
+<p>Overall, this algorithm efficiently performs a recursive inversion of a binary tree by swapping the left and right subtrees at each level of the recursion.</p>
+<p>Techniques used in this code include:</p>
+<ul>
+<li>Recursive traversal of a binary tree.</li>
+<li>Swapping values or nodes of the tree.</li>
+<li>Handling base cases to terminate recursion.</li>
+</ul>
+</span></div></body></html>

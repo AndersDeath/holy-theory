@@ -70,4 +70,39 @@ img {
     
     <span class="hljs-keyword">return</span> s.<span class="hljs-title function_">slice</span>(start, start + maxLength);
 };
-</code></pre></span></div></body></html>
+</code></pre><p><strong>Step-by-Step solution:</strong></p>
+<ol>
+<li><p>Define a function <code>longestPalindrome</code> that takes a string <code>s</code> as input.</p>
+</li>
+<li><p>Initialize variables:</p>
+<ul>
+<li><code>length</code>: Length of the input string.</li>
+<li><code>maxLength</code>: Length of the longest palindrome found.</li>
+<li><code>start</code>: Starting index of the longest palindrome.</li>
+</ul>
+</li>
+<li><p>Create a 2D array <code>table</code> to store information about palindromes. Initialize this array with <code>false</code> values.</p>
+</li>
+<li><p>Iterate through the characters of the string using a loop, and set <code>table[i][i]</code> to <code>true</code> for each character, indicating that single characters are palindromes.</p>
+</li>
+<li><p>Iterate through the string again, this time checking for adjacent identical characters. If found, set <code>table[i][i + 1]</code> to <code>true</code>, indicating palindromes of length 2, and update <code>start</code> and <code>maxLength</code> accordingly.</p>
+</li>
+<li><p>Use two nested loops to iterate through possible palindrome lengths <code>k</code> starting from 3. The outer loop handles the length of palindromes, and the inner loop iterates through the string, checking substrings of length <code>k</code>.</p>
+</li>
+<li><p>For each substring of length <code>k</code>, check if the characters at the current positions <code>i</code> and <code>j</code> match (<code>s[i] == s[j]</code>) and if the substring within <code>table[i + 1][j - 1]</code> is also a palindrome. If both conditions are met, set <code>table[i][j]</code> to <code>true</code> and update <code>start</code> and <code>maxLength</code>.</p>
+</li>
+<li><p>After completing all iterations, return the substring of <code>s</code> starting from index <code>start</code> and spanning <code>maxLength</code> characters. This substring represents the longest palindrome found in the input string.</p>
+</li>
+</ol>
+<p><strong>Techniques Used:</strong></p>
+<ol>
+<li><p><strong>Dynamic Programming:</strong> The algorithm utilizes a dynamic programming approach to solve the longest palindrome problem. The <code>table</code> array is used to store intermediate results, avoiding redundant calculations and improving efficiency.</p>
+</li>
+<li><p><strong>String Manipulation:</strong> The algorithm works with the input string to identify palindromic substrings and their lengths.</p>
+</li>
+<li><p><strong>Nested Loops:</strong> The solution involves nested loops to iterate through various indices and lengths of substrings, allowing for the comparison and identification of palindromic segments.</p>
+</li>
+</ol>
+<p><strong>Summary:</strong></p>
+<p>The <code>longestPalindrome</code> function employs dynamic programming to find the longest palindromic substring within the input string. By utilizing the <code>table</code> array to store and track palindromic substrings, the algorithm optimally identifies the longest palindrome. The technique of dynamic programming and efficient substring comparison ensures an effective solution for finding the longest palindrome in a string.</p>
+</span></div></body></html>

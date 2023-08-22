@@ -65,4 +65,40 @@ img {
         }
         <span class="hljs-keyword">return</span> depth;
 };
-</code></pre></span></div></body></html>
+</code></pre><p>The given function <code>minDepth</code> aims to find the minimum depth of a binary tree, where the depth is defined as the number of nodes along the shortest path from the root node to any leaf node. Here&#39;s a step-by-step explanation of how the function works:</p>
+<ol>
+<li><p>The function initializes <code>depth</code> with 1, which will be used to track the current depth level of the traversal.</p>
+</li>
+<li><p>The function starts by checking if the <code>root</code> node is <code>null</code>. If it is, it means the tree is empty, so the function returns 0.</p>
+</li>
+<li><p>Otherwise, the function initializes a queue <code>que</code> to perform a level-order traversal (Breadth-First Search) of the binary tree. It pushes the <code>root</code> node into the queue.</p>
+</li>
+<li><p>The function enters a loop that continues until the queue is empty. This loop represents the level-order traversal of the tree.</p>
+</li>
+<li><p>Inside the loop, the function retrieves the current size of the queue using <code>que.length</code>. This indicates the number of nodes at the current level.</p>
+</li>
+<li><p>The function enters another loop that processes each node at the current level. For each node, it performs the following steps:</p>
+<ul>
+<li>Dequeues (removes) the front node from the queue.</li>
+<li>Checks if the current node is a leaf node (both left and right children are <code>null</code>). If it is, the function returns the current <code>depth</code>, as this represents the minimum depth to a leaf node.</li>
+<li>If the current node has a left child, it enqueues the left child into the queue.</li>
+<li>If the current node has a right child, it enqueues the right child into the queue.</li>
+</ul>
+</li>
+<li><p>After processing all nodes at the current level, the function increments the <code>depth</code> by 1 to move to the next level.</p>
+</li>
+<li><p>The loop continues until all levels of the tree have been traversed.</p>
+</li>
+<li><p>Finally, the function returns the <code>depth</code>, which represents the minimum depth of the binary tree.</p>
+</li>
+</ol>
+<p><strong>Techniques Used:</strong></p>
+<ol>
+<li><p><strong>Breadth-First Search (BFS):</strong> The function utilizes BFS to traverse the binary tree level by level. This is important for finding the minimum depth, as BFS ensures that the shortest path to a leaf node is explored first.</p>
+</li>
+<li><p><strong>Queue Data Structure:</strong> The function uses a queue to keep track of nodes at each level during BFS. This allows for efficient processing of nodes level by level.</p>
+</li>
+</ol>
+<p><strong>Summary:</strong></p>
+<p>The <code>minDepth</code> function employs BFS to traverse the binary tree level by level and calculates the minimum depth by finding the shortest path to a leaf node. It efficiently utilizes a queue data structure to keep track of nodes at each level and returns the minimum depth of the tree.</p>
+</span></div></body></html>

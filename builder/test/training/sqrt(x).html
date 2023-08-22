@@ -33,29 +33,73 @@ img {
  * <span class="hljs-doctag">@param</span> {<span class="hljs-type">number</span>} <span class="hljs-variable">x</span>
  * <span class="hljs-doctag">@return</span> {<span class="hljs-type">number</span>}
  */</span>
-<span class="hljs-keyword">var</span> mySqrt = <span class="hljs-keyword">function</span>(<span class="hljs-params">x</span>) {
-    <span class="hljs-keyword">if</span>(x &lt; <span class="hljs-number">2</span>) <span class="hljs-keyword">return</span> x;
+<span class="hljs-keyword">const</span> mySqrt = <span class="hljs-keyword">function</span> (<span class="hljs-params">x</span>) {
+  <span class="hljs-keyword">if</span> (x &lt; <span class="hljs-number">2</span>) <span class="hljs-keyword">return</span> x;
 
-    <span class="hljs-keyword">let</span> start = <span class="hljs-number">0</span>;
-    <span class="hljs-keyword">let</span> end = x;
-    <span class="hljs-keyword">while</span>(start &lt;= end) {
-        <span class="hljs-keyword">let</span> mid = (start + end) / <span class="hljs-number">2</span>;
-        mid = <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">floor</span>(mid);
-        
-        <span class="hljs-keyword">if</span>(mid === x/mid) {
-            <span class="hljs-keyword">return</span> mid;
-        }
-       
-       <span class="hljs-keyword">if</span>(mid &lt; x/mid) {
-           start = mid + <span class="hljs-number">1</span>;
-       } <span class="hljs-keyword">else</span> {
-           end = mid - <span class="hljs-number">1</span>;
-       }
+  <span class="hljs-keyword">let</span> start = <span class="hljs-number">0</span>;
+  <span class="hljs-keyword">let</span> end = x;
+  <span class="hljs-keyword">while</span> (start &lt;= end) {
+    <span class="hljs-keyword">let</span> mid = (start + end) / <span class="hljs-number">2</span>;
+    mid = <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">floor</span>(mid);
+
+    <span class="hljs-keyword">if</span> (mid === x / mid) {
+      <span class="hljs-keyword">return</span> mid;
     }
 
-    <span class="hljs-keyword">if</span>(start &gt; x/start) {
-        <span class="hljs-keyword">return</span> start - <span class="hljs-number">1</span>;
+    <span class="hljs-keyword">if</span> (mid &lt; x / mid) {
+      start = mid + <span class="hljs-number">1</span>;
+    } <span class="hljs-keyword">else</span> {
+      end = mid - <span class="hljs-number">1</span>;
     }
-    <span class="hljs-keyword">return</span> start;
+  }
+
+  <span class="hljs-keyword">if</span> (start &gt; x / start) {
+    <span class="hljs-keyword">return</span> start - <span class="hljs-number">1</span>;
+  }
+  <span class="hljs-keyword">return</span> start;
 };
-</code></pre></span></div></body></html>
+</code></pre><p><strong>Description:</strong></p>
+<ol>
+<li><p><strong>Input and Output</strong>:</p>
+<ul>
+<li>The <code>mySqrt</code> function takes an integer <code>x</code> as input and returns the integer square root of <code>x</code>.</li>
+</ul>
+</li>
+<li><p><strong>Binary Search Algorithm</strong>:</p>
+<ul>
+<li>The binary search algorithm is used to find the square root of <code>x</code>.</li>
+<li>The <code>start</code> variable is initialized to 0, and the <code>end</code> variable is initialized to <code>x</code>.</li>
+<li>The algorithm continues to narrow down the range between <code>start</code> and <code>end</code> until <code>start</code> is greater than <code>end</code>.</li>
+</ul>
+</li>
+<li><p><strong>Binary Search Iteration</strong>:</p>
+<ul>
+<li>In each iteration, the middle value <code>mid</code> is calculated as the average of <code>start</code> and <code>end</code>.</li>
+<li>Since we are only interested in integer square roots, <code>mid</code> is converted to an integer using <code>Math.floor(mid)</code>.</li>
+<li>If <code>mid</code> is equal to <code>x / mid</code>, we found the exact square root and return <code>mid</code>.</li>
+<li>If <code>mid</code> is less than <code>x / mid</code>, we adjust <code>start</code> to <code>mid + 1</code> to search in the upper half of the range.</li>
+<li>If <code>mid</code> is greater than <code>x / mid</code>, we adjust <code>end</code> to <code>mid - 1</code> to search in the lower half of the range.</li>
+</ul>
+</li>
+<li><p><strong>Final Result</strong>:</p>
+<ul>
+<li>After the binary search completes, if <code>start</code> becomes greater than <code>x / start</code>, we return <code>start - 1</code> as the integer square root.</li>
+<li>If <code>start</code> is not greater than <code>x / start</code>, we return <code>start</code> as the integer square root.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Techniques used:</strong></p>
+<ol>
+<li>Binary search algorithm for finding the square root.</li>
+<li>Integer conversion using <code>Math.floor()</code>.</li>
+</ol>
+<p><strong>Algorithm Complexity:</strong></p>
+<ul>
+<li>Time Complexity: O(log n), where n is the input number <code>x</code>. The binary search algorithm reduces the search range by half in each iteration.</li>
+<li>Space Complexity: O(1), as only a constant amount of extra space is used (for variables like <code>start</code>, <code>end</code>, and <code>mid</code>).</li>
+</ul>
+<p>This code efficiently calculates the integer square root of a number using the binary search algorithm.</p>
+<ul>
+<li><a href="../readme.md">Go back</a></li>
+</ul>
+</span></div></body></html>

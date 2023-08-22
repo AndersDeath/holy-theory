@@ -29,8 +29,19 @@ img {
     list-style: none;
     padding: 10px;
 }</style></head><body><div class="main"><span><nav class="navigation"><ul><li> <a href="/holy-theory/builder/test/">Main page</a></li><li> <a href="/holy-theory/builder/test//languages.html">Statistics</a></li></ul></nav></span><h1></h1><span><h1 id="game-play-analysis-i">Game Play Analysis I</h1>
-<pre><code class="hljs language-sql"># Write your MySQL query statement below
-<span class="hljs-keyword">SELECT</span> player_id, <span class="hljs-built_in">MIN</span>(event_date) <span class="hljs-keyword">AS</span> first_login
+<pre><code class="hljs language-sql"><span class="hljs-keyword">SELECT</span> player_id, <span class="hljs-built_in">MIN</span>(event_date) <span class="hljs-keyword">AS</span> first_login
 <span class="hljs-keyword">FROM</span> Activity
 <span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span> player_id
-</code></pre></span></div></body></html>
+</code></pre><p>In the given SQL query, we are selecting the <code>player_id</code> and the minimum <code>event_date</code> (earliest login date) for each player from the <code>Activity</code> table. Here&#39;s a step-by-step explanation of the query:</p>
+<ol>
+<li><p><code>SELECT player_id, MIN(event_date) AS first_login</code>: This part of the query specifies the columns we want to select. We want to retrieve the <code>player_id</code> and the minimum (<code>MIN</code>) value of the <code>event_date</code>. We also use the <code>AS</code> keyword to give the minimum <code>event_date</code> column an alias name of <code>first_login</code>.</p>
+</li>
+<li><p><code>FROM Activity</code>: This part of the query specifies the table we are selecting data from, which is the <code>Activity</code> table.</p>
+</li>
+</ol>
+<p>The query will return a result set with two columns: <code>player_id</code> and <code>first_login</code>. Each row in the result set will represent a unique <code>player_id</code> along with their earliest login date (<code>first_login</code>) recorded in the <code>Activity</code> table.</p>
+<p>Technique used in the query:</p>
+<ul>
+<li>Aggregate function (<code>MIN</code>): The <code>MIN</code> function is used to find the minimum value of the <code>event_date</code> column for each <code>player_id</code>. It helps to determine the earliest login date for each player.</li>
+</ul>
+</span></div></body></html>
