@@ -43,6 +43,7 @@
     "marked-gfm-heading-id": "^3.0.3",
     "marked-highlight": "^2.0.1",
     "marked-mangle": "^1.0.1",
-    "pug": "^3.0.2"
+    "pug": "^3.0.2",
+    "typescript": "^5.1.6"
   }
 }
