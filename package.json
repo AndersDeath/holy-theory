@@ -32,6 +32,7 @@
   "homepage": "https://github.com/AndersDeath/holy-theory#readme",
   "devDependencies": {
     "@types/marked": "^5.0.1",
+    "@types/pug": "^2.0.6",
     "parse-md": "^3.0.3",
     "ts-node": "^10.9.1"
   },
