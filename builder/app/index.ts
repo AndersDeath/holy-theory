@@ -82,22 +82,25 @@ function getFiles(dir: string): string[] {
   return results;
 }
 
+const getData = () => {
+  let data: string[][] = [];
+  folders.forEach((e: any) => {
+    data.push(getFiles(path.join("./", e)));
+  });
+  return data;
+};
+
 export function Builder() {
   import("parse-md")
     .then((module) => {
       const parseMD = module.default;
       let testData: any[] = [];
-      let data: string[][] = [];
       let tableOfContents: any[] = [];
       let entities: Entity[] = [];
 
       let lm = new LanguageMap();
 
-      folders.forEach((e: any) => {
-        data.push(getFiles(path.join("./", e)));
-      });
-
-      data.forEach((group) => {
+      getData().forEach((group) => {
         for (let index = 0; index < group.length; index++) {
           const item = group[index];
           const pathObj = path.parse(item);
