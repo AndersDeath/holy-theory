@@ -5,6 +5,7 @@ import { marked } from "./marked"; // You need to import the appropriate module 
 import { LanguageMap } from "./language-map"; // Update the import path accordingly
 import { getConfig } from "./utils"; // Update the import path accordingly
 import { Templates } from "./templates"; // Update the import path accordingly
+import { Entity } from "./entity";
 
 const baseUrl = "/builder/test/";
 const basePath = "." + baseUrl;
@@ -26,25 +27,6 @@ const nav = templates.getData()["nav"].build({
   ],
 });
 
-class Entity {
-  id: string;
-  title: string;
-  meta: any;
-  body: string;
-  category: string;
-
-  constructor(title: string, meta: any, body: string, category: string) {
-    this.id = this.makeId(title);
-    this.title = title;
-    this.meta = meta;
-    this.body = body;
-    this.category = category;
-  }
-
-  makeId(name: string): string {
-    return "";
-  }
-}
 
 const folders = getConfig().folders;
 
