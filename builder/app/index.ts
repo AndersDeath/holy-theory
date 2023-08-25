@@ -7,6 +7,28 @@ import { getConfig } from "./utils"; // Update the import path accordingly
 import { Templates } from "./templates"; // Update the import path accordingly
 import { Entity } from "./entity";
 
+const baseUrl = "/builder/test/";
+const basePath = "." + baseUrl;
+
+const paths = getConfig().templates;
+
+const templates = new Templates(paths, "index");
+
+const nav = templates.getData()["nav"].build({
+  values: [
+    {
+      href: "/holy-theory" + baseUrl,
+      title: "Main page",
+    },
+    {
+      href: "/holy-theory" + baseUrl + "/languages.html",
+      title: "Statistics",
+    },
+  ],
+});
+
+const folders = getConfig().folders;
+
 const buildTableOfContents = (nav, content) => {
   fs.writeFileSync(
     basePath + "/table-of-contents.html",
@@ -37,27 +59,12 @@ const buildAllHtml = (articles) => {
   fs.writeFileSync(basePath + "/all.html", o);
 };
 
-const baseUrl = "/builder/test/";
-const basePath = "." + baseUrl;
-
-const paths = getConfig().templates;
-
-const templates = new Templates(paths, "index");
-
-const nav = templates.getData()["nav"].build({
-  values: [
-    {
-      href: "/holy-theory" + baseUrl,
-      title: "Main page",
-    },
-    {
-      href: "/holy-theory" + baseUrl + "/languages.html",
-      title: "Statistics",
-    },
-  ],
-});
-
-const folders = getConfig().folders;
+const buildIndexHtml = (nav) => {
+  fs.writeFileSync(
+    basePath + "/index.html",
+    templates.getData()["main"].build({ navigation: nav })
+  );
+};
 
 function getFiles(dir: string): string[] {
   let results: string[] = [];
@@ -188,10 +195,7 @@ export function Builder() {
         );
       });
 
-      fs.writeFileSync(
-        basePath + "/index.html",
-        templates.getData()["main"].build({ navigation: nav })
-      );
+      buildIndexHtml(nav);
 
       buildAllHtml(articles);
 
