@@ -17,6 +17,16 @@ const buildTableOfContents = (nav, content) => {
   );
 };
 
+const buildLanguagesHtml = (lm) => {
+  fs.writeFileSync(
+    basePath + "/languages.html",
+    templates.getData()["languages"].build({
+      navigation: nav,
+      values: Object.fromEntries(lm.get()),
+    })
+  );
+};
+
 const baseUrl = "/builder/test/";
 const basePath = "." + baseUrl;
 
@@ -58,9 +68,7 @@ function getFiles(dir: string): string[] {
 export function Builder() {
   import("parse-md")
     .then((module) => {
-      const parseMD = module.default; // adjust this if 'parse-md' exports differently
-      // Now you can use 'parseMd' here
-
+      const parseMD = module.default;
       let testData: any[] = [];
       let data: string[][] = [];
       let tableOfContents: any[] = [];
@@ -170,24 +178,20 @@ export function Builder() {
         );
       });
 
+      fs.writeFileSync(
+        basePath + "/index.html",
+        templates.getData()["main"].build({ navigation: nav })
+      );
+
       let o = templates.getData()["layout"].build({
         header: "Holy Theory",
         values: articles,
         navigation: nav,
       });
 
-      fs.writeFileSync(
-        basePath + "/index.html",
-        templates.getData()["main"].build({ navigation: nav })
-      );
       fs.writeFileSync(basePath + "/all.html", o);
-      fs.writeFileSync(
-        basePath + "/languages.html",
-        templates.getData()["languages"].build({
-          navigation: nav,
-          values: Object.fromEntries(lm.get()),
-        })
-      );
+
+      buildLanguagesHtml(lm);
 
       buildTableOfContents(nav, tableOfContents);
     })
