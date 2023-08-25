@@ -7,6 +7,16 @@ import { getConfig } from "./utils"; // Update the import path accordingly
 import { Templates } from "./templates"; // Update the import path accordingly
 import { Entity } from "./entity";
 
+const buildTableOfContents = (nav, content) => {
+  fs.writeFileSync(
+    basePath + "/table-of-contents.html",
+    templates.getData()["table-of-contents"].build({
+      navigation: nav,
+      values: content,
+    })
+  );
+};
+
 const baseUrl = "/builder/test/";
 const basePath = "." + baseUrl;
 
@@ -26,7 +36,6 @@ const nav = templates.getData()["nav"].build({
     },
   ],
 });
-
 
 const folders = getConfig().folders;
 
@@ -180,15 +189,7 @@ export function Builder() {
         })
       );
 
-      fs.writeFileSync(
-        basePath + "/table-of-contents.html",
-        templates.getData()["table-of-contents"].build({
-          navigation: nav,
-          values: tableOfContents,
-        })
-      );
-
-      console.log(parseMD);
+      buildTableOfContents(nav, tableOfContents);
     })
     .catch((error) => {
       console.error("Error importing 'parse-md':", error);
