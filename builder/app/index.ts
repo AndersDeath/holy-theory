@@ -27,6 +27,16 @@ const buildLanguagesHtml = (lm) => {
   );
 };
 
+const buildAllHtml = (articles) => {
+  let o = templates.getData()["layout"].build({
+    header: "Holy Theory",
+    values: articles,
+    navigation: nav,
+  });
+
+  fs.writeFileSync(basePath + "/all.html", o);
+};
+
 const baseUrl = "/builder/test/";
 const basePath = "." + baseUrl;
 
@@ -183,13 +193,7 @@ export function Builder() {
         templates.getData()["main"].build({ navigation: nav })
       );
 
-      let o = templates.getData()["layout"].build({
-        header: "Holy Theory",
-        values: articles,
-        navigation: nav,
-      });
-
-      fs.writeFileSync(basePath + "/all.html", o);
+      buildAllHtml(articles);
 
       buildLanguagesHtml(lm);
 
