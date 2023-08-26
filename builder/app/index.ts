@@ -66,6 +66,19 @@ const buildIndexHtml = (nav) => {
   );
 };
 
+const buildArticleHtml = (nav, item) => {
+  const html = templates.getData()["article"].build({
+    navigation: nav,
+    title: item.title,
+    body: item.body,
+  });
+
+  fs.writeFileSync(
+    basePath + item.meta.category + "/" + item.meta.fileName.dashed + ".html",
+    html
+  );
+};
+
 function getFiles(dir: string): string[] {
   let results: string[] = [];
   fs.readdirSync(dir).forEach((file) => {
@@ -173,20 +186,7 @@ export function Builder() {
           fs.mkdirSync(basePath + item.meta.category, { recursive: true });
         }
 
-        const html = templates.getData()["article"].build({
-          navigation: nav,
-          title: item.title,
-          body: item.body,
-        });
-
-        fs.writeFileSync(
-          basePath +
-            item.meta.category +
-            "/" +
-            item.meta.fileName.dashed +
-            ".html",
-          html
-        );
+        buildArticleHtml(nav, item);
 
         articles.push(templates.getData()["article"].build(item));
         if (!fs.existsSync(basePath + "/md")) {
