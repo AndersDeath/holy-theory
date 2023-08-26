@@ -6,6 +6,7 @@ import { LanguageMap } from "./language-map"; // Update the import path accordin
 import { getConfig } from "./utils"; // Update the import path accordingly
 import { Templates } from "./templates"; // Update the import path accordingly
 import { Entity } from "./entity";
+import { buildAllHtml, buildArticleHtml, buildArticleMdHtml, buildIndexHtml, buildLanguagesHtml, buildTableOfContents } from "./factories";
 
 const baseUrl = "/builder/test/";
 const basePath = "." + baseUrl;
@@ -28,43 +29,6 @@ const nav = templates.getData()["nav"].build({
 });
 
 const folders = getConfig().folders;
-
-const buildTableOfContents = (nav, content) => {
-  fs.writeFileSync(
-    basePath + "/table-of-contents.html",
-    templates.getData()["table-of-contents"].build({
-      navigation: nav,
-      values: content,
-    })
-  );
-};
-
-const buildLanguagesHtml = (lm) => {
-  fs.writeFileSync(
-    basePath + "/languages.html",
-    templates.getData()["languages"].build({
-      navigation: nav,
-      values: Object.fromEntries(lm.get()),
-    })
-  );
-};
-
-const buildAllHtml = (articles) => {
-  let o = templates.getData()["layout"].build({
-    header: "Holy Theory",
-    values: articles,
-    navigation: nav,
-  });
-
-  fs.writeFileSync(basePath + "/all.html", o);
-};
-
-const buildIndexHtml = (nav) => {
-  fs.writeFileSync(
-    basePath + "/index.html",
-    templates.getData()["main"].build({ navigation: nav })
-  );
-};
 
 function getFiles(dir: string): string[] {
   let results: string[] = [];
@@ -173,36 +137,18 @@ export function Builder() {
           fs.mkdirSync(basePath + item.meta.category, { recursive: true });
         }
 
-        const html = templates.getData()["article"].build({
-          navigation: nav,
-          title: item.title,
-          body: item.body,
-        });
-
-        fs.writeFileSync(
-          basePath +
-            item.meta.category +
-            "/" +
-            item.meta.fileName.dashed +
-            ".html",
-          html
-        );
+        buildArticleHtml(nav, item);
 
         articles.push(templates.getData()["article"].build(item));
-        if (!fs.existsSync(basePath + "/md")) {
-          fs.mkdirSync(basePath + "/md", { recursive: true });
-        }
-        fs.writeFileSync(
-          `./builder/test/md/${item.title.replace("/", "-")}.md`,
-          templates.getData()["articleMD"].build(item)
-        );
+
+        buildArticleMdHtml(item);
       });
 
       buildIndexHtml(nav);
 
-      buildAllHtml(articles);
+      buildAllHtml(nav, articles);
 
-      buildLanguagesHtml(lm);
+      buildLanguagesHtml(nav, lm);
 
       buildTableOfContents(nav, tableOfContents);
     })
