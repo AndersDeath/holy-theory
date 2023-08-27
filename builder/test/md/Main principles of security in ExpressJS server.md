@@ -1,8 +1,7 @@
+
 # Main principles of security in ExpressJS server
 
- Some test;
 ![Main principles of security in ExpressJS server](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/01-security-expressjs.png)
-
 
 1. **Input Validation:** Validate and sanitize all user input, including parameters, query strings, and request bodies, to prevent common vulnerabilities like SQL injection, cross-site scripting (XSS), and command injection.
 
@@ -34,6 +33,4 @@
 
 15. **Regular Monitoring and Logging:** Implement logging and monitoring systems to detect and respond to security incidents, unusual activities, and potential threats in a timely manner.
 
-
-
-
+- [Go back](../readme.md)
