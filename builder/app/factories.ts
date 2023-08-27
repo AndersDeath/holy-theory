@@ -67,3 +67,10 @@ export const buildArticleMdHtml = (item) => {
     templates.getData()["articleMD"].build(item)
   );
 };
+
+
+export const buildFoldersForCategories = (basePath, item) => {
+  if (!fs.existsSync(basePath + item.meta.category)) {
+    fs.mkdirSync(basePath + item.meta.category, { recursive: true });
+  }
+};
