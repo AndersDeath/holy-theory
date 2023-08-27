@@ -6,7 +6,16 @@ import { LanguageMap } from "./language-map"; // Update the import path accordin
 import { getConfig } from "./utils"; // Update the import path accordingly
 import { Templates } from "./templates"; // Update the import path accordingly
 import { Entity } from "./entity";
-import { buildAllHtml, buildArticleHtml, buildArticleMdHtml, buildIndexHtml, buildLanguagesHtml, buildTableOfContents } from "./factories";
+import {
+  buildAllHtml,
+  buildArticleHtml,
+  buildArticleMdHtml,
+  buildFoldersForCategories,
+  buildIndexHtml,
+  buildLanguagesHtml,
+  buildNavigation,
+  buildTableOfContents,
+} from "./factories";
 
 const baseUrl = "/builder/test/";
 const basePath = "." + baseUrl;
@@ -15,19 +24,7 @@ const paths = getConfig().templates;
 
 const templates = new Templates(paths, "index");
 
-const nav = templates.getData()["nav"].build({
-  values: [
-    {
-      href: "/holy-theory" + baseUrl,
-      title: "Main page",
-    },
-    {
-      href: "/holy-theory" + baseUrl + "/languages.html",
-      title: "Statistics",
-    },
-  ],
-});
-
+const nav = buildNavigation(templates);
 const folders = getConfig().folders;
 
 function getFiles(dir: string): string[] {
@@ -132,15 +129,11 @@ export function Builder() {
       });
 
       let articles: any[] = [];
+
       testData.forEach((item) => {
-        if (!fs.existsSync(basePath + item.meta.category)) {
-          fs.mkdirSync(basePath + item.meta.category, { recursive: true });
-        }
-
+        buildFoldersForCategories(basePath, item);
         buildArticleHtml(nav, item);
-
         articles.push(templates.getData()["article"].build(item));
-
         buildArticleMdHtml(item);
       });
 

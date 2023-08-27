@@ -67,3 +67,27 @@ export const buildArticleMdHtml = (item) => {
     templates.getData()["articleMD"].build(item)
   );
 };
+
+
+export const buildFoldersForCategories = (basePath, item) => {
+  if (!fs.existsSync(basePath + item.meta.category)) {
+    fs.mkdirSync(basePath + item.meta.category, { recursive: true });
+  }
+};
+
+
+export const buildNavigation = (templates) => {
+  return templates.getData()["nav"].build({
+    values: [
+      {
+        href: "/holy-theory" + baseUrl,
+        title: "Main page",
+      },
+      {
+        href: "/holy-theory" + baseUrl + "/languages.html",
+        title: "Statistics",
+      },
+    ],
+  });
+
+}
