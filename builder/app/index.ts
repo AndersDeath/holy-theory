@@ -6,7 +6,16 @@ import { LanguageMap } from "./language-map"; // Update the import path accordin
 import { getConfig } from "./utils"; // Update the import path accordingly
 import { Templates } from "./templates"; // Update the import path accordingly
 import { Entity } from "./entity";
-import { buildAllHtml, buildArticleHtml, buildArticleMdHtml, buildFoldersForCategories, buildIndexHtml, buildLanguagesHtml, buildNavigation, buildTableOfContents } from "./factories";
+import {
+  buildAllHtml,
+  buildArticleHtml,
+  buildArticleMdHtml,
+  buildFoldersForCategories,
+  buildIndexHtml,
+  buildLanguagesHtml,
+  buildNavigation,
+  buildTableOfContents,
+} from "./factories";
 
 const baseUrl = "/builder/test/";
 const basePath = "." + baseUrl;
