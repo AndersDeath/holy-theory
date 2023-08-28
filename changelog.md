@@ -1,9 +1,13 @@
 # Changelog
 
 All notable changes to this project will be documented in this file.
-# [0.0.33] - In progress
+
+# [0.0.34] - In progress
+
+# [0.0.33] - 2023-08-28
 * update test build
-* start migration builder to typescript
+* migration builder to typescript
+* refactoring of builder
 
 # [0.0.32] - 2023-08-21
 * update Range Sum Query training, add explanation of solution
