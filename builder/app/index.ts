@@ -3,7 +3,7 @@ import path from "path";
 
 import { marked } from "./marked"; // You need to import the appropriate module for marked
 import { LanguageMap } from "./language-map"; // Update the import path accordingly
-import { getConfig } from "./utils"; // Update the import path accordingly
+import { getConfig, getFiles } from "./utils"; // Update the import path accordingly
 import { Templates } from "./templates"; // Update the import path accordingly
 import { Entity } from "./entity";
 import {
@@ -27,21 +27,6 @@ const templates = new Templates(paths, "index");
 const nav = buildNavigation(templates);
 const folders = getConfig().folders;
 
-function getFiles(dir: string): string[] {
-  let results: string[] = [];
-  fs.readdirSync(dir).forEach((file) => {
-    file = dir + "/" + file;
-    const stat = fs.statSync(file);
-    if (stat && stat.isDirectory()) {
-      results = results.concat(getFiles(file));
-    } else {
-      if (path.extname(file) === ".md") {
-        results.push(file);
-      }
-    }
-  });
-  return results;
-}
 
 const getData = () => {
   let data: string[][] = [];
