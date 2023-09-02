@@ -3,7 +3,6 @@ import path from "path";
 
 import { marked } from "./marked"; // You need to import the appropriate module for marked
 import { LanguageMap } from "./language-map"; // Update the import path accordingly
-import { getFiles } from "./utils"; // Update the import path accordingly
 import { Templates } from "./templates"; // Update the import path accordingly
 import { Entity } from "./entity";
 import {
@@ -15,22 +14,15 @@ import {
   buildLanguagesHtml,
   buildNavigation,
   buildTableOfContents,
+  getData,
 } from "./factories";
-import { basePath, baseUrl, folders, paths } from "./constants";
+import { basePath, baseUrl, paths } from "./constants";
 
 
 const templates = new Templates(paths, "index");
 
 const nav = buildNavigation(templates);
 
-
-const getData = () => {
-  let data: string[][] = [];
-  folders.forEach((e: any) => {
-    data.push(getFiles(path.join("./", e)));
-  });
-  return data;
-};
 
 export function Builder() {
   import("parse-md")
@@ -85,7 +77,7 @@ export function Builder() {
           );
 
           if (
-            !tableOfContents.some((value, index) => {
+            !tableOfContents.some((value) => {
               return value.category === pathObj.dir;
             })
           ) {

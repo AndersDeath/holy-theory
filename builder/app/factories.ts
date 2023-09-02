@@ -1,6 +1,8 @@
 import fs from "fs";
 import { Templates } from "./templates";
-import { getConfig } from "./utils";
+import { getConfig, getFiles } from "./utils";
+import { folders } from "./constants";
+import path from "path";
 
 const baseUrl = "/builder/test/";
 
@@ -91,3 +93,11 @@ export const buildNavigation = (templates) => {
   });
 
 }
+
+export const getData = () => {
+  let data: string[][] = [];
+  folders.forEach((e: any) => {
+    data.push(getFiles(path.join("./", e)));
+  });
+  return data;
+};
