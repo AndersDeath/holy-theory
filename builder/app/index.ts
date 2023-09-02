@@ -3,7 +3,7 @@ import path from "path";
 
 import { marked } from "./marked"; // You need to import the appropriate module for marked
 import { LanguageMap } from "./language-map"; // Update the import path accordingly
-import { getConfig, getFiles } from "./utils"; // Update the import path accordingly
+import { getFiles } from "./utils"; // Update the import path accordingly
 import { Templates } from "./templates"; // Update the import path accordingly
 import { Entity } from "./entity";
 import {
@@ -16,16 +16,12 @@ import {
   buildNavigation,
   buildTableOfContents,
 } from "./factories";
+import { basePath, baseUrl, folders, paths } from "./constants";
 
-const baseUrl = "/builder/test/";
-const basePath = "." + baseUrl;
-
-const paths = getConfig().templates;
 
 const templates = new Templates(paths, "index");
 
 const nav = buildNavigation(templates);
-const folders = getConfig().folders;
 
 
 const getData = () => {
