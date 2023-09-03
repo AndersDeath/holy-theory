@@ -16,7 +16,8 @@ import {
   buildTableOfContents,
   getData,
 } from "./factories";
-import { basePath, baseUrl, paths } from "./constants";
+import { basePath, paths } from "./constants";
+import { cleanContent } from "./utils";
 
 const templates = new Templates(paths, "index");
 
@@ -39,7 +40,8 @@ export function Builder() {
           const fileContents = fs.readFileSync(item, "utf8");
           const { metadata, content }: any = parseMD(fileContents);
 
-          let cleanedContent = content.replace("* [Go back](../readme.md)", "");
+          let cleanedContent = cleanContent(content);
+          
           if (metadata.languages.length > 0) {
             lm.setFromArr(metadata.languages);
           }
