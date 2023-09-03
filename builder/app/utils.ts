@@ -25,3 +25,8 @@ export function getFiles(dir: string): string[] {
   });
   return results;
 }
+
+export const cleanContent = (content: any) => {
+  content.replace("* [Go back](../readme.md)", "");
+  return content;
+}

@@ -1,7 +1,6 @@
 import fs from "fs";
 import path from "path";
 
-import { marked } from "./marked"; // You need to import the appropriate module for marked
 import { LanguageMap } from "./language-map"; // Update the import path accordingly
 import { Templates } from "./templates"; // Update the import path accordingly
 import { Entity } from "./entity";
@@ -9,6 +8,7 @@ import {
   buildAllHtml,
   buildArticleHtml,
   buildArticleMdHtml,
+  buildDataItem,
   buildFoldersForCategories,
   buildIndexHtml,
   buildLanguagesHtml,
@@ -16,13 +16,12 @@ import {
   buildTableOfContents,
   getData,
 } from "./factories";
-import { basePath, baseUrl, paths } from "./constants";
-
+import { basePath, paths } from "./constants";
+import { cleanContent } from "./utils";
 
 const templates = new Templates(paths, "index");
 
 const nav = buildNavigation(templates);
-
 
 export function Builder() {
   import("parse-md")
@@ -41,36 +40,22 @@ export function Builder() {
           const fileContents = fs.readFileSync(item, "utf8");
           const { metadata, content }: any = parseMD(fileContents);
 
-          let cleanedContent = content.replace("* [Go back](../readme.md)", "");
+          let cleanedContent = cleanContent(content);
+          
           if (metadata.languages.length > 0) {
             lm.setFromArr(metadata.languages);
           }
 
-          let d: any = {
-            title: metadata.title,
-            body: marked.parse(cleanedContent),
-            bodyMD: cleanedContent,
-
-            meta: {
-              category: pathObj.dir,
-              url:
-                "/holy-theory" +
-                baseUrl +
-                pathObj.dir +
-                "/" +
-                pathObj.name.replace(" ", "-").toLowerCase() +
-                ".html",
-              fileName: {
-                original: pathObj.name,
-                dashed: pathObj.name.replace(" ", "-").toLowerCase(),
-              },
-            },
-          };
+          let dataItem: any = buildDataItem({
+            metadata,
+            cleanedContent,
+            pathObj,
+          });
 
           entities.push(
             new Entity(
               metadata.title,
-              { ...metadata, ...d.meta },
+              { ...metadata, ...dataItem.meta },
               cleanedContent,
               pathObj.dir
             )
@@ -86,18 +71,18 @@ export function Builder() {
               title: pathObj.dir.charAt(0).toUpperCase() + pathObj.dir.slice(1),
               data: [],
             };
-            obj.data.push(d);
+            obj.data.push(dataItem);
             tableOfContents.push(obj);
           } else {
             tableOfContents.map((value) => {
               if (value.category === pathObj.dir) {
-                value.data.push(d);
+                value.data.push(dataItem);
               }
               return value;
             });
           }
 
-          testData.push(d);
+          testData.push(dataItem);
         }
       });
 
