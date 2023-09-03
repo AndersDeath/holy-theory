@@ -3,6 +3,7 @@ import { Templates } from "./templates";
 import { getConfig, getFiles } from "./utils";
 import { folders } from "./constants";
 import path from "path";
+import { marked } from "./marked"; 
 
 const baseUrl = "/builder/test/";
 
@@ -31,13 +32,14 @@ export const buildLanguagesHtml = (nav, lm) => {
   );
 };
 export const buildAllHtml = (nav, articles) => {
-  let o = templates.getData()["layout"].build({
-    header: "Holy Theory",
-    values: articles,
-    navigation: nav,
-  });
-
-  fs.writeFileSync(basePath + "/all.html", o);
+  fs.writeFileSync(
+    basePath + "/all.html",
+    templates.getData()["layout"].build({
+      header: "Holy Theory",
+      values: articles,
+      navigation: nav,
+    })
+  );
 };
 
 export const buildIndexHtml = (nav) => {
@@ -48,15 +50,13 @@ export const buildIndexHtml = (nav) => {
 };
 
 export const buildArticleHtml = (nav, item) => {
-  const html = templates.getData()["article"].build({
-    navigation: nav,
-    title: item.title,
-    body: item.body,
-  });
-
   fs.writeFileSync(
     basePath + item.meta.category + "/" + item.meta.fileName.dashed + ".html",
-    html
+    templates.getData()["article"].build({
+      navigation: nav,
+      title: item.title,
+      body: item.body,
+    })
   );
 };
 
@@ -70,13 +70,11 @@ export const buildArticleMdHtml = (item) => {
   );
 };
 
-
 export const buildFoldersForCategories = (basePath, item) => {
   if (!fs.existsSync(basePath + item.meta.category)) {
     fs.mkdirSync(basePath + item.meta.category, { recursive: true });
   }
 };
-
 
 export const buildNavigation = (templates) => {
   return templates.getData()["nav"].build({
@@ -91,8 +89,7 @@ export const buildNavigation = (templates) => {
       },
     ],
   });
-
-}
+};
 
 export const getData = () => {
   let data: string[][] = [];
@@ -100,4 +97,27 @@ export const getData = () => {
     data.push(getFiles(path.join("./", e)));
   });
   return data;
+};
+
+export const buildDataItem = (input: any) => {
+  return {
+    title: input.metadata.title,
+    body: marked.parse(input.cleanedContent),
+    bodyMD: input.cleanedContent,
+
+    meta: {
+      category: input.pathObj.dir,
+      url:
+        "/holy-theory" +
+        baseUrl +
+        input.pathObj.dir +
+        "/" +
+        input.pathObj.name.replace(" ", "-").toLowerCase() +
+        ".html",
+      fileName: {
+        original: input.pathObj.name,
+        dashed: input.pathObj.name.replace(" ", "-").toLowerCase(),
+      },
+    },
+  };
 };
