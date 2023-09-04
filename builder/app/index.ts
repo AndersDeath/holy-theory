@@ -4,24 +4,15 @@ import path from "path";
 import { LanguageMap } from "./language-map"; // Update the import path accordingly
 import { Templates } from "./templates"; // Update the import path accordingly
 import { Entity } from "./entity";
-import {
-  buildAllHtml,
-  buildArticleHtml,
-  buildArticleMdHtml,
-  buildDataItem,
-  buildFoldersForCategories,
-  buildIndexHtml,
-  buildLanguagesHtml,
-  buildNavigation,
-  buildTableOfContents,
-  getData,
-} from "./factories";
+import { createBuilder } from "./factories";
 import { basePath, paths } from "./constants";
 import { cleanContent } from "./utils";
 
+const builder = createBuilder();
+
 const templates = new Templates(paths, "index");
 
-const nav = buildNavigation(templates);
+const nav = builder.buildNavigation();
 
 export function Builder() {
   import("parse-md")
@@ -33,7 +24,7 @@ export function Builder() {
 
       let lm = new LanguageMap();
 
-      getData().forEach((group) => {
+      builder.getData().forEach((group) => {
         for (let index = 0; index < group.length; index++) {
           const item = group[index];
           const pathObj = path.parse(item);
@@ -41,12 +32,12 @@ export function Builder() {
           const { metadata, content }: any = parseMD(fileContents);
 
           let cleanedContent = cleanContent(content);
-          
+
           if (metadata.languages.length > 0) {
             lm.setFromArr(metadata.languages);
           }
 
-          let dataItem: any = buildDataItem({
+          let dataItem: any = builder.buildDataItem({
             metadata,
             cleanedContent,
             pathObj,
@@ -89,19 +80,19 @@ export function Builder() {
       let articles: any[] = [];
 
       testData.forEach((item) => {
-        buildFoldersForCategories(basePath, item);
-        buildArticleHtml(nav, item);
+        builder.buildFoldersForCategories(basePath, item);
+        builder.buildArticleHtml(nav, item);
         articles.push(templates.getData()["article"].build(item));
-        buildArticleMdHtml(item);
+        builder.buildArticleMdHtml(item);
       });
 
-      buildIndexHtml(nav);
+      builder.buildIndexHtml(nav);
 
-      buildAllHtml(nav, articles);
+      builder.buildAllHtml(nav, articles);
 
-      buildLanguagesHtml(nav, lm);
+      builder.buildLanguagesHtml(nav, lm);
 
-      buildTableOfContents(nav, tableOfContents);
+      builder.buildTableOfContents(nav, tableOfContents);
     })
     .catch((error) => {
       console.error("Error importing 'parse-md':", error);
