@@ -2,7 +2,9 @@
 
 All notable changes to this project will be documented in this file.
 
-# [0.0.34] - In progress*
+# [0.0.35] - In progress*
+
+# [0.0.34] - 2023-09-04
 * update and refactoring of builder.js
 
 # [0.0.33] - 2023-08-28
