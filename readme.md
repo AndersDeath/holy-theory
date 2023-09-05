@@ -217,6 +217,7 @@
 * [10-solid](/questions/10-solid.md)
 * [11-grasp](/questions/11-grasp.md)
 * [12-browser-url-search](/questions/12-browser-url-search.md)
+* [13-rest-api](/questions/13-rest-api.md)
 ## System design
 
 * [01-horizontal-vertical-scaling](/system-design/01-horizontal-vertical-scaling.md)
