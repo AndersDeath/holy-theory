@@ -37,6 +37,7 @@
   },
   "dependencies": {
     "@eit6609/markdown-templates": "^1.0.0",
+    "fs-extra": "^11.1.1",
     "highlight.js": "^11.8.0",
     "marked": "^5.0.0",
     "marked-gfm-heading-id": "^3.0.3",
