@@ -5,6 +5,7 @@ All notable changes to this project will be documented in this file.
 # [0.0.35] - In progress
 * add 13-rest-api.md question
 * create builder-next version - it's experimental
+* create builder-next markdown website generator - it's experimental
 # [0.0.34] - 2023-09-04
 * update and refactoring of builder.js
 
