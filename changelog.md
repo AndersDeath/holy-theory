@@ -9,6 +9,7 @@ All notable changes to this project will be documented in this file.
 * create builder-next alpha
 * add 14-websocket.md question
 * add 15-graphql.md question
+* update test build
 # [0.0.34] - 2023-09-04
 * update and refactoring of builder.js
 
