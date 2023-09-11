@@ -1,0 +1,49 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Holy Theory</title><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/monokai.min.css"><script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script><style>body {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 400px;
+}
+
+.main {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.navigation {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #000;
+}
+
+.navigation ul {
+    display: flex;
+    padding: 0;
+    flex-direction: row;
+    margin: 0;
+}
+
+.navigation ul li {
+    display: flex;
+    list-style: none;
+    padding: 10px;
+}</style></head><body><div class="main"><span><nav class="navigation"><ul><li> <a href="/holy-theory/builder/test/">Main page</a></li><li> <a href="/holy-theory/builder/test//languages.html">Statistics</a></li></ul></nav></span><h1></h1><span><h1 id="websocket">Websocket</h1>
+<p>WebSocket is a communication protocol that provides full-duplex, bidirectional communication channels over a single TCP connection. It is designed to enable real-time, interactive communication between a client (typically a web browser) and a server. WebSocket is often used in web applications and other scenarios where low-latency, efficient communication is required.</p>
+<p>Here&#39;s how WebSocket works:</p>
+<ol>
+<li><p><strong>Handshake</strong>: WebSocket communication begins with an initial handshake. This handshake is an HTTP request from the client to the server, usually in the form of a standard HTTP GET request. However, it includes an additional <code>Upgrade</code> header field with a value of &quot;websocket&quot; to indicate that the client wants to establish a WebSocket connection. The server must also support WebSocket and, if it does, it responds with a status code of 101 (Switching Protocols) to confirm the upgrade.</p>
+</li>
+<li><p><strong>WebSocket Connection Established</strong>: Once the handshake is successful, the connection is upgraded from HTTP to WebSocket. From this point onward, the communication occurs over a single, persistent TCP connection, eliminating the need for repeated HTTP requests and responses.</p>
+</li>
+<li><p><strong>Data Exchange</strong>: With the WebSocket connection established, both the client and server can send data to each other at any time, without the need for a request-response pattern. Data is sent as frames, which can be either text or binary. Each frame includes an opcode to indicate its type (e.g., text, binary, close, ping, pong), the payload data, and other control bits for framing.</p>
+</li>
+<li><p><strong>Full-Duplex Communication</strong>: WebSocket supports full-duplex communication, meaning both the client and server can send messages independently without waiting for a response. This real-time, bidirectional communication makes it suitable for interactive applications, such as chat applications, online gaming, and live updates.</p>
+</li>
+<li><p><strong>Keep-Alive and Ping/Pong</strong>: WebSocket includes built-in mechanisms for keeping the connection alive and detecting if it&#39;s still active. Periodically, one party may send a ping frame, and the other must respond with a pong frame. If one party fails to receive a pong response within a specified timeout, it can assume the connection is lost and take appropriate action.</p>
+</li>
+<li><p><strong>Close Connection</strong>: Either party can initiate the closing of the WebSocket connection by sending a close frame. This allows for a graceful termination of the connection, and both sides can perform cleanup operations before disconnecting.</p>
+</li>
+</ol>
+<p>WebSocket offers several advantages over traditional HTTP communication for real-time applications, as it eliminates the overhead of repeated HTTP requests and reduces latency. It is widely used in web development, online gaming, financial trading platforms, and any application that requires low-latency, bi-directional communication between a client and server. Additionally, WebSocket libraries and APIs are available for various programming languages, making it relatively easy to implement in web and mobile applications.</p>
+</span></div></body></html>
