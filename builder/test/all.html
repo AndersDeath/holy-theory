@@ -1946,6 +1946,199 @@ img {
     display: flex;
     list-style: none;
     padding: 10px;
+}</style></head><body><div class="main"><span></span><h1></h1><span><h1 id="rest-api">Rest API</h1>
+<p><strong>1. Introduction to REST API:</strong></p>
+<ul>
+<li>Begin by defining REST API. REST stands for Representational State Transfer, and it is an architectural style for designing networked applications.</li>
+</ul>
+<p><strong>2. Key Principles of REST:</strong></p>
+<ul>
+<li>Mention the key principles of REST:<ul>
+<li><strong>Stateless:</strong> Each request from a client to the server must contain all the information needed to understand and process the request.</li>
+<li><strong>Client-Server:</strong> The client and server are separate entities that communicate over a network.</li>
+<li><strong>Uniform Interface:</strong> A consistent and uniform way of interacting with resources (typically using HTTP methods).</li>
+<li><strong>Resource-Based:</strong> Everything in a REST API is treated as a resource, and each resource is identified by a unique URI.</li>
+<li><strong>Representation:</strong> Resources can have multiple representations (e.g., JSON, XML) to support different clients.</li>
+</ul>
+</li>
+</ul>
+<p><strong>3. HTTP Methods:</strong></p>
+<ul>
+<li>Explain the common HTTP methods used in REST:<ul>
+<li><strong>GET:</strong> Retrieve data from the server.</li>
+<li><strong>POST:</strong> Create a new resource on the server.</li>
+<li><strong>PUT:</strong> Update an existing resource on the server.</li>
+<li><strong>DELETE:</strong> Remove a resource from the server.</li>
+<li><strong>PATCH:</strong> Partially update a resource.</li>
+<li><strong>OPTIONS:</strong> Retrieve information about the communication options available for a resource.</li>
+</ul>
+</li>
+</ul>
+<p><strong>4. URI Structure:</strong></p>
+<ul>
+<li>Discuss how URIs are structured in REST APIs.</li>
+<li>Explain the concept of endpoints and how they map to resources.</li>
+</ul>
+<p><strong>5. Status Codes:</strong></p>
+<ul>
+<li>Mention the significance of HTTP status codes (e.g., 200 for success, 404 for not found, 500 for server error) in REST APIs.</li>
+</ul>
+<p><strong>6. Data Formats:</strong></p>
+<ul>
+<li>Explain that data in REST APIs is typically exchanged in standardized formats like JSON or XML.</li>
+<li>Discuss how clients can request specific formats using the &quot;Accept&quot; header.</li>
+</ul>
+<p><strong>7. Authentication and Authorization:</strong></p>
+<ul>
+<li>Briefly touch on the importance of authentication and authorization mechanisms in securing REST APIs.</li>
+</ul>
+<p><strong>8. Statelessness and Scalability:</strong></p>
+<ul>
+<li>Emphasize how the statelessness of REST allows for easy scalability because each request contains all necessary information.</li>
+</ul>
+<p><strong>9. Advantages of REST API:</strong></p>
+<ul>
+<li>Highlight the benefits of using REST, such as simplicity, scalability, and ease of caching.</li>
+</ul>
+<p><strong>10. Use Cases and Examples:</strong> - Provide examples of real-world applications or services that use REST APIs (e.g., Twitter API for retrieving tweets).</p>
+<p><strong>11. Drawbacks and Considerations:</strong> - Mention any potential drawbacks or challenges, such as over-fetching data or lack of support for real-time updates.</p>
+<p><strong>12. Conclusion:</strong> - Summarize by reiterating the key points about REST APIs and their significance in modern web development.</p>
+<p>Remember to tailor your response to the specific details of the interview question and your own experiences or knowledge of REST APIs. Providing concrete examples from your previous work or projects can also enhance your answer and demonstrate your practical understanding of REST.</p>
+</span></div></body></html></li><li><!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Holy Theory</title><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/monokai.min.css"><script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script><style>body {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 400px;
+}
+
+.main {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.navigation {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #000;
+}
+
+.navigation ul {
+    display: flex;
+    padding: 0;
+    flex-direction: row;
+    margin: 0;
+}
+
+.navigation ul li {
+    display: flex;
+    list-style: none;
+    padding: 10px;
+}</style></head><body><div class="main"><span></span><h1></h1><span><h1 id="websocket">Websocket</h1>
+<p>WebSocket is a communication protocol that provides full-duplex, bidirectional communication channels over a single TCP connection. It is designed to enable real-time, interactive communication between a client (typically a web browser) and a server. WebSocket is often used in web applications and other scenarios where low-latency, efficient communication is required.</p>
+<p>Here&#39;s how WebSocket works:</p>
+<ol>
+<li><p><strong>Handshake</strong>: WebSocket communication begins with an initial handshake. This handshake is an HTTP request from the client to the server, usually in the form of a standard HTTP GET request. However, it includes an additional <code>Upgrade</code> header field with a value of &quot;websocket&quot; to indicate that the client wants to establish a WebSocket connection. The server must also support WebSocket and, if it does, it responds with a status code of 101 (Switching Protocols) to confirm the upgrade.</p>
+</li>
+<li><p><strong>WebSocket Connection Established</strong>: Once the handshake is successful, the connection is upgraded from HTTP to WebSocket. From this point onward, the communication occurs over a single, persistent TCP connection, eliminating the need for repeated HTTP requests and responses.</p>
+</li>
+<li><p><strong>Data Exchange</strong>: With the WebSocket connection established, both the client and server can send data to each other at any time, without the need for a request-response pattern. Data is sent as frames, which can be either text or binary. Each frame includes an opcode to indicate its type (e.g., text, binary, close, ping, pong), the payload data, and other control bits for framing.</p>
+</li>
+<li><p><strong>Full-Duplex Communication</strong>: WebSocket supports full-duplex communication, meaning both the client and server can send messages independently without waiting for a response. This real-time, bidirectional communication makes it suitable for interactive applications, such as chat applications, online gaming, and live updates.</p>
+</li>
+<li><p><strong>Keep-Alive and Ping/Pong</strong>: WebSocket includes built-in mechanisms for keeping the connection alive and detecting if it&#39;s still active. Periodically, one party may send a ping frame, and the other must respond with a pong frame. If one party fails to receive a pong response within a specified timeout, it can assume the connection is lost and take appropriate action.</p>
+</li>
+<li><p><strong>Close Connection</strong>: Either party can initiate the closing of the WebSocket connection by sending a close frame. This allows for a graceful termination of the connection, and both sides can perform cleanup operations before disconnecting.</p>
+</li>
+</ol>
+<p>WebSocket offers several advantages over traditional HTTP communication for real-time applications, as it eliminates the overhead of repeated HTTP requests and reduces latency. It is widely used in web development, online gaming, financial trading platforms, and any application that requires low-latency, bi-directional communication between a client and server. Additionally, WebSocket libraries and APIs are available for various programming languages, making it relatively easy to implement in web and mobile applications.</p>
+</span></div></body></html></li><li><!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Holy Theory</title><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/monokai.min.css"><script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script><style>body {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 400px;
+}
+
+.main {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.navigation {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #000;
+}
+
+.navigation ul {
+    display: flex;
+    padding: 0;
+    flex-direction: row;
+    margin: 0;
+}
+
+.navigation ul li {
+    display: flex;
+    list-style: none;
+    padding: 10px;
+}</style></head><body><div class="main"><span></span><h1></h1><span><h1 id="graphql">Graphql</h1>
+<p>GraphQL is a query language for APIs (Application Programming Interfaces) and a runtime for executing those queries by using a type system you define for your data. It was developed by Facebook in 2012 and open-sourced in 2015. GraphQL is designed to enable clients to request exactly the data they need, and nothing more, making it a powerful alternative to REST (Representational State Transfer) APIs for building flexible and efficient APIs. Here are the main principles and concepts of GraphQL:</p>
+<ol>
+<li><p><strong>Hierarchical Structure</strong>: GraphQL queries are hierarchical in nature, mirroring the shape of the response data. This allows clients to specify exactly what data they want, including nested fields and related data, in a single query.</p>
+</li>
+<li><p><strong>Strongly Typed</strong>: GraphQL APIs are defined by a schema that explicitly defines the types of data that can be queried. These types can be scalars (integers, strings, etc.) or complex types (objects with fields). This schema provides a clear contract between the client and server.</p>
+</li>
+<li><p><strong>Single Endpoint</strong>: Unlike REST, which often requires multiple endpoints for different resources, GraphQL typically has a single endpoint for all queries and mutations. This simplifies API requests and reduces over-fetching of data.</p>
+</li>
+<li><p><strong>Client-Defined Queries</strong>: Clients are responsible for specifying the shape and structure of the data they need. This eliminates the problem of over-fetching or under-fetching data that can occur with REST APIs, where the server determines the response structure.</p>
+</li>
+<li><p><strong>No Over-fetching or Under-fetching</strong>: With GraphQL, clients can request only the data they need, reducing the amount of data transferred over the network. This helps optimize performance, especially in mobile applications with limited bandwidth.</p>
+</li>
+<li><p><strong>Real-time Data</strong>: GraphQL supports real-time data updates through subscriptions. Clients can subscribe to specific events or data changes and receive updates when those changes occur on the server.</p>
+</li>
+<li><p><strong>Batching</strong>: Clients can send multiple queries in a single request to reduce the number of round-trips to the server. This is especially useful for optimizing network performance.</p>
+</li>
+<li><p><strong>Introspection</strong>: GraphQL APIs are self-documenting. Clients can query the schema itself to discover the available types, queries, mutations, and their descriptions. This makes it easier to explore and interact with the API.</p>
+</li>
+<li><p><strong>Mutations</strong>: GraphQL allows clients to modify data on the server using mutations. Mutations are defined in the schema and can be used to create, update, or delete data.</p>
+</li>
+<li><p><strong>Validation and Type Checking</strong>: GraphQL servers perform validation and type checking on incoming queries to ensure that they adhere to the schema. This helps catch errors early in the development process.</p>
+</li>
+<li><p><strong>Security</strong>: GraphQL provides mechanisms for controlling access to data, including authentication and authorization. Developers can implement custom logic to secure their GraphQL APIs.</p>
+</li>
+</ol>
+<p>In summary, GraphQL offers a more flexible and efficient way to interact with APIs by giving clients the power to request precisely the data they need, reducing over-fetching, and providing a strongly typed schema for clarity and validation. These principles make it a popular choice for modern web and mobile application development.</p>
+</span></div></body></html></li><li><!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Holy Theory</title><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/monokai.min.css"><script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script><style>body {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 400px;
+}
+
+.main {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.navigation {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #000;
+}
+
+.navigation ul {
+    display: flex;
+    padding: 0;
+    flex-direction: row;
+    margin: 0;
+}
+
+.navigation ul li {
+    display: flex;
+    list-style: none;
+    padding: 10px;
 }</style></head><body><div class="main"><span></span><h1></h1><span><h1 id="array">Array</h1>
 <p>An array is a collection of items stored at contiguous memory locations. The idea is to store multiple items of the same type together. This makes it easier to calculate the position of each element by simply adding an offset to a base value, i.e., the memory location of the first element of the array (generally denoted by the name of the array).</p>
 <p><img src="https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/array.png" alt="Array"></p>

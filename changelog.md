@@ -1,14 +1,16 @@
 # Changelog
 
 All notable changes to this project will be documented in this file.
+# [0.0.36] - In Progress
 
-# [0.0.35] - In progress
+# [0.0.35] - 2023-09-11
 * add 13-rest-api.md question
 * create builder-next version - it's experimental
 * create builder-next markdown website generator - it's experimental
 * create builder-next alpha
 * add 14-websocket.md question
 * add 15-graphql.md question
+* update test build
 # [0.0.34] - 2023-09-04
 * update and refactoring of builder.js
 
