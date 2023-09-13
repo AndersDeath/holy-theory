@@ -1,35 +1,38 @@
 #!/bin/bash
 
-
-PS3='What I need to commit?: '
+PS3='What do you want to do?: '
 options=("Update training" "Add new training" "Update readme" "Update changelog" "Update readme and changelog" "Push everything" "Commit and push everything" "Quit")
-select opt in "${options[@]}"
-do
+
+select opt in "${options[@]}"; do
     case $opt in
         "Update training")
-            echo "Provide a name of training"
-            read
+            echo "Provide a name of training:"
+            read training_name
             git add .
-            git commit -m"update $REPLY training, add explanation of solution"
-            break;
+            git commit -m "Update $training_name training and add explanation of solution"
+            break
             ;;
         "Add new training")
             echo "In progress"
-            break;
+            break
             ;;
         "Update readme")
-            read
-            echo "$REPLY"
-            break;
+            echo "Provide a readme update:"
+            read readme_update
+            echo "$readme_update" > README.md
+            break
             ;;
         "Update changelog")
             git add .
-            git commit -m"update changelog"
-            break;
+            git commit -m "Update changelog"
+            break
             ;;
         "Update readme and changelog")
+            echo "Provide a readme update:"
+            read readme_update
+            echo "$readme_update" > README.md
             git add .
-            git commit -m"update readme and changelog"
+            git commit -m "Update readme and changelog"
             break
             ;;
         "Push everything")
@@ -38,13 +41,13 @@ do
             ;;
         "Commit and push everything")
             git add .
-            git commit -m"unknown update"
+            git commit -m "Unknown update"
             git push
             break
             ;;
         "Quit")
             break
             ;;
-        *) echo "invalid option $REPLY";;
+        *) echo "Invalid option: $REPLY";;
     esac
 done

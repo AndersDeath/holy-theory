@@ -6,16 +6,14 @@ class LanguageMap {
   }
 
   set(element: any): void {
-    if (element && this.map.get(element)) {
-      this.map.set(element, this.map.get(element)! + 1);
-    } else {
-      element ? this.map.set(element, 1) : null;
+    if (element) {
+      this.map.set(element, (this.map.get(element) || 0) + 1);
     }
   }
 
   setFromArr(arr: any[]): void {
-    for (let i = 0; i < arr.length; i++) {
-      this.set(arr[i]);
+    for (const element of arr) {
+      this.set(element);
     }
   }
 
@@ -24,7 +22,11 @@ class LanguageMap {
   }
 
   getObj(): { [key: string]: number } {
-    return Object.fromEntries(this.map);
+    const obj: { [key: string]: number } = {};
+    for (const [key, value] of this.map.entries()) {
+      obj[String(key)] = value;
+    }
+    return obj;
   }
 }
 
