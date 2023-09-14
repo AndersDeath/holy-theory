@@ -261,6 +261,7 @@
 * [Promise action flow](./javascript/promise-action-flow.md)
 * [Possible types of function in JS](./javascript/possible-types-of-functions-in-js.md)
 * [Different ways of declaring functions in JS](./javascript/different-ways-of-declaring-a-function-in-js.md)
+* [Weird and unexpected behavior of JavaScript](./javascript/wierd-unexpected-behavior.md)
 
 ## Security
 
