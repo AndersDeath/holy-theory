@@ -5,9 +5,9 @@ import { marked } from "../app/marked";
 interface Entry {
   title: string;
   link: string;
+  section?: any;
 }
 
-// Function to generate the table of contents
 function generateTableOfContents(
   entries: Entry[],
   isMarkdown: boolean
@@ -20,38 +20,15 @@ function generateTableOfContents(
   return isMarkdown ? listItems.join("\n") : `<ul>${listItems.join("")}</ul>`;
 }
 
-// Function to generate either HTML or Markdown content for a section
-function generateSectionContent(
-  sectionName: string,
-  entries: Entry[],
-  isMarkdown: boolean
-): string {
-  const tableOfContents = generateTableOfContents(entries, isMarkdown);
-  return isMarkdown
-    ? `## ${sectionName}\n\n${tableOfContents}`
-    : `
-    <!DOCTYPE html>
-    <html>
-      <head>
-        <title>${sectionName}</title>
-      </head>
-      <body>
-        <header>
-          <h1>${sectionName}</h1>
-          <nav>${tableOfContents}</nav>
-        </header>
-      </body>
-    </html>
-  `;
-}
-
 async function generateStaticWebsite(
   rootFolder: string,
   outputFolder: string,
   isMarkdown: boolean
 ): Promise<void> {
   const folders = await fs.readdir(rootFolder);
-  const mainSections = [];
+
+  // Initialize an array to collect all content item links and their related section headers
+  const allContentWithSections: Entry[] = [];
 
   for (const folder of folders) {
     const folderPath = path.join(rootFolder, folder);
@@ -69,7 +46,7 @@ async function generateStaticWebsite(
 
         if (fileExt === ".md" && isMarkdown) {
           const markdownContent = await fs.readFile(filePath, "utf-8");
-          const entryName = file.replace(/\.[^.]+$/, ""); // Remove file extension
+          const entryName = file.replace(/\.[^.]+$/, "");
           entryNames.push({ title: entryName, link: `./${entryName}.md` });
 
           const entryOutputPath = path.join(
@@ -77,11 +54,17 @@ async function generateStaticWebsite(
             `${entryName}.md`
           );
           await fs.writeFile(entryOutputPath, markdownContent);
+
+          // Add the content item link and related section header to the array
+          allContentWithSections.push({
+            title: entryName,
+            link: `./${sectionName}/${entryName}.md`,
+            section: sectionName,
+          });
         } else if (fileExt === ".md" && !isMarkdown) {
-          // Convert markdown to HTML
           const markdownContent = await fs.readFile(filePath, "utf-8");
           const htmlContent = marked(markdownContent);
-          const entryName = file.replace(/\.[^.]+$/, ""); // Remove file extension
+          const entryName = file.replace(/\.[^.]+$/, "");
           entryNames.push({ title: entryName, link: `./${entryName}.html` });
 
           const entryOutputPath = path.join(
@@ -89,48 +72,65 @@ async function generateStaticWebsite(
             `${entryName}.html`
           );
           await fs.writeFile(entryOutputPath, htmlContent);
+
+          // Add the content item link and related section header to the array
+          allContentWithSections.push({
+            title: entryName,
+            link: `./${sectionName}/${entryName}.html`,
+            section: sectionName,
+          });
         }
       }
 
-      const sectionContent = generateSectionContent(
-        folder,
-        entryNames,
-        isMarkdown
-      );
+      const sectionContent = generateTableOfContents(entryNames, isMarkdown);
       const sectionIndexOutputPath = path.join(
         sectionOutputFolder,
         isMarkdown ? "index.md" : "index.html"
       );
       await fs.writeFile(sectionIndexOutputPath, sectionContent);
-
-      mainSections.push({ name: folder, path: sectionName });
     }
   }
 
-  const rootIndexContent = mainSections
-    .map((section) =>
-      isMarkdown
-        ? `- [${section.name}](${section.path}/index.md)`
-        : `<li><a href="${section.path}/index.html">${section.name}</a></li>`
-    )
-    .join(isMarkdown ? "\n" : "");
+  if (isMarkdown) {
+    // Generate a global readme.md file with section headers and related content item links
+    const globalReadmeContent = allContentWithSections.reduce((acc, entry) => {
+      if (!acc[entry.section]) {
+        acc[entry.section] = [];
+      }
+      acc[entry.section].push(`- [${entry.title}](${entry.link})`);
+      return acc;
+    }, {} as Record<string, string[]>);
 
-  const rootIndexOutputPath = path.join(
-    outputFolder,
-    isMarkdown ? "index.md" : "index.html"
-  );
-  await fs.writeFile(rootIndexOutputPath, rootIndexContent);
+    const globalReadmeOutputPath = path.join(outputFolder, "readme.md");
+    await fs.writeFile(
+      globalReadmeOutputPath,
+      generateSectionReadme(globalReadmeContent)
+    );
+  }
 }
 
-// Generate both Markdown and HTML versions of the static website
+function generateSectionReadme(
+  contentBySection: Record<string, string[]>
+): string {
+  const sections = Object.keys(contentBySection);
+  return sections
+    .map((section) => {
+      const sectionContent = contentBySection[section].join("\n");
+      return `# ${section}\n\n${sectionContent}`;
+    })
+    .join("\n\n");
+}
+
 const rootContentFolder = path.join(__dirname, "content");
 const outputFolderHtml = path.join(__dirname, "html");
 const outputFolderMd = path.join(__dirname, "md");
 
-generateStaticWebsite(rootContentFolder, outputFolderHtml, true)
+generateStaticWebsite(rootContentFolder, outputFolderMd, true)
   .then(() => console.log("Markdown static website generated successfully"))
-  .catch((err) => console.error("Error generating Markdown static website:", err));
+  .catch((err) =>
+    console.error("Error generating Markdown static website:", err)
+  );
 
-generateStaticWebsite(rootContentFolder, outputFolderMd, false)
+generateStaticWebsite(rootContentFolder, outputFolderHtml, false)
   .then(() => console.log("HTML static website generated successfully"))
   .catch((err) => console.error("Error generating HTML static website:", err));

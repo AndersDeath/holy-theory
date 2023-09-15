@@ -5,6 +5,7 @@ All notable changes to this project will be documented in this file.
 * add git + gitflow question
 * update builder.js
 * add Weird and unexpected behavior of JavaScript
+* update builder-next
 # [0.0.35] - 2023-09-11
 * add 13-rest-api.md question
 * create builder-next version - it's experimental
