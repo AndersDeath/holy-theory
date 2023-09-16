@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file.
 * update builder.js
 * add Weird and unexpected behavior of JavaScript
 * update builder-next
+* update 16-message-queue
 # [0.0.35] - 2023-09-11
 * add 13-rest-api.md question
 * create builder-next version - it's experimental
