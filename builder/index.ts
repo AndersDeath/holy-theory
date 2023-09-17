@@ -87,7 +87,7 @@ async function generateStaticWebsite(
     }, {} as Record<string, string[]>);
 
     const globalReadmeOutputPath = path.join(outputFolder, "../readme.md");
-    const sectionReadmes = generateSectionReadmes(globalReadmeContent);
+    const sectionReadmes = "# Holy Theory \n\n" + generateSectionReadmes(globalReadmeContent);
 
     await fs.writeFile(globalReadmeOutputPath, sectionReadmes);
   }
@@ -100,7 +100,7 @@ function generateSectionReadmes(
   return sections
     .map((section) => {
       const sectionContent = contentBySection[section].join("\n");
-      return `# ${section}\n\n${sectionContent}`;
+      return `## ${section}\n\n${sectionContent}`;
     })
     .join("\n\n");
 }

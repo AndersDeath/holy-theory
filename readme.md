@@ -1,4 +1,6 @@
-# algorithms
+# Holy Theory 
+
+## algorithms
 
 - [binary-search](./content/algorithms/binary-search.md)
 - [binary-tree-inorder-traversal](./content/algorithms/binary-tree-inorder-traversal.md)
@@ -15,7 +17,7 @@
 - [quick-sort](./content/algorithms/quick-sort.md)
 - [selection-sort](./content/algorithms/selection-sort.md)
 
-# javascript
+## javascript
 
 - [array-length-property](./content/javascript/array-length-property.md)
 - [different-ways-of-declaring-a-function-in-js](./content/javascript/different-ways-of-declaring-a-function-in-js.md)
@@ -28,14 +30,14 @@
 - [promise-action-flow](./content/javascript/promise-action-flow.md)
 - [wierd-unexpected-behavior](./content/javascript/wierd-unexpected-behavior.md)
 
-# patterns
+## patterns
 
 - [event-bus](./content/patterns/event-bus.md)
 - [index](./content/patterns/index.md)
 - [observer](./content/patterns/observer.md)
 - [singleton](./content/patterns/singleton.md)
 
-# questions
+## questions
 
 - [01-reverse-number](./content/questions/01-reverse-number.md)
 - [02-big-o](./content/questions/02-big-o.md)
@@ -55,12 +57,12 @@
 - [16-git-gitflow](./content/questions/16-git-gitflow.md)
 - [index](./content/questions/index.md)
 
-# security
+## security
 
 - [01-security-expressjs](./content/security/01-security-expressjs.md)
 - [index](./content/security/index.md)
 
-# structures
+## structures
 
 - [array](./content/structures/array.md)
 - [common-data-structures](./content/structures/common-data-structures.md)
@@ -76,7 +78,7 @@
 - [stack](./content/structures/stack.md)
 - [tree](./content/structures/tree.md)
 
-# system-design
+## system-design
 
 - [01-horizontal-vertical-scaling](./content/system-design/01-horizontal-vertical-scaling.md)
 - [02-cap-theorem](./content/system-design/02-cap-theorem.md)
@@ -107,12 +109,12 @@
 - [27-what-does-api-gateway-do](./content/system-design/27-what-does-api-gateway-do.md)
 - [index](./content/system-design/index.md)
 
-# testing
+## testing
 
 - [01-what-is-stress-test](./content/testing/01-what-is-stress-test.md)
 - [index](./content/testing/index.md)
 
-# training
+## training
 
 - [3sum-closest](./content/training/3sum-closest.md)
 - [3sum](./content/training/3sum.md)
