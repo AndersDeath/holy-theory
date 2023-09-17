@@ -1,4 +1,4 @@
-- [event-bus](./event-bus.md)
-- [index](./index.md)
-- [observer](./observer.md)
-- [singleton](./singleton.md)
+- [Event Bus](./event-bus.md)
+- [undefined](./index.md)
+- [Observer](./observer.md)
+- [Singleton](./singleton.md)
