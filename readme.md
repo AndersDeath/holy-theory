@@ -1,275 +1,283 @@
-# Holy theory
+# Holy Theory 
 
-## Patterns
+## algorithms
 
-* [Event Bus](/patterns/event-bus.md) – TypeScript
-* [Observer](/patterns/observer.md) – TypeScript
-* [Singleton](/patterns/singleton.md) – TypeScript
+- [binary-search](./content/algorithms/binary-search.md)
+- [binary-tree-inorder-traversal](./content/algorithms/binary-tree-inorder-traversal.md)
+- [binary-tree-postorder-traversal](./content/algorithms/binary-tree-postorder-traversal.md)
+- [binary-tree-preorder-traversal](./content/algorithms/binary-tree-preorder-traversal.md)
+- [bubble-sort](./content/algorithms/bubble-sort.md)
+- [diffie-hellman](./content/algorithms/diffie-hellman.md)
+- [graph-adjacency-list](./content/algorithms/graph-adjacency-list.md)
+- [graph-adjacency-matrix](./content/algorithms/graph-adjacency-matrix.md)
+- [index](./content/algorithms/index.md)
+- [insertion-sort](./content/algorithms/insertion-sort.md)
+- [interpolation-search](./content/algorithms/interpolation-search.md)
+- [merge-sort](./content/algorithms/merge-sort.md)
+- [quick-sort](./content/algorithms/quick-sort.md)
+- [selection-sort](./content/algorithms/selection-sort.md)
 
-## Data Structures
+## javascript
 
-* [Common Data Structures](/structures/common-data-structures.md)
-* [Data structures types](/structures/data-structures-types.md)
-* [Array](/structures/array.md)
-* [Hash table](/structures/hash-table.md) – TypeScript
-* [Map](/structures/map.md) – TypeScript
-* [Priority queue](/structures/priority-queue.md) – TypeScript
-* [Queue](/structures/queue.md) – TypeScript
-* [Set](/structures/set.md) – TypeScript
-* [Stack](/structures/stack.md) – TypeScript
-* [Linked List](/structures/linked-list.md) – TypeScript
-* [Tree](/structures/tree.md)
-* [Graph](/structures/graph.md)
+- [array-length-property](./content/javascript/array-length-property.md)
+- [different-ways-of-declaring-a-function-in-js](./content/javascript/different-ways-of-declaring-a-function-in-js.md)
+- [event-loop](./content/javascript/event-loop.md)
+- [index](./content/javascript/index.md)
+- [javascript-data-types](./content/javascript/javascript-data-types.md)
+- [javascript-number-size-summary](./content/javascript/javascript-number-size-summary.md)
+- [js-arrays-cheat-sheet](./content/javascript/js-arrays-cheat-sheet.md)
+- [possible-types-of-functions-in-js](./content/javascript/possible-types-of-functions-in-js.md)
+- [promise-action-flow](./content/javascript/promise-action-flow.md)
+- [wierd-unexpected-behavior](./content/javascript/wierd-unexpected-behavior.md)
 
-## Algorithms
+## patterns
 
-* [Bubble sort](/algorithms/bubble-sort.md) – TypeScript
-* [Insertion sort](/algorithms/insertion-sort.md) – TypeScript, Java
-* [Selection sort](/algorithms/selection-sort.md) – TypeScript
-* [Diffie Hellman](/algorithms/bubble-sort.md) – TypeScript
-* [Merge Sort](/algorithms/merge-sort.md) – Java
-* [Quick sort](/algorithms/quick-sort.md) – Java, Python
-* [Binary search](/algorithms/binary-search.md) – TypeScript
-* [Binary tree inorder traversal](/algorithms/binary-tree-in-order-traversal.md) – Java
-* [Binary tree preoder traversal](/algorithms/binary-tree-preorder-traversal.md) – Java
-* [Binary tree postorder traversal](/algorithms/binary-tree-postorder-traversal.md) – Java
-* [Interpolation search](/algorithms/interpolation-search.md) – Java
-* [Graph adjacency matrix](./algorithms/graph-adjacency-matrix.md) – Java
-* [Graph adjacency list]('./algorithms/graph-adjacency-list.md') – Java
+- [event-bus](./content/patterns/event-bus.md)
+- [index](./content/patterns/index.md)
+- [observer](./content/patterns/observer.md)
+- [singleton](./content/patterns/singleton.md)
 
-## Training
+## questions
 
-* [Cumulative Sum](/training/cumulative-sum.md) – Java
-* [Even number of digits Sum](/training/even-number-of-digits.md) – Java
-* [Identical twins](/training/identical-twins.md) – Java
-* [Palindrome number](/training/palindrome-number.md) – Java
-* [Reverse array](/training/reverse-array.md) – TypeScript
-* [Remove duplicates](/training/remove-duplicates.md) – Java
-* [Reverse words](/training/reverse-words.md) – TypeScript
-* [Chain adding functions](/training/chain-adding-functions.md) – TypeScript
-* [Lonely integer](/training/lonely-integer.md) – TypeScript
-* [Validate pin](/training/validate-pin.md) – TypeScript
-* [Pangram](/training/pangram.md) – TypeScript
-* [Plus Minus](/training/plus-minus.md) – TypeScript
-* [Time conversion](/training/time-conversion.md) – TypeScript
-* [Find the median](/training/find-the-median.md) – TypeScript
-* [Merge two sorted linked lists](/training/merge-two-sorted-linked-lists.md) – TypeScript
-* [Queue using two stacks](/training/queue-using-two-stacks.md) – TypeScript
-* [Balanced brackets](/training/balanced-brackets.md) – JavaScript
-* [Pairs](/training/pairs.md) – TypeScript
-* [Remove duplicate words](/training/remove-duplicate-words.md) – TypeScript
-* [Primes upon to n](/training/primes-upon-to-n.md) – Java
-* [Simple text editor](/training/simple-text-editor.md) – JavaScript
-* [Memo](/training/memo.md) – JavaScript
-* [Fibonacci streaming](/training/fibonacci-streaming.md) – TypeScript
-* [Adjacency list to adjacency matrix](/training/adjacency-list-to-adjacency-matrix.md) – Java
-* [Adjacency matrix to adjacency list](/training/adjacency-matrix-to-adjacency-list.md) – Java
-* [Longest Substring Without Repeating Characters](/training/longest-substring-without-repeating-characters.md) – TypeScript
-* [Add Two Numbers](./training/add-two-number.md) – TypeScript
-* [Valid parentheses](./training/valid-parentheses.md) – TypeScript
-* [Longest common prefix](./training/longest-common-prefix.md) – TypeScript
-* [Median of two sorted arrays](./training/median-of-two-sorted-arrays.md) – TypeScript
-* [Search insert position](./training/search-intest-position.md) – TypeScript
-* [Climbing stairs](./training/climbing-stairs.md) – TypeScript
-* [Same tree](./training/same-tree.md) – TypeScript
-* [Find the Index of the First Occurrence in a String](./training/find-the-index-of-the-first-occurrence-in-a-tring.md) – TypeScript
-* [Times function in TS](./training/times-function-js.md) – TypeScript
-* [Chain calculator](./training/chain-calculator.md) – JavaScript
-* [Inventory update](./training/inventory-update.md) – JavaScript
-* [Curry function](./training/curry-finction.md) – TypeScript
-* [Longest palindrome](./training/longest-palindrome.md) – TypeScript
-* [Longest Palindromic Substring](./training/longest-palindromic-substring.md) – TypeScript
-* [Promises sequence]('./training/promises-sequence.md') – TypeScript
-* [Remove element in place]('./training/remove-element-in-place.md') – TypeScript
-* [Swap Nodes in Pairs]('./training/swap-nodes-in-pairs.md') – TypeScript
-* [Length of Last Word]('./training/length-of-last-word.md') – TypeScript
-* [Symmetric Tree]('./training/symmetric-tree.md') – TypeScript
-* [Balanced Binary Tree]('./training/balanced-binary-tree.md') – TypeScript
-* [Find the Pivot Integer]('./training/../../training/find-the-pivot-integer.md') – TypeScript
-* [Word search]('./training/word-search.md') – TypeScript
-* [Generate Parentheses]('./training/generate-parentheses.md') – TypeScript
-* [Binary Tree Inorder Traversal]('./training/binary-tree-inorder-traversal.md') – TypeScript
-* [Permutations]('./training/permutations.md') – TypeScript
-* [Rotate image]('./training/rotate-image.md') – TypeScript
-* [Maximum Depth of Binary Tree]('./training/maximum-depth-of-binary-tree.md') – TypeScript
-* [Add binary]('./training/add-binary.md') – TypeScript
-* [Plus one](./training/plus-one.md) – TypeScript
-* [String to integer (atoi)](./training/string-to-integer-atoi.md) – TypeScript
-* [Bit countries](./training/big-countries.md) – SQL
-* [Duplicate Emails](./training/duplicate-emails.md) – SQL
-* [Single Number](./training/single-number.md) – TypeScript
-* [Sqrt(x)](./training/sqrt(x).md) – TypeScript
-* [Reverse bits](./training/reverse-bits.md) – TypeScript
-* [Linked List Cycle](./training/linked-list-cycle.md) – TypeScript
-* [Merge Sorted Array](./training/merge-sorted-array.md) – TypeScript
-* [Convert Sorted Array to Binary Search Tree](./training/convert-sorted-array-to-binary-search-tree.md) – TypeScript
-* [Pascal triangle](./training/pascal-triangle.md) – Java
-* [Arithmetic sequence](./training/arithmetic-sequence.md) – Java
-* [Delete Duplicate Emails](./training/delete-duplicates-emails.md) – SQL
-* [Find the Difference](./training/find-the-diffrenece.md) – TypeScript
-* [Happy Number](./training/happy-number.md) – TypeScript
-* [Missing number](./training/missing-number.md) – TypeScript
-* [Reverse string](./training/reverse-string.md) – TypeScript
-* [Number of 1 Bits]('./training/number-of-1-bits.md') – TypeScript
-* [Intersection of two arrays 2]('./training/intersection-of-two-arrays-2.md') – TypeScript
-* [Valid Anagram]('./training/valid-anagram.md') – TypeScript
-* [Pascal triangle 2]('./training/pascal-triangle-2.md') – TypeScript
-* [Intersection of Two Linked Lists]('./training/intersection-of-two-linked-lists.md') –TypeScript
-* [Pairwise](/training/bubble-sort.md) – TypeScript
-* [Symmetric difference](/training/symmetric-difference.md) – TypeScript
-* [Contains Duplicate](./training/contains-duplicates.md) – TypeScript
-* [Path Sum](./training/path-sum.md) – TypeScript
-* [Best Time to Buy and Sell Stock](./training/best-time-to-buy-and-sell-stock.md) – TypeScript
-* [Majority Element](./training/majority-element.md) – TypeScript
-* [Palindrome linked list](./training/palindrome-linked-list.md) – TypeScript
-* [Move Zeroes](./training/move-zerod.md) – TypeScript
-* [First Unique Character in a String](./training/first-unique-character-in-a-string.md) – TypeScript
-* [Fizz Buzz](./training/fizz-buzz.md) – TypeScript
-* [Container With Most Water](./training/container-with-most-water.md) – TypeScript
-* [3Sum](./training/3sum.md) – TypeScript
-* [Combine Two Tables](./training/combine-two-tables.md) – SQL
-* [Customers Who Never Order](./training/customers-who-never-order.md) – SQL
-* [Employees Earning More Than Their Managers](./training/employees-earning-more-than-their-managers.md) – SQL
-* [Remove Linked List Elements](./training/remove-linked-list-elements.md) – TypeScript
-* [Contains Duplicates 2](./training/contains-duplicates-2.md) – TypeScript
-* [Excel Sheet Column Title](./training/excel-sheet-column-title.md) – TypeScript
-* [Binary Tree Preorder Traversal](./training/binary-tree-preorder-traversal.md) – TypeScript
-* [Minimum Depth of Binary Tree](./training/minimum-depth-of-binary-tree.md) – TypeScript
-* [Integer to Roman](./training/integer-to-roman.md) – TypeScript
-* [Binary Tree Postorder Traversal](./training/binary-tree-postorder-traversal.md) – TypeScript
-* [Valid Phone Numbers](./training/valid-phone-numbers.md) – Bash
-* [Tenth Line](./training/tenth-line.md) – Bash
-* [Pascal triangle 3](./training/pascal-triangle-3.md) – TypeScript
-* [Rising Temperature](./training/rising-temperature.md) – SQL
-* [Isomorphic Strings](./training/isomorphic-string.md) – TypeScript
-* [Implement Stack using Queues](./training/implement-stack-using-queues.md) – TypeScript
-* [Invert Binary Tree](./training/invert-binary-tree.md) – TypeScript
-* [Summary Ranges](./training/summary-ranges.md) – TypeScript
-* [Power of two](./training/power-of-two.md) – TypeScript
-* [Implement Queue using Stacks](./training/implement-queue-usin-stack.md) – TypeScript
-* [Binary Tree Paths](./training/binary-tree-paths.md) – TypeScript
-* [Ugly Number](./training/ugly-number.md) – TypeScript
-* [First Bad Version](./training/firts-bad-version.md) – TypeScript
-* [Word Pattern](./training/word-pattern.md) – TypeScript
-* [Nim Game](./training/nim-game.md) – TypeScript
-* [Range Sum Query](./training/range-sum-query.md) – TypeScript
-* [Reverse Vowels of a String](./training/reverse-vowels-of-a-string.md) – TypeScript
-* [Counting Bits](./training/counting-bits.md) – TypeScript
-* [Intersection of two arrays ](./training/intersections-of-two-arrays.md) – TypeScript
-* [Power of Four](./training/power-of-four.md) – TypeScript
-* [Valid Perfect Square](./training/valid-perfect-square.md) – TypeScript
-* [Guess Number Higher or Lower](./training/guess-number-highter-or-lower.md) – TypeScript
-* [Ransom Note](./training/ransome-note.md) – TypeScript
-* [Submission Detail](./training/submission-detail.md) – TypeScript
-* [Binary Watch](./training/binary-watch.md) – Java
-* [Sum of Left Leaves](./training/sum-of-left-leaves.md) – TypeScript
-* [Convert a Number to Hexadecimal](./training/convert-number-to-hexadecimal.md) – Java
-* [Add Strings](./training/add-strings.md) – TypeScript
-* [Number of Segments in a String](./training/number-of-segments-in-a-string.md) – TypeScript
-* [Arranging Coins](./training/arranging-coins.md) – TypeScript
-* [Find All Numbers Disappeared in an Array](./training/find-all-numbers-disappeared-in-an-array.md) – TypeScript
-* [Assign Cookies](./training/assign-cookies.md) – TypeScript
-* [Third Maximum Number](./training/third-maximum-number.md) – TypeScript
-* [Repeated Substring Pattern](./training/repeated-substring-pattern.md) – TypeScript
-* [Hamming Distance](./training/hamming-distance.md) – Java
-* [Island Perimeter](./training/island-perimeter.md) – TypeScript
-* [Number Complement](./training/number-complement.md) – TypeScript
-* [License Key Formatting](./training/license-key-formatting.md) – TypeScript
-* [Max Consecutive Ones](./training/max-consecutive-ones.md) – TypeScript
-* [Construct the Rectangle](./training/construct-the-rectangle.md) – TypeScript
-* [Teemo Attacking](./training/teemo-attacking.md) – TypeScript
-* [Next Greater Element I](./training/next-greater-element-i.md) – TypeScript
-* [Keyboard Row](./training/keyboard-row.md) – TypeScript
-* [Find Mode in Binary Search Tree](./training/find-mode-in-binary-search-tree.md) – TypeScript
-* [Base 7](./training/base-7.md) – TypeScript
-* [Relative Ranks](./training/relative-ranks.md) – TypeScript
-* [Perfect Number](./training/perfect-number.md) – TypeScript
-* [Game Play Analysis I](./training/game-play-analysis-i.md) – TypeScript
-* [Detect Capital Use](./training/detect-capital-use.md) – TypeScript
-* [Longest Uncommon Subsequence I](./training/longest-uncommon-subsequence-i.md) – TypeScript
-* [Minimum Absolute Difference in BST](./training/minimum-absolute-difference-in-bst.md) – TypeScript
-* [Reverse String II](./training/reverse-string-2.md) – TypeScript
-* [Regular Expression Matching](./training/regular-expression-matching.md) – TypeScript
-* [3Sum Closest](./training/3sum-closest.md) – TypeScript
-* [Diameter of Binary Tree](./training/diameter-of-binary-tree.md) – TypeScript
-* [Fibonacci Number](./training/fibonacci-number.md) – TypeScript
-* [Student Attendance Record I](./training/student-attendance-record-1.md) – TypeScript
-* [Reverse Words in a String 3](./training/reverse-words-in-a-string-3.md) – TypeScript
-* [Maximum Depth of N-ary Tree](./training/maximum-depth-of-n-ary-tree.md) – TypeScript
-* [Array Partition](./training/array-partition.md) – TypeScript
-* [Binary Tree Tilt](./training/binary-tree-tilt.md) – TypeScript
-* [Reshape the Matrix](./training/reshape-the-matrix.md) – TypeScript
-* [Subtree of Another Tree](./training/subtree-of-another-tree.md) – TypeScript
-* [Distribute Candies](./training/distribute-candies.md) – TypeScript
-* [Employee Bonus](./training/employee-bonus.md) – SQL
-* [Find Customer Referee](./training/find-customer-referee.md) – SQL
+- [01-reverse-number](./content/questions/01-reverse-number.md)
+- [02-big-o](./content/questions/02-big-o.md)
+- [03-oop-principles](./content/questions/03-oop-principles.md)
+- [04-restful-api-methods](./content/questions/04-restful-api-methods.md)
+- [05-types-of-databases](./content/questions/05-types-of-databases.md)
+- [06-software-categories](./content/questions/06-software-categories.md)
+- [07-software-characteristics](./content/questions/07-software-characteristics.md)
+- [08-sdlc](./content/questions/08-sdlc.md)
+- [09-design-patterns](./content/questions/09-design-patterns.md)
+- [10-solid](./content/questions/10-solid.md)
+- [11-grasp](./content/questions/11-grasp.md)
+- [12-browser-url-search](./content/questions/12-browser-url-search.md)
+- [13-rest-api](./content/questions/13-rest-api.md)
+- [14-websockets](./content/questions/14-websockets.md)
+- [15-graphql](./content/questions/15-graphql.md)
+- [16-git-gitflow](./content/questions/16-git-gitflow.md)
+- [index](./content/questions/index.md)
 
-## Question
-* [01-reverse-number](/questions/01-reverse-number.md) – Java, all languages
-* [02-big-o](/questions/02-big-o.md)
-* [03-oop-principles](/questions/03-oop-principles.md)
-* [04-restful-api-methods](/questions/04-restful-api-methods.md)
-* [05-types-of-databases](/questions/05-types-of-databases.md)
-* [06-software-categories](/questions/06-software-categories.md)
-* [07-software-characteristics](/questions/07-software-characteristics.md)
-* [08-sdlc](/questions/08-sdlc.md)
-* [09-design-patterns](/questions/09-design-patterns.md)
-* [10-solid](/questions/10-solid.md)
-* [11-grasp](/questions/11-grasp.md)
-* [12-browser-url-search](/questions/12-browser-url-search.md)
-* [13-rest-api](/questions/13-rest-api.md)
-* [14-websocket](/questions/14-websockets.md)
-* [15-graphql](/questions//15-graphql.md)
-* [16-git-gitflow.md](/questions/16-git-gitflow.md)
-## System design
+## security
 
-* [01-horizontal-vertical-scaling](/system-design/01-horizontal-vertical-scaling.md)
-* [02-CAP Theorem](/system-design/02-cap-theorem.md)
-* [03-How dns resolves ip address](/system-design/03-how-dsn-resovles-ip.md)
-* [04-Single server setup](/system-design/04-single-servier-setup.md)
-* [05-Database + single servers setup](/system-design/05-database-single-servers-setup.md)
-* [06-Load balancer](/system-design/06-load-balancer.md)
-* [07-Database replication](/system-design/07-database-replication.md)
-* [08-Web tier + Data tier + Load balancer System design](/system-design/08-web-tier-data-tier-load-balancer-system-desing.md)
-* [09-Cache tier](/system-design/09-cache-tier.md)
-* [10-CDN workflow](/system-design/10-cdn-workflow.md)
-* [11-Web tier + Data tier + Load balancer + Cache + CDN System design](/system-design/11-web-tier-data-tier-load-balancer-cache-cdn-system-design.md)
-* [12-Stateful architecture](/system-design/12-stateful-architecture.md)
-* [13-Stateless architecture](/system-design/13-stateless-architecture.md)
-* [14-Web tier + Data tier + Load balancer + Cache + CDN stateless System design](/system-design/14-web-tier-data-tier-load-balancer-cache-cdn-stateless-system-design.md)
-* [15-System design with data centers](/system-design/15-system-design-with-data-centres.md)
-* [16-Message queue](/system-design/16-message-queue.md)
-* [17-System design with message queue](/system-design/17-system-design-with-message-queue.md)
-* [18-Round robin](/system-design/18-round-robin.md)
-* [19-Sticky round robin](/system-design/19-sticky-round-robin.md)
-* [20-Weighted round robin](/system-design/20-weighted-round-robin.md)
-* [21-IP/URL hash](/system-design/21-ip-url-hash.md)
-* [22-Least connections](/system-design/22-least-connections.md)
-* [23-Least time](/system-design/23-least-time.md)
-* [24-Simplified Continuous integration flow](/system-design/24-simplified-continious-integration-flow.md)
-* [25-Architectural characteristics](./system-design/25-architectual-characteristics.md)
-* [26-antipatterns-microservices](./system-design/26-antipatterns-microservices.md)
-* [27-what-does-api-gateway-do](./system-design/27-what-does-api-gateway-do.md)
+- [01-security-expressjs](./content/security/01-security-expressjs.md)
+- [index](./content/security/index.md)
 
-## JavaScript
+## structures
 
-* [Event Loop](/javascript/event-loop.md)
-* [JavaScript number size summary](./javascript/javascript-number-size-summary.md)
-* [Array length property](./javascript/array-length-property.md)
-* [JavaScript data types](./javascript/javascript-data-types.md)
-* [JS Arrays cheat sheet](./javascript/js-arrays-cheat-sheet.md)
-* [Promise action flow](./javascript/promise-action-flow.md)
-* [Possible types of function in JS](./javascript/possible-types-of-functions-in-js.md)
-* [Different ways of declaring functions in JS](./javascript/different-ways-of-declaring-a-function-in-js.md)
-* [Weird and unexpected behavior of JavaScript](./javascript/wierd-unexpected-behavior.md)
+- [array](./content/structures/array.md)
+- [common-data-structures](./content/structures/common-data-structures.md)
+- [data-structures-types](./content/structures/data-structures-types.md)
+- [graph](./content/structures/graph.md)
+- [hash-table](./content/structures/hash-table.md)
+- [index](./content/structures/index.md)
+- [linked-list](./content/structures/linked-list.md)
+- [map](./content/structures/map.md)
+- [priority-queue](./content/structures/priority-queue.md)
+- [queue](./content/structures/queue.md)
+- [set](./content/structures/set.md)
+- [stack](./content/structures/stack.md)
+- [tree](./content/structures/tree.md)
 
-## Security
+## system-design
 
-* [01-security-expressjs](./security/01-security-expressjs.md)
+- [01-horizontal-vertical-scaling](./content/system-design/01-horizontal-vertical-scaling.md)
+- [02-cap-theorem](./content/system-design/02-cap-theorem.md)
+- [03-how-dsn-resovles-ip](./content/system-design/03-how-dsn-resovles-ip.md)
+- [04-single-server-setup](./content/system-design/04-single-server-setup.md)
+- [05-database-single-servers-setup](./content/system-design/05-database-single-servers-setup.md)
+- [06-load-balancer](./content/system-design/06-load-balancer.md)
+- [07-database-replication](./content/system-design/07-database-replication.md)
+- [08-web-tier-data-tier-load-balancer-system-desing](./content/system-design/08-web-tier-data-tier-load-balancer-system-desing.md)
+- [09-cache-tier](./content/system-design/09-cache-tier.md)
+- [10-cdn-workflow](./content/system-design/10-cdn-workflow.md)
+- [11-web-tier-data-tier-load-balancer-cache-cdn-system-design](./content/system-design/11-web-tier-data-tier-load-balancer-cache-cdn-system-design.md)
+- [12-stateful-architecture](./content/system-design/12-stateful-architecture.md)
+- [13-stateless-architecture](./content/system-design/13-stateless-architecture.md)
+- [14-web-tier-data-tier-load-balancer-cache-cdn-stateless-system-design](./content/system-design/14-web-tier-data-tier-load-balancer-cache-cdn-stateless-system-design.md)
+- [15-system-design-with-data-centres](./content/system-design/15-system-design-with-data-centres.md)
+- [16-message-queue](./content/system-design/16-message-queue.md)
+- [17-system-design-with-message-queue](./content/system-design/17-system-design-with-message-queue.md)
+- [18-round-robin](./content/system-design/18-round-robin.md)
+- [19-sticky-round-robin](./content/system-design/19-sticky-round-robin.md)
+- [20-weighted-round-robin](./content/system-design/20-weighted-round-robin.md)
+- [21-ip-url-hash](./content/system-design/21-ip-url-hash.md)
+- [22-least-connections](./content/system-design/22-least-connections.md)
+- [23-least-time](./content/system-design/23-least-time.md)
+- [24-simplified-continious-integration-flow](./content/system-design/24-simplified-continious-integration-flow.md)
+- [25-architectual-characteristics](./content/system-design/25-architectual-characteristics.md)
+- [26-antipatterns-microservices](./content/system-design/26-antipatterns-microservices.md)
+- [27-what-does-api-gateway-do](./content/system-design/27-what-does-api-gateway-do.md)
+- [index](./content/system-design/index.md)
 
-## Testing
+## testing
 
-* [01-what-is-stress-test](./testing/01-what-is-stress-test.md)
+- [01-what-is-stress-test](./content/testing/01-what-is-stress-test.md)
+- [index](./content/testing/index.md)
 
+## training
 
-[Eleventy alpha version ](https://eleventy-vladimir-test.netlify.app/)
+- [3sum-closest](./content/training/3sum-closest.md)
+- [3sum](./content/training/3sum.md)
+- [add-binary](./content/training/add-binary.md)
+- [add-strings](./content/training/add-strings.md)
+- [add-two-number](./content/training/add-two-number.md)
+- [adjacency-list-to-adjacency-matrix](./content/training/adjacency-list-to-adjacency-matrix.md)
+- [adjacency-matrix-to-adjacency-list](./content/training/adjacency-matrix-to-adjacency-list.md)
+- [arithmetic-sequence](./content/training/arithmetic-sequence.md)
+- [arranging-coins](./content/training/arranging-coins.md)
+- [array-partition](./content/training/array-partition.md)
+- [assign-cookies](./content/training/assign-cookies.md)
+- [balanced-binary-tree](./content/training/balanced-binary-tree.md)
+- [balanced-brackets](./content/training/balanced-brackets.md)
+- [base-7](./content/training/base-7.md)
+- [best-time-to-buy-and-sell-stock](./content/training/best-time-to-buy-and-sell-stock.md)
+- [big-countries](./content/training/big-countries.md)
+- [binary-tree-inorder-traversal](./content/training/binary-tree-inorder-traversal.md)
+- [binary-tree-paths](./content/training/binary-tree-paths.md)
+- [binary-tree-postorder-traversal](./content/training/binary-tree-postorder-traversal.md)
+- [binary-tree-preorder-traversal](./content/training/binary-tree-preorder-traversal.md)
+- [binary-tree-tilt](./content/training/binary-tree-tilt.md)
+- [binary-watch](./content/training/binary-watch.md)
+- [chain-adding-functions](./content/training/chain-adding-functions.md)
+- [chain-calculator](./content/training/chain-calculator.md)
+- [climbing-stairs](./content/training/climbing-stairs.md)
+- [combine-two-tables](./content/training/combine-two-tables.md)
+- [construct-the-rectangle](./content/training/construct-the-rectangle.md)
+- [container-with-most-water](./content/training/container-with-most-water.md)
+- [contains-duplicates-2](./content/training/contains-duplicates-2.md)
+- [contains-duplicates](./content/training/contains-duplicates.md)
+- [convert-number-to-hexadecimal](./content/training/convert-number-to-hexadecimal.md)
+- [convert-sorted-array-to-binary-search-tree](./content/training/convert-sorted-array-to-binary-search-tree.md)
+- [counting-bits](./content/training/counting-bits.md)
+- [cumulative-sum](./content/training/cumulative-sum.md)
+- [curry-finction](./content/training/curry-finction.md)
+- [customers-who-never-order](./content/training/customers-who-never-order.md)
+- [delete-duplicates-emails](./content/training/delete-duplicates-emails.md)
+- [detect-capital-use](./content/training/detect-capital-use.md)
+- [diameter-of-binary-tree](./content/training/diameter-of-binary-tree.md)
+- [distribute-candies](./content/training/distribute-candies.md)
+- [duplicate-emails](./content/training/duplicate-emails.md)
+- [employee-bonus](./content/training/employee-bonus.md)
+- [employees-earning-more-than-their-managers](./content/training/employees-earning-more-than-their-managers.md)
+- [even-number-of-digits](./content/training/even-number-of-digits.md)
+- [excel-sheet-column-title](./content/training/excel-sheet-column-title.md)
+- [fibonacci-number](./content/training/fibonacci-number.md)
+- [fibonacci-streaming](./content/training/fibonacci-streaming.md)
+- [find-all-numbers-disappeared-in-an-array](./content/training/find-all-numbers-disappeared-in-an-array.md)
+- [find-customer-referee](./content/training/find-customer-referee.md)
+- [find-mode-in-binary-search-tree](./content/training/find-mode-in-binary-search-tree.md)
+- [find-the-diffrenece](./content/training/find-the-diffrenece.md)
+- [find-the-index-of-the-first-occurrence-in-a-tring](./content/training/find-the-index-of-the-first-occurrence-in-a-tring.md)
+- [find-the-median](./content/training/find-the-median.md)
+- [find-the-pivot-integer](./content/training/find-the-pivot-integer.md)
+- [first-unique-character-in-a-string](./content/training/first-unique-character-in-a-string.md)
+- [firts-bad-version](./content/training/firts-bad-version.md)
+- [fizz-buzz](./content/training/fizz-buzz.md)
+- [game-play-analysis-i](./content/training/game-play-analysis-i.md)
+- [generate-parentheses](./content/training/generate-parentheses.md)
+- [guess-number-highter-or-lower](./content/training/guess-number-highter-or-lower.md)
+- [hamming-distance](./content/training/hamming-distance.md)
+- [happy-number](./content/training/happy-number.md)
+- [identical-twins](./content/training/identical-twins.md)
+- [implement-queue-usin-stack](./content/training/implement-queue-usin-stack.md)
+- [implement-stack-using-queues](./content/training/implement-stack-using-queues.md)
+- [index](./content/training/index.md)
+- [integer-to-roman](./content/training/integer-to-roman.md)
+- [intersection-of-two-arrays-2](./content/training/intersection-of-two-arrays-2.md)
+- [intersection-of-two-linked-lists](./content/training/intersection-of-two-linked-lists.md)
+- [intersections-of-two-arrays](./content/training/intersections-of-two-arrays.md)
+- [inventory-update](./content/training/inventory-update.md)
+- [invert-binary-tree](./content/training/invert-binary-tree.md)
+- [island-perimeter](./content/training/island-perimeter.md)
+- [isomorphic-string](./content/training/isomorphic-string.md)
+- [keyboard-row](./content/training/keyboard-row.md)
+- [length-of-last-word](./content/training/length-of-last-word.md)
+- [license-key-formatting](./content/training/license-key-formatting.md)
+- [linked-list-cycle](./content/training/linked-list-cycle.md)
+- [lonely-integer](./content/training/lonely-integer.md)
+- [longest-common-prefix](./content/training/longest-common-prefix.md)
+- [longest-palindrome](./content/training/longest-palindrome.md)
+- [longest-palindromic-substring](./content/training/longest-palindromic-substring.md)
+- [longest-substring-without-repeating-characters](./content/training/longest-substring-without-repeating-characters.md)
+- [longest-uncommon-subsequence-i](./content/training/longest-uncommon-subsequence-i.md)
+- [majority-element](./content/training/majority-element.md)
+- [max-consecutive-ones](./content/training/max-consecutive-ones.md)
+- [maximum-depth-of-binary-tree](./content/training/maximum-depth-of-binary-tree.md)
+- [maximum-depth-of-n-ary-tree](./content/training/maximum-depth-of-n-ary-tree.md)
+- [median-of-two-sorted-arrays](./content/training/median-of-two-sorted-arrays.md)
+- [memo](./content/training/memo.md)
+- [merge-sorted-array](./content/training/merge-sorted-array.md)
+- [merge-two-sorted-linked-lists](./content/training/merge-two-sorted-linked-lists.md)
+- [minimum-absolute-difference-in-bst](./content/training/minimum-absolute-difference-in-bst.md)
+- [minimum-depth-of-binary-tree](./content/training/minimum-depth-of-binary-tree.md)
+- [missing-number](./content/training/missing-number.md)
+- [move-zerod](./content/training/move-zerod.md)
+- [next-greater-element-i](./content/training/next-greater-element-i.md)
+- [nim-game](./content/training/nim-game.md)
+- [number-complement](./content/training/number-complement.md)
+- [number-of-1-bits](./content/training/number-of-1-bits.md)
+- [number-of-segments-in-a-string](./content/training/number-of-segments-in-a-string.md)
+- [pairs](./content/training/pairs.md)
+- [pairwise](./content/training/pairwise.md)
+- [palindrome-linked-list](./content/training/palindrome-linked-list.md)
+- [palindrome-number](./content/training/palindrome-number.md)
+- [pangram](./content/training/pangram.md)
+- [pascal-triangle-2](./content/training/pascal-triangle-2.md)
+- [pascal-triangle-3](./content/training/pascal-triangle-3.md)
+- [pascal-triangle](./content/training/pascal-triangle.md)
+- [path-sum](./content/training/path-sum.md)
+- [perfect-number](./content/training/perfect-number.md)
+- [permutations](./content/training/permutations.md)
+- [plus-minus](./content/training/plus-minus.md)
+- [plus-one](./content/training/plus-one.md)
+- [power-of-four](./content/training/power-of-four.md)
+- [power-of-two](./content/training/power-of-two.md)
+- [primes-upon-to-n](./content/training/primes-upon-to-n.md)
+- [promises-sequence](./content/training/promises-sequence.md)
+- [queue-using-two-stacks](./content/training/queue-using-two-stacks.md)
+- [range-sum-query](./content/training/range-sum-query.md)
+- [ransome-note](./content/training/ransome-note.md)
+- [regular-expression-matching](./content/training/regular-expression-matching.md)
+- [relative-ranks](./content/training/relative-ranks.md)
+- [remove-duplicate-words](./content/training/remove-duplicate-words.md)
+- [remove-duplicates](./content/training/remove-duplicates.md)
+- [remove-element-in-place](./content/training/remove-element-in-place.md)
+- [remove-linked-list-elements](./content/training/remove-linked-list-elements.md)
+- [repeated-substring-pattern](./content/training/repeated-substring-pattern.md)
+- [reshape-the-matrix](./content/training/reshape-the-matrix.md)
+- [reverse-array](./content/training/reverse-array.md)
+- [reverse-bits](./content/training/reverse-bits.md)
+- [reverse-string-2](./content/training/reverse-string-2.md)
+- [reverse-string](./content/training/reverse-string.md)
+- [reverse-vowels-of-a-string](./content/training/reverse-vowels-of-a-string.md)
+- [reverse-words-in-a-string-3](./content/training/reverse-words-in-a-string-3.md)
+- [reverse-words](./content/training/reverse-words.md)
+- [rising-temperature](./content/training/rising-temperature.md)
+- [rotate-image](./content/training/rotate-image.md)
+- [same-tree](./content/training/same-tree.md)
+- [search-intest-position](./content/training/search-intest-position.md)
+- [simple-text-editor](./content/training/simple-text-editor.md)
+- [single-number](./content/training/single-number.md)
+- [sqrt(x)](./content/training/sqrt(x).md)
+- [string-to-integer-atoi](./content/training/string-to-integer-atoi.md)
+- [student-attendance-record-1](./content/training/student-attendance-record-1.md)
+- [submission-detail](./content/training/submission-detail.md)
+- [subtree-of-another-tree](./content/training/subtree-of-another-tree.md)
+- [sum-of-left-leaves](./content/training/sum-of-left-leaves.md)
+- [summary-ranges](./content/training/summary-ranges.md)
+- [swap-nodes-in-pairs](./content/training/swap-nodes-in-pairs.md)
+- [symmetric-difference](./content/training/symmetric-difference.md)
+- [symmetric-tree](./content/training/symmetric-tree.md)
+- [teemo-attacking](./content/training/teemo-attacking.md)
+- [tenth-line](./content/training/tenth-line.md)
+- [third-maximum-number](./content/training/third-maximum-number.md)
+- [time-conversion](./content/training/time-conversion.md)
+- [times-function-js](./content/training/times-function-js.md)
+- [ugly-number](./content/training/ugly-number.md)
+- [valid-anagram](./content/training/valid-anagram.md)
+- [valid-parentheses](./content/training/valid-parentheses.md)
+- [valid-perfect-square](./content/training/valid-perfect-square.md)
+- [valid-phone-numbers](./content/training/valid-phone-numbers.md)
+- [validate-pin](./content/training/validate-pin.md)
+- [word-pattern](./content/training/word-pattern.md)
+- [word-search](./content/training/word-search.md)
