@@ -1,1 +1,2 @@
-- [01-security-expressjs](./content/01-security-expressjs.md)
+- [01-security-expressjs](./01-security-expressjs.md)
+- [index](./index.md)

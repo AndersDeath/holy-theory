@@ -46,7 +46,7 @@ async function generateStaticWebsite(
         if (fileExt === ".md" && isMarkdown) {
           const markdownContent = await fs.readFile(filePath, "utf-8");
           const entryName = file.replace(/\.[^.]+$/, "");
-          const entryLink = `./content/${entryName}.md`;
+          const entryLink = `./${entryName}.md`;
 
           entryNames.push({ title: entryName, link: entryLink });
 
@@ -59,7 +59,7 @@ async function generateStaticWebsite(
 
           allContentWithSections.push({
             title: entryName,
-            link: `./${sectionName}/${entryName}.md`,
+            link: `./content/${sectionName}/${entryName}.md`,
             section: sectionName,
           });
         }

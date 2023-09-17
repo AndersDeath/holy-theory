@@ -1,3 +1,4 @@
-- [event-bus](./content/event-bus.md)
-- [observer](./content/observer.md)
-- [singleton](./content/singleton.md)
+- [event-bus](./event-bus.md)
+- [index](./index.md)
+- [observer](./observer.md)
+- [singleton](./singleton.md)
