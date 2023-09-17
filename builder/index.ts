@@ -46,7 +46,7 @@ async function generateStaticWebsite(
         if (fileExt === ".md" && isMarkdown) {
           const markdownContent = await fs.readFile(filePath, "utf-8");
           const entryName = file.replace(/\.[^.]+$/, "");
-          const entryLink = `./${entryName}.md`;
+          const entryLink = `./content/${entryName}.md`;
 
           entryNames.push({ title: entryName, link: entryLink });
 
@@ -77,14 +77,16 @@ async function generateStaticWebsite(
 
   if (isMarkdown) {
     const globalReadmeContent = allContentWithSections.reduce((acc, entry) => {
-      if (!acc[entry.section]) {
-        acc[entry.section] = [];
+      if (entry.section) {
+        if (!acc[entry.section]) {
+          acc[entry.section] = [];
+        }
+        acc[entry.section].push(`- [${entry.title}](${entry.link})`);
       }
-      acc[entry.section].push(`- [${entry.title}](${entry.link})`);
       return acc;
     }, {} as Record<string, string[]>);
 
-    const globalReadmeOutputPath = path.join(outputFolder, "readme.md");
+    const globalReadmeOutputPath = path.join(outputFolder, "../readme.md");
     const sectionReadmes = generateSectionReadmes(globalReadmeContent);
 
     await fs.writeFile(globalReadmeOutputPath, sectionReadmes);
@@ -103,8 +105,8 @@ function generateSectionReadmes(
     .join("\n\n");
 }
 
-const rootContentFolder = path.join(__dirname, "content");
-const outputFolderMd = path.join(__dirname, "md");
+const rootContentFolder = path.join(__dirname, "../content");
+const outputFolderMd = path.join(__dirname, "../content");
 
 generateStaticWebsite(rootContentFolder, outputFolderMd, true)
   .then(() => console.log("Markdown static website generated successfully"))
