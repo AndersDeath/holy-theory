@@ -24,7 +24,25 @@ function generateSectionReadmes(
     .join("\n\n");
 }
 
-async function generateStaticWebsite(
+const generateGlobalReadmeMd = async (allContentWithSections, outputFolder) => {
+  const globalReadmeContent = allContentWithSections.reduce((acc, entry) => {
+    if (entry.section) {
+      if (!acc[entry.section]) {
+        acc[entry.section] = [];
+      }
+      acc[entry.section].push(`- [${entry.title}](${entry.link})`);
+    }
+    return acc;
+  }, {} as Record<string, string[]>);
+
+  const globalReadmeOutputPath = path.join(outputFolder, "../readme.md");
+  const sectionReadmes =
+    "# Holy Theory \n\n" + generateSectionReadmes(globalReadmeContent);
+
+  await fs.writeFile(globalReadmeOutputPath, sectionReadmes);
+};
+
+async function generateStaticMD(
   rootFolder: string,
   outputFolder: string,
   parseMd: any
@@ -64,7 +82,7 @@ async function generateStaticWebsite(
           await fs.writeFile(entryOutputPath, markdownContent);
 
           allContentWithSections.push({
-            title: metadata.title || sectionName + ' all',
+            title: metadata.title || sectionName + " all",
             link: `./content/${sectionName}/${entryName}.md`,
             section: sectionName,
           });
@@ -78,21 +96,7 @@ async function generateStaticWebsite(
     }
   }
 
-  const globalReadmeContent = allContentWithSections.reduce((acc, entry) => {
-    if (entry.section) {
-      if (!acc[entry.section]) {
-        acc[entry.section] = [];
-      }
-      acc[entry.section].push(`- [${entry.title}](${entry.link})`);
-    }
-    return acc;
-  }, {} as Record<string, string[]>);
-
-  const globalReadmeOutputPath = path.join(outputFolder, "../readme.md");
-  const sectionReadmes =
-    "# Holy Theory \n\n" + generateSectionReadmes(globalReadmeContent);
-
-  await fs.writeFile(globalReadmeOutputPath, sectionReadmes);
+  await generateGlobalReadmeMd(allContentWithSections, outputFolder);
 }
 
 export const mdBuilder = () => {
@@ -101,7 +105,7 @@ export const mdBuilder = () => {
     const rootContentFolder = path.join(__dirname, "../content");
     const outputFolderMd = path.join(__dirname, "../content");
 
-    generateStaticWebsite(rootContentFolder, outputFolderMd, parseMD)
+    generateStaticMD(rootContentFolder, outputFolderMd, parseMD)
       .then(() => console.log("Markdown static website generated successfully"))
       .catch((err) =>
         console.error("Error generating Markdown static website:", err)
