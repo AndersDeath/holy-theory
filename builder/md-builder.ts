@@ -24,6 +24,11 @@ function generateSectionReadmes(
     .join("\n\n");
 }
 
+
+function accumulateContent(){
+  
+}
+
 const generateGlobalReadmeMd = async (allContentWithSections, outputFolder) => {
   const globalReadmeContent = allContentWithSections.reduce((acc, entry) => {
     if (entry.section) {
@@ -64,9 +69,8 @@ async function generateStaticMD(
 
       for (const file of files) {
         const filePath = path.join(folderPath, file);
-        const fileExt = path.extname(file);
 
-        if (fileExt === ".md") {
+        if (path.extname(file) === ".md") {
           const markdownContent = await fs.readFile(filePath, "utf-8");
           const { metadata, content }: any = parseMd(markdownContent);
           const entryName = file.replace(/\.[^.]+$/, "");
