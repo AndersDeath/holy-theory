@@ -6,7 +6,7 @@
 - [Diffie hellman algorithm](./diffie-hellman.md)
 - [Graph adjacency list](./graph-adjacency-list.md)
 - [Graph adjacency matrix](./graph-adjacency-matrix.md)
-- [undefined](./index.md)
+- [algorithms all](./index.md)
 - [Insertion sort](./insertion-sort.md)
 - [Interpolation search](./interpolation-search.md)
 - [Merge sort](./merge-sort.md)

@@ -5,10 +5,13 @@ interface Entry {
   title: string;
   link: string;
   section?: string;
+  entryLink: string;
 }
 
 async function generateTableOfContents(entries: Entry[]): Promise<string> {
-  const listItems = entries.map((entry) => `- [${entry.title}](${entry.link})`);
+  const listItems = entries.map(
+    (entry) => `- [${entry.title}](${entry.entryLink})`
+  );
   return listItems.join("\n");
 }
 
@@ -24,10 +27,7 @@ function generateSectionReadmes(
     .join("\n\n");
 }
 
-
-function accumulateContent(){
-  
-}
+function accumulateContent() {}
 
 const generateGlobalReadmeMd = async (allContentWithSections, outputFolder) => {
   const globalReadmeContent = allContentWithSections.reduce((acc, entry) => {
@@ -65,8 +65,6 @@ async function generateStaticMD(
 
       const files = await fs.readdir(folderPath);
 
-      const entryNames: Entry[] = [];
-
       for (const file of files) {
         const filePath = path.join(folderPath, file);
 
@@ -75,8 +73,6 @@ async function generateStaticMD(
           const { metadata, content }: any = parseMd(markdownContent);
           const entryName = file.replace(/\.[^.]+$/, "");
           const entryLink = `./${entryName}.md`;
-
-          entryNames.push({ title: metadata.title, link: entryLink });
 
           const entryOutputPath = path.join(
             sectionOutputFolder,
@@ -88,12 +84,15 @@ async function generateStaticMD(
           allContentWithSections.push({
             title: metadata.title || sectionName + " all",
             link: `./content/${sectionName}/${entryName}.md`,
+            entryLink: entryLink,
             section: sectionName,
           });
         }
       }
 
-      const sectionContent = await generateTableOfContents(entryNames);
+      const sectionContent = await generateTableOfContents(
+        allContentWithSections
+      );
       const sectionIndexOutputPath = path.join(sectionOutputFolder, "index.md");
 
       await fs.writeFile(sectionIndexOutputPath, sectionContent);
