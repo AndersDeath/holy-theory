@@ -18,8 +18,7 @@ async function generateTableOfContents(entries: Entry[]): Promise<string> {
 function generateSectionReadmes(
   contentBySection: Record<string, string[]>
 ): string {
-  const sections = Object.keys(contentBySection);
-  return sections
+  return Object.keys(contentBySection)
     .map((section) => {
       const sectionContent = contentBySection[section].join("\n");
       return `## ${section}\n\n${sectionContent}`;
