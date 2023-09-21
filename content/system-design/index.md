@@ -85,4 +85,5 @@
 - [Architectural characteristics](./25-architectual-characteristics.md)
 - [Common anti-patterns in microservices architecture](./26-antipatterns-microservices.md)
 - [What does API gateway do?](./27-what-does-api-gateway-do.md)
+- [How is NoSQL database different from SQL databases?](./28-how-is-osqk-database-different-from-sql-databases.md)
 - [system-design all](./index.md)

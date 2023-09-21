@@ -4,6 +4,7 @@ All notable changes to this project will be documented in this file.
 
 # [0.0.37] - In Progress
 * update builder.js
+* add How is NoSQL database different from SQL databases? question
 # [0.0.36] - 2023-09-18
 * add git + gitflow question
 * update builder.js
