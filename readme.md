@@ -107,7 +107,8 @@
 - [Architectural characteristics](./content/system-design/25-architectual-characteristics.md)
 - [Common anti-patterns in microservices architecture](./content/system-design/26-antipatterns-microservices.md)
 - [What does API gateway do?](./content/system-design/27-what-does-api-gateway-do.md)
-- [How is NoSQL database different from SQL databases?](./content/system-design/28-how-is-osqk-database-different-from-sql-databases.md)
+- [How is NoSQL database different from SQL databases?](./content/system-design/28-how-is-nosql-database-different-from-sql-databases.md)
+- [How Would You Design an API for Third-Party Developers?](./content/system-design/29-how-would-you-design-an-api-for-third-party-developers.md)
 - [system-design all](./content/system-design/index.md)
 
 ## testing
