@@ -1,29 +1,12 @@
 import * as fs from "fs-extra";
 import * as path from "path";
+import { buildHeader, buildLink, buildList } from "./ui";
 
 interface Entry {
   title: string;
   link: string;
   section?: string;
   entryLink: string;
-}
-
-function buildLink(title: string, href: string, type: string) {
-  if (type === "md") return `[${title}](${href})`;
-  if (type === "html") return `<a href="${href}">${title}</a>`;
-  return "";
-}
-
-function buildList(content, type: string) {
-  if (type === "md") return `- ${content}`;
-  if (type === "html") return `<li>${content}</li>`;
-  return "";
-}
-
-function buildHeader(content, level: number, type: string) {
-  if (type === "md") return Array(level).fill("#") + " " + content;
-  if (type === "html") return `<h${level}>${content}</h${level}>`;
-  return "";
 }
 
 async function generateTableOfContents(entries: Entry[]): Promise<string> {
