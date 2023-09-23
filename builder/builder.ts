@@ -8,6 +8,24 @@ interface Entry {
   entryLink: string;
 }
 
+function buildLink(title: string, href: string, type: string) {
+  if (type === "md") return `[${title}](${href})`;
+  if (type === "html") return `<a href="${href}">${title}</a>`;
+  return "";
+}
+
+function buildList(content, type: string) {
+  if (type === "md") return `- ${content}`;
+  if (type === "html") return `<li>${content}</li>`;
+  return "";
+}
+
+function buildHeader(content, level: number, type: string) {
+  if (type === "md") return Array(level).fill("#") + " " + content;
+  if (type === "html") return `<h${level}>${content}</h${level}>`;
+  return "";
+}
+
 async function generateTableOfContents(entries: Entry[]): Promise<string> {
   const listItems = entries.map(
     (entry) => `- [${entry.title}](${entry.entryLink})`
@@ -16,34 +34,42 @@ async function generateTableOfContents(entries: Entry[]): Promise<string> {
 }
 
 function generateSectionReadmes(
-  contentBySection: Record<string, string[]>
+  contentBySection: Record<string, string[]>,
+  type = "md"
 ): string {
   return Object.keys(contentBySection)
     .map((section) => {
       const sectionContent = contentBySection[section].join("\n");
-      return `## ${section}\n\n${sectionContent}`;
+      return `${buildHeader(section, 2, type)}\n\n${sectionContent}`;
     })
     .join("\n\n");
 }
 
 function accumulateContent() {}
 
-const generateGlobalReadmeMd = async (allContentWithSections, outputFolder) => {
+const generateGlobalIndex = async (
+  allContentWithSections,
+  outputPath,
+  type = "md"
+) => {
   const globalReadmeContent = allContentWithSections.reduce((acc, entry) => {
     if (entry.section) {
       if (!acc[entry.section]) {
         acc[entry.section] = [];
       }
-      acc[entry.section].push(`- [${entry.title}](${entry.link})`);
+      acc[entry.section].push(
+        buildList(buildLink(entry.title, entry.link, type), type)
+      );
     }
     return acc;
   }, {} as Record<string, string[]>);
 
-  const globalReadmeOutputPath = path.join(outputFolder, "../readme.md");
   const sectionReadmes =
-    "# Holy Theory \n\n" + generateSectionReadmes(globalReadmeContent);
+    buildHeader("Holy Theory", 1, type) +
+    "\n\n" +
+    generateSectionReadmes(globalReadmeContent, type);
 
-  await fs.writeFile(globalReadmeOutputPath, sectionReadmes);
+  await fs.writeFile(outputPath, sectionReadmes);
 };
 
 async function generateStaticMD(
@@ -100,7 +126,18 @@ async function generateStaticMD(
     }
   }
 
-  await generateGlobalReadmeMd(allContentWithSections, outputFolder);
+  if (type === "md")
+    await generateGlobalIndex(
+      allContentWithSections,
+      path.join(outputFolder, "../readme.md"),
+      "md"
+    );
+  if (type === "html")
+    await generateGlobalIndex(
+      allContentWithSections,
+      path.join(outputFolder, "index.html"),
+      "html"
+    );
 }
 
 export const Builder = (type: string) => {
@@ -108,7 +145,10 @@ export const Builder = (type: string) => {
     const parseMD = module.default;
     const rootContentFolder = path.join(__dirname, "../content");
 
-    const outputFolder = type === 'md' ? path.join(__dirname, "../content"): path.join(__dirname, "../static");
+    const outputFolder =
+      type === "md"
+        ? path.join(__dirname, "../content")
+        : path.join(__dirname, "../static");
 
     generateStaticMD(rootContentFolder, outputFolder, parseMD, type)
       .then(() =>
