@@ -90,8 +90,9 @@ async function generateStaticMD(
       }
 
       const sectionContent = await generateTableOfContents(
-        allContentWithSections
+        allContentWithSections.filter((e: Entry) => e.section === sectionName)
       );
+      console.log(sectionContent);
       const sectionIndexOutputPath = path.join(sectionOutputFolder, "index.md");
 
       await fs.writeFile(sectionIndexOutputPath, sectionContent);
