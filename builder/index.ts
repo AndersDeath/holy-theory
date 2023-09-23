@@ -1,3 +1,5 @@
-import { mdBuilder } from "./md-builder";
+import { Builder } from "./builder";
 
-mdBuilder();
+// Builder('md');
+
+Builder('html');

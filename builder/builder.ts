@@ -49,7 +49,8 @@ const generateGlobalReadmeMd = async (allContentWithSections, outputFolder) => {
 async function generateStaticMD(
   rootFolder: string,
   outputFolder: string,
-  parseMd: any
+  parseMd: any,
+  type = "md"
 ): Promise<void> {
   const folders = await fs.readdir(rootFolder);
 
@@ -92,7 +93,7 @@ async function generateStaticMD(
       const sectionContent = await generateTableOfContents(
         allContentWithSections.filter((e: Entry) => e.section === sectionName)
       );
-      console.log(sectionContent);
+
       const sectionIndexOutputPath = path.join(sectionOutputFolder, "index.md");
 
       await fs.writeFile(sectionIndexOutputPath, sectionContent);
@@ -102,16 +103,28 @@ async function generateStaticMD(
   await generateGlobalReadmeMd(allContentWithSections, outputFolder);
 }
 
-export const mdBuilder = () => {
+export const Builder = (type: string) => {
   import("parse-md").then((module) => {
     const parseMD = module.default;
     const rootContentFolder = path.join(__dirname, "../content");
-    const outputFolderMd = path.join(__dirname, "../content");
 
-    generateStaticMD(rootContentFolder, outputFolderMd, parseMD)
-      .then(() => console.log("Markdown static website generated successfully"))
+    const outputFolder = type === 'md' ? path.join(__dirname, "../content"): path.join(__dirname, "../static");
+
+    generateStaticMD(rootContentFolder, outputFolder, parseMD, type)
+      .then(() =>
+        console.log(
+          `${
+            type === "md" ? "Markdown" : "HTML"
+          } static website generated successfully`
+        )
+      )
       .catch((err) =>
-        console.error("Error generating Markdown static website:", err)
+        console.error(
+          `Error generating ${
+            type === "md" ? "Markdown" : "HTML"
+          } static website:`,
+          err
+        )
       );
   });
 };
