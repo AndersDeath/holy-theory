@@ -22,7 +22,11 @@ function generateSectionReadmes(
 ): string {
   return Object.keys(contentBySection)
     .map((section) => {
-      const sectionContent = contentBySection[section].join("\n");
+      let sectionContent = contentBySection[section].join("\n");
+
+      if(type === 'html') {
+        sectionContent = `<ul>${sectionContent}</ul>`
+      }
       return `${buildHeader(section, 2, type)}\n\n${sectionContent}`;
     })
     .join("\n\n");
