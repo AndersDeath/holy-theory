@@ -1,6 +1,6 @@
 import * as fs from "fs-extra";
 import * as path from "path";
-import { buildHeader, buildLink, buildList } from "./ui";
+import { buildHeader, buildLink, buildList, htmlPageWrapper } from "./ui";
 
 interface Entry {
   title: string;
@@ -28,8 +28,6 @@ function generateSectionReadmes(
     .join("\n\n");
 }
 
-function accumulateContent() {}
-
 const generateGlobalIndex = async (
   allContentWithSections,
   outputPath,
@@ -47,11 +45,14 @@ const generateGlobalIndex = async (
     return acc;
   }, {} as Record<string, string[]>);
 
-  const sectionReadmes =
+  let sectionReadmes =
     buildHeader("Holy Theory", 1, type) +
     "\n\n" +
     generateSectionReadmes(globalReadmeContent, type);
 
+  if (type === "html") {
+    sectionReadmes = htmlPageWrapper(sectionReadmes);
+  }
   await fs.writeFile(outputPath, sectionReadmes);
 };
 
