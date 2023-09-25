@@ -1,6 +1,8 @@
 import * as fs from "fs-extra";
 import * as path from "path";
 import { buildHeader, buildLink, buildList, htmlPageWrapper } from "./ui";
+import { marked } from "./libs/marked";
+import { cleanContent } from "./libs/utils";
 
 interface Entry {
   title: string;
@@ -24,8 +26,8 @@ function generateSectionReadmes(
     .map((section) => {
       let sectionContent = contentBySection[section].join("\n");
 
-      if(type === 'html') {
-        sectionContent = `<ul>${sectionContent}</ul>`
+      if (type === "html") {
+        sectionContent = `<ul>${sectionContent}</ul>`;
       }
       return `${buildHeader(section, 2, type)}\n\n${sectionContent}`;
     })
@@ -85,19 +87,32 @@ async function generateStaticMD(
         if (path.extname(file) === ".md") {
           const markdownContent = await fs.readFile(filePath, "utf-8");
           const { metadata, content }: any = parseMd(markdownContent);
+
           const entryName = file.replace(/\.[^.]+$/, "");
-          const entryLink = `./${entryName}.md`;
+          const entryLink = `./${entryName}.` + type;
 
           const entryOutputPath = path.join(
             sectionOutputFolder,
-            `${entryName}.md`
+            `${entryName}.${type}`
           );
 
-          await fs.writeFile(entryOutputPath, markdownContent);
+          if (type === "md") {
+            await fs.writeFile(entryOutputPath, markdownContent);
+          }
+
+          if (type === "html") {
+            await fs.writeFile(
+              entryOutputPath,
+              htmlPageWrapper(marked.parse(cleanContent(content)))
+            );
+          }
 
           allContentWithSections.push({
             title: metadata.title || sectionName + " all",
-            link: `./content/${sectionName}/${entryName}.md`,
+            link:
+              type === "md"
+                ? `./content/${sectionName}/${entryName}.${type}`
+                : `./${sectionName}/${entryName}.${type}`,
             entryLink: entryLink,
             section: sectionName,
           });
