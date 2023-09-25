@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file.
 * update builder.js
 * add How is NoSQL database different from SQL databases? question
 * add How Would You Design an API for Third-Party Developers? question
+* create the alpha of builder.js html generator
 # [0.0.36] - 2023-09-18
 * add git + gitflow question
 * update builder.js
