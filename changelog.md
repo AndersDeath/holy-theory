@@ -2,7 +2,8 @@
 
 All notable changes to this project will be documented in this file.
 # [0.0.38] - In Progress
-* 
+* add static html vertion
+* update builer.js html generation part
 # [0.0.37] - 2023-09-25
 * update builder.js
 * add How is NoSQL database different from SQL databases? question
