@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Holy Theory</title>
+  </head>
+  <body>
+      <h1 id="merge-sort">Merge sort</h1>
+<h2 id="java">Java</h2>
+<pre><code class="hljs language-java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {
+    
+    <span class="hljs-keyword">void</span> <span class="hljs-title function_">merge</span><span class="hljs-params">(<span class="hljs-type">int</span>[] arr, <span class="hljs-type">int</span> low, <span class="hljs-type">int</span> mid, <span class="hljs-type">int</span> high)</span> {
+        <span class="hljs-type">int</span> <span class="hljs-variable">subArr1Size</span> <span class="hljs-operator">=</span> mid - low + <span class="hljs-number">1</span>;
+        <span class="hljs-type">int</span> <span class="hljs-variable">subArr2Size</span> <span class="hljs-operator">=</span> high - mid;
+        
+        <span class="hljs-type">int</span> [] subArr1 = <span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[subArr1Size];
+        <span class="hljs-type">int</span> [] subArr2 = <span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[subArr2Size];
+        
+        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt; subArr1Size; i++) {
+           subArr1[i] = arr[low + i];
+           }
+           <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt; subArr2Size; i++) {
+           subArr2[i] = arr[mid + <span class="hljs-number">1</span> + i];	
+        }
+        <span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>, j = <span class="hljs-number">0</span>, k = low;
+        
+        <span class="hljs-keyword">while</span>(i &lt; subArr1Size &amp;&amp; j &lt; subArr2Size) {
+            <span class="hljs-keyword">if</span>(subArr1[i] &lt;= subArr2[j]) {
+                arr[k] = subArr1[i];
+                i++;
+            } <span class="hljs-keyword">else</span> {
+                arr[k] = subArr2[j];
+                j++;
+            }
+            k++;
+        }
+        <span class="hljs-keyword">while</span>(i &lt; subArr1Size) {
+            arr[k++] = subArr1[i++];
+        }
+        <span class="hljs-keyword">while</span> (j &lt; subArr2Size) {
+           arr[k++] = subArr2[j++];
+       }
+    }
+    
+    <span class="hljs-keyword">void</span> <span class="hljs-title function_">mergesort</span><span class="hljs-params">(<span class="hljs-type">int</span>[] arr, <span class="hljs-type">int</span> low, <span class="hljs-type">int</span> high)</span>{
+        <span class="hljs-keyword">if</span>(high &gt; low) {
+            <span class="hljs-type">int</span> <span class="hljs-variable">mid</span> <span class="hljs-operator">=</span> (high + low) / <span class="hljs-number">2</span>;
+            mergesort(arr, low, mid);
+            mergesort(arr, mid + <span class="hljs-number">1</span>, high);
+            merge(arr, low, mid, high);
+        }	
+    }
+    
+    <span class="hljs-keyword">void</span> <span class="hljs-title function_">mergeSort</span> <span class="hljs-params">(<span class="hljs-type">int</span>[] arr)</span> {
+        <span class="hljs-type">int</span> <span class="hljs-variable">n</span> <span class="hljs-operator">=</span> arr.length;
+        mergesort(arr, <span class="hljs-number">0</span>, n - <span class="hljs-number">1</span>);
+    }
+}
+</code></pre>
+  </body>
+  </html>

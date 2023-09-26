@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Holy Theory</title>
+  </head>
+  <body>
+      <h1 id="merge-sorted-array">Merge Sorted Array</h1>
+<pre><code class="hljs language-typescript"><span class="hljs-comment">/**
+ Do not return anything, modify nums1 in-place instead.
+ */</span>
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">merge</span>(<span class="hljs-params">nums1: <span class="hljs-built_in">number</span>[], m: <span class="hljs-built_in">number</span>, nums2: <span class="hljs-built_in">number</span>[], n: <span class="hljs-built_in">number</span></span>): <span class="hljs-built_in">void</span> {
+    <span class="hljs-keyword">let</span> j = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt;= nums1.<span class="hljs-property">length</span>; i++) {
+        <span class="hljs-keyword">if</span>(nums1[i] === <span class="hljs-number">0</span> &amp;&amp; nums2[j] !== <span class="hljs-literal">undefined</span>) {
+            nums1[i] = nums2[j];
+            j++;
+        }
+    }
+    nums1.<span class="hljs-title function_">sort</span>(<span class="hljs-function">(<span class="hljs-params">a, b</span>) =&gt;</span>  a - b);
+
+};
+</code></pre><p>The function <code>merge</code> is intended to merge two sorted arrays <code>nums1</code> and <code>nums2</code> into the first array <code>nums1</code>. Here&#39;s an explanation of how the function works:</p>
+<ol>
+<li><p>Initialize a variable <code>j</code> to keep track of the index of the elements in <code>nums2</code>.</p>
+</li>
+<li><p>Iterate through each element of the array <code>nums1</code> using a for loop. We iterate up to <code>nums1.length</code> because the array contains both the merged elements and additional zeros.</p>
+</li>
+<li><p>Check if the current element <code>nums1[i]</code> is <code>0</code> and if there are remaining elements in <code>nums2</code> (i.e., <code>nums2[j] !== undefined</code>).</p>
+</li>
+<li><p>If the condition is satisfied, update the value of <code>nums1[i]</code> with the next element from <code>nums2</code> (i.e., <code>nums2[j]</code>), and increment <code>j</code> to move to the next element in <code>nums2</code>.</p>
+</li>
+<li><p>After iterating through the entire array <code>nums1</code>, sort the array in ascending order using the <code>sort</code> method and a comparison function <code>(a, b) =&gt; a - b</code>.</p>
+</li>
+</ol>
+<p>The goal of this function is to merge the elements from <code>nums2</code> into <code>nums1</code> while ensuring that the merged array remains sorted.</p>
+<p><strong>Note:</strong> The initial array lengths <code>m</code> and <code>n</code> are provided to indicate the valid elements in <code>nums1</code> and <code>nums2</code> respectively.</p>
+<p><strong>Techniques Used:</strong></p>
+<ol>
+<li><p><strong>Array Manipulation:</strong> The function modifies the elements of the <code>nums1</code> array in place by replacing <code>0</code> elements with the elements from <code>nums2</code>.</p>
+</li>
+<li><p><strong>Sorting:</strong> The function sorts the merged <code>nums1</code> array after performing the merging operation.</p>
+</li>
+</ol>
+<p><strong>Summary:</strong></p>
+<p>The <code>merge</code> function takes two sorted arrays <code>nums1</code> and <code>nums2</code>, and it merges the elements from <code>nums2</code> into <code>nums1</code> while maintaining the sorted order. The function achieves this by iterating through <code>nums1</code> and <code>nums2</code>, updating elements in <code>nums1</code>, and then sorting the merged array.</p>
+
+  </body>
+  </html>

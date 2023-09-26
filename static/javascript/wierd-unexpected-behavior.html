@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Holy Theory</title>
+  </head>
+  <body>
+      <h1 id="weird-and-unexpected-behavior-of-javascript">Weird and unexpected behavior of JavaScript</h1>
+<p>JavaScript is a versatile and powerful programming language, but it has its fair share of quirks and behaviors that can be considered weird or unexpected. Here are more examples:</p>
+<ol>
+<li><p><strong>Type Coercion</strong>: JavaScript&#39;s loose typing system can lead to unexpected results when different types are used together:</p>
+<pre><code class="hljs language-javascript"><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-number">1</span> + <span class="hljs-string">&quot;1&quot;</span>); <span class="hljs-comment">// &quot;11&quot;</span>
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-literal">true</span> + <span class="hljs-number">1</span>); <span class="hljs-comment">// 2</span>
+</code></pre></li>
+<li><p><strong>NaN</strong>: The special value <code>NaN</code> can be perplexing:</p>
+<pre><code class="hljs language-javascript"><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-keyword">typeof</span> <span class="hljs-title class_">NaN</span>); <span class="hljs-comment">// &quot;number&quot;</span>
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-title class_">NaN</span> === <span class="hljs-title class_">NaN</span>); <span class="hljs-comment">// false</span>
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-number">1</span> + <span class="hljs-title class_">NaN</span>); <span class="hljs-comment">// NaN</span>
+</code></pre></li>
+<li><p><strong>Truthy and Falsy Values</strong>: JavaScript&#39;s concept of truthy and falsy values can lead to surprises:</p>
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">if</span> (<span class="hljs-string">&quot;false&quot;</span>) {
+  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&quot;This will be executed.&quot;</span>); <span class="hljs-comment">// This will be executed.</span>
+}
+
+<span class="hljs-keyword">if</span> (<span class="hljs-number">0</span>) {
+  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&quot;This will not be executed.&quot;</span>);
+}
+
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-title class_">Boolean</span>(<span class="hljs-string">&quot;&quot;</span>)); <span class="hljs-comment">// false</span>
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-title class_">Boolean</span>(<span class="hljs-number">0</span>)); <span class="hljs-comment">// false</span>
+</code></pre></li>
+<li><p><strong>Hoisting</strong>: JavaScript hoists variable and function declarations, which can lead to seemingly unusual behavior:</p>
+<pre><code class="hljs language-javascript"><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(x); <span class="hljs-comment">// undefined</span>
+<span class="hljs-keyword">var</span> x = <span class="hljs-number">5</span>;
+</code></pre></li>
+<li><p><strong>Closures</strong>: Closures can cause inner functions to access outer function variables even after the outer function has completed:</p>
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">outer</span>(<span class="hljs-params"></span>) {
+  <span class="hljs-keyword">var</span> x = <span class="hljs-number">10</span>;
+
+  <span class="hljs-keyword">function</span> <span class="hljs-title function_">inner</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(x);
+  }
+
+  <span class="hljs-keyword">return</span> inner;
+}
+
+<span class="hljs-keyword">var</span> closureFunc = <span class="hljs-title function_">outer</span>();
+<span class="hljs-title function_">closureFunc</span>(); <span class="hljs-comment">// Outputs 10</span>
+</code></pre></li>
+<li><p><strong>NaN Equality</strong>: NaN does not equal itself, making NaN comparisons tricky:</p>
+<pre><code class="hljs language-javascript"><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-title class_">NaN</span> == <span class="hljs-title class_">NaN</span>); <span class="hljs-comment">// false</span>
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-built_in">isNaN</span>(<span class="hljs-title class_">NaN</span>)); <span class="hljs-comment">// true</span>
+</code></pre></li>
+<li><p><strong>Automatic Semicolon Insertion (ASI)</strong>: JavaScript inserts semicolons in certain situations, affecting code behavior:</p>
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">example</span>(<span class="hljs-params"></span>) {
+  <span class="hljs-keyword">return</span>;
+  {
+    <span class="hljs-attr">value</span>: <span class="hljs-number">42</span>;
+  }
+}
+
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-title function_">example</span>()); <span class="hljs-comment">// undefined</span>
+</code></pre></li>
+<li><p><strong>Variable Declarations Without var/let/const</strong>: Missing variable declarations can lead to global scope pollution:</p>
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">noVarDeclaration</span>(<span class="hljs-params"></span>) {
+  x = <span class="hljs-number">20</span>; <span class="hljs-comment">// This becomes a global variable!</span>
+}
+
+<span class="hljs-title function_">noVarDeclaration</span>();
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(x); <span class="hljs-comment">// 20</span>
+</code></pre></li>
+</ol>
+<p>These examples highlight some of the idiosyncrasies of JavaScript. Understanding these quirks is crucial for writing reliable and predictable JavaScript code.</p>
+<ul>
+<li><a href="../readme.md">Go back</a></li>
+</ul>
+
+  </body>
+  </html>

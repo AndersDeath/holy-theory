@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Holy Theory</title>
+  </head>
+  <body>
+      <h1 id="inventory-update">Inventory update</h1>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">updateInventory</span>(<span class="hljs-params">arr1: <span class="hljs-built_in">any</span>, arr2: <span class="hljs-built_in">any</span></span>) {
+  <span class="hljs-keyword">const</span> inventory = [...arr1]
+
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; arr2.<span class="hljs-property">length</span>; i++) {
+    <span class="hljs-keyword">const</span> item = arr2[i][<span class="hljs-number">1</span>];
+    <span class="hljs-keyword">const</span> quantity = arr2[i][<span class="hljs-number">0</span>];
+
+    <span class="hljs-keyword">const</span> position = inventory.<span class="hljs-title function_">indexOf</span>(item);
+
+    <span class="hljs-keyword">if</span> (position !== -<span class="hljs-number">1</span>) {
+      <span class="hljs-keyword">const</span> row = <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">floor</span>(position / <span class="hljs-number">2</span>);
+      arr1[row][<span class="hljs-number">0</span>] += quantity;
+      <span class="hljs-keyword">continue</span>;
+    }
+
+    arr1.<span class="hljs-title function_">push</span>([quantity, item]);
+  }
+
+  arr1.<span class="hljs-title function_">sort</span>(<span class="hljs-function">(<span class="hljs-params">previous: <span class="hljs-built_in">any</span>, next: <span class="hljs-built_in">any</span></span>) =&gt;</span> (previous[<span class="hljs-number">1</span>] &gt; [next[<span class="hljs-number">1</span>]] ? <span class="hljs-number">1</span> : -<span class="hljs-number">1</span>));
+
+  <span class="hljs-keyword">return</span> arr1;
+}
+
+<span class="hljs-keyword">var</span> curInv = [
+  [<span class="hljs-number">21</span>, <span class="hljs-string">&quot;Bowling Ball&quot;</span>],
+  [<span class="hljs-number">2</span>, <span class="hljs-string">&quot;Dirty Sock&quot;</span>],
+  [<span class="hljs-number">1</span>, <span class="hljs-string">&quot;Hair Pin&quot;</span>],
+  [<span class="hljs-number">5</span>, <span class="hljs-string">&quot;Microphone&quot;</span>],
+];
+
+<span class="hljs-keyword">var</span> newInv = [
+  [<span class="hljs-number">2</span>, <span class="hljs-string">&quot;Hair Pin&quot;</span>],
+  [<span class="hljs-number">3</span>, <span class="hljs-string">&quot;Half-Eaten Apple&quot;</span>],
+  [<span class="hljs-number">67</span>, <span class="hljs-string">&quot;Bowling Ball&quot;</span>],
+  [<span class="hljs-number">7</span>, <span class="hljs-string">&quot;Toothpaste&quot;</span>],
+];
+<span class="hljs-keyword">const</span> result =  <span class="hljs-title function_">updateInventory</span>(curInv, newInv);
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(result)
+</code></pre><p>The code is a TypeScript function that updates the inventory based on two arrays: <code>curInv</code> and <code>newInv</code>. The inventory is represented as an array of arrays, where each inner array contains the quantity and name of an item.</p>
+<p>Here&#39;s a step-by-step explanation of the code:</p>
+<ol>
+<li><p>The function <code>updateInventory</code> takes two parameters: <code>arr1</code> (current inventory) and <code>arr2</code> (new inventory to be added or updated).</p>
+</li>
+<li><p>A copy of the current inventory, named <code>inventory</code>, is created using the spread operator <code>...arr1</code>.</p>
+</li>
+<li><p>The code then iterates through each item in the new inventory array <code>arr2</code> using a <code>for</code> loop:</p>
+<ul>
+<li>For each item, the quantity (<code>quantity</code>) and name (<code>item</code>) are extracted from the inner array.</li>
+<li>The <code>indexOf</code> method is used to find the position of the <code>item</code> in the <code>inventory</code> array.</li>
+</ul>
+</li>
+<li><p>If the <code>item</code> is found in the <code>inventory</code> array (<code>position !== -1</code>), the existing quantity for that item is updated by adding the <code>quantity</code> to the existing quantity.</p>
+<ul>
+<li>The row index of the found item is calculated by dividing the <code>position</code> by 2 and taking the floor value.</li>
+<li>The <code>arr1[row][0]</code> (quantity) is updated with the new quantity.</li>
+</ul>
+</li>
+<li><p>If the <code>item</code> is not found in the <code>inventory</code> array, a new inner array <code>[quantity, item]</code> is added to the <code>inventory</code> array.</p>
+</li>
+<li><p>After processing all items in <code>arr2</code>, the <code>inventory</code> array is sorted based on the item name using the <code>sort</code> method and a comparison function.</p>
+<ul>
+<li>The comparison function compares the names of two items and returns 1 if the first item&#39;s name is greater than the second item&#39;s name, otherwise -1.</li>
+</ul>
+</li>
+<li><p>The updated <code>inventory</code> is returned as the final result.</p>
+</li>
+<li><p>The provided <code>curInv</code> and <code>newInv</code> arrays are used as test cases, and the <code>updateInventory</code> function is called with these arrays.</p>
+</li>
+<li><p>The resulting updated inventory is logged to the console.</p>
+</li>
+</ol>
+<p>Techniques used in this code include:</p>
+<ul>
+<li>Creating a copy of an array using the spread operator.</li>
+<li>Iterating through arrays using <code>for</code> loops.</li>
+<li>Finding the index of an element in an array using <code>indexOf</code>.</li>
+<li>Updating elements in a multi-dimensional array.</li>
+<li>Sorting an array using the <code>sort</code> method with a custom comparison function.</li>
+</ul>
+<p>Overall, this algorithm efficiently updates and merges two inventories while ensuring that duplicate items are consolidated and the final inventory is sorted by item name.</p>
+
+  </body>
+  </html>

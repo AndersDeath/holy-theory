@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Holy Theory</title>
+  </head>
+  <body>
+      <h1 id="keyboard-row">Keyboard Row</h1>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">findWords</span>(<span class="hljs-params">words: <span class="hljs-built_in">string</span>[]</span>): <span class="hljs-built_in">string</span>[] {
+    <span class="hljs-keyword">const</span> <span class="hljs-attr">rowMap</span>: <span class="hljs-title class_">Map</span>&lt;<span class="hljs-built_in">string</span>, <span class="hljs-built_in">number</span>&gt; = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Map</span>([
+[<span class="hljs-string">&#x27;Q&#x27;</span>, <span class="hljs-number">1</span>], [<span class="hljs-string">&#x27;W&#x27;</span>, <span class="hljs-number">1</span>], [<span class="hljs-string">&#x27;E&#x27;</span>, <span class="hljs-number">1</span>], [<span class="hljs-string">&#x27;R&#x27;</span>, <span class="hljs-number">1</span>], [<span class="hljs-string">&#x27;T&#x27;</span>, <span class="hljs-number">1</span>], [<span class="hljs-string">&#x27;Y&#x27;</span>, <span class="hljs-number">1</span>], [<span class="hljs-string">&#x27;U&#x27;</span>, <span class="hljs-number">1</span>], [<span class="hljs-string">&#x27;I&#x27;</span>, <span class="hljs-number">1</span>], [<span class="hljs-string">&#x27;O&#x27;</span>, <span class="hljs-number">1</span>], [<span class="hljs-string">&#x27;P&#x27;</span>, <span class="hljs-number">1</span>], [<span class="hljs-string">&#x27;A&#x27;</span>, <span class="hljs-number">2</span>], [<span class="hljs-string">&#x27;S&#x27;</span>, <span class="hljs-number">2</span>], [<span class="hljs-string">&#x27;D&#x27;</span>, <span class="hljs-number">2</span>], [<span class="hljs-string">&#x27;F&#x27;</span>, <span class="hljs-number">2</span>], [<span class="hljs-string">&#x27;G&#x27;</span>, <span class="hljs-number">2</span>], [<span class="hljs-string">&#x27;H&#x27;</span>, <span class="hljs-number">2</span>], [<span class="hljs-string">&#x27;J&#x27;</span>, <span class="hljs-number">2</span>], [<span class="hljs-string">&#x27;K&#x27;</span>, <span class="hljs-number">2</span>], [<span class="hljs-string">&#x27;L&#x27;</span>, <span class="hljs-number">2</span>], [<span class="hljs-string">&#x27;Z&#x27;</span>, <span class="hljs-number">3</span>], [<span class="hljs-string">&#x27;X&#x27;</span>, <span class="hljs-number">3</span>], [<span class="hljs-string">&#x27;C&#x27;</span>, <span class="hljs-number">3</span>], [<span class="hljs-string">&#x27;V&#x27;</span>, <span class="hljs-number">3</span>], [<span class="hljs-string">&#x27;B&#x27;</span>, <span class="hljs-number">3</span>], [<span class="hljs-string">&#x27;N&#x27;</span>, <span class="hljs-number">3</span>], [<span class="hljs-string">&#x27;M&#x27;</span>, <span class="hljs-number">3</span>]
+    ]);
+
+    <span class="hljs-keyword">const</span> <span class="hljs-attr">result</span>: <span class="hljs-built_in">string</span>[] = [];
+
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">const</span> word <span class="hljs-keyword">of</span> words) {
+        <span class="hljs-keyword">if</span> (<span class="hljs-title function_">isInSameRow</span>(word.<span class="hljs-title function_">toUpperCase</span>(), rowMap)) {
+            result.<span class="hljs-title function_">push</span>(word);
+        }
+    }
+
+    <span class="hljs-keyword">return</span> result;
+}
+
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">isInSameRow</span>(<span class="hljs-params">word: <span class="hljs-built_in">string</span>, rowMap: <span class="hljs-built_in">Map</span>&lt;<span class="hljs-built_in">string</span>, <span class="hljs-built_in">number</span>&gt;</span>): <span class="hljs-built_in">boolean</span> {
+    <span class="hljs-keyword">if</span> (word.<span class="hljs-property">length</span> &lt;= <span class="hljs-number">1</span>) {
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+    }
+
+    <span class="hljs-keyword">const</span> <span class="hljs-attr">rowNumber</span>: <span class="hljs-built_in">number</span> = rowMap.<span class="hljs-title function_">get</span>(word[<span class="hljs-number">0</span>]) || <span class="hljs-number">0</span>;
+
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">1</span>; i &lt; word.<span class="hljs-property">length</span>; i++) {
+        <span class="hljs-keyword">const</span> <span class="hljs-attr">currentChar</span>: <span class="hljs-built_in">string</span> = word[i];
+        <span class="hljs-keyword">const</span> <span class="hljs-attr">currentRowNumber</span>: <span class="hljs-built_in">number</span> = rowMap.<span class="hljs-title function_">get</span>(currentChar) || <span class="hljs-number">0</span>;
+
+        <span class="hljs-keyword">if</span> (currentRowNumber !== rowNumber) {
+            <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+        }
+    }
+
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+}
+</code></pre><p>The code is a TypeScript function that takes an array of words and returns an array of words that can be typed using only one row of a keyboard. The function checks if the characters of each word are all located in the same row of the keyboard.</p>
+<p>Here&#39;s a step-by-step explanation of the code:</p>
+<ol>
+<li><p>The <code>findWords</code> function takes an array of <code>words</code> as a parameter.</p>
+</li>
+<li><p>It initializes a <code>rowMap</code> using a <code>Map</code> data structure. Each key in the map represents a character, and the corresponding value represents the row number on the keyboard where the character is located.</p>
+</li>
+<li><p>It initializes an empty array called <code>result</code> to store the words that can be typed using a single row of the keyboard.</p>
+</li>
+<li><p>The function uses a <code>for...of</code> loop to iterate through each <code>word</code> in the input <code>words</code> array.</p>
+</li>
+<li><p>Inside the loop, it calls the <code>isInSameRow</code> function with the uppercase version of the current <code>word</code> and the <code>rowMap</code>.</p>
+</li>
+<li><p>If the <code>isInSameRow</code> function returns <code>true</code> for the current <code>word</code>, it means that all characters in the word can be typed using the same row of the keyboard. Therefore, the <code>word</code> is added to the <code>result</code> array.</p>
+</li>
+<li><p>After iterating through all words, the function returns the <code>result</code> array.</p>
+</li>
+<li><p>The <code>isInSameRow</code> function takes a <code>word</code> and the <code>rowMap</code> as parameters.</p>
+</li>
+<li><p>If the length of the <code>word</code> is less than or equal to 1, the function immediately returns <code>true</code> because a word with one or zero characters can be typed using a single row.</p>
+</li>
+<li><p>The function retrieves the row number of the first character of the <code>word</code> using the <code>rowMap</code>.</p>
+</li>
+<li><p>It then iterates through the remaining characters of the <code>word</code> using a <code>for</code> loop.</p>
+</li>
+<li><p>For each character, it retrieves its row number from the <code>rowMap</code>.</p>
+</li>
+<li><p>If the row number of the current character does not match the row number of the first character, the function returns <code>false</code>, indicating that the characters are not in the same row.</p>
+</li>
+<li><p>If the loop completes without returning <code>false</code>, it means all characters are in the same row, and the function returns <code>true</code>.</p>
+</li>
+</ol>
+<p>Techniques used in this code include:</p>
+<ul>
+<li>Using a <code>Map</code> data structure to store keyboard rows and characters.</li>
+<li>Iterating through arrays using <code>for...of</code> and <code>for</code> loops.</li>
+<li>Converting strings to uppercase using the <code>toUpperCase</code> method.</li>
+<li>Checking conditions and returning boolean values.</li>
+</ul>
+
+  </body>
+  </html>

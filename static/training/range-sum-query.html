@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Holy Theory</title>
+  </head>
+  <body>
+      <h1 id="range-sum-query">Range Sum Query</h1>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">class</span> <span class="hljs-title class_">NumArray</span> {
+    <span class="hljs-keyword">public</span> sums = [];
+    <span class="hljs-title function_">constructor</span>(<span class="hljs-params">nums: <span class="hljs-built_in">number</span>[]</span>) {
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; nums.<span class="hljs-property">length</span>; i++) {
+            <span class="hljs-variable language_">this</span>.<span class="hljs-property">sums</span>[i] = i === <span class="hljs-number">0</span> ? nums[<span class="hljs-number">0</span>] : (<span class="hljs-variable language_">this</span>.<span class="hljs-property">sums</span>[i - <span class="hljs-number">1</span>] + nums[i]);
+        }
+    }
+
+    <span class="hljs-title function_">sumRange</span>(<span class="hljs-attr">left</span>: <span class="hljs-built_in">number</span>, <span class="hljs-attr">right</span>: <span class="hljs-built_in">number</span>): <span class="hljs-built_in">number</span> {
+        <span class="hljs-keyword">var</span> sums = <span class="hljs-variable language_">this</span>.<span class="hljs-property">sums</span>;
+        <span class="hljs-keyword">return</span> left === <span class="hljs-number">0</span> ? sums[right] : (sums[right] - sums[left - <span class="hljs-number">1</span>]);
+    }
+}
+
+<span class="hljs-comment">/**
+ * Your NumArray object will be instantiated and called as such:
+ * var obj = new NumArray(nums)
+ * var param_1 = obj.sumRange(left,right)
+ */</span>
+</code></pre><p>This TypeScript code defines a class <code>NumArray</code> that implements a data structure for efficient range sum queries. Here&#39;s a breakdown of how the code works:</p>
+<ol>
+<li><p>The <code>NumArray</code> class has two main methods: the constructor <code>constructor(nums: number[])</code> and <code>sumRange(left: number, right: number): number</code>.</p>
+</li>
+<li><p>The <code>public sums</code> array is used to store the cumulative sums of the input <code>nums</code>.</p>
+</li>
+<li><p>In the constructor, the cumulative sums are calculated and stored in the <code>sums</code> array. For each index <code>i</code>, the cumulative sum up to index <code>i</code> is computed as <code>this.sums[i] = i === 0 ? nums[0] : (this.sums[i - 1] + nums[i])</code>.</p>
+</li>
+<li><p>The <code>sumRange</code> method takes two parameters, <code>left</code> and <code>right</code>, representing the range for which the sum is to be calculated.</p>
+</li>
+<li><p>The cumulative sum up to index <code>right</code> is used to calculate the sum of the range <code>[left, right]</code>. If <code>left</code> is not <code>0</code>, the cumulative sum up to index <code>left - 1</code> is subtracted from the cumulative sum up to index <code>right</code> to get the sum of the desired range.</p>
+</li>
+<li><p>The class is used by creating an instance of <code>NumArray</code> using the <code>nums</code> array, and then the <code>sumRange</code> method can be called to retrieve the sum of a specific range.</p>
+</li>
+</ol>
+<p><strong>Example:</strong></p>
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">var</span> nums = [-<span class="hljs-number">2</span>, <span class="hljs-number">0</span>, <span class="hljs-number">3</span>, -<span class="hljs-number">5</span>, <span class="hljs-number">2</span>, -<span class="hljs-number">1</span>];
+<span class="hljs-keyword">var</span> obj = <span class="hljs-keyword">new</span> <span class="hljs-title class_">NumArray</span>(nums);
+
+<span class="hljs-keyword">var</span> sum1 = obj.<span class="hljs-title function_">sumRange</span>(<span class="hljs-number">0</span>, <span class="hljs-number">2</span>); <span class="hljs-comment">// Returns 1 (sum of elements from index 0 to 2)</span>
+<span class="hljs-keyword">var</span> sum2 = obj.<span class="hljs-title function_">sumRange</span>(<span class="hljs-number">2</span>, <span class="hljs-number">5</span>); <span class="hljs-comment">// Returns -1 (sum of elements from index 2 to 5)</span>
+<span class="hljs-keyword">var</span> sum3 = obj.<span class="hljs-title function_">sumRange</span>(<span class="hljs-number">0</span>, <span class="hljs-number">5</span>); <span class="hljs-comment">// Returns -3 (sum of all elements from index 0 to 5)</span>
+</code></pre><p>In this example, the <code>NumArray</code> object is instantiated with the <code>nums</code> array, and then the <code>sumRange</code> method is called to compute the sum of specific ranges.</p>
+
+  </body>
+  </html>

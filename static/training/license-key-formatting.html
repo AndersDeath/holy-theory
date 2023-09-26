@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Holy Theory</title>
+  </head>
+  <body>
+      <h1 id="license-key-formatting">License Key Formatting</h1>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">licenseKeyFormatting</span>(<span class="hljs-params">s: <span class="hljs-built_in">string</span>, k: <span class="hljs-built_in">number</span></span>): <span class="hljs-built_in">string</span> {
+  <span class="hljs-keyword">const</span> str = s.<span class="hljs-title function_">replace</span>(<span class="hljs-regexp">/-/g</span>, <span class="hljs-string">&#x27;&#x27;</span>).<span class="hljs-title function_">toUpperCase</span>();
+  
+  <span class="hljs-keyword">let</span> result = <span class="hljs-string">&#x27;&#x27;</span>;
+  <span class="hljs-keyword">let</span> count = <span class="hljs-number">0</span>;
+  
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = str.<span class="hljs-property">length</span> - <span class="hljs-number">1</span>; i &gt;= <span class="hljs-number">0</span>; i--) {
+    result = str[i] + result;
+    count++;
+    
+    <span class="hljs-keyword">if</span> (count === k &amp;&amp; i !== <span class="hljs-number">0</span>) {
+      result = <span class="hljs-string">&#x27;-&#x27;</span> + result;
+      count = <span class="hljs-number">0</span>;
+    }
+  }
+  
+  <span class="hljs-keyword">return</span> result;
+};
+</code></pre><p>The code is a TypeScript function that formats a license key string by removing hyphens and grouping the characters in blocks of a specified length. It then returns the formatted license key.</p>
+<p>Here&#39;s a step-by-step explanation of the code:</p>
+<ol>
+<li><p>The <code>licenseKeyFormatting</code> function takes two parameters: <code>s</code> (the input license key string) and <code>k</code> (the desired block length).</p>
+</li>
+<li><p>It first uses the <code>replace</code> method with a regular expression (<code>/-/g</code>) to remove all hyphen characters from the input string <code>s</code>. Then, the <code>toUpperCase</code> method is applied to convert all characters to uppercase.</p>
+</li>
+<li><p>The function initializes two variables: <code>result</code>, which will store the formatted license key, and <code>count</code>, which keeps track of the number of characters added to the current block.</p>
+</li>
+<li><p>The function uses a <code>for</code> loop to iterate through the characters of the modified string <code>str</code> in reverse order, starting from the end of the string (<code>str.length - 1</code>) and going backward.</p>
+</li>
+<li><p>Inside the loop:</p>
+<ul>
+<li>The current character <code>str[i]</code> is concatenated to the beginning of the <code>result</code> string.</li>
+<li>The <code>count</code> is incremented.</li>
+</ul>
+</li>
+<li><p>If the <code>count</code> reaches the specified block length <code>k</code> and the loop index <code>i</code> is not at the beginning of the string (i.e., <code>i !== 0</code>), a hyphen <code>-</code> is concatenated to the beginning of the <code>result</code> string, and the <code>count</code> is reset to 0. This creates the desired block separation.</p>
+</li>
+<li><p>After the loop completes, the function returns the <code>result</code>, which now contains the formatted license key.</p>
+</li>
+</ol>
+<p>Techniques used in this code include:</p>
+<ul>
+<li>Using regular expressions (<code>replace</code>) to modify a string.</li>
+<li>Iterating through a string in reverse order using a <code>for</code> loop.</li>
+<li>Concatenating strings to build the formatted license key.</li>
+<li>Using conditional statements (<code>if</code>) to check conditions and control the loop.</li>
+</ul>
+
+  </body>
+  </html>

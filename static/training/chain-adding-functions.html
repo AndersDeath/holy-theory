@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Holy Theory</title>
+  </head>
+  <body>
+      <h1 id="chain-adding-functions">Chain adding functions</h1>
+<p>Multiple calls:</p>
+<p>add(1)(2)(3); // 6
+add(1)(2)(3)(4); // 10
+add(1)(2)(3)(4)(5); // 15</p>
+<p>Single call:
+add(1); // 1</p>
+<p>Mixed thing:
+let addTwo = add(2);
+addTwo; // 2
+addTwo + 5; // 7
+addTwo(3); // 5
+addTwo(3)(5); // 10</p>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">add</span>(<span class="hljs-params">x: <span class="hljs-built_in">number</span></span>): <span class="hljs-built_in">any</span> {
+    <span class="hljs-keyword">let</span> sum = x;
+    <span class="hljs-keyword">function</span> <span class="hljs-title function_">f</span>(<span class="hljs-params">y: <span class="hljs-built_in">number</span></span>) {
+      sum += y;
+      <span class="hljs-keyword">return</span> f;
+    }
+    f.<span class="hljs-property">toString</span> = <span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) {
+      <span class="hljs-keyword">return</span> sum;
+    };
+    <span class="hljs-keyword">return</span> f;
+  }
+</code></pre><p>The provided code defines a function <code>add</code> that returns a special function <code>f</code> with a cumulative behavior. Each time <code>f</code> is called with a parameter <code>y</code>, it adds <code>y</code> to the accumulated sum <code>sum</code> and returns <code>f</code> itself, allowing for chaining multiple function calls. The <code>toString</code> method is overridden to return the current value of <code>sum</code> when <code>f</code> is coerced to a string.</p>
+<p>Here&#39;s a step-by-step breakdown of the code:</p>
+<ol>
+<li><p>The <code>add</code> function is defined, which takes a parameter <code>x</code> of type number.</p>
+</li>
+<li><p>Inside the <code>add</code> function, a local variable <code>sum</code> is initialized with the value of <code>x</code>. This variable will hold the accumulated sum.</p>
+</li>
+<li><p>The function <code>f</code> is defined inside the <code>add</code> function. It takes a parameter <code>y</code> of type number.</p>
+</li>
+<li><p>Within <code>f</code>, the <code>sum</code> variable is updated by adding <code>y</code> to it (<code>sum += y</code>).</p>
+</li>
+<li><p>The <code>f</code> function returns itself, allowing for chaining multiple function calls.</p>
+</li>
+<li><p>The <code>toString</code> method is defined for the <code>f</code> function. It overrides the default <code>toString</code> method and returns the value of <code>sum</code> when <code>f</code> is coerced to a string.</p>
+</li>
+<li><p>Finally, the <code>f</code> function is returned from the <code>add</code> function.</p>
+</li>
+</ol>
+<p>This code implements a concept called &quot;currying&quot; where functions are transformed to take multiple arguments by returning a series of functions that each take one argument. The returned function <code>f</code> allows for a fluent syntax where multiple numbers can be added together by calling <code>add(x)(y)(z)...</code> and the final value can be obtained by coercing <code>add(x)(y)(z)...</code> to a string.</p>
+<p>Example usage:</p>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">const</span> result = <span class="hljs-title function_">add</span>(<span class="hljs-number">1</span>)(<span class="hljs-number">2</span>)(<span class="hljs-number">3</span>)(<span class="hljs-number">4</span>).<span class="hljs-title function_">toString</span>();
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(result); <span class="hljs-comment">// Output: 10</span>
+</code></pre><p>In this example, the <code>add</code> function is called with the initial value of <code>1</code>, and then <code>f</code> is repeatedly called with subsequent values <code>2</code>, <code>3</code>, and <code>4</code>. The cumulative sum is <code>1 + 2 + 3 + 4 = 10</code>. When <code>toString()</code> is called on the returned function, it returns the string representation of the accumulated sum, which is <code>&quot;10&quot;</code>.</p>
+
+  </body>
+  </html>

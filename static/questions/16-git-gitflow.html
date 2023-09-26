@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Holy Theory</title>
+  </head>
+  <body>
+      <h1 id="git--gitflow">Git + Gitflow</h1>
+<p><strong>1. Purpose of Using GIT:</strong></p>
+<p>Git is a distributed version control system (DVCS) designed to track changes in source code during software development. Its main purposes are:</p>
+<p><strong>a. Version Control:</strong> Git helps developers manage and track different versions of their codebase, allowing for easy collaboration and tracking changes over time.</p>
+<p><strong>b. Collaboration:</strong> It enables multiple developers to work on the same project simultaneously, facilitating collaboration and reducing conflicts.</p>
+<p><strong>c. History Tracking:</strong> Git records every change made to the codebase, making it easy to trace back to specific changes, find bugs, and understand the evolution of the project.</p>
+<p><strong>d. Branching and Merging:</strong> Git allows developers to create branches for experimenting or developing new features without affecting the main codebase. Merging these branches back into the main codebase is seamless.</p>
+<p><strong>e. Backup and Recovery:</strong> Git provides redundancy and a backup mechanism for your code, reducing the risk of data loss.</p>
+<p><strong>2. How Git Works:</strong></p>
+<p>Git works based on the following core concepts:</p>
+<p><strong>a. Repository:</strong> A repository is where your project&#39;s files and their history are stored. It can be local (on your computer) or remote (on a server like GitHub or GitLab).</p>
+<p><strong>b. Commit:</strong> A commit is a snapshot of changes made to your code. Commits have unique identifiers and capture the state of your project at a specific moment.</p>
+<p><strong>c. Branch:</strong> A branch is a separate line of development. You can create branches to work on features or bug fixes independently. Branches help prevent conflicts when multiple people work on the same codebase.</p>
+<p><strong>d. Merge:</strong> Merging combines changes from one branch into another, typically integrating a feature branch back into the main codebase.</p>
+<p><strong>e. Pull and Push:</strong> Pulling retrieves changes from a remote repository to your local repository, while pushing sends your local changes to a remote repository.</p>
+<p><strong>f. Remote:</strong> A remote is a repository hosted on a server, like GitHub or GitLab, that allows multiple developers to collaborate on a project.</p>
+<p><strong>3. Gitflow:</strong></p>
+<p>Gitflow is a branching model and workflow that defines a set of rules for managing branches in a Git repository. It was popularized by Vincent Driessen and helps teams organize their development process. It consists of the following main branches:</p>
+<p><strong>a. Master (Main) Branch:</strong> This branch contains production-ready code. It should always be stable and deployable.</p>
+<p><strong>b. Develop Branch:</strong> The develop branch is used for ongoing development. It&#39;s where new features and bug fixes are integrated before they reach the master branch.</p>
+<p><strong>c. Feature Branches:</strong> Feature branches are created for new features or enhancements. Each feature gets its own branch, allowing developers to work on features independently.</p>
+<p><strong>d. Release Branches:</strong> When it&#39;s time to prepare a new release, a release branch is created from the develop branch. Final testing and bug fixes are done here before merging into the master branch.</p>
+<p><strong>e. Hotfix Branches:</strong> Hotfix branches are used for critical bug fixes in the master branch. They are created from the master branch and merged back into both master and develop branches.</p>
+<p>Gitflow provides a structured approach to managing code changes, ensuring a stable master branch while allowing for parallel development of new features and bug fixes. It enhances collaboration and coordination within development teams.</p>
+
+  </body>
+  </html>

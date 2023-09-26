@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Holy Theory</title>
+  </head>
+  <body>
+      <h1 id="intersection-of-two-arrays">Intersection of two arrays</h1>
+<pre><code class="hljs language-typescript">
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">intersection</span>(<span class="hljs-params">nums1: <span class="hljs-built_in">number</span>[], nums2: <span class="hljs-built_in">number</span>[]</span>) {
+    <span class="hljs-keyword">let</span> nums1Map = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Set</span>(nums1);
+    <span class="hljs-keyword">let</span> result = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Set</span>();
+    nums2.<span class="hljs-title function_">forEach</span>(<span class="hljs-function"><span class="hljs-params">item</span> =&gt;</span> {
+        <span class="hljs-keyword">if</span>(nums1Map.<span class="hljs-title function_">has</span>(item)){
+            result.<span class="hljs-title function_">add</span>(item)
+        }
+    });
+    <span class="hljs-keyword">return</span> <span class="hljs-title class_">Array</span>.<span class="hljs-title function_">from</span>(result);
+};
+
+</code></pre><p>The code is a TypeScript function that finds the intersection of two arrays <code>nums1</code> and <code>nums2</code>. The intersection of two arrays is a set of elements that are common to both arrays.</p>
+<p>Here&#39;s a step-by-step explanation of the code:</p>
+<ol>
+<li><p>The function <code>intersection</code> takes two arrays as parameters: <code>nums1</code> and <code>nums2</code>.</p>
+</li>
+<li><p>A <code>Set</code> named <code>nums1Map</code> is created to store unique elements from the <code>nums1</code> array.</p>
+</li>
+<li><p>Another <code>Set</code> named <code>result</code> is created to store the intersection of the two arrays.</p>
+</li>
+<li><p>The <code>forEach</code> method is used to iterate through each element in the <code>nums2</code> array:</p>
+<ul>
+<li>For each element <code>item</code> in <code>nums2</code>, it is checked whether <code>item</code> exists in the <code>nums1Map</code> set using the <code>has</code> method.</li>
+<li>If <code>item</code> is found in <code>nums1Map</code>, it means it&#39;s an intersection element, so it is added to the <code>result</code> set using the <code>add</code> method.</li>
+</ul>
+</li>
+<li><p>Once all elements in <code>nums2</code> have been processed, the <code>result</code> set contains the intersection elements.</p>
+</li>
+<li><p>The <code>Array.from</code> method is used to convert the <code>result</code> set back into an array, which is then returned as the final result.</p>
+</li>
+</ol>
+<p>Techniques used in this code include:</p>
+<ul>
+<li>Using <code>Set</code> to efficiently store and check for unique elements in the arrays.</li>
+<li>Iterating through an array using the <code>forEach</code> method.</li>
+<li>Determining the intersection of two arrays by comparing elements using <code>has</code> method of a <code>Set</code>.</li>
+<li>Converting a <code>Set</code> back into an array using the <code>Array.from</code> method.</li>
+</ul>
+<p>Overall, this algorithm finds the intersection of two arrays with a time complexity of O(m + n), where m and n are the lengths of the two arrays.</p>
+
+  </body>
+  </html>

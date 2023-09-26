@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Holy Theory</title>
+  </head>
+  <body>
+      <h1 id="reverse-array">Reverse array</h1>
+<p>Solution Steps</p>
+<ol>
+<li>Place the two pointers (let start and end ) at the start and end of the array.</li>
+<li>Swap a[start] and a[end]</li>
+<li>Increment start and decrement end with 1</li>
+<li>If start reached to the value length/2 or start ≥ end , then terminate otherwise repeat from step 2.</li>
+</ol>
+<p>Complexity Analysis</p>
+<ul>
+<li>Time Complexity: O(n)</li>
+<li>Space Complexity: O(1)</li>
+</ul>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">reverseArray</span>(<span class="hljs-params">a: <span class="hljs-built_in">number</span>[]</span>): <span class="hljs-built_in">number</span>[] {
+    <span class="hljs-keyword">let</span> start = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">let</span> end = a.<span class="hljs-property">length</span> - <span class="hljs-number">1</span>;
+    <span class="hljs-keyword">while</span>(start &lt; end) {
+        <span class="hljs-keyword">let</span> temp = a[start];
+        a[start] = a[end];
+        a[end] = temp;
+        start++;
+        end--;
+    }
+    <span class="hljs-keyword">return</span> a;
+}
+</code></pre>
+  </body>
+  </html>

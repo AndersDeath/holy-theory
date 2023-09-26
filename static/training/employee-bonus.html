@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Holy Theory</title>
+  </head>
+  <body>
+      <h1 id="employee-bonus">Employee Bonus</h1>
+<pre><code class="hljs language-sql"><span class="hljs-keyword">SELECT</span> Employee.name, Bonus.bonus
+<span class="hljs-keyword">FROM</span> Employee
+<span class="hljs-keyword">LEFT</span> <span class="hljs-keyword">JOIN</span> Bonus <span class="hljs-keyword">ON</span> Employee.empId <span class="hljs-operator">=</span> Bonus.empId
+<span class="hljs-keyword">WHERE</span> Bonus.bonus <span class="hljs-operator">&lt;</span> <span class="hljs-number">1000</span> <span class="hljs-keyword">OR</span> Bonus.bonus <span class="hljs-keyword">IS</span> <span class="hljs-keyword">NULL</span>;
+</code></pre><p><strong>Solution:</strong></p>
+<p>Step-by-step breakdown of the query:</p>
+<ol>
+<li><p><code>SELECT Employee.name, Bonus.bonus</code>: This part of the query selects the <code>name</code> column from the <code>Employee</code> table and the <code>bonus</code> column from the <code>Bonus</code> table.</p>
+</li>
+<li><p><code>FROM Employee</code>: This part of the query specifies the source table, which is <code>Employee</code> in this case.</p>
+</li>
+<li><p><code>LEFT JOIN Bonus ON Employee.empId = Bonus.empId</code>: This part of the query performs a <code>LEFT JOIN</code> between the <code>Employee</code> and <code>Bonus</code> tables based on the common column <code>empId</code>. The <code>LEFT JOIN</code> ensures that all rows from the left table (<code>Employee</code>) are included in the result, and matching rows from the right table (<code>Bonus</code>) are joined based on the specified condition.</p>
+</li>
+<li><p><code>WHERE Bonus.bonus &lt; 1000 OR Bonus.bonus IS NULL</code>: This part of the query filters the joined results. It includes only those rows where the <code>bonus</code> value from the <code>Bonus</code> table is less than 1000 or where the <code>bonus</code> value is <code>NULL</code>. This means that the query includes employees who have a bonus less than 1000 or employees who do not have any bonus (bonus value is <code>NULL</code>).</p>
+</li>
+<li><p>The query execution returns the <code>name</code> and <code>bonus</code> values that satisfy the condition of having a bonus less than 1000 or no bonus (<code>NULL</code>).</p>
+</li>
+</ol>
+<p>Techniques used:</p>
+<ol>
+<li><p>SQL Query Language: The code uses SQL (Structured Query Language) to interact with the database. SQL is a standard language used for querying and manipulating relational databases.</p>
+</li>
+<li><p>SELECT Statement: The query uses the <code>SELECT</code> statement to specify the columns to be retrieved from the database.</p>
+</li>
+<li><p>LEFT JOIN: The query uses a <code>LEFT JOIN</code> to combine rows from two tables based on a common column (<code>empId</code>), including all rows from the left table (<code>Employee</code>) and matching rows from the right table (<code>Bonus</code>).</p>
+</li>
+<li><p>WHERE Clause: The query uses the <code>WHERE</code> clause to filter the rows based on the specified condition (bonus less than 1000 or <code>NULL</code>).</p>
+</li>
+</ol>
+<p>Summary:</p>
+<p>The provided SQL query retrieves the <code>name</code> and <code>bonus</code> values from the <code>Employee</code> and <code>Bonus</code> tables, respectively, using a <code>LEFT JOIN</code>. It filters the results to include only employees with a bonus amount less than 1000 or employees who do not have any bonus (<code>NULL</code> value in the <code>bonus</code> column).</p>
+
+  </body>
+  </html>

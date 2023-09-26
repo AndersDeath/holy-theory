@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Holy Theory</title>
+  </head>
+  <body>
+      <h1 id="memo">Memo</h1>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">memo</span>(<span class="hljs-params">func: <span class="hljs-built_in">any</span></span>) {
+    <span class="hljs-keyword">const</span> <span class="hljs-attr">cache</span>: <span class="hljs-built_in">any</span> = {};
+    <span class="hljs-keyword">return</span> <span class="hljs-function">(<span class="hljs-params">...args: <span class="hljs-built_in">any</span>[]</span>) =&gt;</span>{
+        <span class="hljs-keyword">let</span> key = <span class="hljs-title class_">JSON</span>.<span class="hljs-title function_">stringify</span>(args);
+        <span class="hljs-keyword">if</span>(cache[key]) {
+            <span class="hljs-keyword">return</span> cache[key];
+        }
+        <span class="hljs-keyword">const</span> value = func.<span class="hljs-title function_">apply</span>(<span class="hljs-literal">null</span>, args);
+        cache[key] = value;
+        <span class="hljs-keyword">return</span> value;
+    }
+}
+</code></pre><p><strong>Function solution:</strong></p>
+<p>The <code>memo</code> function is a higher-order function that takes another function <code>func</code> as input and returns a new function with memoization applied.</p>
+<p><strong>Memoization</strong> is an optimization technique where the results of expensive function calls are cached and reused if the same inputs occur again. This can significantly improve the performance of functions that are computationally expensive.</p>
+<p>Here&#39;s how the <code>memo</code> function works:</p>
+<ol>
+<li><p>Declare an empty object called <code>cache</code> to store memoized results.</p>
+</li>
+<li><p>Return an anonymous function that takes any number of arguments (<code>...args</code>) using the rest parameter syntax.</p>
+</li>
+<li><p>Convert the arguments into a unique key by using <code>JSON.stringify(args)</code> and store it in the <code>key</code> variable.</p>
+</li>
+<li><p>Check if the computed result for the given key is already present in the <code>cache</code>. If it is, return the cached result.</p>
+</li>
+<li><p>If the result is not in the cache, execute the original function <code>func</code> with the provided arguments using the <code>apply</code> method (<code>func.apply(null, args)</code>) and store the result in the <code>value</code> variable.</p>
+</li>
+<li><p>Store the computed value in the <code>cache</code> using the generated key.</p>
+</li>
+<li><p>Finally, return the computed value.</p>
+</li>
+</ol>
+<p><strong>Usage:</strong></p>
+<p>The <code>memo</code> function can be used to wrap any expensive or recursive function, and it will ensure that previously computed results are reused for the same set of input arguments.</p>
+<p>For example, if you have a recursive Fibonacci function and you want to improve its performance using memoization:</p>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">fibonacci</span>(<span class="hljs-params">n</span>) {
+    <span class="hljs-keyword">if</span> (n &lt;= <span class="hljs-number">1</span>) <span class="hljs-keyword">return</span> n;
+    <span class="hljs-keyword">return</span> <span class="hljs-title function_">fibonacci</span>(n - <span class="hljs-number">1</span>) + <span class="hljs-title function_">fibonacci</span>(n - <span class="hljs-number">2</span>);
+}
+
+<span class="hljs-keyword">const</span> memoizedFibonacci = <span class="hljs-title function_">memo</span>(fibonacci);
+
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-title function_">memoizedFibonacci</span>(<span class="hljs-number">10</span>)); <span class="hljs-comment">// This will be faster than the non-memoized version</span>
+</code></pre><p><strong>Techniques Used:</strong></p>
+<ol>
+<li><strong>Caching/Memoization:</strong> The <code>memo</code> function implements the technique of memoization to optimize the performance of expensive or repetitive function calls by caching their results.</li>
+</ol>
+<p><strong>Summary:</strong></p>
+<p>The <code>memo</code> function is a higher-order function that adds memoization to another function, allowing it to efficiently cache and reuse computed results for the same input arguments. This can greatly improve the performance of functions that involve expensive computations or recursion.</p>
+
+  </body>
+  </html>

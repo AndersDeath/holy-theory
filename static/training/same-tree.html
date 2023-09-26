@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Holy Theory</title>
+  </head>
+  <body>
+      <h1 id="same-tree">Same tree</h1>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">isSameTree</span>(<span class="hljs-params">p: TreeNode | <span class="hljs-literal">null</span>, q: TreeNode | <span class="hljs-literal">null</span></span>): <span class="hljs-built_in">boolean</span> {
+    <span class="hljs-keyword">if</span>(p === <span class="hljs-literal">null</span> &amp;&amp; q === <span class="hljs-literal">null</span>) <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+
+    <span class="hljs-keyword">if</span> (p === <span class="hljs-literal">null</span> || q === <span class="hljs-literal">null</span> || p.<span class="hljs-property">val</span> !== q.<span class="hljs-property">val</span>){
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+     }
+    
+    <span class="hljs-keyword">return</span> <span class="hljs-title function_">isSameTree</span>(p.<span class="hljs-property">left</span>,q.<span class="hljs-property">left</span>) &amp;&amp; <span class="hljs-title function_">isSameTree</span>(p.<span class="hljs-property">right</span>, q.<span class="hljs-property">right</span>);
+};
+</code></pre><p><strong>Description:</strong></p>
+<ol>
+<li><p><strong>Base Case Check</strong>:</p>
+<ul>
+<li>The function takes two binary tree nodes <code>p</code> and <code>q</code> as inputs.</li>
+<li>The first base case checks if both <code>p</code> and <code>q</code> are <code>null</code>, which indicates that the corresponding subtrees are identical. In this case, the function returns <code>true</code>.</li>
+</ul>
+</li>
+<li><p><strong>Comparison and Recursion</strong>:</p>
+<ul>
+<li>If both <code>p</code> and <code>q</code> are not <code>null</code> and their values are not equal, it means that the subtrees are not identical, and the function returns <code>false</code>.</li>
+<li>If the values are equal, the function proceeds to check whether the left and right subtrees of <code>p</code> and <code>q</code> are identical by making recursive calls to <code>isSameTree</code>.</li>
+</ul>
+</li>
+<li><p><strong>Recursive Call</strong>:</p>
+<ul>
+<li>The function recursively calls itself for the left and right subtrees of <code>p</code> and <code>q</code>.</li>
+<li>The function checks if the left subtrees of both trees are the same (<code>isSameTree(p.left, q.left)</code>) and if the right subtrees of both trees are the same (<code>isSameTree(p.right, q.right)</code>).</li>
+</ul>
+</li>
+<li><p><strong>Return Result</strong>:</p>
+<ul>
+<li>The final result is the logical AND (<code>&amp;&amp;</code>) of the comparisons for both left and right subtrees. This means that for both subtrees to be the same, both left and right subtrees must be the same.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Techniques used:</strong></p>
+<ol>
+<li>Recursive traversal of binary trees.</li>
+<li>Comparison of tree nodes and their values.</li>
+</ol>
+<p><strong>Algorithm Complexity:</strong></p>
+<ul>
+<li>Time Complexity: O(N), where N is the total number of nodes in the smaller of the two trees. Each node is visited exactly once.</li>
+<li>Space Complexity: O(H), where H is the height of the smaller of the two trees. The space is used for the recursive call stack.</li>
+</ul>
+<p>This code checks if two binary trees <code>p</code> and <code>q</code> are the same by comparing their structures and values through recursive traversal. If the trees have identical structures and node values, the function returns <code>true</code>, otherwise, it returns <code>false</code>.</p>
+
+  </body>
+  </html>

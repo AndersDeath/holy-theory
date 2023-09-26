@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Holy Theory</title>
+  </head>
+  <body>
+      <h1 id="reverse-string">Reverse string</h1>
+<pre><code class="hljs language-typescript">
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">reverseString</span>(<span class="hljs-params">s: <span class="hljs-built_in">string</span>[]</span>): <span class="hljs-built_in">void</span> {
+    <span class="hljs-keyword">let</span> l = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">let</span> r = s.<span class="hljs-property">length</span> - <span class="hljs-number">1</span>;
+
+    <span class="hljs-keyword">while</span> (l &lt; r) {
+      <span class="hljs-keyword">let</span> temp = s[l];
+      s[l++] = s[r];
+      s[r--] = temp;
+    }
+};
+</code></pre><ol>
+<li><p><strong>Function Input and Output</strong>:</p>
+<ul>
+<li><strong>Input</strong>: The <code>reverseString</code> function takes an array of characters <code>s</code> as input.</li>
+<li><strong>Output</strong>: It modifies the input array in-place to reverse its contents.</li>
+</ul>
+</li>
+<li><p><strong>Two-Pointer Reversal Technique</strong>:</p>
+<ul>
+<li>The function initializes two pointers, <code>l</code> (left) and <code>r</code> (right), to the start and end of the input array, respectively.</li>
+</ul>
+</li>
+<li><p><strong>Character Swapping</strong>:</p>
+<ul>
+<li>The function enters a <code>while</code> loop that continues as long as <code>l</code> is less than <code>r</code>.</li>
+<li>Inside the loop, the characters at <code>l</code> and <code>r</code> indices are swapped using a temporary variable <code>temp</code> and array assignment.</li>
+<li>After swapping, both <code>l</code> is incremented (using <code>l++</code>) and <code>r</code> is decremented (using <code>r--</code>) to move the pointers towards each other.</li>
+</ul>
+</li>
+<li><p><strong>Loop Termination</strong>:</p>
+<ul>
+<li>The loop continues until <code>l</code> is no longer less than <code>r</code>. This ensures that the characters have been swapped until the middle of the array, effectively reversing the order of characters.</li>
+</ul>
+</li>
+<li><p><strong>In-Place Modification</strong>:</p>
+<ul>
+<li>The input array <code>s</code> is modified in-place, and no new arrays are created.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Techniques Used</strong>:</p>
+<ol>
+<li><p>Two-Pointer Reversal:</p>
+<ul>
+<li>Reversing the contents of the array using two pointers (<code>l</code> and <code>r</code>) that move towards each other.</li>
+</ul>
+</li>
+<li><p>Array Element Swapping:</p>
+<ul>
+<li>Swapping characters at two indices within the array using a temporary variable.</li>
+</ul>
+</li>
+<li><p>In-Place Modification:</p>
+<ul>
+<li>Modifying the input array directly without creating a new array.</li>
+</ul>
+</li>
+</ol>
+<p>This TypeScript function reverses the order of characters in the input array in-place using a two-pointer reversal technique.</p>
+
+  </body>
+  </html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Holy Theory</title>
+  </head>
+  <body>
+      <h1 id="interpolation-search">Interpolation search</h1>
+<pre><code class="hljs language-java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {
+        
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-type">int</span> <span class="hljs-title function_">interpolationSearch</span><span class="hljs-params">(<span class="hljs-type">int</span>[] array, <span class="hljs-type">int</span> value)</span> {
+        <span class="hljs-type">int</span> <span class="hljs-variable">low</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>;
+        <span class="hljs-type">int</span> <span class="hljs-variable">high</span> <span class="hljs-operator">=</span> array.length - <span class="hljs-number">1</span>;
+        
+        <span class="hljs-keyword">while</span>(value &gt;=array[low] &amp;&amp; value &lt;= array[high] &amp;&amp; low &lt;= high) {
+            <span class="hljs-type">int</span> <span class="hljs-variable">probe</span> <span class="hljs-operator">=</span> low + (high - low) * (value - array[low]) / (array[high] - array[low]);
+            <span class="hljs-keyword">if</span>(array[probe] == value) {
+                <span class="hljs-keyword">return</span> probe;
+            } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(array[probe] &gt; value) {
+                low = probe + <span class="hljs-number">1</span>;
+            } <span class="hljs-keyword">else</span> {
+                high = probe -<span class="hljs-number">1</span>;
+            }
+            
+        }
+        
+        <span class="hljs-keyword">return</span> -<span class="hljs-number">1</span>;
+    }
+
+}
+</code></pre>
+  </body>
+  </html>

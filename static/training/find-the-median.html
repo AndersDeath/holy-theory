@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Holy Theory</title>
+  </head>
+  <body>
+      <h1 id="find-the-median">Find the median</h1>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">findMedian</span>(<span class="hljs-params">arr: <span class="hljs-built_in">number</span>[]</span>): <span class="hljs-built_in">number</span> {
+    arr = arr.<span class="hljs-title function_">sort</span>(<span class="hljs-function">(<span class="hljs-params">a,b</span>) =&gt;</span> a - b);
+    <span class="hljs-keyword">return</span> arr[<span class="hljs-title class_">Math</span>.<span class="hljs-title function_">floor</span>(arr.<span class="hljs-property">length</span> / <span class="hljs-number">2</span>)];
+}
+</code></pre><p><strong>Solution:</strong></p>
+<p>The function <code>findMedian</code> takes an array of numbers <code>arr</code> as input and returns the median of the array.</p>
+<p><strong>Steps:</strong></p>
+<ol>
+<li><p>Sort the input array <code>arr</code> in ascending order using the <code>sort</code> method with a custom comparison function <code>(a, b) =&gt; a - b</code>. This ensures that the numbers in the array are arranged in increasing order.</p>
+</li>
+<li><p>Calculate the index of the median element by dividing the length of the sorted array by 2 using <code>Math.floor(arr.length / 2)</code>.</p>
+</li>
+<li><p>Return the element at the calculated index, which is the median of the array.</p>
+</li>
+</ol>
+<p><strong>Example:</strong></p>
+<ul>
+<li>Input: <code>arr = [3, 1, 5, 2, 4]</code></li>
+<li>After sorting the array: <code>[1, 2, 3, 4, 5]</code></li>
+<li>Median index = <code>Math.floor(5 / 2) = 2</code></li>
+<li>Median element at index 2 is <code>3</code>.</li>
+<li>The function returns <code>3</code>.</li>
+</ul>
+<p><strong>Note:</strong></p>
+<p>The given code assumes that the input array <code>arr</code> is not empty and contains valid numbers.</p>
+<p><strong>Techniques used:</strong></p>
+<ol>
+<li><p>Sorting: The function uses the <code>sort</code> method to sort the input array in ascending order.</p>
+</li>
+<li><p>Mathematical Operation: The code uses <code>Math.floor</code> to calculate the index of the median element.</p>
+</li>
+</ol>
+
+  </body>
+  </html>

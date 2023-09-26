@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Holy Theory</title>
+  </head>
+  <body>
+      <h1 id="reverse-words">Reverse words</h1>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">reverseWords</span>(<span class="hljs-params">str: <span class="hljs-built_in">string</span></span>): <span class="hljs-built_in">string</span> {
+  <span class="hljs-keyword">return</span> str
+    .<span class="hljs-title function_">split</span>(<span class="hljs-string">&quot; &quot;</span>)
+    .<span class="hljs-title function_">map</span>(<span class="hljs-function">(<span class="hljs-params">word: <span class="hljs-built_in">string</span></span>) =&gt;</span> {
+      <span class="hljs-keyword">let</span> w = word.<span class="hljs-title function_">split</span>(<span class="hljs-string">&quot;&quot;</span>).<span class="hljs-title function_">reverse</span>();
+      <span class="hljs-keyword">return</span> w.<span class="hljs-title function_">join</span>(<span class="hljs-string">&quot;&quot;</span>);
+    })
+    .<span class="hljs-title function_">join</span>(<span class="hljs-string">&quot; &quot;</span>);
+}
+</code></pre><ol>
+<li><p><strong>Function Input and Output</strong>:</p>
+<ul>
+<li><strong>Input</strong>: The <code>reverseWords</code> function takes a string <code>str</code> as input, where <code>str</code> consists of words separated by spaces.</li>
+<li><strong>Output</strong>: It returns a new string with each word in the input string reversed.</li>
+</ul>
+</li>
+<li><p><strong>Word Splitting and Mapping</strong>:</p>
+<ul>
+<li>The input string <code>str</code> is split into an array of words using the <code>split</code> method with space (&#39; &#39;) as the delimiter. This creates an array of words.</li>
+<li>The <code>map</code> method is then applied to each word in the array. For each word, the following steps are performed.</li>
+</ul>
+</li>
+<li><p><strong>Word Reversal</strong>:</p>
+<ul>
+<li>Each word is further split into an array of characters using the <code>split</code> method. This array of characters is reversed using the <code>reverse</code> method.</li>
+<li>The reversed array of characters is then joined back together using the <code>join</code> method to form the reversed word.</li>
+</ul>
+</li>
+<li><p><strong>Reversed Words Array</strong>:</p>
+<ul>
+<li>The <code>map</code> method returns an array of reversed words.</li>
+</ul>
+</li>
+<li><p><strong>Array to String Conversion</strong>:</p>
+<ul>
+<li>The array of reversed words is joined into a string using space (&#39; &#39;) as the delimiter, resulting in a new string where each word is reversed but the order of words is maintained.</li>
+</ul>
+</li>
+<li><p><strong>Output</strong>:</p>
+<ul>
+<li>The final string with reversed words is returned as the output of the function.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Techniques Used</strong>:</p>
+<ol>
+<li><p>String Splitting and Joining:</p>
+<ul>
+<li>Splitting the input string into an array of words using the <code>split</code> method with space as the delimiter, and joining arrays of characters back into words using the <code>join</code> method.</li>
+</ul>
+</li>
+<li><p>Mapping and Transforming:</p>
+<ul>
+<li>Using the <code>map</code> method to apply a transformation to each word in the array.</li>
+</ul>
+</li>
+<li><p>Word Reversal:</p>
+<ul>
+<li>Reversing each word in the input string by splitting it into characters, reversing the characters, and then joining them back together.</li>
+</ul>
+</li>
+<li><p>Array to String Conversion:</p>
+<ul>
+<li>Converting an array of reversed words back to a string using the <code>join</code> method to obtain the final result.</li>
+</ul>
+</li>
+</ol>
+<p>This TypeScript function achieves the same result as the previous implementation, reversing the characters within each word of a string while maintaining the order of the words.</p>
+<ul>
+<li><a href="../readme.md">Go back</a></li>
+</ul>
+
+  </body>
+  </html>

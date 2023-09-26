@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Holy Theory</title>
+  </head>
+  <body>
+      <h1 id="detect-capital-use">Detect Capital Use</h1>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">detectCapitalUse</span>(<span class="hljs-params">word: <span class="hljs-built_in">string</span></span>): <span class="hljs-built_in">boolean</span> {
+  <span class="hljs-keyword">const</span> isUpperCase = (<span class="hljs-attr">ch</span>: <span class="hljs-built_in">string</span>): <span class="hljs-function"><span class="hljs-params">boolean</span> =&gt;</span> ch === ch.<span class="hljs-title function_">toUpperCase</span>();
+
+    <span class="hljs-keyword">if</span> (word === word.<span class="hljs-title function_">toUpperCase</span>()) {
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+    }
+
+    <span class="hljs-keyword">if</span> (word === word.<span class="hljs-title function_">toLowerCase</span>()) {
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+    }
+
+    <span class="hljs-keyword">if</span> (<span class="hljs-title function_">isUpperCase</span>(word[<span class="hljs-number">0</span>]) &amp;&amp; word.<span class="hljs-title function_">slice</span>(<span class="hljs-number">1</span>) === word.<span class="hljs-title function_">slice</span>(<span class="hljs-number">1</span>).<span class="hljs-title function_">toLowerCase</span>()) {
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+    }
+
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+};
+</code></pre><p><strong>Solution:</strong></p>
+<p>Step-by-step breakdown of the code:</p>
+<ol>
+<li><p>The function <code>detectCapitalUse</code> takes a <code>word</code> as input and returns a boolean value indicating if the capitalization of the word is correct.</p>
+</li>
+<li><p>The function defines an inner helper function <code>isUpperCase</code> which takes a character <code>ch</code> as input and returns <code>true</code> if the character is uppercase, and <code>false</code> otherwise.</p>
+</li>
+<li><p>The first condition checks if the entire <code>word</code> is uppercase. It uses the <code>word.toUpperCase()</code> method to convert the <code>word</code> to uppercase and compares it with the original <code>word</code>. If they are equal, it means that all characters in the word are uppercase, so the function returns <code>true</code>.</p>
+</li>
+<li><p>The second condition checks if the entire <code>word</code> is lowercase. It uses the <code>word.toLowerCase()</code> method to convert the <code>word</code> to lowercase and compares it with the original <code>word</code>. If they are equal, it means that all characters in the word are lowercase, so the function returns <code>true</code>.</p>
+</li>
+<li><p>The third condition checks if the first character of the <code>word</code> is uppercase (<code>isUpperCase(word[0])</code>) and the remaining characters (excluding the first character) are all lowercase (<code>word.slice(1) === word.slice(1).toLowerCase()</code>). If both conditions are true, it means that the capitalization of the word follows the correct pattern, so the function returns <code>true</code>.</p>
+</li>
+<li><p>If none of the above conditions are satisfied, it means that the capitalization of the word is incorrect, so the function returns <code>false</code>.</p>
+</li>
+</ol>
+<p>Techniques used:</p>
+<ol>
+<li><p>Function Declaration: The code defines the function <code>detectCapitalUse</code> to encapsulate the capitalization checking logic.</p>
+</li>
+<li><p>Helper Function: The code defines an inner helper function <code>isUpperCase</code> to check if a character is uppercase.</p>
+</li>
+<li><p>Conditional Statements: The code uses conditional statements (<code>if</code> statements) to check different conditions and return the appropriate boolean value.</p>
+</li>
+<li><p>String Methods: The code uses the <code>toUpperCase()</code>, <code>toLowerCase()</code>, <code>slice()</code>, and <code>===</code> methods to manipulate and compare strings.</p>
+</li>
+</ol>
+<p>Summary:</p>
+<p>The provided JavaScript code checks the capitalization of a given word and returns <code>true</code> if the capitalization is correct (e.g., all uppercase, all lowercase, or starting with an uppercase followed by lowercase), and <code>false</code> otherwise.</p>
+
+  </body>
+  </html>

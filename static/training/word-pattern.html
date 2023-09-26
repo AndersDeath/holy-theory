@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Holy Theory</title>
+  </head>
+  <body>
+      <h1 id="word-pattern">Word Pattern</h1>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">wordPattern</span>(<span class="hljs-params">pattern: <span class="hljs-built_in">string</span>, s: <span class="hljs-built_in">string</span></span>): <span class="hljs-built_in">boolean</span> {
+  <span class="hljs-keyword">const</span> strArr = s.<span class="hljs-title function_">split</span>(<span class="hljs-string">&quot; &quot;</span>);
+
+  <span class="hljs-keyword">if</span> (strArr.<span class="hljs-property">length</span> != pattern.<span class="hljs-property">length</span>) {
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+  }
+
+  <span class="hljs-keyword">let</span> hash = {};
+
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; strArr.<span class="hljs-property">length</span>; i++) {
+    <span class="hljs-keyword">if</span> (hash[pattern[i]]) {
+      <span class="hljs-keyword">if</span> (hash[pattern[i]] !== strArr[i]) {
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+      }
+    } <span class="hljs-keyword">else</span> {
+      <span class="hljs-keyword">if</span> (<span class="hljs-title class_">Object</span>.<span class="hljs-title function_">values</span>(hash).<span class="hljs-title function_">indexOf</span>(strArr[i]) !== -<span class="hljs-number">1</span>) {
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+      } <span class="hljs-keyword">else</span> {
+        hash[pattern[i]] = strArr[i];
+      }
+    }
+  }
+
+  <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+}
+</code></pre><ul>
+<li><p><strong>Inputs</strong>:</p>
+<ul>
+<li><code>pattern</code>: A string representing the pattern.</li>
+<li><code>s</code>: A string representing the input string.</li>
+</ul>
+</li>
+<li><p><strong>Output</strong>:</p>
+<ul>
+<li>A boolean value indicating whether the given <code>pattern</code> matches the structure of the words in string <code>s</code>.</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li><p><strong>Split Input String</strong>:</p>
+<ul>
+<li>Split the string <code>s</code> into an array of words using the space character (&#39; &#39;) as the delimiter.</li>
+<li>Store this array in the variable <code>strArr</code>.</li>
+</ul>
+</li>
+<li><p><strong>Length Check</strong>:</p>
+<ul>
+<li>Check if the length of <code>strArr</code> is equal to the length of the <code>pattern</code>.</li>
+<li>If the lengths are not equal, return <code>false</code>, indicating that the pattern cannot match the words.</li>
+</ul>
+</li>
+<li><p><strong>Pattern Mapping</strong>:</p>
+<ul>
+<li>Create an empty object <code>hash</code> to store the mapping of characters in the <code>pattern</code> to words in <code>strArr</code>.</li>
+<li>Loop through each index <code>i</code> from 0 to the length of <code>strArr</code>:<ul>
+<li>If <code>pattern[i]</code> already exists in <code>hash</code>:<ul>
+<li>If the stored value does not match <code>strArr[i]</code>, return <code>false</code>.</li>
+</ul>
+</li>
+<li>If <code>pattern[i]</code> does not exist in <code>hash</code>:<ul>
+<li>Check if the value <code>strArr[i]</code> is already mapped to any character in the <code>hash</code> using <code>Object.values(hash).indexOf(strArr[i])</code>.</li>
+<li>If it is, return <code>false</code>, as one word cannot be mapped to multiple characters.</li>
+<li>If not, create a mapping between <code>pattern[i]</code> and <code>strArr[i]</code> in the <code>hash</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Pattern Mapping Successful</strong>:</p>
+<ul>
+<li>If the loop completes without returning <code>false</code>, return <code>true</code>, indicating that the pattern successfully matches the words in the input string.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Techniques Used</strong>:</p>
+<ul>
+<li><strong>Hash Table (Object)</strong>: The code uses an object (<code>hash</code>) to store the mapping between characters in the pattern and words in the input string.</li>
+<li><strong>Array Manipulation</strong>: The code splits the input string into an array of words using the <code>split()</code> method.</li>
+</ul>
+<p><strong>Algorithm</strong>:</p>
+<ol>
+<li><p>Split the input string into an array of words (<code>strArr</code>).</p>
+</li>
+<li><p>Check if the lengths of <code>strArr</code> and <code>pattern</code> are equal. If not, return <code>false</code>.</p>
+</li>
+<li><p>Loop through each index <code>i</code> from 0 to the length of <code>strArr</code>:</p>
+<ul>
+<li>If <code>pattern[i]</code> exists in <code>hash</code>:<ul>
+<li>If the stored value does not match <code>strArr[i]</code>, return <code>false</code>.</li>
+</ul>
+</li>
+<li>If <code>pattern[i]</code> does not exist in <code>hash</code>:<ul>
+<li>Check if <code>strArr[i]</code> is already mapped to any character in <code>hash</code>. If yes, return <code>false</code>.</li>
+<li>Otherwise, create a mapping in <code>hash</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>If the loop completes without returning <code>false</code>, return <code>true</code>.</p>
+</li>
+</ol>
+<p><strong>Time Complexity</strong>:</p>
+<ul>
+<li>The time complexity of this code is O(N), where N is the length of the input string <code>s</code>.</li>
+</ul>
+<p><strong>Space Complexity</strong>:</p>
+<ul>
+<li>The space complexity is O(K), where K is the number of unique characters in the pattern. In the worst case, all characters in the pattern are unique, so the space complexity is O(N), where N is the length of the pattern.</li>
+</ul>
+
+  </body>
+  </html>

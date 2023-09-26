@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Holy Theory</title>
+  </head>
+  <body>
+      <h1 id="assign-cookies">Assign Cookies</h1>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">findContentChildren</span>(<span class="hljs-params">g: <span class="hljs-built_in">number</span>[], s: <span class="hljs-built_in">number</span>[]</span>): <span class="hljs-built_in">number</span> {
+    <span class="hljs-keyword">const</span> <span class="hljs-attr">sortedG</span>: <span class="hljs-built_in">number</span>[] = g.<span class="hljs-title function_">sort</span>(<span class="hljs-function">(<span class="hljs-params">a,b</span>) =&gt;</span> a-b);
+    <span class="hljs-keyword">const</span> <span class="hljs-attr">sortedS</span>: <span class="hljs-built_in">number</span>[] = s.<span class="hljs-title function_">sort</span>(<span class="hljs-function">(<span class="hljs-params">a,b</span>) =&gt;</span> a-b);
+    <span class="hljs-keyword">let</span> <span class="hljs-attr">gCount</span>: <span class="hljs-built_in">number</span> = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">let</span> <span class="hljs-attr">sCount</span>: <span class="hljs-built_in">number</span> = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">while</span>(gCount &lt; sortedG.<span class="hljs-property">length</span> &amp;&amp; sCount &lt; sortedS.<span class="hljs-property">length</span>) {
+        <span class="hljs-keyword">if</span>(sortedG[gCount] &lt;= sortedS[sCount]) {
+            gCount++;
+            sCount++;
+        } <span class="hljs-keyword">else</span> {
+            sCount++
+        }
+    }
+    <span class="hljs-keyword">return</span> gCount;
+};
+</code></pre><p><strong>Solution:</strong>
+Below are the step-by-step explanations of the code:</p>
+<ol>
+<li><p>The <code>findContentChildren</code> function is defined, which takes two parameters:</p>
+<ul>
+<li><code>g</code>: an array of numbers representing the greed factor of children.</li>
+<li><code>s</code>: an array of numbers representing the size of cookies.</li>
+</ul>
+</li>
+<li><p>Two new arrays, <code>sortedG</code> and <code>sortedS</code>, are initialized to store the sorted versions of arrays <code>g</code> and <code>s</code> respectively. The sorting is done in ascending order using the <code>sort</code> method with a comparator function <code>(a, b) =&gt; a - b</code>.</p>
+</li>
+<li><p>Two variables, <code>gCount</code> and <code>sCount</code>, are initialized to 0. They will keep track of the indices being compared in the sorted arrays.</p>
+</li>
+<li><p>A <code>while</code> loop is used to iterate while there are elements remaining in both <code>sortedG</code> and <code>sortedS</code>.</p>
+</li>
+<li><p>Inside the loop, an <code>if</code> statement checks if the greed factor of the current child (<code>sortedG[gCount]</code>) is less than or equal to the size of the current cookie (<code>sortedS[sCount]</code>).</p>
+</li>
+<li><p>If the condition is true, it means the child can be content with the cookie. Therefore, both <code>gCount</code> and <code>sCount</code> are incremented to move on to the next child and cookie respectively.</p>
+</li>
+<li><p>If the condition is false, it means the current cookie is not enough to satisfy the child&#39;s greed. In this case, only <code>sCount</code> is incremented to move on to the next cookie.</p>
+</li>
+<li><p>The loop continues until either <code>gCount</code> reaches the end of <code>sortedG</code> or <code>sCount</code> reaches the end of <code>sortedS</code>.</p>
+</li>
+<li><p>Once the loop exits, the value of <code>gCount</code> represents the maximum number of children that can be content with the available cookies.</p>
+</li>
+<li><p>The value of <code>gCount</code> is returned as the result.</p>
+</li>
+</ol>
+<p><strong>Techniques used:</strong></p>
+<p>The following techniques are utilized within the code:</p>
+<ol>
+<li>Sorting arrays using the <code>sort</code> method with a comparator function.</li>
+<li>Iterating over arrays using a <code>while</code> loop and comparing array indices.</li>
+<li>Conditional branching using an <code>if</code> statement.</li>
+<li>Incrementing variables to move to the next element in the array.</li>
+<li>Returning a calculated result.</li>
+</ol>
+
+  </body>
+  </html>

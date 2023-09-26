@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Holy Theory</title>
+  </head>
+  <body>
+      <h1 id="graphql">Graphql</h1>
+<p>GraphQL is a query language for APIs (Application Programming Interfaces) and a runtime for executing those queries by using a type system you define for your data. It was developed by Facebook in 2012 and open-sourced in 2015. GraphQL is designed to enable clients to request exactly the data they need, and nothing more, making it a powerful alternative to REST (Representational State Transfer) APIs for building flexible and efficient APIs. Here are the main principles and concepts of GraphQL:</p>
+<ol>
+<li><p><strong>Hierarchical Structure</strong>: GraphQL queries are hierarchical in nature, mirroring the shape of the response data. This allows clients to specify exactly what data they want, including nested fields and related data, in a single query.</p>
+</li>
+<li><p><strong>Strongly Typed</strong>: GraphQL APIs are defined by a schema that explicitly defines the types of data that can be queried. These types can be scalars (integers, strings, etc.) or complex types (objects with fields). This schema provides a clear contract between the client and server.</p>
+</li>
+<li><p><strong>Single Endpoint</strong>: Unlike REST, which often requires multiple endpoints for different resources, GraphQL typically has a single endpoint for all queries and mutations. This simplifies API requests and reduces over-fetching of data.</p>
+</li>
+<li><p><strong>Client-Defined Queries</strong>: Clients are responsible for specifying the shape and structure of the data they need. This eliminates the problem of over-fetching or under-fetching data that can occur with REST APIs, where the server determines the response structure.</p>
+</li>
+<li><p><strong>No Over-fetching or Under-fetching</strong>: With GraphQL, clients can request only the data they need, reducing the amount of data transferred over the network. This helps optimize performance, especially in mobile applications with limited bandwidth.</p>
+</li>
+<li><p><strong>Real-time Data</strong>: GraphQL supports real-time data updates through subscriptions. Clients can subscribe to specific events or data changes and receive updates when those changes occur on the server.</p>
+</li>
+<li><p><strong>Batching</strong>: Clients can send multiple queries in a single request to reduce the number of round-trips to the server. This is especially useful for optimizing network performance.</p>
+</li>
+<li><p><strong>Introspection</strong>: GraphQL APIs are self-documenting. Clients can query the schema itself to discover the available types, queries, mutations, and their descriptions. This makes it easier to explore and interact with the API.</p>
+</li>
+<li><p><strong>Mutations</strong>: GraphQL allows clients to modify data on the server using mutations. Mutations are defined in the schema and can be used to create, update, or delete data.</p>
+</li>
+<li><p><strong>Validation and Type Checking</strong>: GraphQL servers perform validation and type checking on incoming queries to ensure that they adhere to the schema. This helps catch errors early in the development process.</p>
+</li>
+<li><p><strong>Security</strong>: GraphQL provides mechanisms for controlling access to data, including authentication and authorization. Developers can implement custom logic to secure their GraphQL APIs.</p>
+</li>
+</ol>
+<p>In summary, GraphQL offers a more flexible and efficient way to interact with APIs by giving clients the power to request precisely the data they need, reducing over-fetching, and providing a strongly typed schema for clarity and validation. These principles make it a popular choice for modern web and mobile application development.</p>
+
+  </body>
+  </html>

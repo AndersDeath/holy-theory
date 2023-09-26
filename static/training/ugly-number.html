@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Holy Theory</title>
+  </head>
+  <body>
+      <h1 id="ugly-number">Ugly Number</h1>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">isUgly</span>(<span class="hljs-params">n: <span class="hljs-built_in">number</span></span>): <span class="hljs-built_in">boolean</span> {
+  <span class="hljs-keyword">if</span> (n == <span class="hljs-number">1</span>) <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+  <span class="hljs-keyword">if</span> (n &lt;= <span class="hljs-number">0</span>) <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+  <span class="hljs-keyword">if</span> (n % <span class="hljs-number">2</span> == <span class="hljs-number">0</span>) <span class="hljs-keyword">return</span> <span class="hljs-title function_">isUgly</span>(n / <span class="hljs-number">2</span>);
+  <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (n % <span class="hljs-number">3</span> == <span class="hljs-number">0</span>) <span class="hljs-keyword">return</span> <span class="hljs-title function_">isUgly</span>(n / <span class="hljs-number">3</span>);
+  <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (n % <span class="hljs-number">5</span> == <span class="hljs-number">0</span>) <span class="hljs-keyword">return</span> <span class="hljs-title function_">isUgly</span>(n / <span class="hljs-number">5</span>);
+  <span class="hljs-keyword">else</span> <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+}
+</code></pre><ul>
+<li><p><strong>Input</strong>:</p>
+<ul>
+<li><code>n</code>: An integer value to determine whether it&#39;s an ugly number or not.</li>
+</ul>
+</li>
+<li><p><strong>Output</strong>:</p>
+<ul>
+<li>A boolean value indicating whether <code>n</code> is an ugly number or not.</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li><p><strong>Check for Base Cases</strong>:</p>
+<ul>
+<li>If <code>n</code> is equal to 1, return <code>true</code>, as 1 is considered an ugly number by definition.</li>
+<li>If <code>n</code> is less than or equal to 0, return <code>false</code>, as negative or zero values are not considered ugly numbers.</li>
+</ul>
+</li>
+<li><p><strong>Check Divisibility</strong>:</p>
+<ul>
+<li>Check if <code>n</code> is divisible by 2 using the modulo operator <code>%</code>. If it is, call the <code>isUgly</code> function recursively with <code>n / 2</code>.</li>
+<li>If <code>n</code> is not divisible by 2, check if it&#39;s divisible by 3 or 5 in a similar manner and call the <code>isUgly</code> function recursively with <code>n / 3</code> or <code>n / 5</code> respectively.</li>
+</ul>
+</li>
+<li><p><strong>Return Result</strong>:</p>
+<ul>
+<li>If <code>n</code> is divisible by 2, 3, or 5 and the recursive call for the corresponding divisor returns <code>true</code>, then return <code>true</code>, indicating that <code>n</code> is an ugly number.</li>
+<li>If none of the conditions are met, return <code>false</code>, indicating that <code>n</code> is not an ugly number.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Techniques Used</strong>:</p>
+<ul>
+<li><strong>Recursion</strong>: The function calls itself with smaller values of <code>n</code> to determine whether it&#39;s an ugly number or not.</li>
+</ul>
+<p><strong>Algorithm</strong>:</p>
+<ol>
+<li><p>Check the base cases:</p>
+<ul>
+<li>If <code>n</code> is 1, return <code>true</code>.</li>
+<li>If <code>n</code> is less than or equal to 0, return <code>false</code>.</li>
+</ul>
+</li>
+<li><p>Check divisibility:</p>
+<ul>
+<li>If <code>n</code> is divisible by 2, recursively call <code>isUgly(n / 2)</code>.</li>
+<li>If <code>n</code> is not divisible by 2, check divisibility by 3 and 5 in the same way.</li>
+</ul>
+</li>
+<li><p>Return the result:</p>
+<ul>
+<li>If any of the divisibility conditions hold and the corresponding recursive call returns <code>true</code>, return <code>true</code>.</li>
+<li>If none of the conditions hold, return <code>false</code>.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Time Complexity</strong>:</p>
+<ul>
+<li>The time complexity depends on the prime factors of <code>n</code>, and in the worst case, the function makes multiple recursive calls. The time complexity is proportional to the number of prime factors of <code>n</code>.</li>
+</ul>
+<p><strong>Space Complexity</strong>:</p>
+<ul>
+<li><p>The space complexity is determined by the depth of the recursion stack. In the worst case, the recursion depth could be proportional to <code>n</code>. Therefore, the space complexity is O(n).</p>
+</li>
+<li><p><a href="../readme.md">Go back</a></p>
+</li>
+</ul>
+
+  </body>
+  </html>

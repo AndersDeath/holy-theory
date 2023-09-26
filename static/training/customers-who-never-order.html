@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Holy Theory</title>
+  </head>
+  <body>
+      <h1 id="customers-who-never-order">Customers Who Never Order</h1>
+<pre><code class="hljs language-SQL"><span class="hljs-keyword">SELECT</span> Name <span class="hljs-keyword">AS</span> Customers <span class="hljs-keyword">FROM</span> Customers <span class="hljs-keyword">WHERE</span> Id <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">IN</span>( <span class="hljs-keyword">SELECT</span> CustomerId <span class="hljs-keyword">FROM</span> Orders);
+</code></pre><p><strong>Solution:</strong></p>
+<p>Step-by-step breakdown of the SQL query:</p>
+<ol>
+<li><p>The query selects the <code>Name</code> column from the <code>Customers</code> table and aliases it as <code>Customers</code>.</p>
+</li>
+<li><p>The <code>FROM</code> clause specifies the table <code>Customers</code> from which to retrieve the data.</p>
+</li>
+<li><p>The <code>WHERE</code> clause filters the results based on a condition.</p>
+</li>
+<li><p>The condition uses the <code>NOT IN</code> operator and a subquery to check if the <code>Id</code> column of the <code>Customers</code> table is not present in the <code>CustomerId</code> column of the <code>Orders</code> table.</p>
+</li>
+<li><p>The subquery selects the <code>CustomerId</code> column from the <code>Orders</code> table.</p>
+</li>
+<li><p>The <code>NOT IN</code> operator negates the condition, selecting only the rows where the <code>Id</code> column of <code>Customers</code> does not exist in the <code>CustomerId</code> column of <code>Orders</code>.</p>
+</li>
+<li><p>The query returns the result set with the selected <code>Name</code> column aliased as <code>Customers</code>.</p>
+</li>
+</ol>
+<p>Techniques used:</p>
+<ol>
+<li><p>Column Selection: The query uses the <code>SELECT</code> statement to specify the <code>Name</code> column from the <code>Customers</code> table.</p>
+</li>
+<li><p>Table Specification: The <code>FROM</code> clause identifies the table <code>Customers</code> from which to retrieve the data.</p>
+</li>
+<li><p>Conditional Filtering: The <code>WHERE</code> clause filters the results based on a condition involving the <code>NOT IN</code> operator and a subquery.</p>
+</li>
+<li><p>Subquery: The subquery is used to retrieve the <code>CustomerId</code> column from the <code>Orders</code> table for comparison in the outer query.</p>
+</li>
+<li><p>Alias: The <code>AS</code> keyword is used to alias the selected <code>Name</code> column as <code>Customers</code> in the result set.</p>
+</li>
+</ol>
+<p>Summary:</p>
+<p>The provided SQL query retrieves the names of customers from the <code>Customers</code> table who do not have any corresponding orders in the <code>Orders</code> table. It achieves this by using a subquery with the <code>NOT IN</code> operator to exclude customers whose <code>Id</code> values exist in the <code>CustomerId</code> column of the <code>Orders</code> table.</p>
+
+  </body>
+  </html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Holy Theory</title>
+  </head>
+  <body>
+      <h1 id="singleton">Singleton</h1>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">const</span> singleton = (<span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) {
+  <span class="hljs-keyword">let</span> <span class="hljs-attr">instance</span>:<span class="hljs-built_in">any</span>;
+
+  <span class="hljs-keyword">class</span> <span class="hljs-title class_">User</span> {
+    <span class="hljs-keyword">public</span> name = <span class="hljs-string">&#x27;&#x27;</span>;
+    <span class="hljs-keyword">public</span> age = <span class="hljs-number">0</span>;
+
+    <span class="hljs-title function_">constructor</span>(<span class="hljs-params">name: <span class="hljs-built_in">string</span>, age: <span class="hljs-built_in">number</span></span>) {
+        <span class="hljs-variable language_">this</span>.<span class="hljs-property">name</span> = name;
+        <span class="hljs-variable language_">this</span>.<span class="hljs-property">age</span> = age;
+    }
+  }
+  <span class="hljs-keyword">return</span> {
+    <span class="hljs-attr">getInstance</span>: <span class="hljs-keyword">function</span>(<span class="hljs-params">name?: <span class="hljs-built_in">string</span>, age?: <span class="hljs-built_in">number</span></span>) {
+      <span class="hljs-keyword">if</span>(!instance) {
+        <span class="hljs-keyword">const</span> newName = name || <span class="hljs-string">&quot;&quot;</span>;
+        <span class="hljs-keyword">const</span> newAge = age || <span class="hljs-number">0</span>;
+        instance = <span class="hljs-keyword">new</span> <span class="hljs-title class_">User</span>(newName, newAge);
+      }
+      <span class="hljs-keyword">return</span> instance;
+    }
+  }
+})();
+</code></pre>
+  </body>
+  </html>

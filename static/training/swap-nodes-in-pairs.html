@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Holy Theory</title>
+  </head>
+  <body>
+      <h1 id="swap-nodes-in-pairs">Swap Nodes in Pairs</h1>
+<pre><code class="hljs language-typescript"><span class="hljs-comment">/**
+ * Definition for singly-linked list.
+ * class ListNode {
+ *     val: number
+ *     next: ListNode | null
+ *     constructor(val?: number, next?: ListNode | null) {
+ *         this.val = (val===undefined ? 0 : val)
+ *         this.next = (next===undefined ? null : next)
+ *     }
+ * }
+ */</span>
+
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">swapPairs</span>(<span class="hljs-params">head: ListNode | <span class="hljs-literal">null</span></span>): <span class="hljs-title class_">ListNode</span> | <span class="hljs-literal">null</span> {
+  <span class="hljs-keyword">const</span> dummy = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ListNode</span>(<span class="hljs-number">0</span>);
+
+  dummy.<span class="hljs-property">next</span> = head;
+  <span class="hljs-keyword">let</span> current = dummy;
+  <span class="hljs-keyword">while</span> (current.<span class="hljs-property">next</span> &amp;&amp; current.<span class="hljs-property">next</span>.<span class="hljs-property">next</span>) {
+    <span class="hljs-keyword">let</span> first = current.<span class="hljs-property">next</span>;
+    <span class="hljs-keyword">let</span> second = current.<span class="hljs-property">next</span>.<span class="hljs-property">next</span>;
+    first.<span class="hljs-property">next</span> = second.<span class="hljs-property">next</span>;
+    current.<span class="hljs-property">next</span> = second;
+    current.<span class="hljs-property">next</span>.<span class="hljs-property">next</span> = first;
+    current = current.<span class="hljs-property">next</span>.<span class="hljs-property">next</span>;
+  }
+
+  <span class="hljs-keyword">return</span> dummy.<span class="hljs-property">next</span>;
+}
+</code></pre><p><strong>Description:</strong></p>
+<ol>
+<li><p><strong>Input and Output</strong>:</p>
+<ul>
+<li>The <code>swapPairs</code> function takes the head of a singly-linked list as input and returns the head of the modified list after swapping adjacent nodes.</li>
+</ul>
+</li>
+<li><p><strong>Dummy Node</strong>:</p>
+<ul>
+<li>The code starts by creating a dummy node (<code>dummy</code>) and setting its <code>next</code> pointer to the input <code>head</code>.</li>
+</ul>
+</li>
+<li><p><strong>Swapping Pairs</strong>:</p>
+<ul>
+<li>The <code>while</code> loop iterates through the list while there are at least two nodes available for swapping (<code>current.next</code> and <code>current.next.next</code>).</li>
+<li>Inside the loop, it creates references to the first (<code>first</code>) and second (<code>second</code>) nodes of the pair.</li>
+<li>It then updates the <code>next</code> pointers to perform the swap:<ul>
+<li><code>first.next</code> points to the node after <code>second</code>.</li>
+<li><code>current.next</code> points to <code>second</code>.</li>
+<li><code>second.next</code> points to <code>first</code>.</li>
+</ul>
+</li>
+<li>Finally, it moves <code>current</code> two steps ahead to the next pair&#39;s position.</li>
+</ul>
+</li>
+<li><p><strong>Returning Modified List</strong>:</p>
+<ul>
+<li>After processing all pairs, the function returns the modified list&#39;s head, which is <code>dummy.next</code>.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Techniques used:</strong></p>
+<ol>
+<li>Linked list manipulation.</li>
+<li>Using a dummy node.</li>
+<li>Iterative traversal with pointer manipulation.</li>
+</ol>
+<p><strong>Algorithm Complexity:</strong></p>
+<ul>
+<li>Time Complexity: O(n), where <code>n</code> is the number of nodes in the linked list. Each node is processed and swapped once.</li>
+<li>Space Complexity: O(1), as only a constant amount of extra space is used, regardless of the size of the input linked list.</li>
+</ul>
+<p>This code efficiently swaps adjacent nodes in a singly-linked list using a constant amount of extra space.</p>
+<ul>
+<li><a href="../readme.md">Go back</a></li>
+</ul>
+
+  </body>
+  </html>

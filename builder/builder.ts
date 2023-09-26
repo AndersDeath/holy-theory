@@ -11,9 +11,12 @@ interface Entry {
   entryLink: string;
 }
 
-async function generateTableOfContents(entries: Entry[]): Promise<string> {
-  const listItems = entries.map(
-    (entry) => `- [${entry.title}](${entry.entryLink})`
+async function generateTableOfContents(
+  entries: Entry[],
+  type = "md"
+): Promise<string> {
+  const listItems = entries.map((entry) =>
+    buildList(buildLink(entry.title, entry.entryLink, type), type)
   );
   return listItems.join("\n");
 }
@@ -120,10 +123,14 @@ async function generateStaticMD(
       }
 
       const sectionContent = await generateTableOfContents(
-        allContentWithSections.filter((e: Entry) => e.section === sectionName)
+        allContentWithSections.filter((e: Entry) => e.section === sectionName),
+        type
       );
 
-      const sectionIndexOutputPath = path.join(sectionOutputFolder, "index.md");
+      const sectionIndexOutputPath = path.join(
+        sectionOutputFolder,
+        "index." + type
+      );
 
       await fs.writeFile(sectionIndexOutputPath, sectionContent);
     }

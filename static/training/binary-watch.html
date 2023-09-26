@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Holy Theory</title>
+  </head>
+  <body>
+      <h1 id="binary-watch">Binary Watch</h1>
+<pre><code class="hljs language-java">
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {
+    <span class="hljs-keyword">public</span> List&lt;String&gt; <span class="hljs-title function_">readBinaryWatch</span><span class="hljs-params">(<span class="hljs-type">int</span> turnedOn)</span> {
+        List&lt;String&gt; res = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ArrayList</span>&lt;&gt;();
+        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> <span class="hljs-variable">h</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; h &lt; <span class="hljs-number">12</span>; h++){
+            <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> <span class="hljs-variable">m</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; m &lt; <span class="hljs-number">60</span>; m++){
+                <span class="hljs-keyword">if</span>(Integer.bitCount(h) + Integer.bitCount(m) == turnedOn){
+                    res.add(String.format(<span class="hljs-string">&quot;%d:%02d&quot;</span>, h, m));
+                }
+            }
+        }
+        <span class="hljs-keyword">return</span> res;
+    }
+}
+</code></pre><p><strong>Solution:</strong>
+Below is the step-by-step explanation of the code:</p>
+<ol>
+<li><p>The <code>readBinaryWatch</code> method is defined as a part of the <code>Solution</code> class. It takes an integer <code>turnedOn</code> as the input.</p>
+</li>
+<li><p>A new <code>ArrayList</code> called <code>res</code> is created to store the resulting times on the binary watch.</p>
+</li>
+<li><p>The outer <code>for</code> loop iterates over the possible values of the hours (0 to 11).</p>
+</li>
+<li><p>The inner <code>for</code> loop iterates over the possible values of the minutes (0 to 59).</p>
+</li>
+<li><p>For each combination of hours and minutes, the condition <code>Integer.bitCount(h) + Integer.bitCount(m) == turnedOn</code> is checked. This condition ensures that the total number of turned-on LEDs in the binary representation of hours and minutes combined is equal to <code>turnedOn</code>.</p>
+</li>
+<li><p>If the condition is satisfied, the current time is added to the <code>res</code> list using <code>String.format(&quot;%d:%02d&quot;, h, m)</code>. The <code>&quot;%d:%02d&quot;</code> format is used to represent the time in the HH:MM format with leading zeros for minutes.</p>
+</li>
+<li><p>The loops continue until all possible combinations of hours and minutes are checked.</p>
+</li>
+<li><p>Once the loops exit, the <code>res</code> list contains all the valid times where the number of turned-on LEDs matches <code>turnedOn</code>.</p>
+</li>
+<li><p>The <code>res</code> list is returned as the result.</p>
+</li>
+</ol>
+<p><strong>Techniques used:</strong></p>
+<p>The following techniques are utilized within the code:</p>
+<ol>
+<li>Using nested <code>for</code> loops to iterate over all possible combinations of hours and minutes.</li>
+<li>Checking the number of turned-on LEDs in the binary representation using <code>Integer.bitCount</code>.</li>
+<li>Formatting the time string using <code>String.format</code>.</li>
+<li>Adding elements to an <code>ArrayList</code>.</li>
+<li>Returning a calculated result.</li>
+</ol>
+
+  </body>
+  </html>

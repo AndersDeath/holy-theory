@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Holy Theory</title>
+  </head>
+  <body>
+      <h1 id="median-of-two-sorted-arrays">Median of two sorted arrays</h1>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">findMedianSortedArrays</span>(<span class="hljs-params">nums1: <span class="hljs-built_in">number</span>[], nums2: <span class="hljs-built_in">number</span>[]</span>): <span class="hljs-built_in">number</span> {
+    <span class="hljs-keyword">if</span>(nums1.<span class="hljs-property">length</span> &gt; nums2.<span class="hljs-property">length</span>) {
+        <span class="hljs-keyword">return</span> <span class="hljs-title function_">findMedianSortedArrays</span>(nums2, nums1);
+    }
+
+    <span class="hljs-keyword">const</span> lengthFirst = nums1.<span class="hljs-property">length</span>;
+    <span class="hljs-keyword">const</span> lengthSecond = nums2.<span class="hljs-property">length</span>;
+
+    <span class="hljs-keyword">let</span> start = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">let</span> end = lengthFirst;
+
+    <span class="hljs-keyword">while</span>(start &lt;= end) {
+        <span class="hljs-keyword">let</span> part1 = <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">floor</span>((start+end)/<span class="hljs-number">2</span>);
+        <span class="hljs-keyword">let</span> part2 = <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">floor</span>((lengthFirst + lengthSecond + <span class="hljs-number">1</span>) / <span class="hljs-number">2</span>) - part1;
+
+        <span class="hljs-keyword">let</span> maxLeftNum1 = part1 === <span class="hljs-number">0</span> ? <span class="hljs-title class_">Number</span>.<span class="hljs-property">MIN_SAFE_INTEGER</span> : nums1[part1 - <span class="hljs-number">1</span>];
+        <span class="hljs-keyword">let</span> minRightNum1 = part1 === lengthFirst ? <span class="hljs-title class_">Number</span>.<span class="hljs-property">MAX_SAFE_INTEGER</span> : nums1[part1];
+
+        <span class="hljs-keyword">let</span> maxLeftNum2 = part2 === <span class="hljs-number">0</span> ? <span class="hljs-title class_">Number</span>.<span class="hljs-property">MIN_SAFE_INTEGER</span> : nums2[part2 - <span class="hljs-number">1</span>];
+        <span class="hljs-keyword">let</span> minRightNum2 = part2 === lengthSecond ? <span class="hljs-title class_">Number</span>.<span class="hljs-property">MAX_SAFE_INTEGER</span> : nums2[part2];
+
+        <span class="hljs-keyword">if</span>(maxLeftNum1 &lt;= minRightNum2 &amp;&amp; maxLeftNum2 &lt;= minRightNum1) {
+            <span class="hljs-keyword">if</span>((lengthFirst + lengthSecond) % <span class="hljs-number">2</span> == <span class="hljs-number">0</span>) {
+                <span class="hljs-keyword">return</span> (<span class="hljs-title class_">Math</span>.<span class="hljs-title function_">max</span>(maxLeftNum1, maxLeftNum2) + <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">min</span>(minRightNum1, minRightNum2)) /<span class="hljs-number">2</span>
+            } <span class="hljs-keyword">else</span> {
+                <span class="hljs-keyword">return</span> <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">max</span>(maxLeftNum1, maxLeftNum2);
+            }
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(maxLeftNum1 &gt; minRightNum2) {
+            end = part1 -<span class="hljs-number">1</span>;
+        } <span class="hljs-keyword">else</span> {
+            start = part1 +<span class="hljs-number">1</span>;
+        }
+    }
+};
+</code></pre><p><strong>Step-by-Step solution:</strong></p>
+<ol>
+<li><p>Define a function <code>findMedianSortedArrays</code> that takes two sorted arrays <code>nums1</code> and <code>nums2</code> as input.</p>
+</li>
+<li><p>Check if the length of <code>nums1</code> is greater than the length of <code>nums2</code>. If it is, swap the arrays and recursively call the function to ensure that <code>nums1</code> is always the shorter array.</p>
+</li>
+<li><p>Calculate the lengths of <code>nums1</code> and <code>nums2</code> and store them in <code>lengthFirst</code> and <code>lengthSecond</code> variables.</p>
+</li>
+<li><p>Initialize the <code>start</code> and <code>end</code> pointers for binary search. <code>start</code> will initially be 0, and <code>end</code> will be the length of <code>nums1</code>.</p>
+</li>
+<li><p>Enter a <code>while</code> loop that continues as long as <code>start</code> is less than or equal to <code>end</code>.</p>
+</li>
+<li><p>Inside the loop, calculate the partition points <code>part1</code> and <code>part2</code> for dividing the two arrays. The goal is to find a partition that divides both arrays into two parts such that the maximum element on the left side is smaller than or equal to the minimum element on the right side.</p>
+</li>
+<li><p>Calculate the maximum left elements (<code>maxLeftNum1</code> and <code>maxLeftNum2</code>) and minimum right elements (<code>minRightNum1</code> and <code>minRightNum2</code>) for both arrays based on the calculated partition points.</p>
+</li>
+<li><p>Check if the conditions for a valid partition are met: <code>maxLeftNum1</code> is less than or equal to <code>minRightNum2</code> and <code>maxLeftNum2</code> is less than or equal to <code>minRightNum1</code>. This indicates a valid partition.</p>
+</li>
+<li><p>If the total length of the combined arrays is even, calculate and return the median as the average of the maximum of the left elements and the minimum of the right elements.</p>
+</li>
+<li><p>If the total length is odd, return the maximum of the two left elements as the median.</p>
+</li>
+<li><p>If the valid partition conditions are not met, adjust the <code>start</code> and <code>end</code> pointers based on the comparison between <code>maxLeftNum1</code> and <code>minRightNum2</code>.</p>
+</li>
+<li><p>If <code>maxLeftNum1</code> is greater than <code>minRightNum2</code>, move the <code>end</code> pointer to the left to reduce the partition in <code>nums1</code>.</p>
+</li>
+<li><p>Otherwise, move the <code>start</code> pointer to the right to increase the partition in <code>nums1</code>.</p>
+</li>
+<li><p>After exiting the loop, the function will return the calculated median.</p>
+</li>
+</ol>
+<p><strong>Techniques Used:</strong></p>
+<ol>
+<li><p><strong>Binary Search:</strong> The algorithm uses binary search to find the correct partition points in both arrays.</p>
+</li>
+<li><p><strong>Conditional Statements:</strong> The algorithm uses conditional statements to handle various cases, such as even and odd total lengths of combined arrays, and adjusting partition pointers.</p>
+</li>
+</ol>
+<p><strong>Summary:</strong></p>
+<p>The <code>findMedianSortedArrays</code> function calculates the median of two sorted arrays <code>nums1</code> and <code>nums2</code> using binary search and partitioning. It handles different cases for finding the median of even and odd total lengths of combined arrays and adjusts partition points accordingly. The algorithm returns the calculated median of the two arrays.</p>
+
+  </body>
+  </html>

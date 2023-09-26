@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Holy Theory</title>
+  </head>
+  <body>
+      <h1 id="add-binary">Add binary</h1>
+<pre><code class="hljs language-typescript">
+<span class="hljs-comment">/**
+ * <span class="hljs-doctag">@param</span> {<span class="hljs-type">string</span>} <span class="hljs-variable">a</span>
+ * <span class="hljs-doctag">@param</span> {<span class="hljs-type">string</span>} <span class="hljs-variable">b</span>
+ * <span class="hljs-doctag">@return</span> {<span class="hljs-type">string</span>}
+ */</span>
+<span class="hljs-keyword">var</span> addBinary = <span class="hljs-keyword">function</span>(<span class="hljs-params">a, b</span>) {
+    <span class="hljs-keyword">let</span> result = <span class="hljs-string">&quot;&quot;</span>;
+    <span class="hljs-keyword">let</span> i = a.<span class="hljs-property">length</span> - <span class="hljs-number">1</span>;
+    <span class="hljs-keyword">let</span> j = b.<span class="hljs-property">length</span> - <span class="hljs-number">1</span>;
+    <span class="hljs-keyword">let</span> carry = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">while</span> (i &gt;= <span class="hljs-number">0</span> || j &gt;= <span class="hljs-number">0</span>) {
+        <span class="hljs-keyword">let</span> sum = carry;
+        <span class="hljs-keyword">if</span> (i &gt;= <span class="hljs-number">0</span>) {
+            sum += a[i--] - <span class="hljs-string">&#x27;0&#x27;</span>;
+        }
+        <span class="hljs-keyword">if</span> (j &gt;= <span class="hljs-number">0</span>) {
+            sum += b[j--] - <span class="hljs-string">&#x27;0&#x27;</span>;
+        }
+        result = sum % <span class="hljs-number">2</span> + result;
+        carry = <span class="hljs-built_in">parseInt</span>(sum / <span class="hljs-number">2</span>);
+    }
+    <span class="hljs-keyword">if</span> (carry &gt; <span class="hljs-number">0</span>) {
+        result = <span class="hljs-number">1</span> + result;
+    }
+    <span class="hljs-keyword">return</span> result;
+};
+</code></pre><p>Time complexity: O(n)
+Space complexity: O(n)</p>
+<p>Apologies for the oversight. Here&#39;s the revised explanation of the <code>addBinary</code> code, including a Markdown table for better clarity:</p>
+<p><strong>Solution:</strong></p>
+<p>The provided code solves the task by performing binary addition on the input strings <code>a</code> and <code>b</code>. Here&#39;s a step-by-step breakdown:</p>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>The <code>addBinary</code> function is defined, taking two parameters: <code>a</code> (a binary string) and <code>b</code> (another binary string).</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Several variables are initialized: <ul><li><code>result</code> is initialized as an empty string to store the result of the binary addition.</li><li><code>i</code> is set to the index of the last character in string <code>a</code>.</li><li><code>j</code> is set to the index of the last character in string <code>b</code>.</li><li><code>carry</code> is initialized as 0 to hold the carry value during addition.</li></ul></td>
+</tr>
+<tr>
+<td>3</td>
+<td>A <code>while</code> loop is used to iterate as long as either <code>i</code> or <code>j</code> is greater than or equal to 0.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Inside the <code>while</code> loop, the variable <code>sum</code> is initialized with the value of <code>carry</code>. This represents the current sum at each iteration.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Conditional statements are used to add the respective binary digits of strings <code>a</code> and <code>b</code> to the <code>sum</code>: <ul><li>If <code>i</code> is greater than or equal to 0, the current binary digit from <code>a</code> is added to <code>sum</code> by converting it from a character to a number using the expression <code>a[i--] - &#39;0&#39;</code>.</li><li>If <code>j</code> is greater than or equal to 0, the current binary digit from <code>b</code> is added to <code>sum</code> using the same conversion.</li></ul></td>
+</tr>
+<tr>
+<td>6</td>
+<td>The current binary digit of the sum, obtained by taking the modulo 2 (<code>sum % 2</code>), is concatenated to the left side of the <code>result</code> string.</td>
+</tr>
+<tr>
+<td>7</td>
+<td>The carry value for the next iteration is updated by dividing the sum by 2 and parsing the integer value using <code>parseInt</code>.</td>
+</tr>
+<tr>
+<td>8</td>
+<td>If there is a remaining carry after the <code>while</code> loop ends (i.e., <code>carry &gt; 0</code>), a &#39;1&#39; is concatenated to the left side of the <code>result</code> string.</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Finally, the <code>result</code> string, which represents the sum of the binary strings <code>a</code> and <code>b</code>, is returned.</td>
+</tr>
+</tbody></table>
+<p><strong>Techniques used:</strong></p>
+<p>The following techniques are utilized within the code:</p>
+<ol>
+<li>Iterating over a string using a <code>while</code> loop.</li>
+<li>Accessing characters in a string using indices.</li>
+<li>Converting a character to a number using subtraction (<code>&#39;0&#39;</code>).</li>
+<li>Concatenating strings using the <code>+</code> operator.</li>
+<li>Performing arithmetic operations (addition, modulo, division) on numbers.</li>
+<li>Handling carry values during addition.</li>
+<li>Checking conditions using <code>if</code> statements.</li>
+<li>Updating variables with post-increment (<code>i--</code>) and assignment (<code>=</code>) operations.</li>
+</ol>
+
+  </body>
+  </html>

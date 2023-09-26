@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Holy Theory</title>
+  </head>
+  <body>
+      <h1 id="array-partition">Array Partition</h1>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">arrayPairSum</span>(<span class="hljs-params">nums: <span class="hljs-built_in">number</span>[]</span>): <span class="hljs-built_in">number</span> {
+  nums.<span class="hljs-title function_">sort</span>(<span class="hljs-function">(<span class="hljs-params">a, b</span>) =&gt;</span> a - b);
+  <span class="hljs-keyword">let</span> sum = <span class="hljs-number">0</span>;
+  
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; nums.<span class="hljs-property">length</span>; i += <span class="hljs-number">2</span>) {
+    sum += nums[i];
+  }
+  
+  <span class="hljs-keyword">return</span> sum;
+};
+</code></pre><p><strong>Solution:</strong>
+Below are the step-by-step explanations of the code:</p>
+<ol>
+<li><p>The <code>arrayPairSum</code> function is defined, which takes one parameter:</p>
+<ul>
+<li><code>nums</code>: an array of numbers.</li>
+</ul>
+</li>
+<li><p>The <code>sort</code> method is called on the <code>nums</code> array with a comparator function <code>(a, b) =&gt; a - b</code>. This sorts the array in ascending order.</p>
+</li>
+<li><p>A variable <code>sum</code> is initialized to 0, which will store the sum of the pairs.</p>
+</li>
+<li><p>A <code>for</code> loop is used to iterate over the elements of the <code>nums</code> array with a step size of 2. This means it will process elements at indices 0, 2, 4, and so on.</p>
+</li>
+<li><p>Inside the loop, the current element at index <code>i</code> is added to the <code>sum</code>.</p>
+</li>
+<li><p>The loop continues until <code>i</code> reaches the end of the <code>nums</code> array.</p>
+</li>
+<li><p>Once the loop exits, the final value of <code>sum</code> represents the maximum possible sum of the pairs formed from the array.</p>
+</li>
+<li><p>The <code>sum</code> value is returned as the result.</p>
+</li>
+</ol>
+<p><strong>Techniques used:</strong></p>
+<p>The following techniques are utilized within the code:</p>
+<ol>
+<li>Sorting an array using the <code>sort</code> method with a comparator function.</li>
+<li>Iterating over array elements using a <code>for</code> loop with a step size.</li>
+<li>Accumulating values using the <code>+=</code> operator.</li>
+<li>Returning a calculated result.</li>
+</ol>
+
+  </body>
+  </html>

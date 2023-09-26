@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Holy Theory</title>
+  </head>
+  <body>
+      <h1 id="excel-sheet-column-title">Excel Sheet Column Title</h1>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">convertToTitle</span>(<span class="hljs-params">columnNumber: <span class="hljs-built_in">number</span></span>): <span class="hljs-built_in">string</span> {
+      <span class="hljs-keyword">let</span> <span class="hljs-attr">output</span>: <span class="hljs-built_in">string</span>[] = [];
+        <span class="hljs-keyword">while</span> (columnNumber &gt; <span class="hljs-number">0</span>) {
+            <span class="hljs-keyword">let</span> j = columnNumber % <span class="hljs-number">26</span>;
+            <span class="hljs-keyword">if</span> (j == <span class="hljs-number">0</span>) {
+                output.<span class="hljs-title function_">push</span>(<span class="hljs-string">&quot;Z&quot;</span>);
+                columnNumber = <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">floor</span>(columnNumber / <span class="hljs-number">26</span>) - <span class="hljs-number">1</span>;
+            }
+            <span class="hljs-keyword">else</span> {
+                output.<span class="hljs-title function_">push</span>(<span class="hljs-title class_">String</span>.<span class="hljs-title function_">fromCharCode</span>((j - <span class="hljs-number">1</span>) + <span class="hljs-string">&#x27;A&#x27;</span>.<span class="hljs-title function_">charCodeAt</span>(<span class="hljs-number">0</span>)));
+                columnNumber = <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">floor</span>(columnNumber / <span class="hljs-number">26</span>);
+            }
+        }
+    <span class="hljs-keyword">return</span> output.<span class="hljs-title function_">reverse</span>().<span class="hljs-title function_">join</span>(<span class="hljs-string">&quot;&quot;</span>);
+};
+</code></pre><p><strong>Solution:</strong></p>
+<p>Step-by-step breakdown of the code:</p>
+<ol>
+<li><p><code>let output: string[] = [];</code>: This initializes an empty array called <code>output</code> to store the characters of the Excel sheet column title.</p>
+</li>
+<li><p><code>while (columnNumber &gt; 0) {</code>: This loop continues until the <code>columnNumber</code> becomes 0.</p>
+</li>
+<li><p><code>let j: number = columnNumber % 26;</code>: This calculates the remainder <code>j</code> when <code>columnNumber</code> is divided by 26. The remainder represents the rightmost digit in the Excel sheet column title.</p>
+</li>
+<li><p><code>if (j === 0) {</code>: This condition checks if the remainder <code>j</code> is equal to 0. If it is, it means the rightmost digit should be &#39;Z&#39;, and the columnNumber needs to be adjusted accordingly.</p>
+</li>
+<li><p><code>output.push(&quot;Z&quot;);</code>: If the remainder is 0, &#39;Z&#39; is pushed into the <code>output</code> array.</p>
+</li>
+<li><p><code>columnNumber = Math.floor(columnNumber / 26) - 1;</code>: In this case, the columnNumber is divided by 26, and 1 is subtracted to adjust for the &#39;Z&#39; digit. This step moves the columnNumber to the next left digit.</p>
+</li>
+<li><p><code>else {</code>: If the remainder <code>j</code> is not 0, this branch is executed.</p>
+</li>
+<li><p><code>output.push(String.fromCharCode((j - 1) + &#39;A&#39;.charCodeAt(0)));</code>: This line converts the current digit to its corresponding uppercase English letter and adds it to the <code>output</code> array. The calculation <code>(j - 1) + &#39;A&#39;.charCodeAt(0)</code> maps the remainder <code>j</code> to the ASCII code of the corresponding uppercase English letter. The <code>String.fromCharCode()</code> method converts the ASCII code to a character.</p>
+</li>
+<li><p><code>columnNumber = Math.floor(columnNumber / 26);</code>: This step moves the columnNumber to the next left digit.</p>
+</li>
+<li><p>After processing all the digits in the columnNumber, the loop ends, and the function returns the Excel sheet column title.</p>
+</li>
+<li><p><code>return output.reverse().join(&quot;&quot;);</code>: The function reverses the <code>output</code> array (as we processed the digits from right to left) and joins the characters to form the final Excel sheet column title.</p>
+</li>
+</ol>
+<p>Summary:</p>
+<p>The provided TypeScript function <code>convertToTitle</code> takes a column number as input and converts it to the corresponding Excel sheet column title represented by uppercase English letters.</p>
+<p>Techniques used:</p>
+<ol>
+<li><p>TypeScript: The code is written in the TypeScript programming language, which is a superset of JavaScript with added type annotations.</p>
+</li>
+<li><p>Loop: The code uses a <code>while</code> loop to process the digits in the columnNumber and convert them to the corresponding Excel sheet column title characters.</p>
+</li>
+<li><p>Array: The <code>output</code> array is used to store the characters of the Excel sheet column title before joining them into a string.</p>
+</li>
+<li><p>String.fromCharCode(): The <code>String.fromCharCode()</code> method is used to convert ASCII codes to characters and get the corresponding uppercase English letters.</p>
+</li>
+<li><p>Math.floor(): The <code>Math.floor()</code> method is used to round down the division result when calculating the next left digit in the columnNumber.</p>
+</li>
+</ol>
+
+  </body>
+  </html>
