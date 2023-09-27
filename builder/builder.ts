@@ -3,6 +3,7 @@ import * as path from "path";
 import { buildHeader, buildLink, buildList, htmlPageWrapper } from "./ui";
 import { marked } from "./libs/marked";
 import { cleanContent } from "./libs/utils";
+import { LanguageMap } from "./libs/language-map";
 
 interface Entry {
   title: string;
@@ -75,6 +76,8 @@ async function generateStaticMD(
 
   const allContentWithSections: Entry[] = [];
 
+  const lm = new LanguageMap();
+
   for (const folder of folders) {
     const folderPath = path.join(rootFolder, folder);
     if (fs.statSync(folderPath).isDirectory()) {
@@ -90,6 +93,10 @@ async function generateStaticMD(
         if (path.extname(file) === ".md") {
           const markdownContent = await fs.readFile(filePath, "utf-8");
           const { metadata, content }: any = parseMd(markdownContent);
+
+          if (type === "html" && metadata.languages?.length > 0) {
+            lm.setFromArr(metadata.languages);
+          }
 
           const entryName = file.replace(/\.[^.]+$/, "");
           const entryLink = `./${entryName}.` + type;

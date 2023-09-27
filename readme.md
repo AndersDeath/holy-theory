@@ -1,4 +1,4 @@
-# Holy Theory 
+# Holy Theory
 
 ## algorithms
 

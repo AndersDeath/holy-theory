@@ -1,5 +1,5 @@
 import { Builder } from "./builder";
 
-// Builder('md');
+Builder('md');
 
 Builder('html');

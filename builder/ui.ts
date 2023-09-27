@@ -11,7 +11,7 @@ export function buildList(content, type: string) {
 }
 
 export function buildHeader(content, level: number, type: string) {
-  if (type === "md") return Array(level).fill("#") + " " + content;
+  if (type === "md") return Array(level).fill("#").join('') + " " + content;
   if (type === "html") return `<h${level}>${content}</h${level}>`;
   return "";
 }
