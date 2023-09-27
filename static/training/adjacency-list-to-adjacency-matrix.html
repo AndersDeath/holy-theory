@@ -6,54 +6,6 @@
       <title>Holy Theory</title>
   </head>
   <body>
-      <h1 id="adjacency-list-to-adjacency-matrix">Adjacency list to adjacency matrix</h1>
-<pre><code class="hljs language-java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {
-    <span class="hljs-type">int</span>[][] adjListToMatrix(<span class="hljs-type">int</span> n, ArrayList&lt;Integer&gt;[] adjList) {
-        <span class="hljs-type">int</span> [][] matrix = <span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[n][n];
-
-        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt; n; i++) {
-            <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> <span class="hljs-variable">j</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; j &lt; adjList[i].size(); j++) {
-                matrix[i][adjList[i].get(j)] = <span class="hljs-number">1</span>;
-            }
-        }
-        
-        <span class="hljs-keyword">return</span> matrix;
-    }
-}
-</code></pre><p><strong>Solution:</strong>
-Below are the step-by-step explanations of the code:</p>
-<ol>
-<li><p>The <code>Solution</code> class is defined, containing the <code>adjListToMatrix</code> method.</p>
-</li>
-<li><p>The <code>adjListToMatrix</code> method takes two parameters:</p>
-<ul>
-<li><code>n</code>: an integer representing the number of nodes in the graph.</li>
-<li><code>adjList</code>: an array of <code>ArrayList&lt;Integer&gt;</code> representing the adjacency list of the graph.</li>
-</ul>
-</li>
-<li><p>A 2D array, <code>matrix</code>, is initialized with dimensions <code>n</code> × <code>n</code>. It will hold the adjacency matrix representation of the graph.</p>
-</li>
-<li><p>Two nested <code>for</code> loops are used to iterate over each node in the adjacency list and its corresponding neighbors.</p>
-</li>
-<li><p>The outer loop iterates from 0 to <code>n-1</code>, representing each node in the graph.</p>
-</li>
-<li><p>The inner loop iterates over the neighbors of the current node, accessed through <code>adjList[i]</code>, where <code>i</code> is the index of the current node.</p>
-</li>
-<li><p>For each neighbor, the corresponding entry in the <code>matrix</code> is set to 1 to indicate an edge between the current node and its neighbor.</p>
-</li>
-<li><p>After the nested loops finish, the completed <code>matrix</code> representing the adjacency matrix is returned.</p>
-</li>
-</ol>
-<p><strong>Techniques used:</strong></p>
-<p>The following techniques are utilized within the code:</p>
-<ol>
-<li>Iterating over arrays using <code>for</code> loops.</li>
-<li>Accessing elements of an array using indices.</li>
-<li>Accessing elements of an <code>ArrayList</code> using the <code>get</code> method.</li>
-<li>Constructing a 2D array with specified dimensions.</li>
-<li>Assigning values to elements of a 2D array.</li>
-<li>Converting an adjacency list representation to an adjacency matrix representation.</li>
-</ol>
-
+      
   </body>
   </html>

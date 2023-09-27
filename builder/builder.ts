@@ -1,26 +1,16 @@
 import * as fs from "fs-extra";
 import * as path from "path";
-import { buildHeader, buildLink, buildList, htmlPageWrapper } from "./ui";
+import {
+  buildHeader,
+  buildLink,
+  buildList,
+  buildListItems,
+  htmlPageWrapper,
+} from "./ui";
 import { marked } from "./libs/marked";
 import { cleanContent } from "./libs/utils";
 import { LanguageMap } from "./libs/language-map";
-
-interface Entry {
-  title: string;
-  link: string;
-  section?: string;
-  entryLink: string;
-}
-
-async function generateTableOfContents(
-  entries: Entry[],
-  type = "md"
-): Promise<string> {
-  const listItems = entries.map((entry) =>
-    buildList(buildLink(entry.title, entry.entryLink, type), type)
-  );
-  return listItems.join("\n");
-}
+import { Entry } from "./interfaces";
 
 function generateSectionReadmes(
   contentBySection: Record<string, string[]>,
@@ -28,19 +18,15 @@ function generateSectionReadmes(
 ): string {
   return Object.keys(contentBySection)
     .map((section) => {
-      let sectionContent = contentBySection[section].join("\n");
-
-      if (type === "html") {
-        sectionContent = `<ul>${sectionContent}</ul>`;
-      }
+      const sectionContent = contentBySection[section].join("\n");
       return `${buildHeader(section, 2, type)}\n\n${sectionContent}`;
     })
     .join("\n\n");
 }
 
 const generateGlobalIndex = async (
-  allContentWithSections,
-  outputPath,
+  allContentWithSections: Entry[],
+  outputPath: string,
   type = "md"
 ) => {
   const globalReadmeContent = allContentWithSections.reduce((acc, entry) => {
@@ -49,7 +35,7 @@ const generateGlobalIndex = async (
         acc[entry.section] = [];
       }
       acc[entry.section].push(
-        buildList(buildLink(entry.title, entry.link, type), type)
+        buildListItems(buildLink(entry.title, entry.link, type), type)
       );
     }
     return acc;
@@ -129,7 +115,7 @@ async function generateStaticMD(
         }
       }
 
-      const sectionContent = await generateTableOfContents(
+      const sectionContent = await buildList(
         allContentWithSections.filter((e: Entry) => e.section === sectionName),
         type
       );
