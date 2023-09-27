@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Holy Theory</title>
+  </head>
+  <body>
+      <h1 id="browser-url-search">Browser URL Search</h1>
+<h2 id="question">Question</h2>
+<p>A person settled in front of their laptop, launching a browser before typing a URL into the search bar. What unfolds within the browser at the network level following this action?</p>
+<p><img src="https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/12-browser-url-search.png" alt="Browser URL Search"></p>
+<h2 id="answer">Answer</h2>
+<ol>
+<li><p><strong>URL Parsing:</strong> When a user enters a URL into the browser&#39;s search bar, the browser parses the URL to extract components like the protocol (e.g., &quot;https&quot;), the domain name (e.g., &quot;<a href="http://www.example.com">www.example.com</a>&quot;), and the path (e.g., &quot;/page&quot;). The browser also checks the URL&#39;s validity.</p>
+</li>
+<li><p><strong>DNS Resolution:</strong> To find the IP address associated with the domain name, the browser queries a DNS (Domain Name System) server. This process involves multiple steps, potentially starting with the local cache and progressing to the ISP&#39;s DNS server and authoritative DNS servers for the domain.</p>
+</li>
+<li><p><strong>TCP/IP Connection:</strong> The browser initiates a secure TCP connection using TLS (Transport Layer Security) to the IP address of the web server hosting the website. A process known as the TLS handshake occurs, involving encryption negotiation, key exchange, and verification to establish a secure connection.</p>
+</li>
+<li><p><strong>HTTPs Request:</strong> With the secure connection established, the browser sends an HTTPS (HTTP Secure) request to the web server. The request includes the HTTP method (e.g., GET, POST), headers (including user agent information), and the requested path.</p>
+</li>
+<li><p><strong>Server Processing:</strong> The web server receives the HTTPS request, processes it, and generates an appropriate HTTPS response. This response includes a status code (e.g., 200 OK), headers (e.g., content type), and the requested content (HTML, images, etc.).</p>
+</li>
+<li><p><strong>TCP/IP Data Transfer:</strong> The server sends the HTTPS response back to the browser over the established encrypted TCP connection.</p>
+</li>
+<li><p><strong>Rendering and Display:</strong> The browser receives the response, interprets the HTML content, and renders the page. Additional resources referenced in the HTML (such as images, stylesheets, and JavaScript files) are fetched over the secure connection and processed similarly.</p>
+</li>
+<li><p><strong>Page Interaction:</strong> Users interact with the rendered page, which may involve actions like clicking links or submitting forms. These actions trigger additional HTTPS requests for resources and data.</p>
+</li>
+<li><p><strong>Caching:</strong> The browser may cache certain resources for improved performance during subsequent visits. Cached resources are reused to load pages faster.</p>
+</li>
+<li><p><strong>Connection Termination:</strong> When the user closes the browser tab or navigates away from the page, the browser may gracefully terminate the encrypted TCP connection, involving a process to ensure proper closure.</p>
+</li>
+</ol>
+<p>It&#39;s important to note that the use of HTTPS adds an extra layer of security through encryption, helping to protect the confidentiality and integrity of the data exchanged between the browser and the web server.</p>
+
+  </body>
+  </html>

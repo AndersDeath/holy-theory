@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Holy Theory</title>
+  </head>
+  <body>
+      <h1 id="teemo-attacking">Teemo Attacking</h1>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">findPoisonedDuration</span>(<span class="hljs-params">timeSeries: <span class="hljs-built_in">number</span>[], duration: <span class="hljs-built_in">number</span></span>): <span class="hljs-built_in">number</span> {
+  <span class="hljs-keyword">if</span> (timeSeries.<span class="hljs-property">length</span> === <span class="hljs-number">0</span>) {
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+  }
+
+  <span class="hljs-keyword">let</span> totalDuration = <span class="hljs-number">0</span>;
+  <span class="hljs-keyword">let</span> prevAttackEnd = timeSeries[<span class="hljs-number">0</span>] + duration;
+
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">1</span>; i &lt; timeSeries.<span class="hljs-property">length</span>; i++) {
+    <span class="hljs-keyword">const</span> currentAttackEnd = timeSeries[i] + duration;
+    totalDuration += <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">min</span>(currentAttackEnd - prevAttackEnd, duration);
+    prevAttackEnd = currentAttackEnd;
+  }
+
+  <span class="hljs-keyword">return</span> totalDuration + duration;
+}
+</code></pre><p><strong>Description:</strong></p>
+<ol>
+<li><p><strong>Input and Output</strong>:</p>
+<ul>
+<li>The <code>findPoisonedDuration</code> function takes two parameters: an array <code>timeSeries</code> representing the times of attacks and an integer <code>duration</code> representing the duration of each attack.</li>
+<li>It returns the total poisoned duration caused by the attacks.</li>
+</ul>
+</li>
+<li><p><strong>Base Case and Initialization</strong>:</p>
+<ul>
+<li>If there are no attacks (the <code>timeSeries</code> array is empty), the function immediately returns 0, as there&#39;s no poison duration.</li>
+</ul>
+</li>
+<li><p><strong>Calculating Total Duration</strong>:</p>
+<ul>
+<li>The loop iterates through the <code>timeSeries</code> array starting from the second attack (<code>i = 1</code>).</li>
+<li>For each attack, it calculates the end time of the current attack by adding the attack time to the attack duration. This is stored in <code>currentAttackEnd</code>.</li>
+</ul>
+</li>
+<li><p><strong>Incrementing Total Duration</strong>:</p>
+<ul>
+<li>It then calculates the poisoned duration caused by the current attack using <code>Math.min(currentAttackEnd - prevAttackEnd, duration)</code>. This ensures that the duration doesn&#39;t exceed the actual attack duration.</li>
+<li>The calculated poisoned duration is added to the <code>totalDuration</code>.</li>
+</ul>
+</li>
+<li><p><strong>Updating Previous Attack End</strong>:</p>
+<ul>
+<li>The <code>prevAttackEnd</code> is updated with the <code>currentAttackEnd</code> so that it&#39;s ready for the next iteration.</li>
+</ul>
+</li>
+<li><p><strong>Final Calculation</strong>:</p>
+<ul>
+<li>After the loop, the code returns the <code>totalDuration</code> plus the <code>duration</code> of the last attack. This is done to account for the full duration of the last attack.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Techniques used:</strong></p>
+<ul>
+<li>Looping through arrays and tracking indices.</li>
+<li>Basic mathematical calculations for calculating attack end times and durations.</li>
+<li>Efficient use of the <code>Math.min</code> function to calculate poisoned durations without exceeding attack durations.</li>
+<li>Handling base cases for empty input arrays.</li>
+</ul>
+<p><strong>Example:</strong></p>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">const</span> timeSeries = [<span class="hljs-number">1</span>, <span class="hljs-number">4</span>, <span class="hljs-number">7</span>];
+<span class="hljs-keyword">const</span> duration = <span class="hljs-number">3</span>;
+<span class="hljs-keyword">const</span> result = <span class="hljs-title function_">findPoisonedDuration</span>(timeSeries, duration);
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(result); <span class="hljs-comment">// Output: 9</span>
+</code></pre><p>This code efficiently calculates the total poisoned duration caused by a series of attacks with given durations.</p>
+<ul>
+<li><a href="../readme.md">Go back</a></li>
+</ul>
+
+  </body>
+  </html>

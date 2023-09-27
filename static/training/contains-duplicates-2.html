@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Holy Theory</title>
+  </head>
+  <body>
+      <h1 id="contains-duplicates-2">Contains Duplicates 2</h1>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">containsNearbyDuplicate</span>(<span class="hljs-params">nums: <span class="hljs-built_in">number</span>[], k: <span class="hljs-built_in">number</span></span>): <span class="hljs-built_in">boolean</span> {
+    <span class="hljs-keyword">const</span> <span class="hljs-attr">seen</span>: <span class="hljs-built_in">any</span> = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Map</span>();
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; nums.<span class="hljs-property">length</span>; ++i) {
+      <span class="hljs-keyword">if</span> (i - seen.<span class="hljs-title function_">get</span>(nums[i]) &lt;= k) {
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+      }
+        seen.<span class="hljs-title function_">set</span>(nums[i], i);
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+};
+</code></pre><p><strong>Solution:</strong>
+Below is the step-by-step breakdown of the code:</p>
+<ol>
+<li><p>The <code>containsNearbyDuplicate</code> function takes an array <code>nums</code> and a distance <code>k</code> as input.</p>
+</li>
+<li><p>A <code>Map</code> object named <code>seen</code> is initialized to keep track of previously seen elements and their indices.</p>
+</li>
+<li><p>A <code>for</code> loop is used to iterate over the elements of the <code>nums</code> array.</p>
+</li>
+<li><p>For each element at index <code>i</code>, the code checks if there exists a previous occurrence of the same element within the distance <code>k</code> from the current index. This is done by retrieving the index of the previous occurrence from the <code>seen</code> Map using <code>seen.get(nums[i])</code> and comparing it with the current index <code>i</code>.</p>
+</li>
+<li><p>If the condition <code>i - seen.get(nums[i]) &lt;= k</code> is satisfied, it means that a duplicate element within the given distance <code>k</code> has been found. In such a case, the function returns <code>true</code> to indicate the presence of nearby duplicates.</p>
+</li>
+<li><p>If no duplicate element is found within the distance <code>k</code>, the current element and its index <code>i</code> are added to the <code>seen</code> Map using <code>seen.set(nums[i], i)</code>. This allows tracking of the latest occurrence of each element.</p>
+</li>
+<li><p>Once the loop completes without finding any duplicates, the function returns <code>false</code> to indicate the absence of nearby duplicates.</p>
+</li>
+</ol>
+<p><strong>Techniques used:</strong></p>
+<p>The following techniques are utilized within the code:</p>
+<ol>
+<li><p>Map data structure: A <code>Map</code> object named <code>seen</code> is used to store previously seen elements and their indices, allowing efficient lookup and retrieval.</p>
+</li>
+<li><p>Iteration: The <code>for</code> loop is used to iterate over the elements of the <code>nums</code> array.</p>
+</li>
+<li><p>Conditional branching: An <code>if</code> statement is used to check the condition <code>i - seen.get(nums[i]) &lt;= k</code> and determine whether a duplicate element within the specified distance <code>k</code> has been found.</p>
+</li>
+<li><p>Index retrieval and comparison: The code retrieves the index of a previously seen element using <code>seen.get(nums[i])</code> and compares it with the current index <code>i</code> to check the distance between occurrences.</p>
+</li>
+<li><p>Element and index tracking: The code updates the <code>seen</code> Map with the latest occurrence of each element and its index using <code>seen.set(nums[i], i)</code>.</p>
+</li>
+</ol>
+<p>The provided solution efficiently checks for nearby duplicates by utilizing a <code>Map</code> data structure to store previously seen elements and their indices. By iterating over the array and comparing indices, the algorithm determines whether there are any duplicate elements within the specified distance <code>k</code>.</p>
+<p>The time complexity of this solution is O(n), where n is the length of the <code>nums</code> array, since it requires iterating over the entire array. The space complexity is also O(n) due to the usage of the <code>seen</code> Map to store elements and their indices.</p>
+<p><strong>Source: <a href="https://leetcode.com">https://leetcode.com</a></strong></p>
+
+  </body>
+  </html>

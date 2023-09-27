@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Holy Theory</title>
+  </head>
+  <body>
+      <h1 id="isomorphic-strings">Isomorphic Strings</h1>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">isIsomorphic</span>(<span class="hljs-params">s: <span class="hljs-built_in">string</span>, t: <span class="hljs-built_in">string</span></span>): <span class="hljs-built_in">boolean</span> {
+       <span class="hljs-keyword">if</span>(s.<span class="hljs-property">length</span> != t.<span class="hljs-property">length</span>) <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+        <span class="hljs-keyword">const</span> m1 = [];
+        <span class="hljs-keyword">const</span> m2 = [];
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> i=<span class="hljs-number">0</span>; i&lt; s.<span class="hljs-property">length</span>; i++){
+            <span class="hljs-keyword">if</span>(m1[s[i]] != m2[t[i]]) <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+
+            m1[s[i]] = i+<span class="hljs-number">1</span>;
+            m2[t[i]] = i+<span class="hljs-number">1</span>;
+        }
+
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+};
+</code></pre><p>The code is a TypeScript function that determines whether two strings, <code>s</code> and <code>t</code>, are isomorphic. Two strings are considered isomorphic if there is a one-to-one mapping of characters between them such that each character in string <code>s</code> can be replaced by a corresponding character in string <code>t</code>.</p>
+<p>Here&#39;s a step-by-step explanation of the code:</p>
+<ol>
+<li><p>The function <code>isIsomorphic</code> takes two string parameters: <code>s</code> and <code>t</code>.</p>
+</li>
+<li><p>It first checks if the lengths of the two strings are not equal. If they have different lengths, the function immediately returns <code>false</code>, as two strings with different lengths cannot be isomorphic.</p>
+</li>
+<li><p>It initializes two arrays, <code>m1</code> and <code>m2</code>, to keep track of the mappings of characters between the two strings. The indices of the arrays represent characters in the strings, and the values represent the corresponding indices where these characters were last seen.</p>
+</li>
+<li><p>The function then iterates through each character in the strings using a <code>for</code> loop.</p>
+</li>
+<li><p>Inside the loop, it checks if the mappings of the current characters in <code>s</code> and <code>t</code> are not the same. If they are not the same, it means that the characters do not follow the one-to-one mapping, and the function returns <code>false</code>.</p>
+</li>
+<li><p>If the mappings of the characters are the same, the function updates the mappings in arrays <code>m1</code> and <code>m2</code>. It assigns the current index <code>i + 1</code> to the character in both arrays. Adding 1 to the index ensures that a mapping value of 0 (which is the default) is not confused with a valid index.</p>
+</li>
+<li><p>After iterating through all characters, the function returns <code>true</code>, indicating that the two strings are indeed isomorphic.</p>
+</li>
+</ol>
+<p>Techniques used in this code include:</p>
+<ul>
+<li>Iterating through strings using a <code>for</code> loop.</li>
+<li>Using arrays to store character mappings between the two strings.</li>
+<li>Conditional statements to check character mappings and determine isomorphism.</li>
+</ul>
+
+  </body>
+  </html>

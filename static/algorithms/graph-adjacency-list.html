@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Holy Theory</title>
+  </head>
+  <body>
+      <h1 id="graph-adjacency-list">Graph adjacency list</h1>
+<pre><code class="hljs language-java">
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">GraphList</span> {
+    
+    ArrayList&lt;LinkedList&lt;Node&gt;&gt; alist;
+
+    
+    GraphList() {
+        alist = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ArrayList</span>&lt;&gt;();
+    }
+    
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">addNode</span><span class="hljs-params">(Node node)</span> {
+        LinkedList&lt;Node&gt; currentList = <span class="hljs-keyword">new</span> <span class="hljs-title class_">LinkedList</span>&lt;&gt;();
+        currentList.add(node);
+        alist.add(currentList);
+    }
+    
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">addEdge</span><span class="hljs-params">(<span class="hljs-type">int</span> src, <span class="hljs-type">int</span> dst)</span> {
+        LinkedList&lt;Node&gt; currentList = alist.get(src);
+        <span class="hljs-type">Node</span> <span class="hljs-variable">dstNode</span> <span class="hljs-operator">=</span> alist.get(dst).get(<span class="hljs-number">0</span>);
+        currentList.add(dstNode);
+        
+    }
+    <span class="hljs-keyword">public</span> <span class="hljs-type">boolean</span> <span class="hljs-title function_">checkEdge</span><span class="hljs-params">(<span class="hljs-type">int</span> src, <span class="hljs-type">int</span> dst)</span> {
+        LinkedList&lt;Node&gt; currentList = alist.get(src);
+        <span class="hljs-type">Node</span> <span class="hljs-variable">dstNode</span> <span class="hljs-operator">=</span> alist.get(dst).get(<span class="hljs-number">0</span>);
+        
+        <span class="hljs-keyword">for</span>(Node node: currentList) {
+            <span class="hljs-keyword">if</span>(node == dstNode) {
+                <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+            }
+        }
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+        
+    }
+    
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">print</span><span class="hljs-params">()</span> {
+        <span class="hljs-keyword">for</span>(LinkedList&lt;Node&gt; currentList : alist) {
+            <span class="hljs-keyword">for</span>(Node node: currentList) {
+                System.out.print(node.data + <span class="hljs-string">&quot; -&gt; &quot;</span>);
+            }
+            System.out.println();
+        }
+    }
+}
+</code></pre>
+  </body>
+  </html>

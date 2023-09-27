@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Holy Theory</title>
+  </head>
+  <body>
+      <h1 id="symmetric-difference">Symmetric difference</h1>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> <span class="hljs-title function_">symmetricDifference</span> = (<span class="hljs-params">...args: <span class="hljs-built_in">any</span></span>) =&gt; [
+  ...<span class="hljs-keyword">new</span> <span class="hljs-title class_">Set</span>(
+    args.<span class="hljs-title function_">reduce</span>(<span class="hljs-function">(<span class="hljs-params">arr1: <span class="hljs-built_in">any</span>, arr2: <span class="hljs-built_in">any</span></span>) =&gt;</span> [
+      ...arr1.<span class="hljs-title function_">filter</span>(<span class="hljs-function">(<span class="hljs-params">e: <span class="hljs-built_in">any</span></span>) =&gt;</span> !arr2.<span class="hljs-title function_">includes</span>(e)),
+      ...arr2.<span class="hljs-title function_">filter</span>(<span class="hljs-function">(<span class="hljs-params">e: <span class="hljs-built_in">any</span></span>) =&gt;</span> !arr1.<span class="hljs-title function_">includes</span>(e)),
+    ])
+  ),
+];
+</code></pre><p><strong>Description:</strong></p>
+<ol>
+<li><p><strong>Input and Output</strong>:</p>
+<ul>
+<li>The <code>symmetricDifference</code> function takes multiple arrays as input using the rest parameter <code>...args</code>.</li>
+<li>It returns an array containing the symmetric difference of all input arrays.</li>
+</ul>
+</li>
+<li><p><strong>Reduce and Filter</strong>:</p>
+<ul>
+<li>The <code>args.reduce</code> function is used to iterate through each pair of arrays and compute their symmetric difference.</li>
+<li>The symmetric difference of two arrays is calculated by:<ul>
+<li>Filtering elements that are in the first array but not in the second array.</li>
+<li>Filtering elements that are in the second array but not in the first array.</li>
+</ul>
+</li>
+<li>The results of both filter operations are concatenated using the spread operator.</li>
+</ul>
+</li>
+<li><p><strong>Using Set</strong>:</p>
+<ul>
+<li>The <code>new Set()</code> constructor is used to create a Set containing the concatenated symmetric differences.</li>
+<li>A Set is chosen to eliminate duplicates from the result.</li>
+</ul>
+</li>
+<li><p><strong>Returning Result</strong>:</p>
+<ul>
+<li>The spread operator (<code>...</code>) is used to convert the Set back into an array.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Techniques used:</strong></p>
+<ol>
+<li>Rest parameter to accept a variable number of arguments.</li>
+<li>Using <code>reduce</code> to iterate and accumulate results.</li>
+<li>Using <code>filter</code> to compute symmetric differences.</li>
+<li>Using a <code>Set</code> to eliminate duplicates.</li>
+<li>Using the spread operator to convert a Set back to an array.</li>
+</ol>
+<p><strong>Example:</strong></p>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">const</span> result = <span class="hljs-title function_">symmetricDifference</span>([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>], [<span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>], [<span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>]);
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(result); <span class="hljs-comment">// Output: [1, 5]</span>
+</code></pre><p>This code efficiently computes the symmetric difference of multiple arrays using JavaScript&#39;s array manipulation techniques.</p>
+<ul>
+<li><a href="../readme.md">Go back</a></li>
+</ul>
+
+  </body>
+  </html>

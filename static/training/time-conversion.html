@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Holy Theory</title>
+  </head>
+  <body>
+      <h1 id="time-conversion">Time conversion</h1>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">timeConversion</span>(<span class="hljs-params">s: <span class="hljs-built_in">string</span></span>): <span class="hljs-built_in">string</span> {
+  <span class="hljs-keyword">const</span> strArr = s.<span class="hljs-title function_">split</span>(<span class="hljs-string">&quot;:&quot;</span>);
+  <span class="hljs-keyword">const</span> modifier = strArr[<span class="hljs-number">2</span>].<span class="hljs-title function_">slice</span>(-<span class="hljs-number">2</span>);
+  <span class="hljs-keyword">let</span> hours = strArr[<span class="hljs-number">0</span>];
+  <span class="hljs-keyword">if</span> (modifier === <span class="hljs-string">&quot;PM&quot;</span> &amp;&amp; strArr[<span class="hljs-number">0</span>] !== <span class="hljs-string">&quot;12&quot;</span>) {
+    hours = +strArr[<span class="hljs-number">0</span>] + <span class="hljs-number">12</span> + <span class="hljs-string">&quot;&quot;</span>;
+  }
+  <span class="hljs-keyword">if</span> (modifier === <span class="hljs-string">&quot;AM&quot;</span> &amp;&amp; strArr[<span class="hljs-number">0</span>] === <span class="hljs-string">&quot;12&quot;</span>) {
+    hours = <span class="hljs-string">&quot;00&quot;</span>;
+  }
+  <span class="hljs-keyword">return</span> <span class="hljs-string">`<span class="hljs-subst">${hours}</span>:<span class="hljs-subst">${strArr[<span class="hljs-number">1</span>]}</span>:<span class="hljs-subst">${strArr[<span class="hljs-number">2</span>].slice(<span class="hljs-number">0</span>, -<span class="hljs-number">2</span>)}</span>`</span>;
+}
+</code></pre><ul>
+<li><p><strong>Input</strong>: A time string in 12-hour format (<code>s</code>).</p>
+</li>
+<li><p><strong>Output</strong>: The corresponding time in 24-hour format.</p>
+</li>
+</ul>
+<ol>
+<li><p><strong>Split the Time String</strong>:</p>
+<ul>
+<li>Split the input time string <code>s</code> using the colon (<code>:</code>) delimiter.</li>
+<li>Create an array <code>strArr</code> containing hours, minutes, and seconds.</li>
+</ul>
+</li>
+<li><p><strong>Extract the Modifier (AM/PM)</strong>:</p>
+<ul>
+<li>Get the last two characters of the seconds component to determine if it&#39;s &quot;AM&quot; or &quot;PM&quot;.</li>
+<li>Store the modifier in the <code>modifier</code> variable.</li>
+</ul>
+</li>
+<li><p><strong>Convert Hours for PM</strong>:</p>
+<ul>
+<li>If the modifier is &quot;PM&quot; and the hours are not already 12, add 12 to the hours.</li>
+<li>Convert the hours to a number using <code>+</code>, add 12, and convert it back to a string.</li>
+</ul>
+</li>
+<li><p><strong>Convert Hours for AM</strong>:</p>
+<ul>
+<li>If the modifier is &quot;AM&quot; and the hours are 12, set the hours to &quot;00&quot;.</li>
+</ul>
+</li>
+<li><p><strong>Compose and Return the New Time String</strong>:</p>
+<ul>
+<li>Construct a new time string using the modified hours, original minutes, and seconds (excluding the modifier).</li>
+</ul>
+</li>
+</ol>
+<p><strong>Techniques Used</strong>:</p>
+<ul>
+<li><strong>String Splitting</strong>: The input time string is split into an array.</li>
+<li><strong>Conditional Statements</strong>: Used to handle AM and PM cases and modify the hours accordingly.</li>
+<li><strong>String Manipulation</strong>: Creating the final time string by composing different parts.</li>
+</ul>
+<p><strong>Algorithm</strong>:</p>
+<ol>
+<li>Split the input time string into an array of hours, minutes, and seconds.</li>
+<li>Determine the AM/PM modifier.</li>
+<li>Convert hours according to the modifier.</li>
+<li>If AM and hours are 12, set hours to &quot;00&quot;.</li>
+<li>Compose the new time string using the modified hours, original minutes, and seconds.</li>
+</ol>
+<p><strong>Time Complexity</strong>:</p>
+<ul>
+<li>String splitting and manipulation: O(1)</li>
+</ul>
+<p><strong>Space Complexity</strong>:</p>
+<ul>
+<li>Space for the <code>strArr</code> array: O(1)</li>
+<li>Other variables: O(1)</li>
+</ul>
+<p>Overall space complexity: O(1)</p>
+<ul>
+<li><a href="../readme.md">Go back</a></li>
+</ul>
+
+  </body>
+  </html>

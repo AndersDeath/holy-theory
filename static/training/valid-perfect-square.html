@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Holy Theory</title>
+  </head>
+  <body>
+      <h1 id="valid-perfect-square">Valid Perfect Square</h1>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">isPerfectSquare</span>(<span class="hljs-params">num: <span class="hljs-built_in">number</span></span>): <span class="hljs-built_in">boolean</span> {
+  <span class="hljs-keyword">let</span> i = <span class="hljs-number">1</span>;
+  <span class="hljs-keyword">while</span> (num &gt; <span class="hljs-number">0</span>) {
+    num -= i;
+    i += <span class="hljs-number">2</span>;
+  }
+  <span class="hljs-keyword">return</span> num == <span class="hljs-number">0</span>;
+}
+</code></pre><ul>
+<li><p><strong>Input</strong>: </p>
+<ul>
+<li><code>num</code>: A non-negative integer.</li>
+</ul>
+</li>
+<li><p><strong>Output</strong>:</p>
+<ul>
+<li>A boolean value indicating whether the given number is a perfect square.</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li><p><strong>Initialization</strong>:</p>
+<ul>
+<li>Initialize a variable <code>i</code> with the value 1. This variable will be used to generate consecutive odd numbers.</li>
+</ul>
+</li>
+<li><p><strong>Loop to Subtract Odd Numbers</strong>:</p>
+<ul>
+<li>Enter a loop while <code>num</code> is greater than 0.</li>
+<li>In each iteration, subtract the current value of <code>i</code> from <code>num</code>.</li>
+<li>Increment <code>i</code> by 2 in each iteration to get the next odd number (1, 3, 5, ...).</li>
+</ul>
+</li>
+<li><p><strong>Check for Perfect Square</strong>:</p>
+<ul>
+<li>After the loop, check if <code>num</code> is equal to 0.</li>
+<li>If <code>num</code> is 0, return <code>true</code> indicating that the input number is a perfect square.</li>
+<li>If <code>num</code> is not 0, return <code>false</code> indicating that the input number is not a perfect square.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Techniques Used</strong>:</p>
+<ul>
+<li><strong>Mathematical Pattern</strong>: The code uses a mathematical pattern based on odd numbers to determine whether the input number is a perfect square.</li>
+</ul>
+<p><strong>Algorithm</strong>:</p>
+<ol>
+<li><p>Initialize <code>i</code> to 1.</p>
+</li>
+<li><p>Enter a loop while <code>num</code> is greater than 0.</p>
+<ul>
+<li>Subtract the current value of <code>i</code> from <code>num</code>.</li>
+<li>Increment <code>i</code> by 2 to get the next odd number.</li>
+</ul>
+</li>
+<li><p>After the loop, check if <code>num</code> is 0.</p>
+<ul>
+<li>If <code>num</code> is 0, return <code>true</code> as the input number is a perfect square.</li>
+<li>If <code>num</code> is not 0, return <code>false</code> as the input number is not a perfect square.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Time Complexity</strong>:</p>
+<ul>
+<li>The time complexity of this code is O(sqrt(n)), where <code>n</code> is the input number. This is because the loop runs until <code>num</code> becomes 0, and in the worst case, <code>num</code> can be reduced to 0 by subtracting at most sqrt(n) odd numbers.</li>
+</ul>
+<p><strong>Space Complexity</strong>:</p>
+<ul>
+<li>The space complexity is O(1) as only a constant amount of extra space is used for the variable <code>i</code>.</li>
+</ul>
+
+  </body>
+  </html>

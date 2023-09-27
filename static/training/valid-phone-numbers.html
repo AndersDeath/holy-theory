@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Holy Theory</title>
+  </head>
+  <body>
+      <h1 id="valid-phone-numbers">Valid Phone Numbers</h1>
+<pre><code class="hljs language-bash">
+<span class="hljs-comment"># Read from the file file.txt and output all valid phone numbers to stdout.</span>
+
+grep -E <span class="hljs-string">&quot;^(\([0-9]{3}\) |[0-9]{3}\-)[0-9]{3}\-[0-9]{4}$&quot;</span> file.txt
+</code></pre><p>The command uses the <code>grep</code> utility with the <code>-E</code> flag to enable extended regular expressions. It searches for lines in the file &quot;file.txt&quot; that match a specific pattern, which corresponds to phone numbers in a specific format.</p>
+<p>The regular expression <code>^(\([0-9]{3}\) |[0-9]{3}\-)[0-9]{3}\-[0-9]{4}$</code> is used to match phone numbers in the format &quot;###-###-####&quot; or &quot;(###) ###-####&quot;. Here&#39;s the breakdown of the regular expression:</p>
+<ul>
+<li><code>^</code>: Anchors the start of the line.</li>
+<li><code>(</code>: Matches an opening parenthesis.</li>
+<li><code>[0-9]{3}</code>: Matches exactly three digits (0-9).</li>
+<li><code>)</code>: Matches a closing parenthesis.</li>
+<li><code> |</code>: Alternation operator, matches either the pattern before or after it.</li>
+<li><code>[0-9]{3}\-</code>: Matches three digits followed by a hyphen.</li>
+<li><code>[0-9]{3}\-</code>: Matches another three digits followed by a hyphen.</li>
+<li><code>[0-9]{4}</code>: Matches four digits.</li>
+<li><code>$</code>: Anchors the end of the line.</li>
+</ul>
+<p>The command searches each line in &quot;file.txt&quot; and displays only the lines that match the specified phone number pattern. This pattern is commonly used to match valid US phone numbers in different formats.</p>
+<ul>
+<li><a href="../readme.md">Go back</a></li>
+</ul>
+
+  </body>
+  </html>

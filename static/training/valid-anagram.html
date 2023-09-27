@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Holy Theory</title>
+  </head>
+  <body>
+      <h1 id="valid-anagram">Valid Anagram</h1>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">isAnagram</span>(<span class="hljs-params">s: <span class="hljs-built_in">string</span>, t: <span class="hljs-built_in">string</span></span>): <span class="hljs-built_in">boolean</span> {
+  <span class="hljs-keyword">if</span> (s.<span class="hljs-property">length</span> !== t.<span class="hljs-property">length</span>) <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+
+  <span class="hljs-keyword">let</span> hashTable = {};
+
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; s.<span class="hljs-property">length</span>; i++) {
+    <span class="hljs-keyword">if</span> (!hashTable[s[i]]) hashTable[s[i]] = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">if</span> (!hashTable[t[i]]) hashTable[t[i]] = <span class="hljs-number">0</span>;
+    hashTable[s[i]]++;
+    hashTable[t[i]]--;
+  }
+
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> key <span class="hljs-keyword">in</span> hashTable) {
+    <span class="hljs-keyword">if</span> (hashTable[key] != <span class="hljs-number">0</span>) <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+  }
+
+  <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+}
+</code></pre><ul>
+<li><p><strong>Input</strong>:</p>
+<ul>
+<li><code>s</code>: A string representing the first input string.</li>
+<li><code>t</code>: A string representing the second input string.</li>
+</ul>
+</li>
+<li><p><strong>Output</strong>:</p>
+<ul>
+<li>A boolean value indicating whether <code>s</code> and <code>t</code> are anagrams of each other.</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li><p><strong>Check Lengths</strong>:</p>
+<ul>
+<li>If the lengths of strings <code>s</code> and <code>t</code> are not equal, return <code>false</code>. Anagrams must have the same length.</li>
+</ul>
+</li>
+<li><p><strong>Create a Hash Table</strong>:</p>
+<ul>
+<li>Initialize an empty <code>hashTable</code> object to store the frequency of characters in the strings.</li>
+</ul>
+</li>
+<li><p><strong>Count Characters in Both Strings</strong>:</p>
+<ul>
+<li>Iterate through the characters of both strings using the same index <code>i</code>.</li>
+<li>For each character <code>s[i]</code> and <code>t[i]</code>, increment the corresponding count in the <code>hashTable</code>.</li>
+<li>If the character doesn&#39;t exist in the <code>hashTable</code>, initialize its count to 1.</li>
+</ul>
+</li>
+<li><p><strong>Check Character Frequencies</strong>:</p>
+<ul>
+<li>After counting characters for both strings, iterate through the keys in the <code>hashTable</code>.</li>
+<li>If any character&#39;s count is not equal to 0, return <code>false</code>, as it means the frequencies of characters in <code>s</code> and <code>t</code> don&#39;t match.</li>
+</ul>
+</li>
+<li><p><strong>Return Result</strong>:</p>
+<ul>
+<li>If all characters&#39; frequencies match and there is no character with a non-zero count in the <code>hashTable</code>, return <code>true</code>, indicating that <code>s</code> and <code>t</code> are anagrams of each other.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Techniques Used</strong>:</p>
+<ul>
+<li><strong>Hash Table</strong>: A hash table is used to store the frequency of characters in the strings.</li>
+</ul>
+<p><strong>Algorithm</strong>:</p>
+<ol>
+<li><p>Check if the lengths of strings <code>s</code> and <code>t</code> are equal. If not, return <code>false</code>.</p>
+</li>
+<li><p>Create an empty <code>hashTable</code> object.</p>
+</li>
+<li><p>Count the frequency of characters in both strings:</p>
+<ul>
+<li>Iterate through the characters of both strings using the same index <code>i</code>.</li>
+<li>If the character doesn&#39;t exist in the <code>hashTable</code>, initialize its count to 1.</li>
+<li>If the character exists, increment its count.</li>
+</ul>
+</li>
+<li><p>Check character frequencies:</p>
+<ul>
+<li>Iterate through the keys in the <code>hashTable</code>.</li>
+<li>If any character&#39;s count is not equal to 0, return <code>false</code>.</li>
+</ul>
+</li>
+<li><p>If all characters&#39; frequencies match, return <code>true</code>.</p>
+</li>
+</ol>
+<p><strong>Time Complexity</strong>:</p>
+<ul>
+<li>The time complexity is O(n), where <code>n</code> is the length of the strings. The code iterates through both strings once and iterates through the keys in the hash table once.</li>
+</ul>
+<p><strong>Space Complexity</strong>:</p>
+<ul>
+<li>The space complexity is O(1) since the hash table stores characters, and the size of the hash table is bounded by the number of distinct characters in the input strings.</li>
+</ul>
+
+  </body>
+  </html>
