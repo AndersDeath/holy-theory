@@ -1,25 +1,16 @@
 import * as fs from "fs-extra";
 import * as path from "path";
-import { buildHeader, buildLink, buildList, htmlPageWrapper } from "./ui";
+import {
+  buildHeader,
+  buildLink,
+  buildList,
+  buildListItems,
+  htmlPageWrapper,
+} from "./ui";
 import { marked } from "./libs/marked";
 import { cleanContent } from "./libs/utils";
-
-interface Entry {
-  title: string;
-  link: string;
-  section?: string;
-  entryLink: string;
-}
-
-async function generateTableOfContents(
-  entries: Entry[],
-  type = "md"
-): Promise<string> {
-  const listItems = entries.map((entry) =>
-    buildList(buildLink(entry.title, entry.entryLink, type), type)
-  );
-  return listItems.join("\n");
-}
+import { LanguageMap } from "./libs/language-map";
+import { Entry } from "./interfaces";
 
 function generateSectionReadmes(
   contentBySection: Record<string, string[]>,
@@ -27,19 +18,15 @@ function generateSectionReadmes(
 ): string {
   return Object.keys(contentBySection)
     .map((section) => {
-      let sectionContent = contentBySection[section].join("\n");
-
-      if (type === "html") {
-        sectionContent = `<ul>${sectionContent}</ul>`;
-      }
+      const sectionContent = contentBySection[section].join("\n");
       return `${buildHeader(section, 2, type)}\n\n${sectionContent}`;
     })
     .join("\n\n");
 }
 
 const generateGlobalIndex = async (
-  allContentWithSections,
-  outputPath,
+  allContentWithSections: Entry[],
+  outputPath: string,
   type = "md"
 ) => {
   const globalReadmeContent = allContentWithSections.reduce((acc, entry) => {
@@ -48,7 +35,7 @@ const generateGlobalIndex = async (
         acc[entry.section] = [];
       }
       acc[entry.section].push(
-        buildList(buildLink(entry.title, entry.link, type), type)
+        buildListItems(buildLink(entry.title, entry.link, type), type)
       );
     }
     return acc;
@@ -65,6 +52,19 @@ const generateGlobalIndex = async (
   await fs.writeFile(outputPath, sectionReadmes);
 };
 
+const createSectionFile = (path: string, content, type = "md") => {
+  if (type === "md") {
+    fs.writeFileSync(path, content);
+  }
+
+  if (type === "html") {
+    fs.writeFileSync(
+      path,
+      htmlPageWrapper(marked.parse(cleanContent(content)))
+    );
+  }
+};
+
 async function generateStaticMD(
   rootFolder: string,
   outputFolder: string,
@@ -74,6 +74,8 @@ async function generateStaticMD(
   const folders = await fs.readdir(rootFolder);
 
   const allContentWithSections: Entry[] = [];
+
+  const lm = new LanguageMap();
 
   for (const folder of folders) {
     const folderPath = path.join(rootFolder, folder);
@@ -91,6 +93,10 @@ async function generateStaticMD(
           const markdownContent = await fs.readFile(filePath, "utf-8");
           const { metadata, content }: any = parseMd(markdownContent);
 
+          if (type === "html" && metadata.languages?.length > 0) {
+            lm.setFromArr(metadata.languages);
+          }
+
           const entryName = file.replace(/\.[^.]+$/, "");
           const entryLink = `./${entryName}.` + type;
 
@@ -99,16 +105,11 @@ async function generateStaticMD(
             `${entryName}.${type}`
           );
 
-          if (type === "md") {
-            await fs.writeFile(entryOutputPath, markdownContent);
-          }
-
-          if (type === "html") {
-            await fs.writeFile(
-              entryOutputPath,
-              htmlPageWrapper(marked.parse(cleanContent(content)))
-            );
-          }
+          createSectionFile(
+            entryOutputPath,
+            type === "md" ? markdownContent : content,
+            type
+          );
 
           allContentWithSections.push({
             title: metadata.title || sectionName + " all",
@@ -122,7 +123,7 @@ async function generateStaticMD(
         }
       }
 
-      const sectionContent = await generateTableOfContents(
+      const sectionContent = await buildList(
         allContentWithSections.filter((e: Entry) => e.section === sectionName),
         type
       );
