@@ -52,6 +52,19 @@ const generateGlobalIndex = async (
   await fs.writeFile(outputPath, sectionReadmes);
 };
 
+const createSectionFile = (path: string, content, type = "md") => {
+  if (type === "md") {
+    fs.writeFileSync(path, content);
+  }
+
+  if (type === "html") {
+    fs.writeFileSync(
+      path,
+      htmlPageWrapper(marked.parse(cleanContent(content)))
+    );
+  }
+};
+
 async function generateStaticMD(
   rootFolder: string,
   outputFolder: string,
@@ -92,16 +105,11 @@ async function generateStaticMD(
             `${entryName}.${type}`
           );
 
-          if (type === "md") {
-            await fs.writeFile(entryOutputPath, markdownContent);
-          }
-
-          if (type === "html") {
-            await fs.writeFile(
-              entryOutputPath,
-              htmlPageWrapper(marked.parse(cleanContent(content)))
-            );
-          }
+          createSectionFile(
+            entryOutputPath,
+            type === "md" ? markdownContent : content,
+            type
+          );
 
           allContentWithSections.push({
             title: metadata.title || sectionName + " all",

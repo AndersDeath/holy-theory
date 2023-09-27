@@ -6,6 +6,53 @@
       <title>Holy Theory</title>
   </head>
   <body>
-      
+      <h1 id="generate-parentheses">Generate Parentheses</h1>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">generateParenthesis</span>(<span class="hljs-params">n: <span class="hljs-built_in">number</span></span>): <span class="hljs-built_in">string</span>[] {
+    <span class="hljs-keyword">const</span> result = [];
+    <span class="hljs-title function_">generator</span>(result, <span class="hljs-string">&quot;&quot;</span>, <span class="hljs-number">0</span>,<span class="hljs-number">0</span>,n)
+    <span class="hljs-keyword">return</span> result;
+};
+
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">generator</span>(<span class="hljs-params">result, s, open, close, n</span>) {
+    <span class="hljs-keyword">if</span>(open === n &amp;&amp; close === n) {
+        result.<span class="hljs-title function_">push</span>(s);
+        <span class="hljs-keyword">return</span>;
+    }
+    <span class="hljs-keyword">if</span>(open &lt; n) {
+         <span class="hljs-title function_">generator</span>(result, s + <span class="hljs-string">&#x27;(&#x27;</span>, open +<span class="hljs-number">1</span>, close, n);
+    }
+    <span class="hljs-keyword">if</span>(close &lt; open) {
+         <span class="hljs-title function_">generator</span>(result, s + <span class="hljs-string">&#x27;)&#x27;</span>, open, close + <span class="hljs-number">1</span>, n);
+    }
+    
+}
+</code></pre><p>The code is an implementation of a function to generate all valid combinations of parentheses given a positive integer <code>n</code>. The function <code>generateParenthesis</code> takes an integer <code>n</code> as input and returns an array of strings containing all valid combinations of parentheses.</p>
+<p>Here&#39;s a step-by-step explanation of the code:</p>
+<ol>
+<li><p><code>function generateParenthesis(n: number): string[]</code>: This is the main function that takes an integer <code>n</code> as input and returns an array of strings representing all valid combinations of parentheses.</p>
+</li>
+<li><p><code>const result = [];</code>: This initializes an empty array <code>result</code> to store the generated combinations of parentheses.</p>
+</li>
+<li><p><code>generator(result, &quot;&quot;, 0, 0, n)</code>: This line calls the <code>generator</code> function to start generating valid combinations of parentheses. The initial values for <code>s</code> (current combination), <code>open</code> (number of open parentheses), <code>close</code> (number of close parentheses), and <code>n</code> (total number of parentheses to be generated) are passed as arguments.</p>
+</li>
+<li><p><code>function generator(result, s, open, close, n)</code>: This is a recursive function that generates valid combinations of parentheses.</p>
+</li>
+<li><p><code>if (open === n &amp;&amp; close === n)</code>: This condition checks if we have generated the desired number of open and close parentheses, which is equal to <code>n</code>. If both are equal to <code>n</code>, it means we have a valid combination of parentheses, and it is added to the <code>result</code> array.</p>
+</li>
+<li><p><code>if (open &lt; n)</code>: This condition checks if the number of open parentheses is less than <code>n</code>. If true, we call the <code>generator</code> function recursively with an additional open parenthesis added to the current combination.</p>
+</li>
+<li><p><code>if (close &lt; open)</code>: This condition checks if the number of close parentheses is less than the number of open parentheses. If true, we call the <code>generator</code> function recursively with an additional close parenthesis added to the current combination.</p>
+</li>
+<li><p>The function will continue generating combinations of parentheses until all valid combinations are found.</p>
+</li>
+<li><p>Finally, the <code>result</code> array containing all valid combinations of parentheses is returned as the output.</p>
+</li>
+</ol>
+<p>Techniques used in the code:</p>
+<ul>
+<li>Recursion: The function <code>generator</code> is implemented using recursion to explore all possible combinations of parentheses.</li>
+<li>Backtracking: The recursion and condition checks for open and close parentheses help in generating valid combinations and avoiding invalid ones.</li>
+</ul>
+
   </body>
   </html>

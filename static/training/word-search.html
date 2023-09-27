@@ -6,6 +6,143 @@
       <title>Holy Theory</title>
   </head>
   <body>
-      
+      <h1 id="word-search">Word search</h1>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">exist</span>(<span class="hljs-params">board: <span class="hljs-built_in">string</span>[][], word: <span class="hljs-built_in">string</span></span>): <span class="hljs-built_in">boolean</span> {
+  <span class="hljs-keyword">const</span> row = board.<span class="hljs-property">length</span>;
+  <span class="hljs-keyword">const</span> col = board[<span class="hljs-number">0</span>].<span class="hljs-property">length</span>;
+  <span class="hljs-keyword">let</span> index = <span class="hljs-number">0</span>;
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; row; i++) {
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> j = <span class="hljs-number">0</span>; j &lt; col; j++) {
+      <span class="hljs-keyword">if</span> (<span class="hljs-title function_">backtrack</span>(board, word, i, j, index, row, col)) {
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+      }
+    }
+  }
+  <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+}
+
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">backtrack</span>(<span class="hljs-params">board, word, i, j, index, row, col</span>) {
+  <span class="hljs-keyword">if</span> (index === word.<span class="hljs-property">length</span>) <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+  <span class="hljs-keyword">if</span> (
+    i &lt; <span class="hljs-number">0</span> ||
+    j &lt; <span class="hljs-number">0</span> ||
+    i === row ||
+    j === col ||
+    board[i][j] !== word[index] ||
+    board[i][j] == <span class="hljs-string">&quot;#&quot;</span>
+  )
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+
+  <span class="hljs-keyword">let</span> t = board[i][j];
+  board[i][j] = <span class="hljs-string">&quot;#&quot;</span>;
+
+  <span class="hljs-keyword">let</span> top = <span class="hljs-title function_">backtrack</span>(board, word, i - <span class="hljs-number">1</span>, j, index + <span class="hljs-number">1</span>, row, col);
+  <span class="hljs-keyword">let</span> right = <span class="hljs-title function_">backtrack</span>(board, word, i, j + <span class="hljs-number">1</span>, index + <span class="hljs-number">1</span>, row, col);
+  <span class="hljs-keyword">let</span> bottom = <span class="hljs-title function_">backtrack</span>(board, word, i + <span class="hljs-number">1</span>, j, index + <span class="hljs-number">1</span>, row, col);
+  <span class="hljs-keyword">let</span> left = <span class="hljs-title function_">backtrack</span>(board, word, i, j - <span class="hljs-number">1</span>, index + <span class="hljs-number">1</span>, row, col);
+
+  board[i][j] = t;
+
+  <span class="hljs-keyword">return</span> top || right || bottom || left;
+}
+</code></pre><ul>
+<li><p><strong>Inputs</strong>:</p>
+<ul>
+<li><code>board</code>: A 2D array of characters representing the board.</li>
+<li><code>word</code>: The target word to search for in the board.</li>
+</ul>
+</li>
+<li><p><strong>Output</strong>:</p>
+<ul>
+<li>A boolean value indicating whether the given <code>word</code> exists in the <code>board</code>.</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li><p><strong>Board Dimensions</strong>:</p>
+<ul>
+<li>Get the number of rows (<code>row</code>) and columns (<code>col</code>) of the board.</li>
+</ul>
+</li>
+<li><p><strong>Main Function - <code>exist</code></strong>:</p>
+<ul>
+<li>Initialize <code>index</code> to keep track of the current character being checked in the <code>word</code>.</li>
+<li>Loop through each cell in the <code>board</code>:<ul>
+<li>For each cell at <code>(i, j)</code>, call the <code>backtrack</code> function to search for the <code>word</code> starting from this cell.</li>
+<li>If <code>backtrack</code> returns <code>true</code>, the <code>word</code> is found, so return <code>true</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Backtracking Function - <code>backtrack</code></strong>:</p>
+<ul>
+<li>Base Cases:<ul>
+<li>If <code>index</code> reaches the length of the <code>word</code>, return <code>true</code> as the word has been completely found.</li>
+<li>If <code>(i, j)</code> is out of bounds or the character at <code>(i, j)</code> does not match the current character in the <code>word</code>, or the cell has been visited (<code>&#39;#&#39;</code>), return <code>false</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Mark Cell as Visited</strong>:</p>
+<ul>
+<li>Store the value of <code>board[i][j]</code> in <code>t</code> and replace it with <code>&#39;#&#39;</code> to mark the cell as visited.</li>
+</ul>
+</li>
+<li><p><strong>Recursion</strong>:</p>
+<ul>
+<li>Recursively check the four possible directions (top, right, bottom, left) from the current cell using <code>backtrack</code>. Pass the updated <code>index</code> and the new <code>(i, j)</code> coordinates.</li>
+<li>If any of the recursive calls returns <code>true</code>, the word is found, so return <code>true</code>.</li>
+</ul>
+</li>
+<li><p><strong>Restore Cell Value</strong>:</p>
+<ul>
+<li>After exploring all possible directions, restore the original value of <code>board[i][j]</code>.</li>
+</ul>
+</li>
+<li><p><strong>Return</strong>:</p>
+<ul>
+<li>Return the result of logical OR operation between the four direction checks. If any of them returns <code>true</code>, then <code>true</code> is returned to the previous recursive call.</li>
+</ul>
+</li>
+<li><p><strong>Final Output</strong>:</p>
+<ul>
+<li>If none of the cell-based <code>backtrack</code> calls in the <code>exist</code> function returns <code>true</code>, then return <code>false</code>, indicating that the word was not found in the board.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Techniques Used</strong>:</p>
+<ul>
+<li><strong>Backtracking</strong>: The algorithm explores all possible paths in the board while considering constraints and choices.</li>
+<li><strong>2D Array Traversal</strong>: The code uses nested loops to traverse through the cells of the 2D board.</li>
+</ul>
+<p><strong>Algorithm</strong>:</p>
+<ol>
+<li><p>Get the dimensions of the board.</p>
+</li>
+<li><p>Loop through each cell in the board using nested loops:</p>
+<ul>
+<li>For each cell <code>(i, j)</code>, call the <code>backtrack</code> function to search for the word starting from this cell.</li>
+<li>If <code>backtrack</code> returns <code>true</code>, return <code>true</code> as the word is found.</li>
+</ul>
+</li>
+<li><p>The <code>backtrack</code> function performs the recursive backtracking search for the word:</p>
+<ul>
+<li>Base cases are checked first to terminate the recursion.</li>
+<li>If the base cases are not met, the current cell is marked as visited and the search continues recursively in the four possible directions.</li>
+<li>After exploring all directions, the cell value is restored, and the result of direction checks is returned.</li>
+</ul>
+</li>
+<li><p>The <code>exist</code> function returns <code>false</code> if no cell-based backtrack call returns <code>true</code>.</p>
+</li>
+</ol>
+<p><strong>Time Complexity</strong>:</p>
+<ul>
+<li>The worst-case time complexity is O(N _ M _ 4^k), where N and M are the dimensions of the board and k is the length of the word. This is because the algorithm tries all possible paths in the board, and each path can have at most 4^k branches.</li>
+</ul>
+<p><strong>Space Complexity</strong>:</p>
+<ul>
+<li>The space complexity is O(k), where k is the length of the word. This is due to the recursive call stack depth.</li>
+</ul>
+
   </body>
   </html>
