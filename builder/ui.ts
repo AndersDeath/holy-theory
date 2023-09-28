@@ -18,6 +18,9 @@ export function buildHeader(content, level: number, type: string) {
   return "";
 }
 
+export const wrapToHtmlTag = (tag: string, content = "") =>
+  `<${tag}>${content}</${tag}>`;
+
 export function htmlPageWrapper(content: string, meta?: any) {
   return `<!DOCTYPE html>
   <html lang="en">
