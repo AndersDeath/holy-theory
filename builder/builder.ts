@@ -65,7 +65,7 @@ const createSectionFile = (path: string, content, type = "md") => {
   }
 };
 
-async function generateStaticMD(
+async function generateStatic(
   rootFolder: string,
   outputFolder: string,
   parseMd: any,
@@ -161,7 +161,7 @@ export const Builder = (type: string) => {
         ? path.join(__dirname, "../content")
         : path.join(__dirname, "../static");
 
-    generateStaticMD(rootContentFolder, outputFolder, parseMD, type)
+    generateStatic(rootContentFolder, outputFolder, parseMD, type)
       .then(() =>
         console.log(
           `${
