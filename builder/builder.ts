@@ -162,20 +162,22 @@ export const Builder = (type: string) => {
         : path.join(__dirname, "../static");
 
     generateStatic(rootContentFolder, outputFolder, parseMD, type)
-      .then(() =>
+      .then(() => {
+        console.timeEnd(type + " builder");
         console.log(
           `${
             type === "md" ? "Markdown" : "HTML"
           } static website generated successfully`
-        )
-      )
-      .catch((err) =>
+        );
+      })
+      .catch((err) => {
+        console.timeEnd(type + " builder");
         console.error(
           `Error generating ${
             type === "md" ? "Markdown" : "HTML"
           } static website:`,
           err
-        )
-      );
+        );
+      });
   });
 };

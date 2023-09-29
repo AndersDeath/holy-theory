@@ -1,8 +1,9 @@
-console.time('app');
+console.time('md builder');
+console.time('html builder');
+
 import { Builder } from "./builder";
 
 Builder('md');
 
 Builder('html');
 
-console.timeEnd('app');
