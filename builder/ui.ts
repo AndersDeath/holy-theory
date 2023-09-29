@@ -18,6 +18,9 @@ export function buildHeader(content, level: number, type: string) {
   return "";
 }
 
+export const wrapToHtmlTag = (tag: string, content = "") =>
+  `<${tag}>${content}</${tag}>`;
+
 export function htmlPageWrapper(content: string, meta?: any) {
   return `<!DOCTYPE html>
   <html lang="en">
@@ -27,6 +30,16 @@ export function htmlPageWrapper(content: string, meta?: any) {
       <title>${meta?.title || "Holy Theory"}</title>
       <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/monokai.min.css" />
       <script type="application/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+      <style>
+      body {
+        margin: 0;
+            padding: 0;
+        }
+
+        img {
+            max-width: 400px;
+        }
+      </style>
   </head>
   <body>
       ${content}
