@@ -5,6 +5,7 @@
 - [JavaScript data types](./javascript-data-types.md)
 - [JavaScript number size summary](./javascript-number-size-summary.md)
 - [JavaScript Arrays cheat sheet](./js-arrays-cheat-sheet.md)
+- [OOP in JavaScript](./oop-in-javascript.md)
 - [Possible types of function in JavaScript](./possible-types-of-functions-in-js.md)
 - [Promise action flow](./promise-action-flow.md)
 - [Weird and unexpected behavior of JavaScript](./wierd-unexpected-behavior.md)
