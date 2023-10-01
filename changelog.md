@@ -5,6 +5,7 @@ All notable changes to this project will be documented in this file.
 * add static html vertion
 * update builder.js html generation part
 * add OOP in JavaScript question
+* add What is the NaN question for JavaScript
 # [0.0.37] - 2023-09-25
 * update builder.js
 * add How is NoSQL database different from SQL databases? question

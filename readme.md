@@ -29,6 +29,7 @@
 - [OOP in JavaScript](./content/javascript/oop-in-javascript.md)
 - [Possible types of function in JavaScript](./content/javascript/possible-types-of-functions-in-js.md)
 - [Promise action flow](./content/javascript/promise-action-flow.md)
+- [What is the NaN](./content/javascript/what-is-the-nan.md)
 - [Weird and unexpected behavior of JavaScript](./content/javascript/wierd-unexpected-behavior.md)
 
 ## patterns
