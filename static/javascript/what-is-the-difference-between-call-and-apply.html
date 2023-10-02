@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Holy Theory</title>
+      <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/monokai.min.css" />
+      <script type="application/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+      <style>
+      body {
+        margin: 0;
+            padding: 0;
+        }
+
+        img {
+            max-width: 400px;
+        }
+      </style>
+  </head>
+  <body>
+      <h1 id="what-is-the-difference-between-call-and-apply">What is the difference between Call and Apply?</h1>
+<p><code>call()</code> and <code>apply()</code> are two methods in JavaScript that allow you to invoke a function with a specified <code>this</code> value and arguments. They are similar in purpose but differ in how they accept arguments.</p>
+<h3 id="call"><code>call()</code></h3>
+<p>The <code>call()</code> method calls a function with a given <code>this</code> value and individual arguments passed one by one.</p>
+<p><strong>Syntax:</strong></p>
+<pre><code class="hljs language-javascript">functionName.<span class="hljs-title function_">call</span>(thisValue, arg1, arg2, ...);
+</code></pre><ul>
+<li><strong><code>functionName</code></strong>: The function to be called.</li>
+<li><strong><code>thisValue</code></strong>: The value to be passed as <code>this</code> to the function.</li>
+<li><strong><code>arg1, arg2, ...</code></strong>: The arguments to be passed to the function individually.</li>
+</ul>
+<p><strong>Example:</strong></p>
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">greet</span>(<span class="hljs-params">message</span>) {
+    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">`<span class="hljs-subst">${message}</span>, <span class="hljs-subst">${<span class="hljs-variable language_">this</span>.name}</span>!`</span>);
+}
+
+<span class="hljs-keyword">const</span> person = {
+    <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;John&#x27;</span>
+};
+
+greet.<span class="hljs-title function_">call</span>(person, <span class="hljs-string">&#x27;Hello&#x27;</span>);
+<span class="hljs-comment">// Output: Hello, John!</span>
+</code></pre><p>In this example, <code>call()</code> is used to invoke the <code>greet</code> function with <code>person</code> object as the <code>this</code> value and <code>&#39;Hello&#39;</code> as the argument.</p>
+<h3 id="apply"><code>apply()</code></h3>
+<p>The <code>apply()</code> method is similar to <code>call()</code>, but it accepts arguments as an array.</p>
+<p><strong>Syntax:</strong></p>
+<pre><code class="hljs language-javascript">functionName.<span class="hljs-title function_">apply</span>(thisValue, [arg1, arg2, ...]);
+</code></pre><ul>
+<li><strong><code>functionName</code></strong>: The function to be called.</li>
+<li><strong><code>thisValue</code></strong>: The value to be passed as <code>this</code> to the function.</li>
+<li><strong><code>[arg1, arg2, ...]</code></strong>: An array or array-like object containing the arguments to be passed to the function.</li>
+</ul>
+<p><strong>Example:</strong></p>
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">introduce</span>(<span class="hljs-params">greeting, age</span>) {
+    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">`<span class="hljs-subst">${greeting}</span>, I am <span class="hljs-subst">${<span class="hljs-variable language_">this</span>.name}</span> and I am <span class="hljs-subst">${age}</span> years old.`</span>);
+}
+
+<span class="hljs-keyword">const</span> person = {
+    <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Alice&#x27;</span>
+};
+
+introduce.<span class="hljs-title function_">apply</span>(person, [<span class="hljs-string">&#x27;Hi&#x27;</span>, <span class="hljs-number">30</span>]);
+<span class="hljs-comment">// Output: Hi, I am Alice and I am 30 years old.</span>
+</code></pre><p>In this example, <code>apply()</code> is used to invoke the <code>introduce</code> function with <code>person</code> object as the <code>this</code> value and <code>[&#39;Hi&#39;, 30]</code> as the arguments passed in an array.</p>
+<h3 id="differences">Differences:</h3>
+<ol>
+<li><p><strong>Argument Format</strong>:</p>
+<ul>
+<li><code>call()</code> accepts arguments individually.</li>
+<li><code>apply()</code> accepts arguments as an array.</li>
+</ul>
+</li>
+<li><p><strong>Use Cases</strong>:</p>
+<ul>
+<li>Use <code>call()</code> when you know the exact number of arguments the function expects and you want to pass them individually.</li>
+<li>Use <code>apply()</code> when the number of arguments is not known in advance, or when the arguments are already in an array or array-like object.</li>
+</ul>
+</li>
+</ol>
+<p>In modern JavaScript, you can often use the more versatile spread operator (<code>...</code>) to achieve the same result as <code>apply()</code> while providing a cleaner syntax, especially when working with arrays. However, <code>apply()</code> can still be useful in certain situations, such as when dealing with variadic functions or functions that accept a variable number of arguments.</p>
+
+  </body>
+  </html>

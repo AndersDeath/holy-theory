@@ -1,16 +1,21 @@
 # Changelog
 
 All notable changes to this project will be documented in this file.
-# [0.0.38] - In Progress
-* add static html vertion
+# [0.0.39] - In progress
+
+# [0.0.38] - 2023-10-02
+* add static html version
 * update builder.js html generation part
 * add OOP in JavaScript question
 * add What is the NaN question for JavaScript
+* add What is the difference between Call and Apply? question to JavaScript section
+
 # [0.0.37] - 2023-09-25
 * update builder.js
 * add How is NoSQL database different from SQL databases? question
 * add How Would You Design an API for Third-Party Developers? question
 * create the alpha of builder.js html generator
+
 # [0.0.36] - 2023-09-18
 * add git + gitflow question
 * update builder.js
@@ -19,6 +24,7 @@ All notable changes to this project will be documented in this file.
 * update 16-message-queue
 * change project structure
 * finish refactoring for markdown version
+
 # [0.0.35] - 2023-09-11
 * add 13-rest-api.md question
 * create builder-next version - it's experimental
