@@ -1,8 +1,10 @@
 # Changelog
 
 All notable changes to this project will be documented in this file.
-# [0.0.38] - In Progress
-* add static html vertion
+# [0.0.39] - In progress
+
+# [0.0.38] - 2023-10-02
+* add static html version
 * update builder.js html generation part
 * add OOP in JavaScript question
 * add What is the NaN question for JavaScript
