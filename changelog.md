@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file.
 * update builder.js html generation part
 * add OOP in JavaScript question
 * add What is the NaN question for JavaScript
+* add What is the difference between Call and Apply? question to JavaScript section
 
 # [0.0.37] - 2023-09-25
 * update builder.js
