@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Holy Theory</title>
+      <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/monokai.min.css" />
+      <script type="application/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+      <style>
+      body {
+        margin: 0;
+            padding: 0;
+        }
+
+        img {
+            max-width: 400px;
+        }
+      </style>
+  </head>
+  <body>
+      <h1 id="what-is-the-difference-between-var-const-and-const">What is the difference between var, const, and const?</h1>
+<p>In JavaScript, <code>var</code>, <code>let</code>, and <code>const</code> are used to declare variables, but they have different scoping rules and behaviors. Here&#39;s a breakdown of their differences:</p>
+<ol>
+<li><p><strong><code>var</code>:</strong></p>
+<ul>
+<li><code>var</code> declarations are globally scoped or function scoped.</li>
+<li>They are hoisted to the top of their scope and can be accessed before the declaration.</li>
+<li><code>var</code> variables can be reassigned and updated.</li>
+</ul>
+<p>Example:</p>
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">example</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-keyword">if</span> (<span class="hljs-literal">true</span>) {
+        <span class="hljs-keyword">var</span> x = <span class="hljs-number">10</span>;
+    }
+    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(x); <span class="hljs-comment">// Outputs 10, because var is function scoped</span>
+}
+</code></pre></li>
+<li><p><strong><code>let</code>:</strong></p>
+<ul>
+<li><code>let</code> declarations are block-scoped (limited to the block, statement, or expression where it is defined).</li>
+<li>They are hoisted to the top of their scope but are not initialized until the interpreter reaches the declaration.</li>
+<li><code>let</code> variables can be reassigned, but they cannot be redeclared in the same scope.</li>
+</ul>
+<p>Example:</p>
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">example</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-keyword">if</span> (<span class="hljs-literal">true</span>) {
+        <span class="hljs-keyword">let</span> x = <span class="hljs-number">10</span>;
+        <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(x); <span class="hljs-comment">// Outputs 10, because let is block scoped</span>
+    }
+    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(x); <span class="hljs-comment">// Error: x is not defined outside the block</span>
+}
+</code></pre></li>
+<li><p><strong><code>const</code>:</strong></p>
+<ul>
+<li><code>const</code> declarations are also block-scoped.</li>
+<li>They must be initialized during declaration and cannot be reassigned to a different value after initialization.</li>
+<li>Like <code>let</code>, <code>const</code> declarations are hoisted to the top of their scope but are not initialized until the interpreter reaches the declaration.</li>
+</ul>
+<p>Example:</p>
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">example</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-keyword">const</span> x = <span class="hljs-number">10</span>;
+    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(x); <span class="hljs-comment">// Outputs 10, const variables cannot be reassigned</span>
+    x = <span class="hljs-number">20</span>; <span class="hljs-comment">// Error: Assignment to constant variable</span>
+}
+</code></pre></li>
+</ol>
+<p>In modern JavaScript, it is generally recommended to use <code>const</code> by default, and only use <code>let</code> when you know the variable&#39;s value will change. Avoid using <code>var</code> unless you have a specific reason to use it, as its behavior can sometimes lead to unexpected results due to its function scope or global scope. Using <code>let</code> and <code>const</code> helps in writing more predictable and maintainable code.</p>
+
+  </body>
+  </html>
