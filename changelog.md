@@ -2,6 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 # [0.0.39] - In progress
+* add What is the difference between var, const, and const? question to JS section
 
 # [0.0.38] - 2023-10-02
 * add static html version
