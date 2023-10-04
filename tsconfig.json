@@ -10,6 +10,6 @@
   "ts-node": {
     "esm": true
   },
-  "include": ["builder-legacy/**/*"],
+  "include": ["builder/**/*", "builder/types.d.ts"],
   "lib": ["es2015"]
 }
