@@ -29,6 +29,7 @@
 - [OOP in JavaScript](./content/javascript/oop-in-javascript.md)
 - [Possible types of function in JavaScript](./content/javascript/possible-types-of-functions-in-js.md)
 - [Promise action flow](./content/javascript/promise-action-flow.md)
+- [What is event bubbling?](./content/javascript/what-is-event-bubbling.md)
 - [What is the difference between Call and Apply?](./content/javascript/what-is-the-difference-between-call-and-apply.md)
 - [What is the NaN](./content/javascript/what-is-the-nan.md)
 - [What is the difference between var, const, and const?](./content/javascript/what-the-difference-between-var-let-const.md)
