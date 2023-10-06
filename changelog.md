@@ -4,6 +4,7 @@ All notable changes to this project will be documented in this file.
 # [0.0.39] - In progress
 * add What is the difference between var, const, and const? question to JS section
 * add What is event bubbling? question to JavaScript section
+* add How to optimize work of a web application using caching? to system design section
 
 # [0.0.38] - 2023-10-02
 * add static html version
