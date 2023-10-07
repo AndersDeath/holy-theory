@@ -14,4 +14,5 @@
 - [Websockets](./14-websockets.md)
 - [Graphql](./15-graphql.md)
 - [Git + Gitflow](./16-git-gitflow.md)
+- [What is functional programming](./17-what-is-functional-programming.md)
 - [questions all](./index.md)
