@@ -60,6 +60,7 @@
 - [Websockets](./content/questions/14-websockets.md)
 - [Graphql](./content/questions/15-graphql.md)
 - [Git + Gitflow](./content/questions/16-git-gitflow.md)
+- [What is functional programming](./content/questions/17-what-is-functional-programming.md)
 - [questions all](./content/questions/index.md)
 
 ## security
