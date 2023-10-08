@@ -62,6 +62,7 @@
 - [Graphql](./content/questions/15-graphql.md)
 - [Git + Gitflow](./content/questions/16-git-gitflow.md)
 - [What is functional programming](./content/questions/17-what-is-functional-programming.md)
+- [What is REPL and how to use it?](./content/questions/18-what-is-repl-and-how-to-use-it.md)
 - [questions all](./content/questions/index.md)
 
 ## security
