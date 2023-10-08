@@ -1,7 +1,7 @@
 #!/bin/bash
 
 PS3='What do you want to do?: '
-options=("Update training" "Add new training" "Update readme" "Update changelog" "Update readme and changelog" "Push everything" "Commit and push everything" "Quit")
+options=("Update training" "Add new training" "Update readme" "Update changelog" "Update readme and changelog" "Push everything" "Commit and push everything" "Update static html and md verions" "Quit")
 
 select opt in "${options[@]}"; do
     case $opt in
@@ -42,6 +42,12 @@ select opt in "${options[@]}"; do
         "Commit and push everything")
             git add .
             git commit -m "Unknown update"
+            git push
+            break
+            ;;
+        "Update static html and md verions")
+            git add .
+            git commit -m "Update static html and md verions"
             git push
             break
             ;;
