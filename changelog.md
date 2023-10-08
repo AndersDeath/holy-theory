@@ -8,6 +8,7 @@ All notable changes to this project will be documented in this file.
 * add What is functional programming question
 * add How JavaScript Engine works question
 * add What is REPL and how to use it? question
+* update Event loop question
 
 # [0.0.38] - 2023-10-02
 * add static html version
