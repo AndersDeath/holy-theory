@@ -15,4 +15,5 @@
 - [Graphql](./15-graphql.md)
 - [Git + Gitflow](./16-git-gitflow.md)
 - [What is functional programming](./17-what-is-functional-programming.md)
+- [What is REPL and how to use it?](./18-what-is-repl-and-how-to-use-it.md)
 - [questions all](./index.md)
