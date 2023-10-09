@@ -1,7 +1,9 @@
 # Changelog
 
 All notable changes to this project will be documented in this file.
-# [0.0.39] - In progress
+
+# [0.0.40] - In progress
+# [0.0.39] - 2023-10-09
 * add What is the difference between var, const, and const? question to JS section
 * add What is event bubbling? question to JavaScript section
 * add How to optimize work of a web application using caching? to system design section
