@@ -1,6 +1,7 @@
 - [Array length property](./array-length-property.md)
 - [Different ways of declaring functions in JS](./different-ways-of-declaring-a-function-in-js.md)
 - [Event Loop](./event-loop.md)
+- [Give best practices for handling errors in asynchronous code.](./give-best-practices-for-handling-errors-in-asynchronous-code.md)
 - [How JavaScript Engine works](./how-javascript-engine-works.md)
 - [javascript all](./index.md)
 - [JavaScript data types](./javascript-data-types.md)

@@ -22,6 +22,7 @@
 - [Array length property](./content/javascript/array-length-property.md)
 - [Different ways of declaring functions in JS](./content/javascript/different-ways-of-declaring-a-function-in-js.md)
 - [Event Loop](./content/javascript/event-loop.md)
+- [Give best practices for handling errors in asynchronous code.](./content/javascript/give-best-practices-for-handling-errors-in-asynchronous-code.md)
 - [How JavaScript Engine works](./content/javascript/how-javascript-engine-works.md)
 - [javascript all](./content/javascript/index.md)
 - [JavaScript data types](./content/javascript/javascript-data-types.md)
