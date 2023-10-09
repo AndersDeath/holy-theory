@@ -64,6 +64,7 @@
 - [Git + Gitflow](./content/questions/16-git-gitflow.md)
 - [What is functional programming](./content/questions/17-what-is-functional-programming.md)
 - [What is REPL and how to use it?](./content/questions/18-what-is-repl-and-how-to-use-it.md)
+- [Why do you need dto files?](./content/questions/19-why-do-you-need-dto-files.md)
 - [questions all](./content/questions/index.md)
 
 ## security

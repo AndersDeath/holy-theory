@@ -16,4 +16,5 @@
 - [Git + Gitflow](./16-git-gitflow.md)
 - [What is functional programming](./17-what-is-functional-programming.md)
 - [What is REPL and how to use it?](./18-what-is-repl-and-how-to-use-it.md)
+- [Why do you need dto files?](./19-why-do-you-need-dto-files.md)
 - [questions all](./index.md)

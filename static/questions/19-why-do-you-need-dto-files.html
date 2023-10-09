@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Holy Theory</title>
+      <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/monokai.min.css" />
+      <script type="application/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+      <style>
+      body {
+        margin: 0;
+            padding: 0;
+        }
+
+        img {
+            max-width: 400px;
+        }
+      </style>
+  </head>
+  <body>
+      <h1 id="why-do-you-need-dto-files">Why do you need dto files?</h1>
+<p>DTO files, or Data Transfer Object files, are a common pattern in software development used for transferring data between different parts of an application or between different applications. While the concept of DTOs doesn&#39;t specifically require dedicated files, developers often create separate DTO classes or files for various reasons:</p>
+<ol>
+<li><p><strong>Separation of Concerns:</strong> Keeping DTOs in separate files promotes a clear separation of concerns within the codebase. By isolating data transfer logic into distinct files, developers can manage data-related tasks independently of other parts of the application, making the codebase more organized and maintainable.</p>
+</li>
+<li><p><strong>Reusability:</strong> DTOs often represent common data structures used across different parts of an application or even in multiple applications. Having DTOs in separate files allows them to be easily reused in various components or services without duplicating code.</p>
+</li>
+<li><p><strong>Code Organization:</strong> Placing DTOs in dedicated files enhances code readability and organization. Developers and other team members can quickly locate and understand the data structures used for data transfer without having to search through large, complex files.</p>
+</li>
+<li><p><strong>Testing:</strong> Separate DTO files simplify the testing process. Unit tests and integration tests can focus specifically on the data transfer logic by importing and testing individual DTOs, making it easier to verify that the data is being transferred correctly between components.</p>
+</li>
+<li><p><strong>Versioning and Compatibility:</strong> When DTOs are used in APIs or services, having them in separate files can aid in versioning. New versions of APIs can introduce updated DTOs without affecting existing implementations, ensuring backward compatibility for clients using older versions of the API.</p>
+</li>
+<li><p><strong>Collaboration:</strong> In collaborative development environments, having DTOs in separate files allows multiple developers to work on different parts of the application simultaneously. Each developer can focus on a specific DTO without conflicting with others, streamlining the development process.</p>
+</li>
+</ol>
+<p>In summary, while DTOs themselves don&#39;t require dedicated files, creating separate DTO files offers advantages in terms of separation of concerns, reusability, code organization, testing, versioning, and collaboration. These benefits contribute to more maintainable, scalable, and efficient software development practices.</p>
+
+  </body>
+  </html>
