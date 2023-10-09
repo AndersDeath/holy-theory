@@ -9,6 +9,7 @@ All notable changes to this project will be documented in this file.
 * add How JavaScript Engine works question
 * add What is REPL and how to use it? question
 * update Event loop question
+* add Give best practices for handling errors in asynchronous code question
 
 # [0.0.38] - 2023-10-02
 * add static html version
