@@ -10,6 +10,7 @@ All notable changes to this project will be documented in this file.
 * add What is REPL and how to use it? question
 * update Event loop question
 * add Give best practices for handling errors in asynchronous code question
+* add Why do you need dto files? question
 
 # [0.0.38] - 2023-10-02
 * add static html version
