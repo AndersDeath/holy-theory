@@ -22,6 +22,7 @@
 - [Array length property](./content/javascript/array-length-property.md)
 - [Different ways of declaring functions in JS](./content/javascript/different-ways-of-declaring-a-function-in-js.md)
 - [Event Loop](./content/javascript/event-loop.md)
+- [Give best practices for handling errors in asynchronous code.](./content/javascript/give-best-practices-for-handling-errors-in-asynchronous-code.md)
 - [How JavaScript Engine works](./content/javascript/how-javascript-engine-works.md)
 - [javascript all](./content/javascript/index.md)
 - [JavaScript data types](./content/javascript/javascript-data-types.md)
@@ -63,6 +64,7 @@
 - [Git + Gitflow](./content/questions/16-git-gitflow.md)
 - [What is functional programming](./content/questions/17-what-is-functional-programming.md)
 - [What is REPL and how to use it?](./content/questions/18-what-is-repl-and-how-to-use-it.md)
+- [Why do you need dto files?](./content/questions/19-why-do-you-need-dto-files.md)
 - [questions all](./content/questions/index.md)
 
 ## security
