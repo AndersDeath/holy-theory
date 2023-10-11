@@ -1,7 +1,7 @@
 ---
 title: Draft-1 Book Structure
-tags: ['search', 'algorithms', 'binary']
-languages: ['typescript', 'java', 'python']
+tags: ['book', 'draft']
+languages: []
 ---
 # Draft-1 Book Structure
 
