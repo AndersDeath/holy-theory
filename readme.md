@@ -225,6 +225,7 @@
 - [Minimum Depth of Binary Tree](./content/training/minimum-depth-of-binary-tree.md)
 - [Missing number](./content/training/missing-number.md)
 - [Move Zeroes](./content/training/move-zerod.md)
+- [Multiples of 3 and 5](./content/training/multiples-of-3-and-5.md)
 - [Next Greater Element I](./content/training/next-greater-element-i.md)
 - [Nim Game](./content/training/nim-game.md)
 - [Number Complement](./content/training/number-complement.md)
