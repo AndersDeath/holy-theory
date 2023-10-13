@@ -65,6 +65,7 @@
 - [What is functional programming](./content/questions/17-what-is-functional-programming.md)
 - [What is REPL and how to use it?](./content/questions/18-what-is-repl-and-how-to-use-it.md)
 - [Why do you need dto files?](./content/questions/19-why-do-you-need-dto-files.md)
+- [Can you explain the difference between REST API and GraphQL?](./content/questions/20-difference-between-restapi-and-graphql.md)
 - [questions all](./content/questions/index.md)
 
 ## security
