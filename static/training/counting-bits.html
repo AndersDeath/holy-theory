@@ -15,10 +15,15 @@
         img {
             max-width: 400px;
         }
+
+        .content {
+          width: 60%;
+          margin: 0 auto;
+        }
       </style>
   </head>
   <body>
-      <h1 id="counting-bits">Counting Bits</h1>
+      <div class="content"><h1 id="counting-bits">Counting Bits</h1>
 <pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">countBits</span>(<span class="hljs-params">n: <span class="hljs-built_in">number</span></span>): <span class="hljs-built_in">number</span>[] {
     <span class="hljs-keyword">let</span> <span class="hljs-attr">result</span>: <span class="hljs-built_in">number</span>[] = [<span class="hljs-number">0</span>];
     <span class="hljs-keyword">let</span> pow = <span class="hljs-number">1</span>;
@@ -71,6 +76,6 @@
 </ol>
 <p>Summary:</p>
 <p>The provided solution efficiently counts the number of 1-bits in the binary representation of each number from 0 to <code>n</code> and stores the counts in an array. It achieves this by identifying powers of 2 and updating the count based on the previously calculated counts using bitwise operations.</p>
-
+</div>
   </body>
   </html>

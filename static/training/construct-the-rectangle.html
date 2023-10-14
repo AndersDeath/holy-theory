@@ -15,10 +15,15 @@
         img {
             max-width: 400px;
         }
+
+        .content {
+          width: 60%;
+          margin: 0 auto;
+        }
       </style>
   </head>
   <body>
-      <h1 id="construct-the-rectangle">Construct the Rectangle</h1>
+      <div class="content"><h1 id="construct-the-rectangle">Construct the Rectangle</h1>
 <pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">constructRectangle</span>(<span class="hljs-params">area: <span class="hljs-built_in">number</span></span>): <span class="hljs-built_in">number</span>[] {
   <span class="hljs-keyword">let</span> width = <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">floor</span>(<span class="hljs-title class_">Math</span>.<span class="hljs-title function_">sqrt</span>(area));
 
@@ -60,6 +65,6 @@ Below is the step-by-step breakdown of the code:</p>
 <p>The code efficiently calculates the dimensions of a rectangle given its area by using the square root of the area as an initial estimate for the width and then iteratively adjusting the width until an exact value is found. The calculated width and length guarantee that their product equals the given area.</p>
 <p>The time complexity of this solution is O(sqrt(area)) since it uses <code>Math.sqrt</code> to calculate the initial width, and the loop has a maximum number of iterations equal to the square root of the area.</p>
 <p><strong>Source: <a href="https://leetcode.com">https://leetcode.com</a></strong></p>
-
+</div>
   </body>
   </html>

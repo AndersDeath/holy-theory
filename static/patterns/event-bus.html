@@ -15,10 +15,15 @@
         img {
             max-width: 400px;
         }
+
+        .content {
+          width: 60%;
+          margin: 0 auto;
+        }
       </style>
   </head>
   <body>
-      <h1 id="event-bus">Event Bus</h1>
+      <div class="content"><h1 id="event-bus">Event Bus</h1>
 <pre><code class="hljs language-typescript"><span class="hljs-keyword">interface</span> <span class="hljs-title class_">IEventBus</span> {
     <span class="hljs-attr">channels</span>: <span class="hljs-built_in">any</span>,
     <span class="hljs-attr">subscribe</span>: <span class="hljs-function">(<span class="hljs-params">arg1: <span class="hljs-built_in">string</span>, listener: (...args: <span class="hljs-built_in">any</span>[]) =&gt; <span class="hljs-built_in">void</span></span>) =&gt;</span> <span class="hljs-built_in">void</span>,
@@ -43,6 +48,6 @@
     }
 
 }
-</code></pre>
+</code></pre></div>
   </body>
   </html>

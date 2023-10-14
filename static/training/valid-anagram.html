@@ -15,10 +15,15 @@
         img {
             max-width: 400px;
         }
+
+        .content {
+          width: 60%;
+          margin: 0 auto;
+        }
       </style>
   </head>
   <body>
-      <h1 id="valid-anagram">Valid Anagram</h1>
+      <div class="content"><h1 id="valid-anagram">Valid Anagram</h1>
 <pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">isAnagram</span>(<span class="hljs-params">s: <span class="hljs-built_in">string</span>, t: <span class="hljs-built_in">string</span></span>): <span class="hljs-built_in">boolean</span> {
   <span class="hljs-keyword">if</span> (s.<span class="hljs-property">length</span> !== t.<span class="hljs-property">length</span>) <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
 
@@ -114,6 +119,6 @@
 <ul>
 <li>The space complexity is O(1) since the hash table stores characters, and the size of the hash table is bounded by the number of distinct characters in the input strings.</li>
 </ul>
-
+</div>
   </body>
   </html>

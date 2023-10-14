@@ -15,10 +15,15 @@
         img {
             max-width: 400px;
         }
+
+        .content {
+          width: 60%;
+          margin: 0 auto;
+        }
       </style>
   </head>
   <body>
-      <h1 id="chain-calculator">Chain calculator</h1>
+      <div class="content"><h1 id="chain-calculator">Chain calculator</h1>
 <pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">ChainCalculator</span>(<span class="hljs-params">given</span>) {
     <span class="hljs-variable language_">this</span>.<span class="hljs-property">num</span> = given || <span class="hljs-number">0</span>;
     <span class="hljs-keyword">const</span> actions = {
@@ -79,6 +84,6 @@ calculator.<span class="hljs-title function_">log</span>().<span class="hljs-tit
 </li>
 </ol>
 <p>Please note that the code provided uses the <code>Function</code> constructor to dynamically create functions from code strings. While this approach offers flexibility, it can also be potentially unsafe if the code strings come from untrusted sources. It&#39;s important to ensure that the code strings used in this manner are secure and not susceptible to code injection vulnerabilities.</p>
-
+</div>
   </body>
   </html>

@@ -7,6 +7,8 @@ All notable changes to this project will be documented in this file.
 * add Draft-1 Book Structure
 * add Multiples of 3 and 5 training
 * add Can you explain the difference between REST API and GraphQL? question
+* update builder.js
+
 # [0.0.39] - 2023-10-09
 * add What is the difference between var, const, and const? question to JS section
 * add What is event bubbling? question to JavaScript section

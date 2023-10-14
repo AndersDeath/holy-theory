@@ -15,10 +15,15 @@
         img {
             max-width: 400px;
         }
+
+        .content {
+          width: 60%;
+          margin: 0 auto;
+        }
       </style>
   </head>
   <body>
-      <h1 id="number-of-1-bits">Number of 1 Bits</h1>
+      <div class="content"><h1 id="number-of-1-bits">Number of 1 Bits</h1>
 <pre><code class="hljs language-typescript">
 <span class="hljs-keyword">function</span> <span class="hljs-title function_">hammingWeight</span>(<span class="hljs-params">n: <span class="hljs-built_in">number</span></span>): <span class="hljs-built_in">number</span> {
         <span class="hljs-keyword">let</span> pivot = <span class="hljs-number">1</span>;
@@ -50,6 +55,6 @@
 </ul>
 <p><strong>Summary:</strong></p>
 <p>The <code>hammingWeight</code> function effectively counts the number of &#39;1&#39; bits in the binary representation of an integer using bitwise manipulation techniques. It iterates through each bit position and checks if the bit is set, incrementing the count accordingly.</p>
-
+</div>
   </body>
   </html>

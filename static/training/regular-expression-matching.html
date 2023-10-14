@@ -15,10 +15,15 @@
         img {
             max-width: 400px;
         }
+
+        .content {
+          width: 60%;
+          margin: 0 auto;
+        }
       </style>
   </head>
   <body>
-      <h1 id="regular-expression-matching">Regular Expression Matching</h1>
+      <div class="content"><h1 id="regular-expression-matching">Regular Expression Matching</h1>
 <pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">isMatch</span>(<span class="hljs-params">s: <span class="hljs-built_in">string</span>, p: <span class="hljs-built_in">string</span></span>): <span class="hljs-built_in">boolean</span> {
  <span class="hljs-keyword">const</span> <span class="hljs-attr">dp</span>: <span class="hljs-built_in">boolean</span>[][] = [];
 
@@ -68,6 +73,6 @@
 <li><p><strong>Final Result:</strong> The value at <code>dp[s.length][p.length]</code> represents whether the entire string <code>s</code> matches the entire pattern <code>p</code>.</p>
 </li>
 </ol>
-
+</div>
   </body>
   </html>

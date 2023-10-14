@@ -15,10 +15,15 @@
         img {
             max-width: 400px;
         }
+
+        .content {
+          width: 60%;
+          margin: 0 auto;
+        }
       </style>
   </head>
   <body>
-      <h1 id="pairs">Pairs</h1>
+      <div class="content"><h1 id="pairs">Pairs</h1>
 <pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">pairs</span>(<span class="hljs-params">k: <span class="hljs-built_in">number</span>, arr: <span class="hljs-built_in">number</span>[]</span>): <span class="hljs-built_in">number</span> {
   arr.<span class="hljs-title function_">sort</span>(<span class="hljs-function">(<span class="hljs-params">a, b</span>) =&gt;</span> a - b);
   <span class="hljs-keyword">let</span> output = <span class="hljs-number">0</span>;
@@ -72,6 +77,6 @@
 <ul>
 <li><a href="../readme.md">Go back</a></li>
 </ul>
-
+</div>
   </body>
   </html>

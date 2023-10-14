@@ -15,10 +15,15 @@
         img {
             max-width: 400px;
         }
+
+        .content {
+          width: 60%;
+          margin: 0 auto;
+        }
       </style>
   </head>
   <body>
-      <h1 id="lonely-integer">Lonely Integer</h1>
+      <div class="content"><h1 id="lonely-integer">Lonely Integer</h1>
 <pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">lonelyInteger</span>(<span class="hljs-params">a: <span class="hljs-built_in">number</span>[]</span>): <span class="hljs-built_in">number</span> {
     <span class="hljs-keyword">return</span> a.<span class="hljs-title function_">reduce</span>(<span class="hljs-function">(<span class="hljs-params">a: <span class="hljs-built_in">number</span>, b: <span class="hljs-built_in">number</span></span>) =&gt;</span> a^b);
 }
@@ -45,6 +50,6 @@
 </ol>
 <p>This solution works based on the property of the XOR operation where XORing a number with itself results in 0. Therefore, when XORing all pairs of identical integers, they cancel out, leaving only the lonely integer.</p>
 <p>The technique used in this code is the XOR operation to efficiently find the lonely integer in an array. The XOR operation has the property that it is both commutative and associative, making it a suitable choice for this problem. The time complexity of this solution is O(n), where n is the number of elements in the array.</p>
-
+</div>
   </body>
   </html>

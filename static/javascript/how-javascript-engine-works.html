@@ -15,10 +15,15 @@
         img {
             max-width: 400px;
         }
+
+        .content {
+          width: 60%;
+          margin: 0 auto;
+        }
       </style>
   </head>
   <body>
-      <h1 id="how-javascript-engine-works">How JavaScript Engine works</h1>
+      <div class="content"><h1 id="how-javascript-engine-works">How JavaScript Engine works</h1>
 <p>JavaScript engines are responsible for executing JavaScript code on web browsers and other environments. They follow a multi-step process to parse, compile, optimize, and execute JavaScript code efficiently. Here&#39;s a simplified overview of how a typical JavaScript engine works:</p>
 <h3 id="1-lexical-analysis">1. <strong>Lexical Analysis:</strong></h3>
 <p>When you load a web page, the JavaScript engine first performs lexical analysis or tokenization. This involves breaking the source code into tokens, which are the smallest units of meaning in the language. Tokens include keywords, operators, literals, and identifiers.</p>
@@ -37,6 +42,6 @@
 <h3 id="8-event-loop-in-asynchronous-environments">8. <strong>Event Loop (in asynchronous environments):</strong></h3>
 <p>In asynchronous environments like web browsers, JavaScript uses an event loop to handle asynchronous operations. The event loop continuously checks the message queue for pending events (such as user interactions or completed network requests) and processes them, ensuring that asynchronous tasks are executed when their results are ready.</p>
 <p>Different JavaScript engines might implement these steps differently, but the overall process remains similar. Understanding these fundamental concepts can help developers write more efficient JavaScript code and optimize their applications for better performance.</p>
-
+</div>
   </body>
   </html>

@@ -15,10 +15,15 @@
         img {
             max-width: 400px;
         }
+
+        .content {
+          width: 60%;
+          margin: 0 auto;
+        }
       </style>
   </head>
   <body>
-      <h1 id="climbing-stairs">Climbing stairs</h1>
+      <div class="content"><h1 id="climbing-stairs">Climbing stairs</h1>
 <pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">climbStairs</span>(<span class="hljs-params">n: <span class="hljs-built_in">number</span></span>): <span class="hljs-built_in">number</span> {
     <span class="hljs-keyword">if</span>(n &lt;= <span class="hljs-number">3</span>) {
         <span class="hljs-keyword">return</span> n;
@@ -65,6 +70,6 @@ Below is the step-by-step breakdown of the code:</p>
 <p>This approach uses a dynamic programming-like approach to solve the problem, avoiding the need for recursion or maintaining an array. By iteratively updating the number of ways to reach each step based on the previous steps, the code calculates the total number of distinct ways to climb the stairs.</p>
 <p>The time complexity of this solution is O(n) since the loop iterates <code>n - 3</code> times. It has a constant space complexity since it only requires two variables to store the intermediate results.</p>
 <p><strong>Source: <a href="https://leetcode.com">https://leetcode.com</a></strong></p>
-
+</div>
   </body>
   </html>

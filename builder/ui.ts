@@ -39,10 +39,15 @@ export function htmlPageWrapper(content: string, meta?: any) {
         img {
             max-width: 400px;
         }
+
+        .content {
+          width: 60%;
+          margin: 0 auto;
+        }
       </style>
   </head>
   <body>
-      ${content}
+      <div class="content">${content}</div>
   </body>
   </html>`;
 }

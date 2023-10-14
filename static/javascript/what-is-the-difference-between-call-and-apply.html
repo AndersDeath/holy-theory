@@ -15,10 +15,15 @@
         img {
             max-width: 400px;
         }
+
+        .content {
+          width: 60%;
+          margin: 0 auto;
+        }
       </style>
   </head>
   <body>
-      <h1 id="what-is-the-difference-between-call-and-apply">What is the difference between Call and Apply?</h1>
+      <div class="content"><h1 id="what-is-the-difference-between-call-and-apply">What is the difference between Call and Apply?</h1>
 <p><code>call()</code> and <code>apply()</code> are two methods in JavaScript that allow you to invoke a function with a specified <code>this</code> value and arguments. They are similar in purpose but differ in how they accept arguments.</p>
 <h3 id="call"><code>call()</code></h3>
 <p>The <code>call()</code> method calls a function with a given <code>this</code> value and individual arguments passed one by one.</p>
@@ -78,6 +83,6 @@ introduce.<span class="hljs-title function_">apply</span>(person, [<span class="
 </li>
 </ol>
 <p>In modern JavaScript, you can often use the more versatile spread operator (<code>...</code>) to achieve the same result as <code>apply()</code> while providing a cleaner syntax, especially when working with arrays. However, <code>apply()</code> can still be useful in certain situations, such as when dealing with variadic functions or functions that accept a variable number of arguments.</p>
-
+</div>
   </body>
   </html>
