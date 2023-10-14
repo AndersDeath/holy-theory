@@ -15,10 +15,15 @@
         img {
             max-width: 400px;
         }
+
+        .content {
+          width: 60%;
+          margin: 0 auto;
+        }
       </style>
   </head>
   <body>
-      <h1 id="permutations">Permutations</h1>
+      <div class="content"><h1 id="permutations">Permutations</h1>
 <pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">permute</span>(<span class="hljs-params">nums: <span class="hljs-built_in">number</span>[]</span>): <span class="hljs-built_in">number</span>[][] {
   <span class="hljs-keyword">let</span> output = [];
   <span class="hljs-title function_">dfs</span>(nums, <span class="hljs-number">0</span>, output);
@@ -72,6 +77,6 @@
 <ul>
 <li><a href="../readme.md">Go back</a></li>
 </ul>
-
+</div>
   </body>
   </html>

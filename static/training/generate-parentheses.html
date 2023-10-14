@@ -15,10 +15,15 @@
         img {
             max-width: 400px;
         }
+
+        .content {
+          width: 60%;
+          margin: 0 auto;
+        }
       </style>
   </head>
   <body>
-      <h1 id="generate-parentheses">Generate Parentheses</h1>
+      <div class="content"><h1 id="generate-parentheses">Generate Parentheses</h1>
 <pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">generateParenthesis</span>(<span class="hljs-params">n: <span class="hljs-built_in">number</span></span>): <span class="hljs-built_in">string</span>[] {
     <span class="hljs-keyword">const</span> result = [];
     <span class="hljs-title function_">generator</span>(result, <span class="hljs-string">&quot;&quot;</span>, <span class="hljs-number">0</span>,<span class="hljs-number">0</span>,n)
@@ -65,6 +70,6 @@
 <li>Recursion: The function <code>generator</code> is implemented using recursion to explore all possible combinations of parentheses.</li>
 <li>Backtracking: The recursion and condition checks for open and close parentheses help in generating valid combinations and avoiding invalid ones.</li>
 </ul>
-
+</div>
   </body>
   </html>

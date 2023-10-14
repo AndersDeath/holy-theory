@@ -15,10 +15,15 @@
         img {
             max-width: 400px;
         }
+
+        .content {
+          width: 60%;
+          margin: 0 auto;
+        }
       </style>
   </head>
   <body>
-      <h1 id="observer">Observer</h1>
+      <div class="content"><h1 id="observer">Observer</h1>
 <pre><code class="hljs language-typescript"><span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Observer</span> {
     <span class="hljs-keyword">private</span> <span class="hljs-attr">observers</span>: <span class="hljs-built_in">any</span>[] = [];
 
@@ -34,6 +39,6 @@
         <span class="hljs-variable language_">this</span>.<span class="hljs-property">observers</span>.<span class="hljs-title function_">forEach</span>(<span class="hljs-function"><span class="hljs-params">subscriber</span> =&gt;</span> <span class="hljs-title function_">subscriber</span>(data));
     }
 }
-</code></pre>
+</code></pre></div>
   </body>
   </html>

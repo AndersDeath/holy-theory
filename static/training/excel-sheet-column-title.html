@@ -15,10 +15,15 @@
         img {
             max-width: 400px;
         }
+
+        .content {
+          width: 60%;
+          margin: 0 auto;
+        }
       </style>
   </head>
   <body>
-      <h1 id="excel-sheet-column-title">Excel Sheet Column Title</h1>
+      <div class="content"><h1 id="excel-sheet-column-title">Excel Sheet Column Title</h1>
 <pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">convertToTitle</span>(<span class="hljs-params">columnNumber: <span class="hljs-built_in">number</span></span>): <span class="hljs-built_in">string</span> {
       <span class="hljs-keyword">let</span> <span class="hljs-attr">output</span>: <span class="hljs-built_in">string</span>[] = [];
         <span class="hljs-keyword">while</span> (columnNumber &gt; <span class="hljs-number">0</span>) {
@@ -75,6 +80,6 @@
 <li><p>Math.floor(): The <code>Math.floor()</code> method is used to round down the division result when calculating the next left digit in the columnNumber.</p>
 </li>
 </ol>
-
+</div>
   </body>
   </html>

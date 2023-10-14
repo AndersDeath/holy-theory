@@ -15,10 +15,15 @@
         img {
             max-width: 400px;
         }
+
+        .content {
+          width: 60%;
+          margin: 0 auto;
+        }
       </style>
   </head>
   <body>
-      <h1 id="container-with-most-water">Container With Most Water</h1>
+      <div class="content"><h1 id="container-with-most-water">Container With Most Water</h1>
 <pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">maxArea</span>(<span class="hljs-params">height: <span class="hljs-built_in">number</span>[]</span>): <span class="hljs-built_in">number</span> {
 
     <span class="hljs-keyword">let</span> maximumArea = <span class="hljs-title class_">Number</span>.<span class="hljs-property">MIN_SAFE_INTEGER</span>;
@@ -74,6 +79,6 @@ Below is the step-by-step breakdown of the code:</p>
 <p>This approach efficiently explores all possible configurations of the container by utilizing the two-pointer technique and calculating the area based on the shorter line and the width. By gradually moving the pointers towards the center, the algorithm examines potentially higher lines and keeps track of the maximum area encountered.</p>
 <p>The time complexity of this solution is O(n) since it uses a single loop to traverse the <code>height</code> array. The space complexity is O(1) as the algorithm uses a constant amount of additional space to store variables.</p>
 <p><strong>Source: <a href="https://leetcode.com">https://leetcode.com</a></strong></p>
-
+</div>
   </body>
   </html>

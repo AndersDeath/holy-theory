@@ -15,10 +15,15 @@
         img {
             max-width: 400px;
         }
+
+        .content {
+          width: 60%;
+          margin: 0 auto;
+        }
       </style>
   </head>
   <body>
-      <h1 id="detect-capital-use">Detect Capital Use</h1>
+      <div class="content"><h1 id="detect-capital-use">Detect Capital Use</h1>
 <pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">detectCapitalUse</span>(<span class="hljs-params">word: <span class="hljs-built_in">string</span></span>): <span class="hljs-built_in">boolean</span> {
   <span class="hljs-keyword">const</span> isUpperCase = (<span class="hljs-attr">ch</span>: <span class="hljs-built_in">string</span>): <span class="hljs-function"><span class="hljs-params">boolean</span> =&gt;</span> ch === ch.<span class="hljs-title function_">toUpperCase</span>();
 
@@ -65,6 +70,6 @@
 </ol>
 <p>Summary:</p>
 <p>The provided JavaScript code checks the capitalization of a given word and returns <code>true</code> if the capitalization is correct (e.g., all uppercase, all lowercase, or starting with an uppercase followed by lowercase), and <code>false</code> otherwise.</p>
-
+</div>
   </body>
   </html>

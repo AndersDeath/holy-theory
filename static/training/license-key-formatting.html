@@ -15,10 +15,15 @@
         img {
             max-width: 400px;
         }
+
+        .content {
+          width: 60%;
+          margin: 0 auto;
+        }
       </style>
   </head>
   <body>
-      <h1 id="license-key-formatting">License Key Formatting</h1>
+      <div class="content"><h1 id="license-key-formatting">License Key Formatting</h1>
 <pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">licenseKeyFormatting</span>(<span class="hljs-params">s: <span class="hljs-built_in">string</span>, k: <span class="hljs-built_in">number</span></span>): <span class="hljs-built_in">string</span> {
   <span class="hljs-keyword">const</span> str = s.<span class="hljs-title function_">replace</span>(<span class="hljs-regexp">/-/g</span>, <span class="hljs-string">&#x27;&#x27;</span>).<span class="hljs-title function_">toUpperCase</span>();
   
@@ -66,6 +71,6 @@
 <li>Concatenating strings to build the formatted license key.</li>
 <li>Using conditional statements (<code>if</code>) to check conditions and control the loop.</li>
 </ul>
-
+</div>
   </body>
   </html>

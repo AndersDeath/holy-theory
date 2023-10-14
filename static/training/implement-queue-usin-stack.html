@@ -15,10 +15,15 @@
         img {
             max-width: 400px;
         }
+
+        .content {
+          width: 60%;
+          margin: 0 auto;
+        }
       </style>
   </head>
   <body>
-      <h1 id="implement-queue-using-stacks">Implement Queue using Stacks</h1>
+      <div class="content"><h1 id="implement-queue-using-stacks">Implement Queue using Stacks</h1>
 <pre><code class="hljs language-typescript"><span class="hljs-keyword">class</span> <span class="hljs-title class_">MyQueue</span> {
     <span class="hljs-attr">stack1</span>: <span class="hljs-built_in">number</span>[] = [];
     <span class="hljs-attr">stack2</span>: <span class="hljs-built_in">number</span>[] = [];
@@ -84,6 +89,6 @@
 <li>Utilizing the LIFO (Last-In-First-Out) property of stacks to reverse the order of elements when moving them from <code>stack1</code> to <code>stack2</code>.</li>
 <li>Ensuring that elements are moved to <code>stack2</code> only when necessary (on calls to <code>pop</code> and <code>peek</code>) to avoid unnecessary element transfers.</li>
 </ul>
-
+</div>
   </body>
   </html>

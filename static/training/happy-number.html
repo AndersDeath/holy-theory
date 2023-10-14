@@ -15,10 +15,15 @@
         img {
             max-width: 400px;
         }
+
+        .content {
+          width: 60%;
+          margin: 0 auto;
+        }
       </style>
   </head>
   <body>
-      <h1 id="happy-number">Happy Number</h1>
+      <div class="content"><h1 id="happy-number">Happy Number</h1>
 <pre><code class="hljs language-typescript">
 <span class="hljs-keyword">function</span> <span class="hljs-title function_">isHappy</span>(<span class="hljs-params">n: <span class="hljs-built_in">number</span></span>): <span class="hljs-built_in">boolean</span> {
     <span class="hljs-keyword">let</span> slow = n;
@@ -65,6 +70,6 @@
 <li>Looping to iterate through the sequence of sums of squares of digits.</li>
 <li>Two pointers (slow and fast) to detect cycles in the sequence. This is also known as the Floyd&#39;s cycle-finding algorithm, or the &quot;tortoise and hare&quot; algorithm. It&#39;s a well-known technique for detecting cycles in linked lists or sequences. In this case, it helps to efficiently determine whether the number is a happy number or not.</li>
 </ul>
-
+</div>
   </body>
   </html>

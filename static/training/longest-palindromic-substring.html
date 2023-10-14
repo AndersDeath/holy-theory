@@ -15,10 +15,15 @@
         img {
             max-width: 400px;
         }
+
+        .content {
+          width: 60%;
+          margin: 0 auto;
+        }
       </style>
   </head>
   <body>
-      <h1 id="longest-palindromic-substring">Longest Palindromic Substring</h1>
+      <div class="content"><h1 id="longest-palindromic-substring">Longest Palindromic Substring</h1>
 <pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">longestPalindrome</span>(<span class="hljs-params">s: <span class="hljs-built_in">string</span></span>): <span class="hljs-built_in">string</span> {
 
     <span class="hljs-keyword">let</span> length = s.<span class="hljs-property">length</span>;
@@ -95,6 +100,6 @@
 </ol>
 <p><strong>Summary:</strong></p>
 <p>The <code>longestPalindrome</code> function employs dynamic programming to find the longest palindromic substring within the input string. By utilizing the <code>table</code> array to store and track palindromic substrings, the algorithm optimally identifies the longest palindrome. The technique of dynamic programming and efficient substring comparison ensures an effective solution for finding the longest palindrome in a string.</p>
-
+</div>
   </body>
   </html>

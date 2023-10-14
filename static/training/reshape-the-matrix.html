@@ -15,10 +15,15 @@
         img {
             max-width: 400px;
         }
+
+        .content {
+          width: 60%;
+          margin: 0 auto;
+        }
       </style>
   </head>
   <body>
-      <h1 id="reshape-the-matrix">Reshape the Matrix</h1>
+      <div class="content"><h1 id="reshape-the-matrix">Reshape the Matrix</h1>
 <pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">matrixReshape</span>(<span class="hljs-params">mat: <span class="hljs-built_in">number</span>[][], r: <span class="hljs-built_in">number</span>, c: <span class="hljs-built_in">number</span></span>): <span class="hljs-built_in">number</span>[][] {
   <span class="hljs-keyword">const</span> m = mat.<span class="hljs-property">length</span>;
   <span class="hljs-keyword">const</span> n = mat[<span class="hljs-number">0</span>].<span class="hljs-property">length</span>;
@@ -65,6 +70,6 @@
 <li>Arithmetic Operations (<code>m * n</code> and <code>r * c</code>): Calculating the total number of elements in the input and reshaped matrices to validate if reshaping is possible.</li>
 </ol>
 <p>This function reshapes a given matrix into a new matrix with the specified number of rows and columns, preserving the original order of elements.</p>
-
+</div>
   </body>
   </html>

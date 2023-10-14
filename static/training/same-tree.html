@@ -15,10 +15,15 @@
         img {
             max-width: 400px;
         }
+
+        .content {
+          width: 60%;
+          margin: 0 auto;
+        }
       </style>
   </head>
   <body>
-      <h1 id="same-tree">Same tree</h1>
+      <div class="content"><h1 id="same-tree">Same tree</h1>
 <pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">isSameTree</span>(<span class="hljs-params">p: TreeNode | <span class="hljs-literal">null</span>, q: TreeNode | <span class="hljs-literal">null</span></span>): <span class="hljs-built_in">boolean</span> {
     <span class="hljs-keyword">if</span>(p === <span class="hljs-literal">null</span> &amp;&amp; q === <span class="hljs-literal">null</span>) <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
 
@@ -65,6 +70,6 @@
 <li>Space Complexity: O(H), where H is the height of the smaller of the two trees. The space is used for the recursive call stack.</li>
 </ul>
 <p>This code checks if two binary trees <code>p</code> and <code>q</code> are the same by comparing their structures and values through recursive traversal. If the trees have identical structures and node values, the function returns <code>true</code>, otherwise, it returns <code>false</code>.</p>
-
+</div>
   </body>
   </html>

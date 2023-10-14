@@ -15,10 +15,15 @@
         img {
             max-width: 400px;
         }
+
+        .content {
+          width: 60%;
+          margin: 0 auto;
+        }
       </style>
   </head>
   <body>
-      <h1 id="employee-bonus">Employee Bonus</h1>
+      <div class="content"><h1 id="employee-bonus">Employee Bonus</h1>
 <pre><code class="hljs language-sql"><span class="hljs-keyword">SELECT</span> Employee.name, Bonus.bonus
 <span class="hljs-keyword">FROM</span> Employee
 <span class="hljs-keyword">LEFT</span> <span class="hljs-keyword">JOIN</span> Bonus <span class="hljs-keyword">ON</span> Employee.empId <span class="hljs-operator">=</span> Bonus.empId
@@ -50,6 +55,6 @@
 </ol>
 <p>Summary:</p>
 <p>The provided SQL query retrieves the <code>name</code> and <code>bonus</code> values from the <code>Employee</code> and <code>Bonus</code> tables, respectively, using a <code>LEFT JOIN</code>. It filters the results to include only employees with a bonus amount less than 1000 or employees who do not have any bonus (<code>NULL</code> value in the <code>bonus</code> column).</p>
-
+</div>
   </body>
   </html>
