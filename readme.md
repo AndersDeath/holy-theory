@@ -121,6 +121,7 @@
 - [How is NoSQL database different from SQL databases?](./content/system-design/28-how-is-nosql-database-different-from-sql-databases.md)
 - [How Would You Design an API for Third-Party Developers?](./content/system-design/29-how-would-you-design-an-api-for-third-party-developers.md)
 - [How to optimize work of a web application using caching?](./content/system-design/30-how-to-optimize-work-of-a-web-application-using-caching.md)
+- [10 steps for system design](./content/system-design/31-10-steps-for-system-design.md)
 - [system-design all](./content/system-design/index.md)
 
 ## testing
