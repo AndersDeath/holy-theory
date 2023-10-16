@@ -24,6 +24,7 @@
 - [Event Loop](./content/javascript/event-loop.md)
 - [Give best practices for handling errors in asynchronous code.](./content/javascript/give-best-practices-for-handling-errors-in-asynchronous-code.md)
 - [How JavaScript Engine works](./content/javascript/how-javascript-engine-works.md)
+- [How to get argv in nodejs?](./content/javascript/how-to-get-argv-in-nodejs.md)
 - [javascript all](./content/javascript/index.md)
 - [JavaScript data types](./content/javascript/javascript-data-types.md)
 - [JavaScript number size summary](./content/javascript/javascript-number-size-summary.md)
