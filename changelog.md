@@ -1,8 +1,9 @@
 # Changelog
 
 All notable changes to this project will be documented in this file.
+# [0.0.41] - In progress
 
-# [0.0.40] - In progress
+# [0.0.40] - 2023-10-16
 * update CAP theorem abstract
 * add Draft-1 Book Structure
 * add Multiples of 3 and 5 training
