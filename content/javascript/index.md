@@ -3,6 +3,7 @@
 - [Event Loop](./event-loop.md)
 - [Give best practices for handling errors in asynchronous code.](./give-best-practices-for-handling-errors-in-asynchronous-code.md)
 - [How JavaScript Engine works](./how-javascript-engine-works.md)
+- [How to get argv in nodejs?](./how-to-get-argv-in-nodejs.md)
 - [javascript all](./index.md)
 - [JavaScript data types](./javascript-data-types.md)
 - [JavaScript number size summary](./javascript-number-size-summary.md)
