@@ -175,6 +175,7 @@
 - [Duplicate Emails](./content/training/duplicate-emails.md)
 - [Employee Bonus](./content/training/employee-bonus.md)
 - [Employees Earning More Than Their Managers](./content/training/employees-earning-more-than-their-managers.md)
+- [Even Fibonacci Numbers](./content/training/even-fibonacci-number.md)
 - [Even number of digits](./content/training/even-number-of-digits.md)
 - [Excel Sheet Column Title](./content/training/excel-sheet-column-title.md)
 - [Fibonacci Number](./content/training/fibonacci-number.md)

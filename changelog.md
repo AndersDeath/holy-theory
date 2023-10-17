@@ -2,6 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 # [0.0.41] - In progress
+* add Even Fibonacci Numbers training
 
 # [0.0.40] - 2023-10-16
 * update CAP theorem abstract
