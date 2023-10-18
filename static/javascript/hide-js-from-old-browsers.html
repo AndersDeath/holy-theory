@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Holy Theory</title>
+      <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/monokai.min.css" />
+      <script type="application/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+      <style>
+      body {
+        margin: 0;
+            padding: 0;
+        }
+
+        img {
+            max-width: 400px;
+        }
+
+        .content {
+          width: 60%;
+          margin: 0 auto;
+        }
+      </style>
+  </head>
+  <body>
+      <div class="content"><h1 id="how-can-javascript-codes-be-hidden-from-old-browsers-that-do-not-support-javascript">How can JavaScript codes be hidden from old browsers that do not support JavaScript?</h1>
+<ol>
+<li><p><strong>Add <code>&lt;!--</code> before the <code>&lt;script&gt;</code> tag:</strong> This starts an HTML comment, which is ignored by old browsers that do not understand JavaScript.</p>
+<pre><code class="hljs language-html"><span class="hljs-comment">&lt;!--
+&lt;script type=&quot;text/javascript&quot;&gt;
+// JavaScript code here
+&lt;/script&gt;
+--&gt;</span>
+</code></pre></li>
+<li><p><strong>Add <code>//--&gt;</code> after the <code>&lt;script&gt;</code> tag:</strong> This ends the HTML comment for old browsers. Modern browsers will treat <code>//--&gt;</code> as a one-line JavaScript comment, effectively ignoring it.</p>
+<pre><code class="hljs language-html"><span class="hljs-comment">&lt;!--
+&lt;script type=&quot;text/javascript&quot;&gt;
+// JavaScript code here
+&lt;/script&gt;
+//--&gt;</span>
+</code></pre></li>
+</ol>
+<p>By using this technique, the JavaScript code is effectively hidden from old browsers, but it will still be executed by modern browsers that support JavaScript. Keep in mind that this method is somewhat outdated, and modern web development practices often involve using feature detection and progressive enhancement to handle different browser capabilities.</p>
+</div>
+  </body>
+  </html>
