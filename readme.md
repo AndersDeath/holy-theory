@@ -23,6 +23,7 @@
 - [Different ways of declaring functions in JS](./content/javascript/different-ways-of-declaring-a-function-in-js.md)
 - [Event Loop](./content/javascript/event-loop.md)
 - [Give best practices for handling errors in asynchronous code.](./content/javascript/give-best-practices-for-handling-errors-in-asynchronous-code.md)
+- [How can JavaScript codes be hidden from old browsers that do not support JavaScript?](./content/javascript/hide-js-from-old-browsers.md)
 - [How JavaScript Engine works](./content/javascript/how-javascript-engine-works.md)
 - [How to get argv in nodejs?](./content/javascript/how-to-get-argv-in-nodejs.md)
 - [javascript all](./content/javascript/index.md)
