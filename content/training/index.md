@@ -74,6 +74,7 @@
 - [Island Perimeter](./island-perimeter.md)
 - [Isomorphic Strings](./isomorphic-string.md)
 - [Keyboard Row](./keyboard-row.md)
+- [Largest prime factor](./largest-prime-factor.md)
 - [Length of Last Word](./length-of-last-word.md)
 - [License Key Formatting](./license-key-formatting.md)
 - [Linked List Cycle](./linked-list-cycle.md)

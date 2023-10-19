@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Holy Theory</title>
+      <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/monokai.min.css" />
+      <script type="application/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+      <style>
+      body {
+        margin: 0;
+            padding: 0;
+        }
+
+        img {
+            max-width: 400px;
+        }
+
+        .content {
+          width: 60%;
+          margin: 0 auto;
+        }
+      </style>
+  </head>
+  <body>
+      <div class="content"><h1 id="largest-prime-factor">Largest prime factor</h1>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">largestPrimeFactor</span>(<span class="hljs-params"><span class="hljs-built_in">number</span>: <span class="hljs-built_in">number</span></span>): <span class="hljs-built_in">number</span> {
+    <span class="hljs-keyword">let</span> <span class="hljs-attr">largestFactor</span>: <span class="hljs-built_in">number</span> = <span class="hljs-number">1</span>;
+
+    <span class="hljs-keyword">while</span> (<span class="hljs-built_in">number</span> % <span class="hljs-number">2</span> === <span class="hljs-number">0</span>) {
+        largestFactor = <span class="hljs-number">2</span>;
+        <span class="hljs-built_in">number</span> = <span class="hljs-built_in">number</span> / <span class="hljs-number">2</span>;
+    }
+
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> <span class="hljs-attr">i</span>: <span class="hljs-built_in">number</span> = <span class="hljs-number">3</span>; i &lt;= <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">sqrt</span>(<span class="hljs-built_in">number</span>); i += <span class="hljs-number">2</span>) {
+        <span class="hljs-keyword">while</span> (<span class="hljs-built_in">number</span> % i === <span class="hljs-number">0</span>) {
+            largestFactor = i;
+            <span class="hljs-built_in">number</span> = <span class="hljs-built_in">number</span> / i;
+        }
+    }
+
+    <span class="hljs-keyword">if</span> (<span class="hljs-built_in">number</span> &gt; <span class="hljs-number">2</span>) {
+        largestFactor = <span class="hljs-built_in">number</span>;
+    }
+
+    <span class="hljs-keyword">return</span> largestFactor;
+}
+</code></pre><p><strong>Step-by-step breakdown:</strong></p>
+<p><strong>Step 1:</strong> The <code>while</code> loop checks if the given number is divisible by 2. If it is, it divides the number by 2 and updates the <code>largestFactor</code> variable to 2. This step continues until the number becomes odd.</p>
+<p><strong>Step 2:</strong> The <code>for</code> loop starts from 3 and iterates up to the square root of the remaining number (<code>Math.sqrt(number)</code>). It increments <code>i</code> by 2 in each iteration to check only odd numbers (skipping even numbers other than 2 for efficiency).</p>
+<p><strong>Step 3:</strong> Within the <code>for</code> loop, the <code>while</code> loop checks if the current factor (<code>i</code>) divides the remaining number. If it does, it updates the <code>largestFactor</code> variable and divides the number by <code>i</code>.</p>
+<p><strong>Step 4:</strong> If the current factor divides the number, the <code>largestFactor</code> is updated to the current factor, and the number is divided by the current factor.</p>
+<p><strong>Step 5:</strong> After the <code>for</code> loop, there might be a remaining number greater than 2, which could be a prime factor. The <code>if</code> statement checks if the remaining number is greater than 2 and updates the <code>largestFactor</code> variable if necessary.</p>
+<p><strong>Step 6:</strong> Finally, the function returns the <code>largestFactor</code> variable, which holds the largest prime factor of the given number.</p>
+</div>
+  </body>
+  </html>
