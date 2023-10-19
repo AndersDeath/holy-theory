@@ -209,6 +209,7 @@
 - [Island Perimeter](./content/training/island-perimeter.md)
 - [Isomorphic Strings](./content/training/isomorphic-string.md)
 - [Keyboard Row](./content/training/keyboard-row.md)
+- [Largest prime factor](./content/training/largest-prime-factor.md)
 - [Length of Last Word](./content/training/length-of-last-word.md)
 - [License Key Formatting](./content/training/license-key-formatting.md)
 - [Linked List Cycle](./content/training/linked-list-cycle.md)
