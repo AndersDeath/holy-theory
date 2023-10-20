@@ -129,6 +129,7 @@
 ## testing
 
 - [What is stress test?](./content/testing/01-what-is-stress-test.md)
+- [What types of software testing do you know?](./content/testing/02-what-types-of-software-testing-do-you-know.md)
 - [testing all](./content/testing/index.md)
 
 ## training
