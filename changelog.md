@@ -5,6 +5,7 @@ All notable changes to this project will be documented in this file.
 * add Even Fibonacci Numbers training
 * add How can JavaScript codes be hidden from old browsers that do not support JavaScript? question
 * add Largest prime factor training
+* add What types of software testing do you know? question to testing section
 
 # [0.0.40] - 2023-10-16
 * update CAP theorem abstract
