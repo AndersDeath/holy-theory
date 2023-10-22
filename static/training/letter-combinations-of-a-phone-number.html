@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Holy Theory</title>
+      <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/monokai.min.css" />
+      <script type="application/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+      <style>
+      body {
+        margin: 0;
+            padding: 0;
+        }
+
+        img {
+            max-width: 400px;
+        }
+
+        .content {
+          width: 60%;
+          margin: 0 auto;
+        }
+      </style>
+  </head>
+  <body>
+      <div class="content"><h1 id="letter-combinations-of-a-phone-number">Letter Combinations of a Phone Number</h1>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">letterCombinations</span>(<span class="hljs-params">digits: <span class="hljs-built_in">string</span></span>): <span class="hljs-built_in">string</span>[] {
+  <span class="hljs-keyword">if</span> (digits.<span class="hljs-property">length</span> === <span class="hljs-number">0</span>) {
+    <span class="hljs-keyword">return</span> [];
+  }
+
+  <span class="hljs-keyword">const</span> <span class="hljs-attr">digitMap</span>: { [<span class="hljs-attr">key</span>: <span class="hljs-built_in">string</span>]: <span class="hljs-built_in">string</span>[] } = {
+    <span class="hljs-string">&quot;2&quot;</span>: [<span class="hljs-string">&quot;a&quot;</span>, <span class="hljs-string">&quot;b&quot;</span>, <span class="hljs-string">&quot;c&quot;</span>],
+    <span class="hljs-string">&quot;3&quot;</span>: [<span class="hljs-string">&quot;d&quot;</span>, <span class="hljs-string">&quot;e&quot;</span>, <span class="hljs-string">&quot;f&quot;</span>],
+    <span class="hljs-string">&quot;4&quot;</span>: [<span class="hljs-string">&quot;g&quot;</span>, <span class="hljs-string">&quot;h&quot;</span>, <span class="hljs-string">&quot;i&quot;</span>],
+    <span class="hljs-string">&quot;5&quot;</span>: [<span class="hljs-string">&quot;j&quot;</span>, <span class="hljs-string">&quot;k&quot;</span>, <span class="hljs-string">&quot;l&quot;</span>],
+    <span class="hljs-string">&quot;6&quot;</span>: [<span class="hljs-string">&quot;m&quot;</span>, <span class="hljs-string">&quot;n&quot;</span>, <span class="hljs-string">&quot;o&quot;</span>],
+    <span class="hljs-string">&quot;7&quot;</span>: [<span class="hljs-string">&quot;p&quot;</span>, <span class="hljs-string">&quot;q&quot;</span>, <span class="hljs-string">&quot;r&quot;</span>, <span class="hljs-string">&quot;s&quot;</span>],
+    <span class="hljs-string">&quot;8&quot;</span>: [<span class="hljs-string">&quot;t&quot;</span>, <span class="hljs-string">&quot;u&quot;</span>, <span class="hljs-string">&quot;v&quot;</span>],
+    <span class="hljs-string">&quot;9&quot;</span>: [<span class="hljs-string">&quot;w&quot;</span>, <span class="hljs-string">&quot;x&quot;</span>, <span class="hljs-string">&quot;y&quot;</span>, <span class="hljs-string">&quot;z&quot;</span>],
+  };
+
+  <span class="hljs-keyword">const</span> <span class="hljs-attr">result</span>: <span class="hljs-built_in">string</span>[] = [];
+
+  <span class="hljs-keyword">function</span> <span class="hljs-title function_">backtrack</span>(<span class="hljs-params">combination: <span class="hljs-built_in">string</span>, index: <span class="hljs-built_in">number</span></span>) {
+    <span class="hljs-keyword">if</span> (index === digits.<span class="hljs-property">length</span>) {
+      result.<span class="hljs-title function_">push</span>(combination);
+      <span class="hljs-keyword">return</span>;
+    }
+
+    <span class="hljs-keyword">const</span> currentDigit = digits[index];
+    <span class="hljs-keyword">const</span> letters = digitMap[currentDigit];
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">const</span> letter <span class="hljs-keyword">of</span> letters) {
+      <span class="hljs-title function_">backtrack</span>(combination + letter, index + <span class="hljs-number">1</span>);
+    }
+  }
+
+  <span class="hljs-title function_">backtrack</span>(<span class="hljs-string">&quot;&quot;</span>, <span class="hljs-number">0</span>);
+  <span class="hljs-keyword">return</span> result;
+}
+</code></pre><p><strong>1. Input Validation:</strong></p>
+<ul>
+<li>The function takes a string of digits as input.</li>
+</ul>
+<p><strong>2. Base Case Check:</strong></p>
+<ul>
+<li>If the input <code>digits</code> string is empty, the function returns an empty array, as there are no combinations to generate.</li>
+</ul>
+<p><strong>3. Digit to Letter Mapping:</strong></p>
+<ul>
+<li>Create a mapping of digits to their corresponding letters according to the telephone keypad. For example, &#39;2&#39; corresponds to [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;].</li>
+</ul>
+<p><strong>4. Initialize Result Array:</strong></p>
+<ul>
+<li>Initialize an empty array called <code>result</code> to store the final combinations.</li>
+</ul>
+<p><strong>5. Backtracking Function:</strong></p>
+<ul>
+<li>Implement a recursive backtracking function. This function takes two parameters:<ul>
+<li><code>combination</code>: A string representing the current combination being constructed.</li>
+<li><code>index</code>: An integer representing the index of the current digit in the input <code>digits</code> string.</li>
+</ul>
+</li>
+</ul>
+<p><strong>6. Recursive Backtracking:</strong></p>
+<ul>
+<li>The backtracking function proceeds recursively, exploring all possible combinations.</li>
+<li>If the <code>index</code> becomes equal to the length of the input <code>digits</code> string, the current <code>combination</code> is complete and is added to the <code>result</code> array.</li>
+<li>If the <code>index</code> is not at the end of the <code>digits</code> string, get the letters corresponding to the current digit from the <code>digitMap</code>.</li>
+<li>For each letter obtained, append it to the current <code>combination</code> and make a recursive call to the backtracking function with the updated <code>combination</code> and the next index (<code>index + 1</code>).</li>
+</ul>
+<p><strong>7. Exploration and Recursion:</strong></p>
+<ul>
+<li>The recursive calls explore all possible combinations by trying different letters for each digit in the input string.</li>
+<li>The backtracking approach ensures that all possible combinations are explored.</li>
+</ul>
+<p><strong>8. Final Result:</strong></p>
+<ul>
+<li>After backtracking, the <code>result</code> array contains all valid letter combinations.</li>
+<li>Return the <code>result</code> array as the output of the function.</li>
+</ul>
+</div>
+  </body>
+  </html>
