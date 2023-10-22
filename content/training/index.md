@@ -76,6 +76,7 @@
 - [Keyboard Row](./keyboard-row.md)
 - [Largest prime factor](./largest-prime-factor.md)
 - [Length of Last Word](./length-of-last-word.md)
+- [Letter Combinations of a Phone Number](./letter-combinations-of-a-phone-number.md)
 - [License Key Formatting](./license-key-formatting.md)
 - [Linked List Cycle](./linked-list-cycle.md)
 - [Lonely Integer](./lonely-integer.md)

@@ -212,6 +212,7 @@
 - [Keyboard Row](./content/training/keyboard-row.md)
 - [Largest prime factor](./content/training/largest-prime-factor.md)
 - [Length of Last Word](./content/training/length-of-last-word.md)
+- [Letter Combinations of a Phone Number](./content/training/letter-combinations-of-a-phone-number.md)
 - [License Key Formatting](./content/training/license-key-formatting.md)
 - [Linked List Cycle](./content/training/linked-list-cycle.md)
 - [Lonely Integer](./content/training/lonely-integer.md)
