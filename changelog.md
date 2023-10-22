@@ -7,6 +7,7 @@ All notable changes to this project will be documented in this file.
 * add Largest prime factor training
 * add What types of software testing do you know? question to testing section
 * optimized git tool
+* add Letter Combinations of a Phone Number training
 
 # [0.0.40] - 2023-10-16
 * update CAP theorem abstract
