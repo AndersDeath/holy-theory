@@ -123,6 +123,8 @@ async function generateStatic(
         }
       }
 
+    
+
       const sectionContent = await buildList(
         allContentWithSections.filter((e: Entry) => e.section === sectionName),
         type
@@ -136,8 +138,11 @@ async function generateStatic(
       await fs.writeFile(sectionIndexOutputPath, sectionContent);
     }
   }
+  console.log(Object.fromEntries(lm.get()))
 
   if (type === "md")
+  console.log(allContentWithSections)
+
     await generateGlobalIndex(
       allContentWithSections,
       path.join(outputFolder, "../readme.md"),
