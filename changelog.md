@@ -1,7 +1,10 @@
 # Changelog
 
 All notable changes to this project will be documented in this file.
-# [0.0.41] - In progress
+
+# [0.0.42] - In progress
+
+# [0.0.41] - 2023-10-23
 * add Even Fibonacci Numbers training
 * add How can JavaScript codes be hidden from old browsers that do not support JavaScript? question
 * add Largest prime factor training
