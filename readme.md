@@ -210,6 +210,7 @@
 - [Island Perimeter](./training/island-perimeter.html)
 - [Isomorphic Strings](./training/isomorphic-string.html)
 - [Keyboard Row](./training/keyboard-row.html)
+- [Largest palindrome product](./training/largest-palindrome-product.html)
 - [Largest prime factor](./training/largest-prime-factor.html)
 - [Length of Last Word](./training/length-of-last-word.html)
 - [Letter Combinations of a Phone Number](./training/letter-combinations-of-a-phone-number.html)

@@ -74,6 +74,7 @@
 - [Island Perimeter](./island-perimeter.md)
 - [Isomorphic Strings](./isomorphic-string.md)
 - [Keyboard Row](./keyboard-row.md)
+- [Largest palindrome product](./largest-palindrome-product.md)
 - [Largest prime factor](./largest-prime-factor.md)
 - [Length of Last Word](./length-of-last-word.md)
 - [Letter Combinations of a Phone Number](./letter-combinations-of-a-phone-number.md)
