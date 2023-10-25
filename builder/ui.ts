@@ -52,7 +52,7 @@ export function htmlPageWrapper(content: string, meta?: any) {
   </html>`;
 }
 
-export async function buildList(
+export async function buildLinksList(
   entries: Entry[],
   type = "md"
 ): Promise<string> {

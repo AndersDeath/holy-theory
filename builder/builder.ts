@@ -3,7 +3,7 @@ import * as path from "path";
 import {
   buildHeadline,
   buildLink,
-  buildList,
+  buildLinksList,
   buildListItems,
   htmlPageWrapper,
 } from "./ui";
@@ -125,7 +125,7 @@ async function generateStatic(
 
     
 
-      const sectionContent = await buildList(
+      const sectionContent = await buildLinksList(
         allContentWithSections.filter((e: Entry) => e.section === sectionName),
         type
       );
