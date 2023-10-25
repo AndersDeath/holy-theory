@@ -1,7 +1,7 @@
 import * as fs from "fs-extra";
 import * as path from "path";
 import {
-  buildHeader,
+  buildHeadline,
   buildLink,
   buildList,
   buildListItems,
@@ -19,7 +19,7 @@ function generateSectionReadmes(
   return Object.keys(contentBySection)
     .map((section) => {
       const sectionContent = contentBySection[section].join("\n");
-      return `${buildHeader(section, 2, type)}\n\n${sectionContent}`;
+      return `${buildHeadline(section, 2, type)}\n\n${sectionContent}`;
     })
     .join("\n\n");
 }
@@ -42,7 +42,7 @@ const generateGlobalIndex = async (
   }, {} as Record<string, string[]>);
 
   let sectionReadmes =
-    buildHeader("Holy Theory", 1, type) +
+  buildHeadline("Holy Theory", 1, type) +
     "\n\n" +
     generateSectionReadmes(globalReadmeContent, type);
 

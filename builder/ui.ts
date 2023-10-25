@@ -12,7 +12,7 @@ export function buildListItems(content, type: string) {
   return "";
 }
 
-export function buildHeader(content, level: number, type: string) {
+export function buildHeadline(content, level: number, type: string) {
   if (type === "md") return Array(level).fill("#").join("") + " " + content;
   if (type === "html") return `<h${level}>${content}</h${level}>`;
   return "";
