@@ -6,7 +6,7 @@ export function buildLink(title: string, href: string, type: string) {
   return "";
 }
 
-export function buildListItems(content, type: string) {
+export function buildListItem(content, type: string) {
   if (type === "md") return `- ${content}`;
   if (type === "html") return `<li>${content}</li>`;
   return "";
@@ -57,7 +57,7 @@ export async function buildLinksList(
   type = "md"
 ): Promise<string> {
   let listItems = entries.map((entry) =>
-    buildListItems(buildLink(entry.title, entry.entryLink, type), type)
+    buildListItem(buildLink(entry.title, entry.entryLink, type), type)
   );
 
   if (type === "html") {

@@ -4,7 +4,7 @@ import {
   buildHeadline,
   buildLink,
   buildLinksList,
-  buildListItems,
+  buildListItem,
   htmlPageWrapper,
 } from "./ui";
 import { marked } from "./libs/marked";
@@ -35,14 +35,14 @@ const generateGlobalIndex = async (
         acc[entry.section] = [];
       }
       acc[entry.section].push(
-        buildListItems(buildLink(entry.title, entry.link, type), type)
+        buildListItem(buildLink(entry.title, entry.link, type), type)
       );
     }
     return acc;
   }, {} as Record<string, string[]>);
 
   let sectionReadmes =
-  buildHeadline("Holy Theory", 1, type) +
+    buildHeadline("Holy Theory", 1, type) +
     "\n\n" +
     generateSectionReadmes(globalReadmeContent, type);
 
@@ -93,7 +93,7 @@ async function generateStatic(
           const markdownContent = await fs.readFile(filePath, "utf-8");
           const { metadata, content }: any = parseMd(markdownContent);
 
-          if (type === "html" && metadata.languages?.length > 0) {
+          if (metadata.languages?.length > 0) {
             lm.setFromArr(metadata.languages);
           }
 
@@ -123,8 +123,6 @@ async function generateStatic(
         }
       }
 
-    
-
       const sectionContent = await buildLinksList(
         allContentWithSections.filter((e: Entry) => e.section === sectionName),
         type
@@ -138,11 +136,35 @@ async function generateStatic(
       await fs.writeFile(sectionIndexOutputPath, sectionContent);
     }
   }
-  console.log(Object.fromEntries(lm.get()))
+
+  const languageSource = Object.fromEntries(lm.get());
+
+  let outputList = "";
+  for (const [key, value] of Object.entries(languageSource)) {
+    console.log(`${key}: ${value}`);
+    outputList += buildListItem(`${key}: ${value}`, type) + "\n";
+  }
+
+  let output = [
+    buildHeadline("Statistics", 1, type),
+    buildHeadline("Languages", 2, type),
+    outputList,
+  ].join("\n\r");
+
+  if (type === "html") {
+    output = htmlPageWrapper(output);
+  }
+
+  await fs.writeFile(path.join(outputFolder, "statistics." + type), output);
+
+  allContentWithSections.push({
+    title: "statistics",
+    link: "./content/statistics." + type,
+    entryLink: "./statistics." + type,
+    section: "Statistics",
+  });
 
   if (type === "md")
-  console.log(allContentWithSections)
-
     await generateGlobalIndex(
       allContentWithSections,
       path.join(outputFolder, "../readme.md"),
