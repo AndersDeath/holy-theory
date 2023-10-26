@@ -308,3 +308,7 @@
 ## Statistics
 
 - [statistics](./content/statistics.md)
+
+## All content
+
+- [All](./content/all.md)

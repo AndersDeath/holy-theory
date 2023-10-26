@@ -119,6 +119,7 @@ async function generateStatic(
                 : `./${sectionName}/${entryName}.${type}`,
             entryLink: entryLink,
             section: sectionName,
+            content: type === "md" ? content : marked.parse(content)
           });
         }
       }
@@ -162,6 +163,13 @@ async function generateStatic(
     link: "./content/statistics." + type,
     entryLink: "./statistics." + type,
     section: "Statistics",
+  });
+
+  allContentWithSections.push({
+    title: "All",
+    link: "./content/all." + type,
+    entryLink: "./all." + type,
+    section: "All content",
   });
 
   if (type === "md")
