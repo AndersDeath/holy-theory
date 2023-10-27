@@ -119,7 +119,8 @@ async function generateStatic(
                 : `./${sectionName}/${entryName}.${type}`,
             entryLink: entryLink,
             section: sectionName,
-            content: type === "md" ? content : marked.parse(content)
+            content: type === "md" ? cleanContent(content) : marked.parse(cleanContent(content)),
+            type: metadata.title ? "content" : "collection",
           });
         }
       }
@@ -163,6 +164,7 @@ async function generateStatic(
     link: "./content/statistics." + type,
     entryLink: "./statistics." + type,
     section: "Statistics",
+    type: "collection",
   });
 
   allContentWithSections.push({
@@ -170,7 +172,28 @@ async function generateStatic(
     link: "./content/all." + type,
     entryLink: "./all." + type,
     section: "All content",
+    type: "collection",
   });
+
+  let allOutput = buildHeadline("Holy Theory project", 1, type) + "\n";
+
+  let prevSection = "";
+  allContentWithSections.forEach((e: Entry) => {
+    if (e.type === "content") {
+      if (prevSection !== e.section) {
+        prevSection = e.section;
+        allOutput += buildHeadline(e.section, 2, type) + "\n";
+      }
+      allOutput += buildHeadline(e.title, 3, type) + "\n";
+      e.content ? (allOutput += e.content) : "";
+    }
+  });
+
+  if (type === "html") {
+    allOutput = htmlPageWrapper(allOutput);
+  }
+
+  await fs.writeFile(path.join(outputFolder, "all." + type), allOutput);
 
   if (type === "md")
     await generateGlobalIndex(
