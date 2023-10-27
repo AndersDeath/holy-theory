@@ -5,6 +5,7 @@ All notable changes to this project will be documented in this file.
 # [0.0.42] - In progress
 * add Largest palindrome product training
 * add statistics page to builder
+* add all content files generation
 * 
 # [0.0.41] - 2023-10-23
 * add Even Fibonacci Numbers training
