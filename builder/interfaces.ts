@@ -4,4 +4,5 @@ export interface Entry {
   section?: string;
   entryLink: string;
   content?: string;
+  type?: string;
 }
