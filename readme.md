@@ -185,6 +185,7 @@
 - [Find All Numbers Disappeared in an Array](./content/training/find-all-numbers-disappeared-in-an-array.md)
 - [Find Customer Referee](./content/training/find-customer-referee.md)
 - [Find Mode in Binary Search Tree](./content/training/find-mode-in-binary-search-tree.md)
+- [Find Smallest Multiple](./content/training/find-smallest-multiple.md)
 - [Find the Difference](./content/training/find-the-diffrenece.md)
 - [Find the Index of the First Occurrence in a String](./content/training/find-the-index-of-the-first-occurrence-in-a-tring.md)
 - [Find the median](./content/training/find-the-median.md)
