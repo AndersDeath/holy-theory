@@ -49,6 +49,7 @@
 - [Find All Numbers Disappeared in an Array](./find-all-numbers-disappeared-in-an-array.md)
 - [Find Customer Referee](./find-customer-referee.md)
 - [Find Mode in Binary Search Tree](./find-mode-in-binary-search-tree.md)
+- [Find Smallest Multiple](./find-smallest-multiple.md)
 - [Find the Difference](./find-the-diffrenece.md)
 - [Find the Index of the First Occurrence in a String](./find-the-index-of-the-first-occurrence-in-a-tring.md)
 - [Find the median](./find-the-median.md)

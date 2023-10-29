@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Holy Theory</title>
+      <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/monokai.min.css" />
+      <script type="application/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+      <style>
+      body {
+        margin: 0;
+            padding: 0;
+        }
+
+        img {
+            max-width: 400px;
+        }
+
+        .content {
+          width: 60%;
+          margin: 0 auto;
+        }
+      </style>
+  </head>
+  <body>
+      <div class="content"><h1 id="find-smallest-multiple">Find Smallest Multiple</h1>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">findSmallestMultiple</span>(<span class="hljs-params">n: <span class="hljs-built_in">number</span></span>): <span class="hljs-built_in">number</span> {
+  <span class="hljs-keyword">let</span> lcm = <span class="hljs-number">1</span>;
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">2</span>; i &lt;= n; i++) {
+    lcm = (lcm * i) / <span class="hljs-title function_">gcd</span>(lcm, i);
+  }
+  <span class="hljs-keyword">return</span> lcm;
+}
+
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">gcd</span>(<span class="hljs-params">a: <span class="hljs-built_in">number</span>, b: <span class="hljs-built_in">number</span></span>): <span class="hljs-built_in">number</span> {
+  <span class="hljs-keyword">if</span> (b === <span class="hljs-number">0</span>) {
+    <span class="hljs-keyword">return</span> a;
+  } <span class="hljs-keyword">else</span> {
+    <span class="hljs-keyword">return</span> <span class="hljs-title function_">gcd</span>(b, a % b);
+  }
+}
+</code></pre><p><strong><code>findSmallestMultiple</code> Function:</strong></p>
+<ol>
+<li><p><strong>Function Definition:</strong></p>
+<ul>
+<li>The <code>findSmallestMultiple</code> function takes a parameter <code>n</code>, which is assumed to be a positive integer.</li>
+</ul>
+</li>
+<li><p><strong>Initialization:</strong></p>
+<ul>
+<li>Initialize a variable <code>lcm</code> to 1. This variable will store the least common multiple of numbers from 1 to <code>n</code>.</li>
+</ul>
+</li>
+<li><p><strong>Loop Through Numbers:</strong></p>
+<ul>
+<li>The loop starts from <code>i = 2</code> and goes up to <code>n</code>.</li>
+</ul>
+</li>
+<li><p><strong>Calculate LCM:</strong></p>
+<ul>
+<li>In each iteration, update <code>lcm</code> using the formula:<ul>
+<li><code>lcm = (lcm * i) / gcd(lcm, i)</code></li>
+</ul>
+</li>
+<li>Here, <code>gcd(lcm, i)</code> calculates the greatest common divisor (GCD) of <code>lcm</code> and <code>i</code>.</li>
+<li>The formula calculates the least common multiple using the relationship: <code>LCM(a, b) = (a * b) / GCD(a, b)</code>.</li>
+</ul>
+</li>
+</ol>
+<p><strong><code>gcd</code> Function:</strong></p>
+<ol>
+<li><p><strong>Function Definition:</strong></p>
+<ul>
+<li>The <code>gcd</code> function takes two parameters, <code>a</code> and <code>b</code>, which are assumed to be non-negative integers.</li>
+</ul>
+</li>
+<li><p><strong>GCD Calculation:</strong></p>
+<ul>
+<li>If <code>b</code> is 0, return <code>a</code> as the GCD.</li>
+<li>Otherwise, recursively call the <code>gcd</code> function with arguments <code>b</code> and <code>a % b</code>. This continues until <code>b</code> becomes 0, at which point <code>a</code> is the GCD.</li>
+</ul>
+</li>
+</ol>
+</div>
+  </body>
+  </html>
