@@ -2,6 +2,9 @@
 
 All notable changes to this project will be documented in this file.
 
+# [0.0.43] - In progress
+* 
+
 # [0.0.42] - In progress
 * add Largest palindrome product training
 * add statistics page to builder
