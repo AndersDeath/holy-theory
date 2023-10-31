@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "bun builder/index.ts",
     "generate:pdf": "rm content/all.pdf && md-to-pdf content/all.md"
   },
   "repository": {

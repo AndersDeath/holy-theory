@@ -288,6 +288,7 @@
 - [Submission Detail](./content/training/submission-detail.md)
 - [Subtree of Another Tree](./content/training/subtree-of-another-tree.md)
 - [Sum of Left Leaves](./content/training/sum-of-left-leaves.md)
+- [Sum square difference](./content/training/sum-square-difference.md)
 - [Summary Ranges](./content/training/summary-ranges.md)
 - [Swap Nodes in Pairs](./content/training/swap-nodes-in-pairs.md)
 - [Symmetric difference](./content/training/symmetric-difference.md)

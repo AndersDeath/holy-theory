@@ -152,6 +152,7 @@
 - [Submission Detail](./submission-detail.md)
 - [Subtree of Another Tree](./subtree-of-another-tree.md)
 - [Sum of Left Leaves](./sum-of-left-leaves.md)
+- [Sum square difference](./sum-square-difference.md)
 - [Summary Ranges](./summary-ranges.md)
 - [Swap Nodes in Pairs](./swap-nodes-in-pairs.md)
 - [Symmetric difference](./symmetric-difference.md)
