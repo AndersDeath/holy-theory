@@ -3,7 +3,7 @@
 All notable changes to this project will be documented in this file.
 
 # [0.0.43] - In progress
-* 
+* add Sum square difference training
 
 # [0.0.42] - 2023-10-30
 * add Largest palindrome product training
