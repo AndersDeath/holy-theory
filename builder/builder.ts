@@ -24,6 +24,27 @@ function generateSectionReadmes(
     .join("\n\n");
 }
 
+function generateTableOfContents(markdownContent: string): string {
+  const renderer = new marked.Renderer();
+  let tableOfContents = "";
+
+  let currentIndentation = 0;
+
+  renderer.heading = function (text, level, raw) {
+    const anchor = text.toLowerCase().replace(/[^\w]+/g, "-");
+    let indentation = "  ".repeat(level - 1);
+    if (level > 1) {
+      indentation += "- ";
+    }
+    tableOfContents += `${indentation}[${text}](#${anchor})\n`;
+    return `<h${level} id="${anchor}">${text}</h${level}>\n`;
+  };
+
+  marked(markdownContent, { renderer });
+
+  return tableOfContents;
+}
+
 const generateGlobalIndex = async (
   allContentWithSections: Entry[],
   outputPath: string,
@@ -119,7 +140,10 @@ async function generateStatic(
                 : `./${sectionName}/${entryName}.${type}`,
             entryLink: entryLink,
             section: sectionName,
-            content: type === "md" ? cleanContent(content) : marked.parse(cleanContent(content)),
+            content:
+              type === "md"
+                ? cleanContent(content)
+                : marked.parse(cleanContent(content)),
             type: metadata.title ? "content" : "collection",
           });
         }
@@ -191,6 +215,10 @@ async function generateStatic(
 
   if (type === "html") {
     allOutput = htmlPageWrapper(allOutput);
+  }
+
+  if (type === "md") {
+    allOutput = generateTableOfContents(allOutput) + allOutput;
   }
 
   await fs.writeFile(path.join(outputFolder, "all." + type), allOutput);
