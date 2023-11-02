@@ -1,3 +1,4 @@
+- [10001st prime](./10001st-prime.md)
 - [3Sum Closest](./3sum-closest.md)
 - [3Sum](./3sum.md)
 - [Add binary](./add-binary.md)

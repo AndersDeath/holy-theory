@@ -134,6 +134,7 @@
 
 ## training
 
+- [10001st prime](./content/training/10001st-prime.md)
 - [3Sum Closest](./content/training/3sum-closest.md)
 - [3Sum](./content/training/3sum.md)
 - [Add binary](./content/training/add-binary.md)
