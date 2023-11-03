@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file.
 * add Sum square difference training
 * add alpha version of table of contents builder
 * add 10001st prime training
+* update hash table data structure
 
 # [0.0.42] - 2023-10-30
 * add Largest palindrome product training

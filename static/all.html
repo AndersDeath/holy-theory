@@ -1652,7 +1652,20 @@ You can experiment with different TypeScript features, explore type annotations,
         <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>
     }
 }
-</code></pre><h3>Linked list</h3>
+</code></pre><p>A hash table is a data structure that allows you to store and retrieve values associated with a specific key in an efficient manner. It uses a hash function to compute an index into an array of buckets or slots, from which the desired value can be found.</p>
+<p>Here&#39;s how it works:</p>
+<ol>
+<li><p><strong>Hash Function:</strong> When you want to store data in a hash table, a hash function is applied to the key. The hash function converts the key into an index, a numeric value that represents the position in the hash table array where the associated value will be stored.</p>
+</li>
+<li><p><strong>Array of Buckets:</strong> The hash table consists of an array (often called a hash table array) where values are stored. Each index in the array is known as a bucket or slot.</p>
+</li>
+<li><p><strong>Collisions:</strong> Since hash functions can produce the same index for different keys (a situation known as a collision), hash tables must have a strategy for handling these collisions. Common techniques include chaining (where each bucket contains a linked list of key-value pairs) and open addressing (where the hash table searches for the next open slot in the array).</p>
+</li>
+<li><p><strong>Efficient Operations:</strong> Hash tables provide fast insertion, deletion, and lookup operations. When you want to find a value associated with a specific key, the hash function calculates the index, and then the hash table quickly retrieves the value from the corresponding bucket. The time complexity for these operations is often considered to be O(1) on average, making hash tables very efficient for handling large datasets.</p>
+</li>
+</ol>
+<p>Hash tables are widely used in various applications such as databases, caches, symbol tables in compilers, and in many other scenarios where fast data retrieval based on a key is required. The efficiency of hash tables largely depends on the quality of the hash function and the method used to handle collisions.</p>
+<h3>Linked list</h3>
 <h1 id="linked-list">Linked list</h1>
 <p><img src="https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/linked-list.png" alt="Linked List"></p>
 <pre><code class="hljs language-typescript">
@@ -2673,6 +2686,63 @@ You can experiment with different TypeScript features, explore type annotations,
 </ol>
 <p>These are some of the most common types of software testing, and they can be further customized or combined to meet the specific needs of a software development project.</p>
 <h2>training</h2>
+<h3>10001st prime</h3>
+<h1 id="10001st-prime">10001st prime</h1>
+<pre><code class="hljs language-typescript">
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">nthPrime</span>(<span class="hljs-params">n: <span class="hljs-built_in">number</span></span>): <span class="hljs-built_in">number</span> {
+    <span class="hljs-keyword">const</span> <span class="hljs-attr">primes</span>: <span class="hljs-built_in">number</span>[] = [<span class="hljs-number">2</span>];
+    <span class="hljs-keyword">let</span> <span class="hljs-attr">num</span>: <span class="hljs-built_in">number</span> = <span class="hljs-number">3</span>;
+
+    <span class="hljs-keyword">while</span> (primes.<span class="hljs-property">length</span> &lt; n) {
+        <span class="hljs-keyword">const</span> <span class="hljs-attr">sqrtNum</span>: <span class="hljs-built_in">number</span> = <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">sqrt</span>(num);
+        <span class="hljs-keyword">let</span> <span class="hljs-attr">isPrime</span>: <span class="hljs-built_in">boolean</span> = <span class="hljs-literal">true</span>;
+
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> <span class="hljs-attr">i</span>: <span class="hljs-built_in">number</span> = <span class="hljs-number">0</span>; i &lt; primes.<span class="hljs-property">length</span> &amp;&amp; primes[i] &lt;= sqrtNum; i++) {
+            <span class="hljs-keyword">if</span> (num % primes[i] === <span class="hljs-number">0</span>) {
+                isPrime = <span class="hljs-literal">false</span>;
+                <span class="hljs-keyword">break</span>;
+            }
+        }
+
+        <span class="hljs-keyword">if</span> (isPrime) {
+            primes.<span class="hljs-title function_">push</span>(num);
+        }
+
+        num += <span class="hljs-number">2</span>; 
+    }
+
+    <span class="hljs-keyword">return</span> primes[primes.<span class="hljs-property">length</span> - <span class="hljs-number">1</span>];
+}
+</code></pre><p><strong>Solution:</strong></p>
+<ol>
+<li><p><strong>Initialization:</strong></p>
+<ul>
+<li>Initialize an array <code>primes</code> with the first prime number, 2.</li>
+<li>Initialize a variable <code>num</code> to 3. This variable represents the number to be checked for primality.</li>
+</ul>
+</li>
+<li><p><strong>Loop until <code>primes</code> array has <code>n</code> elements:</strong></p>
+<ul>
+<li>Use a <code>while</code> loop that continues until the length of the <code>primes</code> array is less than <code>n</code>.</li>
+<li>Within the loop:<ul>
+<li>Calculate the square root of <code>num</code> and store it in <code>sqrtNum</code>.</li>
+<li>Initialize a boolean variable <code>isPrime</code> to <code>true</code>.</li>
+<li>Iterate through the <code>primes</code> array up to the square root of <code>num</code>:<ul>
+<li>If <code>num</code> is divisible by any number in the <code>primes</code> array, set <code>isPrime</code> to <code>false</code> and break the loop.</li>
+</ul>
+</li>
+<li>If <code>isPrime</code> is <code>true</code> after the loop, push <code>num</code> into the <code>primes</code> array.</li>
+<li>Increment <code>num</code> by 2 to check only odd numbers for efficiency, as even numbers greater than 2 are not prime.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Return the Nth Prime Number:</strong></p>
+<ul>
+<li>Once the loop finishes and the <code>primes</code> array has <code>n</code> elements, return the last element of the <code>primes</code> array, which represents the Nth prime number.</li>
+</ul>
+</li>
+</ol>
 <h3>3Sum Closest</h3>
 <h1 id="3sum-closest">3Sum Closest</h1>
 <pre><code class="hljs language-typescript">
