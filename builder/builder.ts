@@ -86,6 +86,28 @@ const createSectionFile = (path: string, content, type = "md") => {
   }
 };
 
+const generateStatisticsFile = async (lm, type, outputFolder) => {
+  const languageSource = Object.fromEntries(lm.get());
+
+  let outputList = "";
+  for (const [key, value] of Object.entries(languageSource)) {
+    console.log(`${key}: ${value}`);
+    outputList += buildListItem(`${key}: ${value}`, type) + "\n";
+  }
+
+  let output = [
+    buildHeadline("Statistics", 1, type),
+    buildHeadline("Languages", 2, type),
+    outputList,
+  ].join("\n\r");
+
+  if (type === "html") {
+    output = htmlPageWrapper(output);
+  }
+
+  await fs.writeFile(path.join(outputFolder, "statistics." + type), output);
+};
+
 async function generateStatic(
   rootFolder: string,
   outputFolder: string,
@@ -163,25 +185,7 @@ async function generateStatic(
     }
   }
 
-  const languageSource = Object.fromEntries(lm.get());
-
-  let outputList = "";
-  for (const [key, value] of Object.entries(languageSource)) {
-    console.log(`${key}: ${value}`);
-    outputList += buildListItem(`${key}: ${value}`, type) + "\n";
-  }
-
-  let output = [
-    buildHeadline("Statistics", 1, type),
-    buildHeadline("Languages", 2, type),
-    outputList,
-  ].join("\n\r");
-
-  if (type === "html") {
-    output = htmlPageWrapper(output);
-  }
-
-  await fs.writeFile(path.join(outputFolder, "statistics." + type), output);
+  await generateStatisticsFile(lm, type, outputFolder);
 
   allContentWithSections.push({
     title: "statistics",
