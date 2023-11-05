@@ -7,6 +7,7 @@ All notable changes to this project will be documented in this file.
 * add alpha version of table of contents builder
 * add 10001st prime training
 * update hash table data structure
+* fix issue with headers in all content markdown file
 
 # [0.0.42] - 2023-10-30
 * add Largest palindrome product training
