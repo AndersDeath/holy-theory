@@ -2,7 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
-# [0.0.43] - In progress
+# [0.0.44] - In progress
+* 
+
+# [0.0.43] - 2023-11-06
 * add Sum square difference training
 * add alpha version of table of contents builder
 * add 10001st prime training
