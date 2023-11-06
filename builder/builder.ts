@@ -28,8 +28,6 @@ function generateTableOfContents(markdownContent: string): string {
   const renderer = new marked.Renderer();
   let tableOfContents = "";
 
-  let currentIndentation = 0;
-
   renderer.heading = function (text, level, raw) {
     const anchor = text.toLowerCase().replace(/[^\w]+/g, "-");
     let indentation = "  ".repeat(level - 1);
@@ -84,6 +82,28 @@ const createSectionFile = (path: string, content, type = "md") => {
       htmlPageWrapper(marked.parse(cleanContent(content)))
     );
   }
+};
+
+const generateStatisticsFile = async (lm, type, outputFolder) => {
+  const languageSource = Object.fromEntries(lm.get());
+
+  let outputList = "";
+  for (const [key, value] of Object.entries(languageSource)) {
+    console.log(`${key}: ${value}`);
+    outputList += buildListItem(`${key}: ${value}`, type) + "\n";
+  }
+
+  let output = [
+    buildHeadline("Statistics", 1, type),
+    buildHeadline("Languages", 2, type),
+    outputList,
+  ].join("\n\r");
+
+  if (type === "html") {
+    output = htmlPageWrapper(output);
+  }
+
+  await fs.writeFile(path.join(outputFolder, "statistics." + type), output);
 };
 
 async function generateStatic(
@@ -163,25 +183,7 @@ async function generateStatic(
     }
   }
 
-  const languageSource = Object.fromEntries(lm.get());
-
-  let outputList = "";
-  for (const [key, value] of Object.entries(languageSource)) {
-    console.log(`${key}: ${value}`);
-    outputList += buildListItem(`${key}: ${value}`, type) + "\n";
-  }
-
-  let output = [
-    buildHeadline("Statistics", 1, type),
-    buildHeadline("Languages", 2, type),
-    outputList,
-  ].join("\n\r");
-
-  if (type === "html") {
-    output = htmlPageWrapper(output);
-  }
-
-  await fs.writeFile(path.join(outputFolder, "statistics." + type), output);
+  await generateStatisticsFile(lm, type, outputFolder);
 
   allContentWithSections.push({
     title: "statistics",
@@ -200,6 +202,7 @@ async function generateStatic(
   });
 
   let allOutput = buildHeadline("Holy Theory project", 1, type) + "\n";
+  const headerRegex = /^#\s+(.+)/gm;
 
   let prevSection = "";
   allContentWithSections.forEach((e: Entry) => {
@@ -209,7 +212,7 @@ async function generateStatic(
         allOutput += buildHeadline(e.section, 2, type) + "\n";
       }
       allOutput += buildHeadline(e.title, 3, type) + "\n";
-      e.content ? (allOutput += e.content) : "";
+      e.content ? (allOutput += e.content.replace(headerRegex, "")) : "";
     }
   });
 

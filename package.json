@@ -1,12 +1,12 @@
 {
   "name": "holy-theory",
-  "version": "0.0.42",
+  "version": "0.0.43",
   "description": "The Book",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "bun builder/index.ts",
-    "generate:pdf": "rm content/all.pdf && md-to-pdf content/all.md"
+    "generate:pdf": "rm -rf content/all.pdf && md-to-pdf content/all.md"
   },
   "repository": {
     "type": "git",
@@ -34,6 +34,7 @@
   "devDependencies": {
     "@types/marked": "^5.0.1",
     "@types/pug": "^2.0.6",
+    "markdown-pdf": "^11.0.0",
     "parse-md": "^3.0.3",
     "ts-node": "^10.9.1"
   },
