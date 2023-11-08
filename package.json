@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "bun builder/index.ts",
-    "generate:pdf": "rm -rf content/all.pdf && md-to-pdf content/all.md"
+    "generate:pdf": "pandoc all.md -o output.pdf -V geometry:margin=1in"
   },
   "repository": {
     "type": "git",
@@ -34,7 +34,6 @@
   "devDependencies": {
     "@types/marked": "^5.0.1",
     "@types/pug": "^2.0.6",
-    "markdown-pdf": "^11.0.0",
     "parse-md": "^3.0.3",
     "ts-node": "^10.9.1"
   },
@@ -46,7 +45,6 @@
     "marked-gfm-heading-id": "^3.0.3",
     "marked-highlight": "^2.0.1",
     "marked-mangle": "^1.0.1",
-    "md-to-pdf": "^5.2.4",
     "pug": "^3.0.2",
     "puppeteer": "^21.4.1",
     "typescript": "^5.1.6"
