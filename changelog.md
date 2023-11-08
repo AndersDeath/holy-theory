@@ -4,6 +4,7 @@ All notable changes to this project will be documented in this file.
 
 # [0.0.44] - In progress
 * add Largest product in a series training in JavaScript
+* migration to pandoc for pdf generation
 
 # [0.0.43] - 2023-11-06
 * add Sum square difference training
