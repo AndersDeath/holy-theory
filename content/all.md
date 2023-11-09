@@ -314,7 +314,7 @@
     - [Search insert position](#search-insert-position)
     - [Simple text editor](#simple-text-editor)
     - [Single Number](#single-number)
-    - [Sqrt(x)](#sqrt-x-)
+    - [Special pythagorean triplet](#special-pythagorean-triplet)
     - [String to integer (atoi)](#string-to-integer-atoi-)
     - [Student Attendance Record I](#student-attendance-record-i)
     - [Submission Detail](#submission-detail)
@@ -7937,7 +7937,47 @@ for (let i: number = 3; i <= Math.sqrt(number); i += 2) {
 
 **Step 5:** After the `for` loop, there might be a remaining number greater than 2, which could be a prime factor. The `if` statement checks if the remaining number is greater than 2 and updates the `largestFactor` variable if necessary.
 
-**Step 6:** Finally, the function returns the `largestFactor` variable, which holds the largest prime factor of the given number.### Length of Last Word
+**Step 6:** Finally, the function returns the `largestFactor` variable, which holds the largest prime factor of the given number.### Largest product in a series
+
+
+```javascript
+function largestProductinaSeries(n) {
+
+  let thousandDigits = [7,3,1,6,7,1,7,6,5,3,1,3,3,0,6,2,4,9,1,9,2,2,5,1,1,9,6,7,4,4,2,6,5,7,4,7,4,2,3,5,5,3,4,9,1,9,4,9,3,4,9,6,9,8,3,5,2,0,3,1,2,7,7,4,5,0,6,3,2,6,2,3,9,5,7,8,3,1,8,0,1,6,9,8,4,8,0,1,8,6,9,4,7,8,8,5,1,8,4,3,8,5,8,6,1,5,6,0,7,8,9,1,1,2,9,4,9,4,9,5,4,5,9,5,0,1,7,3,7,9,5,8,3,3,1,9,5,2,8,5,3,2,0,8,8,0,5,5,1,1,1,2,5,4,0,6,9,8,7,4,7,1,5,8,5,2,3,8,6,3,0,5,0,7,1,5,6,9,3,2,9,0,9,6,3,2,9,5,2,2,7,4,4,3,0,4,3,5,5,7,6,6,8,9,6,6,4,8,9,5,0,4,4,5,2,4,4,5,2,3,1,6,1,7,3,1,8,5,6,4,0,3,0,9,8,7,1,1,1,2,1,7,2,2,3,8,3,1,1,3,6,2,2,2,9,8,9,3,4,2,3,3,8,0,3,0,8,1,3,5,3,3,6,2,7,6,6,1,4,2,8,2,8,0,6,4,4,4,4,8,6,6,4,5,2,3,8,7,4,9,3,0,3,5,8,9,0,7,2,9,6,2,9,0,4,9,1,5,6,0,4,4,0,7,7,2,3,9,0,7,1,3,8,1,0,5,1,5,8,5,9,3,0,7,9,6,0,8,6,6,7,0,1,7,2,4,2,7,1,2,1,8,8,3,9,9,8,7,9,7,9,0,8,7,9,2,2,7,4,9,2,1,9,0,1,6,9,9,7,2,0,8,8,8,0,9,3,7,7,6,6,5,7,2,7,3,3,3,0,0,1,0,5,3,3,6,7,8,8,1,2,2,0,2,3,5,4,2,1,8,0,9,7,5,1,2,5,4,5,4,0,5,9,4,7,5,2,2,4,3,5,2,5,8,4,9,0,7,7,1,1,6,7,0,5,5,6,0,1,3,6,0,4,8,3,9,5,8,6,4,4,6,7,0,6,3,2,4,4,1,5,7,2,2,1,5,5,3,9,7,5,3,6,9,7,8,1,7,9,7,7,8,4,6,1,7,4,0,6,4,9,5,5,1,4,9,2,9,0,8,6,2,5,6,9,3,2,1,9,7,8,4,6,8,6,2,2,4,8,2,8,3,9,7,2,2,4,1,3,7,5,6,5,7,0,5,6,0,5,7,4,9,0,2,6,1,4,0,7,9,7,2,9,6,8,6,5,2,4,1,4,5,3,5,1,0,0,4,7,4,8,2,1,6,6,3,7,0,4,8,4,4,0,3,1,9,9,8,9,0,0,0,8,8,9,5,2,4,3,4,5,0,6,5,8,5,4,1,2,2,7,5,8,8,6,6,6,8,8,1,1,6,4,2,7,1,7,1,4,7,9,9,2,4,4,4,2,9,2,8,2,3,0,8,6,3,4,6,5,6,7,4,8,1,3,9,1,9,1,2,3,1,6,2,8,2,4,5,8,6,1,7,8,6,6,4,5,8,3,5,9,1,2,4,5,6,6,5,2,9,4,7,6,5,4,5,6,8,2,8,4,8,9,1,2,8,8,3,1,4,2,6,0,7,6,9,0,0,4,2,2,4,2,1,9,0,2,2,6,7,1,0,5,5,6,2,6,3,2,1,1,1,1,1,0,9,3,7,0,5,4,4,2,1,7,5,0,6,9,4,1,6,5,8,9,6,0,4,0,8,0,7,1,9,8,4,0,3,8,5,0,9,6,2,4,5,5,4,4,4,3,6,2,9,8,1,2,3,0,9,8,7,8,7,9,9,2,7,2,4,4,2,8,4,9,0,9,1,8,8,8,4,5,8,0,1,5,6,1,6,6,0,9,7,9,1,9,1,3,3,8,7,5,4,9,9,2,0,0,5,2,4,0,6,3,6,8,9,9,1,2,5,6,0,7,1,7,6,0,6,0,5,8,8,6,1,1,6,4,6,7,1,0,9,4,0,5,0,7,7,5,4,1,0,0,2,2,5,6,9,8,3,1,5,5,2,0,0,0,5,5,9,3,5,7,2,9,7,2,5,7,1,6,3,6,2,6,9,5,6,1,8,8,2,6,7,0,4,2,8,2,5,2,4,8,3,6,0,0,8,2,3,2,5,7,5,3,0,4,2,0,7,5,2,9,6,3,4,5,0];
+
+
+
+      let maxProduct = 0;
+    for (let i = 0; i <= thousandDigits.length - n; i++) {
+        let product = 1;
+        for (let j = 0; j < n; j++) {
+            product *= parseInt(thousandDigits[i + j], 10);
+        }
+        maxProduct = Math.max(maxProduct, product);
+    }
+    return maxProduct;
+}
+
+largestProductinaSeries(13);
+
+```
+
+1. **Initialization:**
+   - Initialize the `thousandDigits` array with 1000 digits represented as individual numbers.
+   - Initialize a variable `maxProduct` to store the maximum product found. Set its initial value to 0.
+
+2. **Loop through the `thousandDigits` array:**
+   - Use a `for` loop to iterate through the `thousandDigits` array up to the length minus `n` (since you are looking for `n` consecutive digits).
+   - Within the loop:
+     - Initialize a variable `product` to 1 to store the product of `n` consecutive digits.
+     - Use another `for` loop to iterate through the next `n` digits.
+     - Multiply the current digit with the `product`.
+     - Update `maxProduct` to be the maximum of the current `product` and the existing `maxProduct`.
+
+3. **Return the Result:**
+   - Once the loop finishes, return the `maxProduct`, which represents the largest product of `n` consecutive digits in the `thousandDigits` array.
+
+In this specific case, the function is finding the largest product of 13 consecutive digits in the given 1000-digit number sequence.### Length of Last Word
 
 
 ```typescript
@@ -11657,7 +11697,41 @@ const singleNumber = function (nums) {
 This code efficiently finds the single number in the array using the bitwise XOR operation, leveraging the XOR property to eliminate duplicate numbers and keep only the unique one.
 
 - [Go back](../readme.md)
-### Sqrt(x)
+### Special pythagorean triplet
+
+
+
+```typescript
+function specialPythagoreanTriplet(n: number): number | null {
+    for (let a = 1; a < n / 3; a++) {
+        for (let b = a + 1; b < n / 2; b++) {
+            const c = n - a - b;
+            if (a * a + b * b === c * c) {
+                return a * b * c;
+            }
+        }
+    }
+    return null;
+}
+```
+**Description:**
+
+1. **Outer Loop (Variable `a`):**
+   - The outer loop iterates through possible values of `a` from 1 to `(n / 3) - 1`. 
+   - The condition `a < n / 3` ensures that `a` is less than one-third of the total perimeter `n`.
+
+2. **Inner Loop (Variable `b`):**
+   - The inner loop iterates through possible values of `b` from `a + 1` to `(n / 2) - 1`. 
+   - The condition `b < n / 2` ensures that `b` is less than half of the total perimeter `n`.
+   - This condition also guarantees that `c = n - a - b` is greater than 0.
+
+3. **Calculate `c` and Check for Pythagorean Triple:**
+   - Inside the inner loop, calculate `c` as the remaining value to fulfill the perimeter condition: `c = n - a - b`.
+   - Check if the current combination of `a`, `b`, and `c` forms a Pythagorean triplet using the condition `a^2 + b^2 === c^2`.
+   - If a Pythagorean triplet is found, return the product of `a`, `b`, and `c` (`a * b * c`).
+
+4. **Return `null` if No Triplet is Found:**
+   - If the loops finish without finding any Pythagorean triplet, the function returns `null` to indicate that no such triplet exists for the given perimeter `n`.### Sqrt(x)
 
 
 
