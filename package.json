@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "bun builder/index.ts",
-    "generate:pdf": "pandoc all.md -o output.pdf -V geometry:margin=1in"
+    "generate:pdf": "pandoc content/prepared_all.md -o content/output.pdf -V geometry:margin=1in"
   },
   "repository": {
     "type": "git",
