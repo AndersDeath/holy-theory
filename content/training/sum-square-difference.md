@@ -54,11 +54,11 @@ function sumSquareDifference(n: number): number {
 
 
 1. **Calculate the Sum of Squares:**
-   - The sum of squares of the first `n` natural numbers can be calculated using the formula \(\frac{n \times (n + 1) \times (2n + 1)}{6}\).
+   - The sum of squares of the first `n` natural numbers can be calculated using the formula 
    - Calculate `sumOfSquares` using the formula.
 
 2. **Calculate the Sum of Numbers:**
-   - The sum of the first `n` natural numbers can be calculated using the formula \(\frac{n \times (n + 1)}{2}\).
+   - The sum of the first `n` natural numbers can be calculated using the formula
    - Calculate `sum` using the formula.
 
 3. **Calculate the Square of the Sum:**

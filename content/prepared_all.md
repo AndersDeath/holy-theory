@@ -1,5 +1,4 @@
 [Holy Theory project](#holy-theory-project)
-- [Holy Theory project](#holy-theory-project)
   - [algorithms](#algorithms)
     - [Binary search](#binary-search)
     - [Binary tree in order traversal](#binary-tree-in-order-traversal)
@@ -14,45 +13,45 @@
   - [Java](#java)
     - [Interpolation search](#interpolation-search)
     - [Merge sort](#merge-sort)
-  - [Java](#java-1)
+  - [Java](#java)
     - [Quick sort](#quick-sort)
     - [Selection sort](#selection-sort)
   - [javascript](#javascript)
     - [Array length property](#array-length-property)
     - [Different ways of declaring functions in JS](#different-ways-of-declaring-functions-in-js)
     - [Event Loop](#event-loop)
-    - [Give best practices for handling errors in asynchronous code.](#give-best-practices-for-handling-errors-in-asynchronous-code)
-    - [1. **Lexical Analysis:**](#1-lexical-analysis)
-    - [2. **Parsing:**](#2-parsing)
-    - [3. **Compilation:**](#3-compilation)
-    - [4. **Optimization:**](#4-optimization)
-    - [5. **Execution:**](#5-execution)
-    - [6. **Garbage Collection:**](#6-garbage-collection)
-    - [7. **Callbacks and Web APIs (in browser environments):**](#7-callbacks-and-web-apis-in-browser-environments)
-    - [8. **Event Loop (in asynchronous environments):**](#8-event-loop-in-asynchronous-environments)
-    - [How to get argv in nodejs?](#how-to-get-argv-in-nodejs)
+    - [Give best practices for handling errors in asynchronous code.](#give-best-practices-for-handling-errors-in-asynchronous-code-)
+    - [1. <strong>Lexical Analysis:</strong>](#1-strong-lexical-analysis-strong-)
+    - [2. <strong>Parsing:</strong>](#2-strong-parsing-strong-)
+    - [3. <strong>Compilation:</strong>](#3-strong-compilation-strong-)
+    - [4. <strong>Optimization:</strong>](#4-strong-optimization-strong-)
+    - [5. <strong>Execution:</strong>](#5-strong-execution-strong-)
+    - [6. <strong>Garbage Collection:</strong>](#6-strong-garbage-collection-strong-)
+    - [7. <strong>Callbacks and Web APIs (in browser environments):</strong>](#7-strong-callbacks-and-web-apis-in-browser-environments-strong-)
+    - [8. <strong>Event Loop (in asynchronous environments):</strong>](#8-strong-event-loop-in-asynchronous-environments-strong-)
+    - [How to get argv in nodejs?](#how-to-get-argv-in-nodejs-)
     - [JavaScript data types](#javascript-data-types)
     - [JavaScript number size summary](#javascript-number-size-summary)
     - [JavaScript Arrays cheat sheet](#javascript-arrays-cheat-sheet)
     - [OOP in JavaScript](#oop-in-javascript)
-    - [1. **Objects:**](#1-objects)
-    - [2. **Classes (Introduced in ECMAScript 6):**](#2-classes-introduced-in-ecmascript-6)
-    - [3. **Inheritance:**](#3-inheritance)
-    - [4. **Encapsulation:**](#4-encapsulation)
-    - [5. **Polymorphism:**](#5-polymorphism)
+    - [1. <strong>Objects:</strong>](#1-strong-objects-strong-)
+    - [2. <strong>Classes (Introduced in ECMAScript 6):</strong>](#2-strong-classes-introduced-in-ecmascript-6-strong-)
+    - [3. <strong>Inheritance:</strong>](#3-strong-inheritance-strong-)
+    - [4. <strong>Encapsulation:</strong>](#4-strong-encapsulation-strong-)
+    - [5. <strong>Polymorphism:</strong>](#5-strong-polymorphism-strong-)
     - [Promise action flow](#promise-action-flow)
-    - [What is event bubbling?](#what-is-event-bubbling)
-    - [`call()`](#call)
-    - [`apply()`](#apply)
-    - [Differences:](#differences)
+    - [What is event bubbling?](#what-is-event-bubbling-)
+    - [<code>call()</code>](#-code-call-code-)
+    - [<code>apply()</code>](#-code-apply-code-)
+    - [Differences:](#differences-)
     - [What is the NaN](#what-is-the-nan)
-    - [What is the difference between var, const, and const?](#what-is-the-difference-between-var-const-and-const)
+    - [What is the difference between var, const, and const?](#what-is-the-difference-between-var-const-and-const-)
   - [patterns](#patterns)
     - [Event Bus](#event-bus)
     - [Observer](#observer)
     - [Singleton](#singleton)
   - [questions](#questions)
-    - [How to reverse a number?](#how-to-reverse-a-number)
+    - [How to reverse a number?](#how-to-reverse-a-number-)
     - [Big O](#big-o)
     - [OOP Principles](#oop-principles)
   - [Abstraction](#abstraction)
@@ -69,7 +68,7 @@
   - [Question](#question)
   - [Answer](#answer)
     - [Websockets](#websockets)
-    - [Git + Gitflow](#git--gitflow)
+    - [Git + Gitflow](#git-gitflow)
     - [Main principles of security in ExpressJS server](#main-principles-of-security-in-expressjs-server)
   - [structures](#structures)
     - [Array](#array)
@@ -84,86 +83,86 @@
     - [Set](#set)
     - [Stack](#stack)
     - [Tree](#tree)
-  - [Tree](#tree-1)
+  - [Tree](#tree)
   - [Binary search tree](#binary-search-tree)
   - [system-design](#system-design)
     - [Horizontal and vertical scaling](#horizontal-and-vertical-scaling)
     - [CAP theorem](#cap-theorem)
-  - [CAP theorem](#cap-theorem-1)
-    - [1. **Consistency:**](#1-consistency)
-    - [2. **Availability:**](#2-availability)
-    - [3. **Partition Tolerance:**](#3-partition-tolerance)
-    - [Real-World Scenarios and Trade-Offs:](#real-world-scenarios-and-trade-offs)
-    - [Considerations for System Architects:](#considerations-for-system-architects)
+  - [CAP theorem](#cap-theorem)
+    - [1. <strong>Consistency:</strong>](#1-strong-consistency-strong-)
+    - [2. <strong>Availability:</strong>](#2-strong-availability-strong-)
+    - [3. <strong>Partition Tolerance:</strong>](#3-strong-partition-tolerance-strong-)
+    - [Real-World Scenarios and Trade-Offs:](#real-world-scenarios-and-trade-offs-)
+    - [Considerations for System Architects:](#considerations-for-system-architects-)
     - [How DNS resolves ip address](#how-dns-resolves-ip-address)
-  - [How DNS resolves ip address](#how-dns-resolves-ip-address-1)
+  - [How DNS resolves ip address](#how-dns-resolves-ip-address)
     - [Single server setup](#single-server-setup)
-  - [Single server setup](#single-server-setup-1)
-    - [Database + Single servers setup](#database--single-servers-setup)
-  - [Database + Single servers setup](#database--single-servers-setup-1)
+  - [Single server setup](#single-server-setup)
+    - [Database + Single servers setup](#database-single-servers-setup)
+  - [Database + Single servers setup](#database-single-servers-setup)
     - [Load balancer](#load-balancer)
-  - [Load balancer](#load-balancer-1)
+  - [Load balancer](#load-balancer)
     - [Database replication](#database-replication)
-  - [Database replication](#database-replication-1)
-    - [Web tier + Data tier + Load balancer System design](#web-tier--data-tier--load-balancer-system-design)
-  - [Web tier + Data tier + Load balancer System design](#web-tier--data-tier--load-balancer-system-design-1)
+  - [Database replication](#database-replication)
+    - [Web tier + Data tier + Load balancer System design](#web-tier-data-tier-load-balancer-system-design)
+  - [Web tier + Data tier + Load balancer System design](#web-tier-data-tier-load-balancer-system-design)
     - [Cache tier](#cache-tier)
-  - [Cache tier](#cache-tier-1)
+  - [Cache tier](#cache-tier)
     - [CDN Workflow](#cdn-workflow)
-  - [CDN Workflow](#cdn-workflow-1)
-    - [Web tier + Data tier + Load balancer + Cache + CDN System design](#web-tier--data-tier--load-balancer--cache--cdn-system-design)
-  - [Web tier + Data tier + Load balancer + Cache + CDN System design](#web-tier--data-tier--load-balancer--cache--cdn-system-design-1)
+  - [CDN Workflow](#cdn-workflow)
+    - [Web tier + Data tier + Load balancer + Cache + CDN System design](#web-tier-data-tier-load-balancer-cache-cdn-system-design)
+  - [Web tier + Data tier + Load balancer + Cache + CDN System design](#web-tier-data-tier-load-balancer-cache-cdn-system-design)
     - [Stateful architecture](#stateful-architecture)
-  - [Stateful architecture](#stateful-architecture-1)
+  - [Stateful architecture](#stateful-architecture)
     - [Stateless architecture](#stateless-architecture)
-  - [Stateless architecture](#stateless-architecture-1)
-    - [Web tier + Data tier + Load balancer + Cache + CDN stateless System design](#web-tier--data-tier--load-balancer--cache--cdn-stateless-system-design)
-  - [Web tier + Data tier + Load balancer + Cache + CDN stateless System design](#web-tier--data-tier--load-balancer--cache--cdn-stateless-system-design-1)
+  - [Stateless architecture](#stateless-architecture)
+    - [Web tier + Data tier + Load balancer + Cache + CDN stateless System design](#web-tier-data-tier-load-balancer-cache-cdn-stateless-system-design)
+  - [Web tier + Data tier + Load balancer + Cache + CDN stateless System design](#web-tier-data-tier-load-balancer-cache-cdn-stateless-system-design)
     - [System design with data centers](#system-design-with-data-centers)
-  - [System design with data centers](#system-design-with-data-centers-1)
+  - [System design with data centers](#system-design-with-data-centers)
     - [Message queue](#message-queue)
-  - [Message queue](#message-queue-1)
+  - [Message queue](#message-queue)
     - [System design with message queue](#system-design-with-message-queue)
-  - [System design with message queue](#system-design-with-message-queue-1)
+  - [System design with message queue](#system-design-with-message-queue)
     - [Round robin](#round-robin)
-  - [Round robin](#round-robin-1)
+  - [Round robin](#round-robin)
     - [Sticky round robin](#sticky-round-robin)
-  - [Sticky round robin](#sticky-round-robin-1)
+  - [Sticky round robin](#sticky-round-robin)
     - [Weighted round robin](#weighted-round-robin)
-  - [Weighted round robin](#weighted-round-robin-1)
-    - [IP/URL hash](#ipurl-hash)
-  - [IP/URL hash](#ipurl-hash-1)
+  - [Weighted round robin](#weighted-round-robin)
+    - [IP/URL hash](#ip-url-hash)
+  - [IP/URL hash](#ip-url-hash)
     - [Least connections](#least-connections)
-  - [Least connections](#least-connections-1)
+  - [Least connections](#least-connections)
     - [Least time](#least-time)
-  - [Least time](#least-time-1)
+  - [Least time](#least-time)
     - [Simplified Continuous integration flow](#simplified-continuous-integration-flow)
-  - [Simplified Continuous integration flow](#simplified-continuous-integration-flow-1)
+  - [Simplified Continuous integration flow](#simplified-continuous-integration-flow)
     - [Architectural characteristics](#architectural-characteristics)
-  - [Architectural characteristics](#architectural-characteristics-1)
+  - [Architectural characteristics](#architectural-characteristics)
     - [Common anti-patterns in microservices architecture](#common-anti-patterns-in-microservices-architecture)
-  - [Common anti-patterns in microservices architecture](#common-anti-patterns-in-microservices-architecture-1)
-    - [What does API gateway do?](#what-does-api-gateway-do)
-  - [What does API gateway do?](#what-does-api-gateway-do-1)
-    - [How is NoSQL database different from SQL databases?](#how-is-nosql-database-different-from-sql-databases)
-  - [How is NoSQL database different from SQL databases?](#how-is-nosql-database-different-from-sql-databases-1)
-    - [How Would You Design an API for Third-Party Developers?](#how-would-you-design-an-api-for-third-party-developers)
-  - [How Would You Design an API for Third-Party Developers?](#how-would-you-design-an-api-for-third-party-developers-1)
-    - [How to optimize work of a web application using caching?](#how-to-optimize-work-of-a-web-application-using-caching)
-  - [How to optimize work of a web application using caching?](#how-to-optimize-work-of-a-web-application-using-caching-1)
-    - [1. **Browser Caching:**](#1-browser-caching)
-    - [2. **Content Delivery Network (CDN):**](#2-content-delivery-network-cdn)
-    - [3. **Server-Side Caching:**](#3-server-side-caching)
-    - [4. **Database Caching:**](#4-database-caching)
-    - [5. **API Response Caching:**](#5-api-response-caching)
-    - [6. **Fragment Caching:**](#6-fragment-caching)
-    - [7. **Cache Invalidation:**](#7-cache-invalidation)
-    - [8. **Mobile Caching:**](#8-mobile-caching)
-    - [9. **Monitoring and Tuning:**](#9-monitoring-and-tuning)
-    - [10. **HTTPS and Cache Control:**](#10-https-and-cache-control)
+  - [Common anti-patterns in microservices architecture](#common-anti-patterns-in-microservices-architecture)
+    - [What does API gateway do?](#what-does-api-gateway-do-)
+  - [What does API gateway do?](#what-does-api-gateway-do-)
+    - [How is NoSQL database different from SQL databases?](#how-is-nosql-database-different-from-sql-databases-)
+  - [How is NoSQL database different from SQL databases?](#how-is-nosql-database-different-from-sql-databases-)
+    - [How Would You Design an API for Third-Party Developers?](#how-would-you-design-an-api-for-third-party-developers-)
+  - [How Would You Design an API for Third-Party Developers?](#how-would-you-design-an-api-for-third-party-developers-)
+    - [How to optimize work of a web application using caching?](#how-to-optimize-work-of-a-web-application-using-caching-)
+  - [How to optimize work of a web application using caching?](#how-to-optimize-work-of-a-web-application-using-caching-)
+    - [1. <strong>Browser Caching:</strong>](#1-strong-browser-caching-strong-)
+    - [2. <strong>Content Delivery Network (CDN):</strong>](#2-strong-content-delivery-network-cdn-strong-)
+    - [3. <strong>Server-Side Caching:</strong>](#3-strong-server-side-caching-strong-)
+    - [4. <strong>Database Caching:</strong>](#4-strong-database-caching-strong-)
+    - [5. <strong>API Response Caching:</strong>](#5-strong-api-response-caching-strong-)
+    - [6. <strong>Fragment Caching:</strong>](#6-strong-fragment-caching-strong-)
+    - [7. <strong>Cache Invalidation:</strong>](#7-strong-cache-invalidation-strong-)
+    - [8. <strong>Mobile Caching:</strong>](#8-strong-mobile-caching-strong-)
+    - [9. <strong>Monitoring and Tuning:</strong>](#9-strong-monitoring-and-tuning-strong-)
+    - [10. <strong>HTTPS and Cache Control:</strong>](#10-strong-https-and-cache-control-strong-)
   - [10 steps for system design](#10-steps-for-system-design)
-    - [What is stress test?](#what-is-stress-test)
-    - [What types of software testing do you know?](#what-types-of-software-testing-do-you-know)
+    - [What is stress test?](#what-is-stress-test-)
+    - [What types of software testing do you know?](#what-types-of-software-testing-do-you-know-)
   - [training](#training)
     - [10001st prime](#10001st-prime)
     - [3Sum](#3sum)
@@ -183,8 +182,8 @@
     - [Big countries](#big-countries)
     - [Binary Tree Inorder Traversal](#binary-tree-inorder-traversal)
     - [Binary Tree Paths](#binary-tree-paths)
-    - [Binary Tree Postorder Traversal](#binary-tree-postorder-traversal-1)
-    - [Binary Tree Preorder Traversal](#binary-tree-preorder-traversal-1)
+    - [Binary Tree Postorder Traversal](#binary-tree-postorder-traversal)
+    - [Binary Tree Preorder Traversal](#binary-tree-preorder-traversal)
     - [Binary Tree Tilt](#binary-tree-tilt)
     - [Binary Watch](#binary-watch)
     - [Chain adding functions](#chain-adding-functions)
@@ -221,6 +220,9 @@
     - [Find the median](#find-the-median)
     - [Find the Pivot Integer](#find-the-pivot-integer)
     - [First Unique Character in a String](#first-unique-character-in-a-string)
+  - [Techniques used in this code:
+- Using an array as a simple hash map to store character counts.
+- Iterating through a string using a <code>for</code> loop to perform character counts and find the first unique character.](#techniques-used-in-this-code-using-an-array-as-a-simple-hash-map-to-store-character-counts-iterating-through-a-string-using-a-code-for-code-loop-to-perform-character-counts-and-find-the-first-unique-character-)
     - [First Bad Version](#first-bad-version)
     - [Fizz Buzz](#fizz-buzz)
     - [Game Play Analysis I](#game-play-analysis-i)
@@ -266,7 +268,7 @@
     - [Missing number](#missing-number)
     - [Move Zeroes](#move-zeroes)
     - [Multiples of 3 and 5](#multiples-of-3-and-5)
-    - [Step-by-Step:](#step-by-step)
+    - [Step-by-Step:](#step-by-step-)
     - [Nim Game](#nim-game)
     - [Number Complement](#number-complement)
     - [Number of 1 Bits](#number-of-1-bits)
@@ -313,7 +315,7 @@
     - [Simple text editor](#simple-text-editor)
     - [Single Number](#single-number)
     - [Special pythagorean triplet](#special-pythagorean-triplet)
-    - [String to integer (atoi)](#string-to-integer-atoi)
+    - [String to integer (atoi)](#string-to-integer-atoi-)
     - [Student Attendance Record I](#student-attendance-record-i)
     - [Submission Detail](#submission-detail)
     - [Subtree of Another Tree](#subtree-of-another-tree)
@@ -1386,7 +1388,7 @@ functionName.call(thisValue, arg1, arg2, ...);
 **Example:**
 ```javascript
 function greet(message) {
-    console.log(`${message}, ${this.name}!`);
+    console.log(`\${message}, \${this.name}!`);
 }
 
 const person = {
@@ -1415,7 +1417,7 @@ functionName.apply(thisValue, [arg1, arg2, ...]);
 **Example:**
 ```javascript
 function introduce(greeting, age) {
-    console.log(`${greeting}, I am ${this.name} and I am ${age} years old.`);
+    console.log(`\${greeting}, I am \${this.name} and I am \${age} years old.`);
 }
 
 const person = {
@@ -2092,7 +2094,7 @@ In TypeScript, you can utilize the TypeScript Playground, an online REPL environ
    In the left pane, you can write TypeScript code directly. For example:
    ```typescript
    function greet(name: string): string {
-       return `Hello, ${name}!`;
+       return `Hello, \${name}!`;
    }
 
    const message: string = greet("TypeScript");
@@ -9808,7 +9810,7 @@ The `isPalindrome` method in the `Solution` class checks if a given integer is a
 function isPangram(string:string){
     const set = new Set();
     string.toLowerCase().split('').forEach((letter:string) => {
-      if(/^[A-Za-z]+$/.test(letter)) {
+      if(/^[A-Za-z]+\$/.test(letter)) {
         set.add(letter);
       }
     });
@@ -9825,7 +9827,7 @@ The `isPangram` function checks whether a given string is a pangram, which is a 
 3. It splits the lowercase string into an array of characters using the `split('')` method.
 
 4. It iterates through each letter using the `forEach` method on the array. Inside the loop:
-   - It uses a regular expression (`/^[A-Za-z]+$/`) to test if the current letter is an alphabetical character (uppercase or lowercase).
+   - It uses a regular expression (`/^[A-Za-z]+\$/`) to test if the current letter is an alphabetical character (uppercase or lowercase).
    - If the letter matches the regular expression, it adds the lowercase version of the letter to the `set`.
 
 5. After iterating through all letters, the function converts the `set` to an array using the spread operator `[...set]` and calculates its length.
@@ -12263,11 +12265,11 @@ function sumSquareDifference(n: number): number {
 
 
 1. **Calculate the Sum of Squares:**
-   - The sum of squares of the first `n` natural numbers can be calculated using the formula \(\frac{n \times (n + 1) \times (2n + 1)}{6}\).
+   - The sum of squares of the first `n` natural numbers can be calculated using the formula 
    - Calculate `sumOfSquares` using the formula.
 
 2. **Calculate the Sum of Numbers:**
-   - The sum of the first `n` natural numbers can be calculated using the formula \(\frac{n \times (n + 1)}{2}\).
+   - The sum of the first `n` natural numbers can be calculated using the formula
    - Calculate `sum` using the formula.
 
 3. **Calculate the Square of the Sum:**
@@ -12701,7 +12703,7 @@ function timeConversion(s: string): string {
   if (modifier === "AM" && strArr[0] === "12") {
     hours = "00";
   }
-  return `${hours}:${strArr[1]}:${strArr[2].slice(0, -2)}`;
+  return `\${hours}:\${strArr[1]}:\${strArr[2].slice(0, -2)}`;
 }
 ```
 
@@ -13120,13 +13122,13 @@ function isPerfectSquare(num: number): boolean {
 
 
 
-grep -E "^(\([0-9]{3}\) |[0-9]{3}\-)[0-9]{3}\-[0-9]{4}$" file.txt
+grep -E "^(\([0-9]{3}\) |[0-9]{3}\-)[0-9]{3}\-[0-9]{4}\$" file.txt
 
 ```
 
 The command uses the `grep` utility with the `-E` flag to enable extended regular expressions. It searches for lines in the file "file.txt" that match a specific pattern, which corresponds to phone numbers in a specific format.
 
-The regular expression `^(\([0-9]{3}\) |[0-9]{3}\-)[0-9]{3}\-[0-9]{4}$` is used to match phone numbers in the format "###-###-####" or "(###) ###-####". Here's the breakdown of the regular expression:
+The regular expression `^(\([0-9]{3}\) |[0-9]{3}\-)[0-9]{3}\-[0-9]{4}\$` is used to match phone numbers in the format "###-###-####" or "(###) ###-####". Here's the breakdown of the regular expression:
 
 - `^`: Anchors the start of the line.
 - `(`: Matches an opening parenthesis.
@@ -13136,7 +13138,7 @@ The regular expression `^(\([0-9]{3}\) |[0-9]{3}\-)[0-9]{3}\-[0-9]{4}$` is used 
 - `[0-9]{3}\-`: Matches three digits followed by a hyphen.
 - `[0-9]{3}\-`: Matches another three digits followed by a hyphen.
 - `[0-9]{4}`: Matches four digits.
-- `$`: Anchors the end of the line.
+- `\$`: Anchors the end of the line.
 
 The command searches each line in "file.txt" and displays only the lines that match the specified phone number pattern. This pattern is commonly used to match valid US phone numbers in different formats.
 
@@ -13148,7 +13150,7 @@ The command searches each line in "file.txt" and displays only the lines that ma
 ```typescript
 const validatePin = (pin: string): boolean => {
   if (pin.length !== 4 && pin.length !== 6) return false;
-  return /^[0-9]{4}$|^[0-9]{6}$/gm.test(pin);
+  return /^[0-9]{4}\$|^[0-9]{6}\$/gm.test(pin);
 };
 ```
 
@@ -13166,10 +13168,10 @@ const validatePin = (pin: string): boolean => {
 
 2. **Regular Expression Validation**:
 
-   - Use a regular expression `/^[0-9]{4}$|^[0-9]{6}$/gm` to validate the PIN:
-     - `^[0-9]{4}$`: Matches exactly 4 digits.
+   - Use a regular expression `/^[0-9]{4}\$|^[0-9]{6}\$/gm` to validate the PIN:
+     - `^[0-9]{4}\$`: Matches exactly 4 digits.
      - `|`: OR operator.
-     - `^[0-9]{6}$`: Matches exactly 6 digits.
+     - `^[0-9]{6}\$`: Matches exactly 6 digits.
      - `/gm`: Flags for global and multiline matching.
 
 3. **Test the Regular Expression**:
@@ -13186,7 +13188,7 @@ const validatePin = (pin: string): boolean => {
 
    - If not, return `false`.
 
-2. Use the regular expression `/^[0-9]{4}$|^[0-9]{6}$/gm` to validate the PIN format.
+2. Use the regular expression `/^[0-9]{4}\$|^[0-9]{6}\$/gm` to validate the PIN format.
 
 3. Test the regular expression using `.test(pin)` and return the result.
 
