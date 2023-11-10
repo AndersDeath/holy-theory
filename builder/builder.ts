@@ -222,6 +222,9 @@ async function generateStatic(
 
   if (type === "md") {
     allOutput = generateTableOfContents(allOutput) + allOutput;
+
+    await fs.writeFile(path.join(outputFolder, "prepared_all." + type), allOutput.replace(/https:\/\/raw\.githubusercontent\.com\/AndersDeath\/holy-theory\/main\/images/g, '../images'));
+    // 
   }
 
   await fs.writeFile(path.join(outputFolder, "all." + type), allOutput);
