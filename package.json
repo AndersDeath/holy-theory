@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "bun builder/index.ts",
     "generate:pdf:from:md": "pandoc content/prepared_all.md -o pdf/output_from_md.pdf -V geometry:margin=1in",
-    "generate:pdf:from:html":"pandoc  static/all.html -o pdf/output_from_html.pdf -V geometry:margin=1in"
+    "generate:pdf:from:html":"pandoc  static/prepared_all.html -o pdf/output_from_html.pdf -V geometry:margin=1in"
   },
   "repository": {
     "type": "git",
