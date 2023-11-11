@@ -89,7 +89,6 @@ const generateStatisticsFile = async (lm, type, outputFolder) => {
 
   let outputList = "";
   for (const [key, value] of Object.entries(languageSource)) {
-    console.log(`${key}: ${value}`);
     outputList += buildListItem(`${key}: ${value}`, type) + "\n";
   }
 
@@ -218,20 +217,34 @@ async function generateStatic(
 
   if (type === "html") {
     allOutput = htmlPageWrapper(allOutput);
+    const preparedOutput = allOutput.replace(
+      /https:\/\/raw\.githubusercontent\.com\/AndersDeath\/holy-theory\/main\/images/g,
+      "../images"
+    );
+    await fs.writeFile(
+      path.join(outputFolder, "prepared_all." + type),
+      preparedOutput
+    );
   }
 
   if (type === "md") {
     allOutput = generateTableOfContents(allOutput) + allOutput;
 
-    allOutput = allOutput.replace(/https:\/\/raw\.githubusercontent\.com\/AndersDeath\/holy-theory\/main\/images/g, '../images');
-    allOutput = allOutput.replace(/\$/g, '\\$');
-    allOutput = allOutput.replace(/frac{/g, '"Temporary removed"');
+    let preparedOutput = allOutput.replace(
+      /https:\/\/raw\.githubusercontent\.com\/AndersDeath\/holy-theory\/main\/images/g,
+      "../images"
+    );
+    preparedOutput = preparedOutput.replace(/\$/g, "\\$");
+    preparedOutput = preparedOutput.replace(/frac{/g, '"Temporary removed"');
 
     // \(\frac{n \times (n + 1) \times (2n + 1)}{6}\).
     // \(\frac{n \times (n + 1)}{2}\).
 
-    await fs.writeFile(path.join(outputFolder, "prepared_all." + type), allOutput);
-    // 
+    await fs.writeFile(
+      path.join(outputFolder, "prepared_all." + type),
+      preparedOutput
+    );
+    //
   }
 
   await fs.writeFile(path.join(outputFolder, "all." + type), allOutput);

@@ -344,7 +344,7 @@
 ### Binary search
 
 
-![Binary search](../images/binary-search.png)
+![Binary search](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/binary-search.png)
 
 Steps:
 
@@ -899,7 +899,7 @@ class Solution {
 ### Selection sort
 
 
-![Selection sort](../images/selection-sort.png)
+![Selection sort](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/selection-sort.png)
 
 
 ```typescript
@@ -975,13 +975,13 @@ clothes[0] is undefined, because clothes array has been emptied.
 
 ### Different ways of declaring functions in JS
 
-![Different ways of declaring functions in JS](../images/different-ways-of-declaring-a-function-in-js.png)
+![Different ways of declaring functions in JS](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/different-ways-of-declaring-a-function-in-js.png)
 
 
 ### Event Loop
 
 
-![Event Loop](../images/event-loop.png)
+![Event Loop](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/event-loop.png)
 
 In JavaScript, the event loop is a fundamental concept for managing asynchronous operations. To understand the event loop, it's essential to grasp the other components involved:
 
@@ -1189,17 +1189,17 @@ In Node.js, you can access command-line arguments using the `process.argv` array
 ### JavaScript data types
 
 
-![JavaScript data types](../images/javascript-data-types.png)
+![JavaScript data types](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/javascript-data-types.png)
 
 ### JavaScript number size summary
 
 
-![JavaScript number size summary](../images/javascript-number-size-summary.png)
+![JavaScript number size summary](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/javascript-number-size-summary.png)
 
 ### JavaScript Arrays cheat sheet
 
 
-![JavaScript Arrays cheat sheet](../images/js-arrays-cheat-sheet.png)
+![JavaScript Arrays cheat sheet](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/js-arrays-cheat-sheet.png)
 
 
 ### OOP in JavaScript
@@ -1328,13 +1328,13 @@ makeAnimalSound(myDuck); // Output: Quack!
 JavaScript's object-oriented features provide flexibility and allow developers to create complex applications following the principles of OOP.### Possible types of function in JavaScript
 
 
-![Possible types of function in JavaScript](../images/possible-types-of-functions-in-js.png)
+![Possible types of function in JavaScript](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/possible-types-of-functions-in-js.png)
 
 
 ### Promise action flow
 
 
-![Promise action flow](../images/promise-action-flow.png)
+![Promise action flow](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/promise-action-flow.png)
 
 ### What is event bubbling?
 
@@ -1388,7 +1388,7 @@ functionName.call(thisValue, arg1, arg2, ...);
 **Example:**
 ```javascript
 function greet(message) {
-    console.log(`\${message}, \${this.name}!`);
+    console.log(`${message}, ${this.name}!`);
 }
 
 const person = {
@@ -1417,7 +1417,7 @@ functionName.apply(thisValue, [arg1, arg2, ...]);
 **Example:**
 ```javascript
 function introduce(greeting, age) {
-    console.log(`\${greeting}, I am \${this.name} and I am \${age} years old.`);
+    console.log(`${greeting}, I am ${this.name} and I am ${age} years old.`);
 }
 
 const person = {
@@ -1714,9 +1714,9 @@ To invert a number in Java, you need to divide the number by 10 in the loop unti
 ### Big O
 
 
-![Big O](../images/02-big-o.png)
-![Big O 2](../images/02-big-o-2.png)
-![Big O 3](../images/02-big-o-3.png)
+![Big O](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/02-big-o.png)
+![Big O 2](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/02-big-o-2.png)
+![Big O 3](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/02-big-o-3.png)
 
 ** Source: https://github.com/jamiebuilds/itsy-bitsy-data-structures/blob/master/itsy-bitsy-data-structures.js**
 
@@ -1733,23 +1733,23 @@ Encapsulation is the mechanism of hiding of data implementation by restricting a
 It means one name many forms. It is further of two types — static and dynamic. Static polymorphism is achieved using method overloading and dynamic polymorphism using method overriding. It is closely related to inheritance. We can write a code that works on the superclass, and it will work with any subclass type as well.
 ### RESTful API methods
 
-![RESTful API methods](../images/04-restful-api-methods.png)
+![RESTful API methods](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/04-restful-api-methods.png)
 
 ### Types of Databases
 
-![Types of Databases](../images/05-types-of-databases.png)
+![Types of Databases](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/05-types-of-databases.png)
 
 ### Software categories
 
-![Software categories](../images/06-software-categories.png)
+![Software categories](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/06-software-categories.png)
 
 ### Software characteristics
 
-![Software characteristics](../images/07-software-characteristics.png)
+![Software characteristics](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/07-software-characteristics.png)
 
 ### Software development life cycle
 
-![Software development life cycle](../images/08-sdlc.png)
+![Software development life cycle](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/08-sdlc.png)
 
 ### Design patterns
 
@@ -1873,7 +1873,7 @@ GRASP principles provide a set of guidelines for assigning responsibilities to c
 
 A person settled in front of their laptop, launching a browser before typing a URL into the search bar. What unfolds within the browser at the network level following this action?
 
-![Browser URL Search](../images/12-browser-url-search.png)
+![Browser URL Search](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/12-browser-url-search.png)
 
 
 ## Answer
@@ -2094,7 +2094,7 @@ In TypeScript, you can utilize the TypeScript Playground, an online REPL environ
    In the left pane, you can write TypeScript code directly. For example:
    ```typescript
    function greet(name: string): string {
-       return `Hello, \${name}!`;
+       return `Hello, ${name}!`;
    }
 
    const message: string = greet("TypeScript");
@@ -2147,7 +2147,7 @@ In summary, while REST APIs follow a fixed structure and can lead to over-fetchi
 
 
 
-![Main principles of security in ExpressJS server](../images/01-security-expressjs.png)
+![Main principles of security in ExpressJS server](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/01-security-expressjs.png)
 
 1. **Input Validation:** Validate and sanitize all user input, including parameters, query strings, and request bodies, to prevent common vulnerabilities like SQL injection, cross-site scripting (XSS), and command injection.
 
@@ -2186,7 +2186,7 @@ In summary, while REST APIs follow a fixed structure and can lead to over-fetchi
 
 An array is a collection of items stored at contiguous memory locations. The idea is to store multiple items of the same type together. This makes it easier to calculate the position of each element by simply adding an offset to a base value, i.e., the memory location of the first element of the array (generally denoted by the name of the array).
 
-![Array](../images/array.png)
+![Array](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/array.png)
 
 Basic Operations:
 
@@ -2201,12 +2201,12 @@ Basic Operations:
 ### Common Data Structures
 
 
-![Common Data Structures](../images/common-data-structures.png)
+![Common Data Structures](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/common-data-structures.png)
 
 
 ### Data structures types
 
-![Data structures types](../images/data-structures-types.png)
+![Data structures types](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/data-structures-types.png)
 
 * Linear Data Structure: A data structure that includes data elements arranged sequentially or linearly, where each element is connected to its previous and next nearest elements, is referred to as a linear data structure. Arrays and linked lists are two examples of linear data structures.
 
@@ -2215,10 +2215,10 @@ Basic Operations:
 ### Graph
 
 
-![Graph](../images/graph.png)
-![Graph directed](../images/graph-directed.png)
-![Graph undirected](../images/graph-undirected.png)
-![Graph weighted](../images/graph-weighted.png)
+![Graph](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/graph.png)
+![Graph directed](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/graph-directed.png)
+![Graph undirected](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/graph-undirected.png)
+![Graph weighted](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/graph-weighted.png)
 
 Basic Operations:
 
@@ -2226,7 +2226,7 @@ Basic Operations:
 
 ### Hash table
 
-![Hash table](../images/hash-table.png)
+![Hash table](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/hash-table.png)
 
 ```typescript
 const superPrimitiveHashingFunc = (string: string) => {
@@ -2284,7 +2284,7 @@ Hash tables are widely used in various applications such as databases, caches, s
 ### Linked list
 
 
-![Linked List](../images/linked-list.png)
+![Linked List](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/linked-list.png)
 
 ```typescript
 
@@ -2464,7 +2464,7 @@ export class Map {
   ### Priority Queue
 
 
-![priority-queue](../images/priority-queue.png)
+![priority-queue](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/priority-queue.png)
 
 
 ```typescript
@@ -2519,7 +2519,7 @@ export class PriorityQueue {
 ### Queue
 
 
-![Queue](../images/queue.png)
+![Queue](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/queue.png)
 
 ```typescript
 export class Queue {
@@ -2671,7 +2671,7 @@ export class Set {
 
 ### Stack
 
-![Stack](../images/stack.png)
+![Stack](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/stack.png)
 
 ```typescript
 export class Stack {
@@ -2753,8 +2753,8 @@ class Stack {
 
 ### Tree
 
-![Tree1](../images/tree1.png)
-![Tree2](../images/tree2.png)
+![Tree1](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/tree1.png)
+![Tree2](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/tree2.png)
 
 ## Tree
 ```javascript
@@ -2870,7 +2870,7 @@ Scalability refers to an application’s ability to handle and withstand an incr
 
 Horizontal scaling, or scaling out, means adding more hardware to the existing hardware resource pool. It increases the computational power of the system as a whole. Vertical scaling, or scaling up, means adding more power to your server. It increases the power of the hardware running the application.
 
-![Horizontal and vertical scaling](../images/01-horizontal-vertical-scaling.png)
+![Horizontal and vertical scaling](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/01-horizontal-vertical-scaling.png)
 
 ### CAP theorem
 ## CAP theorem
@@ -2910,78 +2910,78 @@ Partition tolerance means that the system continues to function even if network 
 
 In summary, the CAP theorem provides a valuable framework for understanding the inherent trade-offs in distributed systems. Architects and developers must carefully consider these trade-offs based on the specific requirements and use cases of their applications.
 
-![CAP theorem](../images/02-cap-theorem.png)
+![CAP theorem](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/02-cap-theorem.png)
 
 ### How DNS resolves ip address
 ## How DNS resolves ip address
 
-![How dns resolves ip](../images/03-how-dns-resolves-ip.png)
+![How dns resolves ip](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/03-how-dns-resolves-ip.png)
 
 ### Single server setup
 ## Single server setup
 
-![Single server setup](../images/04-single-server-setup.png)
+![Single server setup](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/04-single-server-setup.png)
 
 ### Database + Single servers setup
 ## Database + Single servers setup
 
-![Database + single servers setup](../images/05-database-single-servers-setup.png)
+![Database + single servers setup](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/05-database-single-servers-setup.png)
 
 ### Load balancer
 ## Load balancer
 
-![Load balancer](../images/06-load-balancer.png)
+![Load balancer](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/06-load-balancer.png)
 
 ### Database replication
 ## Database replication
 
-![Database replication](../images/07-database-replication.png)
+![Database replication](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/07-database-replication.png)
 
 ### Web tier + Data tier + Load balancer System design
 ## Web tier + Data tier + Load balancer System design
 
-![Web tier + Data tier + Load balancer System design](../images/08-web-tier-data-tier-load-balancer-system-desing.png)
+![Web tier + Data tier + Load balancer System design](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/08-web-tier-data-tier-load-balancer-system-desing.png)
 
 ### Cache tier
 ## Cache tier
 
-![Cache tier](../images/09-cache-tier.png)
+![Cache tier](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/09-cache-tier.png)
 
 ### CDN Workflow
 ## CDN Workflow
 
-![CDN Workflow](../images/10-cdn-workflow.png)
+![CDN Workflow](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/10-cdn-workflow.png)
 
 ### Web tier + Data tier + Load balancer + Cache + CDN System design
 ## Web tier + Data tier + Load balancer + Cache + CDN System design
 
-![Web tier + Data tier + Load balancer + Cache + CDN System design](../images/11-web-tier-data-tier-load-balancer-cache-cdn-system-design.png)
+![Web tier + Data tier + Load balancer + Cache + CDN System design](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/11-web-tier-data-tier-load-balancer-cache-cdn-system-design.png)
 
 ### Stateful architecture
 ## Stateful architecture
 
-![Stateful architecture](../images/12-stateful-architecture.png)
+![Stateful architecture](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/12-stateful-architecture.png)
 
 ### Stateless architecture
 ## Stateless architecture
 
-![Stateless architecture](../images/13-stateless-architecture.png)
+![Stateless architecture](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/13-stateless-architecture.png)
 
 ### Web tier + Data tier + Load balancer + Cache + CDN stateless System design
 ## Web tier + Data tier + Load balancer + Cache + CDN stateless System design
 
 
-![Web tier + Data tier + Load balancer + Cache + CDN stateless System design](../images/14-web-tier-data-tier-load-balancer-cache-cdn-stateless-system-design.png)
+![Web tier + Data tier + Load balancer + Cache + CDN stateless System design](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/14-web-tier-data-tier-load-balancer-cache-cdn-stateless-system-design.png)
 
 ### System design with data centers
 ## System design with data centers
 
-![System design with data centers](../images/15-system-design-with-data-centres.png)
+![System design with data centers](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/15-system-design-with-data-centres.png)
 
 ### Message queue
 ## Message queue
 
-![Message queue](../images/16-message-queue.png)
+![Message queue](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/16-message-queue.png)
 
 A message queue is a communication mechanism that allows different parts of a software system to send and receive messages or data asynchronously. It is often used to facilitate communication between different components or services within a distributed system. In the context you mentioned, where there is a server and a consumer, a message queue can be used to enable communication and data exchange between them.
 
@@ -3006,52 +3006,52 @@ Overall, message queues are a fundamental building block in many distributed sys
 ### System design with message queue
 ## System design with message queue
 
-![System design with message queue](../images/17-system-design-with-message-queue.png)
+![System design with message queue](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/17-system-design-with-message-queue.png)
 
 ### Round robin
 ## Round robin
 
-![Round robin](../images/18-round-robin.png)
+![Round robin](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/18-round-robin.png)
 
 ### Sticky round robin
 ## Sticky round robin
 
-![Sticky round robin](../images/19-sticky-round-robin.png)
+![Sticky round robin](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/19-sticky-round-robin.png)
 
 ### Weighted round robin
 ## Weighted round robin
 
-![Sticky round robin](../images/20-weighted-round-robin.png)
+![Sticky round robin](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/20-weighted-round-robin.png)
 
 ### IP/URL hash
 ## IP/URL hash
 
-![IP/URL hash](../images/21-ip-url-hash.png)
+![IP/URL hash](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/21-ip-url-hash.png)
 
 ### Least connections
 ## Least connections
 
-![Least connections](../images/22-least-connections.png)
+![Least connections](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/22-least-connections.png)
 
 ### Least time
 ## Least time
 
-![Least time](../images/23-least-time.png)
+![Least time](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/23-least-time.png)
 
 ### Simplified Continuous integration flow
 ## Simplified Continuous integration flow
 
-![Least time](../images/24-simplified-continious-integration-flow.png)
+![Least time](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/24-simplified-continious-integration-flow.png)
 
 ### Architectural characteristics
 ## Architectural characteristics
 
-![Least time](../images/25-architectual-characteristics.png)
+![Least time](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/25-architectual-characteristics.png)
 
 ### Common anti-patterns in microservices architecture
 ## Common anti-patterns in microservices architecture
 
-![Common anti-patterns in microservices architecture](../images/26-antipatterns-microservices.png)
+![Common anti-patterns in microservices architecture](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/26-antipatterns-microservices.png)
 
 1. **Monolithic Mindset:** Treating microservices as miniature monoliths, where services are tightly coupled and communicate extensively, negating the benefits of independent, autonomous services.
 
@@ -9810,7 +9810,7 @@ The `isPalindrome` method in the `Solution` class checks if a given integer is a
 function isPangram(string:string){
     const set = new Set();
     string.toLowerCase().split('').forEach((letter:string) => {
-      if(/^[A-Za-z]+\$/.test(letter)) {
+      if(/^[A-Za-z]+$/.test(letter)) {
         set.add(letter);
       }
     });
@@ -9827,7 +9827,7 @@ The `isPangram` function checks whether a given string is a pangram, which is a 
 3. It splits the lowercase string into an array of characters using the `split('')` method.
 
 4. It iterates through each letter using the `forEach` method on the array. Inside the loop:
-   - It uses a regular expression (`/^[A-Za-z]+\$/`) to test if the current letter is an alphabetical character (uppercase or lowercase).
+   - It uses a regular expression (`/^[A-Za-z]+$/`) to test if the current letter is an alphabetical character (uppercase or lowercase).
    - If the letter matches the regular expression, it adds the lowercase version of the letter to the `set`.
 
 5. After iterating through all letters, the function converts the `set` to an array using the spread operator `[...set]` and calculates its length.
@@ -12703,7 +12703,7 @@ function timeConversion(s: string): string {
   if (modifier === "AM" && strArr[0] === "12") {
     hours = "00";
   }
-  return `\${hours}:\${strArr[1]}:\${strArr[2].slice(0, -2)}`;
+  return `${hours}:${strArr[1]}:${strArr[2].slice(0, -2)}`;
 }
 ```
 
@@ -13122,13 +13122,13 @@ function isPerfectSquare(num: number): boolean {
 
 
 
-grep -E "^(\([0-9]{3}\) |[0-9]{3}\-)[0-9]{3}\-[0-9]{4}\$" file.txt
+grep -E "^(\([0-9]{3}\) |[0-9]{3}\-)[0-9]{3}\-[0-9]{4}$" file.txt
 
 ```
 
 The command uses the `grep` utility with the `-E` flag to enable extended regular expressions. It searches for lines in the file "file.txt" that match a specific pattern, which corresponds to phone numbers in a specific format.
 
-The regular expression `^(\([0-9]{3}\) |[0-9]{3}\-)[0-9]{3}\-[0-9]{4}\$` is used to match phone numbers in the format "###-###-####" or "(###) ###-####". Here's the breakdown of the regular expression:
+The regular expression `^(\([0-9]{3}\) |[0-9]{3}\-)[0-9]{3}\-[0-9]{4}$` is used to match phone numbers in the format "###-###-####" or "(###) ###-####". Here's the breakdown of the regular expression:
 
 - `^`: Anchors the start of the line.
 - `(`: Matches an opening parenthesis.
@@ -13138,7 +13138,7 @@ The regular expression `^(\([0-9]{3}\) |[0-9]{3}\-)[0-9]{3}\-[0-9]{4}\$` is used
 - `[0-9]{3}\-`: Matches three digits followed by a hyphen.
 - `[0-9]{3}\-`: Matches another three digits followed by a hyphen.
 - `[0-9]{4}`: Matches four digits.
-- `\$`: Anchors the end of the line.
+- `$`: Anchors the end of the line.
 
 The command searches each line in "file.txt" and displays only the lines that match the specified phone number pattern. This pattern is commonly used to match valid US phone numbers in different formats.
 
@@ -13150,7 +13150,7 @@ The command searches each line in "file.txt" and displays only the lines that ma
 ```typescript
 const validatePin = (pin: string): boolean => {
   if (pin.length !== 4 && pin.length !== 6) return false;
-  return /^[0-9]{4}\$|^[0-9]{6}\$/gm.test(pin);
+  return /^[0-9]{4}$|^[0-9]{6}$/gm.test(pin);
 };
 ```
 
@@ -13168,10 +13168,10 @@ const validatePin = (pin: string): boolean => {
 
 2. **Regular Expression Validation**:
 
-   - Use a regular expression `/^[0-9]{4}\$|^[0-9]{6}\$/gm` to validate the PIN:
-     - `^[0-9]{4}\$`: Matches exactly 4 digits.
+   - Use a regular expression `/^[0-9]{4}$|^[0-9]{6}$/gm` to validate the PIN:
+     - `^[0-9]{4}$`: Matches exactly 4 digits.
      - `|`: OR operator.
-     - `^[0-9]{6}\$`: Matches exactly 6 digits.
+     - `^[0-9]{6}$`: Matches exactly 6 digits.
      - `/gm`: Flags for global and multiline matching.
 
 3. **Test the Regular Expression**:
@@ -13188,7 +13188,7 @@ const validatePin = (pin: string): boolean => {
 
    - If not, return `false`.
 
-2. Use the regular expression `/^[0-9]{4}\$|^[0-9]{6}\$/gm` to validate the PIN format.
+2. Use the regular expression `/^[0-9]{4}$|^[0-9]{6}$/gm` to validate the PIN format.
 
 3. Test the regular expression using `.test(pin)` and return the result.
 
