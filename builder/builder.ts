@@ -24,7 +24,7 @@ function generateSectionReadmes(
     .join("\n\n");
 }
 
-function generateTableOfContents(markdownContent: string): string {
+function generateTableOfContents(markdownContent: string, type = "md"): string {
   const renderer = new marked.Renderer();
   let tableOfContents = "";
 
@@ -39,8 +39,12 @@ function generateTableOfContents(markdownContent: string): string {
   };
 
   marked(markdownContent, { renderer });
-
-  return tableOfContents;
+  console.log(tableOfContents);
+  if (type === "html") {
+    return `<div class="table-of-contents">\n${tableOfContents}</div>`;
+  } else {
+    return tableOfContents;
+  }
 }
 
 const generateGlobalIndex = async (
@@ -216,6 +220,7 @@ async function generateStatic(
   });
 
   if (type === "html") {
+    allOutput = generateTableOfContents(allOutput, "html") + allOutput;
     allOutput = htmlPageWrapper(allOutput);
     const preparedOutput = allOutput.replace(
       /https:\/\/raw\.githubusercontent\.com\/AndersDeath\/holy-theory\/main\/images/g,

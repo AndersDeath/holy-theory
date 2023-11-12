@@ -3,6 +3,6 @@ console.time('html builder');
 
 import { Builder } from "./builder";
 
-Builder('md');
+// Builder('md');
 
 Builder('html');
