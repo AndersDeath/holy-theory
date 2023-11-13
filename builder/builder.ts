@@ -39,7 +39,7 @@ function generateTableOfContents(markdownContent: string, type = "md"): string {
   };
 
   marked(markdownContent, { renderer });
-  console.log(tableOfContents);
+  // console.log(tableOfContents);
   if (type === "html") {
     return `<div class="table-of-contents">\n${tableOfContents}</div>`;
   } else {
@@ -249,7 +249,6 @@ async function generateStatic(
       path.join(outputFolder, "prepared_all." + type),
       preparedOutput
     );
-    //
   }
 
   await fs.writeFile(path.join(outputFolder, "all." + type), allOutput);
