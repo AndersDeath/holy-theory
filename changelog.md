@@ -7,6 +7,7 @@ All notable changes to this project will be documented in this file.
 * migration to pandoc for pdf generation
 * add Special pythagorean triplet training
 * add generation of pdf from html
+* add cli commands support to builder
 
 # [0.0.43] - 2023-11-06
 * add Sum square difference training
