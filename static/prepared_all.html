@@ -11365,6 +11365,68 @@ Promise a
 <ul>
 <li><a href="../readme.md">Go back</a></li>
 </ul>
+<h3>Summation of primes</h3>
+<h1 id="summation-of-primes">Summation of primes</h1>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">sumOfPrimes</span>(<span class="hljs-params">n: <span class="hljs-built_in">number</span></span>): <span class="hljs-built_in">number</span> {
+
+  <span class="hljs-keyword">const</span> <span class="hljs-attr">isPrime</span>: <span class="hljs-built_in">boolean</span>[] = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Array</span>(n).<span class="hljs-title function_">fill</span>(<span class="hljs-literal">true</span>);
+  isPrime[<span class="hljs-number">0</span>] = <span class="hljs-literal">false</span>;
+  isPrime[<span class="hljs-number">1</span>] = <span class="hljs-literal">false</span>;
+
+ 
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">2</span>; i &lt;= <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">sqrt</span>(n); i++) {
+    <span class="hljs-keyword">if</span> (isPrime[i]) {
+      <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> j = i * i; j &lt; n; j += i) {
+        isPrime[j] = <span class="hljs-literal">false</span>;
+      }
+    }
+  }
+
+  <span class="hljs-keyword">let</span> sum = <span class="hljs-number">0</span>;
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">2</span>; i &lt; n; i++) {
+    <span class="hljs-keyword">if</span> (isPrime[i]) {
+      sum += i;
+    }
+  }
+
+  <span class="hljs-keyword">return</span> sum;
+}
+</code></pre><p><strong>Description:</strong></p>
+<ol>
+<li><p><strong>Initialize Prime Array:</strong></p>
+<ul>
+<li>Create an array <code>isPrime</code> to track whether each number up to <code>n - 1</code> is prime.</li>
+<li>Set the values at index 0 and 1 to <code>false</code> since 0 and 1 are not prime numbers.</li>
+</ul>
+</li>
+<li><p><strong>Sieve of Eratosthenes:</strong></p>
+<ul>
+<li>Use the Sieve of Eratosthenes algorithm to mark non-prime numbers in the <code>isPrime</code> array.</li>
+<li>Iterate through numbers starting from 2 up to the square root of <code>n</code>:<ul>
+<li>If the current number is marked as prime (<code>isPrime[i]</code> is <code>true</code>):<ul>
+<li>Mark all multiples of the current number as not prime by setting <code>isPrime[j]</code> to <code>false</code>, where <code>j</code> ranges from <code>i * i</code> to <code>n - 1</code> in increments of <code>i</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Sum Prime Numbers:</strong></p>
+<ul>
+<li>Initialize a variable <code>sum</code> to 0 to store the sum of prime numbers.</li>
+<li>Iterate through numbers from 2 to <code>n - 1</code>:<ul>
+<li>If the current number is prime (<code>isPrime[i]</code> is <code>true</code>), add it to the <code>sum</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Return the Sum:</strong></p>
+<ul>
+<li>Return the final sum of prime numbers.</li>
+</ul>
+</li>
+</ol>
+<p>The function uses the Sieve of Eratosthenes algorithm to efficiently find and mark prime numbers up to a given limit <code>n</code> and then calculates the sum of those prime numbers.</p>
 <h3>Swap Nodes in Pairs</h3>
 <h1 id="swap-nodes-in-pairs">Swap Nodes in Pairs</h1>
 <pre><code class="hljs language-typescript"><span class="hljs-comment">/**
