@@ -293,6 +293,7 @@
 - [Sum of Left Leaves](./content/training/sum-of-left-leaves.md)
 - [Sum square difference](./content/training/sum-square-difference.md)
 - [Summary Ranges](./content/training/summary-ranges.md)
+- [Summation of primes](./content/training/summation-of-primes.md)
 - [Swap Nodes in Pairs](./content/training/swap-nodes-in-pairs.md)
 - [Symmetric difference](./content/training/symmetric-difference.md)
 - [Symmetric Tree](./content/training/symmetric-tree.md)

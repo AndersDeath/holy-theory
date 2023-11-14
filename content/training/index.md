@@ -157,6 +157,7 @@
 - [Sum of Left Leaves](./sum-of-left-leaves.md)
 - [Sum square difference](./sum-square-difference.md)
 - [Summary Ranges](./summary-ranges.md)
+- [Summation of primes](./summation-of-primes.md)
 - [Swap Nodes in Pairs](./swap-nodes-in-pairs.md)
 - [Symmetric difference](./symmetric-difference.md)
 - [Symmetric Tree](./symmetric-tree.md)
