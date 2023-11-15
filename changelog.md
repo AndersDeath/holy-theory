@@ -3,6 +3,7 @@
 All notable changes to this project will be documented in this file.
 # [0.0.45] - In progress
 * add Summation of primes training
+* refactoring of builder
 
 # [0.0.44] - 2023-11-13
 * add Largest product in a series training in JavaScript
