@@ -219,37 +219,27 @@ async function generateStatic(
     }
   });
 
+  allOutput = generateTableOfContents(allOutput, type) + allOutput;
   if (type === "html") {
-    allOutput = generateTableOfContents(allOutput, "html") + allOutput;
     allOutput = htmlPageWrapper(allOutput);
-    const preparedOutput = allOutput.replace(
-      /https:\/\/raw\.githubusercontent\.com\/AndersDeath\/holy-theory\/main\/images/g,
-      "../images"
-    );
-    await fs.writeFile(
-      path.join(outputFolder, "prepared_all." + type),
-      preparedOutput
-    );
   }
+  const preparedOutput = allOutput.replace(
+    /https:\/\/raw\.githubusercontent\.com\/AndersDeath\/holy-theory\/main\/images/g,
+    "../images"
+  );
 
-  if (type === "md") {
-    allOutput = generateTableOfContents(allOutput) + allOutput;
+  allOutput = generateTableOfContents(allOutput) + allOutput;
+  // preparedOutput = preparedOutput.replace(/\$/g, "\\$");
+  // preparedOutput = preparedOutput.replace(/frac{/g, '"Temporary removed"');
 
-    let preparedOutput = allOutput.replace(
-      /https:\/\/raw\.githubusercontent\.com\/AndersDeath\/holy-theory\/main\/images/g,
-      "../images"
-    );
-    preparedOutput = preparedOutput.replace(/\$/g, "\\$");
-    preparedOutput = preparedOutput.replace(/frac{/g, '"Temporary removed"');
+  // \(\frac{n \times (n + 1) \times (2n + 1)}{6}\).
+  // \(\frac{n \times (n + 1)}{2}\).
 
-    // \(\frac{n \times (n + 1) \times (2n + 1)}{6}\).
-    // \(\frac{n \times (n + 1)}{2}\).
-
-    await fs.writeFile(
-      path.join(outputFolder, "prepared_all." + type),
-      preparedOutput
-    );
-  }
+  await fs.writeFile(
+    path.join(outputFolder, "prepared_all." + type),
+    preparedOutput
+  );
+  // }
 
   await fs.writeFile(path.join(outputFolder, "all." + type), allOutput);
 

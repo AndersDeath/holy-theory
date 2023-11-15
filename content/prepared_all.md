@@ -1388,7 +1388,7 @@ functionName.call(thisValue, arg1, arg2, ...);
 **Example:**
 ```javascript
 function greet(message) {
-    console.log(`\${message}, \${this.name}!`);
+    console.log(`${message}, ${this.name}!`);
 }
 
 const person = {
@@ -1417,7 +1417,7 @@ functionName.apply(thisValue, [arg1, arg2, ...]);
 **Example:**
 ```javascript
 function introduce(greeting, age) {
-    console.log(`\${greeting}, I am \${this.name} and I am \${age} years old.`);
+    console.log(`${greeting}, I am ${this.name} and I am ${age} years old.`);
 }
 
 const person = {
@@ -2094,7 +2094,7 @@ In TypeScript, you can utilize the TypeScript Playground, an online REPL environ
    In the left pane, you can write TypeScript code directly. For example:
    ```typescript
    function greet(name: string): string {
-       return `Hello, \${name}!`;
+       return `Hello, ${name}!`;
    }
 
    const message: string = greet("TypeScript");
@@ -9810,7 +9810,7 @@ The `isPalindrome` method in the `Solution` class checks if a given integer is a
 function isPangram(string:string){
     const set = new Set();
     string.toLowerCase().split('').forEach((letter:string) => {
-      if(/^[A-Za-z]+\$/.test(letter)) {
+      if(/^[A-Za-z]+$/.test(letter)) {
         set.add(letter);
       }
     });
@@ -9827,7 +9827,7 @@ The `isPangram` function checks whether a given string is a pangram, which is a 
 3. It splits the lowercase string into an array of characters using the `split('')` method.
 
 4. It iterates through each letter using the `forEach` method on the array. Inside the loop:
-   - It uses a regular expression (`/^[A-Za-z]+\$/`) to test if the current letter is an alphabetical character (uppercase or lowercase).
+   - It uses a regular expression (`/^[A-Za-z]+$/`) to test if the current letter is an alphabetical character (uppercase or lowercase).
    - If the letter matches the regular expression, it adds the lowercase version of the letter to the `set`.
 
 5. After iterating through all letters, the function converts the `set` to an array using the spread operator `[...set]` and calculates its length.
@@ -12754,7 +12754,7 @@ function timeConversion(s: string): string {
   if (modifier === "AM" && strArr[0] === "12") {
     hours = "00";
   }
-  return `\${hours}:\${strArr[1]}:\${strArr[2].slice(0, -2)}`;
+  return `${hours}:${strArr[1]}:${strArr[2].slice(0, -2)}`;
 }
 ```
 
@@ -13173,13 +13173,13 @@ function isPerfectSquare(num: number): boolean {
 
 
 
-grep -E "^(\([0-9]{3}\) |[0-9]{3}\-)[0-9]{3}\-[0-9]{4}\$" file.txt
+grep -E "^(\([0-9]{3}\) |[0-9]{3}\-)[0-9]{3}\-[0-9]{4}$" file.txt
 
 ```
 
 The command uses the `grep` utility with the `-E` flag to enable extended regular expressions. It searches for lines in the file "file.txt" that match a specific pattern, which corresponds to phone numbers in a specific format.
 
-The regular expression `^(\([0-9]{3}\) |[0-9]{3}\-)[0-9]{3}\-[0-9]{4}\$` is used to match phone numbers in the format "###-###-####" or "(###) ###-####". Here's the breakdown of the regular expression:
+The regular expression `^(\([0-9]{3}\) |[0-9]{3}\-)[0-9]{3}\-[0-9]{4}$` is used to match phone numbers in the format "###-###-####" or "(###) ###-####". Here's the breakdown of the regular expression:
 
 - `^`: Anchors the start of the line.
 - `(`: Matches an opening parenthesis.
@@ -13189,7 +13189,7 @@ The regular expression `^(\([0-9]{3}\) |[0-9]{3}\-)[0-9]{3}\-[0-9]{4}\$` is used
 - `[0-9]{3}\-`: Matches three digits followed by a hyphen.
 - `[0-9]{3}\-`: Matches another three digits followed by a hyphen.
 - `[0-9]{4}`: Matches four digits.
-- `\$`: Anchors the end of the line.
+- `$`: Anchors the end of the line.
 
 The command searches each line in "file.txt" and displays only the lines that match the specified phone number pattern. This pattern is commonly used to match valid US phone numbers in different formats.
 
@@ -13201,7 +13201,7 @@ The command searches each line in "file.txt" and displays only the lines that ma
 ```typescript
 const validatePin = (pin: string): boolean => {
   if (pin.length !== 4 && pin.length !== 6) return false;
-  return /^[0-9]{4}\$|^[0-9]{6}\$/gm.test(pin);
+  return /^[0-9]{4}$|^[0-9]{6}$/gm.test(pin);
 };
 ```
 
@@ -13219,10 +13219,10 @@ const validatePin = (pin: string): boolean => {
 
 2. **Regular Expression Validation**:
 
-   - Use a regular expression `/^[0-9]{4}\$|^[0-9]{6}\$/gm` to validate the PIN:
-     - `^[0-9]{4}\$`: Matches exactly 4 digits.
+   - Use a regular expression `/^[0-9]{4}$|^[0-9]{6}$/gm` to validate the PIN:
+     - `^[0-9]{4}$`: Matches exactly 4 digits.
      - `|`: OR operator.
-     - `^[0-9]{6}\$`: Matches exactly 6 digits.
+     - `^[0-9]{6}$`: Matches exactly 6 digits.
      - `/gm`: Flags for global and multiline matching.
 
 3. **Test the Regular Expression**:
@@ -13239,7 +13239,7 @@ const validatePin = (pin: string): boolean => {
 
    - If not, return `false`.
 
-2. Use the regular expression `/^[0-9]{4}\$|^[0-9]{6}\$/gm` to validate the PIN format.
+2. Use the regular expression `/^[0-9]{4}$|^[0-9]{6}$/gm` to validate the PIN format.
 
 3. Test the regular expression using `.test(pin)` and return the result.
 
