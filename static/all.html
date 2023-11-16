@@ -7064,6 +7064,99 @@ Below is the step-by-step breakdown of the code:</p>
 <p><strong>Step 4:</strong> If the current factor divides the number, the <code>largestFactor</code> is updated to the current factor, and the number is divided by the current factor.</p>
 <p><strong>Step 5:</strong> After the <code>for</code> loop, there might be a remaining number greater than 2, which could be a prime factor. The <code>if</code> statement checks if the remaining number is greater than 2 and updates the <code>largestFactor</code> variable if necessary.</p>
 <p><strong>Step 6:</strong> Finally, the function returns the <code>largestFactor</code> variable, which holds the largest prime factor of the given number.</p>
+<h3>Largest product in a grid</h3>
+<h1 id="largest-product-in-a-grid">Largest product in a grid</h1>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">largestGridProduct</span>(<span class="hljs-params">arr: <span class="hljs-built_in">number</span>[][]</span>): <span class="hljs-built_in">number</span> {
+  <span class="hljs-keyword">let</span> <span class="hljs-attr">maxProduct</span>: <span class="hljs-built_in">number</span> = <span class="hljs-number">0</span>;
+  <span class="hljs-keyword">let</span> <span class="hljs-attr">currProduct</span>: <span class="hljs-built_in">number</span> = <span class="hljs-number">0</span>;
+
+  <span class="hljs-keyword">function</span> <span class="hljs-title function_">maxProductChecker</span>(<span class="hljs-params">n: <span class="hljs-built_in">number</span></span>): <span class="hljs-built_in">void</span> {
+    <span class="hljs-keyword">if</span> (n &gt; maxProduct) {
+      maxProduct = n;
+    }
+  }
+
+  <span class="hljs-comment">// loop rows</span>
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> r = <span class="hljs-number">0</span>; r &lt; arr.<span class="hljs-property">length</span>; r++) {
+    <span class="hljs-comment">// loop columns</span>
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> c = <span class="hljs-number">0</span>; c &lt; arr[r].<span class="hljs-property">length</span>; c++) {
+      <span class="hljs-keyword">const</span> limit = arr[r].<span class="hljs-property">length</span> - <span class="hljs-number">3</span>;
+
+      <span class="hljs-comment">// check horizontal</span>
+      <span class="hljs-keyword">if</span> (c &lt; limit) {
+        currProduct = arr[r][c] * arr[r][c + <span class="hljs-number">1</span>] * arr[r][c + <span class="hljs-number">2</span>] * arr[r][c + <span class="hljs-number">3</span>];
+        <span class="hljs-title function_">maxProductChecker</span>(currProduct);
+      }
+
+      <span class="hljs-comment">// check vertical</span>
+      <span class="hljs-keyword">if</span> (r &lt; limit) {
+        currProduct = arr[r][c] * arr[r + <span class="hljs-number">1</span>][c] * arr[r + <span class="hljs-number">2</span>][c] * arr[r + <span class="hljs-number">3</span>][c];
+        <span class="hljs-title function_">maxProductChecker</span>(currProduct);
+      }
+
+      <span class="hljs-comment">// check diagonal [\]</span>
+      <span class="hljs-keyword">if</span> (c &lt; limit &amp;&amp; r &lt; limit) {
+        currProduct =
+          arr[r][c] * arr[r + <span class="hljs-number">1</span>][c + <span class="hljs-number">1</span>] * arr[r + <span class="hljs-number">2</span>][c + <span class="hljs-number">2</span>] * arr[r + <span class="hljs-number">3</span>][c + <span class="hljs-number">3</span>];
+        <span class="hljs-title function_">maxProductChecker</span>(currProduct);
+      }
+
+      <span class="hljs-comment">// check diagonal [/]</span>
+      <span class="hljs-keyword">if</span> (c &gt; <span class="hljs-number">3</span> &amp;&amp; r &lt; limit) {
+        currProduct =
+          arr[r][c] * arr[r + <span class="hljs-number">1</span>][c - <span class="hljs-number">1</span>] * arr[r + <span class="hljs-number">2</span>][c - <span class="hljs-number">2</span>] * arr[r + <span class="hljs-number">3</span>][c - <span class="hljs-number">3</span>];
+        <span class="hljs-title function_">maxProductChecker</span>(currProduct);
+      }
+    }
+  }
+
+  <span class="hljs-keyword">return</span> maxProduct;
+}
+</code></pre><p><strong>Step-by-step breakdown:</strong></p>
+<ol>
+<li><p><strong>Initialize Variables:</strong></p>
+<ul>
+<li>Initialize <code>maxProduct</code> and <code>currProduct</code> to 0. These variables will be used to keep track of the maximum product and the current product being calculated.</li>
+</ul>
+</li>
+<li><p><strong>maxProductChecker Function:</strong></p>
+<ul>
+<li>Define a helper function <code>maxProductChecker</code> that takes a number <code>n</code> as an argument.</li>
+<li>If <code>n</code> is greater than the current <code>maxProduct</code>, update <code>maxProduct</code> with the value of <code>n</code>.</li>
+</ul>
+</li>
+<li><p><strong>Nested Loop for Grid Exploration:</strong></p>
+<ul>
+<li>Use nested loops to iterate through each element in the 2D array (<code>arr</code>).</li>
+<li>The outer loop (<code>r</code>) iterates through rows, and the inner loop (<code>c</code>) iterates through columns.</li>
+</ul>
+</li>
+<li><p><strong>Check Horizontal Products:</strong></p>
+<ul>
+<li>Inside the loops, check for horizontal products if there are at least 4 elements to the right (<code>c &lt; limit</code>).</li>
+<li>Calculate the product of four consecutive elements in the same row and call <code>maxProductChecker</code> with the current product.</li>
+</ul>
+</li>
+<li><p><strong>Check Vertical Products:</strong></p>
+<ul>
+<li>Check for vertical products if there are at least 4 elements below (<code>r &lt; limit</code>).</li>
+<li>Calculate the product of four consecutive elements in the same column and call <code>maxProductChecker</code> with the current product.</li>
+</ul>
+</li>
+<li><p><strong>Check Diagonal Products (\ and /):</strong></p>
+<ul>
+<li>Check for diagonal products (<code>\</code>) if there are at least 4 elements to the right and below (<code>c &lt; limit</code> and <code>r &lt; limit</code>).</li>
+<li>Check for diagonal products (<code>/</code>) if there are at least 4 elements to the left and below (<code>c &gt; 3</code> and <code>r &lt; limit</code>).</li>
+<li>Calculate the product of four consecutive elements along each diagonal and call <code>maxProductChecker</code> with the current product.</li>
+</ul>
+</li>
+<li><p><strong>Return the Maximum Product:</strong></p>
+<ul>
+<li>Return the final <code>maxProduct</code> after exploring all possible products in the grid.</li>
+</ul>
+</li>
+</ol>
+<p>The function is designed to find the largest product of four consecutive elements (horizontally, vertically, or diagonally) in a 2D array.</p>
 <h3>Largest product in a series</h3>
 <h1 id="largest-product-in-a-series">Largest product in a series</h1>
 <pre><code class="hljs language-javascript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">largestProductinaSeries</span>(<span class="hljs-params">n</span>) {
