@@ -1,6 +1,7 @@
 - [10001st prime](./10001st-prime.md)
 - [3Sum Closest](./3sum-closest.md)
 - [3Sum](./3sum.md)
+- [4Sum](./4sum.md)
 - [Add binary](./add-binary.md)
 - [Add Strings](./add-strings.md)
 - [Add Two Numbers](./add-two-number.md)

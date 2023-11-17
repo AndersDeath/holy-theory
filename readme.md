@@ -137,6 +137,7 @@
 - [10001st prime](./content/training/10001st-prime.md)
 - [3Sum Closest](./content/training/3sum-closest.md)
 - [3Sum](./content/training/3sum.md)
+- [4Sum](./content/training/4sum.md)
 - [Add binary](./content/training/add-binary.md)
 - [Add Strings](./content/training/add-strings.md)
 - [Add Two Numbers](./content/training/add-two-number.md)

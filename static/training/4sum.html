@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Holy Theory</title>
+      <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/monokai.min.css" />
+      <script type="application/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+      <style>
+      body {
+        margin: 0;
+            padding: 0;
+        }
+
+        img {
+            max-width: 400px;
+        }
+
+        .content {
+          width: 60%;
+          margin: 0 auto;
+        }
+      </style>
+  </head>
+  <body>
+      <div class="content"><h1 id="4sum">4Sum</h1>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">fourSum</span>(<span class="hljs-params">nums: <span class="hljs-built_in">number</span>[], target: <span class="hljs-built_in">number</span></span>): <span class="hljs-built_in">number</span>[][] {
+  nums.<span class="hljs-title function_">sort</span>(<span class="hljs-function">(<span class="hljs-params">a, b</span>) =&gt;</span> a - b);
+  <span class="hljs-keyword">const</span> <span class="hljs-attr">result</span>: <span class="hljs-built_in">number</span>[][] = [];
+  <span class="hljs-keyword">const</span> n = nums.<span class="hljs-property">length</span>;
+
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; n - <span class="hljs-number">3</span>; i++) {
+    <span class="hljs-keyword">if</span> (i &gt; <span class="hljs-number">0</span> &amp;&amp; nums[i] === nums[i - <span class="hljs-number">1</span>]) {
+      <span class="hljs-keyword">continue</span>;
+    }
+
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> j = i + <span class="hljs-number">1</span>; j &lt; n - <span class="hljs-number">2</span>; j++) {
+      <span class="hljs-keyword">if</span> (j &gt; i + <span class="hljs-number">1</span> &amp;&amp; nums[j] === nums[j - <span class="hljs-number">1</span>]) {
+        <span class="hljs-keyword">continue</span>;
+      }
+
+      <span class="hljs-keyword">let</span> left = j + <span class="hljs-number">1</span>;
+      <span class="hljs-keyword">let</span> right = n - <span class="hljs-number">1</span>;
+
+      <span class="hljs-keyword">while</span> (left &lt; right) {
+        <span class="hljs-keyword">const</span> currSum = nums[i] + nums[j] + nums[left] + nums[right];
+
+        <span class="hljs-keyword">if</span> (currSum === target) {
+          result.<span class="hljs-title function_">push</span>([nums[i], nums[j], nums[left], nums[right]]);
+
+          <span class="hljs-keyword">while</span> (left &lt; right &amp;&amp; nums[left] === nums[left + <span class="hljs-number">1</span>]) {
+            left++;
+          }
+          <span class="hljs-keyword">while</span> (left &lt; right &amp;&amp; nums[right] === nums[right - <span class="hljs-number">1</span>]) {
+            right--;
+          }
+
+          left++;
+          right--;
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (currSum &lt; target) {
+          left++;
+        } <span class="hljs-keyword">else</span> {
+          right--;
+        }
+      }
+    }
+  }
+
+  <span class="hljs-keyword">return</span> result;
+}
+</code></pre><p><strong>Solution:</strong></p>
+<ol>
+<li><p><strong>Sort the Input Array:</strong></p>
+<ul>
+<li>Sort the input array <code>nums</code> in ascending order. Sorting is a crucial step for efficiently handling duplicates and finding unique quadruplets.</li>
+</ul>
+</li>
+<li><p><strong>Initialize Result Array:</strong></p>
+<ul>
+<li>Initialize an empty array <code>result</code> to store the unique quadruplets that sum up to the target.</li>
+</ul>
+</li>
+<li><p><strong>Loop through Unique Pairs of Indices (i, j):</strong></p>
+<ul>
+<li>Use two nested loops to iterate through pairs of indices (<code>i</code> and <code>j</code>).</li>
+<li>The outer loop (<code>i</code>) goes from 0 to <code>n - 4</code>, and the inner loop (<code>j</code>) goes from <code>i + 1</code> to <code>n - 3</code>.</li>
+<li>The conditions inside the loops skip duplicates to avoid redundant calculations.</li>
+</ul>
+</li>
+<li><p><strong>Two-Pointer Approach for Remaining Elements:</strong></p>
+<ul>
+<li>Use a two-pointer approach with <code>left</code> starting from <code>j + 1</code> and <code>right</code> starting from <code>n - 1</code>.</li>
+<li>Calculate the current sum <code>currSum</code> using elements at indices <code>i</code>, <code>j</code>, <code>left</code>, and <code>right</code>.</li>
+<li>If <code>currSum</code> is equal to the target, add the quadruplet to the <code>result</code> array.<ul>
+<li>Skip duplicates by incrementing <code>left</code> and decrementing <code>right</code> until reaching distinct elements.</li>
+</ul>
+</li>
+<li>If <code>currSum</code> is less than the target, increment <code>left</code>. If greater, decrement <code>right</code>.</li>
+</ul>
+</li>
+<li><p><strong>Return the Result Array:</strong></p>
+<ul>
+<li>After completing all iterations, return the <code>result</code> array containing unique quadruplets that sum up to the target.</li>
+</ul>
+</li>
+</ol>
+</div>
+  </body>
+  </html>
