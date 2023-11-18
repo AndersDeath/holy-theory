@@ -32,6 +32,7 @@
 - [Contains Duplicate](./contains-duplicates.md)
 - [Convert a Number to Hexadecimal](./convert-number-to-hexadecimal.md)
 - [Convert Sorted Array to Binary Search Tree](./convert-sorted-array-to-binary-search-tree.md)
+- [Count Complete Tree Nodes](./count-complete-tree-nodes.md)
 - [Counting Bits](./counting-bits.md)
 - [Cumulative Sum](./cumulative-sum.md)
 - [Curry function](./curry-finction.md)

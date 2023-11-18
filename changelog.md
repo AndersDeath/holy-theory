@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file.
 * refactoring of builder
 * add Largest product in a grid training
 * add 4Sum training
+* add Count Complete Tree Nodes training
 
 # [0.0.44] - 2023-11-13
 * add Largest product in a series training in JavaScript
