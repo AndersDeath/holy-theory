@@ -172,6 +172,7 @@
 - [Counting Bits](./content/training/counting-bits.md)
 - [Cumulative Sum](./content/training/cumulative-sum.md)
 - [Curry function](./content/training/curry-finction.md)
+- [Customer Placing the Largest Number of Order](./content/training/customer-placing-the-largest-number-of-orders.md)
 - [Customers Who Never Order](./content/training/customers-who-never-order.md)
 - [Delete Duplicate Emails](./content/training/delete-duplicates-emails.md)
 - [Detect Capital Use](./content/training/detect-capital-use.md)
