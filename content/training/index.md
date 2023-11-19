@@ -36,6 +36,7 @@
 - [Counting Bits](./counting-bits.md)
 - [Cumulative Sum](./cumulative-sum.md)
 - [Curry function](./curry-finction.md)
+- [Customer Placing the Largest Number of Order](./customer-placing-the-largest-number-of-orders.md)
 - [Customers Who Never Order](./customers-who-never-order.md)
 - [Delete Duplicate Emails](./delete-duplicates-emails.md)
 - [Detect Capital Use](./detect-capital-use.md)
