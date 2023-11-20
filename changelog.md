@@ -1,7 +1,11 @@
 # Changelog
 
 All notable changes to this project will be documented in this file.
-# [0.0.45] - In progress
+
+# [0.0.46] - In progress
+*
+
+# [0.0.45] - 2023-11-20
 * add Summation of primes training
 * refactoring of builder
 * add Largest product in a grid training
