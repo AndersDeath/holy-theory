@@ -1,6 +1,7 @@
 - [Array](./array.md)
 - [Common Data Structures](./common-data-structures.md)
 - [Data structures types](./data-structures-types.md)
+- [Doubly Linked Lists](./doubly-linked-list.md)
 - [Graph](./graph.md)
 - [Hash table](./hash-table.md)
 - [structures all](./index.md)

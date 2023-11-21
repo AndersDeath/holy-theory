@@ -3,7 +3,8 @@
 All notable changes to this project will be documented in this file.
 
 # [0.0.46] - In progress
-*
+* update pdf generation
+* add Doubly Linked Lists data structure
 
 # [0.0.45] - 2023-11-20
 * add Summation of primes training

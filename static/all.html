@@ -1608,6 +1608,139 @@ You can experiment with different TypeScript features, explore type annotations,
 <li><p>Non-Linear Data Structure: Non-linear data structures are data structures in which data elements are not arranged linearly or sequentially. We cannot walk through all elements in one pass in a non-linear data structure, as in a linear data structure. Trees and graphs are two examples of non-linear data structures.</p>
 </li>
 </ul>
+<h3>Doubly Linked Lists</h3>
+<h1 id="doubly-linked-lists">Doubly Linked Lists</h1>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Node</span>&lt;T&gt; {
+  <span class="hljs-attr">data</span>: T;
+  <span class="hljs-attr">prev</span>: <span class="hljs-title class_">Node</span>&lt;T&gt; | <span class="hljs-literal">null</span>;
+  <span class="hljs-attr">next</span>: <span class="hljs-title class_">Node</span>&lt;T&gt; | <span class="hljs-literal">null</span>;
+
+  <span class="hljs-title function_">constructor</span>(<span class="hljs-params">data: T, prev: Node&lt;T&gt; | <span class="hljs-literal">null</span></span>) {
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">data</span> = data;
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">prev</span> = prev;
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">next</span> = <span class="hljs-literal">null</span>;
+  }
+}
+
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">DoublyLinkedList</span>&lt;T&gt; {
+  <span class="hljs-attr">head</span>: <span class="hljs-title class_">Node</span>&lt;T&gt; | <span class="hljs-literal">null</span>;
+  <span class="hljs-attr">tail</span>: <span class="hljs-title class_">Node</span>&lt;T&gt; | <span class="hljs-literal">null</span>;
+
+  <span class="hljs-title function_">constructor</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">head</span> = <span class="hljs-literal">null</span>;
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">tail</span> = <span class="hljs-literal">null</span>;
+  }
+
+  <span class="hljs-title function_">append</span>(<span class="hljs-attr">data</span>: T): <span class="hljs-built_in">void</span> {
+    <span class="hljs-keyword">if</span> (!<span class="hljs-variable language_">this</span>.<span class="hljs-property">head</span>) {
+      <span class="hljs-variable language_">this</span>.<span class="hljs-property">head</span> = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Node</span>(data, <span class="hljs-literal">null</span>);
+      <span class="hljs-variable language_">this</span>.<span class="hljs-property">tail</span> = <span class="hljs-variable language_">this</span>.<span class="hljs-property">head</span>;
+    } <span class="hljs-keyword">else</span> {
+      <span class="hljs-keyword">const</span> newNode = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Node</span>(data, <span class="hljs-variable language_">this</span>.<span class="hljs-property">tail</span>);
+      <span class="hljs-variable language_">this</span>.<span class="hljs-property">tail</span>!.<span class="hljs-property">next</span> = newNode;
+      <span class="hljs-variable language_">this</span>.<span class="hljs-property">tail</span> = newNode;
+    }
+  }
+
+  <span class="hljs-title function_">prepend</span>(<span class="hljs-attr">data</span>: T): <span class="hljs-built_in">void</span> {
+    <span class="hljs-keyword">if</span> (!<span class="hljs-variable language_">this</span>.<span class="hljs-property">head</span>) {
+      <span class="hljs-variable language_">this</span>.<span class="hljs-property">head</span> = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Node</span>(data, <span class="hljs-literal">null</span>);
+      <span class="hljs-variable language_">this</span>.<span class="hljs-property">tail</span> = <span class="hljs-variable language_">this</span>.<span class="hljs-property">head</span>;
+    } <span class="hljs-keyword">else</span> {
+      <span class="hljs-keyword">const</span> newNode = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Node</span>(data, <span class="hljs-literal">null</span>);
+      newNode.<span class="hljs-property">next</span> = <span class="hljs-variable language_">this</span>.<span class="hljs-property">head</span>;
+      <span class="hljs-variable language_">this</span>.<span class="hljs-property">head</span>!.<span class="hljs-property">prev</span> = newNode;
+      <span class="hljs-variable language_">this</span>.<span class="hljs-property">head</span> = newNode;
+    }
+  }
+
+  <span class="hljs-title function_">delete</span>(<span class="hljs-attr">data</span>: T): <span class="hljs-built_in">void</span> {
+    <span class="hljs-keyword">let</span> current = <span class="hljs-variable language_">this</span>.<span class="hljs-property">head</span>;
+
+    <span class="hljs-keyword">while</span> (current) {
+      <span class="hljs-keyword">if</span> (current.<span class="hljs-property">data</span> === data) {
+        <span class="hljs-keyword">if</span> (current.<span class="hljs-property">prev</span>) {
+          current.<span class="hljs-property">prev</span>.<span class="hljs-property">next</span> = current.<span class="hljs-property">next</span>;
+        } <span class="hljs-keyword">else</span> {
+          <span class="hljs-variable language_">this</span>.<span class="hljs-property">head</span> = current.<span class="hljs-property">next</span>;
+        }
+
+        <span class="hljs-keyword">if</span> (current.<span class="hljs-property">next</span>) {
+          current.<span class="hljs-property">next</span>.<span class="hljs-property">prev</span> = current.<span class="hljs-property">prev</span>;
+        } <span class="hljs-keyword">else</span> {
+          <span class="hljs-variable language_">this</span>.<span class="hljs-property">tail</span> = current.<span class="hljs-property">prev</span>;
+        }
+
+        <span class="hljs-keyword">return</span>;
+      }
+
+      current = current.<span class="hljs-property">next</span>!;
+    }
+  }
+
+  <span class="hljs-title function_">display</span>(): <span class="hljs-built_in">void</span> {
+    <span class="hljs-keyword">let</span> current = <span class="hljs-variable language_">this</span>.<span class="hljs-property">head</span>;
+
+    <span class="hljs-keyword">while</span> (current) {
+      <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(current.<span class="hljs-property">data</span>);
+      current = current.<span class="hljs-property">next</span>!;
+    }
+  }
+
+  <span class="hljs-title function_">reverse</span>(): <span class="hljs-built_in">void</span> {
+    <span class="hljs-keyword">let</span> current = <span class="hljs-variable language_">this</span>.<span class="hljs-property">head</span>;
+    <span class="hljs-keyword">let</span> <span class="hljs-attr">temp</span>: <span class="hljs-title class_">Node</span>&lt;T&gt; | <span class="hljs-literal">null</span> = <span class="hljs-literal">null</span>;
+
+    <span class="hljs-keyword">while</span> (current) {
+      temp = current.<span class="hljs-property">prev</span>;
+      current.<span class="hljs-property">prev</span> = current.<span class="hljs-property">next</span>;
+      current.<span class="hljs-property">next</span> = temp;
+      current = current.<span class="hljs-property">prev</span>!;
+    }
+
+    temp = <span class="hljs-variable language_">this</span>.<span class="hljs-property">head</span>;
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">head</span> = <span class="hljs-variable language_">this</span>.<span class="hljs-property">tail</span>;
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">tail</span> = temp!;
+  }
+}
+</code></pre><h1 id="doubly-linked-lists-1">Doubly Linked Lists</h1>
+<p>A linked list is a fundamental data structure that consists of a sequence of elements, each connected to the next by pointers or references. Among the variations of linked lists, the doubly linked list stands out for its bidirectional navigation, providing easy traversal in both forward and backward directions. Let&#39;s explore the concept of a doubly linked list using a TypeScript implementation.</p>
+<h2 id="anatomy-of-a-doubly-linked-list">Anatomy of a Doubly Linked List</h2>
+<p>The TypeScript code provided defines two classes: <code>Node</code> and <code>DoublyLinkedList</code>.</p>
+<h3 id="node-class">Node Class</h3>
+<p>The <code>Node</code> class represents an individual element in the doubly linked list. It contains three properties:</p>
+<ul>
+<li><code>data</code>: Holds the actual data of the node.</li>
+<li><code>prev</code>: Points to the previous node in the sequence.</li>
+<li><code>next</code>: Points to the next node in the sequence.</li>
+</ul>
+<h3 id="doublylinkedlist-class">DoublyLinkedList Class</h3>
+<p>The <code>DoublyLinkedList</code> class is the container for the nodes. It contains two pointers:</p>
+<ul>
+<li><code>head</code>: Points to the first node in the list.</li>
+<li><code>tail</code>: Points to the last node in the list.</li>
+</ul>
+<p>Additionally, the class has methods for common operations:</p>
+<ul>
+<li><code>append(data: T)</code>: Adds a new node with the given data to the end of the list.</li>
+<li><code>prepend(data: T)</code>: Inserts a new node with the given data at the beginning of the list.</li>
+<li><code>delete(data: T)</code>: Removes the node containing the specified data from the list.</li>
+<li><code>display()</code>: Displays the elements of the linked list.</li>
+<li><code>reverse()</code>: Reverses the order of the linked list.</li>
+</ul>
+<h2 id="example-usage">Example Usage</h2>
+<p>The code concludes with an example demonstrating the usage of the doubly linked list:</p>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">const</span> doublyLinkedList = <span class="hljs-keyword">new</span> <span class="hljs-title class_">DoublyLinkedList</span>&lt;<span class="hljs-built_in">number</span>&gt;();
+doublyLinkedList.<span class="hljs-title function_">append</span>(<span class="hljs-number">1</span>);
+doublyLinkedList.<span class="hljs-title function_">append</span>(<span class="hljs-number">2</span>);
+doublyLinkedList.<span class="hljs-title function_">prepend</span>(<span class="hljs-number">0</span>);
+doublyLinkedList.<span class="hljs-title function_">display</span>(); <span class="hljs-comment">// Output: 0 1 2</span>
+doublyLinkedList.<span class="hljs-title function_">reverse</span>();
+doublyLinkedList.<span class="hljs-title function_">display</span>(); <span class="hljs-comment">// Output: 2 1 0</span>
+</code></pre><p>This example initializes a doubly linked list, appends and prepends nodes, displays the list, performs a reversal, and then displays the reversed list.</p>
+<h2 id="advantages-of-doubly-linked-lists">Advantages of Doubly Linked Lists</h2>
+<p>Doubly linked lists offer advantages in certain scenarios. The bidirectional navigation allows for efficient traversal in both directions, facilitating operations that involve searching, insertion, or deletion near a specific element.</p>
+<p>Understanding and implementing doubly linked lists in TypeScript provides valuable insights into data structures and algorithms. The versatility of linked lists makes them powerful tools for various applications, from low-level memory management to high-level algorithmic problem-solving.</p>
 <h3>Graph</h3>
 <h1 id="graph">Graph</h1>
 <p><img src="https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/graph.png" alt="Graph">

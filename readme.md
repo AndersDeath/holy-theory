@@ -80,6 +80,7 @@
 - [Array](./content/structures/array.md)
 - [Common Data Structures](./content/structures/common-data-structures.md)
 - [Data structures types](./content/structures/data-structures-types.md)
+- [Doubly Linked Lists](./content/structures/doubly-linked-list.md)
 - [Graph](./content/structures/graph.md)
 - [Hash table](./content/structures/hash-table.md)
 - [structures all](./content/structures/index.md)
