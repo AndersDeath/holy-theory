@@ -16,6 +16,7 @@
 - [Base 7](./base-7.md)
 - [Best Time to Buy and Sell Stock](./best-time-to-buy-and-sell-stock.md)
 - [Big countries](./big-countries.md)
+- [Binary search path you took](./binary-search-path-you-took.md)
 - [Binary Tree Inorder Traversal](./binary-tree-inorder-traversal.md)
 - [Binary Tree Paths](./binary-tree-paths.md)
 - [Binary Tree Postorder Traversal](./binary-tree-postorder-traversal.md)
