@@ -107,6 +107,7 @@
 - [Missing number](./missing-number.md)
 - [Move Zeroes](./move-zerod.md)
 - [Multiples of 3 and 5](./multiples-of-3-and-5.md)
+- [N-ary Tree Postorder Traversal](./n-ary-tree-postorder-traversal.md)
 - [N-ary Tree Preorder Traversal](./n-ary-tree-preorder-traversal.md)
 - [Next Greater Element I](./next-greater-element-i.md)
 - [Nim Game](./nim-game.md)
