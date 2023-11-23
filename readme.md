@@ -244,6 +244,7 @@
 - [Missing number](./content/training/missing-number.md)
 - [Move Zeroes](./content/training/move-zerod.md)
 - [Multiples of 3 and 5](./content/training/multiples-of-3-and-5.md)
+- [N-ary Tree Postorder Traversal](./content/training/n-ary-tree-postorder-traversal.md)
 - [N-ary Tree Preorder Traversal](./content/training/n-ary-tree-preorder-traversal.md)
 - [Next Greater Element I](./content/training/next-greater-element-i.md)
 - [Nim Game](./content/training/nim-game.md)
