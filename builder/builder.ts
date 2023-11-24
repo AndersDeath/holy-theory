@@ -225,8 +225,10 @@ async function generateStatic(
   }
   const preparedOutput = allOutput.replace(
     /https:\/\/raw\.githubusercontent\.com\/AndersDeath\/holy-theory\/main\/images/g,
-    "../images"
+    path.join(__dirname, '../', 'images')
   );
+
+  // const preparedOutput = allOutput;
 
   allOutput = generateTableOfContents(allOutput) + allOutput;
   // preparedOutput = preparedOutput.replace(/\$/g, "\\$");
