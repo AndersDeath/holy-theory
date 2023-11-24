@@ -7,6 +7,7 @@ All notable changes to this project will be documented in this file.
 * add Doubly Linked Lists data structure
 * add Binary search path you took training training
 * add N-ary Tree Postorder Traversal training in TypeScript
+* minor fix of building system
 
 # [0.0.45] - 2023-11-20
 * add Summation of primes training
