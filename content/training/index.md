@@ -90,6 +90,7 @@
 - [Linked List Cycle](./linked-list-cycle.md)
 - [Lonely Integer](./lonely-integer.md)
 - [Longest common prefix](./longest-common-prefix.md)
+- [Longest Harmonious Subsequence](./longest-harmonious-subsequence.md)
 - [Longest palindrome](./longest-palindrome.md)
 - [Longest Palindromic Substring](./longest-palindromic-substring.md)
 - [Longest Substring Without Repeating Characters](./longest-substring-without-repeating-characters.md)

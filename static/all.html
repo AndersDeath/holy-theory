@@ -7899,6 +7899,75 @@ This SQL query retrieves the <code>customer_number</code> from the <code>Orders<
 </ol>
 <p><strong>Summary:</strong></p>
 <p>The <code>longestCommonPrefix</code> function takes an array of strings, sorts them, and compares characters to find the longest common prefix among the strings. By sorting the array, it reduces the comparison complexity and efficiently identifies the common prefix. The technique of lexicographical sorting and character-by-character comparison ensures an optimal solution for finding the longest common prefix.</p>
+<h3>Longest Harmonious Subsequence</h3>
+<h1 id="longest-harmonious-subsequence">Longest Harmonious Subsequence</h1>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">findLHS</span>(<span class="hljs-params">nums: <span class="hljs-built_in">number</span>[]</span>): <span class="hljs-built_in">number</span> {
+    <span class="hljs-keyword">const</span> <span class="hljs-attr">frequencyMap</span>: <span class="hljs-title class_">Map</span>&lt;<span class="hljs-built_in">number</span>, <span class="hljs-built_in">number</span>&gt; = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Map</span>();
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">const</span> num <span class="hljs-keyword">of</span> nums) {
+        frequencyMap.<span class="hljs-title function_">set</span>(num, (frequencyMap.<span class="hljs-title function_">get</span>(num) || <span class="hljs-number">0</span>) + <span class="hljs-number">1</span>);
+    }
+
+    <span class="hljs-keyword">let</span> maxLHS = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">const</span> key <span class="hljs-keyword">of</span> frequencyMap.<span class="hljs-title function_">keys</span>()) {
+        <span class="hljs-keyword">if</span> (frequencyMap.<span class="hljs-title function_">has</span>(key + <span class="hljs-number">1</span>)) {
+            <span class="hljs-keyword">const</span> currentLHS = frequencyMap.<span class="hljs-title function_">get</span>(key)! + frequencyMap.<span class="hljs-title function_">get</span>(key + <span class="hljs-number">1</span>)!;
+            maxLHS = <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">max</span>(maxLHS, currentLHS);
+        }
+    }
+
+    <span class="hljs-keyword">return</span> maxLHS;
+};
+</code></pre><p><strong>Step-by-Step solution:</strong></p>
+<ol>
+<li><p><strong>Initialize a Map:</strong></p>
+<ul>
+<li><code>const frequencyMap: Map&lt;number, number&gt; = new Map();</code></li>
+<li>Initialize a map called <code>frequencyMap</code> to store the frequency of each number.</li>
+</ul>
+</li>
+<li><p><strong>Populate the Frequency Map:</strong></p>
+<ul>
+<li>Use a <code>for...of</code> loop to iterate through each number in the input array (<code>nums</code>).</li>
+<li>Update the frequency in the map using <code>frequencyMap.set()</code>, ensuring that if the number is not in the map, it starts with a frequency of 1.</li>
+</ul>
+</li>
+<li><p><strong>Initialize Variables:</strong></p>
+<ul>
+<li><code>let maxLHS = 0;</code></li>
+<li>Initialize a variable <code>maxLHS</code> to store the maximum length of a harmonious subsequence (LHS).</li>
+</ul>
+</li>
+<li><p><strong>Iterate Through Frequency Map Keys:</strong></p>
+<ul>
+<li><code>for (const key of frequencyMap.keys()) {</code></li>
+<li>Iterate through the keys of the frequency map.</li>
+</ul>
+</li>
+<li><p><strong>Check for Key + 1:</strong></p>
+<ul>
+<li><code>if (frequencyMap.has(key + 1)) {</code></li>
+<li>Check if the map contains the key incremented by 1.</li>
+</ul>
+</li>
+<li><p><strong>Calculate Current LHS Length:</strong></p>
+<ul>
+<li><code>const currentLHS = frequencyMap.get(key)! + frequencyMap.get(key + 1)!;</code></li>
+<li>Calculate the length of the harmonious subsequence by adding the frequencies of the current key and key + 1.</li>
+</ul>
+</li>
+<li><p><strong>Update Maximum LHS Length:</strong></p>
+<ul>
+<li><code>maxLHS = Math.max(maxLHS, currentLHS);</code></li>
+<li>Update the maximum LHS length if the current length is greater.</li>
+</ul>
+</li>
+<li><p><strong>Return Maximum LHS Length:</strong></p>
+<ul>
+<li><code>return maxLHS;</code></li>
+<li>Return the final maximum length of a harmonious subsequence.</li>
+</ul>
+</li>
+</ol>
 <h3>Longest palindrome</h3>
 <h1 id="longest-palindrome">Longest palindrome</h1>
 <pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">longestPalindrome</span>(<span class="hljs-params">s: <span class="hljs-built_in">string</span></span>): <span class="hljs-built_in">string</span> {

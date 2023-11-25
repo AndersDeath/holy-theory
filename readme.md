@@ -227,6 +227,7 @@
 - [Linked List Cycle](./content/training/linked-list-cycle.md)
 - [Lonely Integer](./content/training/lonely-integer.md)
 - [Longest common prefix](./content/training/longest-common-prefix.md)
+- [Longest Harmonious Subsequence](./content/training/longest-harmonious-subsequence.md)
 - [Longest palindrome](./content/training/longest-palindrome.md)
 - [Longest Palindromic Substring](./content/training/longest-palindromic-substring.md)
 - [Longest Substring Without Repeating Characters](./content/training/longest-substring-without-repeating-characters.md)

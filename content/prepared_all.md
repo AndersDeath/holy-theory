@@ -256,6 +256,7 @@
     - [Linked List Cycle](#linked-list-cycle)
     - [Lonely Integer](#lonely-integer)
     - [Longest common prefix](#longest-common-prefix)
+    - [Longest Harmonious Subsequence](#longest-harmonious-subsequence)
     - [Longest palindrome](#longest-palindrome)
     - [Longest Palindromic Substring](#longest-palindromic-substring)
     - [Longest Substring Without Repeating Characters](#longest-substring-without-repeating-characters)
@@ -353,7 +354,7 @@
 ### Binary search
 
 
-![Binary search](../images/binary-search.png)
+![Binary search](/Users/bolshakov/develop/tech-writing/holy-theory/images/binary-search.png)
 
 Steps:
 
@@ -908,7 +909,7 @@ class Solution {
 ### Selection sort
 
 
-![Selection sort](../images/selection-sort.png)
+![Selection sort](/Users/bolshakov/develop/tech-writing/holy-theory/images/selection-sort.png)
 
 
 ```typescript
@@ -984,13 +985,13 @@ clothes[0] is undefined, because clothes array has been emptied.
 
 ### Different ways of declaring functions in JS
 
-![Different ways of declaring functions in JS](../images/different-ways-of-declaring-a-function-in-js.png)
+![Different ways of declaring functions in JS](/Users/bolshakov/develop/tech-writing/holy-theory/images/different-ways-of-declaring-a-function-in-js.png)
 
 
 ### Event Loop
 
 
-![Event Loop](../images/event-loop.png)
+![Event Loop](/Users/bolshakov/develop/tech-writing/holy-theory/images/event-loop.png)
 
 In JavaScript, the event loop is a fundamental concept for managing asynchronous operations. To understand the event loop, it's essential to grasp the other components involved:
 
@@ -1198,17 +1199,17 @@ In Node.js, you can access command-line arguments using the `process.argv` array
 ### JavaScript data types
 
 
-![JavaScript data types](../images/javascript-data-types.png)
+![JavaScript data types](/Users/bolshakov/develop/tech-writing/holy-theory/images/javascript-data-types.png)
 
 ### JavaScript number size summary
 
 
-![JavaScript number size summary](../images/javascript-number-size-summary.png)
+![JavaScript number size summary](/Users/bolshakov/develop/tech-writing/holy-theory/images/javascript-number-size-summary.png)
 
 ### JavaScript Arrays cheat sheet
 
 
-![JavaScript Arrays cheat sheet](../images/js-arrays-cheat-sheet.png)
+![JavaScript Arrays cheat sheet](/Users/bolshakov/develop/tech-writing/holy-theory/images/js-arrays-cheat-sheet.png)
 
 
 ### OOP in JavaScript
@@ -1337,13 +1338,13 @@ makeAnimalSound(myDuck); // Output: Quack!
 JavaScript's object-oriented features provide flexibility and allow developers to create complex applications following the principles of OOP.### Possible types of function in JavaScript
 
 
-![Possible types of function in JavaScript](../images/possible-types-of-functions-in-js.png)
+![Possible types of function in JavaScript](/Users/bolshakov/develop/tech-writing/holy-theory/images/possible-types-of-functions-in-js.png)
 
 
 ### Promise action flow
 
 
-![Promise action flow](../images/promise-action-flow.png)
+![Promise action flow](/Users/bolshakov/develop/tech-writing/holy-theory/images/promise-action-flow.png)
 
 ### What is event bubbling?
 
@@ -1723,9 +1724,9 @@ To invert a number in Java, you need to divide the number by 10 in the loop unti
 ### Big O
 
 
-![Big O](../images/02-big-o.png)
-![Big O 2](../images/02-big-o-2.png)
-![Big O 3](../images/02-big-o-3.png)
+![Big O](/Users/bolshakov/develop/tech-writing/holy-theory/images/02-big-o.png)
+![Big O 2](/Users/bolshakov/develop/tech-writing/holy-theory/images/02-big-o-2.png)
+![Big O 3](/Users/bolshakov/develop/tech-writing/holy-theory/images/02-big-o-3.png)
 
 ** Source: https://github.com/jamiebuilds/itsy-bitsy-data-structures/blob/master/itsy-bitsy-data-structures.js**
 
@@ -1742,23 +1743,23 @@ Encapsulation is the mechanism of hiding of data implementation by restricting a
 It means one name many forms. It is further of two types — static and dynamic. Static polymorphism is achieved using method overloading and dynamic polymorphism using method overriding. It is closely related to inheritance. We can write a code that works on the superclass, and it will work with any subclass type as well.
 ### RESTful API methods
 
-![RESTful API methods](../images/04-restful-api-methods.png)
+![RESTful API methods](/Users/bolshakov/develop/tech-writing/holy-theory/images/04-restful-api-methods.png)
 
 ### Types of Databases
 
-![Types of Databases](../images/05-types-of-databases.png)
+![Types of Databases](/Users/bolshakov/develop/tech-writing/holy-theory/images/05-types-of-databases.png)
 
 ### Software categories
 
-![Software categories](../images/06-software-categories.png)
+![Software categories](/Users/bolshakov/develop/tech-writing/holy-theory/images/06-software-categories.png)
 
 ### Software characteristics
 
-![Software characteristics](../images/07-software-characteristics.png)
+![Software characteristics](/Users/bolshakov/develop/tech-writing/holy-theory/images/07-software-characteristics.png)
 
 ### Software development life cycle
 
-![Software development life cycle](../images/08-sdlc.png)
+![Software development life cycle](/Users/bolshakov/develop/tech-writing/holy-theory/images/08-sdlc.png)
 
 ### Design patterns
 
@@ -1882,7 +1883,7 @@ GRASP principles provide a set of guidelines for assigning responsibilities to c
 
 A person settled in front of their laptop, launching a browser before typing a URL into the search bar. What unfolds within the browser at the network level following this action?
 
-![Browser URL Search](../images/12-browser-url-search.png)
+![Browser URL Search](/Users/bolshakov/develop/tech-writing/holy-theory/images/12-browser-url-search.png)
 
 
 ## Answer
@@ -2156,7 +2157,7 @@ In summary, while REST APIs follow a fixed structure and can lead to over-fetchi
 
 
 
-![Main principles of security in ExpressJS server](../images/01-security-expressjs.png)
+![Main principles of security in ExpressJS server](/Users/bolshakov/develop/tech-writing/holy-theory/images/01-security-expressjs.png)
 
 1. **Input Validation:** Validate and sanitize all user input, including parameters, query strings, and request bodies, to prevent common vulnerabilities like SQL injection, cross-site scripting (XSS), and command injection.
 
@@ -2195,7 +2196,7 @@ In summary, while REST APIs follow a fixed structure and can lead to over-fetchi
 
 An array is a collection of items stored at contiguous memory locations. The idea is to store multiple items of the same type together. This makes it easier to calculate the position of each element by simply adding an offset to a base value, i.e., the memory location of the first element of the array (generally denoted by the name of the array).
 
-![Array](../images/array.png)
+![Array](/Users/bolshakov/develop/tech-writing/holy-theory/images/array.png)
 
 Basic Operations:
 
@@ -2210,12 +2211,12 @@ Basic Operations:
 ### Common Data Structures
 
 
-![Common Data Structures](../images/common-data-structures.png)
+![Common Data Structures](/Users/bolshakov/develop/tech-writing/holy-theory/images/common-data-structures.png)
 
 
 ### Data structures types
 
-![Data structures types](../images/data-structures-types.png)
+![Data structures types](/Users/bolshakov/develop/tech-writing/holy-theory/images/data-structures-types.png)
 
 * Linear Data Structure: A data structure that includes data elements arranged sequentially or linearly, where each element is connected to its previous and next nearest elements, is referred to as a linear data structure. Arrays and linked lists are two examples of linear data structures.
 
@@ -2376,10 +2377,10 @@ Doubly linked lists offer advantages in certain scenarios. The bidirectional nav
 Understanding and implementing doubly linked lists in TypeScript provides valuable insights into data structures and algorithms. The versatility of linked lists makes them powerful tools for various applications, from low-level memory management to high-level algorithmic problem-solving.### Graph
 
 
-![Graph](../images/graph.png)
-![Graph directed](../images/graph-directed.png)
-![Graph undirected](../images/graph-undirected.png)
-![Graph weighted](../images/graph-weighted.png)
+![Graph](/Users/bolshakov/develop/tech-writing/holy-theory/images/graph.png)
+![Graph directed](/Users/bolshakov/develop/tech-writing/holy-theory/images/graph-directed.png)
+![Graph undirected](/Users/bolshakov/develop/tech-writing/holy-theory/images/graph-undirected.png)
+![Graph weighted](/Users/bolshakov/develop/tech-writing/holy-theory/images/graph-weighted.png)
 
 Basic Operations:
 
@@ -2387,7 +2388,7 @@ Basic Operations:
 
 ### Hash table
 
-![Hash table](../images/hash-table.png)
+![Hash table](/Users/bolshakov/develop/tech-writing/holy-theory/images/hash-table.png)
 
 ```typescript
 const superPrimitiveHashingFunc = (string: string) => {
@@ -2445,7 +2446,7 @@ Hash tables are widely used in various applications such as databases, caches, s
 ### Linked list
 
 
-![Linked List](../images/linked-list.png)
+![Linked List](/Users/bolshakov/develop/tech-writing/holy-theory/images/linked-list.png)
 
 ```typescript
 
@@ -2625,7 +2626,7 @@ export class Map {
   ### Priority Queue
 
 
-![priority-queue](../images/priority-queue.png)
+![priority-queue](/Users/bolshakov/develop/tech-writing/holy-theory/images/priority-queue.png)
 
 
 ```typescript
@@ -2680,7 +2681,7 @@ export class PriorityQueue {
 ### Queue
 
 
-![Queue](../images/queue.png)
+![Queue](/Users/bolshakov/develop/tech-writing/holy-theory/images/queue.png)
 
 ```typescript
 export class Queue {
@@ -2832,7 +2833,7 @@ export class Set {
 
 ### Stack
 
-![Stack](../images/stack.png)
+![Stack](/Users/bolshakov/develop/tech-writing/holy-theory/images/stack.png)
 
 ```typescript
 export class Stack {
@@ -2914,8 +2915,8 @@ class Stack {
 
 ### Tree
 
-![Tree1](../images/tree1.png)
-![Tree2](../images/tree2.png)
+![Tree1](/Users/bolshakov/develop/tech-writing/holy-theory/images/tree1.png)
+![Tree2](/Users/bolshakov/develop/tech-writing/holy-theory/images/tree2.png)
 
 ## Tree
 ```javascript
@@ -3031,7 +3032,7 @@ Scalability refers to an application’s ability to handle and withstand an incr
 
 Horizontal scaling, or scaling out, means adding more hardware to the existing hardware resource pool. It increases the computational power of the system as a whole. Vertical scaling, or scaling up, means adding more power to your server. It increases the power of the hardware running the application.
 
-![Horizontal and vertical scaling](../images/01-horizontal-vertical-scaling.png)
+![Horizontal and vertical scaling](/Users/bolshakov/develop/tech-writing/holy-theory/images/01-horizontal-vertical-scaling.png)
 
 ### CAP theorem
 ## CAP theorem
@@ -3071,78 +3072,78 @@ Partition tolerance means that the system continues to function even if network 
 
 In summary, the CAP theorem provides a valuable framework for understanding the inherent trade-offs in distributed systems. Architects and developers must carefully consider these trade-offs based on the specific requirements and use cases of their applications.
 
-![CAP theorem](../images/02-cap-theorem.png)
+![CAP theorem](/Users/bolshakov/develop/tech-writing/holy-theory/images/02-cap-theorem.png)
 
 ### How DNS resolves ip address
 ## How DNS resolves ip address
 
-![How dns resolves ip](../images/03-how-dns-resolves-ip.png)
+![How dns resolves ip](/Users/bolshakov/develop/tech-writing/holy-theory/images/03-how-dns-resolves-ip.png)
 
 ### Single server setup
 ## Single server setup
 
-![Single server setup](../images/04-single-server-setup.png)
+![Single server setup](/Users/bolshakov/develop/tech-writing/holy-theory/images/04-single-server-setup.png)
 
 ### Database + Single servers setup
 ## Database + Single servers setup
 
-![Database + single servers setup](../images/05-database-single-servers-setup.png)
+![Database + single servers setup](/Users/bolshakov/develop/tech-writing/holy-theory/images/05-database-single-servers-setup.png)
 
 ### Load balancer
 ## Load balancer
 
-![Load balancer](../images/06-load-balancer.png)
+![Load balancer](/Users/bolshakov/develop/tech-writing/holy-theory/images/06-load-balancer.png)
 
 ### Database replication
 ## Database replication
 
-![Database replication](../images/07-database-replication.png)
+![Database replication](/Users/bolshakov/develop/tech-writing/holy-theory/images/07-database-replication.png)
 
 ### Web tier + Data tier + Load balancer System design
 ## Web tier + Data tier + Load balancer System design
 
-![Web tier + Data tier + Load balancer System design](../images/08-web-tier-data-tier-load-balancer-system-desing.png)
+![Web tier + Data tier + Load balancer System design](/Users/bolshakov/develop/tech-writing/holy-theory/images/08-web-tier-data-tier-load-balancer-system-desing.png)
 
 ### Cache tier
 ## Cache tier
 
-![Cache tier](../images/09-cache-tier.png)
+![Cache tier](/Users/bolshakov/develop/tech-writing/holy-theory/images/09-cache-tier.png)
 
 ### CDN Workflow
 ## CDN Workflow
 
-![CDN Workflow](../images/10-cdn-workflow.png)
+![CDN Workflow](/Users/bolshakov/develop/tech-writing/holy-theory/images/10-cdn-workflow.png)
 
 ### Web tier + Data tier + Load balancer + Cache + CDN System design
 ## Web tier + Data tier + Load balancer + Cache + CDN System design
 
-![Web tier + Data tier + Load balancer + Cache + CDN System design](../images/11-web-tier-data-tier-load-balancer-cache-cdn-system-design.png)
+![Web tier + Data tier + Load balancer + Cache + CDN System design](/Users/bolshakov/develop/tech-writing/holy-theory/images/11-web-tier-data-tier-load-balancer-cache-cdn-system-design.png)
 
 ### Stateful architecture
 ## Stateful architecture
 
-![Stateful architecture](../images/12-stateful-architecture.png)
+![Stateful architecture](/Users/bolshakov/develop/tech-writing/holy-theory/images/12-stateful-architecture.png)
 
 ### Stateless architecture
 ## Stateless architecture
 
-![Stateless architecture](../images/13-stateless-architecture.png)
+![Stateless architecture](/Users/bolshakov/develop/tech-writing/holy-theory/images/13-stateless-architecture.png)
 
 ### Web tier + Data tier + Load balancer + Cache + CDN stateless System design
 ## Web tier + Data tier + Load balancer + Cache + CDN stateless System design
 
 
-![Web tier + Data tier + Load balancer + Cache + CDN stateless System design](../images/14-web-tier-data-tier-load-balancer-cache-cdn-stateless-system-design.png)
+![Web tier + Data tier + Load balancer + Cache + CDN stateless System design](/Users/bolshakov/develop/tech-writing/holy-theory/images/14-web-tier-data-tier-load-balancer-cache-cdn-stateless-system-design.png)
 
 ### System design with data centers
 ## System design with data centers
 
-![System design with data centers](../images/15-system-design-with-data-centres.png)
+![System design with data centers](/Users/bolshakov/develop/tech-writing/holy-theory/images/15-system-design-with-data-centres.png)
 
 ### Message queue
 ## Message queue
 
-![Message queue](../images/16-message-queue.png)
+![Message queue](/Users/bolshakov/develop/tech-writing/holy-theory/images/16-message-queue.png)
 
 A message queue is a communication mechanism that allows different parts of a software system to send and receive messages or data asynchronously. It is often used to facilitate communication between different components or services within a distributed system. In the context you mentioned, where there is a server and a consumer, a message queue can be used to enable communication and data exchange between them.
 
@@ -3167,52 +3168,52 @@ Overall, message queues are a fundamental building block in many distributed sys
 ### System design with message queue
 ## System design with message queue
 
-![System design with message queue](../images/17-system-design-with-message-queue.png)
+![System design with message queue](/Users/bolshakov/develop/tech-writing/holy-theory/images/17-system-design-with-message-queue.png)
 
 ### Round robin
 ## Round robin
 
-![Round robin](../images/18-round-robin.png)
+![Round robin](/Users/bolshakov/develop/tech-writing/holy-theory/images/18-round-robin.png)
 
 ### Sticky round robin
 ## Sticky round robin
 
-![Sticky round robin](../images/19-sticky-round-robin.png)
+![Sticky round robin](/Users/bolshakov/develop/tech-writing/holy-theory/images/19-sticky-round-robin.png)
 
 ### Weighted round robin
 ## Weighted round robin
 
-![Sticky round robin](../images/20-weighted-round-robin.png)
+![Sticky round robin](/Users/bolshakov/develop/tech-writing/holy-theory/images/20-weighted-round-robin.png)
 
 ### IP/URL hash
 ## IP/URL hash
 
-![IP/URL hash](../images/21-ip-url-hash.png)
+![IP/URL hash](/Users/bolshakov/develop/tech-writing/holy-theory/images/21-ip-url-hash.png)
 
 ### Least connections
 ## Least connections
 
-![Least connections](../images/22-least-connections.png)
+![Least connections](/Users/bolshakov/develop/tech-writing/holy-theory/images/22-least-connections.png)
 
 ### Least time
 ## Least time
 
-![Least time](../images/23-least-time.png)
+![Least time](/Users/bolshakov/develop/tech-writing/holy-theory/images/23-least-time.png)
 
 ### Simplified Continuous integration flow
 ## Simplified Continuous integration flow
 
-![Least time](../images/24-simplified-continious-integration-flow.png)
+![Least time](/Users/bolshakov/develop/tech-writing/holy-theory/images/24-simplified-continious-integration-flow.png)
 
 ### Architectural characteristics
 ## Architectural characteristics
 
-![Least time](../images/25-architectual-characteristics.png)
+![Least time](/Users/bolshakov/develop/tech-writing/holy-theory/images/25-architectual-characteristics.png)
 
 ### Common anti-patterns in microservices architecture
 ## Common anti-patterns in microservices architecture
 
-![Common anti-patterns in microservices architecture](../images/26-antipatterns-microservices.png)
+![Common anti-patterns in microservices architecture](/Users/bolshakov/develop/tech-writing/holy-theory/images/26-antipatterns-microservices.png)
 
 1. **Monolithic Mindset:** Treating microservices as miniature monoliths, where services are tightly coupled and communicate extensively, negating the benefits of independent, autonomous services.
 
@@ -8794,6 +8795,61 @@ The `longestCommonPrefix` function takes an array of strings, sorts them, and co
 
 
 
+### Longest Harmonious Subsequence
+
+
+```typescript
+function findLHS(nums: number[]): number {
+    const frequencyMap: Map<number, number> = new Map();
+    for (const num of nums) {
+        frequencyMap.set(num, (frequencyMap.get(num) || 0) + 1);
+    }
+
+    let maxLHS = 0;
+    for (const key of frequencyMap.keys()) {
+        if (frequencyMap.has(key + 1)) {
+            const currentLHS = frequencyMap.get(key)! + frequencyMap.get(key + 1)!;
+            maxLHS = Math.max(maxLHS, currentLHS);
+        }
+    }
+
+    return maxLHS;
+};
+```
+
+**Step-by-Step solution:**
+
+1. **Initialize a Map:**
+   - `const frequencyMap: Map<number, number> = new Map();`
+   - Initialize a map called `frequencyMap` to store the frequency of each number.
+
+2. **Populate the Frequency Map:**
+   - Use a `for...of` loop to iterate through each number in the input array (`nums`).
+   - Update the frequency in the map using `frequencyMap.set()`, ensuring that if the number is not in the map, it starts with a frequency of 1.
+
+3. **Initialize Variables:**
+   - `let maxLHS = 0;`
+   - Initialize a variable `maxLHS` to store the maximum length of a harmonious subsequence (LHS).
+
+4. **Iterate Through Frequency Map Keys:**
+   - `for (const key of frequencyMap.keys()) {`
+   - Iterate through the keys of the frequency map.
+
+5. **Check for Key + 1:**
+   - `if (frequencyMap.has(key + 1)) {`
+   - Check if the map contains the key incremented by 1.
+
+6. **Calculate Current LHS Length:**
+   - `const currentLHS = frequencyMap.get(key)! + frequencyMap.get(key + 1)!;`
+   - Calculate the length of the harmonious subsequence by adding the frequencies of the current key and key + 1.
+
+7. **Update Maximum LHS Length:**
+   - `maxLHS = Math.max(maxLHS, currentLHS);`
+   - Update the maximum LHS length if the current length is greater.
+
+8. **Return Maximum LHS Length:**
+   - `return maxLHS;`
+   - Return the final maximum length of a harmonious subsequence.
 ### Longest palindrome
 
 
