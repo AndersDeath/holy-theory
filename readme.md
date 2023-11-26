@@ -162,6 +162,7 @@
 - [Binary Watch](./content/training/binary-watch.md)
 - [Chain adding functions](./content/training/chain-adding-functions.md)
 - [Chain calculator](./content/training/chain-calculator.md)
+- [Classes More Than 5 Students](./content/training/classes-more-than-5-students.md)
 - [Climbing stairs](./content/training/climbing-stairs.md)
 - [Combine Two Tables](./content/training/combine-two-tables.md)
 - [Construct the Rectangle](./content/training/construct-the-rectangle.md)
