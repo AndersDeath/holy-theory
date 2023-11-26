@@ -9,6 +9,7 @@ All notable changes to this project will be documented in this file.
 * add N-ary Tree Postorder Traversal training in TypeScript
 * minor fix of building system
 * add Longest Harmonious Subsequence training
+* add Classes More Than 5 Students training in SQL
 
 # [0.0.45] - 2023-11-20
 * add Summation of primes training
