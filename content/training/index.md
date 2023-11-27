@@ -25,6 +25,7 @@
 - [Binary Watch](./binary-watch.md)
 - [Chain adding functions](./chain-adding-functions.md)
 - [Chain calculator](./chain-calculator.md)
+- [Classes More Than 5 Students](./classes-more-than-5-students.md)
 - [Climbing stairs](./climbing-stairs.md)
 - [Combine Two Tables](./combine-two-tables.md)
 - [Construct the Rectangle](./construct-the-rectangle.md)

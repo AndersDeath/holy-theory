@@ -5,5 +5,5 @@
 - python: 3
 - javascript: 24
 - nodejs: 1
-- sql: 11
+- sql: 12
 - bash: 2

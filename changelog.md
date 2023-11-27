@@ -2,13 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
-# [0.0.46] - In progress
+# [0.0.47] - In progress
+*
+
+# [0.0.46] - 2023-11-27
 * update pdf generation
 * add Doubly Linked Lists data structure
 * add Binary search path you took training training
 * add N-ary Tree Postorder Traversal training in TypeScript
 * minor fix of building system
 * add Longest Harmonious Subsequence training
+* add Classes More Than 5 Students training in SQL
+* fix issue with adding images to pandoc pdf result
 
 # [0.0.45] - 2023-11-20
 * add Summation of primes training

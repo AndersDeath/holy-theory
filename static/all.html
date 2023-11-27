@@ -4642,6 +4642,50 @@ calculator.<span class="hljs-title function_">log</span>().<span class="hljs-tit
 </li>
 </ol>
 <p>Please note that the code provided uses the <code>Function</code> constructor to dynamically create functions from code strings. While this approach offers flexibility, it can also be potentially unsafe if the code strings come from untrusted sources. It&#39;s important to ensure that the code strings used in this manner are secure and not susceptible to code injection vulnerabilities.</p>
+<h3>Classes More Than 5 Students</h3>
+<h1 id="classes-more-than-5-students">Classes More Than 5 Students</h1>
+<pre><code class="hljs language-SQL"><span class="hljs-keyword">SELECT</span> class
+<span class="hljs-keyword">FROM</span> Courses
+<span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span> class
+<span class="hljs-keyword">HAVING</span> <span class="hljs-built_in">COUNT</span>(student) <span class="hljs-operator">&gt;=</span> <span class="hljs-number">5</span>;
+</code></pre><ol>
+<li><p><strong>Select Statement:</strong></p>
+<ul>
+<li>Use the <code>SELECT</code> statement to retrieve data from the database.</li>
+</ul>
+</li>
+<li><p><strong>Column Selection:</strong></p>
+<ul>
+<li>Specify the column to be selected as <code>class</code>.</li>
+</ul>
+</li>
+<li><p><strong>Table Specification:</strong></p>
+<ul>
+<li>Specify the table from which to retrieve data as <code>Courses</code>.</li>
+</ul>
+</li>
+<li><p><strong>Grouping:</strong></p>
+<ul>
+<li>Use the <code>GROUP BY</code> clause to group the results based on the values in the &quot;class&quot; column.</li>
+</ul>
+</li>
+<li><p><strong>Counting Distinct Students:</strong></p>
+<ul>
+<li>Use the <code>COUNT(student)</code> function within the <code>HAVING</code> clause to filter groups where the count of distinct values in the &quot;student&quot; column is greater than or equal to 5.</li>
+</ul>
+</li>
+<li><p><strong>Filtering with HAVING Clause:</strong></p>
+<ul>
+<li>Apply the <code>HAVING</code> clause to filter groups based on the count condition.</li>
+</ul>
+</li>
+<li><p><strong>Final Result:</strong></p>
+<ul>
+<li>Retrieve and display the distinct values in the &quot;class&quot; column that meet the specified criteria.</li>
+</ul>
+</li>
+</ol>
+<p>The result is a list of distinct class values from the &quot;Courses&quot; table where there are at least 5 distinct students enrolled in each class.</p>
 <h3>Climbing stairs</h3>
 <h1 id="climbing-stairs">Climbing stairs</h1>
 <pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">climbStairs</span>(<span class="hljs-params">n: <span class="hljs-built_in">number</span></span>): <span class="hljs-built_in">number</span> {
