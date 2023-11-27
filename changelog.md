@@ -10,6 +10,7 @@ All notable changes to this project will be documented in this file.
 * minor fix of building system
 * add Longest Harmonious Subsequence training
 * add Classes More Than 5 Students training in SQL
+* fix issue with adding images to pandoc pdf result
 
 # [0.0.45] - 2023-11-20
 * add Summation of primes training
