@@ -2,7 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
-# [0.0.46] - In progress
+# [0.0.47] - In progress
+*
+
+# [0.0.46] - 2023-11-27
 * update pdf generation
 * add Doubly Linked Lists data structure
 * add Binary search path you took training training
