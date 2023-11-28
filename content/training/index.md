@@ -106,6 +106,7 @@
 - [Merge two sorted linked lists](./merge-two-sorted-linked-lists.md)
 - [Minimum Absolute Difference in BST](./minimum-absolute-difference-in-bst.md)
 - [Minimum Depth of Binary Tree](./minimum-depth-of-binary-tree.md)
+- [Minimum Index Sum of Two Lists](./minimum-index-sum-of-two-lists.md)
 - [Missing number](./missing-number.md)
 - [Move Zeroes](./move-zerod.md)
 - [Multiples of 3 and 5](./multiples-of-3-and-5.md)
