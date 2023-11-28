@@ -243,6 +243,7 @@
 - [Merge two sorted linked lists](./content/training/merge-two-sorted-linked-lists.md)
 - [Minimum Absolute Difference in BST](./content/training/minimum-absolute-difference-in-bst.md)
 - [Minimum Depth of Binary Tree](./content/training/minimum-depth-of-binary-tree.md)
+- [Minimum Index Sum of Two Lists](./content/training/minimum-index-sum-of-two-lists.md)
 - [Missing number](./content/training/missing-number.md)
 - [Move Zeroes](./content/training/move-zerod.md)
 - [Multiples of 3 and 5](./content/training/multiples-of-3-and-5.md)
