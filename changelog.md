@@ -4,6 +4,7 @@ All notable changes to this project will be documented in this file.
 
 # [0.0.47] - In progress
 * add Minimum Index Sum of Two Lists training
+* add Range Addition II training
 
 # [0.0.46] - 2023-11-27
 * update pdf generation
