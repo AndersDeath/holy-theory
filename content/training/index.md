@@ -135,6 +135,7 @@
 - [Primes upon to N](./primes-upon-to-n.md)
 - [Promises sequence](./promises-sequence.md)
 - [Queue using two stacks](./queue-using-two-stacks.md)
+- [Range Addition II](./range-addition-ii.md)
 - [Range Sum Query](./range-sum-query.md)
 - [Ransom Note](./ransome-note.md)
 - [Regular Expression Matching](./regular-expression-matching.md)

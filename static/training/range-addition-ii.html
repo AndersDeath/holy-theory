@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Holy Theory</title>
+      <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/monokai.min.css" />
+      <script type="application/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+      <style>
+      body {
+        margin: 0;
+            padding: 0;
+        }
+
+        img {
+            max-width: 400px;
+        }
+
+        .content {
+          width: 60%;
+          margin: 0 auto;
+        }
+      </style>
+  </head>
+  <body>
+      <div class="content"><h1 id="range-addition-ii">Range Addition II</h1>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">maxCount</span>(<span class="hljs-params">m: <span class="hljs-built_in">number</span>, n: <span class="hljs-built_in">number</span>, ops: <span class="hljs-built_in">number</span>[][]</span>): <span class="hljs-built_in">number</span> {
+        <span class="hljs-keyword">if</span> (ops.<span class="hljs-property">length</span> === <span class="hljs-number">0</span>) {
+        <span class="hljs-keyword">return</span> m * n; 
+    }
+
+    <span class="hljs-keyword">let</span> minAi = m;
+    <span class="hljs-keyword">let</span> minBi = n;
+
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">const</span> op <span class="hljs-keyword">of</span> ops) {
+        minAi = <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">min</span>(minAi, op[<span class="hljs-number">0</span>]);
+        minBi = <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">min</span>(minBi, op[<span class="hljs-number">1</span>]);
+    }
+
+    <span class="hljs-keyword">return</span> minAi * minBi;
+};
+</code></pre><ol>
+<li><p><strong>Check for Empty Operations Array:</strong></p>
+<ul>
+<li>Check if the array of operations (<code>ops</code>) is empty. If it is, return the product of <code>m</code> and <code>n</code> (the maximum count of elements when no operations are performed).</li>
+</ul>
+</li>
+<li><p><strong>Initialize Variables:</strong></p>
+<ul>
+<li>Initialize two variables, <code>minAi</code> and <code>minBi</code>, to the initial dimensions <code>m</code> and <code>n</code>, respectively.</li>
+</ul>
+</li>
+<li><p><strong>Iterate Through Operations Array:</strong></p>
+<ul>
+<li>Use a <code>for...of</code> loop to iterate through each operation in the array (<code>ops</code>).</li>
+</ul>
+</li>
+<li><p><strong>Update Minimum Values for Dimensions:</strong></p>
+<ul>
+<li>For each operation, update the minimum values for dimensions (<code>minAi</code> and <code>minBi</code>) by taking the minimum of the current value and the values from the operation.</li>
+</ul>
+</li>
+<li><p><strong>Return Product of Minimum Dimensions:</strong></p>
+<ul>
+<li>After iterating through all operations, return the product of the minimum dimensions (<code>minAi * minBi</code>), representing the maximum count of elements after all operations are performed.</li>
+</ul>
+</li>
+</ol>
+</div>
+  </body>
+  </html>

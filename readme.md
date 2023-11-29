@@ -272,6 +272,7 @@
 - [Primes upon to N](./content/training/primes-upon-to-n.md)
 - [Promises sequence](./content/training/promises-sequence.md)
 - [Queue using two stacks](./content/training/queue-using-two-stacks.md)
+- [Range Addition II](./content/training/range-addition-ii.md)
 - [Range Sum Query](./content/training/range-sum-query.md)
 - [Ransom Note](./content/training/ransome-note.md)
 - [Regular Expression Matching](./content/training/regular-expression-matching.md)
