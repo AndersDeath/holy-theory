@@ -23,6 +23,7 @@
 - [Binary Tree Preorder Traversal](./binary-tree-preorder-traversal.md)
 - [Binary Tree Tilt](./binary-tree-tilt.md)
 - [Binary Watch](./binary-watch.md)
+- [Can Place Flowers](./can-place-flowers.md)
 - [Chain adding functions](./chain-adding-functions.md)
 - [Chain calculator](./chain-calculator.md)
 - [Classes More Than 5 Students](./classes-more-than-5-students.md)
