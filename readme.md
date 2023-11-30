@@ -160,6 +160,7 @@
 - [Binary Tree Preorder Traversal](./content/training/binary-tree-preorder-traversal.md)
 - [Binary Tree Tilt](./content/training/binary-tree-tilt.md)
 - [Binary Watch](./content/training/binary-watch.md)
+- [Can Place Flowers](./content/training/can-place-flowers.md)
 - [Chain adding functions](./content/training/chain-adding-functions.md)
 - [Chain calculator](./content/training/chain-calculator.md)
 - [Classes More Than 5 Students](./content/training/classes-more-than-5-students.md)
