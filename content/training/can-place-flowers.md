@@ -8,17 +8,19 @@ languages: ['typescript']
 ```typescript
 function canPlaceFlowers(flowerbed: number[], n: number): boolean {
     let count = 0;
-    
-    for (let i = 0; i < flowerbed.length; i += 2) {
+
+    for (let i = 0; i < flowerbed.length; i++) {
         if (flowerbed[i] === 0) {
-            if (i === flowerbed.length - 1 || flowerbed[i + 1] === 0) {
-               
+            const prevEmpty = i === 0 || flowerbed[i - 1] === 0;
+            const nextEmpty = i === flowerbed.length - 1 || flowerbed[i + 1] === 0;
+
+            if (prevEmpty && nextEmpty) {
+                flowerbed[i] = 1; 
                 count++;
-                i++;
             }
         }
     }
-    
+
     return count >= n;
 };
 ```
@@ -27,16 +29,16 @@ function canPlaceFlowers(flowerbed: number[], n: number): boolean {
    - Initialize a counter variable `count` to keep track of the number of flowers placed.
 
 2. **Iterate Through Flowerbed:**
-   - Use a `for` loop to iterate through the `flowerbed` array, incrementing the index by 2 in each iteration (skipping every two positions).
+   - Use a `for` loop to iterate through the `flowerbed` array.
 
 3. **Check Current Position:**
    - Check if the current position in the flowerbed is empty (`flowerbed[i] === 0`).
 
-4. **Check Next Position:**
-   - If the current position is empty, check if it is the last position in the flowerbed or if the next position is also empty (`flowerbed[i + 1] === 0`).
+4. **Check Previous and Next Positions:**
+   - Check if the previous position is empty (`i === 0 || flowerbed[i - 1] === 0`) and if the next position is empty (`i === flowerbed.length - 1 || flowerbed[i + 1] === 0`).
 
 5. **Place Flower:**
-   - If the conditions are met, place a flower at the current position, increment the `count`, and skip the next position (increment `i`).
+   - If both the previous and next positions are empty, place a flower at the current position (`flowerbed[i] = 1`) and increment the `count`.
 
 6. **Repeat Until End:**
    - Continue iterating through the flowerbed, checking and placing flowers in every valid position.
