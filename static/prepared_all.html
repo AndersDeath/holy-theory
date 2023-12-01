@@ -4536,17 +4536,19 @@ Below is the step-by-step explanation of the code:</p>
 <h1 id="can-place-flowers">Can Place Flowers</h1>
 <pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">canPlaceFlowers</span>(<span class="hljs-params">flowerbed: <span class="hljs-built_in">number</span>[], n: <span class="hljs-built_in">number</span></span>): <span class="hljs-built_in">boolean</span> {
     <span class="hljs-keyword">let</span> count = <span class="hljs-number">0</span>;
-    
-    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; flowerbed.<span class="hljs-property">length</span>; i += <span class="hljs-number">2</span>) {
+
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; flowerbed.<span class="hljs-property">length</span>; i++) {
         <span class="hljs-keyword">if</span> (flowerbed[i] === <span class="hljs-number">0</span>) {
-            <span class="hljs-keyword">if</span> (i === flowerbed.<span class="hljs-property">length</span> - <span class="hljs-number">1</span> || flowerbed[i + <span class="hljs-number">1</span>] === <span class="hljs-number">0</span>) {
-               
+            <span class="hljs-keyword">const</span> prevEmpty = i === <span class="hljs-number">0</span> || flowerbed[i - <span class="hljs-number">1</span>] === <span class="hljs-number">0</span>;
+            <span class="hljs-keyword">const</span> nextEmpty = i === flowerbed.<span class="hljs-property">length</span> - <span class="hljs-number">1</span> || flowerbed[i + <span class="hljs-number">1</span>] === <span class="hljs-number">0</span>;
+
+            <span class="hljs-keyword">if</span> (prevEmpty &amp;&amp; nextEmpty) {
+                flowerbed[i] = <span class="hljs-number">1</span>; 
                 count++;
-                i++;
             }
         }
     }
-    
+
     <span class="hljs-keyword">return</span> count &gt;= n;
 };
 </code></pre><ol>
@@ -4557,7 +4559,7 @@ Below is the step-by-step explanation of the code:</p>
 </li>
 <li><p><strong>Iterate Through Flowerbed:</strong></p>
 <ul>
-<li>Use a <code>for</code> loop to iterate through the <code>flowerbed</code> array, incrementing the index by 2 in each iteration (skipping every two positions).</li>
+<li>Use a <code>for</code> loop to iterate through the <code>flowerbed</code> array.</li>
 </ul>
 </li>
 <li><p><strong>Check Current Position:</strong></p>
@@ -4565,14 +4567,14 @@ Below is the step-by-step explanation of the code:</p>
 <li>Check if the current position in the flowerbed is empty (<code>flowerbed[i] === 0</code>).</li>
 </ul>
 </li>
-<li><p><strong>Check Next Position:</strong></p>
+<li><p><strong>Check Previous and Next Positions:</strong></p>
 <ul>
-<li>If the current position is empty, check if it is the last position in the flowerbed or if the next position is also empty (<code>flowerbed[i + 1] === 0</code>).</li>
+<li>Check if the previous position is empty (<code>i === 0 || flowerbed[i - 1] === 0</code>) and if the next position is empty (<code>i === flowerbed.length - 1 || flowerbed[i + 1] === 0</code>).</li>
 </ul>
 </li>
 <li><p><strong>Place Flower:</strong></p>
 <ul>
-<li>If the conditions are met, place a flower at the current position, increment the <code>count</code>, and skip the next position (increment <code>i</code>).</li>
+<li>If both the previous and next positions are empty, place a flower at the current position (<code>flowerbed[i] = 1</code>) and increment the <code>count</code>.</li>
 </ul>
 </li>
 <li><p><strong>Repeat Until End:</strong></p>
