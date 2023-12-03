@@ -7,6 +7,7 @@ All notable changes to this project will be documented in this file.
 * add Range Addition II training
 * add Can Place Flowers training
 * update builder
+* prepare raw implementation for algorithms handbook
 
 # [0.0.46] - 2023-11-27
 * update pdf generation
