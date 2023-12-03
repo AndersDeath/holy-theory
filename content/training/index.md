@@ -45,6 +45,7 @@
 - [Detect Capital Use](./detect-capital-use.md)
 - [Diameter of Binary Tree](./diameter-of-binary-tree.md)
 - [Distribute Candies](./distribute-candies.md)
+- [Divide Two Integers](./divide-two-integers.md)
 - [Duplicate Emails](./duplicate-emails.md)
 - [Employee Bonus](./employee-bonus.md)
 - [Employees Earning More Than Their Managers](./employees-earning-more-than-their-managers.md)
