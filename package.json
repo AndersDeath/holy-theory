@@ -5,10 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "bun builder/index.ts --all",
+    "build:all": "bun builder/index.ts --all",
+    "build:md": "bun builder/index.ts --md",
+    "build:html": "bun builder/index.ts --html",
     "generate:pdf:from:md": "./scripts/generate_pdf.sh generate:pdf:from:md",
     "generate:pdf:from:html": "./scripts/generate_pdf.sh generate:pdf:from:html",
-    "generate:all": "bun run build && bun generate:pdf:from:md && bun run generate:pdf:from:html"
+    "generate:pdf:from:md:algorithms": "./scripts/generate_pdf.sh generate:pdf:from:md:algorithms",
+    "generate:pdf:from:html:algorithms": "./scripts/generate_pdf.sh generate:pdf:from:html:algorithms",
+    "generate:all": "bun run build:all && bun generate:pdf:from:md && bun run generate:pdf:from:html"
   },
   "repository": {
     "type": "git",

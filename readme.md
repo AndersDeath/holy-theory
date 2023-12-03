@@ -182,6 +182,7 @@
 - [Detect Capital Use](./content/training/detect-capital-use.md)
 - [Diameter of Binary Tree](./content/training/diameter-of-binary-tree.md)
 - [Distribute Candies](./content/training/distribute-candies.md)
+- [Divide Two Integers](./content/training/divide-two-integers.md)
 - [Duplicate Emails](./content/training/duplicate-emails.md)
 - [Employee Bonus](./content/training/employee-bonus.md)
 - [Employees Earning More Than Their Managers](./content/training/employees-earning-more-than-their-managers.md)

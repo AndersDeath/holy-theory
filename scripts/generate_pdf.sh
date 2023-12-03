@@ -5,7 +5,11 @@ generate_pdf_from_md() {
 }
 
 generate_pdf_from_md_algorithms() {
-    pandoc content/prepared_all.md -o pdf/output_from_md.pdf -V geometry:margin=1in --highlight-style tango
+    pandoc content/prepared_all_algorithms.md -o pdf/output_from_md_algorithms.pdf -V geometry:margin=1in --highlight-style tango
+}
+
+generate_pdf_from_html_algorithms() {
+    pandoc static/prepared_all_algorithms.html -o pdf/output_from_html_algorithms.pdf -V geometry:margin=1in --highlight-style tango
 }
 
 generate_pdf_from_html() {
@@ -25,6 +29,9 @@ case "$1" in
         ;;
     "generate:pdf:from:md:algorithms")
         generate_pdf_from_md_algorithms
+        ;;
+    "generate:pdf:from:html:algorithms")
+        generate_pdf_from_html_algorithms
         ;;
     "generate:pdf:from:html")
         generate_pdf_from_html
