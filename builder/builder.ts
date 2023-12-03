@@ -39,7 +39,6 @@ function generateTableOfContents(markdownContent: string, type = "md"): string {
   };
 
   marked(markdownContent, { renderer });
-  // console.log(tableOfContents);
   if (type === "html") {
     return `<div class="table-of-contents">\n${tableOfContents}</div>`;
   } else {
@@ -205,10 +204,15 @@ async function generateStatic(
   });
 
   let allOutput = buildHeadline("Holy Theory project", 1, type) + "\n";
+  let allAlgorithms = buildHeadline("Holy Theory  - Algorithms", 1, type) + "\n";
   const headerRegex = /^#\s+(.+)/gm;
 
   let prevSection = "";
   allContentWithSections.forEach((e: Entry) => {
+    if(e.type === "content" && e.section.toLowerCase() === 'algorithms') {
+      allAlgorithms += buildHeadline(e.title, 3, type) + "\n";
+      e.content ? (allAlgorithms += e.content.replace(headerRegex, "")) : "";
+    }
     if (e.type === "content") {
       if (prevSection !== e.section) {
         prevSection = e.section;
@@ -225,9 +229,12 @@ async function generateStatic(
   }
   const preparedOutput = allOutput.replace(
     /https:\/\/raw\.githubusercontent\.com\/AndersDeath\/holy-theory\/main\/images/g,
-    path.join( './', 'images')
+    path.join("./", "images")
   );
-
+  const preparedOutput2 = allAlgorithms.replace(
+    /https:\/\/raw\.githubusercontent\.com\/AndersDeath\/holy-theory\/main\/images/g,
+    path.join("./", "images")
+  );
   // const preparedOutput = allOutput;
 
   allOutput = generateTableOfContents(allOutput) + allOutput;
@@ -240,6 +247,11 @@ async function generateStatic(
   await fs.writeFile(
     path.join(outputFolder, "prepared_all." + type),
     preparedOutput
+  );
+
+  await fs.writeFile(
+    path.join(outputFolder, "prepared_all_algorithms." + type),
+    preparedOutput2
   );
   // }
 
