@@ -1,8 +1,10 @@
 # Changelog
 
 All notable changes to this project will be documented in this file.
+# [0.0.48] - In progress
+* 
 
-# [0.0.47] - In progress
+# [0.0.47] - 2023-12-04
 * add Minimum Index Sum of Two Lists training
 * add Range Addition II training
 * add Can Place Flowers training
