@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 # [0.0.48] - In progress
-* 
+* update Binary search article
 
 # [0.0.47] - 2023-12-04
 * add Minimum Index Sum of Two Lists training

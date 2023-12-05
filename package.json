@@ -12,7 +12,7 @@
     "generate:pdf:from:html": "./scripts/generate_pdf.sh generate:pdf:from:html",
     "generate:pdf:from:md:algorithms": "./scripts/generate_pdf.sh generate:pdf:from:md:algorithms",
     "generate:pdf:from:html:algorithms": "./scripts/generate_pdf.sh generate:pdf:from:html:algorithms",
-    "generate:all": "bun run build:all && bun generate:pdf:from:md && bun run generate:pdf:from:html"
+    "generate:all": "./scripts/generate_all.sh"
   },
   "repository": {
     "type": "git",
