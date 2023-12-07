@@ -90,7 +90,7 @@ my_list = [1, 3, 5, 7, 9]
 res = binary_search(my_list, 3)
 
 print(my_list[res])
-```### Binary tree in order traversal
+```\newpage### Binary tree in order traversal
 
 
 ```java
@@ -116,7 +116,7 @@ class Solution {
 }
 ```
 
-### Binary tree postorder traversal
+\newpage### Binary tree postorder traversal
 
 
 ```java
@@ -142,7 +142,7 @@ class Solution {
 
 ```
 
-### Binary tree preorder traversal
+\newpage### Binary tree preorder traversal
 
 
 ```java
@@ -166,7 +166,7 @@ class Solution {
 }
 ```
 
-### Bubble sort
+\newpage### Bubble sort
 
 
 ```typescript
@@ -199,7 +199,7 @@ console.log(bubbleSort([2,5,2,6,7,2,22,5,7,9,0,2,3]))
 	}
 ```
 
-### Diffie hellman algorithm
+\newpage### Diffie hellman algorithm
 
 
 ```javascript
@@ -248,7 +248,7 @@ function DiffieHellman() {
 DiffieHellman()
 ```
 
-### Graph adjacency list
+\newpage### Graph adjacency list
 
 
 ```java
@@ -298,7 +298,7 @@ public class GraphList {
 }
 ```
 
-### Graph adjacency matrix
+\newpage### Graph adjacency matrix
 
 
 ```java
@@ -345,7 +345,7 @@ public class Graph {
 }
 ```
 
-### Insertion sort
+\newpage### Insertion sort
 
 ## TypeScript
 ```typescript
@@ -381,7 +381,7 @@ console.log(insertionSort([1, 4, 2, 8, 345, 123, 43, 32, 5643, 63, 123, 43, 2, 5
         }
     }
 ```
-### Interpolation search
+\newpage### Interpolation search
 
 
 ```java
@@ -408,7 +408,7 @@ class Solution {
 
 }
 ```
-### Merge sort
+\newpage### Merge sort
 
 
 ## Java
@@ -464,7 +464,7 @@ class Solution {
 }
 
 ```
-### Quick sort
+\newpage### Quick sort
 
 ```java
 class Solution {
@@ -553,7 +553,7 @@ class Solution {
 }
 ```
 
-### Selection sort
+\newpage### Selection sort
 
 
 ![Selection sort](images/selection-sort.png)
@@ -612,3 +612,4 @@ def selection_sort(arr):
 print(selection_sort([5,4,6,2,1,123, 2, 3,1,23 ,1,1,]))
 ```
 
+\newpage

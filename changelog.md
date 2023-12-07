@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 # [0.0.48] - In progress
 * update Binary search article
+* update generate_pdf.sh
+* add metadata for algorithms handbook
+* add table of contents to algorithms handbook
+* add pagebrackers for md based algorithms handbook
 
 # [0.0.47] - 2023-12-04
 * add Minimum Index Sum of Two Lists training
