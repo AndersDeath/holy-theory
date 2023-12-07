@@ -5,6 +5,7 @@ All notable changes to this project will be documented in this file.
 * update Binary search article
 * update generate_pdf.sh
 * add metadata for algorithms handbook
+* add table of contents to algorithms handbook
 
 # [0.0.47] - 2023-12-04
 * add Minimum Index Sum of Two Lists training
