@@ -212,7 +212,7 @@ async function generateStatic(
     if(e.type === "content" && e.section.toLowerCase() === 'algorithms') {
       allAlgorithms += buildHeadline(e.title, 3, type) + "\n";
       e.content ? (allAlgorithms += e.content.replace(headerRegex, "")) : "";
-      allAlgorithms += '\\newpage';
+      allAlgorithms += type === 'md' ? '\\newpage': '<p style="page-break-after: always;"> </p>';
     }
     if (e.type === "content") {
       if (prevSection !== e.section) {
