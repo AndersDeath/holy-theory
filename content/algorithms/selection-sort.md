@@ -2,6 +2,7 @@
 title: Selection sort
 tags: ['algorithms', 'selection', 'sort']
 languages: ['java', 'typescript', 'python']
+sort: 400
 ---
 # Selection sort
 

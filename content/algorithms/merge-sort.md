@@ -2,6 +2,7 @@
 title: Merge sort
 tags: ['algorithms', 'merge', 'sort']
 languages: ['java']
+sort: 600
 ---
 # Merge sort
 

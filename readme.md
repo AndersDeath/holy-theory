@@ -172,6 +172,7 @@
 - [Contains Duplicate](./content/training/contains-duplicates.md)
 - [Convert a Number to Hexadecimal](./content/training/convert-number-to-hexadecimal.md)
 - [Convert Sorted Array to Binary Search Tree](./content/training/convert-sorted-array-to-binary-search-tree.md)
+- [Count and Say](./content/training/count-and-say.md)
 - [Count Complete Tree Nodes](./content/training/count-complete-tree-nodes.md)
 - [Counting Bits](./content/training/counting-bits.md)
 - [Cumulative Sum](./content/training/cumulative-sum.md)
