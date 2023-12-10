@@ -2,6 +2,7 @@
 title: Insertion sort
 tags: ['algorithms', 'insertion', 'sort']
 languages: ['typescript', 'java']
+sort: 300
 ---
 # Insertion sort
 ## TypeScript

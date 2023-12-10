@@ -2,6 +2,7 @@
 title: Graph adjacency matrix
 tags: ['adjacency', 'algorithms', 'graph']
 languages: ['java']
+sort: 1300
 ---
 # Graph adjacency matrix
 

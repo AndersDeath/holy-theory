@@ -2,6 +2,7 @@
 title: Quick sort
 tags: ['algorithms', 'quick', 'sort']
 languages: ['java', 'python']
+sort: 500
 ---
 # Quicksort
 ```java

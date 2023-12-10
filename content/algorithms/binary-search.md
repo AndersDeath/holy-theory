@@ -2,6 +2,7 @@
 title: Binary search
 tags: ['search', 'algorithms', 'binary']
 languages: ['typescript', 'java', 'python']
+sort: 100
 ---
 # Binary search
 

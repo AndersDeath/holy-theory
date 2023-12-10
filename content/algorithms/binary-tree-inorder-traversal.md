@@ -2,6 +2,7 @@
 title: Binary tree in order traversal
 tags: ['traversal', 'algorithms', 'binary', 'tree']
 languages: ['java']
+sort: 900
 ---
 # Binary tree in order traversal
 

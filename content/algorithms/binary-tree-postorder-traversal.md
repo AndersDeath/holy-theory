@@ -2,6 +2,7 @@
 title: Binary tree postorder traversal
 tags: ['traversal', 'algorithms', 'binary', 'tree']
 languages: ['java']
+sort: 1000
 ---
 # Binary tree postorder traversal
 

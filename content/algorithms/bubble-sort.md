@@ -2,6 +2,7 @@
 title: Bubble sort
 tags: ['algorithms', 'bubble', 'sort']
 languages: ['typescript', 'java']
+sort: 200
 ---
 # Bubble sort
 

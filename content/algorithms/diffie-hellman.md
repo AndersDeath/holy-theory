@@ -2,6 +2,7 @@
 title: Diffie hellman algorithm
 tags: ['algorithms', 'security', 'encrypt', 'decrypt']
 languages: ['javascript']
+sort: 800
 ---
 # Diffie hellman algorithm
 
