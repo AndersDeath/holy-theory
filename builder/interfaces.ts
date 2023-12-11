@@ -5,4 +5,5 @@ export interface Entry {
   entryLink: string;
   content?: string;
   type?: string;
+  sort?: number | null;
 }

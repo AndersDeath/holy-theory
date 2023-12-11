@@ -10,6 +10,7 @@ All notable changes to this project will be documented in this file.
 * add pagebrackers for html  based algorithms handbook
 * add Count and Say training
 * add sorting parameter to algorithms section
+* adapt sorting of builder
 
 # [0.0.47] - 2023-12-04
 * add Minimum Index Sum of Two Lists training
