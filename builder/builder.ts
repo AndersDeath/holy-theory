@@ -167,6 +167,7 @@ async function generateStatic(
                 ? cleanContent(content)
                 : marked.parse(cleanContent(content)),
             type: metadata.title ? "content" : "collection",
+            sort: metadata.sort || null,
           });
         }
       }
@@ -204,15 +205,15 @@ async function generateStatic(
   });
 
   let allOutput = buildHeadline("Holy Theory project", 1, type) + "\n";
-  let allAlgorithms = buildHeadline("Holy Theory  - Algorithms", 1, type) + "\n";
+  let allAlgorithms =
+    buildHeadline("Holy Theory  - Algorithms", 1, type) + "\n";
   const headerRegex = /^#\s+(.+)/gm;
 
   let prevSection = "";
+  const algorithmsBucket = [];
   allContentWithSections.forEach((e: Entry) => {
-    if(e.type === "content" && e.section.toLowerCase() === 'algorithms') {
-      allAlgorithms += buildHeadline(e.title, 3, type) + "\n";
-      e.content ? (allAlgorithms += e.content.replace(headerRegex, "")) : "";
-      allAlgorithms += type === 'md' ? '\\newpage': '<p style="page-break-after: always;"> </p>';
+    if (e.type === "content" && e.section.toLowerCase() === "algorithms") {
+      algorithmsBucket.push(e);
     }
     if (e.type === "content") {
       if (prevSection !== e.section) {
@@ -222,6 +223,19 @@ async function generateStatic(
       allOutput += buildHeadline(e.title, 3, type) + "\n";
       e.content ? (allOutput += e.content.replace(headerRegex, "")) : "";
     }
+  });
+
+  algorithmsBucket.sort((a, b) => {
+    return a.sort - b.sort;
+  });
+
+  algorithmsBucket.forEach((e) => {
+    allAlgorithms += buildHeadline(e.title, 3, type) + "\n";
+    e.content ? (allAlgorithms += e.content.replace(headerRegex, "")) : "";
+    allAlgorithms +=
+      type === "md"
+        ? "\\newpage"
+        : '<p style="page-break-after: always;"> </p>';
   });
 
   allOutput = generateTableOfContents(allOutput, type) + allOutput;
