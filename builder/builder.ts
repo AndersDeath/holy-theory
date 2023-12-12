@@ -205,8 +205,7 @@ async function generateStatic(
   });
 
   let allOutput = buildHeadline("Holy Theory project", 1, type) + "\n";
-  let allAlgorithms =
-    buildHeadline("Holy Theory  - Algorithms", 1, type) + "\n";
+  let allAlgorithms = '';
   const headerRegex = /^#\s+(.+)/gm;
 
   let prevSection = "";
@@ -230,11 +229,11 @@ async function generateStatic(
   });
 
   algorithmsBucket.forEach((e) => {
-    allAlgorithms += buildHeadline(e.title, 3, type) + "\n";
+    allAlgorithms += buildHeadline(e.title.trim(), 1, type) + "\n";
     e.content ? (allAlgorithms += e.content.replace(headerRegex, "")) : "";
     allAlgorithms +=
       type === "md"
-        ? "\\newpage"
+        ? "\n \\newpage \n"
         : '<p style="page-break-after: always;"> </p>';
   });
 
