@@ -3,6 +3,7 @@
 All notable changes to this project will be documented in this file.
 # [0.0.49] - In progress
 * update builder
+* fix issue with headers in handbook
 
 # [0.0.48] - 2023-12-11
 * update Binary search article

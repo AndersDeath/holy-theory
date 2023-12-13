@@ -233,7 +233,7 @@ async function generateStatic(
     e.content ? (allAlgorithms += e.content.replace(headerRegex, "")) : "";
     allAlgorithms +=
       type === "md"
-        ? "\n \\newpage \n"
+        ? "\n\\newpage \n\n"
         : '<p style="page-break-after: always;"> </p>';
   });
 
