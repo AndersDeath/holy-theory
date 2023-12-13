@@ -90,7 +90,8 @@ res = binary_search(my_list, 3)
 
 print(my_list[res])
 ```
- \newpage 
+\newpage 
+
 # Bubble sort
 
 
@@ -125,7 +126,8 @@ console.log(bubbleSort([2,5,2,6,7,2,22,5,7,9,0,2,3]))
 ```
 
 
- \newpage 
+\newpage 
+
 # Insertion sort
 
 ## TypeScript
@@ -163,7 +165,8 @@ console.log(insertionSort([1, 4, 2, 8, 345, 123, 43, 32, 5643, 63, 123, 43, 2, 5
     }
 ```
 
- \newpage 
+\newpage 
+
 # Selection sort
 
 
@@ -224,7 +227,8 @@ print(selection_sort([5,4,6,2,1,123, 2, 3,1,23 ,1,1,]))
 ```
 
 
- \newpage 
+\newpage 
+
 # Quick sort
 
 ```java
@@ -315,7 +319,8 @@ class Solution {
 ```
 
 
- \newpage 
+\newpage 
+
 # Merge sort
 
 
@@ -373,7 +378,8 @@ class Solution {
 
 ```
 
- \newpage 
+\newpage 
+
 # Interpolation search
 
 
@@ -402,7 +408,8 @@ class Solution {
 }
 ```
 
- \newpage 
+\newpage 
+
 # Diffie hellman algorithm
 
 
@@ -453,7 +460,8 @@ DiffieHellman()
 ```
 
 
- \newpage 
+\newpage 
+
 # Binary tree in order traversal
 
 
@@ -481,7 +489,8 @@ class Solution {
 ```
 
 
- \newpage 
+\newpage 
+
 # Binary tree postorder traversal
 
 
@@ -509,7 +518,8 @@ class Solution {
 ```
 
 
- \newpage 
+\newpage 
+
 # Binary tree preorder traversal
 
 
@@ -535,7 +545,8 @@ class Solution {
 ```
 
 
- \newpage 
+\newpage 
+
 # Graph adjacency list
 
 
@@ -587,7 +598,8 @@ public class GraphList {
 ```
 
 
- \newpage 
+\newpage 
+
 # Graph adjacency matrix
 
 
@@ -636,4 +648,5 @@ public class Graph {
 ```
 
 
- \newpage 
+\newpage 
+
