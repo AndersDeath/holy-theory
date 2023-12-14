@@ -402,6 +402,35 @@ res = binary_search(my_list, <span class="hljs-number">3</span>)
         <span class="hljs-keyword">return</span> list;
     }
 }
+</code></pre><pre><code class="hljs language-typescript">
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">TreeNode</span> {
+  <span class="hljs-attr">data</span>: <span class="hljs-built_in">number</span>;
+  <span class="hljs-attr">left</span>: <span class="hljs-title class_">TreeNode</span> | <span class="hljs-literal">null</span>;
+  <span class="hljs-attr">right</span>: <span class="hljs-title class_">TreeNode</span> | <span class="hljs-literal">null</span>;
+
+  <span class="hljs-title function_">constructor</span>(<span class="hljs-params">data: <span class="hljs-built_in">number</span></span>) {
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">data</span> = data;
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">left</span> = <span class="hljs-literal">null</span>;
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">right</span> = <span class="hljs-literal">null</span>;
+  }
+}
+
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">getInOrderTraversal</span>(<span class="hljs-params">root: TreeNode | <span class="hljs-literal">null</span></span>): <span class="hljs-built_in">number</span>[] {
+  <span class="hljs-keyword">const</span> <span class="hljs-attr">list</span>: <span class="hljs-built_in">number</span>[] = [];
+  <span class="hljs-keyword">const</span> <span class="hljs-attr">stack</span>: <span class="hljs-title class_">TreeNode</span>[] = [];
+  <span class="hljs-keyword">let</span> <span class="hljs-attr">node</span>: <span class="hljs-title class_">TreeNode</span> | <span class="hljs-literal">null</span> = root;
+
+  <span class="hljs-keyword">while</span> (node !== <span class="hljs-literal">null</span> || stack.<span class="hljs-property">length</span> &gt; <span class="hljs-number">0</span>) {
+    <span class="hljs-keyword">while</span> (node !== <span class="hljs-literal">null</span>) {
+      stack.<span class="hljs-title function_">push</span>(node);
+      node = node.<span class="hljs-property">left</span>;
+    }
+    list.<span class="hljs-title function_">push</span>(stack[stack.<span class="hljs-property">length</span> - <span class="hljs-number">1</span>].<span class="hljs-property">data</span>);
+    node = stack.<span class="hljs-title function_">pop</span>()!.<span class="hljs-property">right</span>;
+  }
+
+  <span class="hljs-keyword">return</span> list;
+}
 </code></pre><p style="page-break-after: always;"> </p><h1>Binary tree postorder traversal</h1>
 <h1 id="binary-tree-postorder-traversal">Binary tree postorder traversal</h1>
 <pre><code class="hljs language-java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {

@@ -488,7 +488,38 @@ class Solution {
 }
 ```
 
+```typescript
 
+class TreeNode {
+  data: number;
+  left: TreeNode | null;
+  right: TreeNode | null;
+
+  constructor(data: number) {
+    this.data = data;
+    this.left = null;
+    this.right = null;
+  }
+}
+
+function getInOrderTraversal(root: TreeNode | null): number[] {
+  const list: number[] = [];
+  const stack: TreeNode[] = [];
+  let node: TreeNode | null = root;
+
+  while (node !== null || stack.length > 0) {
+    while (node !== null) {
+      stack.push(node);
+      node = node.left;
+    }
+    list.push(stack[stack.length - 1].data);
+    node = stack.pop()!.right;
+  }
+
+  return list;
+}
+
+```
 \newpage 
 
 # Binary tree postorder traversal

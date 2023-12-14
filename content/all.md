@@ -3,7 +3,6 @@
     - [Binary search](#binary-search)
   - [Steps:](#steps-)
   - [Time Complexity:](#time-complexity-)
-    - [Binary tree postorder traversal](#binary-tree-postorder-traversal)
     - [Binary tree preorder traversal](#binary-tree-preorder-traversal)
     - [Bubble sort](#bubble-sort)
     - [Diffie hellman algorithm](#diffie-hellman-algorithm)
@@ -356,7 +355,6 @@
     - [Binary search](#binary-search)
   - [Steps:](#steps-)
   - [Time Complexity:](#time-complexity-)
-    - [Binary tree postorder traversal](#binary-tree-postorder-traversal)
     - [Binary tree preorder traversal](#binary-tree-preorder-traversal)
     - [Bubble sort](#bubble-sort)
     - [Diffie hellman algorithm](#diffie-hellman-algorithm)
@@ -823,7 +821,38 @@ class Solution {
 }
 ```
 
-### Binary tree postorder traversal
+```typescript
+
+class TreeNode {
+  data: number;
+  left: TreeNode | null;
+  right: TreeNode | null;
+
+  constructor(data: number) {
+    this.data = data;
+    this.left = null;
+    this.right = null;
+  }
+}
+
+function getInOrderTraversal(root: TreeNode | null): number[] {
+  const list: number[] = [];
+  const stack: TreeNode[] = [];
+  let node: TreeNode | null = root;
+
+  while (node !== null || stack.length > 0) {
+    while (node !== null) {
+      stack.push(node);
+      node = node.left;
+    }
+    list.push(stack[stack.length - 1].data);
+    node = stack.pop()!.right;
+  }
+
+  return list;
+}
+
+```### Binary tree postorder traversal
 
 
 ```java
