@@ -549,6 +549,37 @@ class Solution {
 ```
 
 
+```typescript
+
+class Node {
+  data: number;
+  left: Node | null;
+  right: Node | null;
+
+  constructor(data: number) {
+    this.data = data;
+    this.left = null;
+    this.right = null;
+  }
+}
+
+function utility(root: Node | null, traversal: number[]): void {
+  if (root === null) {
+    return;
+  }
+
+  utility(root.left, traversal);
+  utility(root.right, traversal);
+  traversal.push(root.data);
+}
+
+function getPostorderTraversal(root: Node | null): number[] {
+  const traversal: number[] = [];
+  utility(root, traversal);
+  return traversal;
+}
+
+```
 \newpage 
 
 # Binary tree preorder traversal
