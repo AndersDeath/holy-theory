@@ -3,7 +3,6 @@
     - [Binary search](#binary-search)
   - [Steps:](#steps-)
   - [Time Complexity:](#time-complexity-)
-    - [Binary tree preorder traversal](#binary-tree-preorder-traversal)
     - [Bubble sort](#bubble-sort)
     - [Diffie hellman algorithm](#diffie-hellman-algorithm)
     - [Graph adjacency list](#graph-adjacency-list)
@@ -355,7 +354,6 @@
     - [Binary search](#binary-search)
   - [Steps:](#steps-)
   - [Time Complexity:](#time-complexity-)
-    - [Binary tree preorder traversal](#binary-tree-preorder-traversal)
     - [Bubble sort](#bubble-sort)
     - [Diffie hellman algorithm](#diffie-hellman-algorithm)
     - [Graph adjacency list](#graph-adjacency-list)
@@ -878,7 +876,38 @@ class Solution {
 
 ```
 
-### Binary tree preorder traversal
+
+```typescript
+
+class Node {
+  data: number;
+  left: Node | null;
+  right: Node | null;
+
+  constructor(data: number) {
+    this.data = data;
+    this.left = null;
+    this.right = null;
+  }
+}
+
+function utility(root: Node | null, traversal: number[]): void {
+  if (root === null) {
+    return;
+  }
+
+  utility(root.left, traversal);
+  utility(root.right, traversal);
+  traversal.push(root.data);
+}
+
+function getPostorderTraversal(root: Node | null): number[] {
+  const traversal: number[] = [];
+  utility(root, traversal);
+  return traversal;
+}
+
+```### Binary tree preorder traversal
 
 
 ```java
