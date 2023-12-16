@@ -226,6 +226,33 @@ res = binary_search(my_list, <span class="hljs-number">3</span>)
         <span class="hljs-keyword">return</span> traversal;
     }
 }
+</code></pre><pre><code class="hljs language-typescript"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Node</span> {
+  <span class="hljs-attr">data</span>: <span class="hljs-built_in">number</span>;
+  <span class="hljs-attr">left</span>: <span class="hljs-title class_">Node</span> | <span class="hljs-literal">null</span>;
+  <span class="hljs-attr">right</span>: <span class="hljs-title class_">Node</span> | <span class="hljs-literal">null</span>;
+
+  <span class="hljs-title function_">constructor</span>(<span class="hljs-params">data: <span class="hljs-built_in">number</span></span>) {
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">data</span> = data;
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">left</span> = <span class="hljs-literal">null</span>;
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">right</span> = <span class="hljs-literal">null</span>;
+  }
+}
+
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">utility</span>(<span class="hljs-params">root: Node | <span class="hljs-literal">null</span>, traversal: <span class="hljs-built_in">number</span>[]</span>): <span class="hljs-built_in">void</span> {
+  <span class="hljs-keyword">if</span> (root === <span class="hljs-literal">null</span>) {
+    <span class="hljs-keyword">return</span>;
+  }
+
+  traversal.<span class="hljs-title function_">push</span>(root.<span class="hljs-property">data</span>);
+  <span class="hljs-title function_">utility</span>(root.<span class="hljs-property">left</span>, traversal);
+  <span class="hljs-title function_">utility</span>(root.<span class="hljs-property">right</span>, traversal);
+}
+
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">getPreorderTraversal</span>(<span class="hljs-params">root: Node | <span class="hljs-literal">null</span></span>): <span class="hljs-built_in">number</span>[] {
+  <span class="hljs-keyword">const</span> <span class="hljs-attr">traversal</span>: <span class="hljs-built_in">number</span>[] = [];
+  <span class="hljs-title function_">utility</span>(root, traversal);
+  <span class="hljs-keyword">return</span> traversal;
+}
 </code></pre><h3>Bubble sort</h3>
 <h1 id="bubble-sort">Bubble sort</h1>
 <pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">bubbleSort</span>(<span class="hljs-params">array: <span class="hljs-built_in">number</span>[] | <span class="hljs-built_in">string</span>[]</span>) {
