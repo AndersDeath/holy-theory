@@ -3,7 +3,6 @@
     - [Binary search](#binary-search)
   - [Steps:](#steps-)
   - [Time Complexity:](#time-complexity-)
-    - [Bubble sort](#bubble-sort)
     - [Diffie hellman algorithm](#diffie-hellman-algorithm)
     - [Graph adjacency list](#graph-adjacency-list)
     - [Graph adjacency matrix](#graph-adjacency-matrix)
@@ -580,7 +579,35 @@ class Solution {
 }
 ```
 
-### Bubble sort
+```typescript
+class Node {
+  data: number;
+  left: Node | null;
+  right: Node | null;
+
+  constructor(data: number) {
+    this.data = data;
+    this.left = null;
+    this.right = null;
+  }
+}
+
+function utility(root: Node | null, traversal: number[]): void {
+  if (root === null) {
+    return;
+  }
+
+  traversal.push(root.data);
+  utility(root.left, traversal);
+  utility(root.right, traversal);
+}
+
+function getPreorderTraversal(root: Node | null): number[] {
+  const traversal: number[] = [];
+  utility(root, traversal);
+  return traversal;
+}
+```### Bubble sort
 
 
 ```typescript
