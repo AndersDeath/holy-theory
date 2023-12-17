@@ -6,7 +6,8 @@ All notable changes to this project will be documented in this file.
 * fix issue with headers in handbook
 * add typescript solution for Binary tree in order traversal
 * add typescript solution for Binary tree postorder traversal
-* add typescript solution to Binary tree preorder traversal
+* add typescript solution for Binary tree preorder traversal
+* add typescript solution for Interpolation search
 
 # [0.0.48] - 2023-12-11
 * update Binary search article
