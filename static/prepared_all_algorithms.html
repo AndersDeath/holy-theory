@@ -335,6 +335,25 @@ res = binary_search(my_list, <span class="hljs-number">3</span>)
     }
 
 }
+</code></pre><pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">interpolationSearch</span>(<span class="hljs-params">array: <span class="hljs-built_in">number</span>[], value: <span class="hljs-built_in">number</span></span>): <span class="hljs-built_in">number</span> {
+  <span class="hljs-keyword">let</span> low = <span class="hljs-number">0</span>;
+  <span class="hljs-keyword">let</span> high = array.<span class="hljs-property">length</span> - <span class="hljs-number">1</span>;
+
+  <span class="hljs-keyword">while</span> (value &gt;= array[low] &amp;&amp; value &lt;= array[high] &amp;&amp; low &lt;= high) {
+    <span class="hljs-keyword">const</span> probe = low + ((high - low) * (value - array[low])) / (array[high] - array[low]);
+    <span class="hljs-keyword">const</span> roundedProbe = <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">floor</span>(probe);
+
+    <span class="hljs-keyword">if</span> (array[roundedProbe] === value) {
+      <span class="hljs-keyword">return</span> roundedProbe;
+    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (array[roundedProbe] &lt; value) {
+      low = roundedProbe + <span class="hljs-number">1</span>;
+    } <span class="hljs-keyword">else</span> {
+      high = roundedProbe - <span class="hljs-number">1</span>;
+    }
+  }
+
+  <span class="hljs-keyword">return</span> -<span class="hljs-number">1</span>;
+}
 </code></pre><p style="page-break-after: always;"> </p><h1>Diffie hellman algorithm</h1>
 <h1 id="diffie-hellman-algorithm">Diffie hellman algorithm</h1>
 <pre><code class="hljs language-javascript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">power</span>(<span class="hljs-params">a: any, b: any, p: any</span>) {

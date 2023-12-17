@@ -408,6 +408,27 @@ class Solution {
 }
 ```
 
+```typescript
+function interpolationSearch(array: number[], value: number): number {
+  let low = 0;
+  let high = array.length - 1;
+
+  while (value >= array[low] && value <= array[high] && low <= high) {
+    const probe = low + ((high - low) * (value - array[low])) / (array[high] - array[low]);
+    const roundedProbe = Math.floor(probe);
+
+    if (array[roundedProbe] === value) {
+      return roundedProbe;
+    } else if (array[roundedProbe] < value) {
+      low = roundedProbe + 1;
+    } else {
+      high = roundedProbe - 1;
+    }
+  }
+
+  return -1;
+}
+```
 \newpage 
 
 # Diffie hellman algorithm
