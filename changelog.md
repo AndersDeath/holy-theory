@@ -9,6 +9,7 @@ All notable changes to this project will be documented in this file.
 * add typescript solution for Binary tree preorder traversal
 * add typescript solution for Interpolation search
 * add typescript solution for Quick sort
+* add typescript solution for Merge sort
 
 # [0.0.48] - 2023-12-11
 * update Binary search article
