@@ -1,7 +1,11 @@
 # Changelog
 
 All notable changes to this project will be documented in this file.
-# [0.0.49] - In progress
+
+# [0.0.50] - In progress
+* 
+
+# [0.0.49] - 2023-12-18
 * update builder
 * fix issue with headers in handbook
 * add typescript solution for Binary tree in order traversal
