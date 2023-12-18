@@ -1,13 +1,19 @@
 # Changelog
 
 All notable changes to this project will be documented in this file.
-# [0.0.49] - In progress
+
+# [0.0.50] - In progress
+* 
+
+# [0.0.49] - 2023-12-18
 * update builder
 * fix issue with headers in handbook
 * add typescript solution for Binary tree in order traversal
 * add typescript solution for Binary tree postorder traversal
 * add typescript solution for Binary tree preorder traversal
 * add typescript solution for Interpolation search
+* add typescript solution for Quick sort
+* add typescript solution for Merge sort
 
 # [0.0.48] - 2023-12-11
 * update Binary search article
