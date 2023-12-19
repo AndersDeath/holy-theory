@@ -10,8 +10,12 @@
   - [TypeScript](#typescript)
   - [Java](#java)
     - [Interpolation search](#interpolation-search)
+    - [Linear search](#linear-search)
+    - [Merge sort](#merge-sort)
+  - [Java](#java)
     - [Quick sort](#quick-sort)
     - [Selection sort](#selection-sort)
+    - [Ternary search](#ternary-search)
   - [javascript](#javascript)
     - [Array length property](#array-length-property)
     - [Different ways of declaring functions in JS](#different-ways-of-declaring-functions-in-js)
@@ -868,28 +872,67 @@ function interpolationSearch(array: number[], value: number): number {
 
   return -1;
 }
-```### Merge sort
+```### Interval search
+
+
+```typescript
+
+type Interval = [number, number];
+
+function intervalSearch(intervals: Interval[], queryInterval: Interval): number[] {
+  const result: number[] = [];
+
+  for (let i = 0; i < intervals.length; i++) {
+    const [start, end] = intervals[i];
+    const [queryStart, queryEnd] = queryInterval;
+
+    if (start <= queryEnd && end >= queryStart) {
+      result.push(i); 
+    }
+  }
+
+  return result;
+}
+```
+### Linear search
+
+
+```typescript
+
+function linearSearch(arr: number[], target: number): number {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === target) {
+      return i; 
+    }
+  }
+
+  return -1;
+}
+```
+### Merge sort
+
 
 
 ## Java
+
 ```java
 class Solution {
-	
+
 	void merge(int[] arr, int low, int mid, int high) {
 		int subArr1Size = mid - low + 1;
 		int subArr2Size = high - mid;
-		
+
 		int [] subArr1 = new int[subArr1Size];
 		int [] subArr2 = new int[subArr2Size];
-		
+
 		for (int i = 0; i < subArr1Size; i++) {
            subArr1[i] = arr[low + i];
       	 }
       	 for (int i = 0; i < subArr2Size; i++) {
-           subArr2[i] = arr[mid + 1 + i];	
+           subArr2[i] = arr[mid + 1 + i];
 		}
 		int i = 0, j = 0, k = low;
-		
+
 		while(i < subArr1Size && j < subArr2Size) {
 			if(subArr1[i] <= subArr2[j]) {
 				arr[k] = subArr1[i];
@@ -907,16 +950,16 @@ class Solution {
            arr[k++] = subArr2[j++];
        }
 	}
-	
+
 	void mergesort(int[] arr, int low, int high){
 		if(high > low) {
 			int mid = (high + low) / 2;
 			mergesort(arr, low, mid);
 			mergesort(arr, mid + 1, high);
 			merge(arr, low, mid, high);
-		}	
+		}
 	}
-	
+
 	void mergeSort (int[] arr) {
 		int n = arr.length;
 		mergesort(arr, 0, n - 1);
@@ -924,11 +967,45 @@ class Solution {
 }
 
 ```
+
+```typescript
+function mergeSort(arr: number[]): number[] {
+  if (arr.length <= 1) {
+    return arr;
+  }
+
+  const middle = Math.floor(arr.length / 2);
+  const left = arr.slice(0, middle);
+  const right = arr.slice(middle);
+
+  return merge(mergeSort(left), mergeSort(right));
+}
+
+function merge(left: number[], right: number[]): number[] {
+  let result: number[] = [];
+  let leftIndex = 0;
+  let rightIndex = 0;
+
+  while (leftIndex < left.length && rightIndex < right.length) {
+    if (left[leftIndex] < right[rightIndex]) {
+      result.push(left[leftIndex]);
+      leftIndex++;
+    } else {
+      result.push(right[rightIndex]);
+      rightIndex++;
+    }
+  }
+
+  return result.concat(left.slice(leftIndex)).concat(right.slice(rightIndex));
+}
+```
 ### Quick sort
+
+
 
 ```java
 class Solution {
-	
+
 	int makePartition(int [] arr, int low, int high) {
 		int pivot = arr[high];
 		int currentIndex = low - 1;
@@ -939,14 +1016,14 @@ class Solution {
 				arr[i] = arr[currentIndex];
 				arr[currentIndex] = temp;
 			}
-			
+
 		}
 		int temp = arr[high];
 		arr[high] = arr[currentIndex + 1];
 		arr[currentIndex + 1] = temp;
 		return currentIndex + 1;
 	}
-	
+
 	void quicksort(int[] arr, int low, int high) {
 		if(low < high) {
 			int pivot = makePartition(arr, low, high);
@@ -954,7 +1031,7 @@ class Solution {
 			quicksort(arr, pivot + 1, high);
 		}
 	}
-	
+
 	void quickSort (int[] arr) {
 		int n = arr.length;
 		quicksort(arr, 0, n - 1);
@@ -976,7 +1053,6 @@ def quicksort(arr):
 print(quicksort([10,2,3,1,5,4]))
 ```
 
-
 ```java
 class Solution {
     static void swap(int[] array, int i, int j) {
@@ -987,18 +1063,18 @@ class Solution {
 
 	private static void quickSort(int[] array, int start, int end) {
 		if(end <= start) return; // base case
-		
+
 		int pivot = partition(array, start, end);
-		
+
 		quickSort(array, start, pivot -1);
 		quickSort(array, pivot + 1, end);
 	}
 
 	private static int partition(int[] array, int start, int end) {
 		int pivot = array[end];
-		
+
 		int i = start - 1;
-		
+
 		for(int j = start; j <= end -1; j++) {
 			if(array[j] < pivot) {
 				i++;
@@ -1007,12 +1083,26 @@ class Solution {
 		}
 		i++;
 		swap(array, i, end);
-		
+
 		return i;
 	}
 }
 ```
 
+```typescript
+function quicksort(arr: number[]): number[] {
+  if (arr.length < 2) {
+    return arr;
+  } else {
+    const pivot = arr[Math.floor(arr.length / 2)];
+    const less = arr.slice(1).filter((i) => i <= pivot);
+    const greater = arr.slice(1).filter((i) => i > pivot);
+    return [...quicksort(less), pivot, ...quicksort(greater)];
+  }
+}
+```
+
+- [Go back](../readme.md)
 ### Selection sort
 
 
@@ -1072,6 +1162,29 @@ def selection_sort(arr):
 print(selection_sort([5,4,6,2,1,123, 2, 3,1,23 ,1,1,]))
 ```
 
+### Ternary search
+
+
+```typescript
+
+function ternarySearch(func: (x: number) => number, left: number, right: number, epsilon: number): number {
+  while (right - left > epsilon) {
+    const mid1 = left + (right - left) / 3;
+    const mid2 = right - (right - left) / 3;
+
+    const value1 = func(mid1);
+    const value2 = func(mid2);
+
+    if (value1 < value2) {
+      left = mid1;
+    } else {
+      right = mid2;
+    }
+  }
+
+  return (left + right) / 2;
+}
+```
 ## javascript
 ### Array length property
 

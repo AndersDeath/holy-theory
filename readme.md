@@ -13,9 +13,12 @@
 - [algorithms all](./content/algorithms/index.md)
 - [Insertion sort](./content/algorithms/insertion-sort.md)
 - [Interpolation search](./content/algorithms/interpolation-search.md)
+- [Interval search](./content/algorithms/interval-search.md)
+- [Linear search](./content/algorithms/linear-search.md)
 - [Merge sort](./content/algorithms/merge-sort.md)
 - [Quick sort](./content/algorithms/quick-sort.md)
 - [Selection sort](./content/algorithms/selection-sort.md)
+- [Ternary search](./content/algorithms/ternary-search.md)
 
 ## javascript
 
