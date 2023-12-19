@@ -78,6 +78,57 @@ my_list = [<span class="hljs-number">1</span>, <span class="hljs-number">3</span
 res = binary_search(my_list, <span class="hljs-number">3</span>)
 
 <span class="hljs-built_in">print</span>(my_list[res])
+</code></pre><p style="page-break-after: always;"> </p><h1>Interval search</h1>
+<h1 id="interval-search">Interval search</h1>
+<pre><code class="hljs language-typescript">
+<span class="hljs-keyword">type</span> <span class="hljs-title class_">Interval</span> = [<span class="hljs-built_in">number</span>, <span class="hljs-built_in">number</span>];
+
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">intervalSearch</span>(<span class="hljs-params">intervals: Interval[], queryInterval: Interval</span>): <span class="hljs-built_in">number</span>[] {
+  <span class="hljs-keyword">const</span> <span class="hljs-attr">result</span>: <span class="hljs-built_in">number</span>[] = [];
+
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; intervals.<span class="hljs-property">length</span>; i++) {
+    <span class="hljs-keyword">const</span> [start, end] = intervals[i];
+    <span class="hljs-keyword">const</span> [queryStart, queryEnd] = queryInterval;
+
+    <span class="hljs-keyword">if</span> (start &lt;= queryEnd &amp;&amp; end &gt;= queryStart) {
+      result.<span class="hljs-title function_">push</span>(i); 
+    }
+  }
+
+  <span class="hljs-keyword">return</span> result;
+}
+</code></pre><p style="page-break-after: always;"> </p><h1>Linear search</h1>
+<h1 id="linear-search">Linear search</h1>
+<pre><code class="hljs language-typescript">
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">linearSearch</span>(<span class="hljs-params">arr: <span class="hljs-built_in">number</span>[], target: <span class="hljs-built_in">number</span></span>): <span class="hljs-built_in">number</span> {
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; arr.<span class="hljs-property">length</span>; i++) {
+    <span class="hljs-keyword">if</span> (arr[i] === target) {
+      <span class="hljs-keyword">return</span> i; 
+    }
+  }
+
+  <span class="hljs-keyword">return</span> -<span class="hljs-number">1</span>;
+}
+</code></pre><p style="page-break-after: always;"> </p><h1>Ternary search</h1>
+<h1 id="ternary-search">Ternary search</h1>
+<pre><code class="hljs language-typescript">
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">ternarySearch</span>(<span class="hljs-params">func: (x: <span class="hljs-built_in">number</span>) =&gt; <span class="hljs-built_in">number</span>, left: <span class="hljs-built_in">number</span>, right: <span class="hljs-built_in">number</span>, epsilon: <span class="hljs-built_in">number</span></span>): <span class="hljs-built_in">number</span> {
+  <span class="hljs-keyword">while</span> (right - left &gt; epsilon) {
+    <span class="hljs-keyword">const</span> mid1 = left + (right - left) / <span class="hljs-number">3</span>;
+    <span class="hljs-keyword">const</span> mid2 = right - (right - left) / <span class="hljs-number">3</span>;
+
+    <span class="hljs-keyword">const</span> value1 = <span class="hljs-title function_">func</span>(mid1);
+    <span class="hljs-keyword">const</span> value2 = <span class="hljs-title function_">func</span>(mid2);
+
+    <span class="hljs-keyword">if</span> (value1 &lt; value2) {
+      left = mid1;
+    } <span class="hljs-keyword">else</span> {
+      right = mid2;
+    }
+  }
+
+  <span class="hljs-keyword">return</span> (left + right) / <span class="hljs-number">2</span>;
+}
 </code></pre><p style="page-break-after: always;"> </p><h1>Bubble sort</h1>
 <h1 id="bubble-sort">Bubble sort</h1>
 <pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">bubbleSort</span>(<span class="hljs-params">array: <span class="hljs-built_in">number</span>[] | <span class="hljs-built_in">string</span>[]</span>) {
@@ -184,7 +235,7 @@ res = binary_search(my_list, <span class="hljs-number">3</span>)
 </code></pre><p style="page-break-after: always;"> </p><h1>Quick sort</h1>
 <h1 id="quicksort">Quicksort</h1>
 <pre><code class="hljs language-java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {
-    
+
     <span class="hljs-type">int</span> <span class="hljs-title function_">makePartition</span><span class="hljs-params">(<span class="hljs-type">int</span> [] arr, <span class="hljs-type">int</span> low, <span class="hljs-type">int</span> high)</span> {
         <span class="hljs-type">int</span> <span class="hljs-variable">pivot</span> <span class="hljs-operator">=</span> arr[high];
         <span class="hljs-type">int</span> <span class="hljs-variable">currentIndex</span> <span class="hljs-operator">=</span> low - <span class="hljs-number">1</span>;
@@ -195,14 +246,14 @@ res = binary_search(my_list, <span class="hljs-number">3</span>)
                 arr[i] = arr[currentIndex];
                 arr[currentIndex] = temp;
             }
-            
+
         }
         <span class="hljs-type">int</span> <span class="hljs-variable">temp</span> <span class="hljs-operator">=</span> arr[high];
         arr[high] = arr[currentIndex + <span class="hljs-number">1</span>];
         arr[currentIndex + <span class="hljs-number">1</span>] = temp;
         <span class="hljs-keyword">return</span> currentIndex + <span class="hljs-number">1</span>;
     }
-    
+
     <span class="hljs-keyword">void</span> <span class="hljs-title function_">quicksort</span><span class="hljs-params">(<span class="hljs-type">int</span>[] arr, <span class="hljs-type">int</span> low, <span class="hljs-type">int</span> high)</span> {
         <span class="hljs-keyword">if</span>(low &lt; high) {
             <span class="hljs-type">int</span> <span class="hljs-variable">pivot</span> <span class="hljs-operator">=</span> makePartition(arr, low, high);
@@ -210,7 +261,7 @@ res = binary_search(my_list, <span class="hljs-number">3</span>)
             quicksort(arr, pivot + <span class="hljs-number">1</span>, high);
         }
     }
-    
+
     <span class="hljs-keyword">void</span> <span class="hljs-title function_">quickSort</span> <span class="hljs-params">(<span class="hljs-type">int</span>[] arr)</span> {
         <span class="hljs-type">int</span> <span class="hljs-variable">n</span> <span class="hljs-operator">=</span> arr.length;
         quicksort(arr, <span class="hljs-number">0</span>, n - <span class="hljs-number">1</span>);
@@ -235,18 +286,18 @@ res = binary_search(my_list, <span class="hljs-number">3</span>)
 
     <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">quickSort</span><span class="hljs-params">(<span class="hljs-type">int</span>[] array, <span class="hljs-type">int</span> start, <span class="hljs-type">int</span> end)</span> {
         <span class="hljs-keyword">if</span>(end &lt;= start) <span class="hljs-keyword">return</span>; <span class="hljs-comment">// base case</span>
-        
+
         <span class="hljs-type">int</span> <span class="hljs-variable">pivot</span> <span class="hljs-operator">=</span> partition(array, start, end);
-        
+
         quickSort(array, start, pivot -<span class="hljs-number">1</span>);
         quickSort(array, pivot + <span class="hljs-number">1</span>, end);
     }
 
     <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-type">int</span> <span class="hljs-title function_">partition</span><span class="hljs-params">(<span class="hljs-type">int</span>[] array, <span class="hljs-type">int</span> start, <span class="hljs-type">int</span> end)</span> {
         <span class="hljs-type">int</span> <span class="hljs-variable">pivot</span> <span class="hljs-operator">=</span> array[end];
-        
+
         <span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> start - <span class="hljs-number">1</span>;
-        
+
         <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> <span class="hljs-variable">j</span> <span class="hljs-operator">=</span> start; j &lt;= end -<span class="hljs-number">1</span>; j++) {
             <span class="hljs-keyword">if</span>(array[j] &lt; pivot) {
                 i++;
@@ -255,30 +306,43 @@ res = binary_search(my_list, <span class="hljs-number">3</span>)
         }
         i++;
         swap(array, i, end);
-        
+
         <span class="hljs-keyword">return</span> i;
     }
 }
-</code></pre><p style="page-break-after: always;"> </p><h1>Merge sort</h1>
+</code></pre><pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">quicksort</span>(<span class="hljs-params">arr: <span class="hljs-built_in">number</span>[]</span>): <span class="hljs-built_in">number</span>[] {
+  <span class="hljs-keyword">if</span> (arr.<span class="hljs-property">length</span> &lt; <span class="hljs-number">2</span>) {
+    <span class="hljs-keyword">return</span> arr;
+  } <span class="hljs-keyword">else</span> {
+    <span class="hljs-keyword">const</span> pivot = arr[<span class="hljs-title class_">Math</span>.<span class="hljs-title function_">floor</span>(arr.<span class="hljs-property">length</span> / <span class="hljs-number">2</span>)];
+    <span class="hljs-keyword">const</span> less = arr.<span class="hljs-title function_">slice</span>(<span class="hljs-number">1</span>).<span class="hljs-title function_">filter</span>(<span class="hljs-function">(<span class="hljs-params">i</span>) =&gt;</span> i &lt;= pivot);
+    <span class="hljs-keyword">const</span> greater = arr.<span class="hljs-title function_">slice</span>(<span class="hljs-number">1</span>).<span class="hljs-title function_">filter</span>(<span class="hljs-function">(<span class="hljs-params">i</span>) =&gt;</span> i &gt; pivot);
+    <span class="hljs-keyword">return</span> [...<span class="hljs-title function_">quicksort</span>(less), pivot, ...<span class="hljs-title function_">quicksort</span>(greater)];
+  }
+}
+</code></pre><ul>
+<li><a href="../readme.md">Go back</a></li>
+</ul>
+<p style="page-break-after: always;"> </p><h1>Merge sort</h1>
 <h1 id="merge-sort">Merge sort</h1>
 <h2 id="java">Java</h2>
 <pre><code class="hljs language-java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {
-    
+
     <span class="hljs-keyword">void</span> <span class="hljs-title function_">merge</span><span class="hljs-params">(<span class="hljs-type">int</span>[] arr, <span class="hljs-type">int</span> low, <span class="hljs-type">int</span> mid, <span class="hljs-type">int</span> high)</span> {
         <span class="hljs-type">int</span> <span class="hljs-variable">subArr1Size</span> <span class="hljs-operator">=</span> mid - low + <span class="hljs-number">1</span>;
         <span class="hljs-type">int</span> <span class="hljs-variable">subArr2Size</span> <span class="hljs-operator">=</span> high - mid;
-        
+
         <span class="hljs-type">int</span> [] subArr1 = <span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[subArr1Size];
         <span class="hljs-type">int</span> [] subArr2 = <span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[subArr2Size];
-        
+
         <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt; subArr1Size; i++) {
            subArr1[i] = arr[low + i];
            }
            <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt; subArr2Size; i++) {
-           subArr2[i] = arr[mid + <span class="hljs-number">1</span> + i];	
+           subArr2[i] = arr[mid + <span class="hljs-number">1</span> + i];
         }
         <span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>, j = <span class="hljs-number">0</span>, k = low;
-        
+
         <span class="hljs-keyword">while</span>(i &lt; subArr1Size &amp;&amp; j &lt; subArr2Size) {
             <span class="hljs-keyword">if</span>(subArr1[i] &lt;= subArr2[j]) {
                 arr[k] = subArr1[i];
@@ -296,20 +360,49 @@ res = binary_search(my_list, <span class="hljs-number">3</span>)
            arr[k++] = subArr2[j++];
        }
     }
-    
+
     <span class="hljs-keyword">void</span> <span class="hljs-title function_">mergesort</span><span class="hljs-params">(<span class="hljs-type">int</span>[] arr, <span class="hljs-type">int</span> low, <span class="hljs-type">int</span> high)</span>{
         <span class="hljs-keyword">if</span>(high &gt; low) {
             <span class="hljs-type">int</span> <span class="hljs-variable">mid</span> <span class="hljs-operator">=</span> (high + low) / <span class="hljs-number">2</span>;
             mergesort(arr, low, mid);
             mergesort(arr, mid + <span class="hljs-number">1</span>, high);
             merge(arr, low, mid, high);
-        }	
+        }
     }
-    
+
     <span class="hljs-keyword">void</span> <span class="hljs-title function_">mergeSort</span> <span class="hljs-params">(<span class="hljs-type">int</span>[] arr)</span> {
         <span class="hljs-type">int</span> <span class="hljs-variable">n</span> <span class="hljs-operator">=</span> arr.length;
         mergesort(arr, <span class="hljs-number">0</span>, n - <span class="hljs-number">1</span>);
     }
+}
+</code></pre><pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">mergeSort</span>(<span class="hljs-params">arr: <span class="hljs-built_in">number</span>[]</span>): <span class="hljs-built_in">number</span>[] {
+  <span class="hljs-keyword">if</span> (arr.<span class="hljs-property">length</span> &lt;= <span class="hljs-number">1</span>) {
+    <span class="hljs-keyword">return</span> arr;
+  }
+
+  <span class="hljs-keyword">const</span> middle = <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">floor</span>(arr.<span class="hljs-property">length</span> / <span class="hljs-number">2</span>);
+  <span class="hljs-keyword">const</span> left = arr.<span class="hljs-title function_">slice</span>(<span class="hljs-number">0</span>, middle);
+  <span class="hljs-keyword">const</span> right = arr.<span class="hljs-title function_">slice</span>(middle);
+
+  <span class="hljs-keyword">return</span> <span class="hljs-title function_">merge</span>(<span class="hljs-title function_">mergeSort</span>(left), <span class="hljs-title function_">mergeSort</span>(right));
+}
+
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">merge</span>(<span class="hljs-params">left: <span class="hljs-built_in">number</span>[], right: <span class="hljs-built_in">number</span>[]</span>): <span class="hljs-built_in">number</span>[] {
+  <span class="hljs-keyword">let</span> <span class="hljs-attr">result</span>: <span class="hljs-built_in">number</span>[] = [];
+  <span class="hljs-keyword">let</span> leftIndex = <span class="hljs-number">0</span>;
+  <span class="hljs-keyword">let</span> rightIndex = <span class="hljs-number">0</span>;
+
+  <span class="hljs-keyword">while</span> (leftIndex &lt; left.<span class="hljs-property">length</span> &amp;&amp; rightIndex &lt; right.<span class="hljs-property">length</span>) {
+    <span class="hljs-keyword">if</span> (left[leftIndex] &lt; right[rightIndex]) {
+      result.<span class="hljs-title function_">push</span>(left[leftIndex]);
+      leftIndex++;
+    } <span class="hljs-keyword">else</span> {
+      result.<span class="hljs-title function_">push</span>(right[rightIndex]);
+      rightIndex++;
+    }
+  }
+
+  <span class="hljs-keyword">return</span> result.<span class="hljs-title function_">concat</span>(left.<span class="hljs-title function_">slice</span>(leftIndex)).<span class="hljs-title function_">concat</span>(right.<span class="hljs-title function_">slice</span>(rightIndex));
 }
 </code></pre><p style="page-break-after: always;"> </p><h1>Interpolation search</h1>
 <h1 id="interpolation-search">Interpolation search</h1>
