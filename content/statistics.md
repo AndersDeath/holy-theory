@@ -1,7 +1,7 @@
 # Statistics
 ## Languages
-- typescript: 176
-- java: 30
+- typescript: 179
+- java: 32
 - python: 6
 - javascript: 24
 - nodejs: 1
