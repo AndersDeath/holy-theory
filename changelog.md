@@ -10,6 +10,7 @@ All notable changes to this project will be documented in this file.
 * add Depth-first search in typescript
 * add Dijkstra's algorithm in typescript
 * add Floyd-Warshall algorithm in typescript
+* add Ford Fulkerson algorithm in typescript
 
 # [0.0.49] - 2023-12-18
 * update builder
