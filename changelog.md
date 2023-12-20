@@ -7,6 +7,7 @@ All notable changes to this project will be documented in this file.
 * add Interval search in typescript
 * add Ternary search in typescript
 * add Breadth-first search solution for typescript
+* add Depth-first search in typescript
 
 # [0.0.49] - 2023-12-18
 * update builder
