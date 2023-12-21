@@ -12,7 +12,7 @@
 - [Diffie hellman algorithm](./content/algorithms/diffie-hellman.md)
 - [Dijkstra's algorithm](./content/algorithms/dijkstras-algorithm.md)
 - [Floyd-Warshall algorithm](./content/algorithms/floyd-warshall-algorithm.md)
-- [Ford Fulkerson algorithm](./content/algorithms/ford fulkerson-algorithm.md)
+- [Ford Fulkerson algorithm](./content/algorithms/ford-fulkerson-algorithm.md)
 - [Graph adjacency list](./content/algorithms/graph-adjacency-list.md)
 - [Graph adjacency matrix](./content/algorithms/graph-adjacency-matrix.md)
 - [algorithms all](./content/algorithms/index.md)
