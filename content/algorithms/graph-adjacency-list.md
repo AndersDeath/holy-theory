@@ -3,6 +3,7 @@ title: Graph adjacency list
 tags: ['adjacency', 'algorithms', 'graph']
 languages: ['java']
 sort: 1200
+ignore: true
 ---
 # Graph adjacency list
 

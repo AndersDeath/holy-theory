@@ -168,6 +168,7 @@ async function generateStatic(
                 : marked.parse(cleanContent(content)),
             type: metadata.title ? "content" : "collection",
             sort: metadata.sort || null,
+            ignore:  metadata.ignore || false,
           });
         }
       }
@@ -211,7 +212,7 @@ async function generateStatic(
   let prevSection = "";
   const algorithmsBucket = [];
   allContentWithSections.forEach((e: Entry) => {
-    if (e.type === "content" && e.section.toLowerCase() === "algorithms") {
+    if (e.type === "content" && e.section.toLowerCase() === "algorithms" && !e.ignore) {
       algorithmsBucket.push(e);
     }
     if (e.type === "content") {

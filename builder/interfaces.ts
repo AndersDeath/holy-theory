@@ -6,4 +6,5 @@ export interface Entry {
   content?: string;
   type?: string;
   sort?: number | null;
+  ignore?: boolean;
 }

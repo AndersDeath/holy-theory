@@ -8,7 +8,7 @@
 - [Diffie hellman algorithm](./diffie-hellman.md)
 - [Dijkstra's algorithm](./dijkstras-algorithm.md)
 - [Floyd-Warshall algorithm](./floyd-warshall-algorithm.md)
-- [Ford Fulkerson algorithm](./ford fulkerson-algorithm.md)
+- [Ford Fulkerson algorithm](./ford-fulkerson-algorithm.md)
 - [Graph adjacency list](./graph-adjacency-list.md)
 - [Graph adjacency matrix](./graph-adjacency-matrix.md)
 - [algorithms all](./index.md)
