@@ -1,166 +1,3 @@
-# Binary search
-
-
-![Binary search](images/binary-search.png)
-
-## Steps:
-
-* Step 1 - Read the search element from the user.
-* Step 2 - Find the middle element in the sorted list.
-* Step 3 - Compare the search element with the middle element in the sorted list.
-* Step 4 - If both are matched, then display "Given element is found!!!" and terminate the function.
-* Step 5 - If both are not matched, then check whether the search element is smaller or larger than the middle element.
-* Step 6 - If the search element is smaller than middle element, repeat steps 2, 3, 4 and 5 for the left sublist of the middle element.
-* Step 7 - If the search element is larger than middle element, repeat steps 2, 3, 4 and 5 for the right sublist of the middle element.
-* Step 8 - Repeat the same process until we find the search element in the list or until sublist contains only one element.
-* Step 9 - If that element also doesn't match with the search element, then returns -1;
-
------
-
-## Time Complexity:
-
-* Worst case: O(log n)
-* Average case: O(log n)
-* Best case: O(1)
-
-```typescript
-
-function binarySearch(nums: number[], target: number): number {
-  let left: number = 0;
-  let right: number = nums.length - 1;
-
-  while (left <= right) {
-    const mid: number = Math.floor((left + right) / 2);
-
-    if (nums[mid] === target) return mid;
-    if (target < nums[mid]) right = mid - 1;
-    else left = mid + 1;
-  }
-
-  return -1;
-}
-
-```
-
-```java
-
-class Solution {
-    private static int binarySearch(int[] array, int target) {
-		
-		int low = 0;
-		int high = array.length - 1;
-		
-		while(low <= high) {
-			int middle = low + (high - low) / 2;
-			int value = array[middle];
-			
-			if(value < target) {
-				low = middle + 1;
-			} else if(value > target) {
-				high = middle - 1;
-				
-			} else {
-				return middle;
-			}
-		}
-		return -1;
-	}
-}
-```
-
-```python
-
-def binary_search(list, item):
-    low = 0
-    high = len(list) - 1
-    while low <= high:
-        mid = (low+high)/2
-        guess = list[mid]
-        if guess == item:
-            return mid
-        if guess > item:
-            high = mid - 1
-        else:
-            low = mid +1
-    return None
-
-my_list = [1, 3, 5, 7, 9]
-
-res = binary_search(my_list, 3)
-
-print(my_list[res])
-```
-\newpage 
-
-# Interval search
-
-
-```typescript
-
-type Interval = [number, number];
-
-function intervalSearch(intervals: Interval[], queryInterval: Interval): number[] {
-  const result: number[] = [];
-
-  for (let i = 0; i < intervals.length; i++) {
-    const [start, end] = intervals[i];
-    const [queryStart, queryEnd] = queryInterval;
-
-    if (start <= queryEnd && end >= queryStart) {
-      result.push(i); 
-    }
-  }
-
-  return result;
-}
-```
-
-\newpage 
-
-# Linear search
-
-
-```typescript
-
-function linearSearch(arr: number[], target: number): number {
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] === target) {
-      return i; 
-    }
-  }
-
-  return -1;
-}
-```
-
-\newpage 
-
-# Ternary search
-
-
-```typescript
-
-function ternarySearch(func: (x: number) => number, left: number, right: number, epsilon: number): number {
-  while (right - left > epsilon) {
-    const mid1 = left + (right - left) / 3;
-    const mid2 = right - (right - left) / 3;
-
-    const value1 = func(mid1);
-    const value2 = func(mid2);
-
-    if (value1 < value2) {
-      left = mid1;
-    } else {
-      right = mid2;
-    }
-  }
-
-  return (left + right) / 2;
-}
-```
-
-\newpage 
-
 # Bubble sort
 
 
@@ -194,45 +31,6 @@ console.log(bubbleSort([2,5,2,6,7,2,22,5,7,9,0,2,3]))
 	}
 ```
 
-
-\newpage 
-
-# Insertion sort
-
-## TypeScript
-```typescript
-function insertionSort(array: number[] | string[]) {
-    for (let i = 1; i < array.length; i++) {
-        let curr = array[i];
-        let j = i - 1;
-        for (j; j >= 0 && array[j] > curr; j--) {
-            array[j + 1] = array[j];
-        }
-        array[j + 1] = curr;
-    }
-    return array;
-}
-
-console.log(insertionSort([1, 4, 2, 8, 345, 123, 43, 32, 5643, 63, 123, 43, 2, 55, 1, 234, 92]));
-```
-
-## Java
-```java
-    class Solution {
-        void insertionSort (int[] arr) {
-            int n = arr.length;
-            for(int i = 1; i < n; i++) {
-                int current = arr[i];
-                int position = i - 1;
-                while(position >= 0 && arr[position] > current) {
-                    arr[position + 1] = arr[position];
-                    position--;
-                }
-                arr[position + 1] = current;
-            }
-        }
-    }
-```
 
 \newpage 
 
@@ -295,6 +93,45 @@ def selection_sort(arr):
 print(selection_sort([5,4,6,2,1,123, 2, 3,1,23 ,1,1,]))
 ```
 
+
+\newpage 
+
+# Insertion sort
+
+## TypeScript
+```typescript
+function insertionSort(array: number[] | string[]) {
+    for (let i = 1; i < array.length; i++) {
+        let curr = array[i];
+        let j = i - 1;
+        for (j; j >= 0 && array[j] > curr; j--) {
+            array[j + 1] = array[j];
+        }
+        array[j + 1] = curr;
+    }
+    return array;
+}
+
+console.log(insertionSort([1, 4, 2, 8, 345, 123, 43, 32, 5643, 63, 123, 43, 2, 55, 1, 234, 92]));
+```
+
+## Java
+```java
+    class Solution {
+        void insertionSort (int[] arr) {
+            int n = arr.length;
+            for(int i = 1; i < n; i++) {
+                int current = arr[i];
+                int position = i - 1;
+                while(position >= 0 && arr[position] > current) {
+                    arr[position + 1] = arr[position];
+                    position--;
+                }
+                arr[position + 1] = current;
+            }
+        }
+    }
+```
 
 \newpage 
 
@@ -498,54 +335,140 @@ function merge(left: number[], right: number[]): number[] {
 
 \newpage 
 
-# Interpolation search
+# Linear search
 
-
-```java
-class Solution {
-    	
-	private static int interpolationSearch(int[] array, int value) {
-		int low = 0;
-		int high = array.length - 1;
-		
-		while(value >=array[low] && value <= array[high] && low <= high) {
-			int probe = low + (high - low) * (value - array[low]) / (array[high] - array[low]);
-			if(array[probe] == value) {
-				return probe;
-			} else if(array[probe] > value) {
-				low = probe + 1;
-			} else {
-				high = probe -1;
-			}
-			
-		}
-		
-		return -1;
-	}
-
-}
-```
 
 ```typescript
-function interpolationSearch(array: number[], value: number): number {
-  let low = 0;
-  let high = array.length - 1;
 
-  while (value >= array[low] && value <= array[high] && low <= high) {
-    const probe = low + ((high - low) * (value - array[low])) / (array[high] - array[low]);
-    const roundedProbe = Math.floor(probe);
-
-    if (array[roundedProbe] === value) {
-      return roundedProbe;
-    } else if (array[roundedProbe] < value) {
-      low = roundedProbe + 1;
-    } else {
-      high = roundedProbe - 1;
+function linearSearch(arr: number[], target: number): number {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === target) {
+      return i; 
     }
   }
 
   return -1;
 }
+```
+
+\newpage 
+
+# Interval search
+
+
+```typescript
+
+type Interval = [number, number];
+
+function intervalSearch(intervals: Interval[], queryInterval: Interval): number[] {
+  const result: number[] = [];
+
+  for (let i = 0; i < intervals.length; i++) {
+    const [start, end] = intervals[i];
+    const [queryStart, queryEnd] = queryInterval;
+
+    if (start <= queryEnd && end >= queryStart) {
+      result.push(i); 
+    }
+  }
+
+  return result;
+}
+```
+
+\newpage 
+
+# Binary search
+
+
+![Binary search](images/binary-search.png)
+
+## Steps:
+
+* Step 1 - Read the search element from the user.
+* Step 2 - Find the middle element in the sorted list.
+* Step 3 - Compare the search element with the middle element in the sorted list.
+* Step 4 - If both are matched, then display "Given element is found!!!" and terminate the function.
+* Step 5 - If both are not matched, then check whether the search element is smaller or larger than the middle element.
+* Step 6 - If the search element is smaller than middle element, repeat steps 2, 3, 4 and 5 for the left sublist of the middle element.
+* Step 7 - If the search element is larger than middle element, repeat steps 2, 3, 4 and 5 for the right sublist of the middle element.
+* Step 8 - Repeat the same process until we find the search element in the list or until sublist contains only one element.
+* Step 9 - If that element also doesn't match with the search element, then returns -1;
+
+-----
+
+## Time Complexity:
+
+* Worst case: O(log n)
+* Average case: O(log n)
+* Best case: O(1)
+
+```typescript
+
+function binarySearch(nums: number[], target: number): number {
+  let left: number = 0;
+  let right: number = nums.length - 1;
+
+  while (left <= right) {
+    const mid: number = Math.floor((left + right) / 2);
+
+    if (nums[mid] === target) return mid;
+    if (target < nums[mid]) right = mid - 1;
+    else left = mid + 1;
+  }
+
+  return -1;
+}
+
+```
+
+```java
+
+class Solution {
+    private static int binarySearch(int[] array, int target) {
+		
+		int low = 0;
+		int high = array.length - 1;
+		
+		while(low <= high) {
+			int middle = low + (high - low) / 2;
+			int value = array[middle];
+			
+			if(value < target) {
+				low = middle + 1;
+			} else if(value > target) {
+				high = middle - 1;
+				
+			} else {
+				return middle;
+			}
+		}
+		return -1;
+	}
+}
+```
+
+```python
+
+def binary_search(list, item):
+    low = 0
+    high = len(list) - 1
+    while low <= high:
+        mid = (low+high)/2
+        guess = list[mid]
+        if guess == item:
+            return mid
+        if guess > item:
+            high = mid - 1
+        else:
+            low = mid +1
+    return None
+
+my_list = [1, 3, 5, 7, 9]
+
+res = binary_search(my_list, 3)
+
+print(my_list[res])
 ```
 \newpage 
 
@@ -599,6 +522,83 @@ DiffieHellman()
 ```
 
 
+\newpage 
+
+# Ternary search
+
+
+```typescript
+
+function ternarySearch(func: (x: number) => number, left: number, right: number, epsilon: number): number {
+  while (right - left > epsilon) {
+    const mid1 = left + (right - left) / 3;
+    const mid2 = right - (right - left) / 3;
+
+    const value1 = func(mid1);
+    const value2 = func(mid2);
+
+    if (value1 < value2) {
+      left = mid1;
+    } else {
+      right = mid2;
+    }
+  }
+
+  return (left + right) / 2;
+}
+```
+
+\newpage 
+
+# Interpolation search
+
+
+```java
+class Solution {
+    	
+	private static int interpolationSearch(int[] array, int value) {
+		int low = 0;
+		int high = array.length - 1;
+		
+		while(value >=array[low] && value <= array[high] && low <= high) {
+			int probe = low + (high - low) * (value - array[low]) / (array[high] - array[low]);
+			if(array[probe] == value) {
+				return probe;
+			} else if(array[probe] > value) {
+				low = probe + 1;
+			} else {
+				high = probe -1;
+			}
+			
+		}
+		
+		return -1;
+	}
+
+}
+```
+
+```typescript
+function interpolationSearch(array: number[], value: number): number {
+  let low = 0;
+  let high = array.length - 1;
+
+  while (value >= array[low] && value <= array[high] && low <= high) {
+    const probe = low + ((high - low) * (value - array[low])) / (array[high] - array[low]);
+    const roundedProbe = Math.floor(probe);
+
+    if (array[roundedProbe] === value) {
+      return roundedProbe;
+    } else if (array[roundedProbe] < value) {
+      low = roundedProbe + 1;
+    } else {
+      high = roundedProbe - 1;
+    }
+  }
+
+  return -1;
+}
+```
 \newpage 
 
 # Breadth-first search
