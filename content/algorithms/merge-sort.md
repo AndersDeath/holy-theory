@@ -2,7 +2,7 @@
 title: Merge sort
 tags: ["algorithms", "merge", "sort"]
 languages: ["java"]
-sort: 600
+sort: 500
 ---
 
 # Merge sort

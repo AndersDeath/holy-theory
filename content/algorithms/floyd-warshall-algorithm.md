@@ -2,7 +2,7 @@
 title: Floyd-Warshall algorithm
 tags: ["traversal", "algorithms", "binary", "tree"]
 languages: ["typescript"]
-sort: 1100
+sort: 1400
 ---
 
 # Floyd-Warshall algorithm

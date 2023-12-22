@@ -2,7 +2,7 @@
 title: Ford Fulkerson algorithm
 tags: ["traversal", "algorithms", "binary", "tree"]
 languages: ["typescript"]
-sort: 1100
+sort: 1500
 ---
 
 # Ford Fulkerson algorithm
