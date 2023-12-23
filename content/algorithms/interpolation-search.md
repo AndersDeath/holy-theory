@@ -2,7 +2,7 @@
 title: Interpolation search
 tags: ['algorithms', 'interpolation', 'search']
 languages: ['java']
-sort: 700
+sort: 1000
 ---
 # Interpolation search
 

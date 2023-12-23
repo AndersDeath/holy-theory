@@ -2,7 +2,7 @@
 title: Dijkstra's algorithm
 tags: ["traversal", "algorithms", "binary", "tree"]
 languages: ["typescript"]
-sort: 1100
+sort: 1300
 ---
 
 # Dijkstra's algorithm

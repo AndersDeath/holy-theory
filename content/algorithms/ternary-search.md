@@ -2,7 +2,7 @@
 title: Ternary search
 tags: ['search', 'algorithms', 'ternary']
 languages: ['typescript', 'java', 'python']
-sort: 100
+sort: 900
 ---
 # Ternary search
 

@@ -2,7 +2,7 @@
 title: Depth-first search
 tags: ["traversal", "algorithms", "binary", "tree"]
 languages: ["java"]
-sort: 1100
+sort: 1200
 ---
 
 # Depth-first search

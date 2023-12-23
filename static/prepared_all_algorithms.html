@@ -1,135 +1,4 @@
-<h1>Binary search</h1>
-<h1 id="binary-search">Binary search</h1>
-<p><img src="images/binary-search.png" alt="Binary search"></p>
-<h2 id="steps">Steps:</h2>
-<ul>
-<li>Step 1 - Read the search element from the user.</li>
-<li>Step 2 - Find the middle element in the sorted list.</li>
-<li>Step 3 - Compare the search element with the middle element in the sorted list.</li>
-<li>Step 4 - If both are matched, then display &quot;Given element is found!!!&quot; and terminate the function.</li>
-<li>Step 5 - If both are not matched, then check whether the search element is smaller or larger than the middle element.</li>
-<li>Step 6 - If the search element is smaller than middle element, repeat steps 2, 3, 4 and 5 for the left sublist of the middle element.</li>
-<li>Step 7 - If the search element is larger than middle element, repeat steps 2, 3, 4 and 5 for the right sublist of the middle element.</li>
-<li>Step 8 - Repeat the same process until we find the search element in the list or until sublist contains only one element.</li>
-<li>Step 9 - If that element also doesn&#39;t match with the search element, then returns -1;</li>
-</ul>
-<hr>
-<h2 id="time-complexity">Time Complexity:</h2>
-<ul>
-<li>Worst case: O(log n)</li>
-<li>Average case: O(log n)</li>
-<li>Best case: O(1)</li>
-</ul>
-<pre><code class="hljs language-typescript">
-<span class="hljs-keyword">function</span> <span class="hljs-title function_">binarySearch</span>(<span class="hljs-params">nums: <span class="hljs-built_in">number</span>[], target: <span class="hljs-built_in">number</span></span>): <span class="hljs-built_in">number</span> {
-  <span class="hljs-keyword">let</span> <span class="hljs-attr">left</span>: <span class="hljs-built_in">number</span> = <span class="hljs-number">0</span>;
-  <span class="hljs-keyword">let</span> <span class="hljs-attr">right</span>: <span class="hljs-built_in">number</span> = nums.<span class="hljs-property">length</span> - <span class="hljs-number">1</span>;
-
-  <span class="hljs-keyword">while</span> (left &lt;= right) {
-    <span class="hljs-keyword">const</span> <span class="hljs-attr">mid</span>: <span class="hljs-built_in">number</span> = <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">floor</span>((left + right) / <span class="hljs-number">2</span>);
-
-    <span class="hljs-keyword">if</span> (nums[mid] === target) <span class="hljs-keyword">return</span> mid;
-    <span class="hljs-keyword">if</span> (target &lt; nums[mid]) right = mid - <span class="hljs-number">1</span>;
-    <span class="hljs-keyword">else</span> left = mid + <span class="hljs-number">1</span>;
-  }
-
-  <span class="hljs-keyword">return</span> -<span class="hljs-number">1</span>;
-}
-</code></pre><pre><code class="hljs language-java">
-<span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {
-    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-type">int</span> <span class="hljs-title function_">binarySearch</span><span class="hljs-params">(<span class="hljs-type">int</span>[] array, <span class="hljs-type">int</span> target)</span> {
-        
-        <span class="hljs-type">int</span> <span class="hljs-variable">low</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>;
-        <span class="hljs-type">int</span> <span class="hljs-variable">high</span> <span class="hljs-operator">=</span> array.length - <span class="hljs-number">1</span>;
-        
-        <span class="hljs-keyword">while</span>(low &lt;= high) {
-            <span class="hljs-type">int</span> <span class="hljs-variable">middle</span> <span class="hljs-operator">=</span> low + (high - low) / <span class="hljs-number">2</span>;
-            <span class="hljs-type">int</span> <span class="hljs-variable">value</span> <span class="hljs-operator">=</span> array[middle];
-            
-            <span class="hljs-keyword">if</span>(value &lt; target) {
-                low = middle + <span class="hljs-number">1</span>;
-            } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(value &gt; target) {
-                high = middle - <span class="hljs-number">1</span>;
-                
-            } <span class="hljs-keyword">else</span> {
-                <span class="hljs-keyword">return</span> middle;
-            }
-        }
-        <span class="hljs-keyword">return</span> -<span class="hljs-number">1</span>;
-    }
-}
-</code></pre><pre><code class="hljs language-python">
-<span class="hljs-keyword">def</span> <span class="hljs-title function_">binary_search</span>(<span class="hljs-params"><span class="hljs-built_in">list</span>, item</span>):
-    low = <span class="hljs-number">0</span>
-    high = <span class="hljs-built_in">len</span>(<span class="hljs-built_in">list</span>) - <span class="hljs-number">1</span>
-    <span class="hljs-keyword">while</span> low &lt;= high:
-        mid = (low+high)/<span class="hljs-number">2</span>
-        guess = <span class="hljs-built_in">list</span>[mid]
-        <span class="hljs-keyword">if</span> guess == item:
-            <span class="hljs-keyword">return</span> mid
-        <span class="hljs-keyword">if</span> guess &gt; item:
-            high = mid - <span class="hljs-number">1</span>
-        <span class="hljs-keyword">else</span>:
-            low = mid +<span class="hljs-number">1</span>
-    <span class="hljs-keyword">return</span> <span class="hljs-literal">None</span>
-
-my_list = [<span class="hljs-number">1</span>, <span class="hljs-number">3</span>, <span class="hljs-number">5</span>, <span class="hljs-number">7</span>, <span class="hljs-number">9</span>]
-
-res = binary_search(my_list, <span class="hljs-number">3</span>)
-
-<span class="hljs-built_in">print</span>(my_list[res])
-</code></pre><p style="page-break-after: always;"> </p><h1>Interval search</h1>
-<h1 id="interval-search">Interval search</h1>
-<pre><code class="hljs language-typescript">
-<span class="hljs-keyword">type</span> <span class="hljs-title class_">Interval</span> = [<span class="hljs-built_in">number</span>, <span class="hljs-built_in">number</span>];
-
-<span class="hljs-keyword">function</span> <span class="hljs-title function_">intervalSearch</span>(<span class="hljs-params">intervals: Interval[], queryInterval: Interval</span>): <span class="hljs-built_in">number</span>[] {
-  <span class="hljs-keyword">const</span> <span class="hljs-attr">result</span>: <span class="hljs-built_in">number</span>[] = [];
-
-  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; intervals.<span class="hljs-property">length</span>; i++) {
-    <span class="hljs-keyword">const</span> [start, end] = intervals[i];
-    <span class="hljs-keyword">const</span> [queryStart, queryEnd] = queryInterval;
-
-    <span class="hljs-keyword">if</span> (start &lt;= queryEnd &amp;&amp; end &gt;= queryStart) {
-      result.<span class="hljs-title function_">push</span>(i); 
-    }
-  }
-
-  <span class="hljs-keyword">return</span> result;
-}
-</code></pre><p style="page-break-after: always;"> </p><h1>Linear search</h1>
-<h1 id="linear-search">Linear search</h1>
-<pre><code class="hljs language-typescript">
-<span class="hljs-keyword">function</span> <span class="hljs-title function_">linearSearch</span>(<span class="hljs-params">arr: <span class="hljs-built_in">number</span>[], target: <span class="hljs-built_in">number</span></span>): <span class="hljs-built_in">number</span> {
-  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; arr.<span class="hljs-property">length</span>; i++) {
-    <span class="hljs-keyword">if</span> (arr[i] === target) {
-      <span class="hljs-keyword">return</span> i; 
-    }
-  }
-
-  <span class="hljs-keyword">return</span> -<span class="hljs-number">1</span>;
-}
-</code></pre><p style="page-break-after: always;"> </p><h1>Ternary search</h1>
-<h1 id="ternary-search">Ternary search</h1>
-<pre><code class="hljs language-typescript">
-<span class="hljs-keyword">function</span> <span class="hljs-title function_">ternarySearch</span>(<span class="hljs-params">func: (x: <span class="hljs-built_in">number</span>) =&gt; <span class="hljs-built_in">number</span>, left: <span class="hljs-built_in">number</span>, right: <span class="hljs-built_in">number</span>, epsilon: <span class="hljs-built_in">number</span></span>): <span class="hljs-built_in">number</span> {
-  <span class="hljs-keyword">while</span> (right - left &gt; epsilon) {
-    <span class="hljs-keyword">const</span> mid1 = left + (right - left) / <span class="hljs-number">3</span>;
-    <span class="hljs-keyword">const</span> mid2 = right - (right - left) / <span class="hljs-number">3</span>;
-
-    <span class="hljs-keyword">const</span> value1 = <span class="hljs-title function_">func</span>(mid1);
-    <span class="hljs-keyword">const</span> value2 = <span class="hljs-title function_">func</span>(mid2);
-
-    <span class="hljs-keyword">if</span> (value1 &lt; value2) {
-      left = mid1;
-    } <span class="hljs-keyword">else</span> {
-      right = mid2;
-    }
-  }
-
-  <span class="hljs-keyword">return</span> (left + right) / <span class="hljs-number">2</span>;
-}
-</code></pre><p style="page-break-after: always;"> </p><h1>Bubble sort</h1>
+<h1>Bubble sort</h1>
 <h1 id="bubble-sort">Bubble sort</h1>
 <pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">bubbleSort</span>(<span class="hljs-params">array: <span class="hljs-built_in">number</span>[] | <span class="hljs-built_in">string</span>[]</span>) {
     <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; array.<span class="hljs-property">length</span>; i++) {
@@ -151,37 +20,6 @@ res = binary_search(my_list, <span class="hljs-number">3</span>)
                     array[j] = array[j + <span class="hljs-number">1</span>];
                     array[j + <span class="hljs-number">1</span>] = temp;
                 }
-            }
-        }
-    }
-</code></pre><p style="page-break-after: always;"> </p><h1>Insertion sort</h1>
-<h1 id="insertion-sort">Insertion sort</h1>
-<h2 id="typescript">TypeScript</h2>
-<pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">insertionSort</span>(<span class="hljs-params">array: <span class="hljs-built_in">number</span>[] | <span class="hljs-built_in">string</span>[]</span>) {
-    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">1</span>; i &lt; array.<span class="hljs-property">length</span>; i++) {
-        <span class="hljs-keyword">let</span> curr = array[i];
-        <span class="hljs-keyword">let</span> j = i - <span class="hljs-number">1</span>;
-        <span class="hljs-keyword">for</span> (j; j &gt;= <span class="hljs-number">0</span> &amp;&amp; array[j] &gt; curr; j--) {
-            array[j + <span class="hljs-number">1</span>] = array[j];
-        }
-        array[j + <span class="hljs-number">1</span>] = curr;
-    }
-    <span class="hljs-keyword">return</span> array;
-}
-
-<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-title function_">insertionSort</span>([<span class="hljs-number">1</span>, <span class="hljs-number">4</span>, <span class="hljs-number">2</span>, <span class="hljs-number">8</span>, <span class="hljs-number">345</span>, <span class="hljs-number">123</span>, <span class="hljs-number">43</span>, <span class="hljs-number">32</span>, <span class="hljs-number">5643</span>, <span class="hljs-number">63</span>, <span class="hljs-number">123</span>, <span class="hljs-number">43</span>, <span class="hljs-number">2</span>, <span class="hljs-number">55</span>, <span class="hljs-number">1</span>, <span class="hljs-number">234</span>, <span class="hljs-number">92</span>]));
-</code></pre><h2 id="java">Java</h2>
-<pre><code class="hljs language-java">    <span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {
-        <span class="hljs-keyword">void</span> <span class="hljs-title function_">insertionSort</span> <span class="hljs-params">(<span class="hljs-type">int</span>[] arr)</span> {
-            <span class="hljs-type">int</span> <span class="hljs-variable">n</span> <span class="hljs-operator">=</span> arr.length;
-            <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">1</span>; i &lt; n; i++) {
-                <span class="hljs-type">int</span> <span class="hljs-variable">current</span> <span class="hljs-operator">=</span> arr[i];
-                <span class="hljs-type">int</span> <span class="hljs-variable">position</span> <span class="hljs-operator">=</span> i - <span class="hljs-number">1</span>;
-                <span class="hljs-keyword">while</span>(position &gt;= <span class="hljs-number">0</span> &amp;&amp; arr[position] &gt; current) {
-                    arr[position + <span class="hljs-number">1</span>] = arr[position];
-                    position--;
-                }
-                arr[position + <span class="hljs-number">1</span>] = current;
             }
         }
     }
@@ -232,6 +70,37 @@ res = binary_search(my_list, <span class="hljs-number">3</span>)
     <span class="hljs-keyword">return</span> newArr
 
 <span class="hljs-built_in">print</span>(selection_sort([<span class="hljs-number">5</span>,<span class="hljs-number">4</span>,<span class="hljs-number">6</span>,<span class="hljs-number">2</span>,<span class="hljs-number">1</span>,<span class="hljs-number">123</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>,<span class="hljs-number">1</span>,<span class="hljs-number">23</span> ,<span class="hljs-number">1</span>,<span class="hljs-number">1</span>,]))
+</code></pre><p style="page-break-after: always;"> </p><h1>Insertion sort</h1>
+<h1 id="insertion-sort">Insertion sort</h1>
+<h2 id="typescript">TypeScript</h2>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">insertionSort</span>(<span class="hljs-params">array: <span class="hljs-built_in">number</span>[] | <span class="hljs-built_in">string</span>[]</span>) {
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">1</span>; i &lt; array.<span class="hljs-property">length</span>; i++) {
+        <span class="hljs-keyword">let</span> curr = array[i];
+        <span class="hljs-keyword">let</span> j = i - <span class="hljs-number">1</span>;
+        <span class="hljs-keyword">for</span> (j; j &gt;= <span class="hljs-number">0</span> &amp;&amp; array[j] &gt; curr; j--) {
+            array[j + <span class="hljs-number">1</span>] = array[j];
+        }
+        array[j + <span class="hljs-number">1</span>] = curr;
+    }
+    <span class="hljs-keyword">return</span> array;
+}
+
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-title function_">insertionSort</span>([<span class="hljs-number">1</span>, <span class="hljs-number">4</span>, <span class="hljs-number">2</span>, <span class="hljs-number">8</span>, <span class="hljs-number">345</span>, <span class="hljs-number">123</span>, <span class="hljs-number">43</span>, <span class="hljs-number">32</span>, <span class="hljs-number">5643</span>, <span class="hljs-number">63</span>, <span class="hljs-number">123</span>, <span class="hljs-number">43</span>, <span class="hljs-number">2</span>, <span class="hljs-number">55</span>, <span class="hljs-number">1</span>, <span class="hljs-number">234</span>, <span class="hljs-number">92</span>]));
+</code></pre><h2 id="java">Java</h2>
+<pre><code class="hljs language-java">    <span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {
+        <span class="hljs-keyword">void</span> <span class="hljs-title function_">insertionSort</span> <span class="hljs-params">(<span class="hljs-type">int</span>[] arr)</span> {
+            <span class="hljs-type">int</span> <span class="hljs-variable">n</span> <span class="hljs-operator">=</span> arr.length;
+            <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">1</span>; i &lt; n; i++) {
+                <span class="hljs-type">int</span> <span class="hljs-variable">current</span> <span class="hljs-operator">=</span> arr[i];
+                <span class="hljs-type">int</span> <span class="hljs-variable">position</span> <span class="hljs-operator">=</span> i - <span class="hljs-number">1</span>;
+                <span class="hljs-keyword">while</span>(position &gt;= <span class="hljs-number">0</span> &amp;&amp; arr[position] &gt; current) {
+                    arr[position + <span class="hljs-number">1</span>] = arr[position];
+                    position--;
+                }
+                arr[position + <span class="hljs-number">1</span>] = current;
+            }
+        }
+    }
 </code></pre><p style="page-break-after: always;"> </p><h1>Quick sort</h1>
 <h1 id="quicksort">Quicksort</h1>
 <pre><code class="hljs language-java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {
@@ -404,49 +273,117 @@ res = binary_search(my_list, <span class="hljs-number">3</span>)
 
   <span class="hljs-keyword">return</span> result.<span class="hljs-title function_">concat</span>(left.<span class="hljs-title function_">slice</span>(leftIndex)).<span class="hljs-title function_">concat</span>(right.<span class="hljs-title function_">slice</span>(rightIndex));
 }
-</code></pre><p style="page-break-after: always;"> </p><h1>Interpolation search</h1>
-<h1 id="interpolation-search">Interpolation search</h1>
-<pre><code class="hljs language-java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {
-        
-    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-type">int</span> <span class="hljs-title function_">interpolationSearch</span><span class="hljs-params">(<span class="hljs-type">int</span>[] array, <span class="hljs-type">int</span> value)</span> {
-        <span class="hljs-type">int</span> <span class="hljs-variable">low</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>;
-        <span class="hljs-type">int</span> <span class="hljs-variable">high</span> <span class="hljs-operator">=</span> array.length - <span class="hljs-number">1</span>;
-        
-        <span class="hljs-keyword">while</span>(value &gt;=array[low] &amp;&amp; value &lt;= array[high] &amp;&amp; low &lt;= high) {
-            <span class="hljs-type">int</span> <span class="hljs-variable">probe</span> <span class="hljs-operator">=</span> low + (high - low) * (value - array[low]) / (array[high] - array[low]);
-            <span class="hljs-keyword">if</span>(array[probe] == value) {
-                <span class="hljs-keyword">return</span> probe;
-            } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(array[probe] &gt; value) {
-                low = probe + <span class="hljs-number">1</span>;
-            } <span class="hljs-keyword">else</span> {
-                high = probe -<span class="hljs-number">1</span>;
-            }
-            
-        }
-        
-        <span class="hljs-keyword">return</span> -<span class="hljs-number">1</span>;
-    }
-
-}
-</code></pre><pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">interpolationSearch</span>(<span class="hljs-params">array: <span class="hljs-built_in">number</span>[], value: <span class="hljs-built_in">number</span></span>): <span class="hljs-built_in">number</span> {
-  <span class="hljs-keyword">let</span> low = <span class="hljs-number">0</span>;
-  <span class="hljs-keyword">let</span> high = array.<span class="hljs-property">length</span> - <span class="hljs-number">1</span>;
-
-  <span class="hljs-keyword">while</span> (value &gt;= array[low] &amp;&amp; value &lt;= array[high] &amp;&amp; low &lt;= high) {
-    <span class="hljs-keyword">const</span> probe = low + ((high - low) * (value - array[low])) / (array[high] - array[low]);
-    <span class="hljs-keyword">const</span> roundedProbe = <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">floor</span>(probe);
-
-    <span class="hljs-keyword">if</span> (array[roundedProbe] === value) {
-      <span class="hljs-keyword">return</span> roundedProbe;
-    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (array[roundedProbe] &lt; value) {
-      low = roundedProbe + <span class="hljs-number">1</span>;
-    } <span class="hljs-keyword">else</span> {
-      high = roundedProbe - <span class="hljs-number">1</span>;
+</code></pre><p style="page-break-after: always;"> </p><h1>Linear search</h1>
+<h1 id="linear-search">Linear search</h1>
+<pre><code class="hljs language-typescript">
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">linearSearch</span>(<span class="hljs-params">arr: <span class="hljs-built_in">number</span>[], target: <span class="hljs-built_in">number</span></span>): <span class="hljs-built_in">number</span> {
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; arr.<span class="hljs-property">length</span>; i++) {
+    <span class="hljs-keyword">if</span> (arr[i] === target) {
+      <span class="hljs-keyword">return</span> i; 
     }
   }
 
   <span class="hljs-keyword">return</span> -<span class="hljs-number">1</span>;
 }
+</code></pre><p style="page-break-after: always;"> </p><h1>Interval search</h1>
+<h1 id="interval-search">Interval search</h1>
+<pre><code class="hljs language-typescript">
+<span class="hljs-keyword">type</span> <span class="hljs-title class_">Interval</span> = [<span class="hljs-built_in">number</span>, <span class="hljs-built_in">number</span>];
+
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">intervalSearch</span>(<span class="hljs-params">intervals: Interval[], queryInterval: Interval</span>): <span class="hljs-built_in">number</span>[] {
+  <span class="hljs-keyword">const</span> <span class="hljs-attr">result</span>: <span class="hljs-built_in">number</span>[] = [];
+
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; intervals.<span class="hljs-property">length</span>; i++) {
+    <span class="hljs-keyword">const</span> [start, end] = intervals[i];
+    <span class="hljs-keyword">const</span> [queryStart, queryEnd] = queryInterval;
+
+    <span class="hljs-keyword">if</span> (start &lt;= queryEnd &amp;&amp; end &gt;= queryStart) {
+      result.<span class="hljs-title function_">push</span>(i); 
+    }
+  }
+
+  <span class="hljs-keyword">return</span> result;
+}
+</code></pre><p style="page-break-after: always;"> </p><h1>Binary search</h1>
+<h1 id="binary-search">Binary search</h1>
+<p><img src="images/binary-search.png" alt="Binary search"></p>
+<h2 id="steps">Steps:</h2>
+<ul>
+<li>Step 1 - Read the search element from the user.</li>
+<li>Step 2 - Find the middle element in the sorted list.</li>
+<li>Step 3 - Compare the search element with the middle element in the sorted list.</li>
+<li>Step 4 - If both are matched, then display &quot;Given element is found!!!&quot; and terminate the function.</li>
+<li>Step 5 - If both are not matched, then check whether the search element is smaller or larger than the middle element.</li>
+<li>Step 6 - If the search element is smaller than middle element, repeat steps 2, 3, 4 and 5 for the left sublist of the middle element.</li>
+<li>Step 7 - If the search element is larger than middle element, repeat steps 2, 3, 4 and 5 for the right sublist of the middle element.</li>
+<li>Step 8 - Repeat the same process until we find the search element in the list or until sublist contains only one element.</li>
+<li>Step 9 - If that element also doesn&#39;t match with the search element, then returns -1;</li>
+</ul>
+<hr>
+<h2 id="time-complexity">Time Complexity:</h2>
+<ul>
+<li>Worst case: O(log n)</li>
+<li>Average case: O(log n)</li>
+<li>Best case: O(1)</li>
+</ul>
+<pre><code class="hljs language-typescript">
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">binarySearch</span>(<span class="hljs-params">nums: <span class="hljs-built_in">number</span>[], target: <span class="hljs-built_in">number</span></span>): <span class="hljs-built_in">number</span> {
+  <span class="hljs-keyword">let</span> <span class="hljs-attr">left</span>: <span class="hljs-built_in">number</span> = <span class="hljs-number">0</span>;
+  <span class="hljs-keyword">let</span> <span class="hljs-attr">right</span>: <span class="hljs-built_in">number</span> = nums.<span class="hljs-property">length</span> - <span class="hljs-number">1</span>;
+
+  <span class="hljs-keyword">while</span> (left &lt;= right) {
+    <span class="hljs-keyword">const</span> <span class="hljs-attr">mid</span>: <span class="hljs-built_in">number</span> = <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">floor</span>((left + right) / <span class="hljs-number">2</span>);
+
+    <span class="hljs-keyword">if</span> (nums[mid] === target) <span class="hljs-keyword">return</span> mid;
+    <span class="hljs-keyword">if</span> (target &lt; nums[mid]) right = mid - <span class="hljs-number">1</span>;
+    <span class="hljs-keyword">else</span> left = mid + <span class="hljs-number">1</span>;
+  }
+
+  <span class="hljs-keyword">return</span> -<span class="hljs-number">1</span>;
+}
+</code></pre><pre><code class="hljs language-java">
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-type">int</span> <span class="hljs-title function_">binarySearch</span><span class="hljs-params">(<span class="hljs-type">int</span>[] array, <span class="hljs-type">int</span> target)</span> {
+        
+        <span class="hljs-type">int</span> <span class="hljs-variable">low</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>;
+        <span class="hljs-type">int</span> <span class="hljs-variable">high</span> <span class="hljs-operator">=</span> array.length - <span class="hljs-number">1</span>;
+        
+        <span class="hljs-keyword">while</span>(low &lt;= high) {
+            <span class="hljs-type">int</span> <span class="hljs-variable">middle</span> <span class="hljs-operator">=</span> low + (high - low) / <span class="hljs-number">2</span>;
+            <span class="hljs-type">int</span> <span class="hljs-variable">value</span> <span class="hljs-operator">=</span> array[middle];
+            
+            <span class="hljs-keyword">if</span>(value &lt; target) {
+                low = middle + <span class="hljs-number">1</span>;
+            } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(value &gt; target) {
+                high = middle - <span class="hljs-number">1</span>;
+                
+            } <span class="hljs-keyword">else</span> {
+                <span class="hljs-keyword">return</span> middle;
+            }
+        }
+        <span class="hljs-keyword">return</span> -<span class="hljs-number">1</span>;
+    }
+}
+</code></pre><pre><code class="hljs language-python">
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">binary_search</span>(<span class="hljs-params"><span class="hljs-built_in">list</span>, item</span>):
+    low = <span class="hljs-number">0</span>
+    high = <span class="hljs-built_in">len</span>(<span class="hljs-built_in">list</span>) - <span class="hljs-number">1</span>
+    <span class="hljs-keyword">while</span> low &lt;= high:
+        mid = (low+high)/<span class="hljs-number">2</span>
+        guess = <span class="hljs-built_in">list</span>[mid]
+        <span class="hljs-keyword">if</span> guess == item:
+            <span class="hljs-keyword">return</span> mid
+        <span class="hljs-keyword">if</span> guess &gt; item:
+            high = mid - <span class="hljs-number">1</span>
+        <span class="hljs-keyword">else</span>:
+            low = mid +<span class="hljs-number">1</span>
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">None</span>
+
+my_list = [<span class="hljs-number">1</span>, <span class="hljs-number">3</span>, <span class="hljs-number">5</span>, <span class="hljs-number">7</span>, <span class="hljs-number">9</span>]
+
+res = binary_search(my_list, <span class="hljs-number">3</span>)
+
+<span class="hljs-built_in">print</span>(my_list[res])
 </code></pre><p style="page-break-after: always;"> </p><h1>Diffie hellman algorithm</h1>
 <h1 id="diffie-hellman-algorithm">Diffie hellman algorithm</h1>
 <pre><code class="hljs language-javascript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">power</span>(<span class="hljs-params">a: any, b: any, p: any</span>) {
@@ -492,6 +429,69 @@ res = binary_search(my_list, <span class="hljs-number">3</span>)
 
 
 <span class="hljs-title class_">DiffieHellman</span>()
+</code></pre><p style="page-break-after: always;"> </p><h1>Ternary search</h1>
+<h1 id="ternary-search">Ternary search</h1>
+<pre><code class="hljs language-typescript">
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">ternarySearch</span>(<span class="hljs-params">func: (x: <span class="hljs-built_in">number</span>) =&gt; <span class="hljs-built_in">number</span>, left: <span class="hljs-built_in">number</span>, right: <span class="hljs-built_in">number</span>, epsilon: <span class="hljs-built_in">number</span></span>): <span class="hljs-built_in">number</span> {
+  <span class="hljs-keyword">while</span> (right - left &gt; epsilon) {
+    <span class="hljs-keyword">const</span> mid1 = left + (right - left) / <span class="hljs-number">3</span>;
+    <span class="hljs-keyword">const</span> mid2 = right - (right - left) / <span class="hljs-number">3</span>;
+
+    <span class="hljs-keyword">const</span> value1 = <span class="hljs-title function_">func</span>(mid1);
+    <span class="hljs-keyword">const</span> value2 = <span class="hljs-title function_">func</span>(mid2);
+
+    <span class="hljs-keyword">if</span> (value1 &lt; value2) {
+      left = mid1;
+    } <span class="hljs-keyword">else</span> {
+      right = mid2;
+    }
+  }
+
+  <span class="hljs-keyword">return</span> (left + right) / <span class="hljs-number">2</span>;
+}
+</code></pre><p style="page-break-after: always;"> </p><h1>Interpolation search</h1>
+<h1 id="interpolation-search">Interpolation search</h1>
+<pre><code class="hljs language-java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {
+        
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-type">int</span> <span class="hljs-title function_">interpolationSearch</span><span class="hljs-params">(<span class="hljs-type">int</span>[] array, <span class="hljs-type">int</span> value)</span> {
+        <span class="hljs-type">int</span> <span class="hljs-variable">low</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>;
+        <span class="hljs-type">int</span> <span class="hljs-variable">high</span> <span class="hljs-operator">=</span> array.length - <span class="hljs-number">1</span>;
+        
+        <span class="hljs-keyword">while</span>(value &gt;=array[low] &amp;&amp; value &lt;= array[high] &amp;&amp; low &lt;= high) {
+            <span class="hljs-type">int</span> <span class="hljs-variable">probe</span> <span class="hljs-operator">=</span> low + (high - low) * (value - array[low]) / (array[high] - array[low]);
+            <span class="hljs-keyword">if</span>(array[probe] == value) {
+                <span class="hljs-keyword">return</span> probe;
+            } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(array[probe] &gt; value) {
+                low = probe + <span class="hljs-number">1</span>;
+            } <span class="hljs-keyword">else</span> {
+                high = probe -<span class="hljs-number">1</span>;
+            }
+            
+        }
+        
+        <span class="hljs-keyword">return</span> -<span class="hljs-number">1</span>;
+    }
+
+}
+</code></pre><pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">interpolationSearch</span>(<span class="hljs-params">array: <span class="hljs-built_in">number</span>[], value: <span class="hljs-built_in">number</span></span>): <span class="hljs-built_in">number</span> {
+  <span class="hljs-keyword">let</span> low = <span class="hljs-number">0</span>;
+  <span class="hljs-keyword">let</span> high = array.<span class="hljs-property">length</span> - <span class="hljs-number">1</span>;
+
+  <span class="hljs-keyword">while</span> (value &gt;= array[low] &amp;&amp; value &lt;= array[high] &amp;&amp; low &lt;= high) {
+    <span class="hljs-keyword">const</span> probe = low + ((high - low) * (value - array[low])) / (array[high] - array[low]);
+    <span class="hljs-keyword">const</span> roundedProbe = <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">floor</span>(probe);
+
+    <span class="hljs-keyword">if</span> (array[roundedProbe] === value) {
+      <span class="hljs-keyword">return</span> roundedProbe;
+    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (array[roundedProbe] &lt; value) {
+      low = roundedProbe + <span class="hljs-number">1</span>;
+    } <span class="hljs-keyword">else</span> {
+      high = roundedProbe - <span class="hljs-number">1</span>;
+    }
+  }
+
+  <span class="hljs-keyword">return</span> -<span class="hljs-number">1</span>;
+}
 </code></pre><p style="page-break-after: always;"> </p><h1>Breadth-first search</h1>
 <h1 id="breadth-first-search">Breadth-first search</h1>
 <pre><code class="hljs language-typescript"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Graph</span> {
