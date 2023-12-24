@@ -309,6 +309,35 @@ graph.<span class="hljs-title function_">addEdge</span>(<span class="hljs-string
 graph.<span class="hljs-title function_">bfs</span>(<span class="hljs-string">&quot;A&quot;</span>);
 </code></pre><h3>Bubble sort</h3>
 <h1 id="bubble-sort">Bubble sort</h1>
+<p><strong>Bubble Sort: A Simple Sorting Algorithm</strong></p>
+<p>Bubble Sort is one of the simplest sorting algorithms that works by repeatedly stepping through the list to be sorted, comparing each pair of adjacent items, and swapping them if they are in the wrong order. The pass through the list is repeated until no swaps are needed, indicating that the list is sorted.</p>
+<p><strong>How Bubble Sort Works:</strong></p>
+<ol>
+<li><p><strong>Comparing Adjacent Elements:</strong></p>
+<ul>
+<li>Bubble Sort starts by comparing the first two elements of an array. If the first element is greater than the second, they are swapped. If not, they remain in their positions.</li>
+</ul>
+</li>
+<li><p><strong>Iterative Process:</strong></p>
+<ul>
+<li>This process is then repeated for every pair of adjacent elements throughout the entire array. After the first iteration, the largest element will have &quot;bubbled up&quot; to the last position.</li>
+</ul>
+</li>
+<li><p><strong>Subsequent Passes:</strong></p>
+<ul>
+<li>The algorithm then repeats the process for the remaining elements (excluding the already sorted ones at the end of the array). In each pass, the next largest element is placed in its correct position.</li>
+</ul>
+</li>
+<li><p><strong>Termination:</strong></p>
+<ul>
+<li>The algorithm terminates when a pass through the entire array is made without any swaps, indicating that the array is now sorted.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Time Complexity:</strong></p>
+<ul>
+<li>Bubble Sort has a time complexity of O(n^2) in the worst and average cases, where &#39;n&#39; is the number of elements in the array. This makes it inefficient for large datasets but is useful for educational purposes due to its simplicity.</li>
+</ul>
 <pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">bubbleSort</span>(<span class="hljs-params">array: <span class="hljs-built_in">number</span>[] | <span class="hljs-built_in">string</span>[]</span>) {
     <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; array.<span class="hljs-property">length</span>; i++) {
         <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> j = <span class="hljs-number">0</span>; j &lt; array.<span class="hljs-property">length</span> - <span class="hljs-number">1</span> - i; j++) {
