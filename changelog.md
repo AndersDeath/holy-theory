@@ -14,6 +14,7 @@ All notable changes to this project will be documented in this file.
 * add ignore param to metadata
 * update sorting for algorithms handbook elements
 * add experimental server
+* add description for bubble sort
 
 # [0.0.49] - 2023-12-18
 * update builder
