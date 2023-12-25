@@ -61,6 +61,22 @@ console.log(bubbleSort([2,5,2,6,7,2,22,5,7,9,0,2,3]))
 ![Selection sort](images/selection-sort.png)
 
 
+Selection Sort is a straightforward sorting algorithm that works by dividing the input array into two parts: the sorted and the unsorted subarrays. The algorithm repeatedly selects the minimum (or maximum, depending on the sorting order) element from the unsorted subarray and swaps it with the first unsorted element. This process is iteratively applied until the entire array is sorted.
+
+**How Selection Sort Works:**
+
+1. **Dividing the Array:**
+   - The algorithm starts with the entire array considered as unsorted.
+
+2. **Finding the Minimum Element:**
+   - In each iteration, Selection Sort finds the minimum element from the unsorted part of the array.
+
+3. **Swapping:**
+   - Once the minimum element is identified, it is swapped with the first element in the unsorted part, effectively extending the sorted subarray.
+
+4. **Iterative Process:**
+   - The above steps are repeated for the remaining unsorted part of the array until the entire array is sorted.
+
 ```typescript
 function selectionSort(array: any[]) {
   for (let i = 0; i < array.length - 1; i++) {
