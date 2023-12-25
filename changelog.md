@@ -2,7 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
-# [0.0.50] - In progress
+# [0.0.51] - In progress
+
+
+# [0.0.50] - 2023-12-25
 * add Linear search in typescript
 * add Interval search in typescript
 * add Ternary search in typescript
