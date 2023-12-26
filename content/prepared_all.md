@@ -12,12 +12,9 @@
     - [Graph adjacency list](#graph-adjacency-list)
     - [Graph adjacency matrix](#graph-adjacency-matrix)
     - [Insertion sort](#insertion-sort)
-  - [TypeScript](#typescript)
-  - [Java](#java)
     - [Interpolation search](#interpolation-search)
     - [Linear search](#linear-search)
     - [Merge sort](#merge-sort)
-  - [Java](#java)
     - [Quick sort](#quick-sort)
     - [Selection sort](#selection-sort)
     - [Ternary search](#ternary-search)
@@ -1192,7 +1189,24 @@ public class Graph {
 
 ### Insertion sort
 
-## TypeScript
+
+Insertion Sort is a straightforward sorting algorithm that builds the sorted array one element at a time. It is much less efficient on large lists than more advanced algorithms such as quicksort, heapsort, or merge sort. However, it has some advantages: it is simple to implement, efficient for small datasets, and performs well for partially sorted arrays.
+
+**How Insertion Sort Works:**
+
+1. **Dividing the Array:**
+   - The algorithm starts with the first element of the array considered as the sorted part.
+
+2. **Inserting Elements:**
+   - For each element in the unsorted part of the array, Insertion Sort compares it with the elements in the sorted part.
+   - It then inserts the element into its correct position in the sorted part, shifting the other elements if necessary.
+
+3. **Iterative Process:**
+   - This process is repeated until all elements are sorted.
+
+**Time Complexity:**
+   - Insertion Sort has a time complexity of O(n^2) in the worst case, where 'n' is the number of elements in the array. Despite its quadratic time complexity, Insertion Sort is often more efficient on small datasets or partially sorted arrays compared to other quadratic sorting algorithms. It's also an in-place sorting algorithm, meaning it doesn't require additional memory.
+
 ```typescript
 function insertionSort(array: number[] | string[]) {
     for (let i = 1; i < array.length; i++) {
@@ -1209,7 +1223,6 @@ function insertionSort(array: number[] | string[]) {
 console.log(insertionSort([1, 4, 2, 8, 345, 123, 43, 32, 5643, 63, 123, 43, 2, 55, 1, 234, 92]));
 ```
 
-## Java
 ```java
     class Solution {
         void insertionSort (int[] arr) {
@@ -1315,7 +1328,21 @@ function linearSearch(arr: number[], target: number): number {
 
 
 
-## Java
+Merge Sort is a comparison-based sorting algorithm that follows the divide-and-conquer paradigm. It works by dividing the unsorted array into 'n' sub-arrays, each containing one element. It then repeatedly merges these sub-arrays to produce new sorted sub-arrays until there is only one sub-array remaining – the fully sorted array.
+
+**How Merge Sort Works:**
+
+1. **Divide:**
+   - The unsorted array is recursively divided into two halves until each sub-array contains only one element. This is the base case of the recursion.
+
+2. **Conquer:**
+   - The adjacent sub-arrays are then recursively merged to produce new sorted sub-arrays. This process continues until there is only one sub-array remaining – the fully sorted array.
+
+3. **Merge:**
+   - The key operation in Merge Sort is the merging of two sorted sub-arrays to produce a single, sorted sub-array. This involves comparing elements from the two sub-arrays and placing them in the correct order.
+
+**Time Complexity:**
+   - Merge Sort has a consistent time complexity of O(n log n) in all cases, where 'n' is the number of elements in the array. It is a stable sorting algorithm, meaning that equal elements maintain their relative order in the sorted output. While Merge Sort has a slightly higher space complexity due to the need for additional memory, its stability and predictable performance make it a widely used and reliable sorting algorithm.
 
 ```java
 class Solution {
@@ -1404,6 +1431,22 @@ function merge(left: number[], right: number[]): number[] {
 ### Quick sort
 
 
+
+Quick Sort is an efficient, comparison-based sorting algorithm that follows the divide-and-conquer paradigm. It works by selecting a "pivot" element from the array and partitioning the other elements into two sub-arrays according to whether they are less than or greater than the pivot. The sub-arrays are then recursively sorted.
+
+**How Quick Sort Works:**
+
+1. **Choosing a Pivot:**
+   - The algorithm selects a pivot element from the array. The choice of pivot can affect the efficiency of the algorithm.
+
+2. **Partitioning:**
+   - Elements smaller than the pivot are moved to its left, and elements greater than the pivot are moved to its right. The pivot is now in its final sorted position.
+
+3. **Recursive Sorting:**
+   - The algorithm is applied recursively to the sub-arrays on the left and right of the pivot until the entire array is sorted.
+
+**Time Complexity:**
+   - Quick Sort has an average and best-case time complexity of O(n log n), where 'n' is the number of elements in the array. In the worst case, it is O(n^2), but this is rare when a good pivot selection strategy is used. Quick Sort is often faster in practice than other O(n log n) algorithms, and it is widely used in various applications due to its efficiency.
 
 ```java
 class Solution {

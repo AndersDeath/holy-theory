@@ -797,7 +797,30 @@ graph.<span class="hljs-title function_">addEdge</span>(<span class="hljs-number
 }
 </code></pre><h3>Insertion sort</h3>
 <h1 id="insertion-sort">Insertion sort</h1>
-<h2 id="typescript">TypeScript</h2>
+<p>Insertion Sort is a straightforward sorting algorithm that builds the sorted array one element at a time. It is much less efficient on large lists than more advanced algorithms such as quicksort, heapsort, or merge sort. However, it has some advantages: it is simple to implement, efficient for small datasets, and performs well for partially sorted arrays.</p>
+<p><strong>How Insertion Sort Works:</strong></p>
+<ol>
+<li><p><strong>Dividing the Array:</strong></p>
+<ul>
+<li>The algorithm starts with the first element of the array considered as the sorted part.</li>
+</ul>
+</li>
+<li><p><strong>Inserting Elements:</strong></p>
+<ul>
+<li>For each element in the unsorted part of the array, Insertion Sort compares it with the elements in the sorted part.</li>
+<li>It then inserts the element into its correct position in the sorted part, shifting the other elements if necessary.</li>
+</ul>
+</li>
+<li><p><strong>Iterative Process:</strong></p>
+<ul>
+<li>This process is repeated until all elements are sorted.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Time Complexity:</strong></p>
+<ul>
+<li>Insertion Sort has a time complexity of O(n^2) in the worst case, where &#39;n&#39; is the number of elements in the array. Despite its quadratic time complexity, Insertion Sort is often more efficient on small datasets or partially sorted arrays compared to other quadratic sorting algorithms. It&#39;s also an in-place sorting algorithm, meaning it doesn&#39;t require additional memory.</li>
+</ul>
 <pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">insertionSort</span>(<span class="hljs-params">array: <span class="hljs-built_in">number</span>[] | <span class="hljs-built_in">string</span>[]</span>) {
     <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">1</span>; i &lt; array.<span class="hljs-property">length</span>; i++) {
         <span class="hljs-keyword">let</span> curr = array[i];
@@ -811,8 +834,7 @@ graph.<span class="hljs-title function_">addEdge</span>(<span class="hljs-number
 }
 
 <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-title function_">insertionSort</span>([<span class="hljs-number">1</span>, <span class="hljs-number">4</span>, <span class="hljs-number">2</span>, <span class="hljs-number">8</span>, <span class="hljs-number">345</span>, <span class="hljs-number">123</span>, <span class="hljs-number">43</span>, <span class="hljs-number">32</span>, <span class="hljs-number">5643</span>, <span class="hljs-number">63</span>, <span class="hljs-number">123</span>, <span class="hljs-number">43</span>, <span class="hljs-number">2</span>, <span class="hljs-number">55</span>, <span class="hljs-number">1</span>, <span class="hljs-number">234</span>, <span class="hljs-number">92</span>]));
-</code></pre><h2 id="java">Java</h2>
-<pre><code class="hljs language-java">    <span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {
+</code></pre><pre><code class="hljs language-java">    <span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {
         <span class="hljs-keyword">void</span> <span class="hljs-title function_">insertionSort</span> <span class="hljs-params">(<span class="hljs-type">int</span>[] arr)</span> {
             <span class="hljs-type">int</span> <span class="hljs-variable">n</span> <span class="hljs-operator">=</span> arr.length;
             <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">1</span>; i &lt; n; i++) {
@@ -902,7 +924,29 @@ graph.<span class="hljs-title function_">addEdge</span>(<span class="hljs-number
 }
 </code></pre><h3>Merge sort</h3>
 <h1 id="merge-sort">Merge sort</h1>
-<h2 id="java">Java</h2>
+<p>Merge Sort is a comparison-based sorting algorithm that follows the divide-and-conquer paradigm. It works by dividing the unsorted array into &#39;n&#39; sub-arrays, each containing one element. It then repeatedly merges these sub-arrays to produce new sorted sub-arrays until there is only one sub-array remaining – the fully sorted array.</p>
+<p><strong>How Merge Sort Works:</strong></p>
+<ol>
+<li><p><strong>Divide:</strong></p>
+<ul>
+<li>The unsorted array is recursively divided into two halves until each sub-array contains only one element. This is the base case of the recursion.</li>
+</ul>
+</li>
+<li><p><strong>Conquer:</strong></p>
+<ul>
+<li>The adjacent sub-arrays are then recursively merged to produce new sorted sub-arrays. This process continues until there is only one sub-array remaining – the fully sorted array.</li>
+</ul>
+</li>
+<li><p><strong>Merge:</strong></p>
+<ul>
+<li>The key operation in Merge Sort is the merging of two sorted sub-arrays to produce a single, sorted sub-array. This involves comparing elements from the two sub-arrays and placing them in the correct order.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Time Complexity:</strong></p>
+<ul>
+<li>Merge Sort has a consistent time complexity of O(n log n) in all cases, where &#39;n&#39; is the number of elements in the array. It is a stable sorting algorithm, meaning that equal elements maintain their relative order in the sorted output. While Merge Sort has a slightly higher space complexity due to the need for additional memory, its stability and predictable performance make it a widely used and reliable sorting algorithm.</li>
+</ul>
 <pre><code class="hljs language-java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {
 
     <span class="hljs-keyword">void</span> <span class="hljs-title function_">merge</span><span class="hljs-params">(<span class="hljs-type">int</span>[] arr, <span class="hljs-type">int</span> low, <span class="hljs-type">int</span> mid, <span class="hljs-type">int</span> high)</span> {
@@ -983,6 +1027,29 @@ graph.<span class="hljs-title function_">addEdge</span>(<span class="hljs-number
 }
 </code></pre><h3>Quick sort</h3>
 <h1 id="quicksort">Quicksort</h1>
+<p>Quick Sort is an efficient, comparison-based sorting algorithm that follows the divide-and-conquer paradigm. It works by selecting a &quot;pivot&quot; element from the array and partitioning the other elements into two sub-arrays according to whether they are less than or greater than the pivot. The sub-arrays are then recursively sorted.</p>
+<p><strong>How Quick Sort Works:</strong></p>
+<ol>
+<li><p><strong>Choosing a Pivot:</strong></p>
+<ul>
+<li>The algorithm selects a pivot element from the array. The choice of pivot can affect the efficiency of the algorithm.</li>
+</ul>
+</li>
+<li><p><strong>Partitioning:</strong></p>
+<ul>
+<li>Elements smaller than the pivot are moved to its left, and elements greater than the pivot are moved to its right. The pivot is now in its final sorted position.</li>
+</ul>
+</li>
+<li><p><strong>Recursive Sorting:</strong></p>
+<ul>
+<li>The algorithm is applied recursively to the sub-arrays on the left and right of the pivot until the entire array is sorted.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Time Complexity:</strong></p>
+<ul>
+<li>Quick Sort has an average and best-case time complexity of O(n log n), where &#39;n&#39; is the number of elements in the array. In the worst case, it is O(n^2), but this is rare when a good pivot selection strategy is used. Quick Sort is often faster in practice than other O(n log n) algorithms, and it is widely used in various applications due to its efficiency.</li>
+</ul>
 <pre><code class="hljs language-java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {
 
     <span class="hljs-type">int</span> <span class="hljs-title function_">makePartition</span><span class="hljs-params">(<span class="hljs-type">int</span> [] arr, <span class="hljs-type">int</span> low, <span class="hljs-type">int</span> high)</span> {

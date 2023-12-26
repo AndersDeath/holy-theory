@@ -24,7 +24,29 @@
   </head>
   <body>
       <div class="content"><h1 id="merge-sort">Merge sort</h1>
-<h2 id="java">Java</h2>
+<p>Merge Sort is a comparison-based sorting algorithm that follows the divide-and-conquer paradigm. It works by dividing the unsorted array into &#39;n&#39; sub-arrays, each containing one element. It then repeatedly merges these sub-arrays to produce new sorted sub-arrays until there is only one sub-array remaining – the fully sorted array.</p>
+<p><strong>How Merge Sort Works:</strong></p>
+<ol>
+<li><p><strong>Divide:</strong></p>
+<ul>
+<li>The unsorted array is recursively divided into two halves until each sub-array contains only one element. This is the base case of the recursion.</li>
+</ul>
+</li>
+<li><p><strong>Conquer:</strong></p>
+<ul>
+<li>The adjacent sub-arrays are then recursively merged to produce new sorted sub-arrays. This process continues until there is only one sub-array remaining – the fully sorted array.</li>
+</ul>
+</li>
+<li><p><strong>Merge:</strong></p>
+<ul>
+<li>The key operation in Merge Sort is the merging of two sorted sub-arrays to produce a single, sorted sub-array. This involves comparing elements from the two sub-arrays and placing them in the correct order.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Time Complexity:</strong></p>
+<ul>
+<li>Merge Sort has a consistent time complexity of O(n log n) in all cases, where &#39;n&#39; is the number of elements in the array. It is a stable sorting algorithm, meaning that equal elements maintain their relative order in the sorted output. While Merge Sort has a slightly higher space complexity due to the need for additional memory, its stability and predictable performance make it a widely used and reliable sorting algorithm.</li>
+</ul>
 <pre><code class="hljs language-java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {
 
     <span class="hljs-keyword">void</span> <span class="hljs-title function_">merge</span><span class="hljs-params">(<span class="hljs-type">int</span>[] arr, <span class="hljs-type">int</span> low, <span class="hljs-type">int</span> mid, <span class="hljs-type">int</span> high)</span> {
