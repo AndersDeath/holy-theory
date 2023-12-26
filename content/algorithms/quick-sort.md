@@ -7,6 +7,22 @@ sort: 400
 
 # Quicksort
 
+Quick Sort is an efficient, comparison-based sorting algorithm that follows the divide-and-conquer paradigm. It works by selecting a "pivot" element from the array and partitioning the other elements into two sub-arrays according to whether they are less than or greater than the pivot. The sub-arrays are then recursively sorted.
+
+**How Quick Sort Works:**
+
+1. **Choosing a Pivot:**
+   - The algorithm selects a pivot element from the array. The choice of pivot can affect the efficiency of the algorithm.
+
+2. **Partitioning:**
+   - Elements smaller than the pivot are moved to its left, and elements greater than the pivot are moved to its right. The pivot is now in its final sorted position.
+
+3. **Recursive Sorting:**
+   - The algorithm is applied recursively to the sub-arrays on the left and right of the pivot until the entire array is sorted.
+
+**Time Complexity:**
+   - Quick Sort has an average and best-case time complexity of O(n log n), where 'n' is the number of elements in the array. In the worst case, it is O(n^2), but this is rare when a good pivot selection strategy is used. Quick Sort is often faster in practice than other O(n log n) algorithms, and it is widely used in various applications due to its efficiency.
+
 ```java
 class Solution {
 
