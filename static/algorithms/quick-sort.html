@@ -24,6 +24,29 @@
   </head>
   <body>
       <div class="content"><h1 id="quicksort">Quicksort</h1>
+<p>Quick Sort is an efficient, comparison-based sorting algorithm that follows the divide-and-conquer paradigm. It works by selecting a &quot;pivot&quot; element from the array and partitioning the other elements into two sub-arrays according to whether they are less than or greater than the pivot. The sub-arrays are then recursively sorted.</p>
+<p><strong>How Quick Sort Works:</strong></p>
+<ol>
+<li><p><strong>Choosing a Pivot:</strong></p>
+<ul>
+<li>The algorithm selects a pivot element from the array. The choice of pivot can affect the efficiency of the algorithm.</li>
+</ul>
+</li>
+<li><p><strong>Partitioning:</strong></p>
+<ul>
+<li>Elements smaller than the pivot are moved to its left, and elements greater than the pivot are moved to its right. The pivot is now in its final sorted position.</li>
+</ul>
+</li>
+<li><p><strong>Recursive Sorting:</strong></p>
+<ul>
+<li>The algorithm is applied recursively to the sub-arrays on the left and right of the pivot until the entire array is sorted.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Time Complexity:</strong></p>
+<ul>
+<li>Quick Sort has an average and best-case time complexity of O(n log n), where &#39;n&#39; is the number of elements in the array. In the worst case, it is O(n^2), but this is rare when a good pivot selection strategy is used. Quick Sort is often faster in practice than other O(n log n) algorithms, and it is widely used in various applications due to its efficiency.</li>
+</ul>
 <pre><code class="hljs language-java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {
 
     <span class="hljs-type">int</span> <span class="hljs-title function_">makePartition</span><span class="hljs-params">(<span class="hljs-type">int</span> [] arr, <span class="hljs-type">int</span> low, <span class="hljs-type">int</span> high)</span> {
