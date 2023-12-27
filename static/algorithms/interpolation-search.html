@@ -29,33 +29,35 @@
 <ol>
 <li><p><strong>Linear Interpolation:</strong></p>
 <ul>
-<li>Interpolation Search uses linear interpolation to estimate the likely position of the target value in the array.</li>
+<li>Interpolation Search utilizes linear interpolation to estimate the likely position of the target value in the array.</li>
 </ul>
 </li>
 <li><p><strong>Estimate Position:</strong></p>
 <ul>
-<li>Instead of uniformly dividing the search space, as in binary search, Interpolation Search estimates the probable position of the target based on its value relative to the minimum and maximum values in the array.</li>
+<li>Instead of evenly dividing the search space, as in binary search, Interpolation Search estimates the probable position of the target based on its value relative to the minimum and maximum values in the array.</li>
 </ul>
 </li>
-<li><p><strong>Calculate Position:</strong></p>
+<li><p><strong>Calculation of Position:</strong></p>
 <ul>
-<li>It calculates an estimate of the target&#39;s position using a formula: 
- [ \text{pos} = \text{low} + \left\lfloor \frac{(\text{target} - \text{arr}[\text{low}]) \times (\text{high} - \text{low})}{\text{arr}[\text{high}] - \text{arr}[\text{low}]} \right\rfloor ]
- Here, (\text{low}) and (\text{high}) represent the indices of the current search space.</li>
+<li>It calculates an estimate of the target&#39;s position by considering the relative location of the target with respect to the minimum and maximum values in the current search space.</li>
 </ul>
 </li>
 <li><p><strong>Refine Search:</strong></p>
 <ul>
-<li>Based on the calculated position, the algorithm narrows down the search space and repeats the process until the target is found or the search space is empty.</li>
+<li>Based on the calculated estimate, the algorithm narrows down the search space and repeats the process until the target is found or the search space is exhausted.</li>
 </ul>
 </li>
 </ol>
+<p><strong>Time Complexity:</strong></p>
+<ul>
+<li>The time complexity of Interpolation Search is (O(\log \log n)), assuming a uniformly distributed dataset. In cases of non-uniform distribution, the efficiency may degrade to (O(n)). This algorithm excels when data is evenly distributed, allowing for a more accurate estimation of the target&#39;s position.</li>
+</ul>
 <pre><code class="hljs language-java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {
-        
+
     <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-type">int</span> <span class="hljs-title function_">interpolationSearch</span><span class="hljs-params">(<span class="hljs-type">int</span>[] array, <span class="hljs-type">int</span> value)</span> {
         <span class="hljs-type">int</span> <span class="hljs-variable">low</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>;
         <span class="hljs-type">int</span> <span class="hljs-variable">high</span> <span class="hljs-operator">=</span> array.length - <span class="hljs-number">1</span>;
-        
+
         <span class="hljs-keyword">while</span>(value &gt;=array[low] &amp;&amp; value &lt;= array[high] &amp;&amp; low &lt;= high) {
             <span class="hljs-type">int</span> <span class="hljs-variable">probe</span> <span class="hljs-operator">=</span> low + (high - low) * (value - array[low]) / (array[high] - array[low]);
             <span class="hljs-keyword">if</span>(array[probe] == value) {
@@ -65,9 +67,9 @@
             } <span class="hljs-keyword">else</span> {
                 high = probe -<span class="hljs-number">1</span>;
             }
-            
+
         }
-        
+
         <span class="hljs-keyword">return</span> -<span class="hljs-number">1</span>;
     }
 
@@ -77,7 +79,8 @@
   <span class="hljs-keyword">let</span> high = array.<span class="hljs-property">length</span> - <span class="hljs-number">1</span>;
 
   <span class="hljs-keyword">while</span> (value &gt;= array[low] &amp;&amp; value &lt;= array[high] &amp;&amp; low &lt;= high) {
-    <span class="hljs-keyword">const</span> probe = low + ((high - low) * (value - array[low])) / (array[high] - array[low]);
+    <span class="hljs-keyword">const</span> probe =
+      low + ((high - low) * (value - array[low])) / (array[high] - array[low]);
     <span class="hljs-keyword">const</span> roundedProbe = <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">floor</span>(probe);
 
     <span class="hljs-keyword">if</span> (array[roundedProbe] === value) {
