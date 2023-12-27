@@ -24,6 +24,29 @@
   </head>
   <body>
       <div class="content"><h1 id="linear-search">Linear search</h1>
+<p>Linear Search, also known as sequential search, is a simple searching algorithm that finds the position of a target value within a list or array. It works by iterating through the elements one by one until the target value is found or the entire list has been searched.</p>
+<p><strong>How Linear Search Works:</strong></p>
+<ol>
+<li><p><strong>Start at the Beginning:</strong></p>
+<ul>
+<li>Linear Search begins by looking at the first element in the list.</li>
+</ul>
+</li>
+<li><p><strong>Compare with Target:</strong></p>
+<ul>
+<li>It compares the current element with the target value that we are searching for.</li>
+</ul>
+</li>
+<li><p><strong>Search Iteratively:</strong></p>
+<ul>
+<li>If the current element is equal to the target value, the search is successful, and the index or position of the element is returned.</li>
+<li>If the current element is not equal to the target value, the search continues by moving to the next element in the list.</li>
+<li>This process is repeated until either the target value is found or the end of the list is reached.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Time Complexity:</strong></p>
+<p>The time complexity of Linear Search is O(n), where &#39;n&#39; is the number of elements in the array. In the worst case, the algorithm may need to iterate through the entire list to find the target value. While Linear Search is simple, it may not be the most efficient for large datasets, especially when compared to more advanced search algorithms like binary search on sorted lists. However, it is easy to understand and implement.</p>
 <pre><code class="hljs language-typescript">
 <span class="hljs-keyword">function</span> <span class="hljs-title function_">linearSearch</span>(<span class="hljs-params">arr: <span class="hljs-built_in">number</span>[], target: <span class="hljs-built_in">number</span></span>): <span class="hljs-built_in">number</span> {
   <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; arr.<span class="hljs-property">length</span>; i++) {

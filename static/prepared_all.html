@@ -850,12 +850,40 @@ graph.<span class="hljs-title function_">addEdge</span>(<span class="hljs-number
     }
 </code></pre><h3>Interpolation search</h3>
 <h1 id="interpolation-search">Interpolation search</h1>
+<p>Interpolation Search is a an algorithm designed for finding a specific target value in a sorted array. Unlike linear or binary search, this algorithm utilizes the characteristics of the data distribution to make more informed decisions about where to look for the target. It is particularly effective when the data has a uniform distribution.</p>
+<p><strong>How Interpolation Search Works:</strong></p>
+<ol>
+<li><p><strong>Linear Interpolation:</strong></p>
+<ul>
+<li>Interpolation Search utilizes linear interpolation to estimate the likely position of the target value in the array.</li>
+</ul>
+</li>
+<li><p><strong>Estimate Position:</strong></p>
+<ul>
+<li>Instead of evenly dividing the search space, as in binary search, Interpolation Search estimates the probable position of the target based on its value relative to the minimum and maximum values in the array.</li>
+</ul>
+</li>
+<li><p><strong>Calculation of Position:</strong></p>
+<ul>
+<li>It calculates an estimate of the target&#39;s position by considering the relative location of the target with respect to the minimum and maximum values in the current search space.</li>
+</ul>
+</li>
+<li><p><strong>Refine Search:</strong></p>
+<ul>
+<li>Based on the calculated estimate, the algorithm narrows down the search space and repeats the process until the target is found or the search space is exhausted.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Time Complexity:</strong></p>
+<ul>
+<li>The time complexity of Interpolation Search is (O(\log \log n)), assuming a uniformly distributed dataset. In cases of non-uniform distribution, the efficiency may degrade to (O(n)). This algorithm excels when data is evenly distributed, allowing for a more accurate estimation of the target&#39;s position.</li>
+</ul>
 <pre><code class="hljs language-java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {
-        
+
     <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-type">int</span> <span class="hljs-title function_">interpolationSearch</span><span class="hljs-params">(<span class="hljs-type">int</span>[] array, <span class="hljs-type">int</span> value)</span> {
         <span class="hljs-type">int</span> <span class="hljs-variable">low</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>;
         <span class="hljs-type">int</span> <span class="hljs-variable">high</span> <span class="hljs-operator">=</span> array.length - <span class="hljs-number">1</span>;
-        
+
         <span class="hljs-keyword">while</span>(value &gt;=array[low] &amp;&amp; value &lt;= array[high] &amp;&amp; low &lt;= high) {
             <span class="hljs-type">int</span> <span class="hljs-variable">probe</span> <span class="hljs-operator">=</span> low + (high - low) * (value - array[low]) / (array[high] - array[low]);
             <span class="hljs-keyword">if</span>(array[probe] == value) {
@@ -865,9 +893,9 @@ graph.<span class="hljs-title function_">addEdge</span>(<span class="hljs-number
             } <span class="hljs-keyword">else</span> {
                 high = probe -<span class="hljs-number">1</span>;
             }
-            
+
         }
-        
+
         <span class="hljs-keyword">return</span> -<span class="hljs-number">1</span>;
     }
 
@@ -877,7 +905,8 @@ graph.<span class="hljs-title function_">addEdge</span>(<span class="hljs-number
   <span class="hljs-keyword">let</span> high = array.<span class="hljs-property">length</span> - <span class="hljs-number">1</span>;
 
   <span class="hljs-keyword">while</span> (value &gt;= array[low] &amp;&amp; value &lt;= array[high] &amp;&amp; low &lt;= high) {
-    <span class="hljs-keyword">const</span> probe = low + ((high - low) * (value - array[low])) / (array[high] - array[low]);
+    <span class="hljs-keyword">const</span> probe =
+      low + ((high - low) * (value - array[low])) / (array[high] - array[low]);
     <span class="hljs-keyword">const</span> roundedProbe = <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">floor</span>(probe);
 
     <span class="hljs-keyword">if</span> (array[roundedProbe] === value) {
@@ -893,6 +922,37 @@ graph.<span class="hljs-title function_">addEdge</span>(<span class="hljs-number
 }
 </code></pre><h3>Interval search</h3>
 <h1 id="interval-search">Interval search</h1>
+<p>An interval search algorithm typically refers to searching for overlapping or containing intervals in a collection of intervals. One common approach for this task is to use an interval tree. Here&#39;s an explanation of the Interval Search algorithm using an interval tree:</p>
+<p><strong>How Interval Search Works:</strong></p>
+<ol>
+<li><p><strong>Construct the Interval Tree:</strong></p>
+<ul>
+<li>Begin by constructing an interval tree from the given set of intervals.</li>
+<li>Each node in the interval tree represents an interval, and the tree is recursively built to efficiently organize and store these intervals.</li>
+</ul>
+</li>
+<li><p><strong>Search for Overlapping Intervals:</strong></p>
+<ul>
+<li>When searching for intervals that overlap with a given interval (query interval), start at the root of the interval tree.</li>
+</ul>
+</li>
+<li><p><strong>Traverse the Tree:</strong></p>
+<ul>
+<li>Traverse the tree, comparing the query interval with the intervals represented by each node.</li>
+<li>If there is an overlap, the algorithm can either return the overlapping interval(s) immediately or continue searching in both left and right subtrees.</li>
+</ul>
+</li>
+<li><p><strong>Recursive Search:</strong></p>
+<ul>
+<li>Recursively search in the left or right subtree based on the relationship between the query interval and the intervals represented by the current node.</li>
+<li>Continue this process until all potential overlapping intervals are found.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Time Complexity:</strong></p>
+<ul>
+<li>The time complexity of searching for overlapping intervals using an interval tree is typically O(log n + k), where &#39;n&#39; is the number of intervals in the tree and &#39;k&#39; is the number of intervals overlapping with the query interval. The construction of the interval tree initially takes O(n log n) time, but subsequent searches are more efficient. Interval trees are particularly useful when there are many queries for overlapping intervals in a set.</li>
+</ul>
 <pre><code class="hljs language-typescript">
 <span class="hljs-keyword">type</span> <span class="hljs-title class_">Interval</span> = [<span class="hljs-built_in">number</span>, <span class="hljs-built_in">number</span>];
 
@@ -912,6 +972,29 @@ graph.<span class="hljs-title function_">addEdge</span>(<span class="hljs-number
 }
 </code></pre><h3>Linear search</h3>
 <h1 id="linear-search">Linear search</h1>
+<p>Linear Search, also known as sequential search, is a simple searching algorithm that finds the position of a target value within a list or array. It works by iterating through the elements one by one until the target value is found or the entire list has been searched.</p>
+<p><strong>How Linear Search Works:</strong></p>
+<ol>
+<li><p><strong>Start at the Beginning:</strong></p>
+<ul>
+<li>Linear Search begins by looking at the first element in the list.</li>
+</ul>
+</li>
+<li><p><strong>Compare with Target:</strong></p>
+<ul>
+<li>It compares the current element with the target value that we are searching for.</li>
+</ul>
+</li>
+<li><p><strong>Search Iteratively:</strong></p>
+<ul>
+<li>If the current element is equal to the target value, the search is successful, and the index or position of the element is returned.</li>
+<li>If the current element is not equal to the target value, the search continues by moving to the next element in the list.</li>
+<li>This process is repeated until either the target value is found or the end of the list is reached.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Time Complexity:</strong></p>
+<p>The time complexity of Linear Search is O(n), where &#39;n&#39; is the number of elements in the array. In the worst case, the algorithm may need to iterate through the entire list to find the target value. While Linear Search is simple, it may not be the most efficient for large datasets, especially when compared to more advanced search algorithms like binary search on sorted lists. However, it is easy to understand and implement.</p>
 <pre><code class="hljs language-typescript">
 <span class="hljs-keyword">function</span> <span class="hljs-title function_">linearSearch</span>(<span class="hljs-params">arr: <span class="hljs-built_in">number</span>[], target: <span class="hljs-built_in">number</span></span>): <span class="hljs-built_in">number</span> {
   <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; arr.<span class="hljs-property">length</span>; i++) {
@@ -1212,6 +1295,36 @@ graph.<span class="hljs-title function_">addEdge</span>(<span class="hljs-number
 <span class="hljs-built_in">print</span>(selection_sort([<span class="hljs-number">5</span>,<span class="hljs-number">4</span>,<span class="hljs-number">6</span>,<span class="hljs-number">2</span>,<span class="hljs-number">1</span>,<span class="hljs-number">123</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>,<span class="hljs-number">1</span>,<span class="hljs-number">23</span> ,<span class="hljs-number">1</span>,<span class="hljs-number">1</span>,]))
 </code></pre><h3>Ternary search</h3>
 <h1 id="ternary-search">Ternary search</h1>
+<p>Ternary Search is a divide-and-conquer algorithm designed for efficiently finding the position of a target value in a sorted array. It operates by dividing the array into three parts and recursively narrowing down the search space until the target is found or determined to be absent.</p>
+<p><strong>How Ternary Search Works:</strong></p>
+<ol>
+<li><p><strong>Divide the Array:</strong></p>
+<ul>
+<li>Ternary Search starts by dividing the sorted array into three parts.</li>
+</ul>
+</li>
+<li><p><strong>Compare with the Target:</strong></p>
+<ul>
+<li>It then compares the target value with the elements at two points within the array, dividing it into three segments.</li>
+<li>If the target is found at one of these points, the search is successful.</li>
+</ul>
+</li>
+<li><p><strong>Determine Search Space:</strong></p>
+<ul>
+<li>Based on the comparisons, Ternary Search identifies whether the target lies in the first, second, or third segment of the array.</li>
+</ul>
+</li>
+<li><p><strong>Recursive Search:</strong></p>
+<ul>
+<li>The algorithm then recursively applies the same process to the identified segment.</li>
+<li>This recursion continues until the target is found or the search space is reduced to an empty array, indicating that the target is not present.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Time Complexity:</strong></p>
+<ul>
+<li>Ternary Search has a time complexity of O(log₃ n), where &#39;n&#39; is the size of the array. This is an improvement over binary search when the search space can be significantly reduced at each step. However, it&#39;s worth noting that constant factors play a role, and in practice, binary search might be faster for smaller datasets due to simpler arithmetic operations. Ternary Search is particularly beneficial when the dataset is large and the search space can be significantly reduced with each iteration.</li>
+</ul>
 <pre><code class="hljs language-typescript">
 <span class="hljs-keyword">function</span> <span class="hljs-title function_">ternarySearch</span>(<span class="hljs-params">func: (x: <span class="hljs-built_in">number</span>) =&gt; <span class="hljs-built_in">number</span>, left: <span class="hljs-built_in">number</span>, right: <span class="hljs-built_in">number</span>, epsilon: <span class="hljs-built_in">number</span></span>): <span class="hljs-built_in">number</span> {
   <span class="hljs-keyword">while</span> (right - left &gt; epsilon) {

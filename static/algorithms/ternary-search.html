@@ -24,6 +24,36 @@
   </head>
   <body>
       <div class="content"><h1 id="ternary-search">Ternary search</h1>
+<p>Ternary Search is a divide-and-conquer algorithm designed for efficiently finding the position of a target value in a sorted array. It operates by dividing the array into three parts and recursively narrowing down the search space until the target is found or determined to be absent.</p>
+<p><strong>How Ternary Search Works:</strong></p>
+<ol>
+<li><p><strong>Divide the Array:</strong></p>
+<ul>
+<li>Ternary Search starts by dividing the sorted array into three parts.</li>
+</ul>
+</li>
+<li><p><strong>Compare with the Target:</strong></p>
+<ul>
+<li>It then compares the target value with the elements at two points within the array, dividing it into three segments.</li>
+<li>If the target is found at one of these points, the search is successful.</li>
+</ul>
+</li>
+<li><p><strong>Determine Search Space:</strong></p>
+<ul>
+<li>Based on the comparisons, Ternary Search identifies whether the target lies in the first, second, or third segment of the array.</li>
+</ul>
+</li>
+<li><p><strong>Recursive Search:</strong></p>
+<ul>
+<li>The algorithm then recursively applies the same process to the identified segment.</li>
+<li>This recursion continues until the target is found or the search space is reduced to an empty array, indicating that the target is not present.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Time Complexity:</strong></p>
+<ul>
+<li>Ternary Search has a time complexity of O(log₃ n), where &#39;n&#39; is the size of the array. This is an improvement over binary search when the search space can be significantly reduced at each step. However, it&#39;s worth noting that constant factors play a role, and in practice, binary search might be faster for smaller datasets due to simpler arithmetic operations. Ternary Search is particularly beneficial when the dataset is large and the search space can be significantly reduced with each iteration.</li>
+</ul>
 <pre><code class="hljs language-typescript">
 <span class="hljs-keyword">function</span> <span class="hljs-title function_">ternarySearch</span>(<span class="hljs-params">func: (x: <span class="hljs-built_in">number</span>) =&gt; <span class="hljs-built_in">number</span>, left: <span class="hljs-built_in">number</span>, right: <span class="hljs-built_in">number</span>, epsilon: <span class="hljs-built_in">number</span></span>): <span class="hljs-built_in">number</span> {
   <span class="hljs-keyword">while</span> (right - left &gt; epsilon) {

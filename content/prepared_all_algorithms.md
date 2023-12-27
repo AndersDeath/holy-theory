@@ -421,6 +421,25 @@ function merge(left: number[], right: number[]): number[] {
 # Linear search
 
 
+Linear Search, also known as sequential search, is a simple searching algorithm that finds the position of a target value within a list or array. It works by iterating through the elements one by one until the target value is found or the entire list has been searched.
+
+**How Linear Search Works:**
+
+1. **Start at the Beginning:**
+   - Linear Search begins by looking at the first element in the list.
+
+2. **Compare with Target:**
+   - It compares the current element with the target value that we are searching for.
+
+3. **Search Iteratively:**
+   - If the current element is equal to the target value, the search is successful, and the index or position of the element is returned.
+   - If the current element is not equal to the target value, the search continues by moving to the next element in the list.
+   - This process is repeated until either the target value is found or the end of the list is reached.
+
+**Time Complexity:**
+
+The time complexity of Linear Search is O(n), where 'n' is the number of elements in the array. In the worst case, the algorithm may need to iterate through the entire list to find the target value. While Linear Search is simple, it may not be the most efficient for large datasets, especially when compared to more advanced search algorithms like binary search on sorted lists. However, it is easy to understand and implement.
+
 ```typescript
 
 function linearSearch(arr: number[], target: number): number {
@@ -438,6 +457,28 @@ function linearSearch(arr: number[], target: number): number {
 
 # Interval search
 
+
+An interval search algorithm typically refers to searching for overlapping or containing intervals in a collection of intervals. One common approach for this task is to use an interval tree. Here's an explanation of the Interval Search algorithm using an interval tree:
+
+**How Interval Search Works:**
+
+1. **Construct the Interval Tree:**
+   - Begin by constructing an interval tree from the given set of intervals.
+   - Each node in the interval tree represents an interval, and the tree is recursively built to efficiently organize and store these intervals.
+
+2. **Search for Overlapping Intervals:**
+   - When searching for intervals that overlap with a given interval (query interval), start at the root of the interval tree.
+
+3. **Traverse the Tree:**
+   - Traverse the tree, comparing the query interval with the intervals represented by each node.
+   - If there is an overlap, the algorithm can either return the overlapping interval(s) immediately or continue searching in both left and right subtrees.
+
+4. **Recursive Search:**
+   - Recursively search in the left or right subtree based on the relationship between the query interval and the intervals represented by the current node.
+   - Continue this process until all potential overlapping intervals are found.
+
+**Time Complexity:**
+   - The time complexity of searching for overlapping intervals using an interval tree is typically O(log n + k), where 'n' is the number of intervals in the tree and 'k' is the number of intervals overlapping with the query interval. The construction of the interval tree initially takes O(n log n) time, but subsequent searches are more efficient. Interval trees are particularly useful when there are many queries for overlapping intervals in a set.
 
 ```typescript
 
@@ -610,6 +651,28 @@ DiffieHellman()
 # Ternary search
 
 
+Ternary Search is a divide-and-conquer algorithm designed for efficiently finding the position of a target value in a sorted array. It operates by dividing the array into three parts and recursively narrowing down the search space until the target is found or determined to be absent.
+
+**How Ternary Search Works:**
+
+1. **Divide the Array:**
+   - Ternary Search starts by dividing the sorted array into three parts.
+
+2. **Compare with the Target:**
+   - It then compares the target value with the elements at two points within the array, dividing it into three segments.
+   - If the target is found at one of these points, the search is successful.
+
+3. **Determine Search Space:**
+   - Based on the comparisons, Ternary Search identifies whether the target lies in the first, second, or third segment of the array.
+
+4. **Recursive Search:**
+   - The algorithm then recursively applies the same process to the identified segment.
+   - This recursion continues until the target is found or the search space is reduced to an empty array, indicating that the target is not present.
+
+
+**Time Complexity:**
+   - Ternary Search has a time complexity of O(log₃ n), where 'n' is the size of the array. This is an improvement over binary search when the search space can be significantly reduced at each step. However, it's worth noting that constant factors play a role, and in practice, binary search might be faster for smaller datasets due to simpler arithmetic operations. Ternary Search is particularly beneficial when the dataset is large and the search space can be significantly reduced with each iteration.
+
 ```typescript
 
 function ternarySearch(func: (x: number) => number, left: number, right: number, epsilon: number): number {
@@ -636,13 +699,37 @@ function ternarySearch(func: (x: number) => number, left: number, right: number,
 # Interpolation search
 
 
+
+Interpolation Search is a an algorithm designed for finding a specific target value in a sorted array. Unlike linear or binary search, this algorithm utilizes the characteristics of the data distribution to make more informed decisions about where to look for the target. It is particularly effective when the data has a uniform distribution.
+
+**How Interpolation Search Works:**
+
+1. **Linear Interpolation:**
+
+   - Interpolation Search utilizes linear interpolation to estimate the likely position of the target value in the array.
+
+2. **Estimate Position:**
+
+   - Instead of evenly dividing the search space, as in binary search, Interpolation Search estimates the probable position of the target based on its value relative to the minimum and maximum values in the array.
+
+3. **Calculation of Position:**
+
+   - It calculates an estimate of the target's position by considering the relative location of the target with respect to the minimum and maximum values in the current search space.
+
+4. **Refine Search:**
+   - Based on the calculated estimate, the algorithm narrows down the search space and repeats the process until the target is found or the search space is exhausted.
+
+**Time Complexity:**
+
+- The time complexity of Interpolation Search is \(O(\log \log n)\), assuming a uniformly distributed dataset. In cases of non-uniform distribution, the efficiency may degrade to \(O(n)\). This algorithm excels when data is evenly distributed, allowing for a more accurate estimation of the target's position.
+
 ```java
 class Solution {
-    	
+
 	private static int interpolationSearch(int[] array, int value) {
 		int low = 0;
 		int high = array.length - 1;
-		
+
 		while(value >=array[low] && value <= array[high] && low <= high) {
 			int probe = low + (high - low) * (value - array[low]) / (array[high] - array[low]);
 			if(array[probe] == value) {
@@ -652,9 +739,9 @@ class Solution {
 			} else {
 				high = probe -1;
 			}
-			
+
 		}
-		
+
 		return -1;
 	}
 
@@ -667,7 +754,8 @@ function interpolationSearch(array: number[], value: number): number {
   let high = array.length - 1;
 
   while (value >= array[low] && value <= array[high] && low <= high) {
-    const probe = low + ((high - low) * (value - array[low])) / (array[high] - array[low]);
+    const probe =
+      low + ((high - low) * (value - array[low])) / (array[high] - array[low]);
     const roundedProbe = Math.floor(probe);
 
     if (array[roundedProbe] === value) {
@@ -682,6 +770,7 @@ function interpolationSearch(array: number[], value: number): number {
   return -1;
 }
 ```
+
 \newpage 
 
 # Breadth-first search
