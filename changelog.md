@@ -4,10 +4,11 @@ All notable changes to this project will be documented in this file.
 
 # [0.0.51] - In progress
 * add description for insertion sort
-* add description to quicksort
+* add description for quicksort
 * add description for Merge sort
 * add description for linear search
-* add description of interval search
+* add description for interval search
+* add description for ternary search
 
 # [0.0.50] - 2023-12-25
 * add Linear search in typescript
