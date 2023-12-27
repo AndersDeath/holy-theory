@@ -21,6 +21,9 @@ Linear Search, also known as sequential search, is a simple searching algorithm 
    - If the current element is not equal to the target value, the search continues by moving to the next element in the list.
    - This process is repeated until either the target value is found or the end of the list is reached.
 
+**Time Complexity:**
+
+The time complexity of Linear Search is O(n), where 'n' is the number of elements in the array. In the worst case, the algorithm may need to iterate through the entire list to find the target value. While Linear Search is simple, it may not be the most efficient for large datasets, especially when compared to more advanced search algorithms like binary search on sorted lists. However, it is easy to understand and implement.
 
 ```typescript
 
