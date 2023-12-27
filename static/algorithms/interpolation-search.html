@@ -24,6 +24,32 @@
   </head>
   <body>
       <div class="content"><h1 id="interpolation-search">Interpolation search</h1>
+<p>Interpolation Search is a an algorithm designed for finding a specific target value in a sorted array. Unlike linear or binary search, this algorithm utilizes the characteristics of the data distribution to make more informed decisions about where to look for the target. It is particularly effective when the data has a uniform distribution.</p>
+<p><strong>How Interpolation Search Works:</strong></p>
+<ol>
+<li><p><strong>Linear Interpolation:</strong></p>
+<ul>
+<li>Interpolation Search uses linear interpolation to estimate the likely position of the target value in the array.</li>
+</ul>
+</li>
+<li><p><strong>Estimate Position:</strong></p>
+<ul>
+<li>Instead of uniformly dividing the search space, as in binary search, Interpolation Search estimates the probable position of the target based on its value relative to the minimum and maximum values in the array.</li>
+</ul>
+</li>
+<li><p><strong>Calculate Position:</strong></p>
+<ul>
+<li>It calculates an estimate of the target&#39;s position using a formula: 
+ [ \text{pos} = \text{low} + \left\lfloor \frac{(\text{target} - \text{arr}[\text{low}]) \times (\text{high} - \text{low})}{\text{arr}[\text{high}] - \text{arr}[\text{low}]} \right\rfloor ]
+ Here, (\text{low}) and (\text{high}) represent the indices of the current search space.</li>
+</ul>
+</li>
+<li><p><strong>Refine Search:</strong></p>
+<ul>
+<li>Based on the calculated position, the algorithm narrows down the search space and repeats the process until the target is found or the search space is empty.</li>
+</ul>
+</li>
+</ol>
 <pre><code class="hljs language-java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {
         
     <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-type">int</span> <span class="hljs-title function_">interpolationSearch</span><span class="hljs-params">(<span class="hljs-type">int</span>[] array, <span class="hljs-type">int</span> value)</span> {
