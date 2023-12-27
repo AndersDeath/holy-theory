@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file.
 * add description for insertion sort
 * add description to quicksort
 * add description for Merge sort
+* add description for linear search algorithm
 
 # [0.0.50] - 2023-12-25
 * add Linear search in typescript
