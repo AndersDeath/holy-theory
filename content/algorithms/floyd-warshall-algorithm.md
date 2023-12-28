@@ -7,6 +7,48 @@ sort: 1400
 
 # Floyd-Warshall algorithm
 
+The Floyd-Warshall Algorithm is a dynamic programming algorithm used to find the shortest paths between all pairs of vertices in a weighted graph. Unlike Dijkstra's algorithm and Bellman-Ford algorithm, Floyd-Warshall works with graphs that can have both positive and negative edge weights and can handle graphs with cycles. The algorithm iteratively updates the shortest path distances between all pairs until reaching the optimal solution.
+
+**How Floyd-Warshall Algorithm Works:**
+
+1. **Initialization:**
+
+   - Create a matrix to represent the distances between all pairs of vertices. Initialize the matrix with the direct edge weights and set the distances to infinity where there is no direct edge.
+   - Initialize the diagonal of the matrix to zeros since the distance from a vertex to itself is zero.
+
+2. **Iterative Updates:**
+
+   - For each vertex 'k', iterate through all pairs of vertices 'i' and 'j'.
+   - Check if the path from 'i' to 'j' through 'k' is shorter than the current known path from 'i' to 'j'.
+   - If yes, update the distance from 'i' to 'j' with the shorter path.
+
+3. **Repeat:**
+
+   - Repeat the process for all vertices as intermediate vertices ('k').
+   - After each iteration, the matrix reflects the shortest distances between all pairs of vertices considering all possible intermediate vertices.
+
+4. **Result:**
+   - The final matrix contains the shortest distances between all pairs of vertices.
+
+**Key Characteristics:**
+
+- **Dynamic Programming:**
+
+  - Floyd-Warshall is a dynamic programming algorithm that builds solutions to subproblems to solve the overall problem.
+
+- **Negative Cycles:**
+  - The algorithm can detect negative cycles in the graph. If there exists a negative cycle, the algorithm won't converge to a solution.
+
+**Applications:**
+
+- Network Routing.
+- Shortest Path Problems.
+- Traffic Engineering.
+
+**Time Complexity:**
+
+- The time complexity of Floyd-Warshall Algorithm is \(O(V^3)\), where \(V\) is the number of vertices in the graph.
+
 ```typescript
 class Graph {
   private adjacencyMatrix: number[][];
