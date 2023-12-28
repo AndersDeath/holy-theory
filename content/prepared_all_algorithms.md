@@ -671,7 +671,7 @@ Ternary Search is a divide-and-conquer algorithm designed for efficiently findin
 
 
 **Time Complexity:**
-   - Ternary Search has a time complexity of O(log₃ n), where 'n' is the size of the array. This is an improvement over binary search when the search space can be significantly reduced at each step. However, it's worth noting that constant factors play a role, and in practice, binary search might be faster for smaller datasets due to simpler arithmetic operations. Ternary Search is particularly beneficial when the dataset is large and the search space can be significantly reduced with each iteration.
+   - Ternary Search has a time complexity of O(log3 n), where 'n' is the size of the array. This is an improvement over binary search when the search space can be significantly reduced at each step. However, it's worth noting that constant factors play a role, and in practice, binary search might be faster for smaller datasets due to simpler arithmetic operations. Ternary Search is particularly beneficial when the dataset is large and the search space can be significantly reduced with each iteration.
 
 ```typescript
 
@@ -721,7 +721,7 @@ Interpolation Search is a an algorithm designed for finding a specific target va
 
 **Time Complexity:**
 
-- The time complexity of Interpolation Search is \(O(\log \log n)\), assuming a uniformly distributed dataset. In cases of non-uniform distribution, the efficiency may degrade to \(O(n)\). This algorithm excels when data is evenly distributed, allowing for a more accurate estimation of the target's position.
+The time complexity of Interpolation Search is O(log log n) on average, where "n" is the number of elements in the array. In the best case, it can be O(1), and in the worst case, it can be O(n). However, the average case is often more relevant, and it is O(log log n) under certain assumptions about the distribution of the data.
 
 ```java
 class Solution {
