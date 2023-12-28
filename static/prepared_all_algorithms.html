@@ -725,6 +725,60 @@ res = binary_search(my_list, <span class="hljs-number">3</span>)
 }
 </code></pre><p style="page-break-after: always;"> </p><h1>Breadth-first search</h1>
 <h1 id="breadth-first-search">Breadth-first search</h1>
+<p>Breadth-First Search (BFS) is a graph traversal algorithm that systematically explores all the vertices of a graph in breadthward motion, level by level. It starts at a chosen vertex and visits all its neighbors before moving on to their neighbors. BFS is commonly used to find the shortest path in an unweighted graph and to explore the structure of a graph.</p>
+<p><strong>How Breadth-First Search Works:</strong></p>
+<ol>
+<li><p><strong>Queue Initialization:</strong></p>
+<ul>
+<li>Begin by selecting a starting vertex and enqueue it into a queue.</li>
+</ul>
+</li>
+<li><p><strong>Explore Neighbors:</strong></p>
+<ul>
+<li>Dequeue a vertex from the front of the queue and explore all its neighbors.</li>
+<li>Enqueue any unvisited neighbors, marking them as visited to avoid duplication.</li>
+</ul>
+</li>
+<li><p><strong>Level-wise Exploration:</strong></p>
+<ul>
+<li>Continue the process level by level, exploring all vertices at the current level before moving on to the next level.</li>
+</ul>
+</li>
+<li><p><strong>Termination:</strong></p>
+<ul>
+<li>Repeat until the queue is empty, ensuring that all reachable vertices are visited.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Key Characteristics:</strong></p>
+<ul>
+<li><p><strong>FIFO Structure:</strong></p>
+<ul>
+<li>BFS uses a First-In-First-Out (FIFO) queue to maintain the order in which vertices are discovered and processed.</li>
+</ul>
+</li>
+<li><p><strong>Visited Marking:</strong></p>
+<ul>
+<li>To avoid revisiting vertices, mark each vertex as visited once it is dequeued from the queue.</li>
+</ul>
+</li>
+<li><p><strong>Shortest Path:</strong></p>
+<ul>
+<li>BFS guarantees that the shortest path to any reachable vertex is discovered first, making it valuable for pathfinding in unweighted graphs.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Applications:</strong></p>
+<ul>
+<li>Shortest Pathfinding.</li>
+<li>Connected Components.</li>
+<li>Web Crawling.</li>
+<li>Network Broadcasting.</li>
+</ul>
+<p><strong>Time Complexity:</strong></p>
+<ul>
+<li>The time complexity of BFS is (O(V + E)), where (V) is the number of vertices and (E) is the number of edges. The algorithm visits each vertex and edge once.</li>
+</ul>
 <pre><code class="hljs language-typescript"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Graph</span> {
   <span class="hljs-keyword">private</span> <span class="hljs-attr">adjacencyList</span>: <span class="hljs-title class_">Map</span>&lt;<span class="hljs-built_in">string</span>, <span class="hljs-built_in">string</span>[]&gt;;
 
