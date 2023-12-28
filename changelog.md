@@ -10,7 +10,7 @@ All notable changes to this project will be documented in this file.
 * add description for interval search
 * add description for ternary search
 * add description for interpolation search
-* 
+* add description for breadth first search
 
 # [0.0.50] - 2023-12-25
 * add Linear search in typescript
