@@ -12,6 +12,7 @@ All notable changes to this project will be documented in this file.
 * add description for interpolation search
 * add description for breadth first search
 * add description for depth first search
+* add description for dijkstra
 
 # [0.0.50] - 2023-12-25
 * add Linear search in typescript
