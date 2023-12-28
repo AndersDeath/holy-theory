@@ -558,51 +558,6 @@ my_list = [<span class="hljs-number">1</span>, <span class="hljs-number">3</span
 res = binary_search(my_list, <span class="hljs-number">3</span>)
 
 <span class="hljs-built_in">print</span>(my_list[res])
-</code></pre><p style="page-break-after: always;"> </p><h1>Diffie hellman algorithm</h1>
-<h1 id="diffie-hellman-algorithm">Diffie hellman algorithm</h1>
-<pre><code class="hljs language-javascript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">power</span>(<span class="hljs-params">a: any, b: any, p: any</span>) {
-    <span class="hljs-keyword">if</span>(b === <span class="hljs-number">1</span>) {
-        <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>
-    } <span class="hljs-keyword">else</span> {
-        <span class="hljs-keyword">return</span> <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">pow</span>(a,b) % p
-    }
-}
-
-
-<span class="hljs-keyword">function</span> <span class="hljs-title function_">DiffieHellman</span>(<span class="hljs-params"></span>) {
-
-    <span class="hljs-keyword">let</span> P, G, x, a, y, b, ka, kb;
-
-    P = <span class="hljs-number">23</span>
-
-    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&quot;The value of P :&quot;</span>, P);
-
-    G = <span class="hljs-number">9</span>;
-
-    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&quot;The value of G :&quot;</span>, G);
-
-    a = <span class="hljs-number">4</span>;
-
-    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&quot;The private key a for Alice : &quot;</span>, a);
-
-    x = <span class="hljs-title function_">power</span>(G,a,P);
-
-    b = <span class="hljs-number">3</span>;
-
-    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&quot;The private key a for Bob : &quot;</span>, b);
-
-    y = <span class="hljs-title function_">power</span>(G,b,P);
-
-
-    ka = <span class="hljs-title function_">power</span>(y, a, P);
-    kb = <span class="hljs-title function_">power</span>(x, b, P);
-
-    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&quot;Secret key for the Alice is : &quot;</span>, ka);
-    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&quot;Secret key for the Bob is : &quot;</span>, kb);
-}
-
-
-<span class="hljs-title class_">DiffieHellman</span>()
 </code></pre><p style="page-break-after: always;"> </p><h1>Ternary search</h1>
 <h1 id="ternary-search">Ternary search</h1>
 <p>Ternary Search is a divide-and-conquer algorithm designed for efficiently finding the position of a target value in a sorted array. It operates by dividing the array into three parts and recursively narrowing down the search space until the target is found or determined to be absent.</p>
@@ -833,6 +788,65 @@ graph.<span class="hljs-title function_">addEdge</span>(<span class="hljs-string
 graph.<span class="hljs-title function_">bfs</span>(<span class="hljs-string">&quot;A&quot;</span>);
 </code></pre><p style="page-break-after: always;"> </p><h1>Depth-first search</h1>
 <h1 id="depth-first-search">Depth-first search</h1>
+<p>Depth-First Search (DFS) is a graph traversal algorithm that systematically explores the vertices of a graph by going as deep as possible along each branch before backtracking. It starts at a chosen vertex, explores as far as possible along one branch, and then backtracks to explore other branches. DFS is commonly used to detect cycles in a graph, topologically sort vertices, and solve problems related to connected components.</p>
+<p><strong>How Depth-First Search Works:</strong></p>
+<ol>
+<li><p><strong>Start at a Vertex:</strong></p>
+<ul>
+<li>Begin by selecting a starting vertex and mark it as visited.</li>
+</ul>
+</li>
+<li><p><strong>Explore Neighbors:</strong></p>
+<ul>
+<li>Move to an unvisited neighbor of the current vertex and repeat the process.</li>
+<li>If all neighbors are visited, backtrack to the previous vertex.</li>
+</ul>
+</li>
+<li><p><strong>Recursion or Stack:</strong></p>
+<ul>
+<li>DFS can be implemented using recursion or an explicit stack to keep track of the vertices to be visited.</li>
+</ul>
+</li>
+<li><p><strong>Marking and Backtracking:</strong></p>
+<ul>
+<li>Mark each visited vertex to avoid revisiting and use backtracking to explore other branches.</li>
+</ul>
+</li>
+<li><p><strong>Complete Exploration:</strong></p>
+<ul>
+<li>Continue the process until all reachable vertices are visited.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Key Characteristics:</strong></p>
+<ul>
+<li><p><strong>LIFO Structure:</strong></p>
+<ul>
+<li>DFS often uses a Last-In-First-Out (LIFO) stack or recursion to maintain the order in which vertices are visited.</li>
+</ul>
+</li>
+<li><p><strong>Visited Marking:</strong></p>
+<ul>
+<li>Mark each vertex as visited once it is reached, preventing revisiting.</li>
+</ul>
+</li>
+<li><p><strong>Backtracking:</strong></p>
+<ul>
+<li>Backtrack to the previous vertex when all neighbors are explored.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Applications:</strong></p>
+<ul>
+<li>Topological Sorting.</li>
+<li>Cycle Detection.</li>
+<li>Connected Components.</li>
+<li>Maze Solving.</li>
+</ul>
+<p><strong>Time Complexity:</strong></p>
+<ul>
+<li>The time complexity of DFS is (O(V + E)), where (V) is the number of vertices and (E) is the number of edges. The algorithm visits each vertex and edge once. Recursive DFS has a space complexity of (O(V)) due to the call stack, while an explicit stack implementation can have a space complexity of (O(E + V)).</li>
+</ul>
 <pre><code class="hljs language-typescript"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Graph</span> {
   <span class="hljs-keyword">private</span> <span class="hljs-attr">adjacencyList</span>: <span class="hljs-title class_">Map</span>&lt;<span class="hljs-built_in">string</span>, <span class="hljs-built_in">string</span>[]&gt;;
 
@@ -884,6 +898,69 @@ graph.<span class="hljs-title function_">addEdge</span>(<span class="hljs-string
 graph.<span class="hljs-title function_">dfs</span>(<span class="hljs-string">&quot;A&quot;</span>);
 </code></pre><p style="page-break-after: always;"> </p><h1>Dijkstra's algorithm</h1>
 <h1 id="dijkstras-algorithm">Dijkstra&#39;s algorithm</h1>
+<p><strong>How Dijkstra&#39;s Algorithm Works:</strong></p>
+<ol>
+<li><p><strong>Initialization:</strong></p>
+<ul>
+<li>Set the initial distance to the starting vertex as 0 and all other distances to infinity.</li>
+<li>Create a priority queue or a min-heap to store vertices based on their current tentative distances.</li>
+</ul>
+</li>
+<li><p><strong>Explore Neighbors:</strong></p>
+<ul>
+<li>While there are vertices in the priority queue, select the vertex with the smallest tentative distance.</li>
+<li>Explore its neighbors and update their tentative distances if a shorter path is found.</li>
+</ul>
+</li>
+<li><p><strong>Relaxation:</strong></p>
+<ul>
+<li>For each neighbor, calculate the sum of the tentative distance to the current vertex and the weight of the edge between them.</li>
+<li>If this sum is smaller than the current tentative distance to the neighbor, update the tentative distance.</li>
+</ul>
+</li>
+<li><p><strong>Mark as Visited:</strong></p>
+<ul>
+<li>Mark the current vertex as visited to avoid redundant calculations.</li>
+</ul>
+</li>
+<li><p><strong>Repeat:</strong></p>
+<ul>
+<li>Repeat steps 2-4 until all vertices are visited or the destination vertex is reached.</li>
+</ul>
+</li>
+<li><p><strong>Result:</strong></p>
+<ul>
+<li>The final result is an array of shortest distances from the starting vertex to all other vertices.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Key Characteristics:</strong></p>
+<ul>
+<li><p><strong>Greedy Strategy:</strong></p>
+<ul>
+<li>Dijkstra&#39;s Algorithm employs a greedy strategy, always choosing the vertex with the smallest tentative distance.</li>
+</ul>
+</li>
+<li><p><strong>Priority Queue or Min-Heap:</strong></p>
+<ul>
+<li>Efficient implementations use a priority queue or min-heap to efficiently retrieve the vertex with the smallest tentative distance.</li>
+</ul>
+</li>
+<li><h2 id="non-negative-edge-weights--dijkstras-algorithm-assumes-non-negative-edge-weights-negative-weights-can-lead-to-incorrect-results"><strong>Non-Negative Edge Weights:</strong>
+- Dijkstra&#39;s Algorithm assumes non-negative edge weights. Negative weights can lead to incorrect results.</h2>
+<p><strong>Applications:</strong></p>
+</li>
+<li><p>Network Routing.</p>
+</li>
+<li><p>Shortest Path Problems.</p>
+</li>
+<li><p>Transportation and Logistics.</p>
+</li>
+</ul>
+<p><strong>Time Complexity:</strong></p>
+<ul>
+<li>The time complexity of Dijkstra&#39;s Algorithm is (O((V + E) \log V)) using a priority queue or min-heap, where (V) is the number of vertices and (E) is the number of edges.</li>
+</ul>
 <pre><code class="hljs language-typescript"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Graph</span> {
   <span class="hljs-keyword">private</span> <span class="hljs-attr">adjacencyList</span>: <span class="hljs-title class_">Map</span>&lt;<span class="hljs-built_in">string</span>, <span class="hljs-title class_">Map</span>&lt;<span class="hljs-built_in">string</span>, <span class="hljs-built_in">number</span>&gt;&gt;;
 
@@ -987,6 +1064,57 @@ graph.<span class="hljs-title function_">addEdge</span>(<span class="hljs-string
 
 </code></pre><p style="page-break-after: always;"> </p><h1>Floyd-Warshall algorithm</h1>
 <h1 id="floyd-warshall-algorithm">Floyd-Warshall algorithm</h1>
+<p>The Floyd-Warshall Algorithm is a dynamic programming algorithm used to find the shortest paths between all pairs of vertices in a weighted graph. Unlike Dijkstra&#39;s algorithm and Bellman-Ford algorithm, Floyd-Warshall works with graphs that can have both positive and negative edge weights and can handle graphs with cycles. The algorithm iteratively updates the shortest path distances between all pairs until reaching the optimal solution.</p>
+<p><strong>How Floyd-Warshall Algorithm Works:</strong></p>
+<ol>
+<li><p><strong>Initialization:</strong></p>
+<ul>
+<li>Create a matrix to represent the distances between all pairs of vertices. Initialize the matrix with the direct edge weights and set the distances to infinity where there is no direct edge.</li>
+<li>Initialize the diagonal of the matrix to zeros since the distance from a vertex to itself is zero.</li>
+</ul>
+</li>
+<li><p><strong>Iterative Updates:</strong></p>
+<ul>
+<li>For each vertex &#39;k&#39;, iterate through all pairs of vertices &#39;i&#39; and &#39;j&#39;.</li>
+<li>Check if the path from &#39;i&#39; to &#39;j&#39; through &#39;k&#39; is shorter than the current known path from &#39;i&#39; to &#39;j&#39;.</li>
+<li>If yes, update the distance from &#39;i&#39; to &#39;j&#39; with the shorter path.</li>
+</ul>
+</li>
+<li><p><strong>Repeat:</strong></p>
+<ul>
+<li>Repeat the process for all vertices as intermediate vertices (&#39;k&#39;).</li>
+<li>After each iteration, the matrix reflects the shortest distances between all pairs of vertices considering all possible intermediate vertices.</li>
+</ul>
+</li>
+<li><p><strong>Result:</strong></p>
+<ul>
+<li>The final matrix contains the shortest distances between all pairs of vertices.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Key Characteristics:</strong></p>
+<ul>
+<li><p><strong>Dynamic Programming:</strong></p>
+<ul>
+<li>Floyd-Warshall is a dynamic programming algorithm that builds solutions to subproblems to solve the overall problem.</li>
+</ul>
+</li>
+<li><p><strong>Negative Cycles:</strong></p>
+<ul>
+<li>The algorithm can detect negative cycles in the graph. If there exists a negative cycle, the algorithm won&#39;t converge to a solution.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Applications:</strong></p>
+<ul>
+<li>Network Routing.</li>
+<li>Shortest Path Problems.</li>
+<li>Traffic Engineering.</li>
+</ul>
+<p><strong>Time Complexity:</strong></p>
+<ul>
+<li>The time complexity of Floyd-Warshall Algorithm is (O(V^3)), where (V) is the number of vertices in the graph.</li>
+</ul>
 <pre><code class="hljs language-typescript"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Graph</span> {
   <span class="hljs-keyword">private</span> <span class="hljs-attr">adjacencyMatrix</span>: <span class="hljs-built_in">number</span>[][];
 
@@ -1043,6 +1171,69 @@ graph.<span class="hljs-title function_">addEdge</span>(<span class="hljs-number
 }
 </code></pre><p style="page-break-after: always;"> </p><h1>Ford Fulkerson algorithm</h1>
 <h1 id="ford-fulkerson-algorithm">Ford Fulkerson algorithm</h1>
+<p>The Ford-Fulkerson Algorithm is an iterative method to compute the maximum flow in a flow network. It was initially designed to solve the max-flow min-cut problem, where the objective is to find the maximum amount of flow that can be sent from a designated source to a designated sink in a directed graph. The algorithm iteratively augments paths from the source to the sink, increasing the flow until it reaches its maximum value.</p>
+<p><strong>How Ford-Fulkerson Algorithm Works:</strong></p>
+<ol>
+<li><p><strong>Initialization:</strong></p>
+<ul>
+<li>Begin with an initial flow of zero.</li>
+<li>Determine the residual graph, which represents the remaining capacity for each edge.</li>
+</ul>
+</li>
+<li><p><strong>Augmenting Paths:</strong></p>
+<ul>
+<li>Find an augmenting path from the source to the sink in the residual graph. An augmenting path is a path with available capacity on all its edges.</li>
+</ul>
+</li>
+<li><p><strong>Flow Augmentation:</strong></p>
+<ul>
+<li>Determine the maximum flow that can be added along the augmenting path. This is the minimum capacity value of the edges on the path.</li>
+</ul>
+</li>
+<li><p><strong>Update Residual Graph:</strong></p>
+<ul>
+<li>Update the residual graph by subtracting the flow added along the augmenting path and adding the reverse flow.</li>
+</ul>
+</li>
+<li><p><strong>Repeat:</strong></p>
+<ul>
+<li>Repeat steps 2-4 until there are no more augmenting paths.</li>
+</ul>
+</li>
+<li><p><strong>Result:</strong></p>
+<ul>
+<li>The final flow is the maximum flow in the network.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Key Characteristics:</strong></p>
+<ul>
+<li><p><strong>Residual Graph:</strong></p>
+<ul>
+<li>The residual graph is crucial for the Ford-Fulkerson Algorithm. It represents the remaining capacity for each edge after the initial flow has been determined.</li>
+</ul>
+</li>
+<li><p><strong>Augmenting Paths:</strong></p>
+<ul>
+<li>The algorithm focuses on finding augmenting paths, paths in the residual graph with available capacity.</li>
+</ul>
+</li>
+<li><p><strong>Termination:</strong></p>
+<ul>
+<li>The algorithm terminates when no more augmenting paths can be found in the residual graph.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Applications:</strong></p>
+<ul>
+<li>Network Flows.</li>
+<li>Transportation Networks.</li>
+<li>Telecommunication Networks.</li>
+</ul>
+<p><strong>Time Complexity:</strong></p>
+<ul>
+<li>The time complexity of the Ford-Fulkerson Algorithm is not strictly defined, as it depends on the choice of augmenting paths. In the worst case, the algorithm may not terminate if the paths are not chosen carefully. When implemented with the Edmonds-Karp variant, where the shortest augmenting paths are chosen using Breadth-First Search, the time complexity is (O(VE^2)), where (V) is the number of vertices and (E) is the number of edges.</li>
+</ul>
 <pre><code class="hljs language-typescript"><span class="hljs-keyword">class</span> <span class="hljs-title class_">FordFulkerson</span> {
   <span class="hljs-keyword">private</span> <span class="hljs-attr">graph</span>: <span class="hljs-built_in">number</span>[][];
   <span class="hljs-keyword">private</span> <span class="hljs-attr">numVertices</span>: <span class="hljs-built_in">number</span>;
