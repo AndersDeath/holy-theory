@@ -7,6 +7,54 @@ sort: 1200
 
 # Depth-first search
 
+Depth-First Search (DFS) is a graph traversal algorithm that systematically explores the vertices of a graph by going as deep as possible along each branch before backtracking. It starts at a chosen vertex, explores as far as possible along one branch, and then backtracks to explore other branches. DFS is commonly used to detect cycles in a graph, topologically sort vertices, and solve problems related to connected components.
+
+**How Depth-First Search Works:**
+
+1. **Start at a Vertex:**
+
+   - Begin by selecting a starting vertex and mark it as visited.
+
+2. **Explore Neighbors:**
+
+   - Move to an unvisited neighbor of the current vertex and repeat the process.
+   - If all neighbors are visited, backtrack to the previous vertex.
+
+3. **Recursion or Stack:**
+
+   - DFS can be implemented using recursion or an explicit stack to keep track of the vertices to be visited.
+
+4. **Marking and Backtracking:**
+
+   - Mark each visited vertex to avoid revisiting and use backtracking to explore other branches.
+
+5. **Complete Exploration:**
+   - Continue the process until all reachable vertices are visited.
+
+**Key Characteristics:**
+
+- **LIFO Structure:**
+
+  - DFS often uses a Last-In-First-Out (LIFO) stack or recursion to maintain the order in which vertices are visited.
+
+- **Visited Marking:**
+
+  - Mark each vertex as visited once it is reached, preventing revisiting.
+
+- **Backtracking:**
+  - Backtrack to the previous vertex when all neighbors are explored.
+
+**Applications:**
+
+- Topological Sorting.
+- Cycle Detection.
+- Connected Components.
+- Maze Solving.
+
+**Time Complexity:**
+
+- The time complexity of DFS is \(O(V + E)\), where \(V\) is the number of vertices and \(E\) is the number of edges. The algorithm visits each vertex and edge once. Recursive DFS has a space complexity of \(O(V)\) due to the call stack, while an explicit stack implementation can have a space complexity of \(O(E + V)\).
+
 ```typescript
 class Graph {
   private adjacencyList: Map<string, string[]>;
@@ -57,5 +105,4 @@ graph.addEdge("A", "C");
 graph.addEdge("B", "D");
 
 graph.dfs("A");
-
 ```

@@ -7,6 +7,50 @@ sort: 1300
 
 # Dijkstra's algorithm
 
+**How Dijkstra's Algorithm Works:**
+
+1. **Initialization:**
+   - Set the initial distance to the starting vertex as 0 and all other distances to infinity.
+   - Create a priority queue or a min-heap to store vertices based on their current tentative distances.
+
+2. **Explore Neighbors:**
+   - While there are vertices in the priority queue, select the vertex with the smallest tentative distance.
+   - Explore its neighbors and update their tentative distances if a shorter path is found.
+
+3. **Relaxation:**
+   - For each neighbor, calculate the sum of the tentative distance to the current vertex and the weight of the edge between them.
+   - If this sum is smaller than the current tentative distance to the neighbor, update the tentative distance.
+
+4. **Mark as Visited:**
+   - Mark the current vertex as visited to avoid redundant calculations.
+
+5. **Repeat:**
+   - Repeat steps 2-4 until all vertices are visited or the destination vertex is reached.
+
+6. **Result:**
+   - The final result is an array of shortest distances from the starting vertex to all other vertices.
+
+**Key Characteristics:**
+
+- **Greedy Strategy:**
+  - Dijkstra's Algorithm employs a greedy strategy, always choosing the vertex with the smallest tentative distance.
+
+- **Priority Queue or Min-Heap:**
+  - Efficient implementations use a priority queue or min-heap to efficiently retrieve the vertex with the smallest tentative distance.
+
+- **Non-Negative Edge Weights:**
+  - Dijkstra's Algorithm assumes non-negative edge weights. Negative weights can lead to incorrect results.
+  - 
+**Applications:**
+
+- Network Routing.
+- Shortest Path Problems.
+- Transportation and Logistics.
+
+**Time Complexity:**
+  
+- The time complexity of Dijkstra's Algorithm is \(O((V + E) \log V)\) using a priority queue or min-heap, where \(V\) is the number of vertices and \(E\) is the number of edges.
+
 ```typescript
 class Graph {
   private adjacencyList: Map<string, Map<string, number>>;

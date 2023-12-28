@@ -7,6 +7,8 @@
     - [Depth-first search](#depth-first-search)
     - [Diffie hellman algorithm](#diffie-hellman-algorithm)
     - [Dijkstra&#39;s algorithm](#dijkstra-39-s-algorithm)
+  - [<strong>Non-Negative Edge Weights:</strong>
+- Dijkstra&#39;s Algorithm assumes non-negative edge weights. Negative weights can lead to incorrect results.](#-strong-non-negative-edge-weights-strong-dijkstra-39-s-algorithm-assumes-non-negative-edge-weights-negative-weights-can-lead-to-incorrect-results-)
     - [Floyd-Warshall algorithm](#floyd-warshall-algorithm)
     - [Ford Fulkerson algorithm](#ford-fulkerson-algorithm)
     - [Graph adjacency list](#graph-adjacency-list)
@@ -362,6 +364,8 @@
     - [Depth-first search](#depth-first-search)
     - [Diffie hellman algorithm](#diffie-hellman-algorithm)
     - [Dijkstra&#39;s algorithm](#dijkstra-39-s-algorithm)
+  - [<strong>Non-Negative Edge Weights:</strong>
+- Dijkstra&#39;s Algorithm assumes non-negative edge weights. Negative weights can lead to incorrect results.](#-strong-non-negative-edge-weights-strong-dijkstra-39-s-algorithm-assumes-non-negative-edge-weights-negative-weights-can-lead-to-incorrect-results-)
     - [Floyd-Warshall algorithm](#floyd-warshall-algorithm)
     - [Ford Fulkerson algorithm](#ford-fulkerson-algorithm)
     - [Graph adjacency list](#graph-adjacency-list)
@@ -971,6 +975,50 @@ function getPreorderTraversal(root: Node | null): number[] {
 
 
 
+Breadth-First Search (BFS) is a graph traversal algorithm that systematically explores all the vertices of a graph in breadthward motion, level by level. It starts at a chosen vertex and visits all its neighbors before moving on to their neighbors. BFS is commonly used to find the shortest path in an unweighted graph and to explore the structure of a graph.
+
+**How Breadth-First Search Works:**
+
+1. **Queue Initialization:**
+
+   - Begin by selecting a starting vertex and enqueue it into a queue.
+
+2. **Explore Neighbors:**
+
+   - Dequeue a vertex from the front of the queue and explore all its neighbors.
+   - Enqueue any unvisited neighbors, marking them as visited to avoid duplication.
+
+3. **Level-wise Exploration:**
+
+   - Continue the process level by level, exploring all vertices at the current level before moving on to the next level.
+
+4. **Termination:**
+   - Repeat until the queue is empty, ensuring that all reachable vertices are visited.
+
+**Key Characteristics:**
+
+- **FIFO Structure:**
+
+  - BFS uses a First-In-First-Out (FIFO) queue to maintain the order in which vertices are discovered and processed.
+
+- **Visited Marking:**
+
+  - To avoid revisiting vertices, mark each vertex as visited once it is dequeued from the queue.
+
+- **Shortest Path:**
+  - BFS guarantees that the shortest path to any reachable vertex is discovered first, making it valuable for pathfinding in unweighted graphs.
+
+**Applications:**
+
+- Shortest Pathfinding.
+- Connected Components.
+- Web Crawling.
+- Network Broadcasting.
+
+**Time Complexity:**
+
+- The time complexity of BFS is \(O(V + E)\), where \(V\) is the number of vertices and \(E\) is the number of edges. The algorithm visits each vertex and edge once.
+
 ```typescript
 class Graph {
   private adjacencyList: Map<string, string[]>;
@@ -1083,6 +1131,54 @@ console.log(bubbleSort([2,5,2,6,7,2,22,5,7,9,0,2,3]))
 
 
 
+Depth-First Search (DFS) is a graph traversal algorithm that systematically explores the vertices of a graph by going as deep as possible along each branch before backtracking. It starts at a chosen vertex, explores as far as possible along one branch, and then backtracks to explore other branches. DFS is commonly used to detect cycles in a graph, topologically sort vertices, and solve problems related to connected components.
+
+**How Depth-First Search Works:**
+
+1. **Start at a Vertex:**
+
+   - Begin by selecting a starting vertex and mark it as visited.
+
+2. **Explore Neighbors:**
+
+   - Move to an unvisited neighbor of the current vertex and repeat the process.
+   - If all neighbors are visited, backtrack to the previous vertex.
+
+3. **Recursion or Stack:**
+
+   - DFS can be implemented using recursion or an explicit stack to keep track of the vertices to be visited.
+
+4. **Marking and Backtracking:**
+
+   - Mark each visited vertex to avoid revisiting and use backtracking to explore other branches.
+
+5. **Complete Exploration:**
+   - Continue the process until all reachable vertices are visited.
+
+**Key Characteristics:**
+
+- **LIFO Structure:**
+
+  - DFS often uses a Last-In-First-Out (LIFO) stack or recursion to maintain the order in which vertices are visited.
+
+- **Visited Marking:**
+
+  - Mark each vertex as visited once it is reached, preventing revisiting.
+
+- **Backtracking:**
+  - Backtrack to the previous vertex when all neighbors are explored.
+
+**Applications:**
+
+- Topological Sorting.
+- Cycle Detection.
+- Connected Components.
+- Maze Solving.
+
+**Time Complexity:**
+
+- The time complexity of DFS is \(O(V + E)\), where \(V\) is the number of vertices and \(E\) is the number of edges. The algorithm visits each vertex and edge once. Recursive DFS has a space complexity of \(O(V)\) due to the call stack, while an explicit stack implementation can have a space complexity of \(O(E + V)\).
+
 ```typescript
 class Graph {
   private adjacencyList: Map<string, string[]>;
@@ -1133,7 +1229,6 @@ graph.addEdge("A", "C");
 graph.addEdge("B", "D");
 
 graph.dfs("A");
-
 ```
 ### Diffie hellman algorithm
 
@@ -1187,6 +1282,50 @@ DiffieHellman()
 ### Dijkstra's algorithm
 
 
+
+**How Dijkstra's Algorithm Works:**
+
+1. **Initialization:**
+   - Set the initial distance to the starting vertex as 0 and all other distances to infinity.
+   - Create a priority queue or a min-heap to store vertices based on their current tentative distances.
+
+2. **Explore Neighbors:**
+   - While there are vertices in the priority queue, select the vertex with the smallest tentative distance.
+   - Explore its neighbors and update their tentative distances if a shorter path is found.
+
+3. **Relaxation:**
+   - For each neighbor, calculate the sum of the tentative distance to the current vertex and the weight of the edge between them.
+   - If this sum is smaller than the current tentative distance to the neighbor, update the tentative distance.
+
+4. **Mark as Visited:**
+   - Mark the current vertex as visited to avoid redundant calculations.
+
+5. **Repeat:**
+   - Repeat steps 2-4 until all vertices are visited or the destination vertex is reached.
+
+6. **Result:**
+   - The final result is an array of shortest distances from the starting vertex to all other vertices.
+
+**Key Characteristics:**
+
+- **Greedy Strategy:**
+  - Dijkstra's Algorithm employs a greedy strategy, always choosing the vertex with the smallest tentative distance.
+
+- **Priority Queue or Min-Heap:**
+  - Efficient implementations use a priority queue or min-heap to efficiently retrieve the vertex with the smallest tentative distance.
+
+- **Non-Negative Edge Weights:**
+  - Dijkstra's Algorithm assumes non-negative edge weights. Negative weights can lead to incorrect results.
+  - 
+**Applications:**
+
+- Network Routing.
+- Shortest Path Problems.
+- Transportation and Logistics.
+
+**Time Complexity:**
+  
+- The time complexity of Dijkstra's Algorithm is \(O((V + E) \log V)\) using a priority queue or min-heap, where \(V\) is the number of vertices and \(E\) is the number of edges.
 
 ```typescript
 class Graph {
@@ -1296,6 +1435,48 @@ console.log("Distance:", distance); // Output: Distance: 4
 
 
 
+The Floyd-Warshall Algorithm is a dynamic programming algorithm used to find the shortest paths between all pairs of vertices in a weighted graph. Unlike Dijkstra's algorithm and Bellman-Ford algorithm, Floyd-Warshall works with graphs that can have both positive and negative edge weights and can handle graphs with cycles. The algorithm iteratively updates the shortest path distances between all pairs until reaching the optimal solution.
+
+**How Floyd-Warshall Algorithm Works:**
+
+1. **Initialization:**
+
+   - Create a matrix to represent the distances between all pairs of vertices. Initialize the matrix with the direct edge weights and set the distances to infinity where there is no direct edge.
+   - Initialize the diagonal of the matrix to zeros since the distance from a vertex to itself is zero.
+
+2. **Iterative Updates:**
+
+   - For each vertex 'k', iterate through all pairs of vertices 'i' and 'j'.
+   - Check if the path from 'i' to 'j' through 'k' is shorter than the current known path from 'i' to 'j'.
+   - If yes, update the distance from 'i' to 'j' with the shorter path.
+
+3. **Repeat:**
+
+   - Repeat the process for all vertices as intermediate vertices ('k').
+   - After each iteration, the matrix reflects the shortest distances between all pairs of vertices considering all possible intermediate vertices.
+
+4. **Result:**
+   - The final matrix contains the shortest distances between all pairs of vertices.
+
+**Key Characteristics:**
+
+- **Dynamic Programming:**
+
+  - Floyd-Warshall is a dynamic programming algorithm that builds solutions to subproblems to solve the overall problem.
+
+- **Negative Cycles:**
+  - The algorithm can detect negative cycles in the graph. If there exists a negative cycle, the algorithm won't converge to a solution.
+
+**Applications:**
+
+- Network Routing.
+- Shortest Path Problems.
+- Traffic Engineering.
+
+**Time Complexity:**
+
+- The time complexity of Floyd-Warshall Algorithm is \(O(V^3)\), where \(V\) is the number of vertices in the graph.
+
 ```typescript
 class Graph {
   private adjacencyMatrix: number[][];
@@ -1355,6 +1536,57 @@ for (const row of result) {
 ### Ford Fulkerson algorithm
 
 
+
+The Ford-Fulkerson Algorithm is an iterative method to compute the maximum flow in a flow network. It was initially designed to solve the max-flow min-cut problem, where the objective is to find the maximum amount of flow that can be sent from a designated source to a designated sink in a directed graph. The algorithm iteratively augments paths from the source to the sink, increasing the flow until it reaches its maximum value.
+
+**How Ford-Fulkerson Algorithm Works:**
+
+1. **Initialization:**
+
+   - Begin with an initial flow of zero.
+   - Determine the residual graph, which represents the remaining capacity for each edge.
+
+2. **Augmenting Paths:**
+
+   - Find an augmenting path from the source to the sink in the residual graph. An augmenting path is a path with available capacity on all its edges.
+
+3. **Flow Augmentation:**
+
+   - Determine the maximum flow that can be added along the augmenting path. This is the minimum capacity value of the edges on the path.
+
+4. **Update Residual Graph:**
+
+   - Update the residual graph by subtracting the flow added along the augmenting path and adding the reverse flow.
+
+5. **Repeat:**
+
+   - Repeat steps 2-4 until there are no more augmenting paths.
+
+6. **Result:**
+   - The final flow is the maximum flow in the network.
+
+**Key Characteristics:**
+
+- **Residual Graph:**
+
+  - The residual graph is crucial for the Ford-Fulkerson Algorithm. It represents the remaining capacity for each edge after the initial flow has been determined.
+
+- **Augmenting Paths:**
+
+  - The algorithm focuses on finding augmenting paths, paths in the residual graph with available capacity.
+
+- **Termination:**
+  - The algorithm terminates when no more augmenting paths can be found in the residual graph.
+
+**Applications:**
+
+- Network Flows.
+- Transportation Networks.
+- Telecommunication Networks.
+
+**Time Complexity:**
+
+- The time complexity of the Ford-Fulkerson Algorithm is not strictly defined, as it depends on the choice of augmenting paths. In the worst case, the algorithm may not terminate if the paths are not chosen carefully. When implemented with the Edmonds-Karp variant, where the shortest augmenting paths are chosen using Breadth-First Search, the time complexity is \(O(VE^2)\), where \(V\) is the number of vertices and \(E\) is the number of edges.
 
 ```typescript
 class FordFulkerson {
@@ -1620,7 +1852,7 @@ Interpolation Search is a an algorithm designed for finding a specific target va
 
 **Time Complexity:**
 
-- The time complexity of Interpolation Search is \(O(\log \log n)\), assuming a uniformly distributed dataset. In cases of non-uniform distribution, the efficiency may degrade to \(O(n)\). This algorithm excels when data is evenly distributed, allowing for a more accurate estimation of the target's position.
+The time complexity of Interpolation Search is O(log log n) on average, where "n" is the number of elements in the array. In the best case, it can be O(1), and in the worst case, it can be O(n). However, the average case is often more relevant, and it is O(log log n) under certain assumptions about the distribution of the data.
 
 ```java
 class Solution {
@@ -2069,7 +2301,7 @@ Ternary Search is a divide-and-conquer algorithm designed for efficiently findin
 
 
 **Time Complexity:**
-   - Ternary Search has a time complexity of O(log₃ n), where 'n' is the size of the array. This is an improvement over binary search when the search space can be significantly reduced at each step. However, it's worth noting that constant factors play a role, and in practice, binary search might be faster for smaller datasets due to simpler arithmetic operations. Ternary Search is particularly beneficial when the dataset is large and the search space can be significantly reduced with each iteration.
+   - Ternary Search has a time complexity of O(log3 n), where 'n' is the size of the array. This is an improvement over binary search when the search space can be significantly reduced at each step. However, it's worth noting that constant factors play a role, and in practice, binary search might be faster for smaller datasets due to simpler arithmetic operations. Ternary Search is particularly beneficial when the dataset is large and the search space can be significantly reduced with each iteration.
 
 ```typescript
 

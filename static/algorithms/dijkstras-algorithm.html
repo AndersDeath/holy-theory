@@ -24,6 +24,69 @@
   </head>
   <body>
       <div class="content"><h1 id="dijkstras-algorithm">Dijkstra&#39;s algorithm</h1>
+<p><strong>How Dijkstra&#39;s Algorithm Works:</strong></p>
+<ol>
+<li><p><strong>Initialization:</strong></p>
+<ul>
+<li>Set the initial distance to the starting vertex as 0 and all other distances to infinity.</li>
+<li>Create a priority queue or a min-heap to store vertices based on their current tentative distances.</li>
+</ul>
+</li>
+<li><p><strong>Explore Neighbors:</strong></p>
+<ul>
+<li>While there are vertices in the priority queue, select the vertex with the smallest tentative distance.</li>
+<li>Explore its neighbors and update their tentative distances if a shorter path is found.</li>
+</ul>
+</li>
+<li><p><strong>Relaxation:</strong></p>
+<ul>
+<li>For each neighbor, calculate the sum of the tentative distance to the current vertex and the weight of the edge between them.</li>
+<li>If this sum is smaller than the current tentative distance to the neighbor, update the tentative distance.</li>
+</ul>
+</li>
+<li><p><strong>Mark as Visited:</strong></p>
+<ul>
+<li>Mark the current vertex as visited to avoid redundant calculations.</li>
+</ul>
+</li>
+<li><p><strong>Repeat:</strong></p>
+<ul>
+<li>Repeat steps 2-4 until all vertices are visited or the destination vertex is reached.</li>
+</ul>
+</li>
+<li><p><strong>Result:</strong></p>
+<ul>
+<li>The final result is an array of shortest distances from the starting vertex to all other vertices.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Key Characteristics:</strong></p>
+<ul>
+<li><p><strong>Greedy Strategy:</strong></p>
+<ul>
+<li>Dijkstra&#39;s Algorithm employs a greedy strategy, always choosing the vertex with the smallest tentative distance.</li>
+</ul>
+</li>
+<li><p><strong>Priority Queue or Min-Heap:</strong></p>
+<ul>
+<li>Efficient implementations use a priority queue or min-heap to efficiently retrieve the vertex with the smallest tentative distance.</li>
+</ul>
+</li>
+<li><h2 id="non-negative-edge-weights--dijkstras-algorithm-assumes-non-negative-edge-weights-negative-weights-can-lead-to-incorrect-results"><strong>Non-Negative Edge Weights:</strong>
+- Dijkstra&#39;s Algorithm assumes non-negative edge weights. Negative weights can lead to incorrect results.</h2>
+<p><strong>Applications:</strong></p>
+</li>
+<li><p>Network Routing.</p>
+</li>
+<li><p>Shortest Path Problems.</p>
+</li>
+<li><p>Transportation and Logistics.</p>
+</li>
+</ul>
+<p><strong>Time Complexity:</strong></p>
+<ul>
+<li>The time complexity of Dijkstra&#39;s Algorithm is (O((V + E) \log V)) using a priority queue or min-heap, where (V) is the number of vertices and (E) is the number of edges.</li>
+</ul>
 <pre><code class="hljs language-typescript"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Graph</span> {
   <span class="hljs-keyword">private</span> <span class="hljs-attr">adjacencyList</span>: <span class="hljs-title class_">Map</span>&lt;<span class="hljs-built_in">string</span>, <span class="hljs-title class_">Map</span>&lt;<span class="hljs-built_in">string</span>, <span class="hljs-built_in">number</span>&gt;&gt;;
 
