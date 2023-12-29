@@ -15,6 +15,7 @@ All notable changes to this project will be documented in this file.
 * add description for dijkstra
 * add description for floyd warshall algorithm
 * add description for ford-fulkerson algorithm
+* add image to bubble sort
 
 # [0.0.50] - 2023-12-25
 * add Linear search in typescript
