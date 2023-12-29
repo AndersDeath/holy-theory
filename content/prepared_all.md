@@ -740,6 +740,9 @@ Bubble Sort is one of the simplest sorting algorithms that works by repeatedly s
 **Time Complexity:**
    - Bubble Sort has a time complexity of O(n^2) in the worst and average cases, where 'n' is the number of elements in the array. This makes it inefficient for large datasets but is useful for educational purposes due to its simplicity.
 
+
+![Bubble sort](images/bubble-sort.png)
+
 ```typescript
 function bubbleSort(array: number[] | string[]) {
     for (let i = 0; i < array.length; i++) {
