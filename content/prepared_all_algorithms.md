@@ -156,6 +156,10 @@ Insertion Sort is a straightforward sorting algorithm that builds the sorted arr
 **Time Complexity:**
    - Insertion Sort has a time complexity of O(n^2) in the worst case, where 'n' is the number of elements in the array. Despite its quadratic time complexity, Insertion Sort is often more efficient on small datasets or partially sorted arrays compared to other quadratic sorting algorithms. It's also an in-place sorting algorithm, meaning it doesn't require additional memory.
 
+
+![Insertion sort](images/insertion-sort.png)
+
+
 ```typescript
 function insertionSort(array: number[] | string[]) {
     for (let i = 1; i < array.length; i++) {
@@ -210,6 +214,8 @@ Quick Sort is an efficient, comparison-based sorting algorithm that follows the 
 
 **Time Complexity:**
    - Quick Sort has an average and best-case time complexity of O(n log n), where 'n' is the number of elements in the array. In the worst case, it is O(n^2), but this is rare when a good pivot selection strategy is used. Quick Sort is often faster in practice than other O(n log n) algorithms, and it is widely used in various applications due to its efficiency.
+
+![Quick sort](images/quick-sort.png)
 
 ```java
 class Solution {
