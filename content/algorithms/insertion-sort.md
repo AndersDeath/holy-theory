@@ -23,6 +23,10 @@ Insertion Sort is a straightforward sorting algorithm that builds the sorted arr
 **Time Complexity:**
    - Insertion Sort has a time complexity of O(n^2) in the worst case, where 'n' is the number of elements in the array. Despite its quadratic time complexity, Insertion Sort is often more efficient on small datasets or partially sorted arrays compared to other quadratic sorting algorithms. It's also an in-place sorting algorithm, meaning it doesn't require additional memory.
 
+
+![Insertion sort](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/insertion-sort.png)
+
+
 ```typescript
 function insertionSort(array: number[] | string[]) {
     for (let i = 1; i < array.length; i++) {

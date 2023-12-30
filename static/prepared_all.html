@@ -392,6 +392,7 @@ graph.<span class="hljs-title function_">bfs</span>(<span class="hljs-string">&q
 <ul>
 <li>Bubble Sort has a time complexity of O(n^2) in the worst and average cases, where &#39;n&#39; is the number of elements in the array. This makes it inefficient for large datasets but is useful for educational purposes due to its simplicity.</li>
 </ul>
+<p><img src="images/bubble-sort.png" alt="Bubble sort"></p>
 <pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">bubbleSort</span>(<span class="hljs-params">array: <span class="hljs-built_in">number</span>[] | <span class="hljs-built_in">string</span>[]</span>) {
     <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; array.<span class="hljs-property">length</span>; i++) {
         <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> j = <span class="hljs-number">0</span>; j &lt; array.<span class="hljs-property">length</span> - <span class="hljs-number">1</span> - i; j++) {
@@ -1111,6 +1112,7 @@ graph.<span class="hljs-title function_">addEdge</span>(<span class="hljs-number
 <ul>
 <li>Insertion Sort has a time complexity of O(n^2) in the worst case, where &#39;n&#39; is the number of elements in the array. Despite its quadratic time complexity, Insertion Sort is often more efficient on small datasets or partially sorted arrays compared to other quadratic sorting algorithms. It&#39;s also an in-place sorting algorithm, meaning it doesn&#39;t require additional memory.</li>
 </ul>
+<p><img src="images/insertion-sort.png" alt="Insertion sort"></p>
 <pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">insertionSort</span>(<span class="hljs-params">array: <span class="hljs-built_in">number</span>[] | <span class="hljs-built_in">string</span>[]</span>) {
     <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">1</span>; i &lt; array.<span class="hljs-property">length</span>; i++) {
         <span class="hljs-keyword">let</span> curr = array[i];
@@ -1421,6 +1423,7 @@ graph.<span class="hljs-title function_">addEdge</span>(<span class="hljs-number
 <ul>
 <li>Quick Sort has an average and best-case time complexity of O(n log n), where &#39;n&#39; is the number of elements in the array. In the worst case, it is O(n^2), but this is rare when a good pivot selection strategy is used. Quick Sort is often faster in practice than other O(n log n) algorithms, and it is widely used in various applications due to its efficiency.</li>
 </ul>
+<p><img src="images/quick-sort.png" alt="Quick sort"></p>
 <pre><code class="hljs language-java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {
 
     <span class="hljs-type">int</span> <span class="hljs-title function_">makePartition</span><span class="hljs-params">(<span class="hljs-type">int</span> [] arr, <span class="hljs-type">int</span> low, <span class="hljs-type">int</span> high)</span> {
