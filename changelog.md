@@ -18,6 +18,7 @@ All notable changes to this project will be documented in this file.
 * add image to bubble sort
 * add image to insertion sort
 * add image to quick sort
+* fix problems of building system
 
 # [0.0.50] - 2023-12-25
 * add Linear search in typescript
