@@ -971,7 +971,7 @@ DiffieHellman()
 
 **Time Complexity:**
   
-- The time complexity of Dijkstra's Algorithm is \(O((V + E) \log V)\) using a priority queue or min-heap, where \(V\) is the number of vertices and \(E\) is the number of edges.
+- The time complexity of Dijkstra's Algorithm is O((V + E) log V) using a priority queue or min-heap, where V is the number of vertices and E is the number of edges.
 
 ```typescript
 class Graph {
