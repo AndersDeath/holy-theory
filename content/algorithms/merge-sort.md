@@ -23,6 +23,8 @@ Merge Sort is a comparison-based sorting algorithm that follows the divide-and-c
 **Time Complexity:**
    - Merge Sort has a consistent time complexity of O(n log n) in all cases, where 'n' is the number of elements in the array. It is a stable sorting algorithm, meaning that equal elements maintain their relative order in the sorted output. While Merge Sort has a slightly higher space complexity due to the need for additional memory, its stability and predictable performance make it a widely used and reliable sorting algorithm.
 
+![Merge sort](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/merge-sort.png)
+
 ```java
 class Solution {
 
