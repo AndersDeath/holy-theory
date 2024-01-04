@@ -1,8 +1,9 @@
 ---
 title: Event Loop
-tags: ['question', 'interview']
-languages: ['javascript']
+tags: ["question", "interview"]
+languages: ["javascript"]
 ---
+
 # Event Loop
 
 ![Event Loop](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/event-loop.png)
@@ -33,5 +34,4 @@ Here's how they work together:
 
 This cycle allows JavaScript to handle asynchronous tasks efficiently, providing a smooth user experience in web applications.
 
-
-* [Go back](../readme.md)
+- [Go back](../readme.md)

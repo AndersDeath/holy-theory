@@ -1,10 +1,10 @@
 ---
-title:  How can JavaScript codes be hidden from old browsers that do not support JavaScript?
-tags: ['question', 'interview']
-languages: ['javascript']
+title: How can JavaScript codes be hidden from old browsers that do not support JavaScript?
+tags: ["question", "interview"]
+languages: ["javascript"]
 ---
-# How can JavaScript codes be hidden from old browsers that do not support JavaScript?
 
+# How can JavaScript codes be hidden from old browsers that do not support JavaScript?
 
 1. **Add `<!--` before the `<script>` tag:** This starts an HTML comment, which is ignored by old browsers that do not understand JavaScript.
 

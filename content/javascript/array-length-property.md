@@ -1,15 +1,17 @@
 ---
 title: Array length property
-tags: ['question', 'interview']
-languages: ['javascript']
+tags: ["question", "interview"]
+languages: ["javascript"]
 ---
+
 # Array length property
+
 What is the value of clothes[0]:
 
 ```javascript
-const clothes = ['jacket', 't-shirt'];
-    clothes.length = 0;
-    clothes[0];
+const clothes = ["jacket", "t-shirt"];
+clothes.length = 0;
+clothes[0];
 ```
 
 Reducing the value of the length property has the side-effect of deleting own array elements whose array index is between the old and new length values.
@@ -19,4 +21,4 @@ As result when JavaScript executes clothes.length = 0, all clothes items are del
 
 clothes[0] is undefined, because clothes array has been emptied.
 
-* [Go back](../readme.md)
+- [Go back](../readme.md)
