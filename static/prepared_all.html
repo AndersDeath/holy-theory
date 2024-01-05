@@ -1640,16 +1640,22 @@ graph.<span class="hljs-title function_">addEdge</span>(<span class="hljs-number
 <h3>Array length property</h3>
 <h1 id="array-length-property">Array length property</h1>
 <p>What is the value of clothes[0]:</p>
-<pre><code class="hljs language-javascript"><span class="hljs-keyword">const</span> clothes = [<span class="hljs-string">&#x27;jacket&#x27;</span>, <span class="hljs-string">&#x27;t-shirt&#x27;</span>];
-    clothes.<span class="hljs-property">length</span> = <span class="hljs-number">0</span>;
-    clothes[<span class="hljs-number">0</span>];
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">const</span> clothes = [<span class="hljs-string">&quot;jacket&quot;</span>, <span class="hljs-string">&quot;t-shirt&quot;</span>];
+clothes.<span class="hljs-property">length</span> = <span class="hljs-number">0</span>;
+clothes[<span class="hljs-number">0</span>];
 </code></pre><p>Reducing the value of the length property has the side-effect of deleting own array elements whose array index is between the old and new length values.
 <a href="https://262.ecma-international.org/6.0/#sec-properties-of-array-instances-length">https://262.ecma-international.org/6.0/#sec-properties-of-array-instances-length</a></p>
 <p>As result when JavaScript executes clothes.length = 0, all clothes items are deleted.</p>
 <p>clothes[0] is undefined, because clothes array has been emptied.</p>
+<ul>
+<li><a href="../readme.md">Go back</a></li>
+</ul>
 <h3>Different ways of declaring functions in JS</h3>
 <h1 id="different-ways-of-declaring-functions-in-js">Different ways of declaring functions in JS</h1>
 <p><img src="images/different-ways-of-declaring-a-function-in-js.png" alt="Different ways of declaring functions in JS"></p>
+<ul>
+<li><a href="../readme.md">Go back</a></li>
+</ul>
 <h3>Event Loop</h3>
 <h1 id="event-loop">Event Loop</h1>
 <p><img src="images/event-loop.png" alt="Event Loop"></p>
@@ -1679,43 +1685,46 @@ graph.<span class="hljs-title function_">addEdge</span>(<span class="hljs-number
 <li>Microtasks are executed between macrotasks, ensuring that certain asynchronous operations are prioritized and processed promptly.</li>
 </ol>
 <p>This cycle allows JavaScript to handle asynchronous tasks efficiently, providing a smooth user experience in web applications.</p>
+<ul>
+<li><a href="../readme.md">Go back</a></li>
+</ul>
 <h3>Give best practices for handling errors in asynchronous code.</h3>
 <h1 id="give-best-practices-for-handling-errors-in-asynchronous-code">Give best practices for handling errors in asynchronous code.</h1>
 <p>Handling errors in asynchronous code is a critical aspect of developing reliable and secure applications. Here are some best practices for handling errors in asynchronous code:</p>
 <ol>
 <li><p><strong>Use try-catch blocks</strong>: Wrap asynchronous operations within a <code>try</code> block and handle errors within the corresponding <code>catch</code> block. This allows you to catch synchronous errors that might occur in asynchronous code.</p>
 <pre><code class="hljs language-javascript"><span class="hljs-keyword">try</span> {
-    <span class="hljs-comment">// Asynchronous operation</span>
+  <span class="hljs-comment">// Asynchronous operation</span>
 } <span class="hljs-keyword">catch</span> (error) {
-    <span class="hljs-comment">// Handle the error</span>
+  <span class="hljs-comment">// Handle the error</span>
 }
 </code></pre></li>
 <li><p><strong>Use callbacks with the first argument as an error</strong>: When writing functions with callbacks, always pass the error as the first argument in the callback. Functions typically follow a calling convention like <code>callback(error, result)</code>. If <code>error</code> is not <code>null</code> or <code>undefined</code>, an error has occurred.</p>
 <pre><code class="hljs language-javascript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">asyncFunction</span>(<span class="hljs-params">callback</span>) {
-    <span class="hljs-comment">// Asynchronous operation</span>
-    <span class="hljs-keyword">if</span> (error) {
-        <span class="hljs-keyword">return</span> <span class="hljs-title function_">callback</span>(error);
-    }
-    <span class="hljs-title function_">callback</span>(<span class="hljs-literal">null</span>, result);
+  <span class="hljs-comment">// Asynchronous operation</span>
+  <span class="hljs-keyword">if</span> (error) {
+    <span class="hljs-keyword">return</span> <span class="hljs-title function_">callback</span>(error);
+  }
+  <span class="hljs-title function_">callback</span>(<span class="hljs-literal">null</span>, result);
 }
 </code></pre></li>
 <li><p><strong>Use Promises</strong>: If possible, use Promises to perform asynchronous operations. Promises provide a convenient way to handle successful results and errors.</p>
 <pre><code class="hljs language-javascript"><span class="hljs-title function_">asyncFunction</span>()
-    .<span class="hljs-title function_">then</span>(<span class="hljs-function"><span class="hljs-params">result</span> =&gt;</span> {
-        <span class="hljs-comment">// Handle the successful result</span>
-    })
-    .<span class="hljs-title function_">catch</span>(<span class="hljs-function"><span class="hljs-params">error</span> =&gt;</span> {
-        <span class="hljs-comment">// Handle the error</span>
-    });
+  .<span class="hljs-title function_">then</span>(<span class="hljs-function">(<span class="hljs-params">result</span>) =&gt;</span> {
+    <span class="hljs-comment">// Handle the successful result</span>
+  })
+  .<span class="hljs-title function_">catch</span>(<span class="hljs-function">(<span class="hljs-params">error</span>) =&gt;</span> {
+    <span class="hljs-comment">// Handle the error</span>
+  });
 </code></pre></li>
 <li><p><strong>Use async/await</strong>: With asynchronous functions in JavaScript, you can use the <code>async</code> and <code>await</code> keywords for a more convenient syntax when working with asynchronous operations and errors.</p>
 <pre><code class="hljs language-javascript"><span class="hljs-keyword">async</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">fetchData</span>(<span class="hljs-params"></span>) {
-    <span class="hljs-keyword">try</span> {
-        <span class="hljs-keyword">let</span> data = <span class="hljs-keyword">await</span> <span class="hljs-title function_">asyncFunction</span>();
-        <span class="hljs-comment">// Handle the successful result</span>
-    } <span class="hljs-keyword">catch</span> (error) {
-        <span class="hljs-comment">// Handle the error</span>
-    }
+  <span class="hljs-keyword">try</span> {
+    <span class="hljs-keyword">let</span> data = <span class="hljs-keyword">await</span> <span class="hljs-title function_">asyncFunction</span>();
+    <span class="hljs-comment">// Handle the successful result</span>
+  } <span class="hljs-keyword">catch</span> (error) {
+    <span class="hljs-comment">// Handle the error</span>
+  }
 }
 </code></pre></li>
 <li><p><strong>Do not ignore errors</strong>: Never ignore errors. Always handle them or propagate them up the call stack to be handled at a higher level.</p>
@@ -1724,10 +1733,10 @@ graph.<span class="hljs-title function_">addEdge</span>(<span class="hljs-number
 </li>
 <li><p><strong>Use specific error classes</strong>: Create custom error classes for different types of errors. This helps you understand the nature of the error and handle them more precisely.</p>
 <pre><code class="hljs language-javascript"><span class="hljs-keyword">class</span> <span class="hljs-title class_">CustomError</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_ inherited__">Error</span> {
-    <span class="hljs-title function_">constructor</span>(<span class="hljs-params">message</span>) {
-        <span class="hljs-variable language_">super</span>(message);
-        <span class="hljs-variable language_">this</span>.<span class="hljs-property">name</span> = <span class="hljs-string">&#x27;CustomError&#x27;</span>;
-    }
+  <span class="hljs-title function_">constructor</span>(<span class="hljs-params">message</span>) {
+    <span class="hljs-variable language_">super</span>(message);
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">name</span> = <span class="hljs-string">&quot;CustomError&quot;</span>;
+  }
 }
 </code></pre></li>
 </ol>
