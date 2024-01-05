@@ -5,6 +5,7 @@ All notable changes to this project will be documented in this file.
 # [0.0.52] - In progress
 * add image to merge sort
 * add image to linear search
+* update image for binary search
 
 # [0.0.51] - 2024-01-01
 * add description for insertion sort
