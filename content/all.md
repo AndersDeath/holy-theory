@@ -2321,6 +2321,9 @@ Ternary Search is a divide-and-conquer algorithm designed for efficiently findin
 **Time Complexity:**
    - Ternary Search has a time complexity of O(log3 n), where 'n' is the size of the array. This is an improvement over binary search when the search space can be significantly reduced at each step. However, it's worth noting that constant factors play a role, and in practice, binary search might be faster for smaller datasets due to simpler arithmetic operations. Ternary Search is particularly beneficial when the dataset is large and the search space can be significantly reduced with each iteration.
 
+
+![Ternary search](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/ternary-search.png)
+
 ```typescript
 
 function ternarySearch(func: (x: number) => number, left: number, right: number, epsilon: number): number {

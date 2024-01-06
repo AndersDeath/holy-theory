@@ -595,6 +595,7 @@ res = binary_search(my_list, <span class="hljs-number">3</span>)
 <ul>
 <li>Ternary Search has a time complexity of O(log3 n), where &#39;n&#39; is the size of the array. This is an improvement over binary search when the search space can be significantly reduced at each step. However, it&#39;s worth noting that constant factors play a role, and in practice, binary search might be faster for smaller datasets due to simpler arithmetic operations. Ternary Search is particularly beneficial when the dataset is large and the search space can be significantly reduced with each iteration.</li>
 </ul>
+<p><img src="images/ternary-search.png" alt="Ternary search"></p>
 <pre><code class="hljs language-typescript">
 <span class="hljs-keyword">function</span> <span class="hljs-title function_">ternarySearch</span>(<span class="hljs-params">func: (x: <span class="hljs-built_in">number</span>) =&gt; <span class="hljs-built_in">number</span>, left: <span class="hljs-built_in">number</span>, right: <span class="hljs-built_in">number</span>, epsilon: <span class="hljs-built_in">number</span></span>): <span class="hljs-built_in">number</span> {
   <span class="hljs-keyword">while</span> (right - left &gt; epsilon) {
