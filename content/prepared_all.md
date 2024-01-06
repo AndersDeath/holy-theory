@@ -1506,6 +1506,8 @@ Interpolation Search is a an algorithm designed for finding a specific target va
 
 The time complexity of Interpolation Search is O(log log n) on average, where "n" is the number of elements in the array. In the best case, it can be O(1), and in the worst case, it can be O(n). However, the average case is often more relevant, and it is O(log log n) under certain assumptions about the distribution of the data.
 
+![Interpolation search](images/interpolation-search.png)
+
 ```java
 class Solution {
 
