@@ -1168,6 +1168,7 @@ graph.<span class="hljs-title function_">addEdge</span>(<span class="hljs-number
 </ol>
 <p><strong>Time Complexity:</strong></p>
 <p>The time complexity of Interpolation Search is O(log log n) on average, where &quot;n&quot; is the number of elements in the array. In the best case, it can be O(1), and in the worst case, it can be O(n). However, the average case is often more relevant, and it is O(log log n) under certain assumptions about the distribution of the data.</p>
+<p><img src="images/interpolation-search.png" alt="Interpolation search"></p>
 <pre><code class="hljs language-java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {
 
     <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-type">int</span> <span class="hljs-title function_">interpolationSearch</span><span class="hljs-params">(<span class="hljs-type">int</span>[] array, <span class="hljs-type">int</span> value)</span> {
@@ -1618,6 +1619,7 @@ graph.<span class="hljs-title function_">addEdge</span>(<span class="hljs-number
 <ul>
 <li>Ternary Search has a time complexity of O(log3 n), where &#39;n&#39; is the size of the array. This is an improvement over binary search when the search space can be significantly reduced at each step. However, it&#39;s worth noting that constant factors play a role, and in practice, binary search might be faster for smaller datasets due to simpler arithmetic operations. Ternary Search is particularly beneficial when the dataset is large and the search space can be significantly reduced with each iteration.</li>
 </ul>
+<p><img src="images/ternary-search.png" alt="Ternary search"></p>
 <pre><code class="hljs language-typescript">
 <span class="hljs-keyword">function</span> <span class="hljs-title function_">ternarySearch</span>(<span class="hljs-params">func: (x: <span class="hljs-built_in">number</span>) =&gt; <span class="hljs-built_in">number</span>, left: <span class="hljs-built_in">number</span>, right: <span class="hljs-built_in">number</span>, epsilon: <span class="hljs-built_in">number</span></span>): <span class="hljs-built_in">number</span> {
   <span class="hljs-keyword">while</span> (right - left &gt; epsilon) {
