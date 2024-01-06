@@ -32,7 +32,6 @@ The time complexity of Interpolation Search is O(log log n) on average, where "n
 
 ![Interpolation search](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/interpolation-search.png)
 
-
 ```java
 class Solution {
 
