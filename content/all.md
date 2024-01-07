@@ -1023,6 +1023,9 @@ Breadth-First Search (BFS) is a graph traversal algorithm that systematically ex
 
 - The time complexity of BFS is \(O(V + E)\), where \(V\) is the number of vertices and \(E\) is the number of edges. The algorithm visits each vertex and edge once.
 
+
+![Breadth first search](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/breadth-first-search.png)
+
 ```typescript
 class Graph {
   private adjacencyList: Map<string, string[]>;
@@ -1185,6 +1188,9 @@ Depth-First Search (DFS) is a graph traversal algorithm that systematically expl
 **Time Complexity:**
 
 - The time complexity of DFS is \(O(V + E)\), where \(V\) is the number of vertices and \(E\) is the number of edges. The algorithm visits each vertex and edge once. Recursive DFS has a space complexity of \(O(V)\) due to the call stack, while an explicit stack implementation can have a space complexity of \(O(E + V)\).
+
+
+![Depth first search](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/depth-first-search.png)
 
 ```typescript
 class Graph {
