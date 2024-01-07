@@ -8,6 +8,7 @@ All notable changes to this project will be documented in this file.
 * update image for binary search
 * add image to ternary search
 * add image to interpolation search
+* add image to breadth first search
 
 # [0.0.51] - 2024-01-01
 * add description for insertion sort
