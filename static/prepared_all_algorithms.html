@@ -855,6 +855,7 @@ graph.<span class="hljs-title function_">bfs</span>(<span class="hljs-string">&q
 <ul>
 <li>The time complexity of DFS is (O(V + E)), where (V) is the number of vertices and (E) is the number of edges. The algorithm visits each vertex and edge once. Recursive DFS has a space complexity of (O(V)) due to the call stack, while an explicit stack implementation can have a space complexity of (O(E + V)).</li>
 </ul>
+<p><img src="images/depth-first-search.png" alt="Depth first search"></p>
 <pre><code class="hljs language-typescript"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Graph</span> {
   <span class="hljs-keyword">private</span> <span class="hljs-attr">adjacencyList</span>: <span class="hljs-title class_">Map</span>&lt;<span class="hljs-built_in">string</span>, <span class="hljs-built_in">string</span>[]&gt;;
 
