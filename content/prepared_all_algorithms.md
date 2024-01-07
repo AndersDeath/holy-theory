@@ -788,6 +788,9 @@ Breadth-First Search (BFS) is a graph traversal algorithm that systematically ex
 
 - The time complexity of BFS is \(O(V + E)\), where \(V\) is the number of vertices and \(E\) is the number of edges. The algorithm visits each vertex and edge once.
 
+
+![Breadth first search](images/breadth-first-search.png)
+
 ```typescript
 class Graph {
   private adjacencyList: Map<string, string[]>;
