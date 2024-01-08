@@ -1,6 +1,6 @@
 {
   "name": "holy-theory",
-  "version": "0.0.51",
+  "version": "0.0.52",
   "description": "The Book",
   "main": "index.js",
   "scripts": {
