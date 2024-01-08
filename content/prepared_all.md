@@ -9,6 +9,8 @@
     - [Dijkstra&#39;s algorithm](#dijkstra-39-s-algorithm)
   - [<strong>Non-Negative Edge Weights:</strong>
 - Dijkstra&#39;s Algorithm assumes non-negative edge weights. Negative weights can lead to incorrect results.](#-strong-non-negative-edge-weights-strong-dijkstra-39-s-algorithm-assumes-non-negative-edge-weights-negative-weights-can-lead-to-incorrect-results-)
+  - [<strong>Time Complexity:</strong>
+<br>- The time complexity of Dijkstra&#39;s Algorithm is O((V + E) log V) using a priority queue or min-heap, where V is the number of vertices and E is the number of edges.](#-strong-time-complexity-strong-br-the-time-complexity-of-dijkstra-39-s-algorithm-is-o-v-e-log-v-using-a-priority-queue-or-min-heap-where-v-is-the-number-of-vertices-and-e-is-the-number-of-edges-)
     - [Floyd-Warshall algorithm](#floyd-warshall-algorithm)
     - [Ford Fulkerson algorithm](#ford-fulkerson-algorithm)
     - [Graph adjacency list](#graph-adjacency-list)
@@ -980,6 +982,9 @@ DiffieHellman()
 **Time Complexity:**
   
 - The time complexity of Dijkstra's Algorithm is O((V + E) log V) using a priority queue or min-heap, where V is the number of vertices and E is the number of edges.
+- 
+![Dijkstra algorithms](images/dijkstra.png)
+
 
 ```typescript
 class Graph {
