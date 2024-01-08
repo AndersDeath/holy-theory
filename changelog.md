@@ -10,6 +10,7 @@ All notable changes to this project will be documented in this file.
 * add image to interpolation search
 * add image to breadth first search
 * add image to depth first search
+* add image to dijkstra
 
 # [0.0.51] - 2024-01-01
 * add description for insertion sort
