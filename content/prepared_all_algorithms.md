@@ -1161,6 +1161,8 @@ The Floyd-Warshall Algorithm is a dynamic programming algorithm used to find the
 
 - The time complexity of Floyd-Warshall Algorithm is \(O(V^3)\), where \(V\) is the number of vertices in the graph.
 
+![Floyd-Warshall algorithm](images/floyd-warshall.png)
+
 ```typescript
 class Graph {
   private adjacencyMatrix: number[][];
