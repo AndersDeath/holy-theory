@@ -58,6 +58,8 @@ The Ford-Fulkerson Algorithm is an iterative method to compute the maximum flow 
 
 - The time complexity of the Ford-Fulkerson Algorithm is not strictly defined, as it depends on the choice of augmenting paths. In the worst case, the algorithm may not terminate if the paths are not chosen carefully. When implemented with the Edmonds-Karp variant, where the shortest augmenting paths are chosen using Breadth-First Search, the time complexity is \(O(VE^2)\), where \(V\) is the number of vertices and \(E\) is the number of edges.
 
+![Ford Fulkerson algorithm](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/ford-fulkerson.png)
+
 ```typescript
 class FordFulkerson {
   private graph: number[][];

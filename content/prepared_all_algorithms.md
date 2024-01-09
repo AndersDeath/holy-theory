@@ -1161,6 +1161,8 @@ The Floyd-Warshall Algorithm is a dynamic programming algorithm used to find the
 
 - The time complexity of Floyd-Warshall Algorithm is \(O(V^3)\), where \(V\) is the number of vertices in the graph.
 
+![Floyd-Warshall algorithm](images/floyd-warshall.png)
+
 ```typescript
 class Graph {
   private adjacencyMatrix: number[][];
@@ -1274,6 +1276,8 @@ The Ford-Fulkerson Algorithm is an iterative method to compute the maximum flow 
 **Time Complexity:**
 
 - The time complexity of the Ford-Fulkerson Algorithm is not strictly defined, as it depends on the choice of augmenting paths. In the worst case, the algorithm may not terminate if the paths are not chosen carefully. When implemented with the Edmonds-Karp variant, where the shortest augmenting paths are chosen using Breadth-First Search, the time complexity is \(O(VE^2)\), where \(V\) is the number of vertices and \(E\) is the number of edges.
+
+![Ford Fulkerson algorithm](images/ford-fulkerson.png)
 
 ```typescript
 class FordFulkerson {
