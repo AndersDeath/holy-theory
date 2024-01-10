@@ -18,6 +18,7 @@
     - [Insertion sort](#insertion-sort)
     - [Interpolation search](#interpolation-search)
     - [Interval search](#interval-search)
+    - [Jump search](#jump-search)
     - [Linear search](#linear-search)
     - [Merge sort](#merge-sort)
     - [Quick sort](#quick-sort)
@@ -379,6 +380,7 @@
     - [Insertion sort](#insertion-sort)
     - [Interpolation search](#interpolation-search)
     - [Interval search](#interval-search)
+    - [Jump search](#jump-search)
     - [Linear search](#linear-search)
     - [Merge sort](#merge-sort)
     - [Quick sort](#quick-sort)
@@ -1973,6 +1975,33 @@ function intervalSearch(intervals: Interval[], queryInterval: Interval): number[
   }
 
   return result;
+}
+```
+### Jump search
+
+
+
+```typescript
+function jumpSearch(arr: number[], target: number): number {
+  const n = arr.length;
+  const step = Math.floor(Math.sqrt(n));
+  let prev = 0;
+
+  while (arr[Math.min(step, n) - 1] < target) {
+    prev = step;
+    step += Math.floor(Math.sqrt(n));
+    if (prev >= n) {
+      return -1;
+    }
+  }
+
+  for (let i = prev; i < Math.min(step, n); i++) {
+    if (arr[i] === target) {
+      return i;
+    }
+  }
+
+  return -1;
 }
 ```
 ### Linear search
