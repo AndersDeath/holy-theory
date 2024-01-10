@@ -19,6 +19,7 @@
 - [Insertion sort](./content/algorithms/insertion-sort.md)
 - [Interpolation search](./content/algorithms/interpolation-search.md)
 - [Interval search](./content/algorithms/interval-search.md)
+- [Jump search](./content/algorithms/jump-search.md)
 - [Linear search](./content/algorithms/linear-search.md)
 - [Merge sort](./content/algorithms/merge-sort.md)
 - [Quick sort](./content/algorithms/quick-sort.md)

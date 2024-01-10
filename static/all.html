@@ -1264,6 +1264,29 @@ graph.<span class="hljs-title function_">addEdge</span>(<span class="hljs-number
 
   <span class="hljs-keyword">return</span> result;
 }
+</code></pre><h3>Jump search</h3>
+<h1 id="jump-search">Jump search</h1>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">jumpSearch</span>(<span class="hljs-params">arr: <span class="hljs-built_in">number</span>[], target: <span class="hljs-built_in">number</span></span>): <span class="hljs-built_in">number</span> {
+  <span class="hljs-keyword">const</span> n = arr.<span class="hljs-property">length</span>;
+  <span class="hljs-keyword">const</span> step = <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">floor</span>(<span class="hljs-title class_">Math</span>.<span class="hljs-title function_">sqrt</span>(n));
+  <span class="hljs-keyword">let</span> prev = <span class="hljs-number">0</span>;
+
+  <span class="hljs-keyword">while</span> (arr[<span class="hljs-title class_">Math</span>.<span class="hljs-title function_">min</span>(step, n) - <span class="hljs-number">1</span>] &lt; target) {
+    prev = step;
+    step += <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">floor</span>(<span class="hljs-title class_">Math</span>.<span class="hljs-title function_">sqrt</span>(n));
+    <span class="hljs-keyword">if</span> (prev &gt;= n) {
+      <span class="hljs-keyword">return</span> -<span class="hljs-number">1</span>;
+    }
+  }
+
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = prev; i &lt; <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">min</span>(step, n); i++) {
+    <span class="hljs-keyword">if</span> (arr[i] === target) {
+      <span class="hljs-keyword">return</span> i;
+    }
+  }
+
+  <span class="hljs-keyword">return</span> -<span class="hljs-number">1</span>;
+}
 </code></pre><h3>Linear search</h3>
 <h1 id="linear-search">Linear search</h1>
 <p>Linear Search, also known as sequential search, is a simple searching algorithm that finds the position of a target value within a list or array. It works by iterating through the elements one by one until the target value is found or the entire list has been searched.</p>
