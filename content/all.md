@@ -2026,6 +2026,11 @@ Jump Search is a searching algorithm designed for sorted arrays. It is a block-b
 
 - The time complexity of Jump Search is -add formula-,, where-add formula-, is the size of the array. This makes it efficient for large datasets when compared to linear search but may be outperformed by binary search for certain scenarios.
 
+
+![Jump search](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/jump-search.png)
+
+
+
 ```typescript
 function jumpSearch(arr: number[], target: number): number {
   const n = arr.length;

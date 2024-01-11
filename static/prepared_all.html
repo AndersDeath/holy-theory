@@ -1325,6 +1325,7 @@ graph.<span class="hljs-title function_">addEdge</span>(<span class="hljs-number
 <ul>
 <li>The time complexity of Jump Search is -add formula-,, where-add formula-, is the size of the array. This makes it efficient for large datasets when compared to linear search but may be outperformed by binary search for certain scenarios.</li>
 </ul>
+<p><img src="images/jump-search.png" alt="Jump search"></p>
 <pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">jumpSearch</span>(<span class="hljs-params">arr: <span class="hljs-built_in">number</span>[], target: <span class="hljs-built_in">number</span></span>): <span class="hljs-built_in">number</span> {
   <span class="hljs-keyword">const</span> n = arr.<span class="hljs-property">length</span>;
   <span class="hljs-keyword">const</span> step = <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">floor</span>(<span class="hljs-title class_">Math</span>.<span class="hljs-title function_">sqrt</span>(n));
