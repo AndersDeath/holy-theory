@@ -1266,6 +1266,66 @@ graph.<span class="hljs-title function_">addEdge</span>(<span class="hljs-number
 }
 </code></pre><h3>Jump search</h3>
 <h1 id="jump-search">Jump search</h1>
+<p>Jump Search is a searching algorithm designed for sorted arrays. It is a block-based search algorithm that works by jumping ahead by fixed steps and then linearly searching within the block for the target element. Jump Search combines the efficiency of binary search with the simplicity of linear search.</p>
+<p><strong>How Jump Search Works:</strong></p>
+<ol>
+<li><p><strong>Determine Jump Size:</strong></p>
+<ul>
+<li>Determine the jump size by taking the square root of the array length. This ensures a balanced trade-off between the number of jumps and the linear search within a block.</li>
+</ul>
+</li>
+<li><p><strong>Jump Ahead:</strong></p>
+<ul>
+<li>Start at the beginning of the array and jump ahead by the calculated jump size until finding a value that is greater than or equal to the target.</li>
+</ul>
+</li>
+<li><p><strong>Linear Search within Block:</strong></p>
+<ul>
+<li>Perform a linear search within the block from the previous jump until finding the target element or determining that it is not present in the block.</li>
+</ul>
+</li>
+<li><p><strong>Repeat or Conclude:</strong></p>
+<ul>
+<li>Repeat the process until the entire array is searched or the target element is found.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Key Characteristics:</strong></p>
+<ul>
+<li><p><strong>Efficiency:</strong></p>
+<ul>
+<li>Jump Search has a time complexity of -add formula-, making it more efficient than linear search -add formula-, and comparable to binary search ((O(\log n))) for large datasets.</li>
+</ul>
+</li>
+<li><p><strong>Sorted Arrays:</strong></p>
+<ul>
+<li>Jump Search requires the array to be sorted.</li>
+</ul>
+</li>
+<li><p><strong>Jump Size:</strong></p>
+<ul>
+<li>The jump size is a critical factor in the efficiency of Jump Search. The optimal jump size is often calculated as the square root of the array length.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Applications:</strong></p>
+<ul>
+<li><p><strong>Database Searching:</strong></p>
+<ul>
+<li>Jump Search is used in database systems for searching in large datasets.</li>
+</ul>
+</li>
+<li><p><strong>Sorted Arrays:</strong></p>
+<ul>
+<li>Useful when the data is sorted, and random access to elements is feasible.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Time Complexity:</strong></p>
+<ul>
+<li>The time complexity of Jump Search is -add formula-,, where-add formula-, is the size of the array. This makes it efficient for large datasets when compared to linear search but may be outperformed by binary search for certain scenarios.</li>
+</ul>
+<p><img src="images/jump-search.png" alt="Jump search"></p>
 <pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">jumpSearch</span>(<span class="hljs-params">arr: <span class="hljs-built_in">number</span>[], target: <span class="hljs-built_in">number</span></span>): <span class="hljs-built_in">number</span> {
   <span class="hljs-keyword">const</span> n = arr.<span class="hljs-property">length</span>;
   <span class="hljs-keyword">const</span> step = <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">floor</span>(<span class="hljs-title class_">Math</span>.<span class="hljs-title function_">sqrt</span>(n));
