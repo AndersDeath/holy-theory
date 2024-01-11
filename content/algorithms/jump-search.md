@@ -1,7 +1,7 @@
 ---
 title: Jump search
 tags: ["search", "algorithms", "jump"]
-languages: ["typescript", "java"]
+languages: ["typescript"]
 sort: 800
 ---
 

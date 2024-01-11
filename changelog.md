@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file.
 * add image to Floyd-Warshall algorithm
 * add Ford Fulkerson algorithm
 * add Jump search in typescript
+* add description to jump search
 
 # [0.0.52] - 2024-01-08
 * add image to merge sort
