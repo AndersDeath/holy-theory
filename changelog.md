@@ -8,6 +8,7 @@ All notable changes to this project will be documented in this file.
 * add Jump search in typescript
 * add description to jump search
 * add image to jump search
+* fix bugs in builder
 
 # [0.0.52] - 2024-01-08
 * add image to merge sort
