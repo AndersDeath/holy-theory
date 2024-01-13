@@ -3,6 +3,7 @@ title: Interval search
 tags: ['search', 'algorithms', 'binary']
 languages: ['typescript', 'java', 'python']
 sort: 700
+ignore: true
 ---
 # Interval search
 

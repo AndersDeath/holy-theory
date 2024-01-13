@@ -8,7 +8,7 @@ sort: 800
 
 ![Binary search](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/binary-search.png)
 
-## Steps:
+**Steps:**
 
 * Step 1 - Read the search element from the user.
 * Step 2 - Find the middle element in the sorted list.
@@ -22,7 +22,7 @@ sort: 800
 
 -----
 
-## Time Complexity:
+**Time Complexity:**
 
 * Worst case: O(log n)
 * Average case: O(log n)

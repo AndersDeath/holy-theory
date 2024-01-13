@@ -469,147 +469,6 @@ function linearSearch(arr: number[], target: number): number {
 
 \newpage 
 
-# Interval search
-
-
-An interval search algorithm typically refers to searching for overlapping or containing intervals in a collection of intervals. One common approach for this task is to use an interval tree. Here's an explanation of the Interval Search algorithm using an interval tree:
-
-**How Interval Search Works:**
-
-1. **Construct the Interval Tree:**
-   - Begin by constructing an interval tree from the given set of intervals.
-   - Each node in the interval tree represents an interval, and the tree is recursively built to efficiently organize and store these intervals.
-
-2. **Search for Overlapping Intervals:**
-   - When searching for intervals that overlap with a given interval (query interval), start at the root of the interval tree.
-
-3. **Traverse the Tree:**
-   - Traverse the tree, comparing the query interval with the intervals represented by each node.
-   - If there is an overlap, the algorithm can either return the overlapping interval(s) immediately or continue searching in both left and right subtrees.
-
-4. **Recursive Search:**
-   - Recursively search in the left or right subtree based on the relationship between the query interval and the intervals represented by the current node.
-   - Continue this process until all potential overlapping intervals are found.
-
-**Time Complexity:**
-   - The time complexity of searching for overlapping intervals using an interval tree is typically O(log n + k), where 'n' is the number of intervals in the tree and 'k' is the number of intervals overlapping with the query interval. The construction of the interval tree initially takes O(n log n) time, but subsequent searches are more efficient. Interval trees are particularly useful when there are many queries for overlapping intervals in a set.
-
-```typescript
-
-type Interval = [number, number];
-
-function intervalSearch(intervals: Interval[], queryInterval: Interval): number[] {
-  const result: number[] = [];
-
-  for (let i = 0; i < intervals.length; i++) {
-    const [start, end] = intervals[i];
-    const [queryStart, queryEnd] = queryInterval;
-
-    if (start <= queryEnd && end >= queryStart) {
-      result.push(i); 
-    }
-  }
-
-  return result;
-}
-```
-
-\newpage 
-
-# Binary search
-
-
-![Binary search](images/binary-search.png)
-
-## Steps:
-
-* Step 1 - Read the search element from the user.
-* Step 2 - Find the middle element in the sorted list.
-* Step 3 - Compare the search element with the middle element in the sorted list.
-* Step 4 - If both are matched, then display "Given element is found!!!" and terminate the function.
-* Step 5 - If both are not matched, then check whether the search element is smaller or larger than the middle element.
-* Step 6 - If the search element is smaller than middle element, repeat steps 2, 3, 4 and 5 for the left sublist of the middle element.
-* Step 7 - If the search element is larger than middle element, repeat steps 2, 3, 4 and 5 for the right sublist of the middle element.
-* Step 8 - Repeat the same process until we find the search element in the list or until sublist contains only one element.
-* Step 9 - If that element also doesn't match with the search element, then returns -1;
-
------
-
-## Time Complexity:
-
-* Worst case: O(log n)
-* Average case: O(log n)
-* Best case: O(1)
-
-```typescript
-
-function binarySearch(nums: number[], target: number): number {
-  let left: number = 0;
-  let right: number = nums.length - 1;
-
-  while (left <= right) {
-    const mid: number = Math.floor((left + right) / 2);
-
-    if (nums[mid] === target) return mid;
-    if (target < nums[mid]) right = mid - 1;
-    else left = mid + 1;
-  }
-
-  return -1;
-}
-
-```
-
-```java
-
-class Solution {
-    private static int binarySearch(int[] array, int target) {
-		
-		int low = 0;
-		int high = array.length - 1;
-		
-		while(low <= high) {
-			int middle = low + (high - low) / 2;
-			int value = array[middle];
-			
-			if(value < target) {
-				low = middle + 1;
-			} else if(value > target) {
-				high = middle - 1;
-				
-			} else {
-				return middle;
-			}
-		}
-		return -1;
-	}
-}
-```
-
-```python
-
-def binary_search(list, item):
-    low = 0
-    high = len(list) - 1
-    while low <= high:
-        mid = (low+high)/2
-        guess = list[mid]
-        if guess == item:
-            return mid
-        if guess > item:
-            high = mid - 1
-        else:
-            low = mid +1
-    return None
-
-my_list = [1, 3, 5, 7, 9]
-
-res = binary_search(my_list, 3)
-
-print(my_list[res])
-```
-\newpage 
-
 # Jump search
 
 
@@ -688,6 +547,100 @@ function jumpSearch(arr: number[], target: number): number {
 }
 ```
 
+\newpage 
+
+# Binary search
+
+
+![Binary search](images/binary-search.png)
+
+**Steps:**
+
+* Step 1 - Read the search element from the user.
+* Step 2 - Find the middle element in the sorted list.
+* Step 3 - Compare the search element with the middle element in the sorted list.
+* Step 4 - If both are matched, then display "Given element is found!!!" and terminate the function.
+* Step 5 - If both are not matched, then check whether the search element is smaller or larger than the middle element.
+* Step 6 - If the search element is smaller than middle element, repeat steps 2, 3, 4 and 5 for the left sublist of the middle element.
+* Step 7 - If the search element is larger than middle element, repeat steps 2, 3, 4 and 5 for the right sublist of the middle element.
+* Step 8 - Repeat the same process until we find the search element in the list or until sublist contains only one element.
+* Step 9 - If that element also doesn't match with the search element, then returns -1;
+
+-----
+
+**Time Complexity:**
+
+* Worst case: O(log n)
+* Average case: O(log n)
+* Best case: O(1)
+
+```typescript
+
+function binarySearch(nums: number[], target: number): number {
+  let left: number = 0;
+  let right: number = nums.length - 1;
+
+  while (left <= right) {
+    const mid: number = Math.floor((left + right) / 2);
+
+    if (nums[mid] === target) return mid;
+    if (target < nums[mid]) right = mid - 1;
+    else left = mid + 1;
+  }
+
+  return -1;
+}
+
+```
+
+```java
+
+class Solution {
+    private static int binarySearch(int[] array, int target) {
+		
+		int low = 0;
+		int high = array.length - 1;
+		
+		while(low <= high) {
+			int middle = low + (high - low) / 2;
+			int value = array[middle];
+			
+			if(value < target) {
+				low = middle + 1;
+			} else if(value > target) {
+				high = middle - 1;
+				
+			} else {
+				return middle;
+			}
+		}
+		return -1;
+	}
+}
+```
+
+```python
+
+def binary_search(list, item):
+    low = 0
+    high = len(list) - 1
+    while low <= high:
+        mid = (low+high)/2
+        guess = list[mid]
+        if guess == item:
+            return mid
+        if guess > item:
+            high = mid - 1
+        else:
+            low = mid +1
+    return None
+
+my_list = [1, 3, 5, 7, 9]
+
+res = binary_search(my_list, 3)
+
+print(my_list[res])
+```
 \newpage 
 
 # Ternary search
@@ -1084,7 +1037,7 @@ graph.dfs("A");
 **Time Complexity:**
   
 - The time complexity of Dijkstra's Algorithm is O((V + E) log V) using a priority queue or min-heap, where V is the number of vertices and E is the number of edges.
-- 
+
 ![Dijkstra algorithms](images/dijkstra.png)
 
 

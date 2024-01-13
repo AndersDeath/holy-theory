@@ -2,7 +2,7 @@
 title: Jump search
 tags: ["search", "algorithms", "jump"]
 languages: ["typescript"]
-sort: 800
+sort: 700
 ---
 
 # Jump search
