@@ -1,16 +1,12 @@
 [Holy Theory project](#holy-theory-project)
   - [algorithms](#algorithms)
     - [Binary search](#binary-search)
-  - [Steps:](#steps-)
-  - [Time Complexity:](#time-complexity-)
     - [Bubble sort](#bubble-sort)
     - [Depth-first search](#depth-first-search)
     - [Diffie hellman algorithm](#diffie-hellman-algorithm)
     - [Dijkstra&#39;s algorithm](#dijkstra-39-s-algorithm)
   - [<strong>Non-Negative Edge Weights:</strong>
 - Dijkstra&#39;s Algorithm assumes non-negative edge weights. Negative weights can lead to incorrect results.](#-strong-non-negative-edge-weights-strong-dijkstra-39-s-algorithm-assumes-non-negative-edge-weights-negative-weights-can-lead-to-incorrect-results-)
-  - [<strong>Time Complexity:</strong>
-<br>- The time complexity of Dijkstra&#39;s Algorithm is O((V + E) log V) using a priority queue or min-heap, where V is the number of vertices and E is the number of edges.](#-strong-time-complexity-strong-br-the-time-complexity-of-dijkstra-39-s-algorithm-is-o-v-e-log-v-using-a-priority-queue-or-min-heap-where-v-is-the-number-of-vertices-and-e-is-the-number-of-edges-)
     - [Floyd-Warshall algorithm](#floyd-warshall-algorithm)
     - [Ford Fulkerson algorithm](#ford-fulkerson-algorithm)
     - [Graph adjacency list](#graph-adjacency-list)
@@ -367,7 +363,7 @@
 
 ![Binary search](images/binary-search.png)
 
-## Steps:
+**Steps:**
 
 * Step 1 - Read the search element from the user.
 * Step 2 - Find the middle element in the sorted list.
@@ -381,7 +377,7 @@
 
 -----
 
-## Time Complexity:
+**Time Complexity:**
 
 * Worst case: O(log n)
 * Average case: O(log n)
@@ -983,7 +979,7 @@ DiffieHellman()
 **Time Complexity:**
   
 - The time complexity of Dijkstra's Algorithm is O((V + E) log V) using a priority queue or min-heap, where V is the number of vertices and E is the number of edges.
-- 
+
 ![Dijkstra algorithms](images/dijkstra.png)
 
 

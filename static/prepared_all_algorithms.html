@@ -427,134 +427,6 @@
 
   <span class="hljs-keyword">return</span> -<span class="hljs-number">1</span>;
 }
-</code></pre><p style="page-break-after: always;"> </p><h1 id="interval-search">Interval search</h1>
-<p>An interval search algorithm typically refers to searching for overlapping or containing intervals in a collection of intervals. One common approach for this task is to use an interval tree. Here&#39;s an explanation of the Interval Search algorithm using an interval tree:</p>
-<p><strong>How Interval Search Works:</strong></p>
-<ol>
-<li><p><strong>Construct the Interval Tree:</strong></p>
-<ul>
-<li>Begin by constructing an interval tree from the given set of intervals.</li>
-<li>Each node in the interval tree represents an interval, and the tree is recursively built to efficiently organize and store these intervals.</li>
-</ul>
-</li>
-<li><p><strong>Search for Overlapping Intervals:</strong></p>
-<ul>
-<li>When searching for intervals that overlap with a given interval (query interval), start at the root of the interval tree.</li>
-</ul>
-</li>
-<li><p><strong>Traverse the Tree:</strong></p>
-<ul>
-<li>Traverse the tree, comparing the query interval with the intervals represented by each node.</li>
-<li>If there is an overlap, the algorithm can either return the overlapping interval(s) immediately or continue searching in both left and right subtrees.</li>
-</ul>
-</li>
-<li><p><strong>Recursive Search:</strong></p>
-<ul>
-<li>Recursively search in the left or right subtree based on the relationship between the query interval and the intervals represented by the current node.</li>
-<li>Continue this process until all potential overlapping intervals are found.</li>
-</ul>
-</li>
-</ol>
-<p><strong>Time Complexity:</strong></p>
-<ul>
-<li>The time complexity of searching for overlapping intervals using an interval tree is typically O(log n + k), where &#39;n&#39; is the number of intervals in the tree and &#39;k&#39; is the number of intervals overlapping with the query interval. The construction of the interval tree initially takes O(n log n) time, but subsequent searches are more efficient. Interval trees are particularly useful when there are many queries for overlapping intervals in a set.</li>
-</ul>
-<pre><code class="hljs language-typescript">
-<span class="hljs-keyword">type</span> <span class="hljs-title class_">Interval</span> = [<span class="hljs-built_in">number</span>, <span class="hljs-built_in">number</span>];
-
-<span class="hljs-keyword">function</span> <span class="hljs-title function_">intervalSearch</span>(<span class="hljs-params">intervals: Interval[], queryInterval: Interval</span>): <span class="hljs-built_in">number</span>[] {
-  <span class="hljs-keyword">const</span> <span class="hljs-attr">result</span>: <span class="hljs-built_in">number</span>[] = [];
-
-  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; intervals.<span class="hljs-property">length</span>; i++) {
-    <span class="hljs-keyword">const</span> [start, end] = intervals[i];
-    <span class="hljs-keyword">const</span> [queryStart, queryEnd] = queryInterval;
-
-    <span class="hljs-keyword">if</span> (start &lt;= queryEnd &amp;&amp; end &gt;= queryStart) {
-      result.<span class="hljs-title function_">push</span>(i); 
-    }
-  }
-
-  <span class="hljs-keyword">return</span> result;
-}
-</code></pre><p style="page-break-after: always;"> </p><h1 id="binary-search">Binary search</h1>
-<p><img src="images/binary-search.png" alt="Binary search"></p>
-<h2 id="steps">Steps:</h2>
-<ul>
-<li>Step 1 - Read the search element from the user.</li>
-<li>Step 2 - Find the middle element in the sorted list.</li>
-<li>Step 3 - Compare the search element with the middle element in the sorted list.</li>
-<li>Step 4 - If both are matched, then display &quot;Given element is found!!!&quot; and terminate the function.</li>
-<li>Step 5 - If both are not matched, then check whether the search element is smaller or larger than the middle element.</li>
-<li>Step 6 - If the search element is smaller than middle element, repeat steps 2, 3, 4 and 5 for the left sublist of the middle element.</li>
-<li>Step 7 - If the search element is larger than middle element, repeat steps 2, 3, 4 and 5 for the right sublist of the middle element.</li>
-<li>Step 8 - Repeat the same process until we find the search element in the list or until sublist contains only one element.</li>
-<li>Step 9 - If that element also doesn&#39;t match with the search element, then returns -1;</li>
-</ul>
-<hr>
-<h2 id="time-complexity">Time Complexity:</h2>
-<ul>
-<li>Worst case: O(log n)</li>
-<li>Average case: O(log n)</li>
-<li>Best case: O(1)</li>
-</ul>
-<pre><code class="hljs language-typescript">
-<span class="hljs-keyword">function</span> <span class="hljs-title function_">binarySearch</span>(<span class="hljs-params">nums: <span class="hljs-built_in">number</span>[], target: <span class="hljs-built_in">number</span></span>): <span class="hljs-built_in">number</span> {
-  <span class="hljs-keyword">let</span> <span class="hljs-attr">left</span>: <span class="hljs-built_in">number</span> = <span class="hljs-number">0</span>;
-  <span class="hljs-keyword">let</span> <span class="hljs-attr">right</span>: <span class="hljs-built_in">number</span> = nums.<span class="hljs-property">length</span> - <span class="hljs-number">1</span>;
-
-  <span class="hljs-keyword">while</span> (left &lt;= right) {
-    <span class="hljs-keyword">const</span> <span class="hljs-attr">mid</span>: <span class="hljs-built_in">number</span> = <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">floor</span>((left + right) / <span class="hljs-number">2</span>);
-
-    <span class="hljs-keyword">if</span> (nums[mid] === target) <span class="hljs-keyword">return</span> mid;
-    <span class="hljs-keyword">if</span> (target &lt; nums[mid]) right = mid - <span class="hljs-number">1</span>;
-    <span class="hljs-keyword">else</span> left = mid + <span class="hljs-number">1</span>;
-  }
-
-  <span class="hljs-keyword">return</span> -<span class="hljs-number">1</span>;
-}
-</code></pre><pre><code class="hljs language-java">
-<span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {
-    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-type">int</span> <span class="hljs-title function_">binarySearch</span><span class="hljs-params">(<span class="hljs-type">int</span>[] array, <span class="hljs-type">int</span> target)</span> {
-        
-        <span class="hljs-type">int</span> <span class="hljs-variable">low</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>;
-        <span class="hljs-type">int</span> <span class="hljs-variable">high</span> <span class="hljs-operator">=</span> array.length - <span class="hljs-number">1</span>;
-        
-        <span class="hljs-keyword">while</span>(low &lt;= high) {
-            <span class="hljs-type">int</span> <span class="hljs-variable">middle</span> <span class="hljs-operator">=</span> low + (high - low) / <span class="hljs-number">2</span>;
-            <span class="hljs-type">int</span> <span class="hljs-variable">value</span> <span class="hljs-operator">=</span> array[middle];
-            
-            <span class="hljs-keyword">if</span>(value &lt; target) {
-                low = middle + <span class="hljs-number">1</span>;
-            } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(value &gt; target) {
-                high = middle - <span class="hljs-number">1</span>;
-                
-            } <span class="hljs-keyword">else</span> {
-                <span class="hljs-keyword">return</span> middle;
-            }
-        }
-        <span class="hljs-keyword">return</span> -<span class="hljs-number">1</span>;
-    }
-}
-</code></pre><pre><code class="hljs language-python">
-<span class="hljs-keyword">def</span> <span class="hljs-title function_">binary_search</span>(<span class="hljs-params"><span class="hljs-built_in">list</span>, item</span>):
-    low = <span class="hljs-number">0</span>
-    high = <span class="hljs-built_in">len</span>(<span class="hljs-built_in">list</span>) - <span class="hljs-number">1</span>
-    <span class="hljs-keyword">while</span> low &lt;= high:
-        mid = (low+high)/<span class="hljs-number">2</span>
-        guess = <span class="hljs-built_in">list</span>[mid]
-        <span class="hljs-keyword">if</span> guess == item:
-            <span class="hljs-keyword">return</span> mid
-        <span class="hljs-keyword">if</span> guess &gt; item:
-            high = mid - <span class="hljs-number">1</span>
-        <span class="hljs-keyword">else</span>:
-            low = mid +<span class="hljs-number">1</span>
-    <span class="hljs-keyword">return</span> <span class="hljs-literal">None</span>
-
-my_list = [<span class="hljs-number">1</span>, <span class="hljs-number">3</span>, <span class="hljs-number">5</span>, <span class="hljs-number">7</span>, <span class="hljs-number">9</span>]
-
-res = binary_search(my_list, <span class="hljs-number">3</span>)
-
-<span class="hljs-built_in">print</span>(my_list[res])
 </code></pre><p style="page-break-after: always;"> </p><h1 id="jump-search">Jump search</h1>
 <p>Jump Search is a searching algorithm designed for sorted arrays. It is a block-based search algorithm that works by jumping ahead by fixed steps and then linearly searching within the block for the target element. Jump Search combines the efficiency of binary search with the simplicity of linear search.</p>
 <p><strong>How Jump Search Works:</strong></p>
@@ -637,6 +509,85 @@ res = binary_search(my_list, <span class="hljs-number">3</span>)
 
   <span class="hljs-keyword">return</span> -<span class="hljs-number">1</span>;
 }
+</code></pre><p style="page-break-after: always;"> </p><h1 id="binary-search">Binary search</h1>
+<p><img src="images/binary-search.png" alt="Binary search"></p>
+<p><strong>Steps:</strong></p>
+<ul>
+<li>Step 1 - Read the search element from the user.</li>
+<li>Step 2 - Find the middle element in the sorted list.</li>
+<li>Step 3 - Compare the search element with the middle element in the sorted list.</li>
+<li>Step 4 - If both are matched, then display &quot;Given element is found!!!&quot; and terminate the function.</li>
+<li>Step 5 - If both are not matched, then check whether the search element is smaller or larger than the middle element.</li>
+<li>Step 6 - If the search element is smaller than middle element, repeat steps 2, 3, 4 and 5 for the left sublist of the middle element.</li>
+<li>Step 7 - If the search element is larger than middle element, repeat steps 2, 3, 4 and 5 for the right sublist of the middle element.</li>
+<li>Step 8 - Repeat the same process until we find the search element in the list or until sublist contains only one element.</li>
+<li>Step 9 - If that element also doesn&#39;t match with the search element, then returns -1;</li>
+</ul>
+<hr>
+<p><strong>Time Complexity:</strong></p>
+<ul>
+<li>Worst case: O(log n)</li>
+<li>Average case: O(log n)</li>
+<li>Best case: O(1)</li>
+</ul>
+<pre><code class="hljs language-typescript">
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">binarySearch</span>(<span class="hljs-params">nums: <span class="hljs-built_in">number</span>[], target: <span class="hljs-built_in">number</span></span>): <span class="hljs-built_in">number</span> {
+  <span class="hljs-keyword">let</span> <span class="hljs-attr">left</span>: <span class="hljs-built_in">number</span> = <span class="hljs-number">0</span>;
+  <span class="hljs-keyword">let</span> <span class="hljs-attr">right</span>: <span class="hljs-built_in">number</span> = nums.<span class="hljs-property">length</span> - <span class="hljs-number">1</span>;
+
+  <span class="hljs-keyword">while</span> (left &lt;= right) {
+    <span class="hljs-keyword">const</span> <span class="hljs-attr">mid</span>: <span class="hljs-built_in">number</span> = <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">floor</span>((left + right) / <span class="hljs-number">2</span>);
+
+    <span class="hljs-keyword">if</span> (nums[mid] === target) <span class="hljs-keyword">return</span> mid;
+    <span class="hljs-keyword">if</span> (target &lt; nums[mid]) right = mid - <span class="hljs-number">1</span>;
+    <span class="hljs-keyword">else</span> left = mid + <span class="hljs-number">1</span>;
+  }
+
+  <span class="hljs-keyword">return</span> -<span class="hljs-number">1</span>;
+}
+</code></pre><pre><code class="hljs language-java">
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-type">int</span> <span class="hljs-title function_">binarySearch</span><span class="hljs-params">(<span class="hljs-type">int</span>[] array, <span class="hljs-type">int</span> target)</span> {
+        
+        <span class="hljs-type">int</span> <span class="hljs-variable">low</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>;
+        <span class="hljs-type">int</span> <span class="hljs-variable">high</span> <span class="hljs-operator">=</span> array.length - <span class="hljs-number">1</span>;
+        
+        <span class="hljs-keyword">while</span>(low &lt;= high) {
+            <span class="hljs-type">int</span> <span class="hljs-variable">middle</span> <span class="hljs-operator">=</span> low + (high - low) / <span class="hljs-number">2</span>;
+            <span class="hljs-type">int</span> <span class="hljs-variable">value</span> <span class="hljs-operator">=</span> array[middle];
+            
+            <span class="hljs-keyword">if</span>(value &lt; target) {
+                low = middle + <span class="hljs-number">1</span>;
+            } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(value &gt; target) {
+                high = middle - <span class="hljs-number">1</span>;
+                
+            } <span class="hljs-keyword">else</span> {
+                <span class="hljs-keyword">return</span> middle;
+            }
+        }
+        <span class="hljs-keyword">return</span> -<span class="hljs-number">1</span>;
+    }
+}
+</code></pre><pre><code class="hljs language-python">
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">binary_search</span>(<span class="hljs-params"><span class="hljs-built_in">list</span>, item</span>):
+    low = <span class="hljs-number">0</span>
+    high = <span class="hljs-built_in">len</span>(<span class="hljs-built_in">list</span>) - <span class="hljs-number">1</span>
+    <span class="hljs-keyword">while</span> low &lt;= high:
+        mid = (low+high)/<span class="hljs-number">2</span>
+        guess = <span class="hljs-built_in">list</span>[mid]
+        <span class="hljs-keyword">if</span> guess == item:
+            <span class="hljs-keyword">return</span> mid
+        <span class="hljs-keyword">if</span> guess &gt; item:
+            high = mid - <span class="hljs-number">1</span>
+        <span class="hljs-keyword">else</span>:
+            low = mid +<span class="hljs-number">1</span>
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">None</span>
+
+my_list = [<span class="hljs-number">1</span>, <span class="hljs-number">3</span>, <span class="hljs-number">5</span>, <span class="hljs-number">7</span>, <span class="hljs-number">9</span>]
+
+res = binary_search(my_list, <span class="hljs-number">3</span>)
+
+<span class="hljs-built_in">print</span>(my_list[res])
 </code></pre><p style="page-break-after: always;"> </p><h1 id="ternary-search">Ternary search</h1>
 <p>Ternary Search is a divide-and-conquer algorithm designed for efficiently finding the position of a target value in a sorted array. It operates by dividing the array into three parts and recursively narrowing down the search space until the target is found or determined to be absent.</p>
 <p><strong>How Ternary Search Works:</strong></p>
@@ -1035,8 +986,10 @@ graph.<span class="hljs-title function_">dfs</span>(<span class="hljs-string">&q
 <li><p>Transportation and Logistics.</p>
 </li>
 </ul>
-<h2 id="time-complexity--the-time-complexity-of-dijkstras-algorithm-is-ov--e-log-v-using-a-priority-queue-or-min-heap-where-v-is-the-number-of-vertices-and-e-is-the-number-of-edges"><strong>Time Complexity:</strong>
-<br>- The time complexity of Dijkstra&#39;s Algorithm is O((V + E) log V) using a priority queue or min-heap, where V is the number of vertices and E is the number of edges.</h2>
+<p><strong>Time Complexity:</strong></p>
+<ul>
+<li>The time complexity of Dijkstra&#39;s Algorithm is O((V + E) log V) using a priority queue or min-heap, where V is the number of vertices and E is the number of edges.</li>
+</ul>
 <p><img src="images/dijkstra.png" alt="Dijkstra algorithms"></p>
 <pre><code class="hljs language-typescript"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Graph</span> {
   <span class="hljs-keyword">private</span> <span class="hljs-attr">adjacencyList</span>: <span class="hljs-title class_">Map</span>&lt;<span class="hljs-built_in">string</span>, <span class="hljs-title class_">Map</span>&lt;<span class="hljs-built_in">string</span>, <span class="hljs-built_in">number</span>&gt;&gt;;
