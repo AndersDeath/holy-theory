@@ -1642,7 +1642,7 @@ Jump Search is a searching algorithm designed for sorted arrays. It is a block-b
 
 - **Efficiency:**
 
-  - Jump Search has a time complexity of -add formula-, making it more efficient than linear search -add formula-, and comparable to binary search (\(O(\log n)\)) for large datasets.
+  - Jump Search has a time complexity of -add formula-, making it more efficient than linear search -add formula-, and comparable to binary search -add formula- for large datasets.
 
 - **Sorted Arrays:**
 

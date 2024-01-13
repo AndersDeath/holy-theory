@@ -230,7 +230,10 @@ async function generateStatic(
   });
 
   algorithmsBucket.forEach((e) => {
-    allAlgorithms += buildHeadline(e.title.trim(), 1, type) + "\n";
+    if(type === 'md') {
+      allAlgorithms += buildHeadline(e.title.trim(), 1, type) + "\n";
+
+    }
     e.content ? (allAlgorithms += e.content.replace(headerRegex, "")) : "";
     allAlgorithms +=
       type === "md"
