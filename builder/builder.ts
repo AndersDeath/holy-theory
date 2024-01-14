@@ -168,7 +168,7 @@ async function generateStatic(
                 : marked.parse(cleanContent(content)),
             type: metadata.title ? "content" : "collection",
             sort: metadata.sort || null,
-            ignore:  metadata.ignore || false,
+            ignore: metadata.ignore || false,
           });
         }
       }
@@ -206,13 +206,20 @@ async function generateStatic(
   });
 
   let allOutput = buildHeadline("Holy Theory project", 1, type) + "\n";
-  let allAlgorithms = '';
+  let allAlgorithms =
+    type === "md"
+      ? "\n\\newpage \n\n"
+      : '<p style="page-break-after: always;"> </p>';
   const headerRegex = /^#\s+(.+)/gm;
 
   let prevSection = "";
   const algorithmsBucket = [];
   allContentWithSections.forEach((e: Entry) => {
-    if (e.type === "content" && e.section.toLowerCase() === "algorithms" && !e.ignore) {
+    if (
+      e.type === "content" &&
+      e.section.toLowerCase() === "algorithms" &&
+      !e.ignore
+    ) {
       algorithmsBucket.push(e);
     }
     if (e.type === "content") {
@@ -230,9 +237,8 @@ async function generateStatic(
   });
 
   algorithmsBucket.forEach((e) => {
-    if(type === 'md') {
+    if (type === "md") {
       allAlgorithms += buildHeadline(e.title.trim(), 1, type) + "\n";
-
     }
     e.content ? (allAlgorithms += e.content.replace(headerRegex, "")) : "";
     allAlgorithms +=
