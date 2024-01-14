@@ -364,23 +364,22 @@ graph.<span class="hljs-title function_">addEdge</span>(<span class="hljs-string
 graph.<span class="hljs-title function_">bfs</span>(<span class="hljs-string">&quot;A&quot;</span>);
 </code></pre><h3>Bubble sort</h3>
 <h1 id="bubble-sort">Bubble sort</h1>
-<p><strong>Bubble Sort: A Simple Sorting Algorithm</strong></p>
-<p>Bubble Sort is one of the simplest sorting algorithms that works by repeatedly stepping through the list to be sorted, comparing each pair of adjacent items, and swapping them if they are in the wrong order. The pass through the list is repeated until no swaps are needed, indicating that the list is sorted.</p>
-<p><strong>How Bubble Sort Works:</strong></p>
+<p>Bubble sorting is one of the simplest sorting algorithms that is not used in practice, but is actively used for training purposes. It works by repeatedly going through the sorted list, comparing each pair of neighboring elements and replacing them if they are in the wrong order. The pass through the list is repeated until no permutations are needed, indicating that the list is sorted.</p>
+<p><strong>How it works:</strong></p>
 <ol>
-<li><p><strong>Comparing Adjacent Elements:</strong></p>
+<li><p><strong>Comparing neighboring elements:</strong></p>
 <ul>
-<li>Bubble Sort starts by comparing the first two elements of an array. If the first element is greater than the second, they are swapped. If not, they remain in their positions.</li>
+<li>The algorithm starts by comparing the first two elements of the array. If the first element is greater than the second, they are swapped. Otherwise, they remain in their positions.</li>
 </ul>
 </li>
-<li><p><strong>Iterative Process:</strong></p>
+<li><p><strong>Iterative process:</strong></p>
 <ul>
-<li>This process is then repeated for every pair of adjacent elements throughout the entire array. After the first iteration, the largest element will have &quot;bubbled up&quot; to the last position.</li>
+<li>This process is then repeated for each pair of neighboring elements throughout the array. After the first iteration, the largest element will &quot;pop up&quot; to the last position.</li>
 </ul>
 </li>
-<li><p><strong>Subsequent Passes:</strong></p>
+<li><p><strong>Next passes:</strong></p>
 <ul>
-<li>The algorithm then repeats the process for the remaining elements (excluding the already sorted ones at the end of the array). In each pass, the next largest element is placed in its correct position.</li>
+<li>The algorithm then repeats the process for the remaining elements (excluding those already sorted at the end of the array). At each pass, the next largest element is placed in the correct position.</li>
 </ul>
 </li>
 <li><p><strong>Termination:</strong></p>
@@ -389,24 +388,23 @@ graph.<span class="hljs-title function_">bfs</span>(<span class="hljs-string">&q
 </ul>
 </li>
 </ol>
-<p><strong>Time Complexity:</strong></p>
-<ul>
-<li>Bubble Sort has a time complexity of O(n^2) in the worst and average cases, where &#39;n&#39; is the number of elements in the array. This makes it inefficient for large datasets but is useful for educational purposes due to its simplicity.</li>
-</ul>
+<p><strong>Time complexity:</strong> - Bubble sort has a time complexity of O(n^2) in the worst and average cases, where n is the number of elements in the array. This makes it inefficient for large datasets but useful for educational purposes because of its simplicity.</p>
 <p><img src="https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/bubble-sort.png" alt="Bubble sort"></p>
 <pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">bubbleSort</span>(<span class="hljs-params">array: <span class="hljs-built_in">number</span>[] | <span class="hljs-built_in">string</span>[]</span>) {
-    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; array.<span class="hljs-property">length</span>; i++) {
-        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> j = <span class="hljs-number">0</span>; j &lt; array.<span class="hljs-property">length</span> - <span class="hljs-number">1</span> - i; j++) {
-            <span class="hljs-keyword">if</span> (array[j] &gt; array[j + <span class="hljs-number">1</span>]) {
-                [array[j], array[j + <span class="hljs-number">1</span>]] = [array[j + <span class="hljs-number">1</span>], array[j]];
-            }
-        }
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; array.<span class="hljs-property">length</span>; i++) {
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> j = <span class="hljs-number">0</span>; j &lt; array.<span class="hljs-property">length</span> - <span class="hljs-number">1</span> - i; j++) {
+      <span class="hljs-keyword">if</span> (array[j] &gt; array[j + <span class="hljs-number">1</span>]) {
+        [array[j], array[j + <span class="hljs-number">1</span>]] = [array[j + <span class="hljs-number">1</span>], array[j]];
+      }
     }
-    <span class="hljs-keyword">return</span> array;
+  }
+  <span class="hljs-keyword">return</span> array;
 }
 
-<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-title function_">bubbleSort</span>([<span class="hljs-number">2</span>,<span class="hljs-number">5</span>,<span class="hljs-number">2</span>,<span class="hljs-number">6</span>,<span class="hljs-number">7</span>,<span class="hljs-number">2</span>,<span class="hljs-number">22</span>,<span class="hljs-number">5</span>,<span class="hljs-number">7</span>,<span class="hljs-number">9</span>,<span class="hljs-number">0</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>]))
-</code></pre><pre><code class="hljs language-java">    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">bubbleSort</span><span class="hljs-params">(<span class="hljs-type">int</span>[] array)</span> {
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-title function_">bubbleSort</span>([<span class="hljs-number">2</span>, <span class="hljs-number">5</span>, <span class="hljs-number">2</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">2</span>, <span class="hljs-number">22</span>, <span class="hljs-number">5</span>, <span class="hljs-number">7</span>, <span class="hljs-number">9</span>, <span class="hljs-number">0</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]));
+</code></pre><!-- ignore start -->
+
+<pre><code class="hljs language-java">    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">bubbleSort</span><span class="hljs-params">(<span class="hljs-type">int</span>[] array)</span> {
         <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt; array.length - <span class="hljs-number">1</span>; i++) {
             <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> <span class="hljs-variable">j</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; j &lt; array.length - i - <span class="hljs-number">1</span>; j++) {
                 <span class="hljs-keyword">if</span>(array[j] &gt; array[j + <span class="hljs-number">1</span>]) {
@@ -417,7 +415,12 @@ graph.<span class="hljs-title function_">bfs</span>(<span class="hljs-string">&q
             }
         }
     }
-</code></pre><h3>Depth-first search</h3>
+</code></pre><!-- ignore end -->
+
+<ul>
+<li><a href="../readme.md">Go back</a></li>
+</ul>
+<h3>Depth-first search</h3>
 <h1 id="depth-first-search">Depth-first search</h1>
 <p>Depth-First Search (DFS) is a graph traversal algorithm that systematically explores the vertices of a graph by going as deep as possible along each branch before backtracking. It starts at a chosen vertex, explores as far as possible along one branch, and then backtracks to explore other branches. DFS is commonly used to detect cycles in a graph, topologically sort vertices, and solve problems related to connected components.</p>
 <p><strong>How Depth-First Search Works:</strong></p>
