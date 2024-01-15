@@ -2,7 +2,9 @@
 
 All notable changes to this project will be documented in this file.
 
-# [0.0.53] - In progress
+# [0.0.54] - In progress
+
+# [0.0.53] - 2024-01-15
 * add image to Floyd-Warshall algorithm
 * add Ford Fulkerson algorithm
 * add Jump search in typescript
