@@ -241,6 +241,10 @@ async function generateStatic(
       allAlgorithms += buildHeadline(e.title.trim(), 1, type) + "\n";
     }
     e.content ? (allAlgorithms += e.content.replace(headerRegex, "")) : "";
+
+    const regex: RegExp = /<!-- ignore start -->(.*?)<!-- ignore end -->/gs;
+    e.content = e.content.replace(regex, "");
+
     allAlgorithms +=
       type === "md"
         ? "\n\\newpage \n\n"

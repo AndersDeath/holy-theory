@@ -3,6 +3,7 @@
 All notable changes to this project will be documented in this file.
 
 # [0.0.54] - In progress
+* add ignore content block and its resolver to builder
 
 # [0.0.53] - 2024-01-15
 * add image to Floyd-Warshall algorithm
