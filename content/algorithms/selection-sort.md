@@ -39,6 +39,7 @@ function selectionSort(array: any[]) {
 
 console.log(selectionSort([1, 4, 2, 8, 345, 123, 43, 32, 5643, 63, 123, 43, 2, 55, 1, 234, 92]));
 ```
+<!-- ignore start -->
 
 ```java
 	public static void selectionSort(int[] array) {
@@ -77,5 +78,7 @@ def selection_sort(arr):
 
 print(selection_sort([5,4,6,2,1,123, 2, 3,1,23 ,1,1,]))
 ```
+
+<!-- ignore end -->
 
 * [Go back](../readme.md)
