@@ -46,6 +46,7 @@ function binarySearch(nums: number[], target: number): number {
 }
 
 ```
+<!-- ignore start -->
 
 ```java
 
@@ -95,3 +96,5 @@ res = binary_search(my_list, 3)
 
 print(my_list[res])
 ```
+
+<!-- ignore end -->

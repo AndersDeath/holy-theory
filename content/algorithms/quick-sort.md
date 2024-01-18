@@ -24,6 +24,7 @@ Quick Sort is an efficient, comparison-based sorting algorithm that follows the 
    - Quick Sort has an average and best-case time complexity of O(n log n), where 'n' is the number of elements in the array. In the worst case, it is O(n^2), but this is rare when a good pivot selection strategy is used. Quick Sort is often faster in practice than other O(n log n) algorithms, and it is widely used in various applications due to its efficiency.
 
 ![Quick sort](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/quick-sort.png)
+<!-- ignore start -->
 
 ```java
 class Solution {
@@ -110,6 +111,7 @@ class Solution {
 	}
 }
 ```
+<!-- ignore end -->
 
 ```typescript
 function quicksort(arr: number[]): number[] {
