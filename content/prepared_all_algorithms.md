@@ -101,6 +101,7 @@ function selectionSort(array: any[]) {
 
 console.log(selectionSort([1, 4, 2, 8, 345, 123, 43, 32, 5643, 63, 123, 43, 2, 55, 1, 234, 92]));
 ```
+<!-- ignore start -->
 
 ```java
 	public static void selectionSort(int[] array) {
@@ -139,6 +140,8 @@ def selection_sort(arr):
 
 print(selection_sort([5,4,6,2,1,123, 2, 3,1,23 ,1,1,]))
 ```
+
+<!-- ignore end -->
 
 
 \newpage 
@@ -182,6 +185,7 @@ function insertionSort(array: number[] | string[]) {
 
 console.log(insertionSort([1, 4, 2, 8, 345, 123, 43, 32, 5643, 63, 123, 43, 2, 55, 1, 234, 92]));
 ```
+<!-- ignore start -->
 
 ```java
     class Solution {
@@ -199,6 +203,8 @@ console.log(insertionSort([1, 4, 2, 8, 345, 123, 43, 32, 5643, 63, 123, 43, 2, 5
         }
     }
 ```
+
+<!-- ignore end -->
 
 \newpage 
 
@@ -223,6 +229,7 @@ Quick Sort is an efficient, comparison-based sorting algorithm that follows the 
    - Quick Sort has an average and best-case time complexity of O(n log n), where 'n' is the number of elements in the array. In the worst case, it is O(n^2), but this is rare when a good pivot selection strategy is used. Quick Sort is often faster in practice than other O(n log n) algorithms, and it is widely used in various applications due to its efficiency.
 
 ![Quick sort](images/quick-sort.png)
+<!-- ignore start -->
 
 ```java
 class Solution {
@@ -309,6 +316,7 @@ class Solution {
 	}
 }
 ```
+<!-- ignore end -->
 
 ```typescript
 function quicksort(arr: number[]): number[] {
@@ -348,6 +356,7 @@ Merge Sort is a comparison-based sorting algorithm that follows the divide-and-c
    - Merge Sort has a consistent time complexity of O(n log n) in all cases, where 'n' is the number of elements in the array. It is a stable sorting algorithm, meaning that equal elements maintain their relative order in the sorted output. While Merge Sort has a slightly higher space complexity due to the need for additional memory, its stability and predictable performance make it a widely used and reliable sorting algorithm.
 
 ![Merge sort](images/merge-sort.png)
+<!-- ignore start -->
 
 ```java
 class Solution {
@@ -401,6 +410,7 @@ class Solution {
 }
 
 ```
+<!-- ignore end -->
 
 ```typescript
 function mergeSort(arr: number[]): number[] {
@@ -599,6 +609,7 @@ function binarySearch(nums: number[], target: number): number {
 }
 
 ```
+<!-- ignore start -->
 
 ```java
 
@@ -648,6 +659,9 @@ res = binary_search(my_list, 3)
 
 print(my_list[res])
 ```
+
+<!-- ignore end -->
+
 \newpage 
 
 # Ternary search
@@ -729,6 +743,7 @@ Interpolation Search is a an algorithm designed for finding a specific target va
 The time complexity of Interpolation Search is O(log log n) on average, where "n" is the number of elements in the array. In the best case, it can be O(1), and in the worst case, it can be O(n). However, the average case is often more relevant, and it is O(log log n) under certain assumptions about the distribution of the data.
 
 ![Interpolation search](images/interpolation-search.png)
+<!-- ignore start -->
 
 ```java
 class Solution {
@@ -754,6 +769,7 @@ class Solution {
 
 }
 ```
+<!-- ignore end -->
 
 ```typescript
 function interpolationSearch(array: number[], value: number): number {

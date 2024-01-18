@@ -48,6 +48,8 @@
 <li>Merge Sort has a consistent time complexity of O(n log n) in all cases, where &#39;n&#39; is the number of elements in the array. It is a stable sorting algorithm, meaning that equal elements maintain their relative order in the sorted output. While Merge Sort has a slightly higher space complexity due to the need for additional memory, its stability and predictable performance make it a widely used and reliable sorting algorithm.</li>
 </ul>
 <p><img src="https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/merge-sort.png" alt="Merge sort"></p>
+<!-- ignore start -->
+
 <pre><code class="hljs language-java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {
 
     <span class="hljs-keyword">void</span> <span class="hljs-title function_">merge</span><span class="hljs-params">(<span class="hljs-type">int</span>[] arr, <span class="hljs-type">int</span> low, <span class="hljs-type">int</span> mid, <span class="hljs-type">int</span> high)</span> {
@@ -97,7 +99,9 @@
         mergesort(arr, <span class="hljs-number">0</span>, n - <span class="hljs-number">1</span>);
     }
 }
-</code></pre><pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">mergeSort</span>(<span class="hljs-params">arr: <span class="hljs-built_in">number</span>[]</span>): <span class="hljs-built_in">number</span>[] {
+</code></pre><!-- ignore end -->
+
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">mergeSort</span>(<span class="hljs-params">arr: <span class="hljs-built_in">number</span>[]</span>): <span class="hljs-built_in">number</span>[] {
   <span class="hljs-keyword">if</span> (arr.<span class="hljs-property">length</span> &lt;= <span class="hljs-number">1</span>) {
     <span class="hljs-keyword">return</span> arr;
   }
