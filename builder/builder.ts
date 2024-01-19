@@ -1,112 +1,14 @@
 import * as fs from "fs-extra";
 import * as path from "path";
-import {
-  buildHeadline,
-  buildLink,
-  buildLinksList,
-  buildListItem,
-  htmlPageWrapper,
-} from "./ui";
+import { buildHeadline, buildLinksList, htmlPageWrapper } from "./ui";
 import { marked } from "./libs/marked";
 import { cleanContent } from "./libs/utils";
 import { LanguageMap } from "./libs/language-map";
 import { Entry } from "./interfaces";
-
-function generateSectionReadmes(
-  contentBySection: Record<string, string[]>,
-  type = "md"
-): string {
-  return Object.keys(contentBySection)
-    .map((section) => {
-      const sectionContent = contentBySection[section].join("\n");
-      return `${buildHeadline(section, 2, type)}\n\n${sectionContent}`;
-    })
-    .join("\n\n");
-}
-
-function generateTableOfContents(markdownContent: string, type = "md"): string {
-  const renderer = new marked.Renderer();
-  let tableOfContents = "";
-
-  renderer.heading = function (text, level, raw) {
-    const anchor = text.toLowerCase().replace(/[^\w]+/g, "-");
-    let indentation = "  ".repeat(level - 1);
-    if (level > 1) {
-      indentation += "- ";
-    }
-    tableOfContents += `${indentation}[${text}](#${anchor})\n`;
-    return `<h${level} id="${anchor}">${text}</h${level}>\n`;
-  };
-
-  marked(markdownContent, { renderer });
-  if (type === "html") {
-    return `<div class="table-of-contents">\n${tableOfContents}</div>`;
-  } else {
-    return tableOfContents;
-  }
-}
-
-const generateGlobalIndex = async (
-  allContentWithSections: Entry[],
-  outputPath: string,
-  type = "md"
-) => {
-  const globalReadmeContent = allContentWithSections.reduce((acc, entry) => {
-    if (entry.section) {
-      if (!acc[entry.section]) {
-        acc[entry.section] = [];
-      }
-      acc[entry.section].push(
-        buildListItem(buildLink(entry.title, entry.link, type), type)
-      );
-    }
-    return acc;
-  }, {} as Record<string, string[]>);
-
-  let sectionReadmes =
-    buildHeadline("Holy Theory", 1, type) +
-    "\n\n" +
-    generateSectionReadmes(globalReadmeContent, type);
-
-  if (type === "html") {
-    sectionReadmes = htmlPageWrapper(sectionReadmes);
-  }
-  await fs.writeFile(outputPath, sectionReadmes);
-};
-
-const createSectionFile = (path: string, content, type = "md") => {
-  if (type === "md") {
-    fs.writeFileSync(path, content);
-  }
-
-  if (type === "html") {
-    fs.writeFileSync(
-      path,
-      htmlPageWrapper(marked.parse(cleanContent(content)))
-    );
-  }
-};
-
-const generateStatisticsFile = async (lm, type, outputFolder) => {
-  const languageSource = Object.fromEntries(lm.get());
-
-  let outputList = "";
-  for (const [key, value] of Object.entries(languageSource)) {
-    outputList += buildListItem(`${key}: ${value}`, type) + "\n";
-  }
-
-  let output = [
-    buildHeadline("Statistics", 1, type),
-    buildHeadline("Languages", 2, type),
-    outputList,
-  ].join("\n\r");
-
-  if (type === "html") {
-    output = htmlPageWrapper(output);
-  }
-
-  await fs.writeFile(path.join(outputFolder, "statistics." + type), output);
-};
+import { generateTableOfContents } from "./builder/generateTableOfContents";
+import { generateGlobalIndex } from "./builder/generateGlobalIndex";
+import { createSectionFile } from "./builder/createSectionFile";
+import { generateStatisticsFile } from "./builder/generateStatisticsFile";
 
 async function generateStatic(
   rootFolder: string,
