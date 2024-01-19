@@ -11,40 +11,9 @@ import { marked } from "./libs/marked";
 import { cleanContent } from "./libs/utils";
 import { LanguageMap } from "./libs/language-map";
 import { Entry } from "./interfaces";
+import { generateSectionReadmes } from "./builder/generateSectionReadmes";
+import { generateTableOfContents } from "./builder/generateTableOfContents";
 
-function generateSectionReadmes(
-  contentBySection: Record<string, string[]>,
-  type = "md"
-): string {
-  return Object.keys(contentBySection)
-    .map((section) => {
-      const sectionContent = contentBySection[section].join("\n");
-      return `${buildHeadline(section, 2, type)}\n\n${sectionContent}`;
-    })
-    .join("\n\n");
-}
-
-function generateTableOfContents(markdownContent: string, type = "md"): string {
-  const renderer = new marked.Renderer();
-  let tableOfContents = "";
-
-  renderer.heading = function (text, level, raw) {
-    const anchor = text.toLowerCase().replace(/[^\w]+/g, "-");
-    let indentation = "  ".repeat(level - 1);
-    if (level > 1) {
-      indentation += "- ";
-    }
-    tableOfContents += `${indentation}[${text}](#${anchor})\n`;
-    return `<h${level} id="${anchor}">${text}</h${level}>\n`;
-  };
-
-  marked(markdownContent, { renderer });
-  if (type === "html") {
-    return `<div class="table-of-contents">\n${tableOfContents}</div>`;
-  } else {
-    return tableOfContents;
-  }
-}
 
 const generateGlobalIndex = async (
   allContentWithSections: Entry[],
