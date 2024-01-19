@@ -1,53 +1,14 @@
 import * as fs from "fs-extra";
 import * as path from "path";
-import {
-  buildHeadline,
-  buildLink,
-  buildLinksList,
-  buildListItem,
-  htmlPageWrapper,
-} from "./ui";
+import { buildHeadline, buildLinksList, htmlPageWrapper } from "./ui";
 import { marked } from "./libs/marked";
 import { cleanContent } from "./libs/utils";
 import { LanguageMap } from "./libs/language-map";
 import { Entry } from "./interfaces";
-import { generateSectionReadmes } from "./builder/generateSectionReadmes";
 import { generateTableOfContents } from "./builder/generateTableOfContents";
 import { generateGlobalIndex } from "./builder/generateGlobalIndex";
-
-const createSectionFile = (path: string, content, type = "md") => {
-  if (type === "md") {
-    fs.writeFileSync(path, content);
-  }
-
-  if (type === "html") {
-    fs.writeFileSync(
-      path,
-      htmlPageWrapper(marked.parse(cleanContent(content)))
-    );
-  }
-};
-
-const generateStatisticsFile = async (lm, type, outputFolder) => {
-  const languageSource = Object.fromEntries(lm.get());
-
-  let outputList = "";
-  for (const [key, value] of Object.entries(languageSource)) {
-    outputList += buildListItem(`${key}: ${value}`, type) + "\n";
-  }
-
-  let output = [
-    buildHeadline("Statistics", 1, type),
-    buildHeadline("Languages", 2, type),
-    outputList,
-  ].join("\n\r");
-
-  if (type === "html") {
-    output = htmlPageWrapper(output);
-  }
-
-  await fs.writeFile(path.join(outputFolder, "statistics." + type), output);
-};
+import { createSectionFile } from "./builder/createSectionFile";
+import { generateStatisticsFile } from "./builder/generateStatisticsFile";
 
 async function generateStatic(
   rootFolder: string,
