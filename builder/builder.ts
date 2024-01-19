@@ -13,35 +13,7 @@ import { LanguageMap } from "./libs/language-map";
 import { Entry } from "./interfaces";
 import { generateSectionReadmes } from "./builder/generateSectionReadmes";
 import { generateTableOfContents } from "./builder/generateTableOfContents";
-
-
-const generateGlobalIndex = async (
-  allContentWithSections: Entry[],
-  outputPath: string,
-  type = "md"
-) => {
-  const globalReadmeContent = allContentWithSections.reduce((acc, entry) => {
-    if (entry.section) {
-      if (!acc[entry.section]) {
-        acc[entry.section] = [];
-      }
-      acc[entry.section].push(
-        buildListItem(buildLink(entry.title, entry.link, type), type)
-      );
-    }
-    return acc;
-  }, {} as Record<string, string[]>);
-
-  let sectionReadmes =
-    buildHeadline("Holy Theory", 1, type) +
-    "\n\n" +
-    generateSectionReadmes(globalReadmeContent, type);
-
-  if (type === "html") {
-    sectionReadmes = htmlPageWrapper(sectionReadmes);
-  }
-  await fs.writeFile(outputPath, sectionReadmes);
-};
+import { generateGlobalIndex } from "./builder/generateGlobalIndex";
 
 const createSectionFile = (path: string, content, type = "md") => {
   if (type === "md") {
