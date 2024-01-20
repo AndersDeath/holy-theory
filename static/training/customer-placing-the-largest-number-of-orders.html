@@ -1,29 +1,29 @@
 <!DOCTYPE html>
-  <html lang="en">
-  <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Holy Theory</title>
-      <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/monokai.min.css" />
-      <script type="application/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
-      <style>
-      body {
-        margin: 0;
-            padding: 0;
-        }
-
-        img {
-            max-width: 400px;
-        }
-
-        .content {
-          width: 60%;
-          margin: 0 auto;
-        }
-      </style>
-  </head>
-  <body>
-      <div class="content"><h1 id="customer-placing-the-largest-number-of-order">Customer Placing the Largest Number of Order</h1>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Holy Theory</title>
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/monokai.min.css" />
+        <script type="application/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+        <style>
+        body {
+          margin: 0;
+              padding: 0;
+          }
+  
+          img {
+              max-width: 400px;
+          }
+  
+          .content {
+            width: 60%;
+            margin: 0 auto;
+          }
+        </style>
+    </head>
+    <body>
+        <div class="content"><h1 id="customer-placing-the-largest-number-of-order">Customer Placing the Largest Number of Order</h1>
 <pre><code class="hljs language-SQL"><span class="hljs-keyword">SELECT</span> customer_number
 <span class="hljs-keyword">FROM</span> Orders
 <span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span> customer_number
@@ -55,5 +55,5 @@ This SQL query retrieves the <code>customer_number</code> from the <code>Orders<
 </ol>
 <p>The main idea is to compare the count of orders for each customer with the maximum count across all customers, and select only those customers whose order count matches the maximum.</p>
 </div>
-  </body>
-  </html>
+    </body>
+    </html>

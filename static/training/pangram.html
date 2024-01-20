@@ -1,29 +1,29 @@
 <!DOCTYPE html>
-  <html lang="en">
-  <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Holy Theory</title>
-      <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/monokai.min.css" />
-      <script type="application/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
-      <style>
-      body {
-        margin: 0;
-            padding: 0;
-        }
-
-        img {
-            max-width: 400px;
-        }
-
-        .content {
-          width: 60%;
-          margin: 0 auto;
-        }
-      </style>
-  </head>
-  <body>
-      <div class="content"><h1 id="pangram">Pangram</h1>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Holy Theory</title>
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/monokai.min.css" />
+        <script type="application/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+        <style>
+        body {
+          margin: 0;
+              padding: 0;
+          }
+  
+          img {
+              max-width: 400px;
+          }
+  
+          .content {
+            width: 60%;
+            margin: 0 auto;
+          }
+        </style>
+    </head>
+    <body>
+        <div class="content"><h1 id="pangram">Pangram</h1>
 <pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">isPangram</span>(<span class="hljs-params"><span class="hljs-built_in">string</span>:<span class="hljs-built_in">string</span></span>){
     <span class="hljs-keyword">const</span> set = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Set</span>();
     <span class="hljs-built_in">string</span>.<span class="hljs-title function_">toLowerCase</span>().<span class="hljs-title function_">split</span>(<span class="hljs-string">&#x27;&#x27;</span>).<span class="hljs-title function_">forEach</span>(<span class="hljs-function">(<span class="hljs-params">letter:<span class="hljs-built_in">string</span></span>) =&gt;</span> {
@@ -64,5 +64,5 @@
 <p><strong>Summary:</strong></p>
 <p>The <code>isPangram</code> function determines if a given string is a pangram by checking if it contains all 26 unique letters of the alphabet at least once. It uses a <code>Set</code> to track encountered letters and a regular expression to identify alphabetical characters.</p>
 </div>
-  </body>
-  </html>
+    </body>
+    </html>

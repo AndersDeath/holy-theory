@@ -1,29 +1,29 @@
 <!DOCTYPE html>
-  <html lang="en">
-  <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Holy Theory</title>
-      <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/monokai.min.css" />
-      <script type="application/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
-      <style>
-      body {
-        margin: 0;
-            padding: 0;
-        }
-
-        img {
-            max-width: 400px;
-        }
-
-        .content {
-          width: 60%;
-          margin: 0 auto;
-        }
-      </style>
-  </head>
-  <body>
-      <div class="content"><h1 id="combine-two-tables">Combine Two Tables</h1>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Holy Theory</title>
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/monokai.min.css" />
+        <script type="application/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+        <style>
+        body {
+          margin: 0;
+              padding: 0;
+          }
+  
+          img {
+              max-width: 400px;
+          }
+  
+          .content {
+            width: 60%;
+            margin: 0 auto;
+          }
+        </style>
+    </head>
+    <body>
+        <div class="content"><h1 id="combine-two-tables">Combine Two Tables</h1>
 <pre><code class="hljs language-SQL"><span class="hljs-keyword">select</span> p.FirstName, p.LastName, a.City, a.State <span class="hljs-keyword">from</span> person p
 <span class="hljs-keyword">left</span> <span class="hljs-keyword">join</span> address a <span class="hljs-keyword">on</span> p.personid <span class="hljs-operator">=</span> a.personid
 </code></pre><p>The SQL query retrieves the <code>FirstName</code> and <code>LastName</code> columns from the <code>person</code> table, along with the <code>City</code> and <code>State</code> columns from the <code>address</code> table. It performs a <code>LEFT JOIN</code> operation between the <code>person</code> and <code>address</code> tables using the <code>personid</code> column as the join condition.</p>
@@ -55,5 +55,5 @@
 <li><a href="../readme.md">Go back</a></li>
 </ul>
 </div>
-  </body>
-  </html>
+    </body>
+    </html>

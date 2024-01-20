@@ -1,29 +1,29 @@
 <!DOCTYPE html>
-  <html lang="en">
-  <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Holy Theory</title>
-      <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/monokai.min.css" />
-      <script type="application/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
-      <style>
-      body {
-        margin: 0;
-            padding: 0;
-        }
-
-        img {
-            max-width: 400px;
-        }
-
-        .content {
-          width: 60%;
-          margin: 0 auto;
-        }
-      </style>
-  </head>
-  <body>
-      <div class="content"><h1 id="big-countries">Big countries</h1>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Holy Theory</title>
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/monokai.min.css" />
+        <script type="application/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+        <style>
+        body {
+          margin: 0;
+              padding: 0;
+          }
+  
+          img {
+              max-width: 400px;
+          }
+  
+          .content {
+            width: 60%;
+            margin: 0 auto;
+          }
+        </style>
+    </head>
+    <body>
+        <div class="content"><h1 id="big-countries">Big countries</h1>
 <pre><code class="hljs language-sql"><span class="hljs-keyword">SELECT</span> name, population, area <span class="hljs-keyword">FROM</span> World <span class="hljs-keyword">WHERE</span> population <span class="hljs-operator">&gt;=</span> <span class="hljs-number">25000000</span> <span class="hljs-keyword">OR</span> area <span class="hljs-operator">&gt;=</span> <span class="hljs-number">3000000</span>;
 </code></pre><p>The given code is a SQL query. It selects the columns <code>name</code>, <code>population</code>, and <code>area</code> from the <code>World</code> table and applies a filter using the <code>WHERE</code> clause. The filter specifies that only rows satisfying either the condition <code>population &gt;= 25000000</code> or the condition <code>area &gt;= 3000000</code> should be returned. Here&#39;s the breakdown of the query:</p>
 <ul>
@@ -35,5 +35,5 @@
 </ul>
 <p>In summary, the query selects the <code>name</code>, <code>population</code>, and <code>area</code> columns from the <code>World</code> table, and only retrieves the rows where either the population is greater than or equal to 25,000,000 or the area is greater than or equal to 3,000,000.</p>
 </div>
-  </body>
-  </html>
+    </body>
+    </html>
