@@ -1,29 +1,29 @@
 <!DOCTYPE html>
-  <html lang="en">
-  <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Holy Theory</title>
-      <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/monokai.min.css" />
-      <script type="application/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
-      <style>
-      body {
-        margin: 0;
-            padding: 0;
-        }
-
-        img {
-            max-width: 400px;
-        }
-
-        .content {
-          width: 60%;
-          margin: 0 auto;
-        }
-      </style>
-  </head>
-  <body>
-      <div class="content"><h1 id="delete-duplicate-emails">Delete Duplicate Emails</h1>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Holy Theory</title>
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/monokai.min.css" />
+        <script type="application/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+        <style>
+        body {
+          margin: 0;
+              padding: 0;
+          }
+  
+          img {
+              max-width: 400px;
+          }
+  
+          .content {
+            width: 60%;
+            margin: 0 auto;
+          }
+        </style>
+    </head>
+    <body>
+        <div class="content"><h1 id="delete-duplicate-emails">Delete Duplicate Emails</h1>
 <pre><code class="hljs language-sql"><span class="hljs-keyword">delete</span> A <span class="hljs-keyword">from</span> Person A, Person B <span class="hljs-keyword">where</span> A.id <span class="hljs-operator">&gt;</span> B.id <span class="hljs-keyword">and</span> A.email<span class="hljs-operator">=</span>B.email;
 </code></pre><p><strong>Solution:</strong></p>
 <p>Step-by-step breakdown of the SQL query:</p>
@@ -55,5 +55,5 @@
 <p>Summary:</p>
 <p>The provided SQL query deletes rows from the <code>Person</code> table where the <code>id</code> value of one row is greater than the <code>id</code> value of another row, and their <code>email</code> values are the same. This ensures that only one row with the duplicate email address and the higher <code>id</code> value remains in the table.</p>
 </div>
-  </body>
-  </html>
+    </body>
+    </html>

@@ -10,12 +10,12 @@ import { generateGlobalIndex } from "./builder/generateGlobalIndex";
 import { createSectionFile } from "./builder/createSectionFile";
 import { generateStatisticsFile } from "./builder/generateStatisticsFile";
 
-async function generateStatic(
+const generateStatic = async (
   rootFolder: string,
   outputFolder: string,
   parseMd: any,
   type = "md"
-): Promise<void> {
+): Promise<void> => {
   const folders = await fs.readdir(rootFolder);
 
   const allContentWithSections: Entry[] = [];
@@ -199,7 +199,7 @@ async function generateStatic(
       path.join(outputFolder, "index.html"),
       "html"
     );
-}
+};
 
 export const Builder = (type: string) => {
   import("parse-md").then((module) => {

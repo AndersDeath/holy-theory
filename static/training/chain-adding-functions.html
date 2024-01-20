@@ -1,29 +1,29 @@
 <!DOCTYPE html>
-  <html lang="en">
-  <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Holy Theory</title>
-      <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/monokai.min.css" />
-      <script type="application/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
-      <style>
-      body {
-        margin: 0;
-            padding: 0;
-        }
-
-        img {
-            max-width: 400px;
-        }
-
-        .content {
-          width: 60%;
-          margin: 0 auto;
-        }
-      </style>
-  </head>
-  <body>
-      <div class="content"><h1 id="chain-adding-functions">Chain adding functions</h1>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Holy Theory</title>
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/monokai.min.css" />
+        <script type="application/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+        <style>
+        body {
+          margin: 0;
+              padding: 0;
+          }
+  
+          img {
+              max-width: 400px;
+          }
+  
+          .content {
+            width: 60%;
+            margin: 0 auto;
+          }
+        </style>
+    </head>
+    <body>
+        <div class="content"><h1 id="chain-adding-functions">Chain adding functions</h1>
 <p>Multiple calls:</p>
 <p>add(1)(2)(3); // 6
 add(1)(2)(3)(4); // 10
@@ -71,5 +71,5 @@ addTwo(3)(5); // 10</p>
 <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(result); <span class="hljs-comment">// Output: 10</span>
 </code></pre><p>In this example, the <code>add</code> function is called with the initial value of <code>1</code>, and then <code>f</code> is repeatedly called with subsequent values <code>2</code>, <code>3</code>, and <code>4</code>. The cumulative sum is <code>1 + 2 + 3 + 4 = 10</code>. When <code>toString()</code> is called on the returned function, it returns the string representation of the accumulated sum, which is <code>&quot;10&quot;</code>.</p>
 </div>
-  </body>
-  </html>
+    </body>
+    </html>

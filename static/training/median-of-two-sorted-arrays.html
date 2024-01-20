@@ -1,29 +1,29 @@
 <!DOCTYPE html>
-  <html lang="en">
-  <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Holy Theory</title>
-      <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/monokai.min.css" />
-      <script type="application/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
-      <style>
-      body {
-        margin: 0;
-            padding: 0;
-        }
-
-        img {
-            max-width: 400px;
-        }
-
-        .content {
-          width: 60%;
-          margin: 0 auto;
-        }
-      </style>
-  </head>
-  <body>
-      <div class="content"><h1 id="median-of-two-sorted-arrays">Median of two sorted arrays</h1>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Holy Theory</title>
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/monokai.min.css" />
+        <script type="application/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+        <style>
+        body {
+          margin: 0;
+              padding: 0;
+          }
+  
+          img {
+              max-width: 400px;
+          }
+  
+          .content {
+            width: 60%;
+            margin: 0 auto;
+          }
+        </style>
+    </head>
+    <body>
+        <div class="content"><h1 id="median-of-two-sorted-arrays">Median of two sorted arrays</h1>
 <pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">findMedianSortedArrays</span>(<span class="hljs-params">nums1: <span class="hljs-built_in">number</span>[], nums2: <span class="hljs-built_in">number</span>[]</span>): <span class="hljs-built_in">number</span> {
     <span class="hljs-keyword">if</span>(nums1.<span class="hljs-property">length</span> &gt; nums2.<span class="hljs-property">length</span>) {
         <span class="hljs-keyword">return</span> <span class="hljs-title function_">findMedianSortedArrays</span>(nums2, nums1);
@@ -99,5 +99,5 @@
 <p><strong>Summary:</strong></p>
 <p>The <code>findMedianSortedArrays</code> function calculates the median of two sorted arrays <code>nums1</code> and <code>nums2</code> using binary search and partitioning. It handles different cases for finding the median of even and odd total lengths of combined arrays and adjusts partition points accordingly. The algorithm returns the calculated median of the two arrays.</p>
 </div>
-  </body>
-  </html>
+    </body>
+    </html>
