@@ -4,7 +4,7 @@ import { buildHeadline, buildLinksList, htmlPageWrapper } from "./ui";
 import { marked } from "./libs/marked";
 import { cleanContent } from "./libs/utils";
 import { LanguageMap } from "./libs/language-map";
-import { ContentEntity, ContentEntityModel } from "./models/ContentEntity";
+import { ContentEntity } from "./models/ContentEntity";
 import { generateTableOfContents } from "./builder/generateTableOfContents";
 import { generateGlobalIndex } from "./builder/generateGlobalIndex";
 import { createSectionFile } from "./builder/createSectionFile";
@@ -18,7 +18,7 @@ const generateStatic = async (
 ): Promise<void> => {
   const folders = await fs.readdir(rootFolder);
 
-  const allContentWithSections: ContentEntityModel[] = [];
+  const allContentWithSections: ContentEntity[] = [];
 
   const lm = new LanguageMap();
 
@@ -77,7 +77,7 @@ const generateStatic = async (
 
       const sectionContent = await buildLinksList(
         allContentWithSections.filter(
-          (e: ContentEntityModel) => e.section === sectionName
+          (e: ContentEntity) => e.section === sectionName
         ),
         type
       );
@@ -118,7 +118,7 @@ const generateStatic = async (
 
   let prevSection = "";
   const algorithmsBucket = [];
-  allContentWithSections.forEach((e: ContentEntityModel) => {
+  allContentWithSections.forEach((e: ContentEntity) => {
     if (
       e.type === "content" &&
       e.section.toLowerCase() === "algorithms" &&
