@@ -1,4 +1,4 @@
-export interface Entry {
+export interface ContentEntity {
   title: string;
   link: string;
   section?: string;
