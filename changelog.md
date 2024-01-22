@@ -1,8 +1,10 @@
 # Changelog
 
 All notable changes to this project will be documented in this file.
+# [0.0.55] - In progress
 
-# [0.0.54] - In progress
+
+# [0.0.54] - 2024-01-22
 * add ignore content block and its resolver to builder
 * add ignore blocks to algorithms content
 * refactoring of builder
