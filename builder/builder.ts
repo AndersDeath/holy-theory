@@ -9,6 +9,7 @@ import { generateTableOfContents } from "./builder/generateTableOfContents";
 import { generateGlobalIndex } from "./builder/generateGlobalIndex";
 import { createSectionFile } from "./builder/createSectionFile";
 import { generateStatisticsFile } from "./builder/generateStatisticsFile";
+import { createContentEntity } from "./builder/createContentEntity";
 
 const generateStatic = async (
   rootFolder: string,
@@ -56,22 +57,16 @@ const generateStatic = async (
             type
           );
 
-          allContentWithSections.push({
-            title: metadata.title || sectionName + " all",
-            link:
-              type === "md"
-                ? `./content/${sectionName}/${entryName}.${type}`
-                : `./${sectionName}/${entryName}.${type}`,
-            entryLink: entryLink,
-            section: sectionName,
-            content:
-              type === "md"
-                ? cleanContent(content)
-                : marked.parse(cleanContent(content)),
-            type: metadata.title ? "content" : "collection",
-            sort: metadata.sort || null,
-            ignore: metadata.ignore || false,
-          });
+          allContentWithSections.push(
+            createContentEntity(
+              metadata,
+              sectionName,
+              type,
+              entryName,
+              entryLink,
+              content
+            )
+          );
         }
       }
 
