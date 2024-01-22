@@ -1,4 +1,4 @@
-import { Entry } from "../interfaces";
+import { ContentEntity } from "../models/ContentEntity";
 import {
   buildHeadline,
   buildLink,
@@ -9,7 +9,7 @@ import { generateSectionReadmes } from "./generateSectionReadmes";
 import * as fs from "fs-extra";
 
 export const generateGlobalIndex = async (
-  allContentWithSections: Entry[],
+  allContentWithSections: ContentEntity[],
   outputPath: string,
   type = "md"
 ) => {

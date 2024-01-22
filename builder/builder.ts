@@ -4,11 +4,12 @@ import { buildHeadline, buildLinksList, htmlPageWrapper } from "./ui";
 import { marked } from "./libs/marked";
 import { cleanContent } from "./libs/utils";
 import { LanguageMap } from "./libs/language-map";
-import { Entry } from "./interfaces";
+import { ContentEntity } from "./models/ContentEntity";
 import { generateTableOfContents } from "./builder/generateTableOfContents";
 import { generateGlobalIndex } from "./builder/generateGlobalIndex";
 import { createSectionFile } from "./builder/createSectionFile";
 import { generateStatisticsFile } from "./builder/generateStatisticsFile";
+import { createContentEntity } from "./builder/createContentEntity";
 
 const generateStatic = async (
   rootFolder: string,
@@ -18,7 +19,7 @@ const generateStatic = async (
 ): Promise<void> => {
   const folders = await fs.readdir(rootFolder);
 
-  const allContentWithSections: Entry[] = [];
+  const allContentWithSections: ContentEntity[] = [];
 
   const lm = new LanguageMap();
 
@@ -56,27 +57,23 @@ const generateStatic = async (
             type
           );
 
-          allContentWithSections.push({
-            title: metadata.title || sectionName + " all",
-            link:
-              type === "md"
-                ? `./content/${sectionName}/${entryName}.${type}`
-                : `./${sectionName}/${entryName}.${type}`,
-            entryLink: entryLink,
-            section: sectionName,
-            content:
-              type === "md"
-                ? cleanContent(content)
-                : marked.parse(cleanContent(content)),
-            type: metadata.title ? "content" : "collection",
-            sort: metadata.sort || null,
-            ignore: metadata.ignore || false,
-          });
+          allContentWithSections.push(
+            createContentEntity(
+              metadata,
+              sectionName,
+              type,
+              entryName,
+              entryLink,
+              content
+            )
+          );
         }
       }
 
       const sectionContent = await buildLinksList(
-        allContentWithSections.filter((e: Entry) => e.section === sectionName),
+        allContentWithSections.filter(
+          (e: ContentEntity) => e.section === sectionName
+        ),
         type
       );
 
@@ -116,7 +113,7 @@ const generateStatic = async (
 
   let prevSection = "";
   const algorithmsBucket = [];
-  allContentWithSections.forEach((e: Entry) => {
+  allContentWithSections.forEach((e: ContentEntity) => {
     if (
       e.type === "content" &&
       e.section.toLowerCase() === "algorithms" &&
