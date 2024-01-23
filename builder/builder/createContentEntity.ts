@@ -3,12 +3,12 @@ import { ContentEntity } from "../models/ContentEntity";
 import { marked } from "../libs/marked";
 
 export const createContentEntity = (
-  metadata,
-  sectionName,
-  type,
-  entryName,
-  entryLink,
-  content
+  metadata: { title: any; sort: any; ignore: any; },
+  sectionName: string,
+  type: string,
+  entryName: any,
+  entryLink: string,
+  content: any
 ): ContentEntity => {
   return new ContentEntity(
     metadata.title || sectionName + " all",
