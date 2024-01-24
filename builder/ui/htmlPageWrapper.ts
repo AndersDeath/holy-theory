@@ -1,4 +1,4 @@
-export function htmlPageWrapper(content: string, meta?: any) {
+export const htmlPageWrapper = (content: string, meta?: any) => {
   return `<!DOCTYPE html>
     <html lang="en">
     <head>
@@ -27,4 +27,4 @@ export function htmlPageWrapper(content: string, meta?: any) {
         <div class="content">${content}</div>
     </body>
     </html>`;
-}
+};
