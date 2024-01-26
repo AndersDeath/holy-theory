@@ -24,10 +24,10 @@ export class ContentEntity implements ContentEntityModel {
     link: string,
     entryLink: string,
     section: string,
-    content: string,
-    type: string,
-    sort: number,
-    ignore: boolean
+    content?: string,
+    type?: string,
+    sort?: number,
+    ignore?: boolean
   ) {
     this.title = title;
     this.link = link;

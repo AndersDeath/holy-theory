@@ -70,39 +70,41 @@ const generateStatic = async (
         }
       }
 
-      const sectionContent = await buildLinksList(
-        allContentWithSections.filter(
-          (e: ContentEntity) => e.section === sectionName
-        ),
-        type
+      await fs.writeFile(
+        path.join(sectionOutputFolder, "index." + type),
+        await buildLinksList(
+          allContentWithSections.filter(
+            (e: ContentEntity) => e.section === sectionName
+          ),
+          type
+        )
       );
-
-      const sectionIndexOutputPath = path.join(
-        sectionOutputFolder,
-        "index." + type
-      );
-
-      await fs.writeFile(sectionIndexOutputPath, sectionContent);
     }
   }
 
   await generateStatisticsFile(lm, type, outputFolder);
 
-  allContentWithSections.push({
-    title: "statistics",
-    link: "./content/statistics." + type,
-    entryLink: "./statistics." + type,
-    section: "Statistics",
-    type: "collection",
-  });
+  allContentWithSections.push(
+    new ContentEntity(
+      "statistics",
+      "./content/statistics." + type,
+      "./statistics." + type,
+      "Statistics",
+      "",
+      "collection"
+    )
+  );
 
-  allContentWithSections.push({
-    title: "All",
-    link: "./content/all." + type,
-    entryLink: "./all." + type,
-    section: "All content",
-    type: "collection",
-  });
+  allContentWithSections.push(
+    new ContentEntity(
+      "All",
+      "./content/all." + type,
+      "./all." + type,
+      "All content",
+      "",
+      "collection"
+    )
+  );
 
   let allOutput = buildHeadline("Holy Theory project", 1, type) + "\n";
   let allAlgorithms =
