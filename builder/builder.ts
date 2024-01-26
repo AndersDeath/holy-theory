@@ -10,6 +10,7 @@ import { generateGlobalIndex } from "./builder/generateGlobalIndex";
 import { createSectionFile } from "./builder/createSectionFile";
 import { generateStatisticsFile } from "./builder/generateStatisticsFile";
 import { createContentEntity } from "./builder/createContentEntity";
+import { staticContentEntityFactory } from "./builder/staticContentEntityFactory";
 
 const generateStatic = async (
   rootFolder: string,
@@ -84,27 +85,8 @@ const generateStatic = async (
 
   await generateStatisticsFile(lm, type, outputFolder);
 
-  allContentWithSections.push(
-    new ContentEntity(
-      "statistics",
-      "./content/statistics." + type,
-      "./statistics." + type,
-      "Statistics",
-      "",
-      "collection"
-    )
-  );
-
-  allContentWithSections.push(
-    new ContentEntity(
-      "All",
-      "./content/all." + type,
-      "./all." + type,
-      "All content",
-      "",
-      "collection"
-    )
-  );
+  allContentWithSections.push(staticContentEntityFactory("statistics", type));
+  allContentWithSections.push(staticContentEntityFactory("all", type));
 
   let allOutput = buildHeadline("Holy Theory project", 1, type) + "\n";
   let allAlgorithms =
