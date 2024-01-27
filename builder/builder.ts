@@ -11,6 +11,7 @@ import { createSectionFile } from "./builder/createSectionFile";
 import { generateStatisticsFile } from "./builder/generateStatisticsFile";
 import { createContentEntity } from "./builder/createContentEntity";
 import { staticContentEntityFactory } from "./builder/staticContentEntityFactory";
+import { addPageBreak } from "./ui/addPageBreak";
 
 const generateStatic = async (
   rootFolder: string,
@@ -89,10 +90,7 @@ const generateStatic = async (
   allContentWithSections.push(staticContentEntityFactory("all", type));
 
   let allOutput = buildHeadline("Holy Theory project", 1, type) + "\n";
-  let allAlgorithms =
-    type === "md"
-      ? "\n\\newpage \n\n"
-      : '<p style="page-break-after: always;"> </p>';
+  let allAlgorithms = addPageBreak(type);
 
   let prevSection = "";
   const algorithmsBucket = [];
@@ -126,10 +124,7 @@ const generateStatic = async (
 
     e.content = removeIgnoreBlock(e.content);
 
-    allAlgorithms +=
-      type === "md"
-        ? "\n\\newpage \n\n"
-        : '<p style="page-break-after: always;"> </p>';
+    allAlgorithms += addPageBreak(type);
   });
 
   allOutput = generateTableOfContents(allOutput, type) + allOutput;
