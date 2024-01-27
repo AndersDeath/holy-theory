@@ -1,33 +1,58 @@
 [Holy Theory project](#holy-theory-project)
   - [algorithms](#algorithms)
     - [Binary search](#binary-search)
+[Binary search](#binary-search)
     - [Binary tree in order traversal](#binary-tree-in-order-traversal)
+[Binary tree in order traversal](#binary-tree-in-order-traversal)
     - [Bubble sort](#bubble-sort)
+[Bubble sort](#bubble-sort)
     - [Depth-first search](#depth-first-search)
+[Depth-first search](#depth-first-search)
     - [Diffie hellman algorithm](#diffie-hellman-algorithm)
+[Diffie hellman algorithm](#diffie-hellman-algorithm)
     - [Dijkstra&#39;s algorithm](#dijkstra-39-s-algorithm)
+[Dijkstra&#39;s algorithm](#dijkstra-39-s-algorithm)
   - [<strong>Non-Negative Edge Weights:</strong>
 - Dijkstra&#39;s Algorithm assumes non-negative edge weights. Negative weights can lead to incorrect results.](#-strong-non-negative-edge-weights-strong-dijkstra-39-s-algorithm-assumes-non-negative-edge-weights-negative-weights-can-lead-to-incorrect-results-)
     - [Floyd-Warshall algorithm](#floyd-warshall-algorithm)
+[Floyd-Warshall algorithm](#floyd-warshall-algorithm)
     - [Ford Fulkerson algorithm](#ford-fulkerson-algorithm)
+[Ford Fulkerson algorithm](#ford-fulkerson-algorithm)
     - [Graph adjacency list](#graph-adjacency-list)
+[Graph adjacency list](#graph-adjacency-list)
     - [Graph adjacency matrix](#graph-adjacency-matrix)
+[Graph adjacency matrix](#graph-adjacency-matrix)
     - [Insertion sort](#insertion-sort)
+[Insertion sort](#insertion-sort)
     - [Interpolation search](#interpolation-search)
+[Interpolation search](#interpolation-search)
     - [Interval search](#interval-search)
+[Interval search](#interval-search)
     - [Jump search](#jump-search)
+[Jump search](#jump-search)
     - [Linear search](#linear-search)
+[Linear search](#linear-search)
     - [Merge sort](#merge-sort)
+[Merge sort](#merge-sort)
     - [Quick sort](#quick-sort)
+[Quicksort](#quicksort)
     - [Selection sort](#selection-sort)
+[Selection sort](#selection-sort)
     - [Ternary search](#ternary-search)
+[Ternary search](#ternary-search)
   - [javascript](#javascript)
     - [Array length property](#array-length-property)
+[Array length property](#array-length-property)
     - [Different ways of declaring functions in JS](#different-ways-of-declaring-functions-in-js)
+[Different ways of declaring functions in JS](#different-ways-of-declaring-functions-in-js)
     - [Event Loop](#event-loop)
+[Event Loop](#event-loop)
     - [Give best practices for handling errors in asynchronous code.](#give-best-practices-for-handling-errors-in-asynchronous-code-)
+[Give best practices for handling errors in asynchronous code.](#give-best-practices-for-handling-errors-in-asynchronous-code-)
     - [How can JavaScript codes be hidden from old browsers that do not support JavaScript?](#how-can-javascript-codes-be-hidden-from-old-browsers-that-do-not-support-javascript-)
+[How can JavaScript codes be hidden from old browsers that do not support JavaScript?](#how-can-javascript-codes-be-hidden-from-old-browsers-that-do-not-support-javascript-)
     - [How JavaScript Engine works](#how-javascript-engine-works)
+[How JavaScript Engine works](#how-javascript-engine-works)
     - [1. <strong>Lexical Analysis:</strong>](#1-strong-lexical-analysis-strong-)
     - [2. <strong>Parsing:</strong>](#2-strong-parsing-strong-)
     - [3. <strong>Compilation:</strong>](#3-strong-compilation-strong-)
@@ -37,68 +62,119 @@
     - [7. <strong>Callbacks and Web APIs (in browser environments):</strong>](#7-strong-callbacks-and-web-apis-in-browser-environments-strong-)
     - [8. <strong>Event Loop (in asynchronous environments):</strong>](#8-strong-event-loop-in-asynchronous-environments-strong-)
     - [How to get argv in nodejs?](#how-to-get-argv-in-nodejs-)
+[How to get argv in nodejs?](#how-to-get-argv-in-nodejs-)
     - [JavaScript data types](#javascript-data-types)
+[JavaScript data types](#javascript-data-types)
     - [JavaScript number size summary](#javascript-number-size-summary)
+[JavaScript number size summary](#javascript-number-size-summary)
     - [JavaScript Arrays cheat sheet](#javascript-arrays-cheat-sheet)
+[JavaScript Arrays cheat sheet](#javascript-arrays-cheat-sheet)
     - [OOP in JavaScript](#oop-in-javascript)
+[OOP in JavaScript](#oop-in-javascript)
     - [1. <strong>Objects:</strong>](#1-strong-objects-strong-)
     - [2. <strong>Classes (Introduced in ECMAScript 6):</strong>](#2-strong-classes-introduced-in-ecmascript-6-strong-)
     - [3. <strong>Inheritance:</strong>](#3-strong-inheritance-strong-)
     - [4. <strong>Encapsulation:</strong>](#4-strong-encapsulation-strong-)
     - [5. <strong>Polymorphism:</strong>](#5-strong-polymorphism-strong-)
+[Possible types of function in JavaScript](#possible-types-of-function-in-javascript)
     - [Promise action flow](#promise-action-flow)
+[Promise action flow](#promise-action-flow)
     - [What is event bubbling?](#what-is-event-bubbling-)
+[What is event bubbling?](#what-is-event-bubbling-)
+[What is the difference between Call and Apply?](#what-is-the-difference-between-call-and-apply-)
     - [<code>call()</code>](#-code-call-code-)
     - [<code>apply()</code>](#-code-apply-code-)
     - [Differences:](#differences-)
     - [What is the NaN](#what-is-the-nan)
+[What is the NaN](#what-is-the-nan)
     - [What is the difference between var, const, and const?](#what-is-the-difference-between-var-const-and-const-)
+[What is the difference between var, const, and const?](#what-is-the-difference-between-var-const-and-const-)
+[Weird and unexpected behavior of JavaScript](#weird-and-unexpected-behavior-of-javascript)
   - [patterns](#patterns)
     - [Event Bus](#event-bus)
+[Event Bus](#event-bus)
     - [Observer](#observer)
+[Observer](#observer)
     - [Singleton](#singleton)
+[Singleton](#singleton)
   - [questions](#questions)
     - [How to reverse a number?](#how-to-reverse-a-number-)
+[How to reverse a number?](#how-to-reverse-a-number-)
     - [Big O](#big-o)
+[Big O](#big-o)
     - [OOP Principles](#oop-principles)
+[OOP Principles](#oop-principles)
   - [Abstraction](#abstraction)
   - [Inheritance](#inheritance)
   - [Encapsulation](#encapsulation)
   - [Polymorphism](#polymorphism)
     - [RESTful API methods](#restful-api-methods)
+[RESTful API methods](#restful-api-methods)
     - [Types of Databases](#types-of-databases)
+[Types of Databases](#types-of-databases)
     - [Software categories](#software-categories)
+[Software categories](#software-categories)
     - [Software characteristics](#software-characteristics)
+[Software characteristics](#software-characteristics)
     - [Software development life cycle](#software-development-life-cycle)
+[Software development life cycle](#software-development-life-cycle)
     - [Design patterns](#design-patterns)
+[Design patterns](#design-patterns)
     - [SOLID](#solid)
+[SOLID](#solid)
+[GRASP](#grasp)
+[Browser URL Search](#browser-url-search)
   - [Question](#question)
   - [Answer](#answer)
+[Rest API](#rest-api)
     - [Websockets](#websockets)
+[Websocket](#websocket)
+[Graphql](#graphql)
     - [Git + Gitflow](#git-gitflow)
+[Git + Gitflow](#git-gitflow)
+[What is functional programming](#what-is-functional-programming)
+[What is REPL and how to use it?](#what-is-repl-and-how-to-use-it-)
+[Why do you need dto files?](#why-do-you-need-dto-files-)
+[Can you explain the difference between REST API and GraphQL?](#can-you-explain-the-difference-between-rest-api-and-graphql-)
     - [Main principles of security in ExpressJS server](#main-principles-of-security-in-expressjs-server)
+[Main principles of security in ExpressJS server](#main-principles-of-security-in-expressjs-server)
   - [structures](#structures)
     - [Array](#array)
+[Array](#array)
     - [Common Data Structures](#common-data-structures)
+[Common Data Structures](#common-data-structures)
     - [Data structures types](#data-structures-types)
+[Data structures types](#data-structures-types)
     - [Doubly Linked Lists](#doubly-linked-lists)
+[Doubly Linked Lists](#doubly-linked-lists)
+[Doubly Linked Lists](#doubly-linked-lists)
   - [Anatomy of a Doubly Linked List](#anatomy-of-a-doubly-linked-list)
     - [Node Class](#node-class)
     - [DoublyLinkedList Class](#doublylinkedlist-class)
   - [Example Usage](#example-usage)
   - [Advantages of Doubly Linked Lists](#advantages-of-doubly-linked-lists)
+[Graph](#graph)
     - [Hash table](#hash-table)
+[Hash table](#hash-table)
     - [Linked list](#linked-list)
+[Linked list](#linked-list)
     - [Map](#map)
+[Map](#map)
     - [Priority Queue](#priority-queue)
+[Priority Queue](#priority-queue)
     - [Queue](#queue)
+[Queue](#queue)
     - [Set](#set)
+[Set](#set)
     - [Stack](#stack)
+[Stack](#stack)
     - [Tree](#tree)
+[Tree](#tree)
   - [Tree](#tree)
   - [Binary search tree](#binary-search-tree)
   - [system-design](#system-design)
     - [Horizontal and vertical scaling](#horizontal-and-vertical-scaling)
+[Horizontal and vertical scaling](#horizontal-and-vertical-scaling)
     - [CAP theorem](#cap-theorem)
   - [CAP theorem](#cap-theorem)
     - [1. <strong>Consistency:</strong>](#1-strong-consistency-strong-)
@@ -174,219 +250,435 @@
     - [10. <strong>HTTPS and Cache Control:</strong>](#10-strong-https-and-cache-control-strong-)
   - [10 steps for system design](#10-steps-for-system-design)
     - [What is stress test?](#what-is-stress-test-)
+[What is stress test?](#what-is-stress-test-)
     - [What types of software testing do you know?](#what-types-of-software-testing-do-you-know-)
+[What types of software testing do you know?](#what-types-of-software-testing-do-you-know-)
   - [training](#training)
     - [10001st prime](#10001st-prime)
+[10001st prime](#10001st-prime)
+[3Sum Closest](#3sum-closest)
     - [3Sum](#3sum)
+[3Sum](#3sum)
     - [4Sum](#4sum)
+[4Sum](#4sum)
     - [Add binary](#add-binary)
+[Add binary](#add-binary)
     - [Add Strings](#add-strings)
+[Add Strings](#add-strings)
     - [Add Two Numbers](#add-two-numbers)
+[Add Two Numbers](#add-two-numbers)
     - [Adjacency list to adjacency matrix](#adjacency-list-to-adjacency-matrix)
+[Adjacency list to adjacency matrix](#adjacency-list-to-adjacency-matrix)
     - [Adjacency matrix to adjacency list](#adjacency-matrix-to-adjacency-list)
+[Adjacency matrix to adjacency list](#adjacency-matrix-to-adjacency-list)
     - [Arithmetic sequence](#arithmetic-sequence)
+[Arithmetic sequence](#arithmetic-sequence)
     - [Arranging Coins](#arranging-coins)
+[Arranging Coins](#arranging-coins)
     - [Array Partition](#array-partition)
+[Array Partition](#array-partition)
     - [Assign Cookies](#assign-cookies)
+[Assign Cookies](#assign-cookies)
     - [Balanced Binary Tree](#balanced-binary-tree)
+[Balanced Binary Tree](#balanced-binary-tree)
     - [Balanced brackets](#balanced-brackets)
+[Balanced brackets](#balanced-brackets)
     - [Base 7](#base-7)
+[Base 7](#base-7)
     - [Best Time to Buy and Sell Stock](#best-time-to-buy-and-sell-stock)
+[Best Time to Buy and Sell Stock](#best-time-to-buy-and-sell-stock)
     - [Big countries](#big-countries)
+[Big countries](#big-countries)
     - [Binary search path you took](#binary-search-path-you-took)
+[Binary search path you took](#binary-search-path-you-took)
+[Binary Tree Inorder Traversal](#binary-tree-inorder-traversal)
     - [Binary Tree Paths](#binary-tree-paths)
+[Binary Tree Paths](#binary-tree-paths)
     - [Binary Tree Postorder Traversal](#binary-tree-postorder-traversal)
+[Binary Tree Postorder Traversal](#binary-tree-postorder-traversal)
     - [Binary Tree Preorder Traversal](#binary-tree-preorder-traversal)
+[Binary Tree Preorder Traversal](#binary-tree-preorder-traversal)
     - [Binary Tree Tilt](#binary-tree-tilt)
+[Binary Tree Tilt](#binary-tree-tilt)
     - [Binary Watch](#binary-watch)
+[Binary Watch](#binary-watch)
     - [Can Place Flowers](#can-place-flowers)
+[Can Place Flowers](#can-place-flowers)
+[Chain adding functions](#chain-adding-functions)
     - [Chain calculator](#chain-calculator)
+[Chain calculator](#chain-calculator)
     - [Classes More Than 5 Students](#classes-more-than-5-students)
+[Classes More Than 5 Students](#classes-more-than-5-students)
+[Climbing stairs](#climbing-stairs)
     - [Combine Two Tables](#combine-two-tables)
+[Combine Two Tables](#combine-two-tables)
     - [Construct the Rectangle](#construct-the-rectangle)
+[Construct the Rectangle](#construct-the-rectangle)
     - [Container With Most Water](#container-with-most-water)
+[Container With Most Water](#container-with-most-water)
     - [Contains Duplicates 2](#contains-duplicates-2)
+[Contains Duplicates 2](#contains-duplicates-2)
     - [Contains Duplicate](#contains-duplicate)
+[Contains Duplicate](#contains-duplicate)
     - [Convert a Number to Hexadecimal](#convert-a-number-to-hexadecimal)
+[Convert a Number to Hexadecimal](#convert-a-number-to-hexadecimal)
+[Convert Sorted Array to Binary Search Tree](#convert-sorted-array-to-binary-search-tree)
     - [Count and Say](#count-and-say)
+[Count and Say](#count-and-say)
   - [Solution](#solution)
+[Count Complete Tree Nodes](#count-complete-tree-nodes)
+[Counting Bits](#counting-bits)
     - [Cumulative Sum](#cumulative-sum)
+[Cumulative Sum](#cumulative-sum)
     - [Curry function](#curry-function)
+[Curry function](#curry-function)
     - [Customer Placing the Largest Number of Order](#customer-placing-the-largest-number-of-order)
+[Customer Placing the Largest Number of Order](#customer-placing-the-largest-number-of-order)
+[Customers Who Never Order](#customers-who-never-order)
     - [Delete Duplicate Emails](#delete-duplicate-emails)
+[Delete Duplicate Emails](#delete-duplicate-emails)
     - [Detect Capital Use](#detect-capital-use)
+[Detect Capital Use](#detect-capital-use)
     - [Diameter of Binary Tree](#diameter-of-binary-tree)
+[Diameter of Binary Tree](#diameter-of-binary-tree)
     - [Distribute Candies](#distribute-candies)
+[Distribute Candies](#distribute-candies)
     - [Divide Two Integers](#divide-two-integers)
+[Divide Two Integers](#divide-two-integers)
+[Duplicate Emails](#duplicate-emails)
     - [Employee Bonus](#employee-bonus)
+[Employee Bonus](#employee-bonus)
     - [Employees Earning More Than Their Managers](#employees-earning-more-than-their-managers)
+[Employees Earning More Than Their Managers](#employees-earning-more-than-their-managers)
     - [Even Fibonacci Numbers](#even-fibonacci-numbers)
+[Even Fibonacci Numbers](#even-fibonacci-numbers)
     - [Even number of digits](#even-number-of-digits)
+[Even number of digits](#even-number-of-digits)
     - [Excel Sheet Column Title](#excel-sheet-column-title)
+[Excel Sheet Column Title](#excel-sheet-column-title)
     - [Fibonacci Number](#fibonacci-number)
+[Fibonacci Number](#fibonacci-number)
     - [Fibonacci streaming](#fibonacci-streaming)
+[Fibonacci streaming](#fibonacci-streaming)
     - [Find All Numbers Disappeared in an Array](#find-all-numbers-disappeared-in-an-array)
+[Find All Numbers Disappeared in an Array](#find-all-numbers-disappeared-in-an-array)
     - [Find Customer Referee](#find-customer-referee)
+[Find Customer Referee](#find-customer-referee)
     - [Find Mode in Binary Search Tree](#find-mode-in-binary-search-tree)
+[Find Mode in Binary Search Tree](#find-mode-in-binary-search-tree)
     - [Find Smallest Multiple](#find-smallest-multiple)
+[Find Smallest Multiple](#find-smallest-multiple)
     - [Find the Difference](#find-the-difference)
+[Find the Difference](#find-the-difference)
     - [Find the Index of the First Occurrence in a String](#find-the-index-of-the-first-occurrence-in-a-string)
+[Find the Index of the First Occurrence in a String](#find-the-index-of-the-first-occurrence-in-a-string)
     - [Find the median](#find-the-median)
+[Find the median](#find-the-median)
     - [Find the Pivot Integer](#find-the-pivot-integer)
+[Find the Pivot Integer](#find-the-pivot-integer)
     - [First Unique Character in a String](#first-unique-character-in-a-string)
+[First Unique Character in a String](#first-unique-character-in-a-string)
   - [Techniques used in this code:
 - Using an array as a simple hash map to store character counts.
 - Iterating through a string using a <code>for</code> loop to perform character counts and find the first unique character.](#techniques-used-in-this-code-using-an-array-as-a-simple-hash-map-to-store-character-counts-iterating-through-a-string-using-a-code-for-code-loop-to-perform-character-counts-and-find-the-first-unique-character-)
     - [First Bad Version](#first-bad-version)
+[First Bad Version](#first-bad-version)
     - [Fizz Buzz](#fizz-buzz)
+[Fizz Buzz](#fizz-buzz)
     - [Game Play Analysis I](#game-play-analysis-i)
+[Game Play Analysis I](#game-play-analysis-i)
     - [Generate Parentheses](#generate-parentheses)
+[Generate Parentheses](#generate-parentheses)
     - [Guess Number Higher or Lower](#guess-number-higher-or-lower)
+[Guess Number Higher or Lower](#guess-number-higher-or-lower)
     - [Hamming Distance](#hamming-distance)
+[Hamming Distance](#hamming-distance)
     - [Happy Number](#happy-number)
+[Happy Number](#happy-number)
     - [Identical twins](#identical-twins)
+[Identical twins](#identical-twins)
     - [Implement Queue using Stacks](#implement-queue-using-stacks)
+[Implement Queue using Stacks](#implement-queue-using-stacks)
     - [Implement Stack using Queues](#implement-stack-using-queues)
+[Implement Stack using Queues](#implement-stack-using-queues)
     - [Integer to Roman](#integer-to-roman)
+[Integer to Roman](#integer-to-roman)
     - [Intersection of two arrays 2](#intersection-of-two-arrays-2)
+[Intersection of two arrays 2](#intersection-of-two-arrays-2)
     - [Intersection of Two Linked Lists](#intersection-of-two-linked-lists)
+[Intersection of Two Linked Lists](#intersection-of-two-linked-lists)
     - [Intersection of two arrays](#intersection-of-two-arrays)
+[Intersection of two arrays](#intersection-of-two-arrays)
     - [Inventory update](#inventory-update)
+[Inventory update](#inventory-update)
     - [Invert Binary Tree](#invert-binary-tree)
+[Invert Binary Tree](#invert-binary-tree)
     - [Island Perimeter](#island-perimeter)
+[Island Perimeter](#island-perimeter)
     - [Isomorphic Strings](#isomorphic-strings)
+[Isomorphic Strings](#isomorphic-strings)
     - [Keyboard Row](#keyboard-row)
+[Keyboard Row](#keyboard-row)
     - [Largest palindrome product](#largest-palindrome-product)
+[Largest palindrome product](#largest-palindrome-product)
     - [Largest prime factor](#largest-prime-factor)
+[Largest prime factor](#largest-prime-factor)
+[Largest product in a grid](#largest-product-in-a-grid)
     - [Largest product in a series](#largest-product-in-a-series)
+[Largest product in a series](#largest-product-in-a-series)
+[Length of Last Word](#length-of-last-word)
     - [Letter Combinations of a Phone Number](#letter-combinations-of-a-phone-number)
+[Letter Combinations of a Phone Number](#letter-combinations-of-a-phone-number)
     - [License Key Formatting](#license-key-formatting)
+[License Key Formatting](#license-key-formatting)
     - [Linked List Cycle](#linked-list-cycle)
+[Linked List Cycle](#linked-list-cycle)
     - [Lonely Integer](#lonely-integer)
+[Lonely Integer](#lonely-integer)
     - [Longest common prefix](#longest-common-prefix)
+[Longest common prefix](#longest-common-prefix)
     - [Longest Harmonious Subsequence](#longest-harmonious-subsequence)
+[Longest Harmonious Subsequence](#longest-harmonious-subsequence)
     - [Longest palindrome](#longest-palindrome)
+[Longest palindrome](#longest-palindrome)
     - [Longest Palindromic Substring](#longest-palindromic-substring)
+[Longest Palindromic Substring](#longest-palindromic-substring)
     - [Longest Substring Without Repeating Characters](#longest-substring-without-repeating-characters)
+[Longest Substring Without Repeating Characters](#longest-substring-without-repeating-characters)
     - [Longest Uncommon Subsequence I](#longest-uncommon-subsequence-i)
+[Longest Uncommon Subsequence I](#longest-uncommon-subsequence-i)
     - [Majority Element](#majority-element)
+[Majority Element](#majority-element)
     - [Max Consecutive Ones](#max-consecutive-ones)
+[Max Consecutive Ones](#max-consecutive-ones)
     - [Maximum Depth of Binary Tree](#maximum-depth-of-binary-tree)
+[Maximum Depth of Binary Tree](#maximum-depth-of-binary-tree)
     - [Maximum Depth of N-ary Tree](#maximum-depth-of-n-ary-tree)
+[Maximum Depth of N-ary Tree](#maximum-depth-of-n-ary-tree)
     - [Median of two sorted arrays](#median-of-two-sorted-arrays)
+[Median of two sorted arrays](#median-of-two-sorted-arrays)
     - [Memo](#memo)
+[Memo](#memo)
     - [Merge Sorted Array](#merge-sorted-array)
+[Merge Sorted Array](#merge-sorted-array)
     - [Merge two sorted linked lists](#merge-two-sorted-linked-lists)
+[Merge two sorted linked lists](#merge-two-sorted-linked-lists)
   - [Solution 1](#solution-1)
   - [Solution 2](#solution-2)
     - [Minimum Absolute Difference in BST](#minimum-absolute-difference-in-bst)
+[Minimum Absolute Difference in BST](#minimum-absolute-difference-in-bst)
     - [Minimum Depth of Binary Tree](#minimum-depth-of-binary-tree)
+[Minimum Depth of Binary Tree](#minimum-depth-of-binary-tree)
     - [Minimum Index Sum of Two Lists](#minimum-index-sum-of-two-lists)
+[Minimum Index Sum of Two Lists](#minimum-index-sum-of-two-lists)
+[Missing number](#missing-number)
     - [Move Zeroes](#move-zeroes)
+[Move Zeroes](#move-zeroes)
     - [Multiples of 3 and 5](#multiples-of-3-and-5)
+[Multiples of 3 and 5](#multiples-of-3-and-5)
     - [Step-by-Step:](#step-by-step-)
+[N-ary Tree Postorder Traversal](#n-ary-tree-postorder-traversal)
     - [Step-by-Step:](#step-by-step-)
+[N-ary Tree Preorder Traversal](#n-ary-tree-preorder-traversal)
     - [Step-by-Step:](#step-by-step-)
+[Next Greater Element I](#next-greater-element-i)
     - [Nim Game](#nim-game)
+[Nim Game](#nim-game)
     - [Number Complement](#number-complement)
+[Number Complement](#number-complement)
     - [Number of 1 Bits](#number-of-1-bits)
+[Number of 1 Bits](#number-of-1-bits)
     - [Number of Segments in a String](#number-of-segments-in-a-string)
+[Number of Segments in a String](#number-of-segments-in-a-string)
     - [Pairs](#pairs)
+[Pairs](#pairs)
     - [Pairwise](#pairwise)
+[Pairwise](#pairwise)
     - [Palindrome linked list](#palindrome-linked-list)
+[Palindrome linked list](#palindrome-linked-list)
     - [Palindrome number](#palindrome-number)
+[Palindrome number](#palindrome-number)
     - [Pangram](#pangram)
+[Pangram](#pangram)
     - [Pascal triangle 2](#pascal-triangle-2)
+[Pascal triangle 2](#pascal-triangle-2)
     - [Pascal triangle 3](#pascal-triangle-3)
+[Pascal triangle 3](#pascal-triangle-3)
     - [Pascal triangle](#pascal-triangle)
+[Pascal triangle](#pascal-triangle)
     - [Path Sum](#path-sum)
+[Path Sum](#path-sum)
     - [Perfect Number](#perfect-number)
+[Perfect Number](#perfect-number)
     - [Permutations](#permutations)
+[Permutations](#permutations)
     - [Plus minus](#plus-minus)
+[Plus minus](#plus-minus)
     - [Plus One](#plus-one)
+[Plus One](#plus-one)
     - [Power of Four](#power-of-four)
+[Power of Four](#power-of-four)
     - [Power of two](#power-of-two)
+[Power of two](#power-of-two)
     - [Primes upon to N](#primes-upon-to-n)
+[Primes upon to N](#primes-upon-to-n)
     - [Promises sequence](#promises-sequence)
+[Promises sequence](#promises-sequence)
     - [Queue using two stacks](#queue-using-two-stacks)
+[Queue using two stacks](#queue-using-two-stacks)
     - [Range Addition II](#range-addition-ii)
+[Range Addition II](#range-addition-ii)
+[Range Sum Query](#range-sum-query)
     - [Ransom Note](#ransom-note)
+[Ransom Note](#ransom-note)
     - [Regular Expression Matching](#regular-expression-matching)
+[Regular Expression Matching](#regular-expression-matching)
     - [Relative Ranks](#relative-ranks)
+[Relative Ranks](#relative-ranks)
     - [Remove duplicate words](#remove-duplicate-words)
+[Remove duplicate words](#remove-duplicate-words)
     - [Remove duplicates](#remove-duplicates)
+[Remove duplicates](#remove-duplicates)
     - [Remove element in place](#remove-element-in-place)
+[Remove element in place](#remove-element-in-place)
     - [Remove Linked List Elements](#remove-linked-list-elements)
+[Remove Linked List Elements](#remove-linked-list-elements)
     - [Repeated Substring Pattern](#repeated-substring-pattern)
+[Repeated Substring Pattern](#repeated-substring-pattern)
     - [Reshape the Matrix](#reshape-the-matrix)
+[Reshape the Matrix](#reshape-the-matrix)
     - [Reverse array](#reverse-array)
+[Reverse array](#reverse-array)
     - [Reverse bits](#reverse-bits)
+[Reverse bits](#reverse-bits)
     - [Reverse String II](#reverse-string-ii)
+[Reverse String II](#reverse-string-ii)
     - [Reverse string](#reverse-string)
+[Reverse string](#reverse-string)
     - [Reverse Vowels of a String](#reverse-vowels-of-a-string)
+[Reverse Vowels of a String](#reverse-vowels-of-a-string)
     - [Reverse Words in a String 3](#reverse-words-in-a-string-3)
+[Reverse Words in a String 3](#reverse-words-in-a-string-3)
     - [Reverse words](#reverse-words)
+[Reverse words](#reverse-words)
     - [Rising Temperature](#rising-temperature)
+[Rising Temperature](#rising-temperature)
     - [Rotate image](#rotate-image)
+[Rotate image](#rotate-image)
     - [Same tree](#same-tree)
+[Same tree](#same-tree)
     - [Search insert position](#search-insert-position)
+[Search insert position](#search-insert-position)
     - [Simple text editor](#simple-text-editor)
+[Simple text editor](#simple-text-editor)
     - [Single Number](#single-number)
+[Single Number](#single-number)
     - [Special pythagorean triplet](#special-pythagorean-triplet)
+[Special pythagorean triplet](#special-pythagorean-triplet)
+[Sqrt(x)](#sqrt-x-)
     - [String to integer (atoi)](#string-to-integer-atoi-)
+[String to integer (atoi)](#string-to-integer-atoi-)
     - [Student Attendance Record I](#student-attendance-record-i)
+[Student Attendance Record I](#student-attendance-record-i)
     - [Submission Detail](#submission-detail)
+[Submission Detail](#submission-detail)
     - [Subtree of Another Tree](#subtree-of-another-tree)
+[Subtree of Another Tree](#subtree-of-another-tree)
     - [Sum of Left Leaves](#sum-of-left-leaves)
+[Sum of Left Leaves](#sum-of-left-leaves)
     - [Sum square difference](#sum-square-difference)
+[Sum square difference](#sum-square-difference)
   - [Naive solution](#naive-solution)
   - [Optimized solution](#optimized-solution)
+[Summary Ranges](#summary-ranges)
     - [Summation of primes](#summation-of-primes)
+[Summation of primes](#summation-of-primes)
+[Swap Nodes in Pairs](#swap-nodes-in-pairs)
     - [Symmetric difference](#symmetric-difference)
+[Symmetric difference](#symmetric-difference)
     - [Symmetric Tree](#symmetric-tree)
+[Symmetric Tree](#symmetric-tree)
     - [Teemo Attacking](#teemo-attacking)
+[Teemo Attacking](#teemo-attacking)
     - [Tenth Line](#tenth-line)
+[Tenth Line](#tenth-line)
     - [Third Maximum Number](#third-maximum-number)
+[Third Maximum Number](#third-maximum-number)
     - [Time conversion](#time-conversion)
+[Time conversion](#time-conversion)
     - [Times function in JS](#times-function-in-js)
+[Times function in JS](#times-function-in-js)
     - [Ugly Number](#ugly-number)
+[Ugly Number](#ugly-number)
     - [Valid Anagram](#valid-anagram)
+[Valid Anagram](#valid-anagram)
     - [Valid parentheses](#valid-parentheses)
+[Valid parentheses](#valid-parentheses)
     - [Valid Perfect Square](#valid-perfect-square)
+[Valid Perfect Square](#valid-perfect-square)
     - [Valid Phone Numbers](#valid-phone-numbers)
+[Valid Phone Numbers](#valid-phone-numbers)
     - [Validate pin](#validate-pin)
+[Validate pin](#validate-pin)
     - [Word Pattern](#word-pattern)
+[Word Pattern](#word-pattern)
     - [Word search](#word-search)
+[Word search](#word-search)
 [Holy Theory project](#holy-theory-project)
   - [algorithms](#algorithms)
     - [Binary search](#binary-search)
+[Binary search](#binary-search)
     - [Binary tree in order traversal](#binary-tree-in-order-traversal)
+[Binary tree in order traversal](#binary-tree-in-order-traversal)
     - [Bubble sort](#bubble-sort)
+[Bubble sort](#bubble-sort)
     - [Depth-first search](#depth-first-search)
+[Depth-first search](#depth-first-search)
     - [Diffie hellman algorithm](#diffie-hellman-algorithm)
+[Diffie hellman algorithm](#diffie-hellman-algorithm)
     - [Dijkstra&#39;s algorithm](#dijkstra-39-s-algorithm)
+[Dijkstra&#39;s algorithm](#dijkstra-39-s-algorithm)
   - [<strong>Non-Negative Edge Weights:</strong>
 - Dijkstra&#39;s Algorithm assumes non-negative edge weights. Negative weights can lead to incorrect results.](#-strong-non-negative-edge-weights-strong-dijkstra-39-s-algorithm-assumes-non-negative-edge-weights-negative-weights-can-lead-to-incorrect-results-)
     - [Floyd-Warshall algorithm](#floyd-warshall-algorithm)
+[Floyd-Warshall algorithm](#floyd-warshall-algorithm)
     - [Ford Fulkerson algorithm](#ford-fulkerson-algorithm)
+[Ford Fulkerson algorithm](#ford-fulkerson-algorithm)
     - [Graph adjacency list](#graph-adjacency-list)
+[Graph adjacency list](#graph-adjacency-list)
     - [Graph adjacency matrix](#graph-adjacency-matrix)
+[Graph adjacency matrix](#graph-adjacency-matrix)
     - [Insertion sort](#insertion-sort)
+[Insertion sort](#insertion-sort)
     - [Interpolation search](#interpolation-search)
+[Interpolation search](#interpolation-search)
     - [Interval search](#interval-search)
+[Interval search](#interval-search)
     - [Jump search](#jump-search)
+[Jump search](#jump-search)
     - [Linear search](#linear-search)
+[Linear search](#linear-search)
     - [Merge sort](#merge-sort)
+[Merge sort](#merge-sort)
     - [Quick sort](#quick-sort)
+[Quicksort](#quicksort)
     - [Selection sort](#selection-sort)
+[Selection sort](#selection-sort)
     - [Ternary search](#ternary-search)
+[Ternary search](#ternary-search)
   - [javascript](#javascript)
     - [Array length property](#array-length-property)
+[Array length property](#array-length-property)
     - [Different ways of declaring functions in JS](#different-ways-of-declaring-functions-in-js)
+[Different ways of declaring functions in JS](#different-ways-of-declaring-functions-in-js)
     - [Event Loop](#event-loop)
+[Event Loop](#event-loop)
     - [Give best practices for handling errors in asynchronous code.](#give-best-practices-for-handling-errors-in-asynchronous-code-)
+[Give best practices for handling errors in asynchronous code.](#give-best-practices-for-handling-errors-in-asynchronous-code-)
     - [How can JavaScript codes be hidden from old browsers that do not support JavaScript?](#how-can-javascript-codes-be-hidden-from-old-browsers-that-do-not-support-javascript-)
+[How can JavaScript codes be hidden from old browsers that do not support JavaScript?](#how-can-javascript-codes-be-hidden-from-old-browsers-that-do-not-support-javascript-)
     - [How JavaScript Engine works](#how-javascript-engine-works)
+[How JavaScript Engine works](#how-javascript-engine-works)
     - [1. <strong>Lexical Analysis:</strong>](#1-strong-lexical-analysis-strong-)
     - [2. <strong>Parsing:</strong>](#2-strong-parsing-strong-)
     - [3. <strong>Compilation:</strong>](#3-strong-compilation-strong-)
@@ -396,68 +688,119 @@
     - [7. <strong>Callbacks and Web APIs (in browser environments):</strong>](#7-strong-callbacks-and-web-apis-in-browser-environments-strong-)
     - [8. <strong>Event Loop (in asynchronous environments):</strong>](#8-strong-event-loop-in-asynchronous-environments-strong-)
     - [How to get argv in nodejs?](#how-to-get-argv-in-nodejs-)
+[How to get argv in nodejs?](#how-to-get-argv-in-nodejs-)
     - [JavaScript data types](#javascript-data-types)
+[JavaScript data types](#javascript-data-types)
     - [JavaScript number size summary](#javascript-number-size-summary)
+[JavaScript number size summary](#javascript-number-size-summary)
     - [JavaScript Arrays cheat sheet](#javascript-arrays-cheat-sheet)
+[JavaScript Arrays cheat sheet](#javascript-arrays-cheat-sheet)
     - [OOP in JavaScript](#oop-in-javascript)
+[OOP in JavaScript](#oop-in-javascript)
     - [1. <strong>Objects:</strong>](#1-strong-objects-strong-)
     - [2. <strong>Classes (Introduced in ECMAScript 6):</strong>](#2-strong-classes-introduced-in-ecmascript-6-strong-)
     - [3. <strong>Inheritance:</strong>](#3-strong-inheritance-strong-)
     - [4. <strong>Encapsulation:</strong>](#4-strong-encapsulation-strong-)
     - [5. <strong>Polymorphism:</strong>](#5-strong-polymorphism-strong-)
+[Possible types of function in JavaScript](#possible-types-of-function-in-javascript)
     - [Promise action flow](#promise-action-flow)
+[Promise action flow](#promise-action-flow)
     - [What is event bubbling?](#what-is-event-bubbling-)
+[What is event bubbling?](#what-is-event-bubbling-)
+[What is the difference between Call and Apply?](#what-is-the-difference-between-call-and-apply-)
     - [<code>call()</code>](#-code-call-code-)
     - [<code>apply()</code>](#-code-apply-code-)
     - [Differences:](#differences-)
     - [What is the NaN](#what-is-the-nan)
+[What is the NaN](#what-is-the-nan)
     - [What is the difference between var, const, and const?](#what-is-the-difference-between-var-const-and-const-)
+[What is the difference between var, const, and const?](#what-is-the-difference-between-var-const-and-const-)
+[Weird and unexpected behavior of JavaScript](#weird-and-unexpected-behavior-of-javascript)
   - [patterns](#patterns)
     - [Event Bus](#event-bus)
+[Event Bus](#event-bus)
     - [Observer](#observer)
+[Observer](#observer)
     - [Singleton](#singleton)
+[Singleton](#singleton)
   - [questions](#questions)
     - [How to reverse a number?](#how-to-reverse-a-number-)
+[How to reverse a number?](#how-to-reverse-a-number-)
     - [Big O](#big-o)
+[Big O](#big-o)
     - [OOP Principles](#oop-principles)
+[OOP Principles](#oop-principles)
   - [Abstraction](#abstraction)
   - [Inheritance](#inheritance)
   - [Encapsulation](#encapsulation)
   - [Polymorphism](#polymorphism)
     - [RESTful API methods](#restful-api-methods)
+[RESTful API methods](#restful-api-methods)
     - [Types of Databases](#types-of-databases)
+[Types of Databases](#types-of-databases)
     - [Software categories](#software-categories)
+[Software categories](#software-categories)
     - [Software characteristics](#software-characteristics)
+[Software characteristics](#software-characteristics)
     - [Software development life cycle](#software-development-life-cycle)
+[Software development life cycle](#software-development-life-cycle)
     - [Design patterns](#design-patterns)
+[Design patterns](#design-patterns)
     - [SOLID](#solid)
+[SOLID](#solid)
+[GRASP](#grasp)
+[Browser URL Search](#browser-url-search)
   - [Question](#question)
   - [Answer](#answer)
+[Rest API](#rest-api)
     - [Websockets](#websockets)
+[Websocket](#websocket)
+[Graphql](#graphql)
     - [Git + Gitflow](#git-gitflow)
+[Git + Gitflow](#git-gitflow)
+[What is functional programming](#what-is-functional-programming)
+[What is REPL and how to use it?](#what-is-repl-and-how-to-use-it-)
+[Why do you need dto files?](#why-do-you-need-dto-files-)
+[Can you explain the difference between REST API and GraphQL?](#can-you-explain-the-difference-between-rest-api-and-graphql-)
     - [Main principles of security in ExpressJS server](#main-principles-of-security-in-expressjs-server)
+[Main principles of security in ExpressJS server](#main-principles-of-security-in-expressjs-server)
   - [structures](#structures)
     - [Array](#array)
+[Array](#array)
     - [Common Data Structures](#common-data-structures)
+[Common Data Structures](#common-data-structures)
     - [Data structures types](#data-structures-types)
+[Data structures types](#data-structures-types)
     - [Doubly Linked Lists](#doubly-linked-lists)
+[Doubly Linked Lists](#doubly-linked-lists)
+[Doubly Linked Lists](#doubly-linked-lists)
   - [Anatomy of a Doubly Linked List](#anatomy-of-a-doubly-linked-list)
     - [Node Class](#node-class)
     - [DoublyLinkedList Class](#doublylinkedlist-class)
   - [Example Usage](#example-usage)
   - [Advantages of Doubly Linked Lists](#advantages-of-doubly-linked-lists)
+[Graph](#graph)
     - [Hash table](#hash-table)
+[Hash table](#hash-table)
     - [Linked list](#linked-list)
+[Linked list](#linked-list)
     - [Map](#map)
+[Map](#map)
     - [Priority Queue](#priority-queue)
+[Priority Queue](#priority-queue)
     - [Queue](#queue)
+[Queue](#queue)
     - [Set](#set)
+[Set](#set)
     - [Stack](#stack)
+[Stack](#stack)
     - [Tree](#tree)
+[Tree](#tree)
   - [Tree](#tree)
   - [Binary search tree](#binary-search-tree)
   - [system-design](#system-design)
     - [Horizontal and vertical scaling](#horizontal-and-vertical-scaling)
+[Horizontal and vertical scaling](#horizontal-and-vertical-scaling)
     - [CAP theorem](#cap-theorem)
   - [CAP theorem](#cap-theorem)
     - [1. <strong>Consistency:</strong>](#1-strong-consistency-strong-)
@@ -533,193 +876,384 @@
     - [10. <strong>HTTPS and Cache Control:</strong>](#10-strong-https-and-cache-control-strong-)
   - [10 steps for system design](#10-steps-for-system-design)
     - [What is stress test?](#what-is-stress-test-)
+[What is stress test?](#what-is-stress-test-)
     - [What types of software testing do you know?](#what-types-of-software-testing-do-you-know-)
+[What types of software testing do you know?](#what-types-of-software-testing-do-you-know-)
   - [training](#training)
     - [10001st prime](#10001st-prime)
+[10001st prime](#10001st-prime)
+[3Sum Closest](#3sum-closest)
     - [3Sum](#3sum)
+[3Sum](#3sum)
     - [4Sum](#4sum)
+[4Sum](#4sum)
     - [Add binary](#add-binary)
+[Add binary](#add-binary)
     - [Add Strings](#add-strings)
+[Add Strings](#add-strings)
     - [Add Two Numbers](#add-two-numbers)
+[Add Two Numbers](#add-two-numbers)
     - [Adjacency list to adjacency matrix](#adjacency-list-to-adjacency-matrix)
+[Adjacency list to adjacency matrix](#adjacency-list-to-adjacency-matrix)
     - [Adjacency matrix to adjacency list](#adjacency-matrix-to-adjacency-list)
+[Adjacency matrix to adjacency list](#adjacency-matrix-to-adjacency-list)
     - [Arithmetic sequence](#arithmetic-sequence)
+[Arithmetic sequence](#arithmetic-sequence)
     - [Arranging Coins](#arranging-coins)
+[Arranging Coins](#arranging-coins)
     - [Array Partition](#array-partition)
+[Array Partition](#array-partition)
     - [Assign Cookies](#assign-cookies)
+[Assign Cookies](#assign-cookies)
     - [Balanced Binary Tree](#balanced-binary-tree)
+[Balanced Binary Tree](#balanced-binary-tree)
     - [Balanced brackets](#balanced-brackets)
+[Balanced brackets](#balanced-brackets)
     - [Base 7](#base-7)
+[Base 7](#base-7)
     - [Best Time to Buy and Sell Stock](#best-time-to-buy-and-sell-stock)
+[Best Time to Buy and Sell Stock](#best-time-to-buy-and-sell-stock)
     - [Big countries](#big-countries)
+[Big countries](#big-countries)
     - [Binary search path you took](#binary-search-path-you-took)
+[Binary search path you took](#binary-search-path-you-took)
+[Binary Tree Inorder Traversal](#binary-tree-inorder-traversal)
     - [Binary Tree Paths](#binary-tree-paths)
+[Binary Tree Paths](#binary-tree-paths)
     - [Binary Tree Postorder Traversal](#binary-tree-postorder-traversal)
+[Binary Tree Postorder Traversal](#binary-tree-postorder-traversal)
     - [Binary Tree Preorder Traversal](#binary-tree-preorder-traversal)
+[Binary Tree Preorder Traversal](#binary-tree-preorder-traversal)
     - [Binary Tree Tilt](#binary-tree-tilt)
+[Binary Tree Tilt](#binary-tree-tilt)
     - [Binary Watch](#binary-watch)
+[Binary Watch](#binary-watch)
     - [Can Place Flowers](#can-place-flowers)
+[Can Place Flowers](#can-place-flowers)
+[Chain adding functions](#chain-adding-functions)
     - [Chain calculator](#chain-calculator)
+[Chain calculator](#chain-calculator)
     - [Classes More Than 5 Students](#classes-more-than-5-students)
+[Classes More Than 5 Students](#classes-more-than-5-students)
+[Climbing stairs](#climbing-stairs)
     - [Combine Two Tables](#combine-two-tables)
+[Combine Two Tables](#combine-two-tables)
     - [Construct the Rectangle](#construct-the-rectangle)
+[Construct the Rectangle](#construct-the-rectangle)
     - [Container With Most Water](#container-with-most-water)
+[Container With Most Water](#container-with-most-water)
     - [Contains Duplicates 2](#contains-duplicates-2)
+[Contains Duplicates 2](#contains-duplicates-2)
     - [Contains Duplicate](#contains-duplicate)
+[Contains Duplicate](#contains-duplicate)
     - [Convert a Number to Hexadecimal](#convert-a-number-to-hexadecimal)
+[Convert a Number to Hexadecimal](#convert-a-number-to-hexadecimal)
+[Convert Sorted Array to Binary Search Tree](#convert-sorted-array-to-binary-search-tree)
     - [Count and Say](#count-and-say)
+[Count and Say](#count-and-say)
   - [Solution](#solution)
+[Count Complete Tree Nodes](#count-complete-tree-nodes)
+[Counting Bits](#counting-bits)
     - [Cumulative Sum](#cumulative-sum)
+[Cumulative Sum](#cumulative-sum)
     - [Curry function](#curry-function)
+[Curry function](#curry-function)
     - [Customer Placing the Largest Number of Order](#customer-placing-the-largest-number-of-order)
+[Customer Placing the Largest Number of Order](#customer-placing-the-largest-number-of-order)
+[Customers Who Never Order](#customers-who-never-order)
     - [Delete Duplicate Emails](#delete-duplicate-emails)
+[Delete Duplicate Emails](#delete-duplicate-emails)
     - [Detect Capital Use](#detect-capital-use)
+[Detect Capital Use](#detect-capital-use)
     - [Diameter of Binary Tree](#diameter-of-binary-tree)
+[Diameter of Binary Tree](#diameter-of-binary-tree)
     - [Distribute Candies](#distribute-candies)
+[Distribute Candies](#distribute-candies)
     - [Divide Two Integers](#divide-two-integers)
+[Divide Two Integers](#divide-two-integers)
+[Duplicate Emails](#duplicate-emails)
     - [Employee Bonus](#employee-bonus)
+[Employee Bonus](#employee-bonus)
     - [Employees Earning More Than Their Managers](#employees-earning-more-than-their-managers)
+[Employees Earning More Than Their Managers](#employees-earning-more-than-their-managers)
     - [Even Fibonacci Numbers](#even-fibonacci-numbers)
+[Even Fibonacci Numbers](#even-fibonacci-numbers)
     - [Even number of digits](#even-number-of-digits)
+[Even number of digits](#even-number-of-digits)
     - [Excel Sheet Column Title](#excel-sheet-column-title)
+[Excel Sheet Column Title](#excel-sheet-column-title)
     - [Fibonacci Number](#fibonacci-number)
+[Fibonacci Number](#fibonacci-number)
     - [Fibonacci streaming](#fibonacci-streaming)
+[Fibonacci streaming](#fibonacci-streaming)
     - [Find All Numbers Disappeared in an Array](#find-all-numbers-disappeared-in-an-array)
+[Find All Numbers Disappeared in an Array](#find-all-numbers-disappeared-in-an-array)
     - [Find Customer Referee](#find-customer-referee)
+[Find Customer Referee](#find-customer-referee)
     - [Find Mode in Binary Search Tree](#find-mode-in-binary-search-tree)
+[Find Mode in Binary Search Tree](#find-mode-in-binary-search-tree)
     - [Find Smallest Multiple](#find-smallest-multiple)
+[Find Smallest Multiple](#find-smallest-multiple)
     - [Find the Difference](#find-the-difference)
+[Find the Difference](#find-the-difference)
     - [Find the Index of the First Occurrence in a String](#find-the-index-of-the-first-occurrence-in-a-string)
+[Find the Index of the First Occurrence in a String](#find-the-index-of-the-first-occurrence-in-a-string)
     - [Find the median](#find-the-median)
+[Find the median](#find-the-median)
     - [Find the Pivot Integer](#find-the-pivot-integer)
+[Find the Pivot Integer](#find-the-pivot-integer)
     - [First Unique Character in a String](#first-unique-character-in-a-string)
+[First Unique Character in a String](#first-unique-character-in-a-string)
   - [Techniques used in this code:
 - Using an array as a simple hash map to store character counts.
 - Iterating through a string using a <code>for</code> loop to perform character counts and find the first unique character.](#techniques-used-in-this-code-using-an-array-as-a-simple-hash-map-to-store-character-counts-iterating-through-a-string-using-a-code-for-code-loop-to-perform-character-counts-and-find-the-first-unique-character-)
     - [First Bad Version](#first-bad-version)
+[First Bad Version](#first-bad-version)
     - [Fizz Buzz](#fizz-buzz)
+[Fizz Buzz](#fizz-buzz)
     - [Game Play Analysis I](#game-play-analysis-i)
+[Game Play Analysis I](#game-play-analysis-i)
     - [Generate Parentheses](#generate-parentheses)
+[Generate Parentheses](#generate-parentheses)
     - [Guess Number Higher or Lower](#guess-number-higher-or-lower)
+[Guess Number Higher or Lower](#guess-number-higher-or-lower)
     - [Hamming Distance](#hamming-distance)
+[Hamming Distance](#hamming-distance)
     - [Happy Number](#happy-number)
+[Happy Number](#happy-number)
     - [Identical twins](#identical-twins)
+[Identical twins](#identical-twins)
     - [Implement Queue using Stacks](#implement-queue-using-stacks)
+[Implement Queue using Stacks](#implement-queue-using-stacks)
     - [Implement Stack using Queues](#implement-stack-using-queues)
+[Implement Stack using Queues](#implement-stack-using-queues)
     - [Integer to Roman](#integer-to-roman)
+[Integer to Roman](#integer-to-roman)
     - [Intersection of two arrays 2](#intersection-of-two-arrays-2)
+[Intersection of two arrays 2](#intersection-of-two-arrays-2)
     - [Intersection of Two Linked Lists](#intersection-of-two-linked-lists)
+[Intersection of Two Linked Lists](#intersection-of-two-linked-lists)
     - [Intersection of two arrays](#intersection-of-two-arrays)
+[Intersection of two arrays](#intersection-of-two-arrays)
     - [Inventory update](#inventory-update)
+[Inventory update](#inventory-update)
     - [Invert Binary Tree](#invert-binary-tree)
+[Invert Binary Tree](#invert-binary-tree)
     - [Island Perimeter](#island-perimeter)
+[Island Perimeter](#island-perimeter)
     - [Isomorphic Strings](#isomorphic-strings)
+[Isomorphic Strings](#isomorphic-strings)
     - [Keyboard Row](#keyboard-row)
+[Keyboard Row](#keyboard-row)
     - [Largest palindrome product](#largest-palindrome-product)
+[Largest palindrome product](#largest-palindrome-product)
     - [Largest prime factor](#largest-prime-factor)
+[Largest prime factor](#largest-prime-factor)
+[Largest product in a grid](#largest-product-in-a-grid)
     - [Largest product in a series](#largest-product-in-a-series)
+[Largest product in a series](#largest-product-in-a-series)
+[Length of Last Word](#length-of-last-word)
     - [Letter Combinations of a Phone Number](#letter-combinations-of-a-phone-number)
+[Letter Combinations of a Phone Number](#letter-combinations-of-a-phone-number)
     - [License Key Formatting](#license-key-formatting)
+[License Key Formatting](#license-key-formatting)
     - [Linked List Cycle](#linked-list-cycle)
+[Linked List Cycle](#linked-list-cycle)
     - [Lonely Integer](#lonely-integer)
+[Lonely Integer](#lonely-integer)
     - [Longest common prefix](#longest-common-prefix)
+[Longest common prefix](#longest-common-prefix)
     - [Longest Harmonious Subsequence](#longest-harmonious-subsequence)
+[Longest Harmonious Subsequence](#longest-harmonious-subsequence)
     - [Longest palindrome](#longest-palindrome)
+[Longest palindrome](#longest-palindrome)
     - [Longest Palindromic Substring](#longest-palindromic-substring)
+[Longest Palindromic Substring](#longest-palindromic-substring)
     - [Longest Substring Without Repeating Characters](#longest-substring-without-repeating-characters)
+[Longest Substring Without Repeating Characters](#longest-substring-without-repeating-characters)
     - [Longest Uncommon Subsequence I](#longest-uncommon-subsequence-i)
+[Longest Uncommon Subsequence I](#longest-uncommon-subsequence-i)
     - [Majority Element](#majority-element)
+[Majority Element](#majority-element)
     - [Max Consecutive Ones](#max-consecutive-ones)
+[Max Consecutive Ones](#max-consecutive-ones)
     - [Maximum Depth of Binary Tree](#maximum-depth-of-binary-tree)
+[Maximum Depth of Binary Tree](#maximum-depth-of-binary-tree)
     - [Maximum Depth of N-ary Tree](#maximum-depth-of-n-ary-tree)
+[Maximum Depth of N-ary Tree](#maximum-depth-of-n-ary-tree)
     - [Median of two sorted arrays](#median-of-two-sorted-arrays)
+[Median of two sorted arrays](#median-of-two-sorted-arrays)
     - [Memo](#memo)
+[Memo](#memo)
     - [Merge Sorted Array](#merge-sorted-array)
+[Merge Sorted Array](#merge-sorted-array)
     - [Merge two sorted linked lists](#merge-two-sorted-linked-lists)
+[Merge two sorted linked lists](#merge-two-sorted-linked-lists)
   - [Solution 1](#solution-1)
   - [Solution 2](#solution-2)
     - [Minimum Absolute Difference in BST](#minimum-absolute-difference-in-bst)
+[Minimum Absolute Difference in BST](#minimum-absolute-difference-in-bst)
     - [Minimum Depth of Binary Tree](#minimum-depth-of-binary-tree)
+[Minimum Depth of Binary Tree](#minimum-depth-of-binary-tree)
     - [Minimum Index Sum of Two Lists](#minimum-index-sum-of-two-lists)
+[Minimum Index Sum of Two Lists](#minimum-index-sum-of-two-lists)
+[Missing number](#missing-number)
     - [Move Zeroes](#move-zeroes)
+[Move Zeroes](#move-zeroes)
     - [Multiples of 3 and 5](#multiples-of-3-and-5)
+[Multiples of 3 and 5](#multiples-of-3-and-5)
     - [Step-by-Step:](#step-by-step-)
+[N-ary Tree Postorder Traversal](#n-ary-tree-postorder-traversal)
     - [Step-by-Step:](#step-by-step-)
+[N-ary Tree Preorder Traversal](#n-ary-tree-preorder-traversal)
     - [Step-by-Step:](#step-by-step-)
+[Next Greater Element I](#next-greater-element-i)
     - [Nim Game](#nim-game)
+[Nim Game](#nim-game)
     - [Number Complement](#number-complement)
+[Number Complement](#number-complement)
     - [Number of 1 Bits](#number-of-1-bits)
+[Number of 1 Bits](#number-of-1-bits)
     - [Number of Segments in a String](#number-of-segments-in-a-string)
+[Number of Segments in a String](#number-of-segments-in-a-string)
     - [Pairs](#pairs)
+[Pairs](#pairs)
     - [Pairwise](#pairwise)
+[Pairwise](#pairwise)
     - [Palindrome linked list](#palindrome-linked-list)
+[Palindrome linked list](#palindrome-linked-list)
     - [Palindrome number](#palindrome-number)
+[Palindrome number](#palindrome-number)
     - [Pangram](#pangram)
+[Pangram](#pangram)
     - [Pascal triangle 2](#pascal-triangle-2)
+[Pascal triangle 2](#pascal-triangle-2)
     - [Pascal triangle 3](#pascal-triangle-3)
+[Pascal triangle 3](#pascal-triangle-3)
     - [Pascal triangle](#pascal-triangle)
+[Pascal triangle](#pascal-triangle)
     - [Path Sum](#path-sum)
+[Path Sum](#path-sum)
     - [Perfect Number](#perfect-number)
+[Perfect Number](#perfect-number)
     - [Permutations](#permutations)
+[Permutations](#permutations)
     - [Plus minus](#plus-minus)
+[Plus minus](#plus-minus)
     - [Plus One](#plus-one)
+[Plus One](#plus-one)
     - [Power of Four](#power-of-four)
+[Power of Four](#power-of-four)
     - [Power of two](#power-of-two)
+[Power of two](#power-of-two)
     - [Primes upon to N](#primes-upon-to-n)
+[Primes upon to N](#primes-upon-to-n)
     - [Promises sequence](#promises-sequence)
+[Promises sequence](#promises-sequence)
     - [Queue using two stacks](#queue-using-two-stacks)
+[Queue using two stacks](#queue-using-two-stacks)
     - [Range Addition II](#range-addition-ii)
+[Range Addition II](#range-addition-ii)
+[Range Sum Query](#range-sum-query)
     - [Ransom Note](#ransom-note)
+[Ransom Note](#ransom-note)
     - [Regular Expression Matching](#regular-expression-matching)
+[Regular Expression Matching](#regular-expression-matching)
     - [Relative Ranks](#relative-ranks)
+[Relative Ranks](#relative-ranks)
     - [Remove duplicate words](#remove-duplicate-words)
+[Remove duplicate words](#remove-duplicate-words)
     - [Remove duplicates](#remove-duplicates)
+[Remove duplicates](#remove-duplicates)
     - [Remove element in place](#remove-element-in-place)
+[Remove element in place](#remove-element-in-place)
     - [Remove Linked List Elements](#remove-linked-list-elements)
+[Remove Linked List Elements](#remove-linked-list-elements)
     - [Repeated Substring Pattern](#repeated-substring-pattern)
+[Repeated Substring Pattern](#repeated-substring-pattern)
     - [Reshape the Matrix](#reshape-the-matrix)
+[Reshape the Matrix](#reshape-the-matrix)
     - [Reverse array](#reverse-array)
+[Reverse array](#reverse-array)
     - [Reverse bits](#reverse-bits)
+[Reverse bits](#reverse-bits)
     - [Reverse String II](#reverse-string-ii)
+[Reverse String II](#reverse-string-ii)
     - [Reverse string](#reverse-string)
+[Reverse string](#reverse-string)
     - [Reverse Vowels of a String](#reverse-vowels-of-a-string)
+[Reverse Vowels of a String](#reverse-vowels-of-a-string)
     - [Reverse Words in a String 3](#reverse-words-in-a-string-3)
+[Reverse Words in a String 3](#reverse-words-in-a-string-3)
     - [Reverse words](#reverse-words)
+[Reverse words](#reverse-words)
     - [Rising Temperature](#rising-temperature)
+[Rising Temperature](#rising-temperature)
     - [Rotate image](#rotate-image)
+[Rotate image](#rotate-image)
     - [Same tree](#same-tree)
+[Same tree](#same-tree)
     - [Search insert position](#search-insert-position)
+[Search insert position](#search-insert-position)
     - [Simple text editor](#simple-text-editor)
+[Simple text editor](#simple-text-editor)
     - [Single Number](#single-number)
+[Single Number](#single-number)
     - [Special pythagorean triplet](#special-pythagorean-triplet)
+[Special pythagorean triplet](#special-pythagorean-triplet)
+[Sqrt(x)](#sqrt-x-)
     - [String to integer (atoi)](#string-to-integer-atoi-)
+[String to integer (atoi)](#string-to-integer-atoi-)
     - [Student Attendance Record I](#student-attendance-record-i)
+[Student Attendance Record I](#student-attendance-record-i)
     - [Submission Detail](#submission-detail)
+[Submission Detail](#submission-detail)
     - [Subtree of Another Tree](#subtree-of-another-tree)
+[Subtree of Another Tree](#subtree-of-another-tree)
     - [Sum of Left Leaves](#sum-of-left-leaves)
+[Sum of Left Leaves](#sum-of-left-leaves)
     - [Sum square difference](#sum-square-difference)
+[Sum square difference](#sum-square-difference)
   - [Naive solution](#naive-solution)
   - [Optimized solution](#optimized-solution)
+[Summary Ranges](#summary-ranges)
     - [Summation of primes](#summation-of-primes)
+[Summation of primes](#summation-of-primes)
+[Swap Nodes in Pairs](#swap-nodes-in-pairs)
     - [Symmetric difference](#symmetric-difference)
+[Symmetric difference](#symmetric-difference)
     - [Symmetric Tree](#symmetric-tree)
+[Symmetric Tree](#symmetric-tree)
     - [Teemo Attacking](#teemo-attacking)
+[Teemo Attacking](#teemo-attacking)
     - [Tenth Line](#tenth-line)
+[Tenth Line](#tenth-line)
     - [Third Maximum Number](#third-maximum-number)
+[Third Maximum Number](#third-maximum-number)
     - [Time conversion](#time-conversion)
+[Time conversion](#time-conversion)
     - [Times function in JS](#times-function-in-js)
+[Times function in JS](#times-function-in-js)
     - [Ugly Number](#ugly-number)
+[Ugly Number](#ugly-number)
     - [Valid Anagram](#valid-anagram)
+[Valid Anagram](#valid-anagram)
     - [Valid parentheses](#valid-parentheses)
+[Valid parentheses](#valid-parentheses)
     - [Valid Perfect Square](#valid-perfect-square)
+[Valid Perfect Square](#valid-perfect-square)
     - [Valid Phone Numbers](#valid-phone-numbers)
+[Valid Phone Numbers](#valid-phone-numbers)
     - [Validate pin](#validate-pin)
+[Validate pin](#validate-pin)
     - [Word Pattern](#word-pattern)
+[Word Pattern](#word-pattern)
     - [Word search](#word-search)
+[Word search](#word-search)
 # Holy Theory project
 ## algorithms
 ### Binary search
-
+# Binary search
 
 ![Binary search](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/binary-search.png)
 
@@ -814,7 +1348,7 @@ print(my_list[res])
 
 <!-- ignore end -->
 ### Binary tree in order traversal
-
+# Binary tree in order traversal
 
 ```java
 class Solution {
@@ -871,7 +1405,7 @@ function getInOrderTraversal(root: TreeNode | null): number[] {
 }
 
 ```### Binary tree postorder traversal
-
+# Binary tree postorder traversal
 
 ```java
 class Solution {
@@ -928,7 +1462,7 @@ function getPostorderTraversal(root: Node | null): number[] {
 }
 
 ```### Binary tree preorder traversal
-
+# Binary tree preorder traversal
 
 ```java
 class Solution {
@@ -981,7 +1515,7 @@ function getPreorderTraversal(root: Node | null): number[] {
 }
 ```### Breadth-first search
 
-
+# Breadth-first search
 
 Breadth-First Search (BFS) is a graph traversal algorithm that systematically explores all the vertices of a graph in breadthward motion, level by level. It starts at a chosen vertex and visits all its neighbors before moving on to their neighbors. BFS is commonly used to find the shortest path in an unweighted graph and to explore the structure of a graph.
 
@@ -1086,7 +1620,7 @@ graph.bfs("A");
 ```
 ### Bubble sort
 
-
+# Bubble sort
 
 Bubble sorting is one of the simplest sorting algorithms that is not used in practice, but is actively used for training purposes. It works by repeatedly going through the sorted list, comparing each pair of neighboring elements and replacing them if they are in the wrong order. The pass through the list is repeated until no permutations are needed, indicating that the list is sorted.
 
@@ -1147,7 +1681,7 @@ console.log(bubbleSort([2, 5, 2, 6, 7, 2, 22, 5, 7, 9, 0, 2, 3]));
 - [Go back](../readme.md)
 ### Depth-first search
 
-
+# Depth-first search
 
 Depth-First Search (DFS) is a graph traversal algorithm that systematically explores the vertices of a graph by going as deep as possible along each branch before backtracking. It starts at a chosen vertex, explores as far as possible along one branch, and then backtracks to explore other branches. DFS is commonly used to detect cycles in a graph, topologically sort vertices, and solve problems related to connected components.
 
@@ -1252,7 +1786,7 @@ graph.addEdge("B", "D");
 graph.dfs("A");
 ```
 ### Diffie hellman algorithm
-
+# Diffie hellman algorithm
 
 ```javascript
 function power(a: any, b: any, p: any) {
@@ -1302,7 +1836,7 @@ DiffieHellman()
 
 ### Dijkstra's algorithm
 
-
+# Dijkstra's algorithm
 
 **How Dijkstra's Algorithm Works:**
 
@@ -1457,7 +1991,7 @@ console.log("Distance:", distance); // Output: Distance: 4
 ```
 ### Floyd-Warshall algorithm
 
-
+# Floyd-Warshall algorithm
 
 The Floyd-Warshall Algorithm is a dynamic programming algorithm used to find the shortest paths between all pairs of vertices in a weighted graph. Unlike Dijkstra's algorithm and Bellman-Ford algorithm, Floyd-Warshall works with graphs that can have both positive and negative edge weights and can handle graphs with cycles. The algorithm iteratively updates the shortest path distances between all pairs until reaching the optimal solution.
 
@@ -1561,7 +2095,7 @@ for (const row of result) {
 ```
 ### Ford Fulkerson algorithm
 
-
+# Ford Fulkerson algorithm
 
 The Ford-Fulkerson Algorithm is an iterative method to compute the maximum flow in a flow network. It was initially designed to solve the max-flow min-cut problem, where the objective is to find the maximum amount of flow that can be sent from a designated source to a designated sink in a directed graph. The algorithm iteratively augments paths from the source to the sink, increasing the flow until it reaches its maximum value.
 
@@ -1707,7 +2241,7 @@ const maxFlow = fordFulkerson.fordFulkerson(0, 5);
 console.log("Maximum Flow:", maxFlow);
 ```
 ### Graph adjacency list
-
+# Graph adjacency list
 
 ```java
 
@@ -1757,7 +2291,7 @@ public class GraphList {
 ```
 
 ### Graph adjacency matrix
-
+# Graph adjacency matrix
 
 ```java
 public class Graph {
@@ -1804,7 +2338,7 @@ public class Graph {
 ```
 
 ### Insertion sort
-
+# Insertion sort
 
 Insertion Sort is a straightforward sorting algorithm that builds the sorted array one element at a time. It is much less efficient on large lists than more advanced algorithms such as quicksort, heapsort, or merge sort. However, it has some advantages: it is simple to implement, efficient for small datasets, and performs well for partially sorted arrays.
 
@@ -1864,7 +2398,7 @@ console.log(insertionSort([1, 4, 2, 8, 345, 123, 43, 32, 5643, 63, 123, 43, 2, 5
 <!-- ignore end -->
 ### Interpolation search
 
-
+# Interpolation search
 
 Interpolation Search is a an algorithm designed for finding a specific target value in a sorted array. Unlike linear or binary search, this algorithm utilizes the characteristics of the data distribution to make more informed decisions about where to look for the target. It is particularly effective when the data has a uniform distribution.
 
@@ -1941,7 +2475,7 @@ function interpolationSearch(array: number[], value: number): number {
 }
 ```
 ### Interval search
-
+# Interval search
 
 An interval search algorithm typically refers to searching for overlapping or containing intervals in a collection of intervals. One common approach for this task is to use an interval tree. Here's an explanation of the Interval Search algorithm using an interval tree:
 
@@ -1986,7 +2520,7 @@ function intervalSearch(intervals: Interval[], queryInterval: Interval): number[
 ```
 ### Jump search
 
-
+# Jump search
 
 Jump Search is a searching algorithm designed for sorted arrays. It is a block-based search algorithm that works by jumping ahead by fixed steps and then linearly searching within the block for the target element. Jump Search combines the efficiency of binary search with the simplicity of linear search.
 
@@ -2062,7 +2596,7 @@ function jumpSearch(arr: number[], target: number): number {
 }
 ```
 ### Linear search
-
+# Linear search
 
 Linear Search, also known as sequential search, is a simple searching algorithm that finds the position of a target value within a list or array. It works by iterating through the elements one by one until the target value is found or the entire list has been searched.
 
@@ -2100,7 +2634,7 @@ function linearSearch(arr: number[], target: number): number {
 ```
 ### Merge sort
 
-
+# Merge sort
 
 Merge Sort is a comparison-based sorting algorithm that follows the divide-and-conquer paradigm. It works by dividing the unsorted array into 'n' sub-arrays, each containing one element. It then repeatedly merges these sub-arrays to produce new sorted sub-arrays until there is only one sub-array remaining – the fully sorted array.
 
@@ -2208,7 +2742,7 @@ function merge(left: number[], right: number[]): number[] {
 ```
 ### Quick sort
 
-
+# Quicksort
 
 Quick Sort is an efficient, comparison-based sorting algorithm that follows the divide-and-conquer paradigm. It works by selecting a "pivot" element from the array and partitioning the other elements into two sub-arrays according to whether they are less than or greater than the pivot. The sub-arrays are then recursively sorted.
 
@@ -2331,7 +2865,7 @@ function quicksort(arr: number[]): number[] {
 
 - [Go back](../readme.md)
 ### Selection sort
-
+# Selection sort
 
 Selection Sort is a straightforward sorting algorithm that works by dividing the input array into two parts: the sorted and the unsorted subarrays. The algorithm repeatedly selects the minimum (or maximum, depending on the sorting order) element from the unsorted subarray and swaps it with the first unsorted element. This process is iteratively applied until the entire array is sorted.
 
@@ -2406,7 +2940,7 @@ def selection_sort(arr):
 <!-- ignore end -->
 
 ### Ternary search
-
+# Ternary search
 
 Ternary Search is a divide-and-conquer algorithm designed for efficiently finding the position of a target value in a sorted array. It operates by dividing the array into three parts and recursively narrowing down the search space until the target is found or determined to be absent.
 
@@ -2456,7 +2990,7 @@ function ternarySearch(func: (x: number) => number, left: number, right: number,
 ## javascript
 ### Array length property
 
-
+# Array length property
 
 What is the value of clothes[0]:
 
@@ -2476,14 +3010,14 @@ clothes[0] is undefined, because clothes array has been emptied.
 - [Go back](../readme.md)
 ### Different ways of declaring functions in JS
 
-
+# Different ways of declaring functions in JS
 
 ![Different ways of declaring functions in JS](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/different-ways-of-declaring-a-function-in-js.png)
 
 - [Go back](../readme.md)
 ### Event Loop
 
-
+# Event Loop
 
 ![Event Loop](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/event-loop.png)
 
@@ -2516,7 +3050,7 @@ This cycle allows JavaScript to handle asynchronous tasks efficiently, providing
 - [Go back](../readme.md)
 ### Give best practices for handling errors in asynchronous code.
 
-
+# Give best practices for handling errors in asynchronous code.
 
 Handling errors in asynchronous code is a critical aspect of developing reliable and secure applications. Here are some best practices for handling errors in asynchronous code:
 
@@ -2585,7 +3119,7 @@ Handling errors in asynchronous code is a critical aspect of developing reliable
 Adhering to these practices will help you manage errors in asynchronous code more effectively and build more reliable applications.
 ### How can JavaScript codes be hidden from old browsers that do not support JavaScript?
 
-
+# How can JavaScript codes be hidden from old browsers that do not support JavaScript?
 
 1. **Add `<!--` before the `<script>` tag:** This starts an HTML comment, which is ignored by old browsers that do not understand JavaScript.
 
@@ -2610,7 +3144,7 @@ Adhering to these practices will help you manage errors in asynchronous code mor
 By using this technique, the JavaScript code is effectively hidden from old browsers, but it will still be executed by modern browsers that support JavaScript. Keep in mind that this method is somewhat outdated, and modern web development practices often involve using feature detection and progressive enhancement to handle different browser capabilities.
 ### How JavaScript Engine works
 
-
+# How JavaScript Engine works
 
 JavaScript engines are responsible for executing JavaScript code on web browsers and other environments. They follow a multi-step process to parse, compile, optimize, and execute JavaScript code efficiently. Here's a simplified overview of how a typical JavaScript engine works:
 
@@ -2648,7 +3182,7 @@ In asynchronous environments like web browsers, JavaScript uses an event loop to
 
 Different JavaScript engines might implement these steps differently, but the overall process remains similar. Understanding these fundamental concepts can help developers write more efficient JavaScript code and optimize their applications for better performance.
 ### How to get argv in nodejs?
-
+# How to get argv in nodejs?
 
 In Node.js, you can access command-line arguments using the `process.argv` array. The `process.argv` array contains the command-line arguments that were passed when the Node.js process was launched. Here's how you can access and use `process.argv`:
 
@@ -2703,23 +3237,23 @@ In Node.js, you can access command-line arguments using the `process.argv` array
    If you need to parse command-line arguments in a more structured way, you might want to consider using libraries like `yargs` or `commander`, which provide a more user-friendly and powerful interface for handling command-line arguments in Node.js applications. These libraries make it easier to define options, handle flags, and manage arguments in a more intuitive manner.
 
 ### JavaScript data types
-
+# JavaScript data types
 
 ![JavaScript data types](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/javascript-data-types.png)
 
 ### JavaScript number size summary
-
+# JavaScript number size summary
 
 ![JavaScript number size summary](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/javascript-number-size-summary.png)
 
 ### JavaScript Arrays cheat sheet
-
+# JavaScript Arrays cheat sheet
 
 ![JavaScript Arrays cheat sheet](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/js-arrays-cheat-sheet.png)
 
 
 ### OOP in JavaScript
-
+# OOP in JavaScript
 
 Object-Oriented Programming (OOP) is a programming paradigm that uses objects and classes for organizing code. JavaScript, although primarily a prototype-based language, supports object-oriented programming concepts. Here's how OOP concepts are implemented in JavaScript:
 
@@ -2842,18 +3376,18 @@ makeAnimalSound(myDuck); // Output: Quack!
 ```
 
 JavaScript's object-oriented features provide flexibility and allow developers to create complex applications following the principles of OOP.### Possible types of function in JavaScript
-
+# Possible types of function in JavaScript
 
 ![Possible types of function in JavaScript](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/possible-types-of-functions-in-js.png)
 
 
 ### Promise action flow
-
+# Promise action flow
 
 ![Promise action flow](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/promise-action-flow.png)
 
 ### What is event bubbling?
-
+# What is event bubbling?
 
 Event bubbling is a concept in JavaScript and many other programming languages where events triggered on an element will "bubble up" and trigger parent elements' event handlers as well. When an event occurs on a DOM (Document Object Model) element, it first runs the event's handler on that element, then on its parent element, and so on, propagating up through its ancestors in the DOM tree.
 
@@ -2884,7 +3418,7 @@ childElement.addEventListener('click', function(event) {
 If you click the button with the id "child," you might expect only "Child element clicked" to be logged. However, due to event bubbling, both messages will be logged because the click event bubbles up from the child element to its parent.
 
 In the example above, `event.stopPropagation()` is used to stop the event from further propagation, preventing it from reaching the parent element. Without this line, the event would continue to bubble up to the parent element, triggering its event handler as well. This can be useful in certain cases, but it's important to understand event bubbling to control how events propagate through the DOM tree.### What is the difference between Call and Apply?
-
+# What is the difference between Call and Apply?
 
 `call()` and `apply()` are two methods in JavaScript that allow you to invoke a function with a specified `this` value and arguments. They are similar in purpose but differ in how they accept arguments.
 
@@ -2960,7 +3494,7 @@ In modern JavaScript, you can often use the more versatile spread operator (`...
 
 ### What is the NaN
 
-
+# What is the NaN
 
 In JavaScript, `NaN` stands for "Not a Number." It is a special value representing an unrepresentable or undefined value resulting from operations that cannot produce a valid numeric result. For example, dividing zero by zero or trying to parse a string that does not represent a valid number results in `NaN`.
 
@@ -2985,7 +3519,7 @@ The `isNaN()` function has been part of JavaScript since its early versions and 
 In summary, `NaN` has been a fundamental concept in JavaScript since its inception, providing a way to handle undefined or unrepresentable values in numeric operations. The introduction of `NaN` has helped improve the reliability and consistency of numerical computations in JavaScript.
 ### What is the difference between var, const, and const?
 
-
+# What is the difference between var, const, and const?
 
 In JavaScript, `var`, `let`, and `const` are used to declare variables, but they have different scoping rules and behaviors. Here's a breakdown of their differences:
 
@@ -3036,7 +3570,7 @@ In JavaScript, `var`, `let`, and `const` are used to declare variables, but they
 
 In modern JavaScript, it is generally recommended to use `const` by default, and only use `let` when you know the variable's value will change. Avoid using `var` unless you have a specific reason to use it, as its behavior can sometimes lead to unexpected results due to its function scope or global scope. Using `let` and `const` helps in writing more predictable and maintainable code.### Weird and unexpected behavior of JavaScript
 
-
+# Weird and unexpected behavior of JavaScript
 
 JavaScript is a versatile and powerful programming language, but it has its fair share of quirks and behaviors that can be considered weird or unexpected. Here are more examples:
 
@@ -3131,7 +3665,7 @@ These examples highlight some of the idiosyncrasies of JavaScript. Understanding
 ## patterns
 ### Event Bus
 
-
+# Event Bus
 
 ```typescript
 interface IEventBus {
@@ -3161,7 +3695,7 @@ const EventBus: IEventBus = {
 ```
 
 ### Observer
-
+# Observer
 
 ```typescript
 export class Observer {
@@ -3183,7 +3717,7 @@ export class Observer {
 ```
 
 ### Singleton
-
+# Singleton
 
 ```typescript
 const singleton = (function() {
@@ -3214,7 +3748,7 @@ const singleton = (function() {
 
 ## questions
 ### How to reverse a number?
-
+# How to reverse a number?
 
 To invert a number in Java, you need to divide the number by 10 in the loop until it equals 0. And in the body of the loop find the remainder of the division by 10 and add to the result from the previous step, increased by a factor of 10.
 
@@ -3228,7 +3762,7 @@ To invert a number in Java, you need to divide the number by 10 in the loop unti
 ```
 
 ### Big O
-
+# Big O
 
 ![Big O](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/02-big-o.png)
 ![Big O 2](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/02-big-o-2.png)
@@ -3237,7 +3771,7 @@ To invert a number in Java, you need to divide the number by 10 in the loop unti
 ** Source: https://github.com/jamiebuilds/itsy-bitsy-data-structures/blob/master/itsy-bitsy-data-structures.js**
 
 ### OOP Principles
-
+# OOP Principles
 
 ## Abstraction
 Abstract means a concept or an Idea which is not associated with any particular instance. Using abstract class/Interface we express the intent of the class rather than the actual implementation. In a way, one class should not know the inner details of another in order to use it, just knowing the interfaces should be good enough.
@@ -3248,27 +3782,27 @@ Encapsulation is the mechanism of hiding of data implementation by restricting a
 ## Polymorphism
 It means one name many forms. It is further of two types — static and dynamic. Static polymorphism is achieved using method overloading and dynamic polymorphism using method overriding. It is closely related to inheritance. We can write a code that works on the superclass, and it will work with any subclass type as well.
 ### RESTful API methods
-
+# RESTful API methods
 ![RESTful API methods](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/04-restful-api-methods.png)
 
 ### Types of Databases
-
+# Types of Databases
 ![Types of Databases](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/05-types-of-databases.png)
 
 ### Software categories
-
+# Software categories
 ![Software categories](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/06-software-categories.png)
 
 ### Software characteristics
-
+# Software characteristics
 ![Software characteristics](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/07-software-characteristics.png)
 
 ### Software development life cycle
-
+# Software development life cycle
 ![Software development life cycle](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/08-sdlc.png)
 
 ### Design patterns
-
+# Design patterns
 
 
 **Creational Patterns:**
@@ -3320,7 +3854,7 @@ It means one name many forms. It is further of two types — static and dynamic.
 
 
 ### SOLID
-
+# SOLID
 
 The SOLID principles are a set of five design principles that aim to guide software developers in creating maintainable, scalable, and flexible code. Each principle focuses on a specific aspect of software design, and when applied together, they promote better software quality and reduce the risk of technical debt. Let's go through each SOLID principle:
 
@@ -3351,7 +3885,7 @@ The SOLID principles are a set of five design principles that aim to guide softw
    - By relying on abstractions, it becomes easier to change implementations without affecting higher-level modules.
 
 By adhering to the SOLID principles, developers can create code that is more maintainable, extensible, and easier to test. These principles contribute to the development of robust and adaptable software systems, which can evolve over time with fewer risks of introducing bugs or unintended side effects when making changes.### GRASP
-
+# GRASP
 
 Certainly! GRASP stands for General Responsibility Assignment Software Patterns, a set of object-oriented design principles used to guide the assignment of responsibilities to classes and objects in a software system. These principles help in creating a flexible and maintainable design. Here are the GRASP principles:
 
@@ -3383,7 +3917,7 @@ Certainly! GRASP stands for General Responsibility Assignment Software Patterns,
    - When no natural class fits the responsibility, a new class can be created solely to handle that specific responsibility. This class is considered a "pure fabrication" and helps in achieving a more maintainable design.
 
 GRASP principles provide a set of guidelines for assigning responsibilities to classes, ensuring a well-structured and adaptable object-oriented design. Applying these principles can lead to more maintainable, robust, and flexible software systems.### Browser URL Search
-
+# Browser URL Search
 
 ## Question
 
@@ -3416,7 +3950,7 @@ A person settled in front of their laptop, launching a browser before typing a U
 
 It's important to note that the use of HTTPS adds an extra layer of security through encryption, helping to protect the confidentiality and integrity of the data exchanged between the browser and the web server.### Rest API
 
-
+# Rest API
 
 **1. Introduction to REST API:**
 
@@ -3476,7 +4010,7 @@ It's important to note that the use of HTTPS adds an extra layer of security thr
 Remember to tailor your response to the specific details of the interview question and your own experiences or knowledge of REST APIs. Providing concrete examples from your previous work or projects can also enhance your answer and demonstrate your practical understanding of REST.
 ### Websockets
 
-
+# Websocket
 
 WebSocket is a communication protocol that provides full-duplex, bidirectional communication channels over a single TCP connection. It is designed to enable real-time, interactive communication between a client (typically a web browser) and a server. WebSocket is often used in web applications and other scenarios where low-latency, efficient communication is required.
 
@@ -3496,7 +4030,7 @@ Here's how WebSocket works:
 
 WebSocket offers several advantages over traditional HTTP communication for real-time applications, as it eliminates the overhead of repeated HTTP requests and reduces latency. It is widely used in web development, online gaming, financial trading platforms, and any application that requires low-latency, bi-directional communication between a client and server. Additionally, WebSocket libraries and APIs are available for various programming languages, making it relatively easy to implement in web and mobile applications.### Graphql
 
-
+# Graphql
 
 GraphQL is a query language for APIs (Application Programming Interfaces) and a runtime for executing those queries by using a type system you define for your data. It was developed by Facebook in 2012 and open-sourced in 2015. GraphQL is designed to enable clients to request exactly the data they need, and nothing more, making it a powerful alternative to REST (Representational State Transfer) APIs for building flexible and efficient APIs. Here are the main principles and concepts of GraphQL:
 
@@ -3525,7 +4059,7 @@ GraphQL is a query language for APIs (Application Programming Interfaces) and a 
 In summary, GraphQL offers a more flexible and efficient way to interact with APIs by giving clients the power to request precisely the data they need, reducing over-fetching, and providing a strongly typed schema for clarity and validation. These principles make it a popular choice for modern web and mobile application development.
 ### Git + Gitflow
 
-
+# Git + Gitflow
 
 **1. Purpose of Using GIT:**
 
@@ -3573,7 +4107,7 @@ Gitflow is a branching model and workflow that defines a set of rules for managi
 
 Gitflow provides a structured approach to managing code changes, ensuring a stable master branch while allowing for parallel development of new features and bug fixes. It enhances collaboration and coordination within development teams.### What is functional programming
 
-
+# What is functional programming
 
 Functional programming is a programming paradigm that treats computation as the evaluation of mathematical functions and avoids changing state and mutable data. In functional programming, functions are first-class citizens, meaning they can be passed as arguments to other functions, returned as values from other functions, and assigned to variables. This approach emphasizes immutability, purity, and higher-order functions.
 
@@ -3593,7 +4127,7 @@ Here are some key concepts in functional programming:
 
 Popular functional programming languages include Haskell, Lisp, Erlang, F#, and Scala. However, many other programming languages, like JavaScript, Python, and Java, also support functional programming paradigms to varying degrees, allowing developers to use functional programming concepts alongside other programming styles.### What is REPL and how to use it?
 
-
+# What is REPL and how to use it?
 
 REPL stands for Read-Eval-Print Loop. It is an interactive programming environment that allows you to enter commands or code snippets, evaluate them, and immediately see the results. REPLs are especially common in interpreted languages like Python, JavaScript, Ruby, and also in compiled languages like Swift and TypeScript.
 
@@ -3624,7 +4158,7 @@ In TypeScript, you can utilize the TypeScript Playground, an online REPL environ
 
 Remember that the TypeScript Playground provides a sandboxed environment to try out TypeScript without any local setup, making it a valuable resource for learning and experimenting with the language.### Why do you need dto files?
 
-
+# Why do you need dto files?
 
 DTO files, or Data Transfer Object files, are a common pattern in software development used for transferring data between different parts of an application or between different applications. While the concept of DTOs doesn't specifically require dedicated files, developers often create separate DTO classes or files for various reasons:
 
@@ -3642,7 +4176,7 @@ DTO files, or Data Transfer Object files, are a common pattern in software devel
 
 In summary, while DTOs themselves don't require dedicated files, creating separate DTO files offers advantages in terms of separation of concerns, reusability, code organization, testing, versioning, and collaboration. These benefits contribute to more maintainable, scalable, and efficient software development practices.### Can you explain the difference between REST API and GraphQL?
 
-
+# Can you explain the difference between REST API and GraphQL?
 
 REST API and GraphQL are both technologies used for building APIs (Application Programming Interfaces) that allow different software systems to communicate with each other. However, they have distinct differences in terms of architecture and data fetching mechanisms.
 
@@ -3661,7 +4195,7 @@ GraphQL APIs have a strong type system, allowing clients to specify the shape an
 In summary, while REST APIs follow a fixed structure and can lead to over-fetching or under-fetching of data, GraphQL provides a more efficient and flexible approach by allowing clients to request only the specific data they need, leading to more efficient data retrieval and improved performance for applications.## security
 ### Main principles of security in ExpressJS server
 
-
+# Main principles of security in ExpressJS server
 
 ![Main principles of security in ExpressJS server](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/01-security-expressjs.png)
 
@@ -3698,7 +4232,7 @@ In summary, while REST APIs follow a fixed structure and can lead to over-fetchi
 - [Go back](../readme.md)
 ## structures
 ### Array
-
+# Array
 
 An array is a collection of items stored at contiguous memory locations. The idea is to store multiple items of the same type together. This makes it easier to calculate the position of each element by simply adding an offset to a base value, i.e., the memory location of the first element of the array (generally denoted by the name of the array).
 
@@ -3715,13 +4249,13 @@ Basic Operations:
 
 
 ### Common Data Structures
-
+# Common Data Structures
 
 ![Common Data Structures](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/common-data-structures.png)
 
 
 ### Data structures types
-
+# Data structures types
 ![Data structures types](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/data-structures-types.png)
 
 * Linear Data Structure: A data structure that includes data elements arranged sequentially or linearly, where each element is connected to its previous and next nearest elements, is referred to as a linear data structure. Arrays and linked lists are two examples of linear data structures.
@@ -3730,7 +4264,7 @@ Basic Operations:
 
 ### Doubly Linked Lists
 
-
+# Doubly Linked Lists
 
 ```typescript
 class Node<T> {
@@ -3829,7 +4363,7 @@ class DoublyLinkedList<T> {
 
 ```
 
-
+# Doubly Linked Lists
 
 A linked list is a fundamental data structure that consists of a sequence of elements, each connected to the next by pointers or references. Among the variations of linked lists, the doubly linked list stands out for its bidirectional navigation, providing easy traversal in both forward and backward directions. Let's explore the concept of a doubly linked list using a TypeScript implementation.
 
@@ -3881,7 +4415,7 @@ This example initializes a doubly linked list, appends and prepends nodes, displ
 Doubly linked lists offer advantages in certain scenarios. The bidirectional navigation allows for efficient traversal in both directions, facilitating operations that involve searching, insertion, or deletion near a specific element.
 
 Understanding and implementing doubly linked lists in TypeScript provides valuable insights into data structures and algorithms. The versatility of linked lists makes them powerful tools for various applications, from low-level memory management to high-level algorithmic problem-solving.### Graph
-
+# Graph
 
 ![Graph](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/graph.png)
 ![Graph directed](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/graph-directed.png)
@@ -3893,7 +4427,7 @@ Basic Operations:
 
 
 ### Hash table
-
+# Hash table
 ![Hash table](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/hash-table.png)
 
 ```typescript
@@ -3950,7 +4484,7 @@ Hash tables are widely used in various applications such as databases, caches, s
 
 
 ### Linked list
-
+# Linked list
 
 ![Linked List](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/linked-list.png)
 
@@ -4084,7 +4618,7 @@ export class LinkedList {
 
 
   ### Map
-
+# Map
 
 ```typescript
 export class Map {
@@ -4130,7 +4664,7 @@ export class Map {
 
 
   ### Priority Queue
-
+# Priority Queue
 
 ![priority-queue](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/priority-queue.png)
 
@@ -4185,7 +4719,7 @@ export class PriorityQueue {
 ```
 
 ### Queue
-
+# Queue
 
 ![Queue](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/queue.png)
 
@@ -4222,7 +4756,7 @@ export class Queue {
 ```
 
 ### Set
-
+# Set
 
 ```typescript
 export class Set {
@@ -4338,7 +4872,7 @@ export class Set {
 ```
 
 ### Stack
-
+# Stack
 ![Stack](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/stack.png)
 
 ```typescript
@@ -4420,7 +4954,7 @@ class Stack {
 ```
 
 ### Tree
-
+# Tree
 ![Tree1](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/tree1.png)
 ![Tree2](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/tree2.png)
 
@@ -4533,7 +5067,7 @@ class BinarySearchTree {
 
 ## system-design
 ### Horizontal and vertical scaling
-
+# Horizontal and vertical scaling
 Scalability refers to an application’s ability to handle and withstand an increased workload without sacrificing latency. An application needs solid computing power to scale well. The servers should be powerful enough to handle increased traffic loads. There are two main ways to scale an application: horizontally and vertically.
 
 Horizontal scaling, or scaling out, means adding more hardware to the existing hardware resource pool. It increases the computational power of the system as a whole. Vertical scaling, or scaling up, means adding more power to your server. It increases the power of the hardware running the application.
@@ -4985,7 +5519,7 @@ Keep in mind that the specifics can vary based on the type of system you're desi
 
 These steps are iterative and often involve revisiting previous stages as new information comes to light or as the project progresses. Effective communication with stakeholders and team members is crucial throughout the process.## testing
 ### What is stress test?
-
+# What is stress test?
 
 In software engineering, a stress test refers to a type of performance testing that evaluates the behavior and stability of a software system under extreme or stressful conditions. The purpose of a stress test is to assess the system's ability to handle high loads, heavy traffic, or resource-intensive scenarios.
 
@@ -5002,7 +5536,7 @@ By conducting stress tests, software engineers can proactively identify and addr
 
 ### What types of software testing do you know?
 
-
+# What types of software testing do you know?
 
 There are several types of software testing, each serving a specific purpose in the software development lifecycle. Here are some common types of software testing:
 
@@ -5035,7 +5569,7 @@ There are several types of software testing, each serving a specific purpose in 
 These are some of the most common types of software testing, and they can be further customized or combined to meet the specific needs of a software development project.
 ## training
 ### 10001st prime
-
+# 10001st prime
 
 ```typescript
 
@@ -5084,7 +5618,7 @@ function nthPrime(n: number): number {
 
 3. **Return the Nth Prime Number:**
    - Once the loop finishes and the `primes` array has `n` elements, return the last element of the `primes` array, which represents the Nth prime number.### 3Sum Closest
-
+# 3Sum Closest
 
 ```typescript
 
@@ -5150,7 +5684,7 @@ The following techniques are utilized within the code:
 
 
 ### 3Sum
-
+# 3Sum
 
 ```typescript
 
@@ -5217,7 +5751,7 @@ The following techniques are utilized within the code:
 
 ### 4Sum
 
-
+# 4Sum
 
 ```typescript
 function fourSum(nums: number[], target: number): number[][] {
@@ -5293,7 +5827,7 @@ function fourSum(nums: number[], target: number): number[][] {
 5. **Return the Result Array:**
    - After completing all iterations, return the `result` array containing unique quadruplets that sum up to the target.
 ### Add binary
-
+# Add binary
 
 ```typescript
 
@@ -5362,7 +5896,7 @@ The following techniques are utilized within the code:
 
 
 ### Add Strings
-
+# Add Strings
 
 ```typescript
 function addStrings(num1: string, num2: string): string {
@@ -5436,7 +5970,7 @@ The following techniques are utilized within the code:
 
 
 ### Add Two Numbers
-
+# Add Two Numbers
 
 ```typescript
 /**
@@ -5533,7 +6067,7 @@ The following techniques are utilized within the code:
 
 
 ### Adjacency list to adjacency matrix
-
+# Adjacency list to adjacency matrix
 
 ```java
 class Solution {
@@ -5584,7 +6118,7 @@ The following techniques are utilized within the code:
 
 
 ### Adjacency matrix to adjacency list
-
+# Adjacency matrix to adjacency list
 
 ```java
 class Solution {
@@ -5641,7 +6175,7 @@ The following techniques are utilized within the code:
 
 
 ### Arithmetic sequence
-
+# Arithmetic sequence
 
 ```java
 class Solution {
@@ -5698,7 +6232,7 @@ The following techniques are utilized within the code:
 
 
 ### Arranging Coins
-
+# Arranging Coins
 
 ```typescript
 function arrangeCoins(n: number): number {
@@ -5754,7 +6288,7 @@ The following techniques are utilized within the code:
 
 
 ### Array Partition
-
+# Array Partition
 
 ```typescript
 function arrayPairSum(nums: number[]): number {
@@ -5802,7 +6336,7 @@ The following techniques are utilized within the code:
 
 
 ### Assign Cookies
-
+# Assign Cookies
 
 ```typescript
 function findContentChildren(g: number[], s: number[]): number {
@@ -5861,7 +6395,7 @@ The following techniques are utilized within the code:
 
 
 ### Balanced Binary Tree
-
+# Balanced Binary Tree
 
 ```typescript
 
@@ -5943,7 +6477,7 @@ The following techniques are utilized within the code:
 
 
 ### Balanced brackets
-
+# Balanced brackets
 ```typescript
 
 const tokens = {
@@ -6026,7 +6560,7 @@ The following techniques are utilized within the code:
 ** Source: http://hackerrank.com**
 
 ### Base 7
-
+# Base 7
 
 ```typescript
 function convertToBase7(num: number): string {
@@ -6093,7 +6627,7 @@ The following techniques are utilized within the code:
 
 **Source: https://leetcode.com**
 ### Best Time to Buy and Sell Stock
-
+# Best Time to Buy and Sell Stock
 
 ```typescript
 function maxProfit(prices: number[]): number {
@@ -6142,7 +6676,7 @@ The following techniques are utilized within the code:
 
 **Source: https://leetcode.com**
 ### Big countries
-
+# Big countries
 
 ```sql
 SELECT name, population, area FROM World WHERE population >= 25000000 OR area >= 3000000;
@@ -6161,7 +6695,7 @@ In summary, the query selects the `name`, `population`, and `area` columns from 
 
 
 ### Binary search path you took
-
+# Binary search path you took
 
 ```typescript
 function binarySearch(searchList: number[], value: number): (number[] | string) {
@@ -6227,7 +6761,7 @@ console.log(result); // Output: [4, 6, 5]
    - If the loop exits without finding the target value, return an array containing the string "Value Not Found".
 
 The algorithm performs a binary search on a sorted array, updating the search range based on whether the middle element is equal to, less than, or greater than the target value. The path followed during the search is recorded in the `path` array, and this path is returned if the value is found. If the value is not found, the function returns an array with the string "Value Not Found".### Binary Tree Inorder Traversal
-
+# Binary Tree Inorder Traversal
 
 ```typescript
 /**
@@ -6309,7 +6843,7 @@ The following techniques are utilized within the code:
 
 
 ### Binary Tree Paths
-
+# Binary Tree Paths
 
 ```typescript
 /**
@@ -6393,7 +6927,7 @@ The following techniques are utilized within the code:
 
 
 ### Binary Tree Postorder Traversal
-
+# Binary Tree Postorder Traversal
 
 ```typescript
 /**
@@ -6470,7 +7004,7 @@ The following techniques are utilized within the code:
 
 
 ### Binary Tree Preorder Traversal
-
+# Binary Tree Preorder Traversal
 
 ```typescript
 
@@ -6550,7 +7084,7 @@ The following techniques are utilized within the code:
 
 
 ### Binary Tree Tilt
-
+# Binary Tree Tilt
 
 ```typescript
 /**
@@ -6638,7 +7172,7 @@ The following techniques are utilized within the code:
 
 
 ### Binary Watch
-
+# Binary Watch
 
 ```java
 
@@ -6690,7 +7224,7 @@ The following techniques are utilized within the code:
 
 
 ### Can Place Flowers
-
+# Can Place Flowers
 
 ```typescript
 function canPlaceFlowers(flowerbed: number[], n: number): boolean {
@@ -6735,7 +7269,7 @@ function canPlaceFlowers(flowerbed: number[], n: number): boolean {
 
 8. **Return Result:**
    - Return `true` if enough flowers are placed; otherwise, return `false`.### Chain adding functions
-
+# Chain adding functions
 
 Multiple calls:
 
@@ -6799,7 +7333,7 @@ In this example, the `add` function is called with the initial value of `1`, and
 
 
 ### Chain calculator
-
+# Chain calculator
 
 ```typescript
 function ChainCalculator(given) {
@@ -6868,7 +7402,7 @@ Please note that the code provided uses the `Function` constructor to dynamicall
 
 
 ### Classes More Than 5 Students
-
+# Classes More Than 5 Students
 
 ```SQL
 SELECT class
@@ -6899,7 +7433,7 @@ HAVING COUNT(student) >= 5;
    - Retrieve and display the distinct values in the "class" column that meet the specified criteria.
 
 The result is a list of distinct class values from the "Courses" table where there are at least 5 distinct students enrolled in each class.### Climbing stairs
-
+# Climbing stairs
 
 ```typescript
 function climbStairs(n: number): number {
@@ -6955,7 +7489,7 @@ The time complexity of this solution is O(n) since the loop iterates `n - 3` tim
 **Source: https://leetcode.com**
 ### Combine Two Tables
 
-
+# Combine Two Tables
 
 ```SQL
 select p.FirstName, p.LastName, a.City, a.State from person p
@@ -6991,7 +7525,7 @@ The result of the query will contain rows with the `FirstName` and `LastName` va
 
 - [Go back](../readme.md)
 ### Construct the Rectangle
-
+# Construct the Rectangle
 
 ```typescript
 function constructRectangle(area: number): number[] {
@@ -7040,7 +7574,7 @@ The time complexity of this solution is O(sqrt(area)) since it uses `Math.sqrt` 
 
 **Source: https://leetcode.com**
 ### Container With Most Water
-
+# Container With Most Water
 
 ```typescript
 function maxArea(height: number[]): number {
@@ -7103,7 +7637,7 @@ The time complexity of this solution is O(n) since it uses a single loop to trav
 
 **Source: https://leetcode.com**
 ### Contains Duplicates 2
-
+# Contains Duplicates 2
 
 ```typescript
 function containsNearbyDuplicate(nums: number[], k: number): boolean {
@@ -7155,7 +7689,7 @@ The time complexity of this solution is O(n), where n is the length of the `nums
 
 **Source: https://leetcode.com**
 ### Contains Duplicate
-
+# Contains Duplicate
 
 ```typescript
 function containsDuplicate(nums: number[]): boolean {
@@ -7198,7 +7732,7 @@ The provided solution sorts the array to bring duplicate elements together, allo
 
 **Source: https://leetcode.com**
 ### Convert a Number to Hexadecimal
-
+# Convert a Number to Hexadecimal
 
 ```java
 
@@ -7245,7 +7779,7 @@ The following techniques are utilized within the code:
 2. StringBuilder: The `StringBuilder` object `sb` is used to efficiently build the hexadecimal string by inserting characters at the beginning.
 
 The provided solution efficiently converts an integer to its hexadecimal representation by extracting the bits and mapping them to their corresponding hexadecimal characters. It utilizes bitwise operations and a `StringBuilder` object to perform the conversion.### Convert Sorted Array to Binary Search Tree
-
+# Convert Sorted Array to Binary Search Tree
 
 ```typescript
 
@@ -7314,7 +7848,7 @@ The following techniques are utilized within the code:
 
 The provided solution effectively constructs a height-balanced BST from a sorted array using recursive divide-and-conquer techniques.
 ### Count and Say
-
+# Count and Say
 
 ```typescript
 
@@ -7401,7 +7935,7 @@ function countAndSay(n: number): string {
 
 7. **Return Result:**
    - Return the generated result for the current `n`. This process continues recursively until the base case is reached.### Count Complete Tree Nodes
-
+# Count Complete Tree Nodes
 
 ```typescript
 /**
@@ -7473,7 +8007,7 @@ Breakdown:
    - They use a while loop to traverse the tree and count the depth by moving to the left or right child nodes until reaching the deepest node.
 
 The overall logic of the code is based on the observation that in a complete binary tree, if the left and right subtrees have the same depth, then the tree is complete, and the total number of nodes can be calculated directly. Otherwise, it recursively counts nodes in the left and right subtrees.### Counting Bits
-
+# Counting Bits
 
 ```typescript
 function countBits(n: number): number[] {
@@ -7529,7 +8063,7 @@ The provided solution efficiently counts the number of 1-bits in the binary repr
 
 
 ### Cumulative Sum
-
+# Cumulative Sum
 
 ```java
 class Solution {
@@ -7580,7 +8114,7 @@ The provided solution efficiently calculates the cumulative sum of the input arr
 
 
 ### Curry function
-
+# Curry function
 
 ```typescript
 function curry(func: any) {
@@ -7638,7 +8172,7 @@ The provided solution implements the concept of currying by creating a curried v
 
 
 ### Customer Placing the Largest Number of Order
-
+# Customer Placing the Largest Number of Order
 
 ```SQL
 SELECT customer_number
@@ -7669,7 +8203,7 @@ This SQL query retrieves the `customer_number` from the `Orders` table for custo
    - The `LIMIT 1` clause ensures that only the row with the maximum count is selected.
 
 The main idea is to compare the count of orders for each customer with the maximum count across all customers, and select only those customers whose order count matches the maximum.### Customers Who Never Order
-
+# Customers Who Never Order
 
 ```SQL
 SELECT Name AS Customers FROM Customers WHERE Id NOT IN( SELECT CustomerId FROM Orders);
@@ -7711,7 +8245,7 @@ The provided SQL query retrieves the names of customers from the `Customers` tab
 
 
 ### Delete Duplicate Emails
-
+# Delete Duplicate Emails
 
 ```sql
 delete A from Person A, Person B where A.id > B.id and A.email=B.email;
@@ -7750,7 +8284,7 @@ The provided SQL query deletes rows from the `Person` table where the `id` value
 
 
 ### Detect Capital Use
-
+# Detect Capital Use
 
 ```typescript
 function detectCapitalUse(word: string): boolean {
@@ -7803,7 +8337,7 @@ The provided JavaScript code checks the capitalization of a given word and retur
 
 ### Diameter of Binary Tree
 
-
+# Diameter of Binary Tree
 
 ```typescript
 /**
@@ -7884,7 +8418,7 @@ The provided TypeScript code calculates the diameter of a binary tree by finding
 
 - [Go back](../readme.md)
 ### Distribute Candies
-
+# Distribute Candies
 
 ```typescript
 function distributeCandies(candyType: number[]): number {
@@ -7922,7 +8456,7 @@ The provided TypeScript code calculates the maximum number of unique candies tha
 
 
 ### Divide Two Integers
-
+# Divide Two Integers
 
 ```typescript
 function divide(dividend: number, divisor: number): number {
@@ -7976,7 +8510,7 @@ function divide(dividend: number, divisor: number): number {
 
 7. **Apply Sign and Return Result:**
    - Apply the determined sign to the result and return the final result.### Duplicate Emails
-
+# Duplicate Emails
 
 ```sql
 select `Email` from `Person` group by `Email` having count(*) > 1
@@ -8012,7 +8546,7 @@ The provided SQL query retrieves the `Email` values from the `Person` table, gro
 
 
 ### Employee Bonus
-
+# Employee Bonus
 
 ```sql
 SELECT Employee.name, Bonus.bonus
@@ -8051,7 +8585,7 @@ The provided SQL query retrieves the `name` and `bonus` values from the `Employe
 
 
 ### Employees Earning More Than Their Managers
-
+# Employees Earning More Than Their Managers
 
 ```sql
 SELECT a.Name AS Employee
@@ -8089,7 +8623,7 @@ The provided SQL query retrieves the `Name` values of employees who have higher 
 
 ### Even Fibonacci Numbers
 
-
+# Even Fibonacci Numbers
 
 ```typescript
 function fiboEvenSum(n: number): number {
@@ -8141,7 +8675,7 @@ function fiboEvenSum(n: number): number {
 5. **Return Statement:**
    - Once the loop completes, the function returns the `evenSum`, which contains the sum of even Fibonacci numbers up to and including `n`.
 ### Even number of digits
-
+# Even number of digits
 ```java
 class Solution {
 	int countOfDigits(int number) {
@@ -8212,7 +8746,7 @@ The provided Java code contains two methods: `countOfDigits`, which calculates t
 
 
 ### Excel Sheet Column Title
-
+# Excel Sheet Column Title
 
 ```typescript
 function convertToTitle(columnNumber: number): string {
@@ -8274,7 +8808,7 @@ Techniques used:
 5. Math.floor(): The `Math.floor()` method is used to round down the division result when calculating the next left digit in the columnNumber.
 
 ### Fibonacci Number
-
+# Fibonacci Number
 
 ```typescript
 function fib(n: number): number {
@@ -8332,7 +8866,7 @@ Techniques used:
 4. Iterative approach: The function uses an iterative method to calculate the Fibonacci numbers rather than a recursive approach.
 
 ### Fibonacci streaming
-
+# Fibonacci streaming 
 
 ```typescript
 function fibonacciSequence(): Iterator<number> {
@@ -8400,7 +8934,7 @@ Techniques used:
 5. Infinite sequence: The function can generate Fibonacci numbers until the index reaches a very large value (Infinity).
 
 ### Find All Numbers Disappeared in an Array
-
+# Find All Numbers Disappeared in an Array
 
 ```typescript
 function findDisappearedNumbers(nums: number[]): number[] {
@@ -8454,7 +8988,7 @@ Techniques used:
 
 
 ### Find Customer Referee
-
+# Find Customer Referee
 
 ```sql
 SELECT name
@@ -8489,7 +9023,7 @@ Techniques used:
 
 ### Find Mode in Binary Search Tree
 
-
+# Find Mode in Binary Search Tree
 
 ```typescript
 /**
@@ -8614,7 +9148,7 @@ The given code implements an iterative Morris Inorder Traversal approach to find
 - [Go back](../readme.md)
 ### Find Smallest Multiple
 
-
+# Find Smallest Multiple
 
 ```typescript
 function findSmallestMultiple(n: number): number {
@@ -8664,7 +9198,7 @@ function gcd(a: number, b: number): number {
    - If `b` is 0, return `a` as the GCD.
    - Otherwise, recursively call the `gcd` function with arguments `b` and `a % b`. This continues until `b` becomes 0, at which point `a` is the GCD.
 ### Find the Difference
-
+# Find the Difference
 
 ```typescript
 
@@ -8716,7 +9250,7 @@ The given code assumes that the input strings `s` and `t` are valid, and `t` is 
 
 
 ### Find the Index of the First Occurrence in a String
-
+# Find the Index of the First Occurrence in a String
 
 ```typescript
 function strStr(haystack: string, needle: string): number {
@@ -8768,7 +9302,7 @@ The given code assumes that the inputs `haystack` and `needle` are valid strings
 
 
 ### Find the median
-
+# Find the median
 
 ```typescript
 function findMedian(arr: number[]): number {
@@ -8809,7 +9343,7 @@ The given code assumes that the input array `arr` is not empty and contains vali
 
 
 ### Find the Pivot Integer
-
+# Find the Pivot Integer
 
 ```typescript
 function pivotInteger(n: number): number {
@@ -8884,7 +9418,7 @@ The given code assumes that the input `n` is a positive integer.
 These techniques collectively enable the function to efficiently find the pivot point in the sequence of consecutive integers from 1 to `n`.
 
 ### First Unique Character in a String
-
+# First Unique Character in a String
 
 ```typescript
 function firstUniqChar(s: string): number {
@@ -8931,7 +9465,7 @@ Techniques used in this code:
 - 
 
 ### First Bad Version
-
+# First Bad Version
 
 ```typescript
 
@@ -8988,7 +9522,7 @@ Techniques used in this code:
 
 **Source: https://leetcode.com**
 ### Fizz Buzz
-
+# Fizz Buzz
 
 ```typescript
 function fizzBuzz(n: number): string[] {
@@ -9035,7 +9569,7 @@ The technique used in this code is:
 
 
 ### Game Play Analysis I
-
+# Game Play Analysis I
 
 ```sql
 SELECT player_id, MIN(event_date) AS first_login
@@ -9058,7 +9592,7 @@ Technique used in the query:
 
 
 ### Generate Parentheses
-
+# Generate Parentheses
 
 ```typescript
 function generateParenthesis(n: number): string[] {
@@ -9110,7 +9644,7 @@ Techniques used in the code:
 
 
 ### Guess Number Higher or Lower
-
+# Guess Number Higher or Lower
 
 ```typescript
 
@@ -9167,7 +9701,7 @@ Techniques used in the code:
 - Binary search: The function `guessNumber` uses binary search to efficiently find the correct number by narrowing down the search range in each iteration.
 
 ### Hamming Distance
-
+# Hamming Distance
 
 ```java
 
@@ -9221,7 +9755,7 @@ Techniques used in the provided solution:
 4. Counting Set Bits: The code counts the number of set bits (1s) in the `xor` variable using bitwise operations. It increments the `count` variable whenever a set bit is found in `xor`.
 
 ### Happy Number
-
+# Happy Number
 
 ```typescript
 
@@ -9273,7 +9807,7 @@ The techniques used in this code include:
 - Two pointers (slow and fast) to detect cycles in the sequence. This is also known as the Floyd's cycle-finding algorithm, or the "tortoise and hare" algorithm. It's a well-known technique for detecting cycles in linked lists or sequences. In this case, it helps to efficiently determine whether the number is a happy number or not.
 
 ### Identical twins
-
+# Identical twins
 ```java
 class Solution {
 	int getIdenticalTwinsCount (int[] arr) {
@@ -9330,7 +9864,7 @@ Techniques used in this code include:
 
 
 ### Implement Queue using Stacks
-
+# Implement Queue using Stacks
 
 ```typescript
 class MyQueue {
@@ -9400,7 +9934,7 @@ Techniques used in this code include:
 - Ensuring that elements are moved to `stack2` only when necessary (on calls to `pop` and `peek`) to avoid unnecessary element transfers.
   
 ### Implement Stack using Queues
-
+# Implement Stack using Queues
 
 ```typescript
 class MyStack {
@@ -9464,7 +9998,7 @@ Techniques used in this code include:
 
 
 ### Integer to Roman
-
+# Integer to Roman
 
 ```typescript
 
@@ -9509,7 +10043,7 @@ Techniques used in this code include:
 
 
 ### Intersection of two arrays 2
-
+# Intersection of two arrays 2
 
 ```typescript
 
@@ -9567,7 +10101,7 @@ Techniques used in this code include:
 
 
 ### Intersection of Two Linked Lists
-
+# Intersection of Two Linked Lists
 
 ```typescript
 /**
@@ -9626,7 +10160,7 @@ Overall, this algorithm finds the intersection node of two linked lists with a t
 
 
 ### Intersection of two arrays
-
+# Intersection of two arrays 
 
 ```typescript
 
@@ -9672,7 +10206,7 @@ Overall, this algorithm finds the intersection of two arrays with a time complex
 
 
 ### Inventory update
-
+# Inventory update
 
 ```typescript
 function updateInventory(arr1: any, arr2: any) {
@@ -9752,7 +10286,7 @@ Techniques used in this code include:
 Overall, this algorithm efficiently updates and merges two inventories while ensuring that duplicate items are consolidated and the final inventory is sorted by item name.
 
 ### Invert Binary Tree
-
+# Invert Binary Tree
 
 ```typescript
 /**
@@ -9807,7 +10341,7 @@ Techniques used in this code include:
 
 
 ### Island Perimeter
-
+# Island Perimeter
 
 ```typescript
 function islandPerimeter(grid: number[][]): number {
@@ -9857,7 +10391,7 @@ Techniques used in this code include:
 
 
 ### Isomorphic Strings
-
+# Isomorphic Strings
 
 ```typescript
 function isIsomorphic(s: string, t: string): boolean {
@@ -9900,7 +10434,7 @@ Techniques used in this code include:
 
 
 ### Keyboard Row
-
+# Keyboard Row
 
 ```typescript
 function findWords(words: string[]): string[] {
@@ -9979,7 +10513,7 @@ Techniques used in this code include:
 
 
 ### Largest palindrome product
-
+# Largest palindrome product
 
 ```typescript
 function largestPalindromeProduct(n: number): number {
@@ -10029,7 +10563,7 @@ function largestPalindromeProduct(n: number): number {
 6. **Return the Result:**
    - After both loops complete execution, return the `result`, which holds the largest palindrome product of two n-digit numbers.
 ### Largest prime factor
-
+# Largest prime factor
 
 ```typescript
 function largestPrimeFactor(number: number): number {
@@ -10070,7 +10604,7 @@ for (let i: number = 3; i <= Math.sqrt(number); i += 2) {
 
 **Step 6:** Finally, the function returns the `largestFactor` variable, which holds the largest prime factor of the given number.### Largest product in a grid
 
-
+# Largest product in a grid
 
 ```typescript
 function largestGridProduct(arr: number[][]): number {
@@ -10158,7 +10692,7 @@ function largestGridProduct(arr: number[][]): number {
 
 The function is designed to find the largest product of four consecutive elements (horizontally, vertically, or diagonally) in a 2D array.
 ### Largest product in a series
-
+# Largest product in a series
 
 ```javascript
 function largestProductinaSeries(n) {
@@ -10198,7 +10732,7 @@ largestProductinaSeries(13);
    - Once the loop finishes, return the `maxProduct`, which represents the largest product of `n` consecutive digits in the `thousandDigits` array.
 
 In this specific case, the function is finding the largest product of 13 consecutive digits in the given 1000-digit number sequence.### Length of Last Word
-
+# Length of Last Word
 
 ```typescript
 function lengthOfLastWord(s: string): number {
@@ -10242,7 +10776,7 @@ Techniques used in this code include:
 
 ### Letter Combinations of a Phone Number
 
-
+# Letter Combinations of a Phone Number
 
 ```typescript
 function letterCombinations(digits: string): string[] {
@@ -10320,7 +10854,7 @@ function letterCombinations(digits: string): string[] {
 - After backtracking, the `result` array contains all valid letter combinations.
 - Return the `result` array as the output of the function.
 ### License Key Formatting
-
+# License Key Formatting
 
 ```typescript
 function licenseKeyFormatting(s: string, k: number): string {
@@ -10371,7 +10905,7 @@ Techniques used in this code include:
 
 
 ### Linked List Cycle
-
+# Linked List Cycle
 
 ```typescript
 /**
@@ -10428,7 +10962,7 @@ Overall, this algorithm has a time complexity of O(n), where n is the number of 
 
 
 ### Lonely Integer
-
+# Lonely Integer
 ```typescript
 function lonelyInteger(a: number[]): number {
     return a.reduce((a: number, b: number) => a^b);
@@ -10459,7 +10993,7 @@ The technique used in this code is the XOR operation to efficiently find the lon
 
 
 ### Longest common prefix
-
+# Longest common prefix
 ```typescript
 function longestCommonPrefix(strs: string[]): string {
     const size = strs.length;
@@ -10519,7 +11053,7 @@ The `longestCommonPrefix` function takes an array of strings, sorts them, and co
 
 
 ### Longest Harmonious Subsequence
-
+# Longest Harmonious Subsequence
 
 ```typescript
 function findLHS(nums: number[]): number {
@@ -10574,7 +11108,7 @@ function findLHS(nums: number[]): number {
    - `return maxLHS;`
    - Return the final maximum length of a harmonious subsequence.
 ### Longest palindrome
-
+# Longest palindrome
 
 ```typescript
 function longestPalindrome(s: string): string {
@@ -10655,7 +11189,7 @@ The `longestPalindrome` function employs dynamic programming to find the longest
 
 
 ### Longest Palindromic Substring
-
+# Longest Palindromic Substring
 
 ```typescript
 function longestPalindrome(s: string): string {
@@ -10737,7 +11271,7 @@ The `longestPalindrome` function employs dynamic programming to find the longest
 
 
 ### Longest Substring Without Repeating Characters
-
+# Longest Substring Without Repeating Characters
 ```typescript
 function lengthOfLongestSubstring(s: string): number {
     if(s.length === 0) return 0;
@@ -10802,7 +11336,7 @@ The `lengthOfLongestSubstring` function employs the sliding window technique alo
 
 
 ### Longest Uncommon Subsequence I
-
+# Longest Uncommon Subsequence I
 ```typescript
 function findLUSlength(a: string, b: string): number {
     if (a === b) {
@@ -10835,7 +11369,7 @@ function findLUSlength(a: string, b: string): number {
 The `findLUSlength` function determines the length of the longest uncommon subsequence between two input strings `a` and `b`. If the two strings are equal, it returns -1, indicating that there is no uncommon subsequence. If the strings are not equal, it returns the maximum length between the lengths of the two strings, as the longer string itself is the longest uncommon subsequence. The algorithm uses simple conditional logic and the `Math.max` function to achieve this.
 
 ### Majority Element
-
+# Majority Element
 
 ```typescript
 function majorityElement(nums: number[]): number {
@@ -10884,7 +11418,7 @@ function majorityElement(nums: number[]): number {
 The `majorityElement` function aims to find the majority element in an array of integers. It iterates through the array and uses `res` and `count` variables to keep track of a potential majority element and its count. The algorithm follows a simple logic to identify the majority element and returns the final result.
 
 ### Max Consecutive Ones
-
+# Max Consecutive Ones
 
 ```typescript
 function findMaxConsecutiveOnes(nums: number[]): number {
@@ -10931,7 +11465,7 @@ function findMaxConsecutiveOnes(nums: number[]): number {
 The `findMaxConsecutiveOnes` function aims to find the maximum consecutive count of ones in an array of integers. It iterates through the array, keeping track of the current consecutive count of ones and updating the maximum count encountered so far. The algorithm efficiently determines the maximum consecutive ones count and returns the result.
 
 ### Maximum Depth of Binary Tree
-
+# Maximum Depth of Binary Tree
 
 ```typescript
 /**
@@ -10981,7 +11515,7 @@ function maxDepth(root: TreeNode | null): number {
 The `maxDepth` function calculates the maximum depth of a binary tree using a recursive approach. It handles both the base case (empty subtree) and the recursive case (non-empty subtree) to calculate the maximum depth. The algorithm returns the maximum depth of the given binary tree.
 
 ### Maximum Depth of N-ary Tree
-
+# Maximum Depth of N-ary Tree
 
 ```typescript
 /**
@@ -11041,7 +11575,7 @@ function maxDepth(root: Node | null): number {
 The `maxDepth` function calculates the maximum depth of a tree represented by nodes of type `Node`. It handles both the base case (empty subtree) and the recursive case (non-empty subtree) to calculate the maximum depth. The algorithm returns the maximum depth of the given tree.
 
 ### Median of two sorted arrays
-
+# Median of two sorted arrays
 
 ```typescript
 function findMedianSortedArrays(nums1: number[], nums2: number[]): number {
@@ -11121,7 +11655,7 @@ function findMedianSortedArrays(nums1: number[], nums2: number[]): number {
 The `findMedianSortedArrays` function calculates the median of two sorted arrays `nums1` and `nums2` using binary search and partitioning. It handles different cases for finding the median of even and odd total lengths of combined arrays and adjusts partition points accordingly. The algorithm returns the calculated median of the two arrays.
 
 ### Memo
-
+# Memo
 
 ```typescript
 function memo(func: any) {
@@ -11188,7 +11722,7 @@ The `memo` function is a higher-order function that adds memoization to another 
 
 
 ### Merge Sorted Array
-
+# Merge Sorted Array
 
 ```typescript
 /**
@@ -11236,7 +11770,7 @@ The `merge` function takes two sorted arrays `nums1` and `nums2`, and it merges 
 
 
 ### Merge two sorted linked lists
-
+# Merge two sorted linked lists
 
 ## Solution 1
 ```typescript
@@ -11361,7 +11895,7 @@ The `mergeTwoLists` function takes two sorted linked lists `list1` and `list2`, 
 
 
 ### Minimum Absolute Difference in BST
-
+# Minimum Absolute Difference in BST
 
 ```typescript
 /**
@@ -11434,7 +11968,7 @@ The `getMinimumDifference` function utilizes in-order traversal on a binary sear
 
 
 ### Minimum Depth of Binary Tree
-
+# Minimum Depth of Binary Tree
 
 ```typescript
 /**
@@ -11513,7 +12047,7 @@ The `minDepth` function employs BFS to traverse the binary tree level by level a
 
 
 ### Minimum Index Sum of Two Lists
-
+# Minimum Index Sum of Two Lists
 
 ```typescript
 function findRestaurant(list1: string[], list2: string[]): string[] {
@@ -11569,7 +12103,7 @@ function findRestaurant(list1: string[], list2: string[]): string[] {
 
 8. **Return Result:**
    - Return the `result` array containing the names of restaurants with the minimum index sum.### Missing number
-
+# Missing number
 
 ```typescript
 
@@ -11607,7 +12141,7 @@ The `missingNumber` function calculates the missing number in an array of consec
 
 
 ### Move Zeroes
-
+# Move Zeroes
 
 ```typescript
 /**
@@ -11655,7 +12189,7 @@ The `moveZeroes` function rearranges the elements in the input array `nums` in s
 
 
 ### Multiples of 3 and 5
-
+# Multiples of 3 and 5
 
 ```typescript
 function multiplesOf3and5(number: number): number {
@@ -11692,7 +12226,7 @@ multiplesOf3and5(1000);
    - `multiplesOf3and5(1000);`: Call the function with the argument 1000. In this case, the function will find and return the sum of all multiples of 3 or 5 below 1000.
 
 The function calculates the sum of multiples of 3 or 5 up to the given number (1000 in this case) and returns the result.### N-ary Tree Postorder Traversal
-
+# N-ary Tree Postorder Traversal
 
 ```typescript
 /**
@@ -11756,7 +12290,7 @@ function postorder(root: Node | null): number[] {
 
 The algorithm uses a recursive approach to perform postorder traversal. It processes all children of a node before processing the node itself, ensuring a postorder traversal sequence. The result array collects the values in the order they are visited.### N-ary Tree Preorder Traversal
 
-
+# N-ary Tree Preorder Traversal
 
 ```typescript
 /**
@@ -11824,7 +12358,7 @@ function preorder(root: Node | null): number[] {
    - Return the final result array containing the preorder traversal of the tree.
 
 The algorithm uses a stack to keep track of the nodes to be processed. It starts with the root, processes each node and its children, and continues until all nodes are visited. The order of processing is such that a node's value is added to the result array before its children are explored. This follows the preorder traversal strategy for a tree.### Next Greater Element I
-
+# Next Greater Element I
 
 ```typescript
 function nextGreaterElement(nums1: number[], nums2: number[]): number[] {
@@ -11884,7 +12418,7 @@ The `nextGreaterElement` function efficiently finds the next greater element for
 
 
 ### Nim Game
-
+# Nim Game
 
 ```typescript
 
@@ -11909,7 +12443,7 @@ The `canWinNim` function provides an efficient way to determine the winning stra
 
 
 ### Number Complement
-
+# Number Complement
 
 ```typescript
 
@@ -11947,7 +12481,7 @@ The `findComplement` function employs bit manipulation techniques to efficiently
 
 
 ### Number of 1 Bits
-
+# Number of 1 Bits
 
 ```typescript
 
@@ -11988,7 +12522,7 @@ The `hammingWeight` function effectively counts the number of '1' bits in the bi
 
 
 ### Number of Segments in a String
-
+# Number of Segments in a String
 
 ```typescript
 
@@ -12030,7 +12564,7 @@ The `countSegments` function effectively counts the number of segments in a give
 
 ### Pairs
 
-
+# Pairs
 
 ```typescript
 function pairs(k: number, arr: number[]): number {
@@ -12089,7 +12623,7 @@ The `pairs` function effectively counts and returns the number of pairs of integ
 
 - [Go back](../readme.md)
 ### Pairwise
-
+# Pairwise
 ```typescript
 export function pairwise(arr:number[], arg:number) {
     const index = [];
@@ -12151,7 +12685,7 @@ Here's how the function works:
 The `pairwise` function effectively finds pairs of elements in the array that add up to the given target `arg`, calculates the sum of their indices, and returns the result. It uses nested loops, array manipulation, and the `reduce` function to achieve this.
 
 ### Palindrome linked list
-
+# Palindrome linked list
 
 ```typescript
 
@@ -12220,7 +12754,7 @@ The `isPalindrome` function uses recursion and pointer manipulation to determine
 
 ### Palindrome number
 
-
+# Palindrome number
 
 ```java
  class Solution {
@@ -12268,7 +12802,7 @@ The `isPalindrome` method in the `Solution` class checks if a given integer is a
 
 - [Go back](../readme.md)
 ### Pangram
-
+# Pangram
 ```typescript
 function isPangram(string:string){
     const set = new Set();
@@ -12312,7 +12846,7 @@ The `isPangram` function determines if a given string is a pangram by checking i
 
 ### Pascal triangle 2
 
-
+# Pascal triangle 2
 
 ```typescript
 function generate(numRows: number): number[][] {
@@ -12363,7 +12897,7 @@ The `generate` function generates Pascal's Triangle up to the specified number o
 - [Go back](../readme.md)
 ### Pascal triangle 3
 
-
+# Pascal triangle 3
 
 ```typescript
 function getRow(rowIndex: number): number[] {
@@ -12405,7 +12939,7 @@ The `getRow` function generates a specific row of Pascal's Triangle by calculati
 - [Go back](../readme.md)
 ### Pascal triangle
 
-
+# Pascal triangle
 
 ```java
 class Solution {
@@ -12450,7 +12984,7 @@ The `pascalTriangleRow` method generates a specific row of Pascal's Triangle by 
 
 - [Go back](../readme.md)
 ### Path Sum
-
+# Path Sum
 
 ```typescript
 
@@ -12512,7 +13046,7 @@ The `hasPathSum` function recursively explores the binary tree to find a path fr
 
 ### Perfect Number
 
-
+# Perfect Number
 
 ```typescript
 function checkPerfectNumber(num: number): boolean {
@@ -12567,7 +13101,7 @@ The `checkPerfectNumber` function checks whether a given number is a perfect num
 - [Go back](../readme.md)
 ### Permutations
 
-
+# Permutations
 
 ```typescript
 function permute(nums: number[]): number[][] {
@@ -12626,7 +13160,7 @@ The `permute` function generates all possible permutations of a given array of n
 - [Go back](../readme.md)
 ### Plus minus
 
-
+# Plus minus
 
 ```typescript
 function plusMinus(arr: number[]): void {
@@ -12681,7 +13215,7 @@ The `plusMinus` function calculates and prints the fractions of positive, negati
 - [Go back](../readme.md)
 ### Plus One
 
-
+# Plus One
 
 ```typescript
 /**
@@ -12742,7 +13276,7 @@ The `plusOne` function adds one to a given non-negative integer represented by a
 - [Go back](../readme.md)
 ### Power of Four
 
-
+# Power of Four
 
 ```typescript
 function isPowerOfFour(n: number): boolean {
@@ -12786,7 +13320,7 @@ The `isPowerOfFour` function determines whether a given number is a power of 4 b
 - [Go back](../readme.md)
 ### Power of two
 
-
+# Power of two
 
 ```typescript
 function isPowerOfTwo(n: number): boolean {
@@ -12833,7 +13367,7 @@ The `isPowerOfTwo` function determines whether a given number is a power of 2 by
 - [Go back](../readme.md)
 ### Primes upon to N
 
-
+# Primes upon to N
 
 ```java
 class Solution {
@@ -12893,7 +13427,7 @@ The `primesUptoN` method of the `Solution` class generates a list of prime numbe
 - [Go back](../readme.md)
 ### Promises sequence
 
-
+# Promises sequence
 
 ```typescript
 const a = new Promise((resolve: any, reject: any) => {
@@ -12957,7 +13491,7 @@ The code demonstrates how to use Promises and the `reduce` function to sequence 
 - [Go back](../readme.md)
 ### Queue using two stacks
 
-
+# Queue using two stacks
 
 ```typescript
 function processData(input) {
@@ -13024,7 +13558,7 @@ Please note that the provided code assumes valid input and does not include erro
 - [Go back](../readme.md)
 ### Range Addition II
 
-
+# Range Addition II
 
 ```typescript
 function maxCount(m: number, n: number, ops: number[][]): number {
@@ -13058,7 +13592,7 @@ function maxCount(m: number, n: number, ops: number[][]): number {
 
 5. **Return Product of Minimum Dimensions:**
    - After iterating through all operations, return the product of the minimum dimensions (`minAi * minBi`), representing the maximum count of elements after all operations are performed.### Range Sum Query
-
+# Range Sum Query
 
 ```typescript
 class NumArray {
@@ -13111,7 +13645,7 @@ In this example, the `NumArray` object is instantiated with the `nums` array, an
 
 
 ### Ransom Note
-
+# Ransom Note
 
 ```typescript
 function canConstruct(ransomNote: string, magazine: string): boolean {
@@ -13157,7 +13691,7 @@ function canConstruct(ransomNote: string, magazine: string): boolean {
 At the end of this explanation, you have a clear understanding of how the `canConstruct` function works and the techniques applied in the code.
 
 ### Regular Expression Matching
-
+# Regular Expression Matching
 
 ```typescript
 function isMatch(s: string, p: string): boolean {
@@ -13222,7 +13756,7 @@ function isMatch(s: string, p: string): boolean {
 
 
 ### Relative Ranks
-
+# Relative Ranks
 
 ```typescript
 function findRelativeRanks(score: number[]): string[] {
@@ -13275,7 +13809,7 @@ This function processes an array of scores, calculates ranks, and assigns medal 
 
 ### Remove duplicate words
 
-
+# Remove duplicate words
 
 ```typescript
 function removeDuplicateWords(s: string): string {
@@ -13313,7 +13847,7 @@ This function takes an input string, removes duplicate words, and returns a new 
 - [Go back](../readme.md)
 ### Remove duplicates
 
-
+# Remove duplicates
 
 ```java
 class Solution {
@@ -13362,7 +13896,7 @@ This function removes duplicates from an input array of integers and returns the
 
 - [Go back](../readme.md)
 ### Remove element in place
-
+# Remove element in place
 
 ```typescript
 function removeElement(nums: number[], val: number): number {
@@ -13400,7 +13934,7 @@ This function removes all instances of a specified value from an input array of 
 
 
 ### Remove Linked List Elements
-
+# Remove Linked List Elements
 
 ```typescript
 /**
@@ -13461,7 +13995,7 @@ This function removes all nodes with a specified value from a given singly-linke
 
 
 ### Repeated Substring Pattern
-
+# Repeated Substring Pattern
 
 ```typescript
 function repeatedSubstringPattern(s: string): boolean {
@@ -13501,7 +14035,7 @@ This function checks if a given string can be formed by repeatedly concatenating
 
 
 ### Reshape the Matrix
-
+# Reshape the Matrix
 
 ```typescript
 function matrixReshape(mat: number[][], r: number, c: number): number[][] {
@@ -13553,7 +14087,7 @@ This function reshapes a given matrix into a new matrix with the specified numbe
 
 
 ### Reverse array
-
+# Reverse array
 
 Solution Steps
 
@@ -13584,7 +14118,7 @@ function reverseArray(a: number[]): number[] {
 ```
 
 ### Reverse bits
-
+# Reverse bits
 
 ```javascript
 /**
@@ -13623,7 +14157,7 @@ This function essentially takes a positive integer, reverses its binary represen
 
 
 ### Reverse String II
-
+# Reverse String II
 
 ```typescript
 
@@ -13684,7 +14218,7 @@ This TypeScript function takes a string and an integer, reverses blocks of chara
 
 
 ### Reverse string
-
+# Reverse string
 
 ```typescript
 
@@ -13733,7 +14267,7 @@ function reverseString(s: string[]): void {
 This TypeScript function reverses the order of characters in the input array in-place using a two-pointer reversal technique.
 
 ### Reverse Vowels of a String
-
+# Reverse Vowels of a String
 
 ```typescript
 
@@ -13806,7 +14340,7 @@ This TypeScript function reverses the positions of vowels in a string while keep
 
 ### Reverse Words in a String 3
 
-
+# Reverse Words in a String 3
 
 ```typescript
 function reverseWords(s: string): string {
@@ -13865,7 +14399,7 @@ This TypeScript function reverses the characters within each word of a string wh
 - [Go back](../readme.md)
 ### Reverse words
 
-
+# Reverse words
 
 ```typescript
 function reverseWords(str: string): string {
@@ -13918,10 +14452,10 @@ This TypeScript function achieves the same result as the previous implementation
 
 - [Go back](../readme.md)
 ### Rising Temperature
-
+# Rising Temperature
 
 ```SQL
-
+# Write your MySQL query statement below
 
 SELECT w1.id
 FROm Weather w1, Weather w2
@@ -13949,7 +14483,7 @@ AND datediff(w1.recordDate, w2.recordDate) = 1;
 In summary, this SQL query retrieves the `id` values of records from the `Weather` table where the temperature of the first record is higher than the temperature of the next consecutive record. It essentially finds records with a temperature increase between consecutive days.
 
 ### Rotate image
-
+# Rotate image
 
 ```typescript
 /**
@@ -14008,7 +14542,7 @@ function rotate(matrix: number[][]): void {
 This code performs a two-step process: vertical reflection and matrix transposition, to achieve the desired 90-degree clockwise rotation of the given matrix in-place.
 
 ### Same tree
-
+# Same tree
 
 ```typescript
 function isSameTree(p: TreeNode | null, q: TreeNode | null): boolean {
@@ -14051,7 +14585,7 @@ This code checks if two binary trees `p` and `q` are the same by comparing their
 
 ### Search insert position
 
-
+# Search insert position
 
 ```typescript
 function searchInsert(nums: number[], target: number): number {
@@ -14091,7 +14625,7 @@ This code efficiently finds the insertion position of a target value in a sorted
 - [Go back](../readme.md)
 ### Simple text editor
 
-
+# Simple text editor
 
 ```javascript
 function processData(input) {
@@ -14156,7 +14690,7 @@ This code efficiently processes a series of string manipulation operations, incl
 - [Go back](../readme.md)
 ### Single Number
 
-
+# Single Number
 
 ```typescript
 /**
@@ -14197,7 +14731,7 @@ This code efficiently finds the single number in the array using the bitwise XOR
 - [Go back](../readme.md)
 ### Special pythagorean triplet
 
-
+# Special pythagorean triplet
 
 ```typescript
 function specialPythagoreanTriplet(n: number): number | null {
@@ -14231,7 +14765,7 @@ function specialPythagoreanTriplet(n: number): number | null {
 4. **Return `null` if No Triplet is Found:**
    - If the loops finish without finding any Pythagorean triplet, the function returns `null` to indicate that no such triplet exists for the given perimeter `n`.### Sqrt(x)
 
-
+# Sqrt(x)
 
 ```typescript
 /**
@@ -14304,7 +14838,7 @@ This code efficiently calculates the integer square root of a number using the b
 - [Go back](../readme.md)
 ### String to integer (atoi)
 
-
+# String to integer (atoi)
 
 ```typescript
 /**
@@ -14398,7 +14932,7 @@ This code efficiently converts a string to an integer, considering various sign 
 - [Go back](../readme.md)
 ### Student Attendance Record I
 
-
+# Student Attendance Record I
 
 ```typescript
 function checkRecord(s: string): boolean {
@@ -14479,7 +15013,7 @@ This code efficiently checks a student's attendance record to ensure it meets th
 - [Go back](../readme.md)
 ### Submission Detail
 
-
+# Submission Detail
 
 ```typescript
 function isSubsequence(s: string, t: string): boolean {
@@ -14540,7 +15074,7 @@ This code efficiently determines whether string `s` is a subsequence of string `
 - [Go back](../readme.md)
 ### Subtree of Another Tree
 
-
+# Subtree of Another Tree
 
 ```typescript
 /**
@@ -14631,7 +15165,7 @@ This code efficiently determines whether binary tree `t` is a subtree of binary 
 - [Go back](../readme.md)
 ### Sum of Left Leaves
 
-
+# Sum of Left Leaves
 
 ```typescript
 /**
@@ -14713,7 +15247,7 @@ This code efficiently calculates the sum of all left leaves' values in a binary 
 - [Go back](../readme.md)
 ### Sum square difference
 
-
+# Sum square difference
 
 ## Naive solution
 
@@ -14780,7 +15314,7 @@ function sumSquareDifference(n: number): number {
 5. **Return Result:**
    - Return the calculated difference, which represents the difference between the sum of the squares and the square of the sum of the first `n` natural numbers.### Summary Ranges
 
-
+# Summary Ranges
 
 ```typescript
 function summaryRanges(nums: number[]): string[] {
@@ -14842,7 +15376,7 @@ This code efficiently generates summary ranges from a sorted array of numbers.
 - [Go back](../readme.md)
 ### Summation of primes
 
-
+# Summation of primes
 
 ```typescript
 function sumOfPrimes(n: number): number {
@@ -14893,7 +15427,7 @@ function sumOfPrimes(n: number): number {
 
 The function uses the Sieve of Eratosthenes algorithm to efficiently find and mark prime numbers up to a given limit `n` and then calculates the sum of those prime numbers.### Swap Nodes in Pairs
 
-
+# Swap Nodes in Pairs
 
 ```typescript
 /**
@@ -14965,7 +15499,7 @@ This code efficiently swaps adjacent nodes in a singly-linked list using a const
 - [Go back](../readme.md)
 ### Symmetric difference
 
-
+# Symmetric difference
 
 ```typescript
 export const symmetricDifference = (...args: any) => [
@@ -15021,7 +15555,7 @@ This code efficiently computes the symmetric difference of multiple arrays using
 - [Go back](../readme.md)
 ### Symmetric Tree
 
-
+# Symmetric Tree
 
 ```typescript
 /**
@@ -15091,7 +15625,7 @@ This code effectively checks if a given binary tree is symmetric by comparing th
 - [Go back](../readme.md)
 ### Teemo Attacking
 
-
+# Teemo Attacking
 
 ```typescript
 function findPoisonedDuration(timeSeries: number[], duration: number): number {
@@ -15160,10 +15694,10 @@ This code efficiently calculates the total poisoned duration caused by a series 
 
 - [Go back](../readme.md)
 ### Tenth Line
-
+# Tenth Line
 
 ```bash
-
+# Read from the file file.txt and output the tenth line to stdout.
 
 head -n 10 file.txt | tail -n +10
 ```
@@ -15180,7 +15714,7 @@ In summary, the combination of `head -n 10 file.txt` extracts the first 10 lines
 
 ### Third Maximum Number
 
-
+# Third Maximum Number
 
 ```typescript
 function thirdMax(nums: number[]): number {
@@ -15239,7 +15773,7 @@ Overall space complexity: O(n)
 - [Go back](../readme.md)
 ### Time conversion
 
-
+# Time conversion
 
 ```typescript
 function timeConversion(s: string): string {
@@ -15310,7 +15844,7 @@ Overall space complexity: O(1)
 - [Go back](../readme.md)
 ### Times function in JS
 
-
+# Times function in JS
 
 ```javascript
 const times = (func, n) => {
@@ -15362,7 +15896,7 @@ times(() => {
 - [Go back](../readme.md)
 ### Ugly Number
 
-
+# Ugly Number
 
 ```typescript
 function isUgly(n: number): boolean {
@@ -15427,7 +15961,7 @@ function isUgly(n: number): boolean {
 - [Go back](../readme.md)
 ### Valid Anagram
 
-
+# Valid Anagram
 
 ```typescript
 function isAnagram(s: string, t: string): boolean {
@@ -15514,7 +16048,7 @@ function isAnagram(s: string, t: string): boolean {
 
 ### Valid parentheses
 
-
+# Valid parentheses
 
 ```typescript
 function isValid(s: string): boolean {
@@ -15602,7 +16136,7 @@ function isValid(s: string): boolean {
 
 ### Valid Perfect Square
 
-
+# Valid Perfect Square
 
 ```typescript
 function isPerfectSquare(num: number): boolean {
@@ -15665,11 +16199,11 @@ function isPerfectSquare(num: number): boolean {
 
 ### Valid Phone Numbers
 
-
+# Valid Phone Numbers
 
 ```bash
 
-
+# Read from the file file.txt and output all valid phone numbers to stdout.
 
 grep -E "^(\([0-9]{3}\) |[0-9]{3}\-)[0-9]{3}\-[0-9]{4}$" file.txt
 
@@ -15694,7 +16228,7 @@ The command searches each line in "file.txt" and displays only the lines that ma
 - [Go back](../readme.md)
 ### Validate pin
 
-
+# Validate pin
 
 ```typescript
 const validatePin = (pin: string): boolean => {
@@ -15752,7 +16286,7 @@ const validatePin = (pin: string): boolean => {
 
 ### Word Pattern
 
-
+# Word Pattern
 
 ```typescript
 function wordPattern(pattern: string, s: string): boolean {
@@ -15846,7 +16380,7 @@ function wordPattern(pattern: string, s: string): boolean {
 
 ### Word search
 
-
+# Word search
 
 ```typescript
 function exist(board: string[][], word: string): boolean {
