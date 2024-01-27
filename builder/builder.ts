@@ -2,7 +2,7 @@ import * as fs from "fs-extra";
 import * as path from "path";
 import { buildHeadline, buildLinksList, htmlPageWrapper } from "./ui";
 import { marked } from "./libs/marked";
-import { cleanContent } from "./libs/utils";
+import { cleanContent, removeIgnoreBlock, removeMDHeader } from "./libs/utils";
 import { LanguageMap } from "./libs/language-map";
 import { ContentEntity } from "./models/ContentEntity";
 import { generateTableOfContents } from "./builder/generateTableOfContents";
@@ -93,7 +93,6 @@ const generateStatic = async (
     type === "md"
       ? "\n\\newpage \n\n"
       : '<p style="page-break-after: always;"> </p>';
-  const headerRegex = /^#\s+(.+)/gm;
 
   let prevSection = "";
   const algorithmsBucket = [];
@@ -111,7 +110,7 @@ const generateStatic = async (
         allOutput += buildHeadline(e.section, 2, type) + "\n";
       }
       allOutput += buildHeadline(e.title, 3, type) + "\n";
-      e.content ? (allOutput += e.content.replace(headerRegex, "")) : "";
+      e.content ? (allOutput += removeMDHeader(e.content)) : "";
     }
   });
 
@@ -123,10 +122,9 @@ const generateStatic = async (
     if (type === "md") {
       allAlgorithms += buildHeadline(e.title.trim(), 1, type) + "\n";
     }
-    e.content ? (allAlgorithms += e.content.replace(headerRegex, "")) : "";
+    e.content ? (allAlgorithms += removeMDHeader(e.content)) : "";
 
-    const regex: RegExp = /<!-- ignore start -->(.*?)<!-- ignore end -->/gs;
-    e.content = e.content.replace(regex, "");
+    e.content = removeIgnoreBlock(e.content);
 
     allAlgorithms +=
       type === "md"
