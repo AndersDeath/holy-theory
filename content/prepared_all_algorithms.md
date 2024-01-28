@@ -3,7 +3,7 @@
 
 # Bubble sort
 
-
+# Bubble sort
 
 Bubble sorting is one of the simplest sorting algorithms that is not used in practice, but is actively used for training purposes. It works by repeatedly going through the sorted list, comparing each pair of neighboring elements and replacing them if they are in the wrong order. The pass through the list is repeated until no permutations are needed, indicating that the list is sorted.
 
@@ -66,7 +66,7 @@ console.log(bubbleSort([2, 5, 2, 6, 7, 2, 22, 5, 7, 9, 0, 2, 3]));
 \newpage 
 
 # Selection sort
-
+# Selection sort
 
 Selection Sort is a straightforward sorting algorithm that works by dividing the input array into two parts: the sorted and the unsorted subarrays. The algorithm repeatedly selects the minimum (or maximum, depending on the sorting order) element from the unsorted subarray and swaps it with the first unsorted element. This process is iteratively applied until the entire array is sorted.
 
@@ -144,7 +144,7 @@ def selection_sort(arr):
 \newpage 
 
 # Insertion sort
-
+# Insertion sort
 
 Insertion Sort is a straightforward sorting algorithm that builds the sorted array one element at a time. It is much less efficient on large lists than more advanced algorithms such as quicksort, heapsort, or merge sort. However, it has some advantages: it is simple to implement, efficient for small datasets, and performs well for partially sorted arrays.
 
@@ -207,7 +207,7 @@ console.log(insertionSort([1, 4, 2, 8, 345, 123, 43, 32, 5643, 63, 123, 43, 2, 5
 
 # Quick sort
 
-
+# Quicksort
 
 Quick Sort is an efficient, comparison-based sorting algorithm that follows the divide-and-conquer paradigm. It works by selecting a "pivot" element from the array and partitioning the other elements into two sub-arrays according to whether they are less than or greater than the pivot. The sub-arrays are then recursively sorted.
 
@@ -334,7 +334,7 @@ function quicksort(arr: number[]): number[] {
 
 # Merge sort
 
-
+# Merge sort
 
 Merge Sort is a comparison-based sorting algorithm that follows the divide-and-conquer paradigm. It works by dividing the unsorted array into 'n' sub-arrays, each containing one element. It then repeatedly merges these sub-arrays to produce new sorted sub-arrays until there is only one sub-array remaining – the fully sorted array.
 
@@ -444,7 +444,7 @@ function merge(left: number[], right: number[]): number[] {
 \newpage 
 
 # Linear search
-
+# Linear search
 
 Linear Search, also known as sequential search, is a simple searching algorithm that finds the position of a target value within a list or array. It works by iterating through the elements one by one until the target value is found or the entire list has been searched.
 
@@ -485,7 +485,7 @@ function linearSearch(arr: number[], target: number): number {
 
 # Jump search
 
-
+# Jump search
 
 Jump Search is a searching algorithm designed for sorted arrays. It is a block-based search algorithm that works by jumping ahead by fixed steps and then linearly searching within the block for the target element. Jump Search combines the efficiency of binary search with the simplicity of linear search.
 
@@ -564,7 +564,7 @@ function jumpSearch(arr: number[], target: number): number {
 \newpage 
 
 # Binary search
-
+# Binary search
 
 ![Binary search](images/binary-search.png)
 
@@ -662,7 +662,7 @@ print(my_list[res])
 \newpage 
 
 # Ternary search
-
+# Ternary search
 
 Ternary Search is a divide-and-conquer algorithm designed for efficiently finding the position of a target value in a sorted array. It operates by dividing the array into three parts and recursively narrowing down the search space until the target is found or determined to be absent.
 
@@ -714,7 +714,7 @@ function ternarySearch(func: (x: number) => number, left: number, right: number,
 
 # Interpolation search
 
-
+# Interpolation search
 
 Interpolation Search is a an algorithm designed for finding a specific target value in a sorted array. Unlike linear or binary search, this algorithm utilizes the characteristics of the data distribution to make more informed decisions about where to look for the target. It is particularly effective when the data has a uniform distribution.
 
@@ -795,7 +795,7 @@ function interpolationSearch(array: number[], value: number): number {
 
 # Breadth-first search
 
-
+# Breadth-first search
 
 Breadth-First Search (BFS) is a graph traversal algorithm that systematically explores all the vertices of a graph in breadthward motion, level by level. It starts at a chosen vertex and visits all its neighbors before moving on to their neighbors. BFS is commonly used to find the shortest path in an unweighted graph and to explore the structure of a graph.
 
@@ -903,7 +903,7 @@ graph.bfs("A");
 
 # Depth-first search
 
-
+# Depth-first search
 
 Depth-First Search (DFS) is a graph traversal algorithm that systematically explores the vertices of a graph by going as deep as possible along each branch before backtracking. It starts at a chosen vertex, explores as far as possible along one branch, and then backtracks to explore other branches. DFS is commonly used to detect cycles in a graph, topologically sort vertices, and solve problems related to connected components.
 
@@ -1012,7 +1012,7 @@ graph.dfs("A");
 
 # Dijkstra's algorithm
 
-
+# Dijkstra's algorithm
 
 **How Dijkstra's Algorithm Works:**
 
@@ -1170,7 +1170,7 @@ console.log("Distance:", distance); // Output: Distance: 4
 
 # Floyd-Warshall algorithm
 
-
+# Floyd-Warshall algorithm
 
 The Floyd-Warshall Algorithm is a dynamic programming algorithm used to find the shortest paths between all pairs of vertices in a weighted graph. Unlike Dijkstra's algorithm and Bellman-Ford algorithm, Floyd-Warshall works with graphs that can have both positive and negative edge weights and can handle graphs with cycles. The algorithm iteratively updates the shortest path distances between all pairs until reaching the optimal solution.
 
@@ -1277,7 +1277,7 @@ for (const row of result) {
 
 # Ford Fulkerson algorithm
 
-
+# Ford Fulkerson algorithm
 
 The Ford-Fulkerson Algorithm is an iterative method to compute the maximum flow in a flow network. It was initially designed to solve the max-flow min-cut problem, where the objective is to find the maximum amount of flow that can be sent from a designated source to a designated sink in a directed graph. The algorithm iteratively augments paths from the source to the sink, increasing the flow until it reaches its maximum value.
 

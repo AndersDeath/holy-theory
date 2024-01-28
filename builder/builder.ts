@@ -2,7 +2,7 @@ import * as fs from "fs-extra";
 import * as path from "path";
 import { buildHeadline, buildLinksList, htmlPageWrapper } from "./ui";
 import { marked } from "./libs/marked";
-import { cleanContent } from "./libs/utils";
+import { cleanContent, removeIgnoreBlock, removeMDHeader } from "./libs/utils";
 import { LanguageMap } from "./libs/language-map";
 import { ContentEntity } from "./models/ContentEntity";
 import { generateTableOfContents } from "./builder/generateTableOfContents";
@@ -11,6 +11,8 @@ import { createSectionFile } from "./builder/createSectionFile";
 import { generateStatisticsFile } from "./builder/generateStatisticsFile";
 import { createContentEntity } from "./builder/createContentEntity";
 import { staticContentEntityFactory } from "./builder/staticContentEntityFactory";
+import { addPageBreak } from "./ui/addPageBreak";
+import { AllProject } from "./projects/all";
 
 const generateStatic = async (
   rootFolder: string,
@@ -88,12 +90,8 @@ const generateStatic = async (
   allContentWithSections.push(staticContentEntityFactory("statistics", type));
   allContentWithSections.push(staticContentEntityFactory("all", type));
 
-  let allOutput = buildHeadline("Holy Theory project", 1, type) + "\n";
-  let allAlgorithms =
-    type === "md"
-      ? "\n\\newpage \n\n"
-      : '<p style="page-break-after: always;"> </p>';
-  const headerRegex = /^#\s+(.+)/gm;
+  const allOutput = new AllProject(type);
+  let allAlgorithms = addPageBreak(type);
 
   let prevSection = "";
   const algorithmsBucket = [];
@@ -108,10 +106,10 @@ const generateStatic = async (
     if (e.type === "content") {
       if (prevSection !== e.section) {
         prevSection = e.section;
-        allOutput += buildHeadline(e.section, 2, type) + "\n";
+        allOutput.append(buildHeadline(e.section, 2, type) + "\n");
       }
-      allOutput += buildHeadline(e.title, 3, type) + "\n";
-      e.content ? (allOutput += e.content.replace(headerRegex, "")) : "";
+      allOutput.append(buildHeadline(e.title, 3, type) + "\n");
+      e.content ? allOutput.append(removeMDHeader(e.content)) : "";
     }
   });
 
@@ -123,22 +121,18 @@ const generateStatic = async (
     if (type === "md") {
       allAlgorithms += buildHeadline(e.title.trim(), 1, type) + "\n";
     }
-    e.content ? (allAlgorithms += e.content.replace(headerRegex, "")) : "";
+    e.content ? (allAlgorithms += removeMDHeader(e.content)) : "";
 
-    const regex: RegExp = /<!-- ignore start -->(.*?)<!-- ignore end -->/gs;
-    e.content = e.content.replace(regex, "");
+    e.content = removeIgnoreBlock(e.content);
 
-    allAlgorithms +=
-      type === "md"
-        ? "\n\\newpage \n\n"
-        : '<p style="page-break-after: always;"> </p>';
+    allAlgorithms += addPageBreak(type);
   });
 
-  allOutput = generateTableOfContents(allOutput, type) + allOutput;
+  allOutput.generateTableOfContents();
   if (type === "html") {
-    allOutput = htmlPageWrapper(allOutput);
+    allOutput.applyHtmlWrapper();
   }
-  const preparedOutput = allOutput.replace(
+  const preparedOutput = allOutput.export().replace(
     /https:\/\/raw\.githubusercontent\.com\/AndersDeath\/holy-theory\/main\/images/g,
     path.join("./", "images")
   );
@@ -148,7 +142,6 @@ const generateStatic = async (
   );
   // const preparedOutput = allOutput;
 
-  allOutput = generateTableOfContents(allOutput) + allOutput;
   // preparedOutput = preparedOutput.replace(/\$/g, "\\$");
   // preparedOutput = preparedOutput.replace(/frac{/g, '"Temporary removed"');
 
@@ -166,7 +159,7 @@ const generateStatic = async (
   );
   // }
 
-  await fs.writeFile(path.join(outputFolder, "all." + type), allOutput);
+  await fs.writeFile(path.join(outputFolder, "all." + type), allOutput.export());
 
   if (type === "md")
     await generateGlobalIndex(
