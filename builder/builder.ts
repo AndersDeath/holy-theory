@@ -12,6 +12,7 @@ import { generateStatisticsFile } from "./builder/generateStatisticsFile";
 import { createContentEntity } from "./builder/createContentEntity";
 import { staticContentEntityFactory } from "./builder/staticContentEntityFactory";
 import { addPageBreak } from "./ui/addPageBreak";
+import { AllProject } from "./projects/all";
 
 const generateStatic = async (
   rootFolder: string,
@@ -89,7 +90,7 @@ const generateStatic = async (
   allContentWithSections.push(staticContentEntityFactory("statistics", type));
   allContentWithSections.push(staticContentEntityFactory("all", type));
 
-  let allOutput = buildHeadline("Holy Theory project", 1, type) + "\n";
+  const allOutput = new AllProject(type);
   let allAlgorithms = addPageBreak(type);
 
   let prevSection = "";
@@ -105,10 +106,10 @@ const generateStatic = async (
     if (e.type === "content") {
       if (prevSection !== e.section) {
         prevSection = e.section;
-        allOutput += buildHeadline(e.section, 2, type) + "\n";
+        allOutput.append(buildHeadline(e.section, 2, type) + "\n");
       }
-      allOutput += buildHeadline(e.title, 3, type) + "\n";
-      e.content ? (allOutput += removeMDHeader(e.content)) : "";
+      allOutput.append(buildHeadline(e.title, 3, type) + "\n");
+      e.content ? allOutput.append(removeMDHeader(e.content)) : "";
     }
   });
 
@@ -127,11 +128,11 @@ const generateStatic = async (
     allAlgorithms += addPageBreak(type);
   });
 
-  allOutput = generateTableOfContents(allOutput, type) + allOutput;
+  allOutput.generateTableOfContents();
   if (type === "html") {
-    allOutput = htmlPageWrapper(allOutput);
+    allOutput.applyHtmlWrapper();
   }
-  const preparedOutput = allOutput.replace(
+  const preparedOutput = allOutput.export().replace(
     /https:\/\/raw\.githubusercontent\.com\/AndersDeath\/holy-theory\/main\/images/g,
     path.join("./", "images")
   );
@@ -141,7 +142,6 @@ const generateStatic = async (
   );
   // const preparedOutput = allOutput;
 
-  allOutput = generateTableOfContents(allOutput) + allOutput;
   // preparedOutput = preparedOutput.replace(/\$/g, "\\$");
   // preparedOutput = preparedOutput.replace(/frac{/g, '"Temporary removed"');
 
@@ -159,7 +159,7 @@ const generateStatic = async (
   );
   // }
 
-  await fs.writeFile(path.join(outputFolder, "all." + type), allOutput);
+  await fs.writeFile(path.join(outputFolder, "all." + type), allOutput.export());
 
   if (type === "md")
     await generateGlobalIndex(
