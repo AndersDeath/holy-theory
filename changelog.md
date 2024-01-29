@@ -1,7 +1,9 @@
 # Changelog
 
 All notable changes to this project will be documented in this file.
-# [0.0.55] - In progress
+# [0.0.56] - In progress
+
+# [0.0.55] - 2024-01-29
 * builder refactoring
 * update selection sort
 
