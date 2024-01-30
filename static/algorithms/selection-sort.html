@@ -24,27 +24,32 @@
     </head>
     <body>
         <div class="content"><h1 id="selection-sort">Selection sort</h1>
-<p>Selection Sort is a straightforward sorting algorithm that works by dividing the input array into two parts: the sorted and the unsorted subarrays. The algorithm repeatedly selects the minimum (or maximum, depending on the sorting order) element from the unsorted subarray and swaps it with the first unsorted element. This process is iteratively applied until the entire array is sorted.</p>
+<p>Selection sort is a simple and efficient sorting algorithm that works by repeatedly selecting the smallest (or largest) element from the unsorted portion of the list and moving it to the sorted portion of the list.</p>
 <p><strong>How it works:</strong></p>
 <ol>
-<li><p><strong>Dividing the Array:</strong></p>
+<li><p><strong>Step 1:</strong></p>
 <ul>
-<li>The algorithm starts with the entire array considered as unsorted.</li>
+<li>Set Min to location 0 in Step 1.</li>
 </ul>
 </li>
-<li><p><strong>Finding the Minimum Element:</strong></p>
+<li><p><strong>Step 2</strong></p>
 <ul>
-<li>In each iteration, Selection Sort finds the minimum element from the unsorted part of the array.</li>
+<li>Look for the smallest element on the list.</li>
 </ul>
 </li>
-<li><p><strong>Swapping:</strong></p>
+<li><p><strong>Step 3:</strong></p>
 <ul>
-<li>Once the minimum element is identified, it is swapped with the first element in the unsorted part, effectively extending the sorted subarray.</li>
+<li>Replace the value at location Min with a different value.</li>
 </ul>
 </li>
-<li><p><strong>Iterative Process:</strong></p>
+<li><p><strong>Step 4:</strong></p>
 <ul>
-<li>The above steps are repeated for the remaining unsorted part of the array until the entire array is sorted.</li>
+<li>Increase Min to point to the next element</li>
+</ul>
+</li>
+<li><p><strong>Step 5:</strong></p>
+<ul>
+<li>Continue until the list is sorted.</li>
 </ul>
 </li>
 </ol>
@@ -55,7 +60,7 @@
     <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> j = i + <span class="hljs-number">1</span>; j &lt; array.<span class="hljs-property">length</span>; j++) {
       <span class="hljs-keyword">if</span> (array[min] &gt; array[j]) min = j;
     }
-    [array[i], array[min]] =[array[min], array[i]]
+    [array[i], array[min]] = [array[min], array[i]];
   }
   <span class="hljs-keyword">return</span> array;
 }
@@ -93,6 +98,9 @@
     <span class="hljs-keyword">return</span> newArr
 </code></pre><!-- ignore end -->
 
+<ul>
+<li><a href="../readme.md">Go back</a></li>
+</ul>
 </div>
     </body>
     </html>

@@ -1,26 +1,32 @@
 ---
 title: Selection sort
-tags: ['algorithms', 'selection', 'sort']
-languages: ['java', 'typescript', 'python']
+tags: ["algorithms", "selection", "sort"]
+languages: ["java", "typescript", "python"]
 sort: 200
 ---
+
 # Selection sort
 
-Selection Sort is a straightforward sorting algorithm that works by dividing the input array into two parts: the sorted and the unsorted subarrays. The algorithm repeatedly selects the minimum (or maximum, depending on the sorting order) element from the unsorted subarray and swaps it with the first unsorted element. This process is iteratively applied until the entire array is sorted.
+Selection sort is a simple and efficient sorting algorithm that works by repeatedly selecting the smallest (or largest) element from the unsorted portion of the list and moving it to the sorted portion of the list.
 
 **How it works:**
 
-1. **Dividing the Array:**
-   - The algorithm starts with the entire array considered as unsorted.
+1. **Step 1:**
 
-2. **Finding the Minimum Element:**
-   - In each iteration, Selection Sort finds the minimum element from the unsorted part of the array.
+   - Set Min to location 0 in Step 1.
 
-3. **Swapping:**
-   - Once the minimum element is identified, it is swapped with the first element in the unsorted part, effectively extending the sorted subarray.
+2. **Step 2**
 
-4. **Iterative Process:**
-   - The above steps are repeated for the remaining unsorted part of the array until the entire array is sorted.
+   - Look for the smallest element on the list.
+
+3. **Step 3:**
+
+   - Replace the value at location Min with a different value.
+
+4. **Step 4:**
+   - Increase Min to point to the next element
+5. **Step 5:**
+   - Continue until the list is sorted.
 
 ![Selection sort](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/selection-sort.png)
 
@@ -31,12 +37,12 @@ function selectionSort(array: any[]) {
     for (let j = i + 1; j < array.length; j++) {
       if (array[min] > array[j]) min = j;
     }
-    [array[i], array[min]] =[array[min], array[i]]
+    [array[i], array[min]] = [array[min], array[i]];
   }
   return array;
 }
-
 ```
+
 <!-- ignore start -->
 
 ```java
@@ -78,4 +84,4 @@ def selection_sort(arr):
 
 <!-- ignore end -->
 
-* [Go back](../readme.md)
+- [Go back](../readme.md)
