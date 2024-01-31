@@ -1,18 +1,16 @@
 import * as fs from "fs-extra";
 import * as path from "path";
-import { buildHeadline, buildLinksList, htmlPageWrapper } from "./ui";
-import { marked } from "./libs/marked";
-import { cleanContent, removeIgnoreBlock, removeMDHeader } from "./libs/utils";
+import { buildHeadline, buildLinksList,  } from "./ui";
+import { removeIgnoreBlock, removeMDHeader } from "./libs/utils";
 import { LanguageMap } from "./libs/language-map";
 import { ContentEntity } from "./models/ContentEntity";
-import { generateTableOfContents } from "./builder/generateTableOfContents";
 import { generateGlobalIndex } from "./builder/generateGlobalIndex";
 import { createSectionFile } from "./builder/createSectionFile";
 import { generateStatisticsFile } from "./builder/generateStatisticsFile";
 import { createContentEntity } from "./builder/createContentEntity";
 import { staticContentEntityFactory } from "./builder/staticContentEntityFactory";
 import { addPageBreak } from "./ui/addPageBreak";
-import { AllProject } from "./projects/all";
+import { Project } from "./projects/project";
 
 const generateStatic = async (
   rootFolder: string,
@@ -90,8 +88,9 @@ const generateStatic = async (
   allContentWithSections.push(staticContentEntityFactory("statistics", type));
   allContentWithSections.push(staticContentEntityFactory("all", type));
 
-  const allOutput = new AllProject(type);
-  let allAlgorithms = addPageBreak(type);
+  const allProject = new Project(type, "Holy Theory project");
+  const algorithmsProject = new Project(type);
+  algorithmsProject.append(addPageBreak(type));
 
   let prevSection = "";
   const algorithmsBucket = [];
@@ -106,10 +105,10 @@ const generateStatic = async (
     if (e.type === "content") {
       if (prevSection !== e.section) {
         prevSection = e.section;
-        allOutput.append(buildHeadline(e.section, 2, type) + "\n");
+        allProject.append(buildHeadline(e.section, 2, type) + "\n");
       }
-      allOutput.append(buildHeadline(e.title, 3, type) + "\n");
-      e.content ? allOutput.append(removeMDHeader(e.content)) : "";
+      allProject.append(buildHeadline(e.title, 3, type) + "\n");
+      e.content ? allProject.append(removeMDHeader(e.content)) : "";
     }
   });
 
@@ -119,27 +118,31 @@ const generateStatic = async (
 
   algorithmsBucket.forEach((e) => {
     if (type === "md") {
-      allAlgorithms += buildHeadline(e.title.trim(), 1, type) + "\n";
+      algorithmsProject.append(buildHeadline(e.title.trim(), 1, type) + "\n");
     }
-    e.content ? (allAlgorithms += removeMDHeader(e.content)) : "";
+    e.content ? algorithmsProject.append(removeMDHeader(e.content)) : "";
 
     e.content = removeIgnoreBlock(e.content);
 
-    allAlgorithms += addPageBreak(type);
+    algorithmsProject.append(addPageBreak(type));
   });
 
-  allOutput.generateTableOfContents();
+  allProject.generateTableOfContents();
   if (type === "html") {
-    allOutput.applyHtmlWrapper();
+    allProject.applyHtmlWrapper();
   }
-  const preparedOutput = allOutput.export().replace(
-    /https:\/\/raw\.githubusercontent\.com\/AndersDeath\/holy-theory\/main\/images/g,
-    path.join("./", "images")
-  );
-  const preparedOutput2 = allAlgorithms.replace(
-    /https:\/\/raw\.githubusercontent\.com\/AndersDeath\/holy-theory\/main\/images/g,
-    path.join("./", "images")
-  );
+  const preparedOutput = allProject
+    .export()
+    .replace(
+      /https:\/\/raw\.githubusercontent\.com\/AndersDeath\/holy-theory\/main\/images/g,
+      path.join("./", "images")
+    );
+  const preparedOutput2 = algorithmsProject
+    .export()
+    .replace(
+      /https:\/\/raw\.githubusercontent\.com\/AndersDeath\/holy-theory\/main\/images/g,
+      path.join("./", "images")
+    );
   // const preparedOutput = allOutput;
 
   // preparedOutput = preparedOutput.replace(/\$/g, "\\$");
@@ -159,7 +162,10 @@ const generateStatic = async (
   );
   // }
 
-  await fs.writeFile(path.join(outputFolder, "all." + type), allOutput.export());
+  await fs.writeFile(
+    path.join(outputFolder, "all." + type),
+    allProject.export()
+  );
 
   if (type === "md")
     await generateGlobalIndex(
