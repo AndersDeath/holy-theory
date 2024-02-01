@@ -131,13 +131,13 @@ const generateStatic = async (
   if (type === "html") {
     allProject.applyHtmlWrapper();
   }
-  const preparedOutput = allProject
+  const preparedAllProjectOutput = allProject
     .export()
     .replace(
       /https:\/\/raw\.githubusercontent\.com\/AndersDeath\/holy-theory\/main\/images/g,
       path.join("./", "images")
     );
-  const preparedOutput2 = algorithmsProject
+  const preparedAlgorithmsProjectOutput = algorithmsProject
     .export()
     .replace(
       /https:\/\/raw\.githubusercontent\.com\/AndersDeath\/holy-theory\/main\/images/g,
@@ -153,12 +153,12 @@ const generateStatic = async (
 
   await fs.writeFile(
     path.join(outputFolder, "prepared_all." + type),
-    preparedOutput
+    preparedAllProjectOutput
   );
 
   await fs.writeFile(
     path.join(outputFolder, "prepared_all_algorithms." + type),
-    preparedOutput2
+    preparedAlgorithmsProjectOutput
   );
   // }
 
