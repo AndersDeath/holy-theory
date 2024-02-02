@@ -1,6 +1,6 @@
 import * as fs from "fs-extra";
 import * as path from "path";
-import { buildHeadline, buildLinksList,  } from "./ui";
+import { buildHeadline, buildLinksList } from "./ui";
 import { removeIgnoreBlock, removeMDHeader } from "./libs/utils";
 import { LanguageMap } from "./libs/language-map";
 import { ContentEntity } from "./models/ContentEntity";
@@ -150,22 +150,18 @@ const generateStatic = async (
 
   // \(\frac{n \times (n + 1) \times (2n + 1)}{6}\).
   // \(\frac{n \times (n + 1)}{2}\).
+  const outputBucket = [
+    [path.join(outputFolder, "prepared_all." + type), preparedAllProjectOutput],
+    [
+      path.join(outputFolder, "prepared_all_algorithms." + type),
+      preparedAlgorithmsProjectOutput,
+    ],
+    [path.join(outputFolder, "all." + type), allProject.export()],
+  ];
 
-  await fs.writeFile(
-    path.join(outputFolder, "prepared_all." + type),
-    preparedAllProjectOutput
-  );
-
-  await fs.writeFile(
-    path.join(outputFolder, "prepared_all_algorithms." + type),
-    preparedAlgorithmsProjectOutput
-  );
-  // }
-
-  await fs.writeFile(
-    path.join(outputFolder, "all." + type),
-    allProject.export()
-  );
+  for (let index = 0; index < outputBucket.length; index++) {
+    await fs.writeFile.apply(outputBucket[index]);
+  }
 
   if (type === "md")
     await generateGlobalIndex(
