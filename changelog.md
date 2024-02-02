@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 # [0.0.56] - In progress
 * update selection sort
 * update insertion sort
-* update changelog
+* update builder
   
 # [0.0.55] - 2024-01-29
 * builder refactoring
