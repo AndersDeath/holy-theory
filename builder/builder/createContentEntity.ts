@@ -10,11 +10,12 @@ export const createContentEntity = (
   entryLink: string,
   content: any
 ): ContentEntity => {
+  const path = `${sectionName}/${entryName}.${type}`;
   return new ContentEntity(
     metadata.title || sectionName + " all",
     type === "md"
-      ? `./content/${sectionName}/${entryName}.${type}`
-      : `./${sectionName}/${entryName}.${type}`,
+      ? `./content/${path}`
+      : `./${path}`,
     entryLink,
     sectionName,
 
