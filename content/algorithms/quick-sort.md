@@ -9,19 +9,25 @@ sort: 400
 
 Quick Sort is an efficient, comparison-based sorting algorithm that follows the divide-and-conquer paradigm. It works by selecting a "pivot" element from the array and partitioning the other elements into two sub-arrays according to whether they are less than or greater than the pivot. The sub-arrays are then recursively sorted.
 
-**How Quick Sort Works:**
+**How it works:**
 
-1. **Choosing a Pivot:**
-   - The algorithm selects a pivot element from the array. The choice of pivot can affect the efficiency of the algorithm.
+**Step 1:**
+	Select a pivot. It might be any element at random, the first or last element, middle one.
 
-2. **Partitioning:**
-   - Elements smaller than the pivot are moved to its left, and elements greater than the pivot are moved to its right. The pivot is now in its final sorted position.
+**Step 2:**
+	Partition the array around the pivot element. Move all the elements < pivot to the left of the pivot and move all elements >= pivot to the pivot’s right
 
-3. **Recursive Sorting:**
-   - The algorithm is applied recursively to the sub-arrays on the left and right of the pivot until the entire array is sorted.
+**Step 3:**
+   	After Step 2, the pivot element is in its correct position
+
+**Step 4:**
+	Apply the quicksort recursively on the left partition and then on the right partition	
+
+**Step 5:**
+	Stop recursion when array is sorted when reach out the base case. It's an array of zero or one element.
 
 **Time Complexity:**
-   - Quick Sort has an average and best-case time complexity of O(n log n), where 'n' is the number of elements in the array. In the worst case, it is O(n^2), but this is rare when a good pivot selection strategy is used. Quick Sort is often faster in practice than other O(n log n) algorithms, and it is widely used in various applications due to its efficiency.
+   - Quick Sort has an average and best-case time complexity of O(n log n), where 'n' is the number of elements in the array. In the worst case, it is O(n^2), but this is rare when a good pivot selection strategy is used. This algorithm is often faster in practice than other O(n log n) ones, and it is widely used in various applications due to its efficiency.
 
 ![Quick sort](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/quick-sort.png)
 <!-- ignore start -->
