@@ -5,6 +5,8 @@ All notable changes to this project will be documented in this file.
 * update selection sort
 * update insertion sort
 * update builder
+* update quick sort
+* update merge sort
   
 # [0.0.55] - 2024-01-29
 * builder refactoring
