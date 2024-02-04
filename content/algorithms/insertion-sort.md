@@ -8,17 +8,23 @@ sort: 300
 
 Insertion Sort is a straightforward sorting algorithm that builds the sorted array one element at a time. It is much less efficient on large lists than more advanced algorithms such as quicksort, heapsort, or merge sort. However, it has some advantages: it is simple to implement, efficient for small datasets, and performs well for partially sorted arrays.
 
-**How Insertion Sort Works:**
+**How it works:**
 
-1. **Dividing the Array:**
-   - The algorithm starts with the first element of the array considered as the sorted part.
+**Step 1:**
+    Consider the first element to be a sorted subarray and the rest as an unsorted subarray
 
-2. **Inserting Elements:**
-   - For each element in the unsorted part of the array, Insertion Sort compares it with the elements in the sorted part.
-   - It then inserts the element into its correct position in the sorted part, shifting the other elements if necessary.
+**Step 2:**
+    Sequentially iterate over the unsorted elements of the array and move them to the sorted subarray.
 
-3. **Iterative Process:**
-   - This process is repeated until all elements are sorted.
+**Step 3:**
+    For each unsorted element, compare the current element with the elements before it
+
+**Step 4:**
+    If the current element is greater than its preceding element, leave it there, as it is already at the desired position. If not, keep comparing it with the  elements before it until:
+        * A smaller or equal element is found: Insert the current element after it
+        * All comparisons are made, and no smaller element is found: Insert the current element at the beginning of the array
+**Step 5:**
+    Repeat the above process for every element of the unsorted subarray until the array is sorted
 
 **Time Complexity:**
    - Insertion Sort has a time complexity of O(n^2) in the worst case, where 'n' is the number of elements in the array. Despite its quadratic time complexity, Insertion Sort is often more efficient on small datasets or partially sorted arrays compared to other quadratic sorting algorithms. It's also an in-place sorting algorithm, meaning it doesn't require additional memory.
