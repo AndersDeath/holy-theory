@@ -3,6 +3,7 @@
 All notable changes to this project will be documented in this file.
 
 # [0.0.57] - In progress
+* update linear search
 
 # [0.0.56] - 2024-02-05
 * update selection sort
