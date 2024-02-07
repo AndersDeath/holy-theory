@@ -12,18 +12,19 @@ Merge Sort is a comparison-based sorting algorithm that follows the divide-and-c
 **How it works:**
 
 **Step 1:**
-   Divide - The unsorted array is recursively divided into two halves until each sub-array contains only one element. This is the base case of the recursion.
+Divide - The unsorted array is recursively divided into two halves until each sub-array contains only one element. This is the base case of the recursion.
 
 **Step 2:**
-	Conquer - The adjacent sub-arrays are then recursively merged to produce new sorted sub-arrays. This process continues until there is only one sub-array remaining the fully sorted array.
+Conquer - The adjacent sub-arrays are then recursively merged to produce new sorted sub-arrays. This process continues until there is only one sub-array remaining the fully sorted array.
 
 **Step 3:**
-   Merge - The key operation in Merge Sort is the merging of two sorted sub-arrays to produce a single, sorted sub-array. This involves comparing elements from the two sub-arrays and placing them in the correct order.
+Merge - The key operation in Merge Sort is the merging of two sorted sub-arrays to produce a single, sorted sub-array. This involves comparing elements from the two sub-arrays and placing them in the correct order.
 
 **Time Complexity:**
- Merge Sort has a consistent time complexity of O(n log n) in all cases, where 'n' is the number of elements in the array. It is a stable sorting algorithm, meaning that equal elements maintain their relative order in the sorted output. While Merge Sort has a slightly higher space complexity due to the need for additional memory, its stability and predictable performance make it a widely used and reliable sorting algorithm.
+Merge Sort has a consistent time complexity of O(n log n) in all cases, where 'n' is the number of elements in the array. It is a stable sorting algorithm, meaning that equal elements maintain their relative order in the sorted output. While Merge Sort has a slightly higher space complexity due to the need for additional memory, its stability and predictable performance make it a widely used and reliable sorting algorithm.
 
 ![Merge sort](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/merge-sort.png)
+
 <!-- ignore start -->
 
 ```java
@@ -78,6 +79,7 @@ class Solution {
 }
 
 ```
+
 <!-- ignore end -->
 
 ```typescript
