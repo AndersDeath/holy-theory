@@ -1,48 +1,49 @@
 ---
 title: Graph adjacency list
-tags: ['adjacency', 'algorithms', 'graph']
-languages: ['java']
+tags: ["adjacency", "algorithms", "graph"]
+languages: ["java"]
 sort: 1200
 ignore: true
 ---
+
 # Graph adjacency list
 
 ```java
 
 public class GraphList {
-	
+
 	ArrayList<LinkedList<Node>> alist;
 
-	
+
 	GraphList() {
 		alist = new ArrayList<>();
 	}
-	
+
 	public void addNode(Node node) {
 		LinkedList<Node> currentList = new LinkedList<>();
 		currentList.add(node);
 		alist.add(currentList);
 	}
-	
+
 	public void addEdge(int src, int dst) {
 		LinkedList<Node> currentList = alist.get(src);
 		Node dstNode = alist.get(dst).get(0);
 		currentList.add(dstNode);
-		
+
 	}
 	public boolean checkEdge(int src, int dst) {
 		LinkedList<Node> currentList = alist.get(src);
 		Node dstNode = alist.get(dst).get(0);
-		
+
 		for(Node node: currentList) {
 			if(node == dstNode) {
 				return true;
 			}
 		}
 		return false;
-		
+
 	}
-	
+
 	public void print() {
 		for(LinkedList<Node> currentList : alist) {
 			for(Node node: currentList) {
@@ -54,4 +55,4 @@ public class GraphList {
 }
 ```
 
-* [Go back](../readme.md)
+- [Go back](../readme.md)
