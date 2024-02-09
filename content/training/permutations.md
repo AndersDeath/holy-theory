@@ -59,5 +59,3 @@ Here's how the code works:
 **Summary:**
 
 The `permute` function generates all possible permutations of a given array of numbers using a depth-first search and backtracking approach. It starts with the `dfs` function, which explores different element positions and swaps them to create permutations. The base case is reached when all positions are filled, and a copy of the current permutation is added to the output array.
-
-- [Go back](../readme.md)

@@ -48,6 +48,3 @@ function reverseWords(str: string): string {
    - Converting an array of reversed words back to a string using the `join` method to obtain the final result.
 
 This TypeScript function achieves the same result as the previous implementation, reversing the characters within each word of a string while maintaining the order of the words.
-
-
-- [Go back](../readme.md)

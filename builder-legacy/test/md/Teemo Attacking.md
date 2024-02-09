@@ -66,4 +66,3 @@ console.log(result); // Output: 9
 
 This code efficiently calculates the total poisoned duration caused by a series of attacks with given durations.
 
-- [Go back](../readme.md)

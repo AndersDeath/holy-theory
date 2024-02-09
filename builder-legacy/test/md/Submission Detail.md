@@ -57,4 +57,3 @@ function isSubsequence(s: string, t: string): boolean {
 
 This code efficiently determines whether string `s` is a subsequence of string `t`.
 
-- [Go back](../readme.md)

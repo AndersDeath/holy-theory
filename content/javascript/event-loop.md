@@ -33,5 +33,3 @@ Here's how they work together:
 5. Microtasks are executed between macrotasks, ensuring that certain asynchronous operations are prioritized and processed promptly.
 
 This cycle allows JavaScript to handle asynchronous tasks efficiently, providing a smooth user experience in web applications.
-
-- [Go back](../readme.md)

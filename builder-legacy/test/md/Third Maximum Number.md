@@ -55,4 +55,3 @@ Overall time complexity: O(n log n)
 
 Overall space complexity: O(n)
 
-- [Go back](../readme.md)

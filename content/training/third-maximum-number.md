@@ -59,5 +59,3 @@ Overall time complexity: O(n log n)
 - Space for the sorted array: O(n)
 
 Overall space complexity: O(n)
-
-- [Go back](../readme.md)

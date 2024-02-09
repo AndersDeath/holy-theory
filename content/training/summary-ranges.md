@@ -62,5 +62,3 @@ function summaryRanges(nums: number[]): string[] {
 - Space Complexity: O(1), excluding the space used for the `output` array since the output array size is directly proportional to the input array size.
 
 This code efficiently generates summary ranges from a sorted array of numbers.
-
-- [Go back](../readme.md)

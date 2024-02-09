@@ -50,5 +50,3 @@ class Solution {
 7. Returning Length: Calculating and returning the new length of the array with duplicates removed.
 
 This function removes duplicates from an input array of integers and returns the new length of the array with only the unique elements remaining.
-
-- [Go back](../readme.md)

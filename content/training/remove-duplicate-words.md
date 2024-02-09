@@ -38,5 +38,3 @@ function removeDuplicateWords(s: string): string {
 6. Array Joining (`join()`): Joining elements of an array into a string using a separator.
 
 This function takes an input string, removes duplicate words, and returns a new string with only the unique words present.
-
-- [Go back](../readme.md)

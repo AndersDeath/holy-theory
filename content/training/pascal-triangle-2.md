@@ -51,5 +51,3 @@ Here's how the function works:
 **Summary:**
 
 The `generate` function generates Pascal's Triangle up to the specified number of rows by calculating binomial coefficients and organizing them into a triangular array. It employs nested loops and array manipulation techniques to achieve this.
-
-- [Go back](../readme.md)

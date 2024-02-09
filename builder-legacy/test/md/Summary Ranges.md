@@ -58,4 +58,3 @@ function summaryRanges(nums: number[]): string[] {
 
 This code efficiently generates summary ranges from a sorted array of numbers.
 
-- [Go back](../readme.md)

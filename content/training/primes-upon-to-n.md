@@ -60,5 +60,3 @@ This Java code defines a class `Solution` with a method `primesUptoN` that gener
 **Summary:**
 
 The `primesUptoN` method of the `Solution` class generates a list of prime numbers up to a given integer `n` using the Sieve of Eratosthenes algorithm. It uses a boolean array to mark non-prime numbers and then constructs an `ArrayList` containing the prime numbers found.
-
-- [Go back](../readme.md)

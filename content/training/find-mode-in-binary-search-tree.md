@@ -124,6 +124,3 @@ The given code implements an iterative Morris Inorder Traversal approach to find
 1. Binary Search Tree (BST): The code works with a binary search tree data structure, where each node's left child is less than the node, and each node's right child is greater than the node.
 
 2. Morris Inorder Traversal: This approach allows for traversing the BST without using recursion or an explicit stack, reducing space complexity to O(1). It helps find the mode(s) efficiently while maintaining the order of traversal.
-
-
-- [Go back](../readme.md)

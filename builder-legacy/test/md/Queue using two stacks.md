@@ -62,5 +62,3 @@ The output will be:
 This is because the commands `1 42` push `42` onto the stack, the command `2` pops an element from the stack (which is now empty), and the command `3` prints the value `42` that was previously pushed onto the stack.
 
 Please note that the provided code assumes valid input and does not include error handling for cases where commands are invalid or the stack is empty during a pop operation.
-
-- [Go back](../readme.md)

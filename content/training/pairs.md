@@ -59,6 +59,3 @@ Here's how the function works:
 **Summary:**
 
 The `pairs` function effectively counts and returns the number of pairs of integers in the sorted array that have an absolute difference of `k`. It uses array sorting and a two-pointers approach to achieve this efficiently.
-
-
-- [Go back](../readme.md)

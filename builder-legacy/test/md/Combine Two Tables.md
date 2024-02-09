@@ -33,4 +33,3 @@ Here's a breakdown of the query:
 
 The result of the query will contain rows with the `FirstName` and `LastName` values from the `person` table, along with the corresponding `City` and `State` values from the `address` table. If there is no matching address for a person, the `City` and `State` values will be `NULL` for that person.
 
-- [Go back](../readme.md)

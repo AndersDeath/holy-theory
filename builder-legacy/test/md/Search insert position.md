@@ -35,5 +35,3 @@ function searchInsert(nums: number[], target: number): number {
 - Space Complexity: O(1), as no additional data structures are used, and the space used remains constant regardless of the input size.
 
 This code efficiently finds the insertion position of a target value in a sorted array by utilizing the sorted property of the array and performing a linear search. It returns the index where the target value should be inserted while maintaining the sorted order.
-
-- [Go back](../readme.md)

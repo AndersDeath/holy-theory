@@ -71,5 +71,3 @@ function timeConversion(s: string): string {
 - Other variables: O(1)
 
 Overall space complexity: O(1)
-
-- [Go back](../readme.md)

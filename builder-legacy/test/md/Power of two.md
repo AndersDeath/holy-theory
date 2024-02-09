@@ -42,5 +42,3 @@ This JavaScript code defines a function `isPowerOfTwo` that checks if a given nu
 **Summary:**
 
 The `isPowerOfTwo` function determines whether a given number is a power of 2 by repeatedly right-shifting the number's bits and checking if any of them are set. If all bits become zero after the operations, the function returns `true`, indicating that the number is a power of 2; otherwise, it returns `false`.
-
-- [Go back](../readme.md)

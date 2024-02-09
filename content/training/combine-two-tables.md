@@ -37,5 +37,3 @@ Here's a breakdown of the query:
 10. The `ON` keyword specifies the join condition between the `person` and `address` tables. In this case, the join is based on matching values in the `personid` column.
 
 The result of the query will contain rows with the `FirstName` and `LastName` values from the `person` table, along with the corresponding `City` and `State` values from the `address` table. If there is no matching address for a person, the `City` and `State` values will be `NULL` for that person.
-
-- [Go back](../readme.md)

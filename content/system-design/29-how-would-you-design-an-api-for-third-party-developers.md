@@ -104,5 +104,3 @@ Designing an API for third-party developers requires careful planning and consid
     - Ensure your API complies with industry regulations and standards, such as GDPR for data protection or HIPAA for healthcare data.
 
 Remember that the key to a successful API for third-party developers is to make it as intuitive, reliable, and well-documented as possible. Regularly update and improve the API based on developer feedback and evolving industry standards.
-
-- [Go back](../readme.md)

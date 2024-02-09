@@ -90,4 +90,3 @@ const myAtoi = function (s) {
 
 This code efficiently converts a string to an integer, considering various sign and boundary conditions.
 
-- [Go back](../readme.md)

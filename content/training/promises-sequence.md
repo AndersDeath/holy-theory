@@ -64,5 +64,3 @@ This is because `Promise c` has the shortest delay (1000 ms), followed by `Promi
 **Summary:**
 
 The code demonstrates how to use Promises and the `reduce` function to sequence asynchronous operations, ensuring that they are executed in a particular order based on the timing of their resolutions.
-
-- [Go back](../readme.md)

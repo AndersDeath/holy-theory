@@ -56,5 +56,3 @@ This JavaScript code defines a function `plusOne` that adds one to a given array
 **Summary:**
 
 The `plusOne` function adds one to a given non-negative integer represented by an array of digits. It handles carry and edge cases where all digits are nines, ensuring accurate addition of the one.
-
-- [Go back](../readme.md)

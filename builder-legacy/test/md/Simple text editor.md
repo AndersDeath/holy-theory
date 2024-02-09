@@ -60,5 +60,3 @@ function processData(input) {
 - Space Complexity: O(Q \* M), due to the space used by the `undoStack` to store previous string states.
 
 This code efficiently processes a series of string manipulation operations, including appending, removing, and retrieving characters, while providing support for undoing previous operations. It demonstrates the use of a stack to maintain history and perform string manipulations.
-
-- [Go back](../readme.md)

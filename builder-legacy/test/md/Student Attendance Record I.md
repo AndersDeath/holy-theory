@@ -76,5 +76,3 @@ function checkRecord(s: string): boolean {
 - Space Complexity: O(1), as only a constant amount of extra space is used (for variables like `absentCount` and `lateCount`).
 
 This code efficiently checks a student's attendance record to ensure it meets the specified conditions.
-
-- [Go back](../readme.md)

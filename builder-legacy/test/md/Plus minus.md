@@ -50,5 +50,3 @@ Here's how the code works:
 **Summary:**
 
 The `plusMinus` function calculates and prints the fractions of positive, negative, and zero elements in an array, each with a precision of 6 decimal places. It provides insights into the distribution of elements in the array.
-
-- [Go back](../readme.md)

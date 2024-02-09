@@ -42,5 +42,3 @@ Here's how the function works:
 **Summary:**
 
 The `getRow` function generates a specific row of Pascal's Triangle by calculating the coefficients using a formula that takes advantage of the properties of binomial coefficients. This allows for efficient computation of the coefficients for the desired row.
-
-- [Go back](../readme.md)

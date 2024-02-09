@@ -41,5 +41,3 @@ const singleNumber = function (nums) {
 - Space Complexity: O(1), as only a constant amount of extra space is used (for the `ans` variable).
 
 This code efficiently finds the single number in the array using the bitwise XOR operation, leveraging the XOR property to eliminate duplicate numbers and keep only the unique one.
-
-- [Go back](../readme.md)

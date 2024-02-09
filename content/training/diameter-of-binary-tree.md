@@ -82,5 +82,3 @@ Techniques used:
 Summary:
 
 The provided TypeScript code calculates the diameter of a binary tree by finding the maximum depth of each node and updating the maximum diameter accordingly. The function returns the calculated diameter value.
-
-- [Go back](../readme.md)

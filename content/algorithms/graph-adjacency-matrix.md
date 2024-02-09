@@ -51,5 +51,3 @@ public class Graph {
 	}
 }
 ```
-
-- [Go back](../readme.md)

@@ -49,5 +49,3 @@ Here's how the method works:
 **Summary:**
 
 The `isPalindrome` method in the `Solution` class checks if a given integer is a palindrome by reversing its digits and comparing it with the original input. It returns `true` if the integer is a palindrome and `false` otherwise.
-
-- [Go back](../readme.md)

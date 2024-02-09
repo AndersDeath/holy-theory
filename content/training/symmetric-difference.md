@@ -56,5 +56,3 @@ console.log(result); // Output: [1, 5]
 ```
 
 This code efficiently computes the symmetric difference of multiple arrays using JavaScript's array manipulation techniques.
-
-- [Go back](../readme.md)

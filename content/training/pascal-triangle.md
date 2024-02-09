@@ -46,5 +46,3 @@ Here's how the `pascalTriangleRow` method works:
 **Summary:**
 
 The `pascalTriangleRow` method generates a specific row of Pascal's Triangle by calculating the coefficients using a formula that takes advantage of the properties of binomial coefficients. This allows for efficient computation of the coefficients for the desired row. The method can be used to retrieve any desired row of Pascal's Triangle by specifying the `rowNo` parameter.
-
-- [Go back](../readme.md)

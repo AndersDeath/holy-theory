@@ -37,5 +37,3 @@ languages: [""]
 14. **Server Hardening:** Secure the underlying server infrastructure by following best practices for server configuration, firewall settings, and restricting unnecessary services and ports.
 
 15. **Regular Monitoring and Logging:** Implement logging and monitoring systems to detect and respond to security incidents, unusual activities, and potential threats in a timely manner.
-
-- [Go back](../readme.md)

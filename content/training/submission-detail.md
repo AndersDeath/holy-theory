@@ -61,5 +61,3 @@ function isSubsequence(s: string, t: string): boolean {
 - Space Complexity: O(1), as only a constant amount of extra space is used for variables (`i` and `j`).
 
 This code efficiently determines whether string `s` is a subsequence of string `t`.
-
-- [Go back](../readme.md)

@@ -48,4 +48,3 @@ times(() => {
 **Space Complexity**:
 
 - The space complexity is O(n) due to the array created using `Array.from(Array(n))`.
-- [Go back](../readme.md)

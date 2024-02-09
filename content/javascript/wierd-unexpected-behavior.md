@@ -94,5 +94,3 @@ JavaScript is a versatile and powerful programming language, but it has its fair
    ```
 
 These examples highlight some of the idiosyncrasies of JavaScript. Understanding these quirks is crucial for writing reliable and predictable JavaScript code.
-
-- [Go back](../readme.md)

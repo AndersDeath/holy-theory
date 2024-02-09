@@ -65,5 +65,3 @@ function isUgly(n: number): boolean {
 **Space Complexity**:
 
 - The space complexity is determined by the depth of the recursion stack. In the worst case, the recursion depth could be proportional to `n`. Therefore, the space complexity is O(n).
-
-- [Go back](../readme.md)

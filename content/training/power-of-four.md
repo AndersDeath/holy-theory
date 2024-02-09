@@ -44,5 +44,3 @@ The provided JavaScript code defines a function `isPowerOfFour` that checks if a
 **Summary:**
 
 The `isPowerOfFour` function determines whether a given number is a power of 4 by repeatedly dividing the number by 4 and checking for divisibility and final equality to 1. If the conditions are met, the function returns `true`, indicating that the number is a power of 4; otherwise, it returns `false`.
-
-- [Go back](../readme.md)

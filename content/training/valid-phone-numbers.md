@@ -30,4 +30,3 @@ The regular expression `^(\([0-9]{3}\) |[0-9]{3}\-)[0-9]{3}\-[0-9]{4}$` is used 
 
 The command searches each line in "file.txt" and displays only the lines that match the specified phone number pattern. This pattern is commonly used to match valid US phone numbers in different formats.
 
-- [Go back](../readme.md)

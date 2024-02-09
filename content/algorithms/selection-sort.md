@@ -83,5 +83,3 @@ def selection_sort(arr):
 ```
 
 <!-- ignore end -->
-
-- [Go back](../readme.md)

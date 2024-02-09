@@ -70,5 +70,3 @@ console.log(result); // Output: true
 ```
 
 This code effectively checks if a given binary tree is symmetric by comparing the subtrees' mirror symmetry.
-
-- [Go back](../readme.md)

@@ -73,5 +73,3 @@ const mySqrt = function (x) {
 - Space Complexity: O(1), as only a constant amount of extra space is used (for variables like `start`, `end`, and `mid`).
 
 This code efficiently calculates the integer square root of a number using the binary search algorithm.
-
-- [Go back](../readme.md)

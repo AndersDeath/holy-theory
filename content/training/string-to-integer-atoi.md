@@ -94,5 +94,3 @@ const myAtoi = function (s) {
 - Space Complexity: O(1), as only a constant amount of extra space is used (for variables like `i`, `number`, etc.).
 
 This code efficiently converts a string to an integer, considering various sign and boundary conditions.
-
-- [Go back](../readme.md)

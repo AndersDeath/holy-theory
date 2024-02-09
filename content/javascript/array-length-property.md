@@ -20,5 +20,3 @@ https://262.ecma-international.org/6.0/#sec-properties-of-array-instances-length
 As result when JavaScript executes clothes.length = 0, all clothes items are deleted.
 
 clothes[0] is undefined, because clothes array has been emptied.
-
-- [Go back](../readme.md)

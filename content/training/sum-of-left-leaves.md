@@ -82,5 +82,3 @@ function sumOfLeftLeaves(root: TreeNode | null): number {
 - Space Complexity: O(h), where `h` is the height of the binary tree. The maximum space used by the recursive call stack is determined by the height of the tree.
 
 This code efficiently calculates the sum of all left leaves' values in a binary tree.
-
-- [Go back](../readme.md)

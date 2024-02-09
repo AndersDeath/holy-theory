@@ -55,5 +55,3 @@ Here's how the function works:
 **Summary:**
 
 The `checkPerfectNumber` function checks whether a given number is a perfect number by calculating its proper divisors and comparing their sum to the original number. If the sum of proper divisors is equal to the original number, the function returns `true`, indicating that the number is a perfect number. Otherwise, it returns `false`.
-
-- [Go back](../readme.md)

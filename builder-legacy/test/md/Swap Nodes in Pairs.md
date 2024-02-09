@@ -67,5 +67,3 @@ function swapPairs(head: ListNode | null): ListNode | null {
 - Space Complexity: O(1), as only a constant amount of extra space is used, regardless of the size of the input linked list.
 
 This code efficiently swaps adjacent nodes in a singly-linked list using a constant amount of extra space.
-
-- [Go back](../readme.md)

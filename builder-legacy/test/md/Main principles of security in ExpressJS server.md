@@ -33,4 +33,3 @@
 
 15. **Regular Monitoring and Logging:** Implement logging and monitoring systems to detect and respond to security incidents, unusual activities, and potential threats in a timely manner.
 
-- [Go back](../readme.md)

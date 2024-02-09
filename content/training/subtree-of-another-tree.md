@@ -91,5 +91,3 @@ function isSameTree(s: TreeNode | null, t: TreeNode | null): boolean {
 - Space Complexity: O(max(m, n)), where `m` and `n` are the heights of trees `s` and `t`, respectively. The maximum space used by the recursive call stack is determined by the height of the taller tree.
 
 This code efficiently determines whether binary tree `t` is a subtree of binary tree `s`.
-
-- [Go back](../readme.md)

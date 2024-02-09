@@ -134,5 +134,3 @@ function quicksort(arr: number[]): number[] {
   }
 }
 ```
-
-- [Go back](../readme.md)

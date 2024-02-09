@@ -67,6 +67,4 @@ console.log(insertionSort([1, 4, 2, 8, 345, 123, 43, 32]));
         }
     }
 ```
-
-- [Go back](../readme.md)
 <!-- ignore end -->

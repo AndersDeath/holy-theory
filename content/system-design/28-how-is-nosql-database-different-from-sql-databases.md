@@ -36,5 +36,3 @@ NoSQL (which stands for "Not Only SQL") databases are a class of database manage
 6. Use Cases:
    - SQL databases are well-suited for applications with structured and well-defined data, such as financial systems, ERP (Enterprise Resource Planning) software, and traditional relational data storage.
    - NoSQL databases are often chosen for applications with large amounts of semi-structured or unstructured data, such as social media, content management systems, real-time analytics, and IoT (Internet of Things) applications.
-
-- [Go back](../readme.md)
