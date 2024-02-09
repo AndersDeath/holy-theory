@@ -1,30 +1,31 @@
 ---
 title: Graph adjacency matrix
-tags: ['adjacency', 'algorithms', 'graph']
-languages: ['java']
+tags: ["adjacency", "algorithms", "graph"]
+languages: ["java"]
 sort: 1300
 ignore: true
 ---
+
 # Graph adjacency matrix
 
 ```java
 public class Graph {
-	ArrayList<Node> nodes; 
+	ArrayList<Node> nodes;
 	int[][] matrix;
-	
+
 	Graph(int size) {
 		nodes = new ArrayList<>();
 		matrix = new int[size][size];
 	}
-	
+
 	public void addNode(Node node) {
 		nodes.add(node);
 	}
-	
+
 	public void addEdge(int src, int dst) {
 		matrix[src][dst] = 1;
 	}
-	
+
 	public boolean checkEdge(int src, int dst) {
 		if(matrix[src][dst] == 1) {
 			return true;
@@ -32,14 +33,14 @@ public class Graph {
 			return false;
 		}
 	}
-	
+
 	public void print() {
-		System.out.print("  "); 
+		System.out.print("  ");
 		for(Node node : nodes) {
-			System.out.print(node.data + " "); 
+			System.out.print(node.data + " ");
 		}
 		System.out.println();
-		
+
 		for(int i = 0; i < matrix.length; i++) {
 			System.out.print(nodes.get(i).data + " ");
 			for(int j =0; j < matrix[i].length; j++) {
@@ -51,4 +52,4 @@ public class Graph {
 }
 ```
 
-* [Go back](../readme.md)
+- [Go back](../readme.md)

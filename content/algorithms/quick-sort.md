@@ -12,24 +12,26 @@ Quick Sort is an efficient, comparison-based sorting algorithm that follows the 
 **How it works:**
 
 **Step 1:**
-	Select a pivot. It might be any element at random, the first or last element, middle one.
+Select a pivot. It might be any element at random, the first or last element, middle one.
 
 **Step 2:**
-	Partition the array around the pivot element. Move all the elements < pivot to the left of the pivot and move all elements >= pivot to the pivot’s right
+Partition the array around the pivot element. Move all the elements < pivot to the left of the pivot and move all elements >= pivot to the pivot’s right
 
 **Step 3:**
-   	After Step 2, the pivot element is in its correct position
+After Step 2, the pivot element is in its correct position
 
 **Step 4:**
-	Apply the quicksort recursively on the left partition and then on the right partition	
+Apply the quicksort recursively on the left partition and then on the right partition
 
 **Step 5:**
-	Stop recursion when array is sorted when reach out the base case. It's an array of zero or one element.
+Stop recursion when array is sorted when reach out the base case. It's an array of zero or one element.
 
 **Time Complexity:**
-   - Quick Sort has an average and best-case time complexity of O(n log n), where 'n' is the number of elements in the array. In the worst case, it is O(n^2), but this is rare when a good pivot selection strategy is used. This algorithm is often faster in practice than other O(n log n) ones, and it is widely used in various applications due to its efficiency.
+
+- Quick Sort has an average and best-case time complexity of O(n log n), where 'n' is the number of elements in the array. In the worst case, it is O(n^2), but this is rare when a good pivot selection strategy is used. This algorithm is often faster in practice than other O(n log n) ones, and it is widely used in various applications due to its efficiency.
 
 ![Quick sort](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/quick-sort.png)
+
 <!-- ignore start -->
 
 ```java
@@ -117,6 +119,7 @@ class Solution {
 	}
 }
 ```
+
 <!-- ignore end -->
 
 ```typescript

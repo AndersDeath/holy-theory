@@ -1,25 +1,26 @@
 ---
 title: Binary tree preorder traversal
-tags: ['traversal', 'algorithms', 'binary', 'tree']
-languages: ['java']
+tags: ["traversal", "algorithms", "binary", "tree"]
+languages: ["java"]
 sort: 1100
 ignore: true
 ---
+
 # Binary tree preorder traversal
 
 ```java
 class Solution {
-	
+
 	void utility(Node root, List<Integer> traversal) {
 		if(root == null) {
 			return;
 		}
-		
+
 		traversal.add(root.data);
 		utility(root.left, traversal);
 		utility(root.right, traversal);
 	}
-	
+
 	List<Integer> getPreorderTraversal(Node root) {
 		List<Integer> traversal = new ArrayList<Integer>();
 		utility(root, traversal);
