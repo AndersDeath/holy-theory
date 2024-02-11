@@ -23,5 +23,3 @@ export class Observer {
   }
 }
 ```
-
-- [Go back](../readme.md)
