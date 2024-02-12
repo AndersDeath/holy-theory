@@ -8,6 +8,7 @@ All notable changes to this project will be documented in this file.
 * update jump search
 * update binary search
 * update ternary search
+* update interpolation search
 
 # [0.0.56] - 2024-02-05
 * update selection sort
