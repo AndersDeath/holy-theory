@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file.
 * update linear search
 * minor content changes around the project
 * update jump search
+* update binary search
 
 # [0.0.56] - 2024-02-05
 * update selection sort
