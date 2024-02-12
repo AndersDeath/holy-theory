@@ -9,22 +9,19 @@ sort: 1000
 
 Interpolation Search is a an algorithm designed for finding a specific target value in a sorted array. Unlike linear or binary search, this algorithm utilizes the characteristics of the data distribution to make more informed decisions about where to look for the target. It is particularly effective when the data has a uniform distribution.
 
-**How Interpolation Search Works:**
+**How it works:**
 
-1. **Linear Interpolation:**
+**Step 1:**
+It utilizes linear interpolation to estimate the likely position of the target value in the array.
 
-   - Interpolation Search utilizes linear interpolation to estimate the likely position of the target value in the array.
+**Step 2:**
+Instead of evenly dividing the search space, as in binary search, the algorithm estimates the probable position of the target based on its value relative to the minimum and maximum values in the array.
 
-2. **Estimate Position:**
+**Step 3:**
+It calculates an estimate of the target's position by considering the relative location of the target with respect to the minimum and maximum values in the current search space.
 
-   - Instead of evenly dividing the search space, as in binary search, Interpolation Search estimates the probable position of the target based on its value relative to the minimum and maximum values in the array.
-
-3. **Calculation of Position:**
-
-   - It calculates an estimate of the target's position by considering the relative location of the target with respect to the minimum and maximum values in the current search space.
-
-4. **Refine Search:**
-   - Based on the calculated estimate, the algorithm narrows down the search space and repeats the process until the target is found or the search space is exhausted.
+**Step 4:**
+Based on the calculated estimate, the algorithm narrows down the search space and repeats the process until the target is found or the search space is exhausted.
 
 **Time Complexity:**
 
