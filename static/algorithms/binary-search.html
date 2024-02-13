@@ -24,28 +24,34 @@
     </head>
     <body>
         <div class="content"><h1 id="binary-search">Binary search</h1>
-<p><img src="https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/binary-search.png" alt="Binary search"></p>
-<p><strong>Steps:</strong></p>
-<ul>
-<li>Step 1 - Read the search element from the user.</li>
-<li>Step 2 - Find the middle element in the sorted list.</li>
-<li>Step 3 - Compare the search element with the middle element in the sorted list.</li>
-<li>Step 4 - If both are matched, then display &quot;Given element is found!!!&quot; and terminate the function.</li>
-<li>Step 5 - If both are not matched, then check whether the search element is smaller or larger than the middle element.</li>
-<li>Step 6 - If the search element is smaller than middle element, repeat steps 2, 3, 4 and 5 for the left sublist of the middle element.</li>
-<li>Step 7 - If the search element is larger than middle element, repeat steps 2, 3, 4 and 5 for the right sublist of the middle element.</li>
-<li>Step 8 - Repeat the same process until we find the search element in the list or until sublist contains only one element.</li>
-<li>Step 9 - If that element also doesn&#39;t match with the search element, then returns -1;</li>
-</ul>
-<hr>
+<p>Binary Search is defined as a searching algorithm used in a sorted array by repeatedly dividing the search interval in half. The idea of binary search is to use the information that the array is sorted,.</p>
+<p><strong>How it works:</strong></p>
+<p><strong>Step 1:</strong>
+Read the search element from the user.</p>
+<p><strong>Step 2:</strong>
+Find the middle element in the sorted list.</p>
+<p><strong>Step 3:</strong>
+Compare the search element with the middle element in the sorted list.</p>
+<p><strong>Step 4:</strong>
+If both are matched, then display &quot;Given element is found!!!&quot; and terminate the function.</p>
+<p><strong>Step 5:</strong>
+If both are not matched, then check whether the search element is smaller or larger than the middle element.</p>
+<p><strong>Step 6:</strong>
+If the search element is smaller than middle element, repeat steps 2, 3, 4 and 5 for the left sublist of the middle element.</p>
+<p><strong>Step 7:</strong>
+If the search element is larger than middle element, repeat steps 2, 3, 4 and 5 for the right sublist of the middle element.</p>
+<p><strong>Step 8:</strong>
+Repeat the same process until we find the search element in the list or until sublist contains only one element.</p>
+<p><strong>Step 9:</strong>
+If that element also doesn&#39;t match with the search element, then returns -1;</p>
 <p><strong>Time Complexity:</strong></p>
 <ul>
 <li>Worst case: O(log n)</li>
 <li>Average case: O(log n)</li>
 <li>Best case: O(1)</li>
 </ul>
-<pre><code class="hljs language-typescript">
-<span class="hljs-keyword">function</span> <span class="hljs-title function_">binarySearch</span>(<span class="hljs-params">nums: <span class="hljs-built_in">number</span>[], target: <span class="hljs-built_in">number</span></span>): <span class="hljs-built_in">number</span> {
+<p><img src="https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/binary-search.png" alt="Binary search"></p>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">binarySearch</span>(<span class="hljs-params">nums: <span class="hljs-built_in">number</span>[], target: <span class="hljs-built_in">number</span></span>): <span class="hljs-built_in">number</span> {
   <span class="hljs-keyword">let</span> <span class="hljs-attr">left</span>: <span class="hljs-built_in">number</span> = <span class="hljs-number">0</span>;
   <span class="hljs-keyword">let</span> <span class="hljs-attr">right</span>: <span class="hljs-built_in">number</span> = nums.<span class="hljs-property">length</span> - <span class="hljs-number">1</span>;
 
@@ -64,19 +70,19 @@
 <pre><code class="hljs language-java">
 <span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {
     <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-type">int</span> <span class="hljs-title function_">binarySearch</span><span class="hljs-params">(<span class="hljs-type">int</span>[] array, <span class="hljs-type">int</span> target)</span> {
-        
+
         <span class="hljs-type">int</span> <span class="hljs-variable">low</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>;
         <span class="hljs-type">int</span> <span class="hljs-variable">high</span> <span class="hljs-operator">=</span> array.length - <span class="hljs-number">1</span>;
-        
+
         <span class="hljs-keyword">while</span>(low &lt;= high) {
             <span class="hljs-type">int</span> <span class="hljs-variable">middle</span> <span class="hljs-operator">=</span> low + (high - low) / <span class="hljs-number">2</span>;
             <span class="hljs-type">int</span> <span class="hljs-variable">value</span> <span class="hljs-operator">=</span> array[middle];
-            
+
             <span class="hljs-keyword">if</span>(value &lt; target) {
                 low = middle + <span class="hljs-number">1</span>;
             } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(value &gt; target) {
                 high = middle - <span class="hljs-number">1</span>;
-                
+
             } <span class="hljs-keyword">else</span> {
                 <span class="hljs-keyword">return</span> middle;
             }

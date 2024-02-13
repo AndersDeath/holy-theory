@@ -55,10 +55,12 @@
 <ul>
 <li>The time complexity of searching for overlapping intervals using an interval tree is typically O(log n + k), where &#39;n&#39; is the number of intervals in the tree and &#39;k&#39; is the number of intervals overlapping with the query interval. The construction of the interval tree initially takes O(n log n) time, but subsequent searches are more efficient. Interval trees are particularly useful when there are many queries for overlapping intervals in a set.</li>
 </ul>
-<pre><code class="hljs language-typescript">
-<span class="hljs-keyword">type</span> <span class="hljs-title class_">Interval</span> = [<span class="hljs-built_in">number</span>, <span class="hljs-built_in">number</span>];
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">type</span> <span class="hljs-title class_">Interval</span> = [<span class="hljs-built_in">number</span>, <span class="hljs-built_in">number</span>];
 
-<span class="hljs-keyword">function</span> <span class="hljs-title function_">intervalSearch</span>(<span class="hljs-params">intervals: Interval[], queryInterval: Interval</span>): <span class="hljs-built_in">number</span>[] {
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">intervalSearch</span>(<span class="hljs-params">
+  intervals: Interval[],
+  queryInterval: Interval
+</span>): <span class="hljs-built_in">number</span>[] {
   <span class="hljs-keyword">const</span> <span class="hljs-attr">result</span>: <span class="hljs-built_in">number</span>[] = [];
 
   <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; intervals.<span class="hljs-property">length</span>; i++) {
@@ -66,7 +68,7 @@
     <span class="hljs-keyword">const</span> [queryStart, queryEnd] = queryInterval;
 
     <span class="hljs-keyword">if</span> (start &lt;= queryEnd &amp;&amp; end &gt;= queryStart) {
-      result.<span class="hljs-title function_">push</span>(i); 
+      result.<span class="hljs-title function_">push</span>(i);
     }
   }
 

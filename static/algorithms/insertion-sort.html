@@ -27,32 +27,30 @@
 <p>Insertion Sort is a straightforward sorting algorithm that builds the sorted array one element at a time. It is much less efficient on large lists than more advanced algorithms such as quicksort, heapsort, or merge sort. However, it has some advantages: it is simple to implement, efficient for small datasets, and performs well for partially sorted arrays.</p>
 <p><strong>How it works:</strong></p>
 <p><strong>Step 1:</strong>
-    Consider the first element to be a sorted subarray and the rest as an unsorted subarray</p>
+Consider the first element to be a sorted subarray and the rest as an unsorted subarray</p>
 <p><strong>Step 2:</strong>
-    Sequentially iterate over the unsorted elements of the array and move them to the sorted subarray.</p>
+Sequentially iterate over the unsorted elements of the array and move them to the sorted subarray.</p>
 <p><strong>Step 3:</strong>
-    For each unsorted element, compare the current element with the elements before it</p>
+For each unsorted element, compare the current element with the elements before it</p>
 <p><strong>Step 4:</strong>
-    If the current element is greater than its preceding element, leave it there, as it is already at the desired position. If not, keep comparing it with the  elements before it until:
-        * A smaller or equal element is found: Insert the current element after it
-        * All comparisons are made, and no smaller element is found: Insert the current element at the beginning of the array
+If the current element is greater than its preceding element, leave it there, as it is already at the desired position. If not, keep comparing it with the elements before it until:
+_ A smaller or equal element is found: Insert the current element after it
+_ All comparisons are made, and no smaller element is found: Insert the current element at the beginning of the array
 <strong>Step 5:</strong>
-    Repeat the above process for every element of the unsorted subarray until the array is sorted</p>
+Repeat the above process for every element of the unsorted subarray until the array is sorted</p>
 <p><strong>Time Complexity:</strong></p>
-<ul>
-<li>Insertion Sort has a time complexity of O(n^2) in the worst case, where &#39;n&#39; is the number of elements in the array. Despite its quadratic time complexity, Insertion Sort is often more efficient on small datasets or partially sorted arrays compared to other quadratic sorting algorithms. It&#39;s also an in-place sorting algorithm, meaning it doesn&#39;t require additional memory.</li>
-</ul>
+<p>Insertion Sort has a time complexity of O(n^2) in the worst case, where &#39;n&#39; is the number of elements in the array. Despite its quadratic time complexity, Insertion Sort is often more efficient on small datasets or partially sorted arrays compared to other quadratic sorting algorithms. It&#39;s also an in-place sorting algorithm, meaning it doesn&#39;t require additional memory.</p>
 <p><img src="https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/insertion-sort.png" alt="Insertion sort"></p>
 <pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">insertionSort</span>(<span class="hljs-params">array: <span class="hljs-built_in">number</span>[] | <span class="hljs-built_in">string</span>[]</span>) {
-    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">1</span>; i &lt; array.<span class="hljs-property">length</span>; i++) {
-        <span class="hljs-keyword">let</span> curr = array[i];
-        <span class="hljs-keyword">let</span> j = i - <span class="hljs-number">1</span>;
-        <span class="hljs-keyword">for</span> (j; j &gt;= <span class="hljs-number">0</span> &amp;&amp; array[j] &gt; curr; j--) {
-            array[j + <span class="hljs-number">1</span>] = array[j];
-        }
-        array[j + <span class="hljs-number">1</span>] = curr;
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">1</span>; i &lt; array.<span class="hljs-property">length</span>; i++) {
+    <span class="hljs-keyword">let</span> curr = array[i];
+    <span class="hljs-keyword">let</span> j = i - <span class="hljs-number">1</span>;
+    <span class="hljs-keyword">for</span> (j; j &gt;= <span class="hljs-number">0</span> &amp;&amp; array[j] &gt; curr; j--) {
+      array[j + <span class="hljs-number">1</span>] = array[j];
     }
-    <span class="hljs-keyword">return</span> array;
+    array[j + <span class="hljs-number">1</span>] = curr;
+  }
+  <span class="hljs-keyword">return</span> array;
 }
 
 <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-title function_">insertionSort</span>([<span class="hljs-number">1</span>, <span class="hljs-number">4</span>, <span class="hljs-number">2</span>, <span class="hljs-number">8</span>, <span class="hljs-number">345</span>, <span class="hljs-number">123</span>, <span class="hljs-number">43</span>, <span class="hljs-number">32</span>]));

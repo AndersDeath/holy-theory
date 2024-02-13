@@ -25,29 +25,15 @@
     <body>
         <div class="content"><h1 id="interpolation-search">Interpolation search</h1>
 <p>Interpolation Search is a an algorithm designed for finding a specific target value in a sorted array. Unlike linear or binary search, this algorithm utilizes the characteristics of the data distribution to make more informed decisions about where to look for the target. It is particularly effective when the data has a uniform distribution.</p>
-<p><strong>How Interpolation Search Works:</strong></p>
-<ol>
-<li><p><strong>Linear Interpolation:</strong></p>
-<ul>
-<li>Interpolation Search utilizes linear interpolation to estimate the likely position of the target value in the array.</li>
-</ul>
-</li>
-<li><p><strong>Estimate Position:</strong></p>
-<ul>
-<li>Instead of evenly dividing the search space, as in binary search, Interpolation Search estimates the probable position of the target based on its value relative to the minimum and maximum values in the array.</li>
-</ul>
-</li>
-<li><p><strong>Calculation of Position:</strong></p>
-<ul>
-<li>It calculates an estimate of the target&#39;s position by considering the relative location of the target with respect to the minimum and maximum values in the current search space.</li>
-</ul>
-</li>
-<li><p><strong>Refine Search:</strong></p>
-<ul>
-<li>Based on the calculated estimate, the algorithm narrows down the search space and repeats the process until the target is found or the search space is exhausted.</li>
-</ul>
-</li>
-</ol>
+<p><strong>How it works:</strong></p>
+<p><strong>Step 1:</strong>
+It utilizes linear interpolation to estimate the likely position of the target value in the array.</p>
+<p><strong>Step 2:</strong>
+Instead of evenly dividing the search space, as in binary search, the algorithm estimates the probable position of the target based on its value relative to the minimum and maximum values in the array.</p>
+<p><strong>Step 3:</strong>
+It calculates an estimate of the target&#39;s position by considering the relative location of the target with respect to the minimum and maximum values in the current search space.</p>
+<p><strong>Step 4:</strong>
+Based on the calculated estimate, the algorithm narrows down the search space and repeats the process until the target is found or the search space is exhausted.</p>
 <p><strong>Time Complexity:</strong></p>
 <p>The time complexity of Interpolation Search is O(log log n) on average, where &quot;n&quot; is the number of elements in the array. In the best case, it can be O(1), and in the worst case, it can be O(n). However, the average case is often more relevant, and it is O(log log n) under certain assumptions about the distribution of the data.</p>
 <p><img src="https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/interpolation-search.png" alt="Interpolation search"></p>
