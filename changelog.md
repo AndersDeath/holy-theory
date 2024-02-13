@@ -3,6 +3,7 @@
 All notable changes to this project will be documented in this file.
 
 # [0.0.58] - In progress
+* update breadth-first search
 
 # [0.0.57] - 2024-02-12
 * update linear search
