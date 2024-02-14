@@ -26,6 +26,10 @@ Perform a linear search within the block from the previous jump until finding th
 **Step 4:**
 Repeat the process until the entire array is searched or the target element is found.
 
+**Key Characteristics:**
+
+**Applications:**
+
 **Time Complexity:**
 
 - The time complexity of Jump Search is -add formula-,, where-add formula-, is the size of the array. This makes it efficient for large datasets when compared to linear search but may be outperformed by binary search for certain scenarios.

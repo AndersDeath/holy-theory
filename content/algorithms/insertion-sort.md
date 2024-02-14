@@ -27,6 +27,10 @@ _ All comparisons are made, and no smaller element is found: Insert the current 
 **Step 5:**
 Repeat the above process for every element of the unsorted subarray until the array is sorted
 
+**Key Characteristics:**
+
+**Applications:**
+
 **Time Complexity:**
 
 Insertion Sort has a time complexity of O(n^2) in the worst case, where 'n' is the number of elements in the array. Despite its quadratic time complexity, Insertion Sort is often more efficient on small datasets or partially sorted arrays compared to other quadratic sorting algorithms. It's also an in-place sorting algorithm, meaning it doesn't require additional memory.
@@ -67,4 +71,5 @@ console.log(insertionSort([1, 4, 2, 8, 345, 123, 43, 32]));
         }
     }
 ```
+
 <!-- ignore end -->

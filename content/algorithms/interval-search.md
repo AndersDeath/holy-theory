@@ -30,6 +30,10 @@ An interval search algorithm typically refers to searching for overlapping or co
    - Recursively search in the left or right subtree based on the relationship between the query interval and the intervals represented by the current node.
    - Continue this process until all potential overlapping intervals are found.
 
+**Key Characteristics:**
+
+**Applications:**
+
 **Time Complexity:**
 
 - The time complexity of searching for overlapping intervals using an interval tree is typically O(log n + k), where 'n' is the number of intervals in the tree and 'k' is the number of intervals overlapping with the query interval. The construction of the interval tree initially takes O(n log n) time, but subsequent searches are more efficient. Interval trees are particularly useful when there are many queries for overlapping intervals in a set.

@@ -23,6 +23,10 @@ Based on the comparisons, Ternary Search identifies whether the target lies in t
 **Step 4:**
 The algorithm then recursively applies the same process to the identified segment. This recursion continues until the target is found or the search space is reduced to an empty array, indicating that the target is not present.
 
+**Key Characteristics:**
+
+**Applications:**
+
 **Time Complexity:**
 
 Ternary Search has a time complexity of O(log3 n), where 'n' is the size of the array. This is an improvement over binary search when the search space can be significantly reduced at each step. However, it's worth noting that constant factors play a role, and in practice, binary search might be faster for smaller datasets due to simpler arithmetic operations. Ternary Search is particularly beneficial when the dataset is large and the search space can be significantly reduced with each iteration.
