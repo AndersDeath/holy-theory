@@ -48,7 +48,8 @@ sort: 1300
 - **Non-Negative Edge Weights:**
 
   - Dijkstra's Algorithm assumes non-negative edge weights. Negative weights can lead to incorrect results.
-  - **Applications:**
+
+**Applications:**
 
 - Network Routing.
 - Shortest Path Problems.

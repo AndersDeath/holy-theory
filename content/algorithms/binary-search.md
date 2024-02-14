@@ -38,6 +38,10 @@ Repeat the same process until we find the search element in the list or until su
 **Step 9:**
 If that element also doesn't match with the search element, then returns -1;
 
+**Key Characteristics:**
+
+**Applications:**
+
 **Time Complexity:**
 
 - Worst case: O(log n)

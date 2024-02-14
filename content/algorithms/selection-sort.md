@@ -28,6 +28,13 @@ Selection sort is a simple and efficient sorting algorithm that works by repeate
 5. **Step 5:**
    - Continue until the list is sorted.
 
+
+**Key Characteristics:**
+
+**Applications:**
+
+**Time complexity:**
+
 ![Selection sort](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/selection-sort.png)
 
 ```typescript

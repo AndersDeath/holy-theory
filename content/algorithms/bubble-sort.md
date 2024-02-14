@@ -26,6 +26,10 @@ Bubble sorting is one of the simplest sorting algorithms that is not used in pra
 4. **Termination:**
    - The algorithm terminates when a pass through the entire array is made without any swaps, indicating that the array is now sorted.
 
+**Key Characteristics:**
+
+**Applications:**
+
 **Time complexity:** - Bubble sort has a time complexity of O(n^2) in the worst and average cases, where n is the number of elements in the array. This makes it inefficient for large datasets but useful for educational purposes because of its simplicity.
 
 ![Bubble sort](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/bubble-sort.png)

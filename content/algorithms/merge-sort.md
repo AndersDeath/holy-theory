@@ -20,6 +20,10 @@ Conquer - The adjacent sub-arrays are then recursively merged to produce new sor
 **Step 3:**
 Merge - The key operation in Merge Sort is the merging of two sorted sub-arrays to produce a single, sorted sub-array. This involves comparing elements from the two sub-arrays and placing them in the correct order.
 
+**Key Characteristics:**
+
+**Applications:**
+
 **Time Complexity:**
 Merge Sort has a consistent time complexity of O(n log n) in all cases, where 'n' is the number of elements in the array. It is a stable sorting algorithm, meaning that equal elements maintain their relative order in the sorted output. While Merge Sort has a slightly higher space complexity due to the need for additional memory, its stability and predictable performance make it a widely used and reliable sorting algorithm.
 

@@ -26,6 +26,10 @@ Apply the quicksort recursively on the left partition and then on the right part
 **Step 5:**
 Stop recursion when array is sorted when reach out the base case. It's an array of zero or one element.
 
+**Key Characteristics:**
+
+**Applications:**
+
 **Time Complexity:**
 
 - Quick Sort has an average and best-case time complexity of O(n log n), where 'n' is the number of elements in the array. In the worst case, it is O(n^2), but this is rare when a good pivot selection strategy is used. This algorithm is often faster in practice than other O(n log n) ones, and it is widely used in various applications due to its efficiency.
