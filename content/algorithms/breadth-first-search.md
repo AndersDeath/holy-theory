@@ -11,34 +11,32 @@ Breadth-First Search (BFS) is a graph traversal algorithm that systematically ex
 
 **How it works:**
 
-1. **Queue Initialization:**
+**Step 1:**
 
-   - Begin by selecting a starting vertex and enqueue it into a queue.
+Initialize queue. Begin by selecting a starting vertex and enqueue it into a queue.
 
-2. **Explore Neighbors:**
+**Step 2:**
+Dequeue a vertex from the front of the queue and explore all its neighbors. Enqueue any unvisited ones, marking them as visited to avoid duplication.
 
-   - Dequeue a vertex from the front of the queue and explore all its neighbors.
-   - Enqueue any unvisited neighbors, marking them as visited to avoid duplication.
+**Step 3:**
 
-3. **Level-wise Exploration:**
+Continue the process level by level, exploring all vertices at the current level before moving on to the next level.
 
-   - Continue the process level by level, exploring all vertices at the current level before moving on to the next level.
-
-4. **Termination:**
-   - Repeat until the queue is empty, ensuring that all reachable vertices are visited.
+**Step 4:**
+Repeat until the queue is empty, ensuring that all reachable vertices are visited.
 
 **Key Characteristics:**
 
 - **FIFO Structure:**
 
-  - BFS uses a First-In-First-Out (FIFO) queue to maintain the order in which vertices are discovered and processed.
+BFS uses a First-In-First-Out (FIFO) queue to maintain the order in which vertices are discovered and processed.
 
 - **Visited Marking:**
 
-  - To avoid revisiting vertices, mark each vertex as visited once it is dequeued from the queue.
+To avoid revisiting vertices, mark each vertex as visited once it is dequeued from the queue.
 
 - **Shortest Path:**
-  - BFS guarantees that the shortest path to any reachable vertex is discovered first, making it valuable for pathfinding in unweighted graphs.
+  BFS guarantees that the shortest path to any reachable vertex is discovered first, making it valuable for pathfinding in unweighted graphs.
 
 **Applications:**
 
@@ -49,7 +47,7 @@ Breadth-First Search (BFS) is a graph traversal algorithm that systematically ex
 
 **Time Complexity:**
 
-- The time complexity of BFS is \(O(V + E)\), where \(V\) is the number of vertices and \(E\) is the number of edges. The algorithm visits each vertex and edge once.
+The time complexity of BFS is \(O(V + E)\), where \(V\) is the number of vertices and \(E\) is the number of edges. The algorithm visits each vertex and edge once.
 
 ![Breadth first search](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/breadth-first-search.png)
 
