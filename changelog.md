@@ -7,6 +7,7 @@ All notable changes to this project will be documented in this file.
 * update structures of algorithms drafts
 * update breadth-first search
 * update depth-first search
+* update dijkstra's algorithm
 
 # [0.0.57] - 2024-02-12
 * update linear search
