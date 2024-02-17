@@ -24,42 +24,19 @@
     </head>
     <body>
         <div class="content"><h1 id="dijkstras-algorithm">Dijkstra&#39;s algorithm</h1>
-<p><strong>How Dijkstra&#39;s Algorithm Works:</strong></p>
-<ol>
-<li><p><strong>Initialization:</strong></p>
-<ul>
-<li>Set the initial distance to the starting vertex as 0 and all other distances to infinity.</li>
-<li>Create a priority queue or a min-heap to store vertices based on their current tentative distances.</li>
-</ul>
-</li>
-<li><p><strong>Explore Neighbors:</strong></p>
-<ul>
-<li>While there are vertices in the priority queue, select the vertex with the smallest tentative distance.</li>
-<li>Explore its neighbors and update their tentative distances if a shorter path is found.</li>
-</ul>
-</li>
-<li><p><strong>Relaxation:</strong></p>
-<ul>
-<li>For each neighbor, calculate the sum of the tentative distance to the current vertex and the weight of the edge between them.</li>
-<li>If this sum is smaller than the current tentative distance to the neighbor, update the tentative distance.</li>
-</ul>
-</li>
-<li><p><strong>Mark as Visited:</strong></p>
-<ul>
-<li>Mark the current vertex as visited to avoid redundant calculations.</li>
-</ul>
-</li>
-<li><p><strong>Repeat:</strong></p>
-<ul>
-<li>Repeat steps 2-4 until all vertices are visited or the destination vertex is reached.</li>
-</ul>
-</li>
-<li><p><strong>Result:</strong></p>
-<ul>
-<li>The final result is an array of shortest distances from the starting vertex to all other vertices.</li>
-</ul>
-</li>
-</ol>
+<p><strong>How it works:</strong></p>
+<p><strong>Step 1:</strong></p>
+<p>Set the initial distance to the starting vertex as 0 and all other onces to infinity. Create a priority queue or a min-heap to store vertices based on their current tentative distances.</p>
+<p><strong>Step 2:</strong></p>
+<p>While there are vertices in the priority queue, select the vertex with the smallest tentative distance. Explore its neighbors and update their tentative distances if a shorter path is found.</p>
+<p><strong>Step 3:</strong></p>
+<p>For each neighbor, calculate the sum of the tentative distance to the current vertex and the weight of the edge between them. If this sum is smaller than the current tentative distance to the neighbor, update the tentative distance.</p>
+<p><strong>Step 4:</strong></p>
+<p>Mark the current vertex as visited to avoid redundant calculations.</p>
+<p><strong>Step 5:</strong></p>
+<p>Repeat steps 2-4 until all vertices are visited or the destination vertex is reached.</p>
+<p><strong>Step 6:</strong>
+The final result is an array of shortest distances from the starting vertex to all other vertices.</p>
 <p><strong>Key Characteristics:</strong></p>
 <ul>
 <li><p><strong>Greedy Strategy:</strong></p>

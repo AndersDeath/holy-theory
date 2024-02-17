@@ -9,40 +9,37 @@ sort: 1200
 
 Depth-First Search (DFS) is a graph traversal algorithm that systematically explores the vertices of a graph by going as deep as possible along each branch before backtracking. It starts at a chosen vertex, explores as far as possible along one branch, and then backtracks to explore other branches. DFS is commonly used to detect cycles in a graph, topologically sort vertices, and solve problems related to connected components.
 
-**How Depth-First Search Works:**
+**How it works:**
 
-1. **Start at a Vertex:**
+**Step 1:**
 
-   - Begin by selecting a starting vertex and mark it as visited.
+Begin by selecting a starting vertex and mark it as visited.
 
-2. **Explore Neighbors:**
+**Step 2:**
 
-   - Move to an unvisited neighbor of the current vertex and repeat the process.
-   - If all neighbors are visited, backtrack to the previous vertex.
+Move to an unvisited neighbor of the current vertex and repeat the process. If all neighbors are visited, backtrack to the previous vertex.
 
-3. **Recursion or Stack:**
+**Step 3:**
 
-   - DFS can be implemented using recursion or an explicit stack to keep track of the vertices to be visited.
+DFS can be implemented using recursion or an explicit stack to keep track of the vertices to be visited.
 
-4. **Marking and Backtracking:**
+**Step 4:**
 
-   - Mark each visited vertex to avoid revisiting and use backtracking to explore other branches.
+Mark each visited vertex to avoid revisiting and use backtracking to explore other branches.
 
-5. **Complete Exploration:**
-   - Continue the process until all reachable vertices are visited.
+**Step 5:**
+Continue the process until all reachable vertices are visited.
 
 **Key Characteristics:**
 
 - **LIFO Structure:**
+  DFS often uses a Last-In-First-Out (LIFO) stack or recursion to maintain the order in which vertices are visited.
+  **Visited Marking:**
 
-  - DFS often uses a Last-In-First-Out (LIFO) stack or recursion to maintain the order in which vertices are visited.
-
-- **Visited Marking:**
-
-  - Mark each vertex as visited once it is reached, preventing revisiting.
+Mark each vertex as visited once it is reached, preventing revisiting.
 
 - **Backtracking:**
-  - Backtrack to the previous vertex when all neighbors are explored.
+  Backtrack to the previous vertex when all neighbors are explored.
 
 **Applications:**
 
