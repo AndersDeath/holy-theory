@@ -9,6 +9,7 @@ All notable changes to this project will be documented in this file.
 * update depth-first search
 * update dijkstra's algorithm
 * update floyd-warshall algorithm
+* update ford fulkerson algorithm
 
 # [0.0.57] - 2024-02-12
 * update linear search
