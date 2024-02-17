@@ -9,31 +9,25 @@ sort: 1500
 
 The Ford-Fulkerson Algorithm is an iterative method to compute the maximum flow in a flow network. It was initially designed to solve the max-flow min-cut problem, where the objective is to find the maximum amount of flow that can be sent from a designated source to a designated sink in a directed graph. The algorithm iteratively augments paths from the source to the sink, increasing the flow until it reaches its maximum value.
 
-**How Ford-Fulkerson Algorithm Works:**
+**How is works:**
 
-1. **Initialization:**
+**Step 1:**
+Begin with an initial flow of zero. Determine the residual graph, which represents the remaining capacity for each edge.
 
-   - Begin with an initial flow of zero.
-   - Determine the residual graph, which represents the remaining capacity for each edge.
+**Step 2:**
+Find an augmenting path from the source to the sink in the residual graph. An augmenting path is a path with available capacity on all its edges.
 
-2. **Augmenting Paths:**
+**Step 3:**
+Determine the maximum flow that can be added along the augmenting path. This is the minimum capacity value of the edges on the path.
 
-   - Find an augmenting path from the source to the sink in the residual graph. An augmenting path is a path with available capacity on all its edges.
+**Step 4:**
+Update the residual graph by subtracting the flow added along the augmenting path and adding the reverse flow.
 
-3. **Flow Augmentation:**
+**Step 5:**
+Repeat steps 2-4 until there are no more augmenting paths.
 
-   - Determine the maximum flow that can be added along the augmenting path. This is the minimum capacity value of the edges on the path.
-
-4. **Update Residual Graph:**
-
-   - Update the residual graph by subtracting the flow added along the augmenting path and adding the reverse flow.
-
-5. **Repeat:**
-
-   - Repeat steps 2-4 until there are no more augmenting paths.
-
-6. **Result:**
-   - The final flow is the maximum flow in the network.
+**Step 6:**
+The final flow is the maximum flow in the network.
 
 **Key Characteristics:**
 
