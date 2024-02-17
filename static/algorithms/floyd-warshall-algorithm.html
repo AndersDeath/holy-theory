@@ -25,33 +25,15 @@
     <body>
         <div class="content"><h1 id="floyd-warshall-algorithm">Floyd-Warshall algorithm</h1>
 <p>The Floyd-Warshall Algorithm is a dynamic programming algorithm used to find the shortest paths between all pairs of vertices in a weighted graph. Unlike Dijkstra&#39;s algorithm and Bellman-Ford algorithm, Floyd-Warshall works with graphs that can have both positive and negative edge weights and can handle graphs with cycles. The algorithm iteratively updates the shortest path distances between all pairs until reaching the optimal solution.</p>
-<p><strong>How Floyd-Warshall Algorithm Works:</strong></p>
-<ol>
-<li><p><strong>Initialization:</strong></p>
-<ul>
-<li>Create a matrix to represent the distances between all pairs of vertices. Initialize the matrix with the direct edge weights and set the distances to infinity where there is no direct edge.</li>
-<li>Initialize the diagonal of the matrix to zeros since the distance from a vertex to itself is zero.</li>
-</ul>
-</li>
-<li><p><strong>Iterative Updates:</strong></p>
-<ul>
-<li>For each vertex &#39;k&#39;, iterate through all pairs of vertices &#39;i&#39; and &#39;j&#39;.</li>
-<li>Check if the path from &#39;i&#39; to &#39;j&#39; through &#39;k&#39; is shorter than the current known path from &#39;i&#39; to &#39;j&#39;.</li>
-<li>If yes, update the distance from &#39;i&#39; to &#39;j&#39; with the shorter path.</li>
-</ul>
-</li>
-<li><p><strong>Repeat:</strong></p>
-<ul>
-<li>Repeat the process for all vertices as intermediate vertices (&#39;k&#39;).</li>
-<li>After each iteration, the matrix reflects the shortest distances between all pairs of vertices considering all possible intermediate vertices.</li>
-</ul>
-</li>
-<li><p><strong>Result:</strong></p>
-<ul>
-<li>The final matrix contains the shortest distances between all pairs of vertices.</li>
-</ul>
-</li>
-</ol>
+<p><strong>How it works:</strong></p>
+<p><strong>Step 1:</strong>
+Create a matrix to represent the distances between all pairs of vertices. Initialize the matrix with the direct edge weights and set the distances to infinity where there is no direct edge. Initialize the diagonal of the matrix to zeros since the distance from a vertex to itself is zero.</p>
+<p><strong>Step 2:</strong>
+For each vertex &#39;k&#39;, iterate through all pairs of vertices &#39;i&#39; and &#39;j&#39;. Check if the path from &#39;i&#39; to &#39;j&#39; through &#39;k&#39; is shorter than the current known path from &#39;i&#39; to &#39;j&#39;. If yes, update the distance from &#39;i&#39; to &#39;j&#39; with the shorter path.</p>
+<p><strong>Step 3:</strong>
+Repeat the process for all vertices as intermediate vertices (&#39;k&#39;). After each iteration, the matrix reflects the shortest distances between all pairs of vertices considering all possible intermediate vertices.</p>
+<p><strong>Step 4:</strong>
+The final matrix contains the shortest distances between all pairs of vertices.</p>
 <p><strong>Key Characteristics:</strong></p>
 <ul>
 <li><p><strong>Dynamic Programming:</strong></p>
