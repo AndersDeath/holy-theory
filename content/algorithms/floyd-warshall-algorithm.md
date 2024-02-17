@@ -9,26 +9,19 @@ sort: 1400
 
 The Floyd-Warshall Algorithm is a dynamic programming algorithm used to find the shortest paths between all pairs of vertices in a weighted graph. Unlike Dijkstra's algorithm and Bellman-Ford algorithm, Floyd-Warshall works with graphs that can have both positive and negative edge weights and can handle graphs with cycles. The algorithm iteratively updates the shortest path distances between all pairs until reaching the optimal solution.
 
-**How Floyd-Warshall Algorithm Works:**
+**How it works:**
 
-1. **Initialization:**
+**Step 1:**
+Create a matrix to represent the distances between all pairs of vertices. Initialize the matrix with the direct edge weights and set the distances to infinity where there is no direct edge. Initialize the diagonal of the matrix to zeros since the distance from a vertex to itself is zero.
 
-   - Create a matrix to represent the distances between all pairs of vertices. Initialize the matrix with the direct edge weights and set the distances to infinity where there is no direct edge.
-   - Initialize the diagonal of the matrix to zeros since the distance from a vertex to itself is zero.
+**Step 2:**
+For each vertex 'k', iterate through all pairs of vertices 'i' and 'j'. Check if the path from 'i' to 'j' through 'k' is shorter than the current known path from 'i' to 'j'. If yes, update the distance from 'i' to 'j' with the shorter path.
 
-2. **Iterative Updates:**
+**Step 3:**
+Repeat the process for all vertices as intermediate vertices ('k'). After each iteration, the matrix reflects the shortest distances between all pairs of vertices considering all possible intermediate vertices.
 
-   - For each vertex 'k', iterate through all pairs of vertices 'i' and 'j'.
-   - Check if the path from 'i' to 'j' through 'k' is shorter than the current known path from 'i' to 'j'.
-   - If yes, update the distance from 'i' to 'j' with the shorter path.
-
-3. **Repeat:**
-
-   - Repeat the process for all vertices as intermediate vertices ('k').
-   - After each iteration, the matrix reflects the shortest distances between all pairs of vertices considering all possible intermediate vertices.
-
-4. **Result:**
-   - The final matrix contains the shortest distances between all pairs of vertices.
+**Step 4:**
+The final matrix contains the shortest distances between all pairs of vertices.
 
 **Key Characteristics:**
 
