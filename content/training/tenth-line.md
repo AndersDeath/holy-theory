@@ -20,5 +20,3 @@ The shell command `head -n 10 file.txt | tail -n +10` is used to display lines f
 3. `tail -n +10`: This part of the command uses the `tail` command to display lines from the 10th line onwards. The `-n` option specifies the number of lines to display, and the `+10` means starting from the 10th line.
 
 In summary, the combination of `head -n 10 file.txt` extracts the first 10 lines from the file, and then the output of this is piped to `tail -n +10`, which displays lines starting from the 10th line of the extracted lines. This effectively shows lines 10 to the end from the original file.
-
-* [Go back](../readme.md)

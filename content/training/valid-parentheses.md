@@ -88,5 +88,3 @@ function isValid(s: string): boolean {
 **Space Complexity**:
 
 - The space complexity is O(n) in the worst case, where `n` is the length of the input string. The stack can store all opening brackets in the worst case.
-
-* [Go back](../readme.md)

@@ -76,5 +76,3 @@ In this example, `apply()` is used to invoke the `introduce` function with `pers
    - Use `apply()` when the number of arguments is not known in advance, or when the arguments are already in an array or array-like object.
 
 In modern JavaScript, you can often use the more versatile spread operator (`...`) to achieve the same result as `apply()` while providing a cleaner syntax, especially when working with arrays. However, `apply()` can still be useful in certain situations, such as when dealing with variadic functions or functions that accept a variable number of arguments.
-
-* [Go back](../readme.md)

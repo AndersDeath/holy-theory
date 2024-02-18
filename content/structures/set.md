@@ -117,5 +117,3 @@ export class Set {
 }
 
 ```
-
-* [Go back](../readme.md)

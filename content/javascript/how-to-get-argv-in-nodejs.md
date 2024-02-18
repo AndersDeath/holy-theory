@@ -56,5 +56,3 @@ In Node.js, you can access command-line arguments using the `process.argv` array
     ```
 
    If you need to parse command-line arguments in a more structured way, you might want to consider using libraries like `yargs` or `commander`, which provide a more user-friendly and powerful interface for handling command-line arguments in Node.js applications. These libraries make it easier to define options, handle flags, and manage arguments in a more intuitive manner.
-
-* [Go back](../readme.md)

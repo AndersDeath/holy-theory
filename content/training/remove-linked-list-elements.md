@@ -61,5 +61,3 @@ function removeElements(head: ListNode | null, val: number): ListNode | null {
 4. Returning Modified Linked List: Returning the modified linked list after removal of nodes with the specified value.
 
 This function removes all nodes with a specified value from a given singly-linked list and returns the modified linked list.
-
-* [Go back](../readme.md)

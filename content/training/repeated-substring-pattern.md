@@ -39,6 +39,3 @@ function repeatedSubstringPattern(s: string): boolean {
 4. String Concatenation (`curr = s.substring(0, size)`): Forming substrings of the current size to attempt to construct the entire string.
 
 This function checks if a given string can be formed by repeatedly concatenating a substring of various sizes. If so, it returns `true`; otherwise, it returns `false`.
-
-
-* [Go back](../readme.md)

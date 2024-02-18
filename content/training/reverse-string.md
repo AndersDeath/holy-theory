@@ -50,5 +50,3 @@ function reverseString(s: string[]): void {
    - Modifying the input array directly without creating a new array.
 
 This TypeScript function reverses the order of characters in the input array in-place using a two-pointer reversal technique.
-
-* [Go back](../readme.md)

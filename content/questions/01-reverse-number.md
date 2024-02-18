@@ -15,5 +15,3 @@ To invert a number in Java, you need to divide the number by 10 in the loop unti
         number /= 10;
     }
 ```
-
-* [Go back](../readme.md)

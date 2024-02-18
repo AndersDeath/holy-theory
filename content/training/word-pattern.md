@@ -94,5 +94,3 @@ function wordPattern(pattern: string, s: string): boolean {
 **Space Complexity**:
 
 - The space complexity is O(K), where K is the number of unique characters in the pattern. In the worst case, all characters in the pattern are unique, so the space complexity is O(N), where N is the length of the pattern.
-
-* [Go back](../readme.md)

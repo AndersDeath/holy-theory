@@ -42,6 +42,3 @@ function isSameTree(p: TreeNode | null, q: TreeNode | null): boolean {
 - Space Complexity: O(H), where H is the height of the smaller of the two trees. The space is used for the recursive call stack.
 
 This code checks if two binary trees `p` and `q` are the same by comparing their structures and values through recursive traversal. If the trees have identical structures and node values, the function returns `true`, otherwise, it returns `false`.
-
-
-* [Go back](../readme.md)

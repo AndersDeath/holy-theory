@@ -63,5 +63,3 @@ function isPerfectSquare(num: number): boolean {
 **Space Complexity**:
 
 - The space complexity is O(1) as only a constant amount of extra space is used for the variable `i`.
-
-* [Go back](../readme.md)

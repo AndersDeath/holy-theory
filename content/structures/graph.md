@@ -11,7 +11,3 @@ languages: ['']
 ![Graph weighted](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/graph-weighted.png)
 
 Basic Operations:
-
-
-
-* [Go back](../readme.md)

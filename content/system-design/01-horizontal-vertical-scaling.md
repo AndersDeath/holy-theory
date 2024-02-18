@@ -9,5 +9,3 @@ Scalability refers to an application’s ability to handle and withstand an incr
 Horizontal scaling, or scaling out, means adding more hardware to the existing hardware resource pool. It increases the computational power of the system as a whole. Vertical scaling, or scaling up, means adding more power to your server. It increases the power of the hardware running the application.
 
 ![Horizontal and vertical scaling](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/01-horizontal-vertical-scaling.png)
-
-* [Go back](../readme.md)

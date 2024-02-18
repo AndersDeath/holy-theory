@@ -121,5 +121,3 @@ function backtrack(board, word, i, j, index, row, col) {
 **Space Complexity**:
 
 - The space complexity is O(k), where k is the length of the word. This is due to the recursive call stack depth.
-
-* [Go back](../readme.md)

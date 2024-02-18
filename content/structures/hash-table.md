@@ -57,6 +57,3 @@ Here's how it works:
 4. **Efficient Operations:** Hash tables provide fast insertion, deletion, and lookup operations. When you want to find a value associated with a specific key, the hash function calculates the index, and then the hash table quickly retrieves the value from the corresponding bucket. The time complexity for these operations is often considered to be O(1) on average, making hash tables very efficient for handling large datasets.
 
 Hash tables are widely used in various applications such as databases, caches, symbol tables in compilers, and in many other scenarios where fast data retrieval based on a key is required. The efficiency of hash tables largely depends on the quality of the hash function and the method used to handle collisions.
-
-
-* [Go back](../readme.md)

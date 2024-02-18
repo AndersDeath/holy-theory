@@ -37,6 +37,4 @@ function removeElement(nums: number[], val: number): number {
 4. Returning Length: Calculating and returning the new length of the array after removal.
 
 This function removes all instances of a specified value from an input array of integers and returns the new length of the array with the specified value removed.
-
-
-* [Go back](../readme.md)
+k](../readme.md)

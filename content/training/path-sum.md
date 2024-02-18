@@ -61,5 +61,4 @@ Here's how the function works:
 **Summary:**
 
 The `hasPathSum` function recursively explores the binary tree to find a path from the root to a leaf node such that the sum of values along the path is equal to the given `targetSum`. It employs a depth-first search approach to navigate the tree and determine whether a valid path exists.
-
-* [Go back](../readme.md)
+../readme.md)

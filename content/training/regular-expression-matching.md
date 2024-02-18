@@ -63,7 +63,3 @@ function isMatch(s: string, p: string): boolean {
 6. **Updating DP Array:** Updates the `dp` array based on the matching conditions and previous values in the array.
 
 7. **Final Result:** The value at `dp[s.length][p.length]` represents whether the entire string `s` matches the entire pattern `p`.
-
-
-
-* [Go back](../readme.md)

@@ -58,5 +58,3 @@ const validatePin = (pin: string): boolean => {
 **Space Complexity**:
 
 - The space complexity is O(1) as the code uses a constant amount of extra space for the regular expression and variables.
-
-* [Go back](../readme.md)

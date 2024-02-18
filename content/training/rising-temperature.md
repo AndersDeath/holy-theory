@@ -32,5 +32,3 @@ AND datediff(w1.recordDate, w2.recordDate) = 1;
    - The query will retrieve the `id` values from the `Weather` table where the temperature of the first record (`w1`) is greater than the temperature of the second record (`w2`) and the dates of the two records are consecutive.
 
 In summary, this SQL query retrieves the `id` values of records from the `Weather` table where the temperature of the first record is higher than the temperature of the next consecutive record. It essentially finds records with a temperature increase between consecutive days.
-
-* [Go back](../readme.md)
