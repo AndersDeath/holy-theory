@@ -134,6 +134,3 @@ export class LinkedList {
     }
 }
 ```
-
-* [Go back](../readme.md)
-  

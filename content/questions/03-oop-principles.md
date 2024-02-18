@@ -13,4 +13,3 @@ Inheritances expresses “is-a” and/or “has-a” relationship between two ob
 Encapsulation is the mechanism of hiding of data implementation by restricting access to public methods. Instance variables are kept private and accessor methods are made public to achieve this.
 ## Polymorphism
 It means one name many forms. It is further of two types — static and dynamic. Static polymorphism is achieved using method overloading and dynamic polymorphism using method overriding. It is closely related to inheritance. We can write a code that works on the superclass, and it will work with any subclass type as well.
-* [Go back](../readme.md)

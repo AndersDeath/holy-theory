@@ -52,5 +52,3 @@ function matrixReshape(mat: number[][], r: number, c: number): number[][] {
 4. Arithmetic Operations (`m * n` and `r * c`): Calculating the total number of elements in the input and reshaped matrices to validate if reshaping is possible.
 
 This function reshapes a given matrix into a new matrix with the specified number of rows and columns, preserving the original order of elements.
-
-* [Go back](../readme.md)

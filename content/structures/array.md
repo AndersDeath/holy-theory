@@ -16,7 +16,3 @@ Basic Operations:
 3. **Deletion** - deletes an element at the given index
 4. **Search** - searches an elem,ent using the given index or by the value
 5. **Update** - updates an element at the given index
-
-
-
-* [Go back](../readme.md)

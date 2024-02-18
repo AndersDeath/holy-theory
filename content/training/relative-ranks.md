@@ -52,5 +52,3 @@ function findRelativeRanks(score: number[]): string[] {
 8. Returning a Value: Using the `return` statement to provide a function's output.
 
 This function processes an array of scores, calculates ranks, and assigns medal labels or rank values based on the calculated ranks, returning an array with the corresponding information.
-
-* [Go back](../readme.md)

@@ -41,5 +41,3 @@ Partition tolerance means that the system continues to function even if network 
 In summary, the CAP theorem provides a valuable framework for understanding the inherent trade-offs in distributed systems. Architects and developers must carefully consider these trade-offs based on the specific requirements and use cases of their applications.
 
 ![CAP theorem](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/02-cap-theorem.png)
-
-* [Go back](../readme.md)

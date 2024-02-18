@@ -52,6 +52,3 @@ languages: ['']
 21. **Template Method:** Defines the skeleton of an algorithm in a method, allowing subclasses to provide specific implementations of some steps.
 
 22. **Visitor:** Separates algorithms from the objects on which they operate, enabling adding new operations without modifying the objects' classes.
-
-
-* [Go back](../readme.md)

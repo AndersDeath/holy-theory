@@ -47,4 +47,3 @@ function canConstruct(ransomNote: string, magazine: string): boolean {
 7. **Return Result:** If all ransom note characters can be found and removed from the `dicArr`, returns `true`, indicating successful construction.
 
 At the end of this explanation, you have a clear understanding of how the `canConstruct` function works and the techniques applied in the code.
-* [Go back](../readme.md)

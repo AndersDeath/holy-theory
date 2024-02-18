@@ -53,5 +53,3 @@ var sum3 = obj.sumRange(0, 5); // Returns -3 (sum of all elements from index 0 t
 ```
 
 In this example, the `NumArray` object is instantiated with the `nums` array, and then the `sumRange` method is called to compute the sum of specific ranges.
-
-* [Go back](../readme.md)

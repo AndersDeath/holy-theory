@@ -61,6 +61,3 @@ function reverseStr(s: string, k: number): string {
    - Joining the character array back into a string to form the modified string.
 
 This TypeScript function takes a string and an integer, reverses blocks of characters within the string, and returns the modified string.
-
-
-* [Go back](../readme.md)

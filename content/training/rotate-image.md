@@ -60,5 +60,3 @@ function rotate(matrix: number[][]): void {
 - Space Complexity: O(1), as the operations are performed in-place without using extra space.
 
 This code performs a two-step process: vertical reflection and matrix transposition, to achieve the desired 90-degree clockwise rotation of the given matrix in-place.
-
-* [Go back](../readme.md)

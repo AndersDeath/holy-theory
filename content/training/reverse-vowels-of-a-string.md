@@ -72,6 +72,3 @@ function reverseVowels(s: string): string {
    - Converting an array of characters back to a string using the `join` method to obtain the final result.
 
 This TypeScript function reverses the positions of vowels in a string while keeping the positions of non-vowel characters unchanged.
-
-
-* [Go back](../readme.md)

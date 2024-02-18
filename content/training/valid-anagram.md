@@ -87,5 +87,3 @@ function isAnagram(s: string, t: string): boolean {
 **Space Complexity**:
 
 - The space complexity is O(1) since the hash table stores characters, and the size of the hash table is bounded by the number of distinct characters in the input strings.
-
-* [Go back](../readme.md)

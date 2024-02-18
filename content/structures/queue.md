@@ -38,5 +38,3 @@ export class Queue {
 }
 
 ```
-
-* [Go back](../readme.md)

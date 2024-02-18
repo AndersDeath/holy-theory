@@ -38,6 +38,3 @@ var reverseBits = function(n) {
 3. Integer Conversion (`parseInt`): Converting the reversed binary string back to an integer using base 2.
 
 This function essentially takes a positive integer, reverses its binary representation, and returns the resulting integer.
-
-
-* [Go back](../readme.md)
