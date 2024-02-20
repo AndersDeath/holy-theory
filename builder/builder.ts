@@ -11,14 +11,17 @@ import { createContentEntity } from "./builder/createContentEntity";
 import { staticContentEntityFactory } from "./builder/staticContentEntityFactory";
 import { addPageBreak } from "./ui/addPageBreak";
 import { Project } from "./projects/project";
+import { Logger, POSTBUILD_INIT, PREBUILD_INIT } from "./logger/logger";
 
+const logger = Logger.getInstance();
+logger.test();
 
 const preBuild = () => {
-  console.log('Pre build init');
+  logger.info(PREBUILD_INIT);
 }
 
 const postBuild = () => {
-  console.log('Post build init');
+  logger.info(POSTBUILD_INIT);
 }
 
 const generateStatic = async (
