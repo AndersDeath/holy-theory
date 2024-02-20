@@ -12,6 +12,15 @@ import { staticContentEntityFactory } from "./builder/staticContentEntityFactory
 import { addPageBreak } from "./ui/addPageBreak";
 import { Project } from "./projects/project";
 
+
+const preBuild = () => {
+  console.log('Pre build init');
+}
+
+const postBuild = () => {
+  console.log('Post build init');
+}
+
 const generateStatic = async (
   rootFolder: string,
   outputFolder: string,
@@ -178,6 +187,7 @@ const generateStatic = async (
 };
 
 export const Builder = (type: string) => {
+  preBuild();
   import("parse-md").then((module) => {
     const parseMD = module.default;
     const rootContentFolder = path.join(__dirname, "../content");
@@ -195,6 +205,7 @@ export const Builder = (type: string) => {
             type === "md" ? "Markdown" : "HTML"
           } static website generated successfully`
         );
+        postBuild();
       })
       .catch((err) => {
         console.timeEnd(type + " builder");
@@ -204,6 +215,7 @@ export const Builder = (type: string) => {
           } static website:`,
           err
         );
+        postBuild();
       });
   });
 };
