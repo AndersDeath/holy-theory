@@ -36,6 +36,8 @@ const generateStatic = async (
 
   const lm = new LanguageMap();
 
+  logger.info('Generate Static is initialized');
+
   for (const folder of folders) {
     const folderPath = path.join(rootFolder, folder);
     if (fs.statSync(folderPath).isDirectory()) {
@@ -193,6 +195,7 @@ export const Builder = (type: string) => {
   preBuild();
   import("parse-md").then((module) => {
     const parseMD = module.default;
+    logger.info('Parse MD is ready');
     const rootContentFolder = path.join(__dirname, "../content");
 
     const outputFolder =
@@ -203,7 +206,7 @@ export const Builder = (type: string) => {
     generateStatic(rootContentFolder, outputFolder, parseMD, type)
       .then(() => {
         console.timeEnd(type + " builder");
-        console.log(
+        logger.info(
           `${
             type === "md" ? "Markdown" : "HTML"
           } static website generated successfully`
