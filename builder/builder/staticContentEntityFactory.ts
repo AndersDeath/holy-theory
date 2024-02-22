@@ -1,3 +1,4 @@
+import { ContentType } from './../models/ContentEntity';
 import { ContentEntity } from "../models/ContentEntity";
 
 export const staticContentEntityFactory = (
@@ -16,7 +17,7 @@ const buildStatisticsContentEntity = (type: string) => {
     "./statistics." + type,
     "Statistics",
     "",
-    "collection"
+    ContentType.COLLECTION
   );
 };
 
@@ -27,10 +28,10 @@ const buildAllContentEntity = (type: string) => {
     "./all." + type,
     "All content",
     "",
-    "collection"
+    ContentType.COLLECTION
   );
 };
 
 const buildDefaultContentEntity = () => {
-  return new ContentEntity("", "", "", "", "", "");
+  return new ContentEntity("", "", "", "", "", ContentType.EMPTY);
 };

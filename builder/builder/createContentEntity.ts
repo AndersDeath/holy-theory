@@ -1,5 +1,5 @@
 import { cleanContent } from "../libs/utils";
-import { ContentEntity } from "../models/ContentEntity";
+import { ContentEntity, ContentType } from "../models/ContentEntity";
 import { marked } from "../libs/marked";
 
 export const createContentEntity = (
@@ -19,7 +19,7 @@ export const createContentEntity = (
     sectionName,
 
     type === "md" ? clearedContent : marked.parse(clearedContent),
-    metadata.title ? "content" : "collection",
+    metadata.title ? ContentType.CONTENT : ContentType.COLLECTION,
     metadata.sort || null,
     metadata.ignore || false
   );
