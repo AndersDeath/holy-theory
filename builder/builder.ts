@@ -11,7 +11,7 @@ import { createContentEntity } from "./builder/createContentEntity";
 import { staticContentEntityFactory } from "./builder/staticContentEntityFactory";
 import { addPageBreak } from "./ui/addPageBreak";
 import { Project } from "./projects/project";
-import { Logger, POSTBUILD_INIT, PREBUILD_INIT } from "./logger/logger";
+import { GENERATE_STATIC_INIT, Logger, MD_PARSE_READY, POSTBUILD_INIT, PREBUILD_INIT } from "./logger/logger";
 
 const logger = Logger.getInstance();
 logger.test();
@@ -36,7 +36,7 @@ const generateStatic = async (
 
   const lm = new LanguageMap();
 
-  logger.info('Generate Static is initialized');
+  logger.info(GENERATE_STATIC_INIT);
 
   for (const folder of folders) {
     const folderPath = path.join(rootFolder, folder);
@@ -195,7 +195,7 @@ export const Builder = (type: string) => {
   preBuild();
   import("parse-md").then((module) => {
     const parseMD = module.default;
-    logger.info('Parse MD is ready');
+    logger.info(MD_PARSE_READY);
     const rootContentFolder = path.join(__dirname, "../content");
 
     const outputFolder =
@@ -206,7 +206,7 @@ export const Builder = (type: string) => {
     generateStatic(rootContentFolder, outputFolder, parseMD, type)
       .then(() => {
         console.timeEnd(type + " builder");
-        logger.info(
+        logger.log(
           `${
             type === "md" ? "Markdown" : "HTML"
           } static website generated successfully`
