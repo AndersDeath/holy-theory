@@ -158,6 +158,7 @@ const generateStatic = async (
       path.join("./", "images")
     );
 
+  const outputBucket = [
     [path.join(outputFolder, "prepared_all." + type), preparedAllProjectOutput],
     [
       path.join(outputFolder, "prepared_all_algorithms." + type),
