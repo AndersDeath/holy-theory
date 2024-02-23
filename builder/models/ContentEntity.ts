@@ -9,6 +9,12 @@ export interface ContentEntityModel {
   ignore?: boolean;
 }
 
+export enum ContentType {
+  COLLECTION = 'collection',
+  CONTENT = 'content',
+  EMPTY = ''
+}
+
 export class ContentEntity implements ContentEntityModel {
   title: string;
   link: string;
@@ -25,7 +31,7 @@ export class ContentEntity implements ContentEntityModel {
     entryLink: string,
     section: string,
     content?: string,
-    type?: string,
+    type?: ContentType,
     sort?: number,
     ignore?: boolean
   ) {
