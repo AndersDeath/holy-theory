@@ -157,14 +157,7 @@ const generateStatic = async (
       /https:\/\/raw\.githubusercontent\.com\/AndersDeath\/holy-theory\/main\/images/g,
       path.join("./", "images")
     );
-  // const preparedOutput = allOutput;
 
-  // preparedOutput = preparedOutput.replace(/\$/g, "\\$");
-  // preparedOutput = preparedOutput.replace(/frac{/g, '"Temporary removed"');
-
-  // \(\frac{n \times (n + 1) \times (2n + 1)}{6}\).
-  // \(\frac{n \times (n + 1)}{2}\).
-  const outputBucket = [
     [path.join(outputFolder, "prepared_all." + type), preparedAllProjectOutput],
     [
       path.join(outputFolder, "prepared_all_algorithms." + type),
