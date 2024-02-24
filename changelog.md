@@ -4,6 +4,7 @@ All notable changes to this project will be documented in this file.
 # [0.0.59] - In progress
 * reshaping of building system
 * add logger to building system
+* finished with bubble sort
 
 # [0.0.58] - 2024-02-19
 * update breadth-first search
