@@ -50,7 +50,7 @@ Bubble sort has a time complexity of O(n^2) in the worst and average cases, wher
 
 ![Bubble sort](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/bubble-sort.png)
 
-## Example
+## Example:
 ```typescript
 function bubbleSort(array: number[] | string[]) {
   for (let i = 0; i < array.length; i++) {

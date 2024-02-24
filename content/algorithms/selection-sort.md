@@ -9,33 +9,50 @@ sort: 200
 
 Selection sort is a simple and efficient sorting algorithm that works by repeatedly selecting the smallest (or largest) element from the unsorted portion of the list and moving it to the sorted portion of the list.
 
-**How it works:**
+## How it works:
 
-1. **Step 1:**
+**Step 1:** Initialization - Start with an unsorted list/array of elements.
 
-   - Set Min to location 0 in Step 1.
+**Step 2:** Iteration - Repeat until the entire list is sorted: Find the minimum element in the unsorted portion and swap the minimum element with the leftmost unsorted element.
+**Step 3:** Update - Move the boundary between the sorted and unsorted portions one position to the right.
 
-2. **Step 2**
+**Step 4:** Repeat - Continue this process until the entire list is sorted.
 
-   - Look for the smallest element on the list.
+**Step 5:** Completion - Once all elements are sorted, the process ends, and you have a fully sorted list.
 
-3. **Step 3:**
+## Key Characteristics:
 
-   - Replace the value at location Min with a different value.
+**Basic Algorithm**: Selection sort divides the input list into a sorted and an unsorted region, repeatedly selects the smallest (or largest) element from the unsorted region and swaps it with the leftmost unsorted element.
 
-4. **Step 4:**
-   - Increase Min to point to the next element
-5. **Step 5:**
-   - Continue until the list is sorted.
+**In-place Sorting**: Sorts elements by swapping them in place within the array or list.
 
+**Not Adaptive**: Selection sort's performance doesn't improve even if the input is partially sorted.
 
-**Key Characteristics:**
+**Not Stable**: May change the relative order of equal elements.
 
-**Applications:**
+**Simple Implementation**: Easy to understand and implement.
 
-**Time complexity:**
+**Inefficient for Large Datasets**: Due to its quadratic time complexity, it's inefficient for large datasets compared to more efficient algorithms like quicksort or mergesort.
+
+## Applications:
+
+**Educational Purposes**: Selection sort is commonly used in educational settings to teach sorting algorithms due to its simplicity.
+
+**Small Datasets**: Suitable for sorting small datasets where simplicity is prioritized over efficiency.
+
+**Embedded Systems**: Can be used in environments with limited resources for sorting small arrays due to its simplicity and minimal memory requirements.
+
+**Testing and Debugging**: Useful for quick implementation and verification of sorting functionality in software development.
+
+**Ad Hoc Sorting**: Provides a simple and quick solution for one-time or temporary sorting needs in situations where efficiency is not critical.
+
+## Time complexity:
+
+The time complexity of selection sort is O(n^2), where n is the number of elements in the array, due to its nested loops. The outer loop iterates through each element, and the inner loop searches for the minimum element in the unsorted portion, both running n times. This results in a quadratic time complexity of O(n^2), making selection sort less efficient for large datasets compared to other sorting algorithms.
 
 ![Selection sort](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/selection-sort.png)
+
+## Example:
 
 ```typescript
 function selectionSort(array: any[]) {
