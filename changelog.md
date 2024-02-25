@@ -7,6 +7,7 @@ All notable changes to this project will be documented in this file.
 * finished with bubble sort
 * finished selection sort
 * finished insertion sort
+* finished quick sort
 
 # [0.0.58] - 2024-02-19
 * update breadth-first search
