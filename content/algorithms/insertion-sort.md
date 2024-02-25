@@ -25,15 +25,15 @@ Insertion Sort is a straightforward sorting algorithm that builds the sorted arr
 
 **Basic Algorithm**: Insertion sort builds the final sorted array one element at a time, by repeatedly taking the next element from the unsorted part and inserting it into its correct position in the sorted part.
 
-**In-place Sorting**: Insertion sort sorts elements by moving them within the array, without requiring additional storage space.
+**In-place Sorting**: It sorts elements by moving them within the array, without requiring additional storage space.
 
-**Stable**: Insertion sort is a stable sorting algorithm, meaning that it preserves the relative order of equal elements.
+**Stable**: The algorithm is a stable sorting algorithm, meaning that it preserves the relative order of equal elements.
 
 **Adaptive**: Insertion sort is adaptive to some extent. If the input list is almost sorted, it can perform better than its worst-case time complexity.
 
-**Efficient for Small Datasets**: Insertion sort is efficient for sorting small datasets or arrays, particularly when the array is nearly sorted.
+**Efficient for Small Datasets**: It is efficient for sorting small datasets or arrays, particularly when the array is nearly sorted.
 
-**Simple Implementation**: Insertion sort is straightforward to implement and understand, making it a good choice for educational purposes or for sorting small lists.
+**Simple Implementation**: It is straightforward to implement and understand, making it a good choice for educational purposes or for sorting small lists.
 
 **Efficient for Nearly Sorted Data**: Insertion sort performs well on data that is already partially sorted, as it only requires shifting a few elements to insert a new one.
 
