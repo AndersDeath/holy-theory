@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file.
 * add logger to building system
 * finished with bubble sort
 * finished selection sort
+* finished insertion sort
 
 # [0.0.58] - 2024-02-19
 * update breadth-first search
