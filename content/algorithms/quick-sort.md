@@ -9,7 +9,7 @@ sort: 400
 
 Quick Sort is an efficient, comparison-based sorting algorithm that follows the divide-and-conquer paradigm. It works by selecting a "pivot" element from the array and partitioning the other elements into two sub-arrays according to whether they are less than or greater than the pivot. The sub-arrays are then recursively sorted.
 
-**How it works:**
+## How it works:
 
 **Step 1:**
 Select a pivot. It might be any element at random, the first or last element, middle one.
@@ -26,16 +26,47 @@ Apply the quicksort recursively on the left partition and then on the right part
 **Step 5:**
 Stop recursion when array is sorted when reach out the base case. It's an array of zero or one element.
 
-**Key Characteristics:**
+## Key Characteristics:
 
-**Applications:**
+**Divide and Conquer**: it is a divide-and-conquer algorithm that partitions the array into smaller sub-arrays, sorts each sub-array recursively, and then combines them to obtain a sorted array.
 
-**Time Complexity:**
+**In-place Sorting**: Quick Sort often sorts elements in place within the array, which means it does not require additional memory beyond a few stack frames for recursion.
 
-- Quick Sort has an average and best-case time complexity of O(n log n), where 'n' is the number of elements in the array. In the worst case, it is O(n^2), but this is rare when a good pivot selection strategy is used. This algorithm is often faster in practice than other O(n log n) ones, and it is widely used in various applications due to its efficiency.
+**Unstable**: The algorithm is generally an unstable, meaning that it may change the relative order of equal elements.
+
+**Efficiency**: Quick Sort is highly efficient for large datasets due to its average-case time complexity of O(n log n). It outperforms many other sorting algorithms like Bubble Sort, Insertion Sort, and Selection Sort for larger datasets.
+
+**Pivot Selection**: It's efficiency heavily relies on the selection of a good pivot element, which partitions the array into smaller sub-arrays. Common strategies for pivot selection include choosing the first, last, or middle element of the array, or using techniques like median-of-three.
+
+**Adaptive**: The algorithm is adaptive, meaning that it performs better when the input data is partially sorted. This adaptability can lead to improved performance in many real-world scenarios.
+
+**Parallelizability**: Quick Sort is easily parallelizable, which means it can take advantage of multiple processors or threads to sort data more quickly.
+
+## Applications:
+
+**General Sorting**: Quick Sort is widely used for sorting large datasets efficiently in various software applications, including databases, operating systems, and programming languages.
+
+**Programming Competitions**: It is a popular choice for sorting algorithms in programming competitions due to its efficiency and ease of implementation.
+
+**Libraries and Frameworks**: The algorithm is often implemented in standard libraries and frameworks for sorting data structures like arrays, lists, and trees.
+
+**Online Sorting**: Quick Sort's efficiency makes it suitable for online sorting scenarios where new data is continuously arriving and needs to be sorted quickly.
+
+**Data Analysis**: It is utilized in data analysis tasks where sorting large datasets is a common requirement, such as in data mining, machine learning, and statistical analysis.
+
+**Operating Systems**: It is used in various components of operating systems for tasks like file system management and memory allocation.
+
+**Numerical Methods**: The algorithm can be applied in numerical methods and scientific computing for sorting arrays of numerical data efficiently.
+
+**Network Routing**: Quick Sort is used in network routing algorithms for organizing and sorting routing tables efficiently.
+
+## Time Complexity:
+
+Quick Sort has an average and best-case time complexity of O(n log n), where 'n' is the number of elements in the array. In the worst case, it is O(n^2), but this is rare when a good pivot selection strategy is used. This algorithm is often faster in practice than other O(n log n) ones, and it is widely used in various applications due to its efficiency.
 
 ![Quick sort](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/quick-sort.png)
 
+## Example:
 <!-- ignore start -->
 
 ```java
