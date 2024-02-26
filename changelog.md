@@ -9,6 +9,7 @@ All notable changes to this project will be documented in this file.
 * finished insertion sort
 * finished quick sort
 * finished merge sort
+* finished linear search
 
 # [0.0.58] - 2024-02-19
 * update breadth-first search
