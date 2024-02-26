@@ -1,7 +1,9 @@
 # Changelog
 
 All notable changes to this project will be documented in this file.
-# [0.0.59] - In progress
+# [0.0.60] - In progress
+
+# [0.0.59] - 2024-02-26
 * reshaping of building system
 * add logger to building system
 * finished with bubble sort
