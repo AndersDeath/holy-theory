@@ -3,6 +3,11 @@
 All notable changes to this project will be documented in this file.
 # [0.0.60] - In progress
 
+* finished binary search
+* finished ternary search
+* finished interpolation search
+* finished breadth first search
+
 # [0.0.59] - 2024-02-26
 * reshaping of building system
 * add logger to building system
@@ -13,9 +18,6 @@ All notable changes to this project will be documented in this file.
 * finished merge sort
 * finished linear search
 * finished jump search
-* finished binary search
-* finished ternary search
-* finished interpolation search
 
 # [0.0.58] - 2024-02-19
 * update breadth-first search
