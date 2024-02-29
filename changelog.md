@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file.
 * finished ternary search
 * finished interpolation search
 * finished breadth first search
+* finished depth-first search
 
 # [0.0.59] - 2024-02-26
 * reshaping of building system
