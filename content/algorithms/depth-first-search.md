@@ -9,50 +9,69 @@ sort: 1200
 
 Depth-First Search (DFS) is a graph traversal algorithm that systematically explores the vertices of a graph by going as deep as possible along each branch before backtracking. It starts at a chosen vertex, explores as far as possible along one branch, and then backtracks to explore other branches. DFS is commonly used to detect cycles in a graph, topologically sort vertices, and solve problems related to connected components.
 
-**How it works:**
+## How it works:
 
-**Step 1:**
+**Step 1:** Begin by selecting a starting vertex and mark it as visited.
 
-Begin by selecting a starting vertex and mark it as visited.
+**Step 2:** Move to an unvisited neighbor of the current vertex and repeat the process. If all neighbors are visited, backtrack to the previous vertex.
 
-**Step 2:**
+**Step 3:** DFS can be implemented using recursion or an explicit stack to keep track of the vertices to be visited.
 
-Move to an unvisited neighbor of the current vertex and repeat the process. If all neighbors are visited, backtrack to the previous vertex.
+**Step 4:** Mark each visited vertex to avoid revisiting and use backtracking to explore other branches.
 
-**Step 3:**
+**Step 5:** Continue the process until all reachable vertices are visited.
 
-DFS can be implemented using recursion or an explicit stack to keep track of the vertices to be visited.
+## Key Characteristics:
 
-**Step 4:**
+**Stack-Based (or Recursive)**: DFS can be implemented using a stack data structure or by recursion. In both cases, it relies on last-in, first-out (LIFO) ordering to keep track of nodes to be visited and backtracked.
 
-Mark each visited vertex to avoid revisiting and use backtracking to explore other branches.
+**Non-Optimal for Shortest Paths**: DFS does not guarantee finding the shortest path between two nodes in a graph. It explores as far as possible along each branch before backtracking, which may not necessarily lead to the shortest path.
 
-**Step 5:**
-Continue the process until all reachable vertices are visited.
+**Memory-Efficient**: DFS typically requires less memory compared to BFS because it only needs to store the path from the starting node to the current node. This makes it suitable for large graphs or graphs with limited memory.
 
-**Key Characteristics:**
+**Completeness (for finite graphs)**: DFS will visit all the nodes reachable from the starting node in a finite graph. However, it may not terminate in the presence of cycles in an infinite graph without proper cycle detection.
 
-- **LIFO Structure:**
-  DFS often uses a Last-In-First-Out (LIFO) stack or recursion to maintain the order in which vertices are visited.
-  **Visited Marking:**
+**Time Complexity**: The time complexity of DFS is \(O(V + E)\), where \(V\) is the number of vertices (nodes) and \(E\) is the number of edges in the graph. This is because each vertex and each edge are examined once.
 
-Mark each vertex as visited once it is reached, preventing revisiting.
+**Recursive Nature**: DFS is inherently recursive in its nature. When implemented recursively, the function calls itself for each adjacent node until it reaches a leaf node or a node without unvisited neighbors.
 
-- **Backtracking:**
-  Backtrack to the previous vertex when all neighbors are explored.
+**Applications**: DFS is used in various applications such as topological sorting, cycle detection, pathfinding, maze solving, solving puzzles (e.g., Sudoku), and graph algorithms like finding connected components.
+
+**Depth-First Search Forest**: DFS produces a depth-first search forest, which is a collection of depth-first trees, one for each connected component of the graph. Each tree is rooted at a distinct vertex.
+
+**Backtracking Mechanism**: DFS employs a backtracking mechanism to explore all possible paths in the graph. When it reaches a dead end (a node with no unvisited neighbors), it backtracks to the most recent node with unexplored neighbors.
+
+**Stack Overflow Risk (for recursive implementation)**: When implemented recursively, DFS may encounter a stack overflow error if the recursion depth exceeds the system's limit. This risk can be mitigated by using an iterative approach or increasing the stack size.
 
 **Applications:**
 
-- Topological Sorting.
-- Cycle Detection.
-- Connected Components.
-- Maze Solving.
+**Traversal and Search**: DFS can be used to traverse and search a graph, visiting all the nodes reachable from a given starting node. This application is useful in scenarios such as finding connected components, identifying cycles, or determining reachability.
 
-**Time Complexity:**
+**Topological Sorting**: DFS can be employed to perform topological sorting on directed acyclic graphs (DAGs). Topological sorting is essential in scheduling tasks with dependencies, such as in project management or task scheduling.
 
-- The time complexity of DFS is \(O(V + E)\), where \(V\) is the number of vertices and \(E\) is the number of edges. The algorithm visits each vertex and edge once. Recursive DFS has a space complexity of \(O(V)\) due to the call stack, while an explicit stack implementation can have a space complexity of \(O(E + V)\).
+**Pathfinding**: While DFS does not guarantee finding the shortest path between two nodes, it can be used for pathfinding in scenarios where finding any path is sufficient. Examples include maze solving, puzzle solving, and navigating game maps.
+
+**Cycle Detection**: DFS is commonly used to detect cycles in a graph. By maintaining a set of visited nodes and tracking the path taken during traversal, cycles can be identified when revisiting a node that is already in the current path.
+
+**Strongly Connected Components (SCC)**: DFS can be applied to find strongly connected components in a directed graph. SCCs are subsets of vertices in a graph where every vertex is reachable from every other vertex within the subset.
+
+**Network Analysis**: DFS is utilized in network analysis tasks, such as finding bridges and articulation points in a network. Bridges are edges whose removal would disconnect the graph, while articulation points are vertices whose removal would increase the number of connected components.
+
+**Solving Puzzles**: DFS can be used to solve various puzzles, including Sudoku, N-Queens, and word games like Boggle. By exploring all possible configurations or solutions, DFS can efficiently find a valid solution.
+
+**XML Parsing and Document Traversal**: DFS can be employed in parsing XML documents and traversing hierarchical data structures. It allows for efficient exploration of the document structure and extraction of relevant information.
+
+**Decision Trees and Game Trees**: DFS is used in decision trees and game trees to explore possible outcomes and make decisions. It helps in determining optimal strategies or paths in decision-making processes.
+
+**Backtracking Algorithms**: Many backtracking algorithms, such as N-Queens, Subset Sum, and Sudoku solvers, rely on DFS for exploring the search space and finding solutions by systematically trying different combinations.
+
+## Time Complexity:
+
+The time complexity of DFS is \(O(V + E)\), where \(V\) is the number of vertices and \(E\) is the number of edges. The algorithm visits each vertex and edge once. Recursive DFS has a space complexity of \(O(V)\) due to the call stack, while an explicit stack implementation can have a space complexity of \(O(E + V)\).
 
 ![Depth first search](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/depth-first-search.png)
+
+## Example:
 
 ```typescript
 class Graph {

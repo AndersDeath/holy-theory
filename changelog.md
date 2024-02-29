@@ -2,7 +2,6 @@
 
 All notable changes to this project will be documented in this file.
 # [0.0.60] - In progress
-
 * finished binary search
 * finished ternary search
 * finished interpolation search
