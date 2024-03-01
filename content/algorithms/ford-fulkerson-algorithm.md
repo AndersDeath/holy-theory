@@ -9,51 +9,61 @@ sort: 1500
 
 The Ford-Fulkerson Algorithm is an iterative method to compute the maximum flow in a flow network. It was initially designed to solve the max-flow min-cut problem, where the objective is to find the maximum amount of flow that can be sent from a designated source to a designated sink in a directed graph. The algorithm iteratively augments paths from the source to the sink, increasing the flow until it reaches its maximum value.
 
-**How is works:**
+## How is works:
 
-**Step 1:**
-Begin with an initial flow of zero. Determine the residual graph, which represents the remaining capacity for each edge.
+**Step 1:** Begin with an initial flow of zero. Determine the residual graph, which represents the remaining capacity for each edge.
 
-**Step 2:**
-Find an augmenting path from the source to the sink in the residual graph. An augmenting path is a path with available capacity on all its edges.
+**Step 2:** Find an augmenting path from the source to the sink in the residual graph. An augmenting path is a path with available capacity on all its edges.
 
-**Step 3:**
-Determine the maximum flow that can be added along the augmenting path. This is the minimum capacity value of the edges on the path.
+**Step 3:** Determine the maximum flow that can be added along the augmenting path. This is the minimum capacity value of the edges on the path.
 
-**Step 4:**
-Update the residual graph by subtracting the flow added along the augmenting path and adding the reverse flow.
+**Step 4:** Update the residual graph by subtracting the flow added along the augmenting path and adding the reverse flow.
 
-**Step 5:**
-Repeat steps 2-4 until there are no more augmenting paths.
+**Step 5:** Repeat steps 2-4 until there are no more augmenting paths.
 
-**Step 6:**
-The final flow is the maximum flow in the network.
+**Step 6:** The final flow is the maximum flow in the network.
 
-**Key Characteristics:**
+## Key Characteristics:
 
-- **Residual Graph:**
+**Maximum flow**: The Ford-Fulkerson algorithm finds the maximum flow that can be sent from a source node to a sink node in a flow network. This is useful in various applications such as transportation networks, network flow optimization, and resource allocation.
 
-  - The residual graph is crucial for the Ford-Fulkerson Algorithm. It represents the remaining capacity for each edge after the initial flow has been determined.
+**Augmenting paths**: The algorithm relies on the concept of augmenting paths, which are paths from the source to the sink that have available capacity for additional flow. It repeatedly finds augmenting paths and increases the flow along those paths until no more augmenting paths can be found.
 
-- **Augmenting Paths:**
+**Residual graph**: To efficiently find augmenting paths, the algorithm maintains a residual graph, which represents the remaining capacity on each edge after the current flow has been sent. This allows the algorithm to explore different paths and incrementally increase the flow.
 
-  - The algorithm focuses on finding augmenting paths, paths in the residual graph with available capacity.
+**Capacity constraints**: The Ford-Fulkerson algorithm respects capacity constraints on edges, ensuring that the flow along each edge does not exceed its maximum capacity. It increases the flow along augmenting paths without violating these constraints.
 
-- **Termination:**
-  - The algorithm terminates when no more augmenting paths can be found in the residual graph.
+**Termination condition**: The algorithm terminates when no more augmenting paths can be found in the residual graph. At this point, the flow obtained is the maximum flow possible in the network.
 
-**Applications:**
+**Complexity**: The time complexity of the Ford-Fulkerson algorithm depends on the method used to find augmenting paths. In the simplest implementation using depth-first search (DFS) or breadth-first search (BFS) to find augmenting paths, the worst-case time complexity can be exponential. However, with certain optimizations such as the Edmonds-Karp algorithm, which uses BFS to find augmenting paths, the time complexity is O(V * E^2), where V is the number of vertices and E is the number of edges in the graph.
 
-- Network Flows.
-- Transportation Networks.
-- Telecommunication Networks.
+**Applications**: The Ford-Fulkerson algorithm has applications in various domains including network flow optimization, traffic management, computer networking, and resource allocation. It can be used to solve problems such as the maximum flow, minimum cut, and bipartite matching.
 
-**Time Complexity:**
+## Applications:
 
-- The time complexity of the Ford-Fulkerson Algorithm is not strictly defined, as it depends on the choice of augmenting paths. In the worst case, the algorithm may not terminate if the paths are not chosen carefully. When implemented with the Edmonds-Karp variant, where the shortest augmenting paths are chosen using Breadth-First Search, the time complexity is \(O(VE^2)\), where \(V\) is the number of vertices and \(E\) is the number of edges.
+**Network flow optimization**: The primary application of the Ford-Fulkerson algorithm is in network flow optimization. It is used in various scenarios such as transportation networks, communication networks, and supply chain management to maximize the flow of goods, data, or resources from a source to a destination while respecting capacity constraints.
+
+**Maximum flow problems**: The Ford-Fulkerson algorithm is specifically designed to solve maximum flow problems, where the goal is to determine the maximum amount of flow that can be sent through a network from a source to a sink. This has applications in tasks such as traffic management, fluid dynamics, and resource allocation.
+
+**Minimum cut problems**: The Ford-Fulkerson algorithm can also be used to solve minimum cut problems, where the objective is to find the smallest set of edges whose removal disconnects the source from the sink in a flow network. Minimum cut problems have applications in network reliability analysis, image segmentation, and clustering algorithms.
+
+**Bipartite matching**: The Ford-Fulkerson algorithm can be applied to solve bipartite matching problems, where the goal is to find the maximum matching between elements of two disjoint sets. This has applications in job assignment, resource allocation, and stable marriage problems.
+
+**Computer networking**: In computer networking, the Ford-Fulkerson algorithm is used for tasks such as routing, traffic engineering, and network capacity planning. It helps in optimizing the flow of data packets through network links while avoiding congestion and bottlenecks.
+
+**Telecommunications**: Telecommunication networks utilize the Ford-Fulkerson algorithm for optimizing data transmission rates, routing calls through phone networks, and allocating bandwidth efficiently. It ensures that communication networks operate at maximum capacity while maintaining quality of service.
+
+**Hydraulic engineering**: In hydraulic engineering, the Ford-Fulkerson algorithm can be used to model fluid flow in pipes, channels, and rivers. It helps in designing efficient water distribution systems, flood control measures, and irrigation networks.
+
+**Supply chain management**: The Ford-Fulkerson algorithm has applications in supply chain management for optimizing inventory management, production scheduling, and distribution networks. It helps in minimizing transportation costs and maximizing throughput in supply chain operations.
+
+## Time Complexity:
+
+The time complexity of the Ford-Fulkerson Algorithm is not strictly defined, as it depends on the choice of augmenting paths. In the worst case, the algorithm may not terminate if the paths are not chosen carefully. When implemented with the Edmonds-Karp variant, where the shortest augmenting paths are chosen using Breadth-First Search, the time complexity is \(O(VE^2)\), where \(V\) is the number of vertices and \(E\) is the number of edges.
 
 ![Ford Fulkerson algorithm](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/ford-fulkerson.png)
 
+## Example:
 ```typescript
 class FordFulkerson {
   private graph: number[][];
