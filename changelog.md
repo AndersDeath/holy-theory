@@ -9,6 +9,7 @@ All notable changes to this project will be documented in this file.
 * finished depth-first search
 * finished dijkstra's algorithm
 * finished floyd-warshall algorithm
+* finished ford fulkerson algorithm
 
 # [0.0.59] - 2024-02-26
 * reshaping of building system
