@@ -10,6 +10,7 @@ All notable changes to this project will be documented in this file.
 * finished dijkstra's algorithm
 * finished floyd-warshall algorithm
 * finished ford fulkerson algorithm
+* update server
 
 # [0.0.59] - 2024-02-26
 * reshaping of building system
