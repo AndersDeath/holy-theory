@@ -23,40 +23,39 @@
         </style>
     </head>
     <body>
-        <div class="content"><h1 id="breadth-first-search">Breadth-first search</h1>
+        <div class="content"><h1 id="breadth-first-search">Breadth First search</h1>
 <p>Breadth-First Search (BFS) is a graph traversal algorithm that systematically explores all the vertices of a graph in breadthward motion, level by level. It starts at a chosen vertex and visits all its neighbors before moving on to other ones. BFS is commonly used to find the shortest path in an unweighted graph and to explore the structure of a graph.</p>
-<p><strong>How it works:</strong></p>
-<p><strong>Step 1:</strong></p>
-<p>Initialize queue. Begin by selecting a starting vertex and enqueue it into a queue.</p>
-<p><strong>Step 2:</strong>
-Dequeue a vertex from the front of the queue and explore all its neighbors. Enqueue any unvisited ones, marking them as visited to avoid duplication.</p>
-<p><strong>Step 3:</strong></p>
-<p>Continue the process level by level, exploring all vertices at the current level before moving on to the next level.</p>
-<p><strong>Step 4:</strong>
-Repeat until the queue is empty, ensuring that all reachable vertices are visited.</p>
-<p><strong>Key Characteristics:</strong></p>
-<ul>
-<li><strong>FIFO Structure:</strong></li>
-</ul>
-<p>BFS uses a First-In-First-Out (FIFO) queue to maintain the order in which vertices are discovered and processed.</p>
-<ul>
-<li><strong>Visited Marking:</strong></li>
-</ul>
-<p>To avoid revisiting vertices, mark each vertex as visited once it is dequeued from the queue.</p>
-<ul>
-<li><strong>Shortest Path:</strong>
-BFS guarantees that the shortest path to any reachable vertex is discovered first, making it valuable for pathfinding in unweighted graphs.</li>
-</ul>
-<p><strong>Applications:</strong></p>
-<ul>
-<li>Shortest Pathfinding.</li>
-<li>Connected Components.</li>
-<li>Web Crawling.</li>
-<li>Network Broadcasting.</li>
-</ul>
-<p><strong>Time Complexity:</strong></p>
+<h2 id="how-it-works">How it works:</h2>
+<p><strong>Step 1:</strong> Initialize queue. Begin by selecting a starting vertex and enqueue it into a queue.</p>
+<p><strong>Step 2:</strong> Dequeue a vertex from the front of the queue and explore all its neighbors. Enqueue any unvisited ones, marking them as visited to avoid duplication.</p>
+<p><strong>Step 3:</strong> Continue the process level by level, exploring all vertices at the current level before moving on to the next level.</p>
+<p><strong>Step 4:</strong> Repeat until the queue is empty, ensuring that all reachable vertices are visited.</p>
+<h2 id="key-characteristics">Key Characteristics:</h2>
+<p><strong>Queue-Based</strong>: BFS utilizes a queue data structure to keep track of the nodes that need to be visited. Nodes are visited in the order they are encountered, with nodes at shallower levels visited before nodes at deeper levels.</p>
+<p><strong>Level Order Traversal</strong>: BFS systematically explores all nodes at the current level before moving on to the next level. This ensures that nodes are visited in increasing order of their distance from the starting node, making BFS suitable for tasks such as finding the shortest path in an unweighted graph.</p>
+<p><strong>Non-Recursive (typically)</strong>: While BFS can be implemented recursively, it is typically implemented iteratively using a queue due to better space efficiency and avoidance of potential stack overflow issues, especially for large graphs.</p>
+<p><strong>Complete (for finite graphs)</strong>: BFS will visit all the nodes reachable from the starting node in a finite graph. However, for infinite graphs or graphs with cycles, proper termination conditions need to be implemented to avoid infinite loops.</p>
+<p><strong>Optimal for Shortest Path (unweighted graphs)</strong>: BFS is optimal for finding the shortest path between two nodes in an unweighted graph. This is because BFS guarantees that the first occurrence of a node during traversal will result in the shortest path to that node.</p>
+<p><strong>Memory Consumption</strong>: BFS typically requires more memory compared to Depth First Search (DFS) as it needs to store all the nodes at the current level in the queue. However, in practice, BFS can be more memory-efficient for very deep graphs because it does not suffer from the recursion depth limitations of DFS.</p>
+<p><strong>Algorithmic Complexity</strong>: The time complexity of BFS is (O(V + E)), where (V) is the number of vertices (nodes) and (E) is the number of edges in the graph. This is because each vertex and each edge are examined once.</p>
+<p><strong>Applications</strong>: BFS is widely used in various applications such as finding the shortest path, solving puzzles (e.g., maze solving), network traversal, web crawling, and analyzing network structures in social networks.</p>
+<p><strong>Traversal from Source Node</strong>: BFS starts traversal from a source node and explores all its adjacent nodes before moving on to the next level of nodes. This process continues until all reachable nodes are visited.</p>
+<p><strong>Discovering Connected Components</strong>: BFS can be used to discover connected components in an undirected graph. By performing BFS from each unvisited node, all connected components can be identified.</p>
+<h2 id="applications">Applications:</h2>
+<p><strong>Shortest Path and Minimum Spanning Tree</strong>: BFS can be used to find the shortest path between two nodes in an unweighted graph. It guarantees finding the shortest path in terms of the number of edges. Additionally, BFS can be used to find the minimum spanning tree of a connected, unweighted graph.</p>
+<p><strong>Web Crawling and Search Engine Indexing</strong>: BFS is used in web crawlers to systematically traverse the web graph starting from a given seed URL. It ensures that all pages reachable from the seed URL are indexed while maintaining a certain depth level.</p>
+<p><strong>Social Network Analysis</strong>: BFS is employed to analyze social networks, where nodes represent individuals, and edges represent relationships between them. It helps in identifying connected components, finding mutual friends, or determining the degrees of separation between individuals.</p>
+<p><strong>Network Broadcasting and Routing</strong>: BFS can be utilized in network protocols for broadcasting messages or routing packets. It ensures that messages are delivered to all nodes in the network in a minimal number of steps.</p>
+<p><strong>Shortest Path in a Maze</strong>: BFS is commonly used to find the shortest path from a starting point to a destination in a maze. Each cell of the maze is considered a node, and BFS explores adjacent cells level by level until the destination is reached.</p>
+<p><strong>Puzzle Solving</strong>: BFS is employed in puzzle-solving algorithms, such as solving sliding block puzzles (e.g., 15-puzzle), Rubik&#39;s Cube, or Sudoku. It helps in finding the shortest sequence of moves or steps to reach the goal state.</p>
+<p><strong>Garbage Collection</strong>: BFS is used in memory management systems for garbage collection. It helps identify and mark reachable objects from the root set, ensuring that only reachable objects are retained in memory.</p>
+<p><strong>Process Scheduling and Resource Allocation</strong>: BFS can be applied in operating systems for process scheduling and resource allocation. It helps in scheduling processes based on their priority levels or allocating resources optimally while considering dependencies.</p>
+<p><strong>Routing in Networks and GPS Navigation</strong>: In networks, BFS can be used for routing packets based on the hop count, ensuring efficient data transmission. In GPS navigation systems, BFS assists in finding the shortest route between two locations on a map.</p>
+<p><strong>Game AI and Pathfinding</strong>: BFS is utilized in game development for pathfinding algorithms to navigate characters or units in a game environment. It helps in finding optimal paths while avoiding obstacles or enemies.</p>
+<h2 id="time-complexity">Time Complexity:</h2>
 <p>The time complexity of BFS is (O(V + E)), where (V) is the number of vertices and (E) is the number of edges. The algorithm visits each vertex and edge once.</p>
 <p><img src="https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/breadth-first-search.png" alt="Breadth first search"></p>
+<h2 id="example">Example:</h2>
 <pre><code class="hljs language-typescript"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Graph</span> {
   <span class="hljs-keyword">private</span> <span class="hljs-attr">adjacencyList</span>: <span class="hljs-title class_">Map</span>&lt;<span class="hljs-built_in">string</span>, <span class="hljs-built_in">string</span>[]&gt;;
 

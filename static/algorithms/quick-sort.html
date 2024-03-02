@@ -25,7 +25,7 @@
     <body>
         <div class="content"><h1 id="quicksort">Quicksort</h1>
 <p>Quick Sort is an efficient, comparison-based sorting algorithm that follows the divide-and-conquer paradigm. It works by selecting a &quot;pivot&quot; element from the array and partitioning the other elements into two sub-arrays according to whether they are less than or greater than the pivot. The sub-arrays are then recursively sorted.</p>
-<p><strong>How it works:</strong></p>
+<h2 id="how-it-works">How it works:</h2>
 <p><strong>Step 1:</strong>
 Select a pivot. It might be any element at random, the first or last element, middle one.</p>
 <p><strong>Step 2:</strong>
@@ -36,13 +36,27 @@ After Step 2, the pivot element is in its correct position</p>
 Apply the quicksort recursively on the left partition and then on the right partition</p>
 <p><strong>Step 5:</strong>
 Stop recursion when array is sorted when reach out the base case. It&#39;s an array of zero or one element.</p>
-<p><strong>Key Characteristics:</strong></p>
-<p><strong>Applications:</strong></p>
-<p><strong>Time Complexity:</strong></p>
-<ul>
-<li>Quick Sort has an average and best-case time complexity of O(n log n), where &#39;n&#39; is the number of elements in the array. In the worst case, it is O(n^2), but this is rare when a good pivot selection strategy is used. This algorithm is often faster in practice than other O(n log n) ones, and it is widely used in various applications due to its efficiency.</li>
-</ul>
+<h2 id="key-characteristics">Key Characteristics:</h2>
+<p><strong>Divide and Conquer</strong>: it is a divide-and-conquer algorithm that partitions the array into smaller sub-arrays, sorts each sub-array recursively, and then combines them to obtain a sorted array.</p>
+<p><strong>In-place Sorting</strong>: Quick Sort often sorts elements in place within the array, which means it does not require additional memory beyond a few stack frames for recursion.</p>
+<p><strong>Unstable</strong>: The algorithm is generally an unstable, meaning that it may change the relative order of equal elements.</p>
+<p><strong>Efficiency</strong>: Quick Sort is highly efficient for large datasets due to its average-case time complexity of O(n log n). It outperforms many other sorting algorithms like Bubble Sort, Insertion Sort, and Selection Sort for larger datasets.</p>
+<p><strong>Pivot Selection</strong>: It&#39;s efficiency heavily relies on the selection of a good pivot element, which partitions the array into smaller sub-arrays. Common strategies for pivot selection include choosing the first, last, or middle element of the array, or using techniques like median-of-three.</p>
+<p><strong>Adaptive</strong>: The algorithm is adaptive, meaning that it performs better when the input data is partially sorted. This adaptability can lead to improved performance in many real-world scenarios.</p>
+<p><strong>Parallelizability</strong>: Quick Sort is easily parallelizable, which means it can take advantage of multiple processors or threads to sort data more quickly.</p>
+<h2 id="applications">Applications:</h2>
+<p><strong>General Sorting</strong>: Quick Sort is widely used for sorting large datasets efficiently in various software applications, including databases, operating systems, and programming languages.</p>
+<p><strong>Programming Competitions</strong>: It is a popular choice for sorting algorithms in programming competitions due to its efficiency and ease of implementation.</p>
+<p><strong>Libraries and Frameworks</strong>: The algorithm is often implemented in standard libraries and frameworks for sorting data structures like arrays, lists, and trees.</p>
+<p><strong>Online Sorting</strong>: Quick Sort&#39;s efficiency makes it suitable for online sorting scenarios where new data is continuously arriving and needs to be sorted quickly.</p>
+<p><strong>Data Analysis</strong>: It is utilized in data analysis tasks where sorting large datasets is a common requirement, such as in data mining, machine learning, and statistical analysis.</p>
+<p><strong>Operating Systems</strong>: It is used in various components of operating systems for tasks like file system management and memory allocation.</p>
+<p><strong>Numerical Methods</strong>: The algorithm can be applied in numerical methods and scientific computing for sorting arrays of numerical data efficiently.</p>
+<p><strong>Network Routing</strong>: Quick Sort is used in network routing algorithms for organizing and sorting routing tables efficiently.</p>
+<h2 id="time-complexity">Time Complexity:</h2>
+<p>Quick Sort has an average and best-case time complexity of O(n log n), where &#39;n&#39; is the number of elements in the array. In the worst case, it is O(n^2), but this is rare when a good pivot selection strategy is used. This algorithm is often faster in practice than other O(n log n) ones, and it is widely used in various applications due to its efficiency.</p>
 <p><img src="https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/quick-sort.png" alt="Quick sort"></p>
+<h2 id="example">Example:</h2>
 <!-- ignore start -->
 
 <pre><code class="hljs language-java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {

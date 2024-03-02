@@ -4,7 +4,7 @@ const app: Express = express();
 const port = 3000;
 app.use(express.static('static'));
 
-app.get("/", (req: Request, res: Response) => {
+app.get("/builder", (req: Request, res: Response) => {
   res.send("Express + TypeScript Server");
 });
 

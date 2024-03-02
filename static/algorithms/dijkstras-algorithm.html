@@ -24,48 +24,39 @@
     </head>
     <body>
         <div class="content"><h1 id="dijkstras-algorithm">Dijkstra&#39;s algorithm</h1>
-<p><strong>How it works:</strong></p>
-<p><strong>Step 1:</strong></p>
-<p>Set the initial distance to the starting vertex as 0 and all other onces to infinity. Create a priority queue or a min-heap to store vertices based on their current tentative distances.</p>
-<p><strong>Step 2:</strong></p>
-<p>While there are vertices in the priority queue, select the vertex with the smallest tentative distance. Explore its neighbors and update their tentative distances if a shorter path is found.</p>
-<p><strong>Step 3:</strong></p>
-<p>For each neighbor, calculate the sum of the tentative distance to the current vertex and the weight of the edge between them. If this sum is smaller than the current tentative distance to the neighbor, update the tentative distance.</p>
-<p><strong>Step 4:</strong></p>
-<p>Mark the current vertex as visited to avoid redundant calculations.</p>
-<p><strong>Step 5:</strong></p>
-<p>Repeat steps 2-4 until all vertices are visited or the destination vertex is reached.</p>
-<p><strong>Step 6:</strong>
-The final result is an array of shortest distances from the starting vertex to all other vertices.</p>
-<p><strong>Key Characteristics:</strong></p>
-<ul>
-<li><p><strong>Greedy Strategy:</strong></p>
-<ul>
-<li>Dijkstra&#39;s Algorithm employs a greedy strategy, always choosing the vertex with the smallest tentative distance.</li>
-</ul>
-</li>
-<li><p><strong>Priority Queue or Min-Heap:</strong></p>
-<ul>
-<li>Efficient implementations use a priority queue or min-heap to efficiently retrieve the vertex with the smallest tentative distance.</li>
-</ul>
-</li>
-<li><p><strong>Non-Negative Edge Weights:</strong></p>
-<ul>
-<li>Dijkstra&#39;s Algorithm assumes non-negative edge weights. Negative weights can lead to incorrect results.</li>
-</ul>
-</li>
-</ul>
-<p><strong>Applications:</strong></p>
-<ul>
-<li>Network Routing.</li>
-<li>Shortest Path Problems.</li>
-<li>Transportation and Logistics.</li>
-</ul>
-<p><strong>Time Complexity:</strong></p>
-<ul>
-<li>The time complexity of Dijkstra&#39;s Algorithm is O((V + E) log V) using a priority queue or min-heap, where V is the number of vertices and E is the number of edges.</li>
-</ul>
+<h2 id="how-it-works">How it works:</h2>
+<p><strong>Step 1:</strong> Set the initial distance to the starting vertex as 0 and all other onces to infinity. Create a priority queue or a min-heap to store vertices based on their current tentative distances.</p>
+<p><strong>Step 2:</strong> While there are vertices in the priority queue, select the vertex with the smallest tentative distance. Explore its neighbors and update their tentative distances if a shorter path is found.</p>
+<p><strong>Step 3:</strong> For each neighbor, calculate the sum of the tentative distance to the current vertex and the weight of the edge between them. If this sum is smaller than the current tentative distance to the neighbor, update the tentative distance.</p>
+<p><strong>Step 4:</strong> Mark the current vertex as visited to avoid redundant calculations.</p>
+<p><strong>Step 5:</strong> Repeat steps 2-4 until all vertices are visited or the destination vertex is reached.</p>
+<p><strong>Step 6:</strong> The final result is an array of shortest distances from the starting vertex to all other vertices.</p>
+<h2 id="key-characteristics">Key Characteristics:</h2>
+<p><strong>Single-Source Shortest Path</strong>: Dijkstra&#39;s algorithm finds the shortest paths from a single source node to all other nodes in a graph with non-negative edge weights.</p>
+<p><strong>Greedy Algorithm</strong>: Dijkstra&#39;s algorithm is a greedy algorithm as it selects the next node to visit based on the shortest known distance from the source node. It iteratively expands the frontier of explored nodes by selecting the node with the smallest tentative distance.</p>
+<p><strong>Initialization</strong>: Dijkstra&#39;s algorithm initializes the distances from the source node to all other nodes as infinity, except for the source node itself, which is assigned a distance of zero. It also maintains a priority queue (often implemented using a min-heap) to keep track of nodes with the smallest tentative distances.</p>
+<p><strong>Relaxation</strong>: Dijkstra&#39;s algorithm performs relaxation of edges during each iteration. For each node in the priority queue, it considers all its outgoing edges and updates the tentative distance to its neighboring nodes if a shorter path is found through the current node.</p>
+<p><strong>Optimal Substructure</strong>: Dijkstra&#39;s algorithm exhibits optimal substructure, meaning that the shortest path between any two nodes is composed of shortest paths between the source node and intermediate nodes.</p>
+<p><strong>Termination</strong>: Dijkstra&#39;s algorithm terminates when all nodes have been visited or when the priority queue becomes empty. At termination, the shortest path distances from the source node to all other nodes have been calculated.</p>
+<p><strong>Non-Negative Edge Weights</strong>: Dijkstra&#39;s algorithm requires non-negative edge weights. If negative edge weights are present, the algorithm may not produce correct results, and algorithms like Bellman-Ford are more suitable.</p>
+<p><strong>Time Complexity</strong>: The time complexity of Dijkstra&#39;s algorithm is (O((V + E) \log V)), where (V) is the number of vertices (nodes) and (E) is the number of edges in the graph. This complexity arises from the operations of updating and extracting the minimum element from the priority queue.</p>
+<p><strong>Space Complexity</strong>: The space complexity of Dijkstra&#39;s algorithm is (O(V)) for storing the distances and priority queue, where (V) is the number of vertices in the graph.</p>
+<p><strong>Applications</strong>: Dijkstra&#39;s algorithm has various applications, including network routing, shortest path planning in transportation networks, traffic management systems, and network optimization.</p>
+<h2 id="applications">Applications:</h2>
+<p><strong>Routing in Networks</strong>: Dijkstra&#39;s algorithm is commonly used in network routing protocols, such as Open Shortest Path First (OSPF) and Intermediate System to Intermediate System (IS-IS). It helps in finding the shortest paths for data packets to traverse through computer networks efficiently.</p>
+<p><strong>Navigation Systems</strong>: Dijkstra&#39;s algorithm is used in GPS navigation systems to calculate the shortest routes between locations. It helps in providing users with optimal directions for reaching their destinations while considering factors like traffic congestion and road conditions.</p>
+<p><strong>Transportation Networks</strong>: Dijkstra&#39;s algorithm is applied in transportation planning and management systems to optimize routes for vehicles, such as buses, taxis, and delivery trucks. It helps in minimizing travel time and fuel consumption while maximizing efficiency.</p>
+<p><strong>Telecommunications Networks</strong>: Dijkstra&#39;s algorithm is utilized in telecommunications networks to establish efficient communication paths between network nodes, such as routers and switches. It assists in optimizing network traffic and resource utilization.</p>
+<p><strong>Airline Route Planning</strong>: Dijkstra&#39;s algorithm is used in airline route planning systems to determine the shortest paths between airports. It helps airlines in optimizing flight schedules, minimizing travel distances, and reducing operational costs.</p>
+<p><strong>Robotics and Autonomous Vehicles</strong>: Dijkstra&#39;s algorithm is applied in robotics and autonomous vehicle navigation systems to plan collision-free paths between locations. It helps in ensuring safe and efficient movement of robots and vehicles in dynamic environments.</p>
+<p><strong>Supply Chain Optimization</strong>: Dijkstra&#39;s algorithm is used in supply chain management systems to optimize transportation routes for goods and products. It helps in minimizing shipping costs, reducing delivery times, and improving overall supply chain efficiency.</p>
+<p><strong>Internet Protocol (IP) Routing</strong>: Dijkstra&#39;s algorithm is employed in Internet Protocol (IP) routing to determine the best paths for data packets to travel across the Internet. It helps in ensuring reliable and efficient data transmission between network devices.</p>
+<p><strong>Telecommunication Network Planning</strong>: Dijkstra&#39;s algorithm is used in telecommunication network planning to design optimal network infrastructures, including the placement of network nodes and the routing of communication links. It assists in maximizing network coverage and minimizing infrastructure costs.</p>
+<p><strong>Emergency Response Planning</strong>: Dijkstra&#39;s algorithm is applied in emergency response planning systems to calculate the shortest routes for emergency vehicles, such as ambulances and fire trucks, to reach incident locations. It helps in improving emergency response times and saving lives.</p>
+<h2 id="time-complexity">Time Complexity:</h2>
+<p>The time complexity of Dijkstra&#39;s Algorithm is O((V + E) log V) using a priority queue or min-heap, where V is the number of vertices and E is the number of edges.</p>
 <p><img src="https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/dijkstra.png" alt="Dijkstra algorithms"></p>
+<h2 id="example">Example:</h2>
 <pre><code class="hljs language-typescript"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Graph</span> {
   <span class="hljs-keyword">private</span> <span class="hljs-attr">adjacencyList</span>: <span class="hljs-title class_">Map</span>&lt;<span class="hljs-built_in">string</span>, <span class="hljs-title class_">Map</span>&lt;<span class="hljs-built_in">string</span>, <span class="hljs-built_in">number</span>&gt;&gt;;
 
