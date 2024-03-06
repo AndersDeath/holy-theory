@@ -15,12 +15,14 @@ app.get("/builder", (req: Request, res: Response) => {
 app.get("/builder/run", (req: Request, res: Response) => {
   console.log("the builder is run");
 
-
   try {
     const process = spawn(`./scripts/generate_all.sh`, []);
 
-    process.stdout.on("data", (ress: any) => {
-      console.log("Log: " + ress);
+    process.stdout.on("data", (res: any) => {
+      console.log("Log: " + res);
+    });
+
+    process.on("close", (code) => {
       res.redirect("/builder");
     });
   } catch (e) {
