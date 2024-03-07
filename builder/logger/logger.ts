@@ -1,12 +1,12 @@
 export const PREBUILD_INIT = "PREBUILD_INIT";
-export const POSTBUILD_INIT = "POSTBUILD_INIT";
+export const POST_BUILD_INIT = "POST_BUILD_INIT";
 export const GENERATE_STATIC_INIT = "GENERATE_STATIC_INIT";
-export const MD_PARSE_READY = "MD_PARSE_READY"
+export const MD_PARSE_READY = "MD_PARSE_READY";
 const dict = {
   PREBUILD_INIT: "Pre build init",
-  POSTBUILD_INIT: "Post build init",
+  POST_BUILD_INIT: "Post build init",
   GENERATE_STATIC_INIT: "Generate Static is initialized",
-  MD_PARSE_READY: "Parse MD is ready"
+  MD_PARSE_READY: "Parse MD is ready",
 };
 
 export class Logger {
@@ -32,10 +32,10 @@ export class Logger {
       console.log("Logger: no message in dictionary");
       return;
     }
-    console.log('Info: ',dict[messageCode]);
+    console.log("Info: ", dict[messageCode]);
   }
 
   public log(message: string) {
-    console.log('Log: ',message);
+    console.log("Log: ", message);
   }
 }

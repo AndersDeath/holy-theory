@@ -3,7 +3,7 @@ import * as path from "path";
 import {
   Logger,
   MD_PARSE_READY,
-  POSTBUILD_INIT,
+  POST_BUILD_INIT,
   PREBUILD_INIT,
 } from "./logger/logger";
 import { generateStatic } from "./generateStatic";
@@ -15,7 +15,7 @@ const preBuild = () => {
 };
 
 const postBuild = () => {
-  logger.info(POSTBUILD_INIT);
+  logger.info(POST_BUILD_INIT);
 };
 
 export const Builder = (type: string) => {

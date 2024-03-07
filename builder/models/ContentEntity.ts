@@ -10,9 +10,9 @@ export interface ContentEntityModel {
 }
 
 export enum ContentType {
-  COLLECTION = 'collection',
-  CONTENT = 'content',
-  EMPTY = ''
+  COLLECTION = "collection",
+  CONTENT = "content",
+  EMPTY = "",
 }
 
 export class ContentEntity implements ContentEntityModel {

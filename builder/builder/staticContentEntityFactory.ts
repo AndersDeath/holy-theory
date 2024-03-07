@@ -1,4 +1,4 @@
-import { ContentType } from './../models/ContentEntity';
+import { ContentType } from "./../models/ContentEntity";
 import { ContentEntity } from "../models/ContentEntity";
 
 export const staticContentEntityFactory = (
