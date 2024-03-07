@@ -17,7 +17,6 @@ export const createContentEntity = (
     type === "md" ? `./content/${path}` : `./${path}`,
     entryLink,
     sectionName,
-
     type === "md" ? clearedContent : marked.parse(clearedContent),
     metadata.title ? ContentType.CONTENT : ContentType.COLLECTION,
     metadata.sort || null,
