@@ -162,16 +162,9 @@ export const generateStatic = async (
     await fs.writeFile.apply(outputBucket[index]);
   }
 
-  if (type === "md")
-    await generateGlobalIndex(
-      allContentWithSections,
-      path.join(outputFolder, "../readme.md"),
-      "md"
-    );
-  if (type === "html")
-    await generateGlobalIndex(
-      allContentWithSections,
-      path.join(outputFolder, "index.html"),
-      "html"
-    );
+  await generateGlobalIndex(
+    allContentWithSections,
+    path.join(outputFolder, type === "md" ? "../readme.md" : "index.html"),
+    type
+  );
 };
