@@ -29,62 +29,75 @@ export const generateStatic = async (
 
   logger.info(GENERATE_STATIC_INIT);
 
+  const parseFile = async (
+    file: any,
+    folderPath: any,
+    sectionOutputFolder: any,
+    sectionName: any
+  ) => {
+    const filePath = path.join(folderPath, file);
+
+    if (path.extname(file) === ".md") {
+      const markdownContent = await fs.readFile(filePath, "utf-8");
+      const { metadata, content }: any = parseMd(markdownContent);
+
+      if (metadata.languages?.length > 0) {
+        lm.setFromArr(metadata.languages);
+      }
+
+      const entryName = file.replace(/\.[^.]+$/, "");
+      const entryLink = `./${entryName}.` + type;
+
+      const entryOutputPath = path.join(
+        sectionOutputFolder,
+        `${entryName}.${type}`
+      );
+
+      createSectionFile(
+        entryOutputPath,
+        type === "md" ? markdownContent : content,
+        type
+      );
+
+      allContentWithSections.push(
+        createContentEntity(
+          metadata,
+          sectionName,
+          type,
+          entryName,
+          entryLink,
+          content
+        )
+      );
+    }
+  };
+
+  const parseFolder = async (folder: any, folderPath: any) => {
+    const sectionName = folder.replace(/ /g, "-");
+    const sectionOutputFolder = path.join(outputFolder, sectionName);
+    await fs.mkdirp(sectionOutputFolder);
+
+    const files = await fs.readdir(folderPath);
+
+    for (const file of files) {
+      await parseFile(file, folderPath, sectionOutputFolder, sectionName);
+    }
+
+    await fs.writeFile(
+      path.join(sectionOutputFolder, "index." + type),
+      await buildLinksList(
+        allContentWithSections.filter(
+          (e: ContentEntity) => e.section === sectionName
+        ),
+        type
+      )
+    );
+  };
+
   for (const folder of folders) {
     const folderPath = path.join(rootFolder, folder);
     if (fs.statSync(folderPath).isDirectory()) {
-      const sectionName = folder.replace(/ /g, "-");
-      const sectionOutputFolder = path.join(outputFolder, sectionName);
-      await fs.mkdirp(sectionOutputFolder);
-
-      const files = await fs.readdir(folderPath);
-
-      for (const file of files) {
-        const filePath = path.join(folderPath, file);
-
-        if (path.extname(file) === ".md") {
-          const markdownContent = await fs.readFile(filePath, "utf-8");
-          const { metadata, content }: any = parseMd(markdownContent);
-
-          if (metadata.languages?.length > 0) {
-            lm.setFromArr(metadata.languages);
-          }
-
-          const entryName = file.replace(/\.[^.]+$/, "");
-          const entryLink = `./${entryName}.` + type;
-
-          const entryOutputPath = path.join(
-            sectionOutputFolder,
-            `${entryName}.${type}`
-          );
-
-          createSectionFile(
-            entryOutputPath,
-            type === "md" ? markdownContent : content,
-            type
-          );
-
-          allContentWithSections.push(
-            createContentEntity(
-              metadata,
-              sectionName,
-              type,
-              entryName,
-              entryLink,
-              content
-            )
-          );
-        }
-      }
-
-      await fs.writeFile(
-        path.join(sectionOutputFolder, "index." + type),
-        await buildLinksList(
-          allContentWithSections.filter(
-            (e: ContentEntity) => e.section === sectionName
-          ),
-          type
-        )
-      );
+      await parseFolder(folder, folderPath);
     }
   }
 
