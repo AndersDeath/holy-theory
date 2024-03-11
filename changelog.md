@@ -4,6 +4,7 @@ All notable changes to this project will be documented in this file.
 # [0.0.61] - In progress
 * update builder
 * update server
+* add algorithm Handbook Introduction draft
 # [0.0.60] - 2025-03-04
 * finished binary search
 * finished ternary search
