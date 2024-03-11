@@ -46,15 +46,9 @@ export const generateStatic = async (
       }
 
       const entryName = file.replace(/\.[^.]+$/, "");
-      const entryLink = `./${entryName}.` + type;
-
-      const entryOutputPath = path.join(
-        sectionOutputFolder,
-        `${entryName}.${type}`
-      );
 
       createSectionFile(
-        entryOutputPath,
+        path.join(sectionOutputFolder, `${entryName}.${type}`),
         type === "md" ? markdownContent : content,
         type
       );
@@ -65,7 +59,7 @@ export const generateStatic = async (
           sectionName,
           type,
           entryName,
-          entryLink,
+          `./${entryName}.` + type,
           content
         )
       );
