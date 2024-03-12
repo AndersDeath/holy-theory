@@ -9,47 +9,53 @@ languages: ["javascript"]
 In JavaScript, `var`, `let`, and `const` are used to declare variables, but they have different scoping rules and behaviors. Here's a breakdown of their differences:
 
 1. **`var`:**
+
    - `var` declarations are globally scoped or function scoped.
    - They are hoisted to the top of their scope and can be accessed before the declaration.
    - `var` variables can be reassigned and updated.
 
    Example:
+
    ```javascript
    function example() {
-       if (true) {
-           var x = 10;
-       }
-       console.log(x); // Outputs 10, because var is function scoped
+     if (true) {
+       var x = 10;
+     }
+     console.log(x); // Outputs 10, because var is function scoped
    }
    ```
 
 2. **`let`:**
+
    - `let` declarations are block-scoped (limited to the block, statement, or expression where it is defined).
    - They are hoisted to the top of their scope but are not initialized until the interpreter reaches the declaration.
    - `let` variables can be reassigned, but they cannot be redeclared in the same scope.
 
    Example:
+
    ```javascript
    function example() {
-       if (true) {
-           let x = 10;
-           console.log(x); // Outputs 10, because let is block scoped
-       }
-       console.log(x); // Error: x is not defined outside the block
+     if (true) {
+       let x = 10;
+       console.log(x); // Outputs 10, because let is block scoped
+     }
+     console.log(x); // Error: x is not defined outside the block
    }
    ```
 
 3. **`const`:**
+
    - `const` declarations are also block-scoped.
    - They must be initialized during declaration and cannot be reassigned to a different value after initialization.
    - Like `let`, `const` declarations are hoisted to the top of their scope but are not initialized until the interpreter reaches the declaration.
 
    Example:
+
    ```javascript
    function example() {
-       const x = 10;
-       console.log(x); // Outputs 10, const variables cannot be reassigned
-       x = 20; // Error: Assignment to constant variable
+     const x = 10;
+     console.log(x); // Outputs 10, const variables cannot be reassigned
+     x = 20; // Error: Assignment to constant variable
    }
    ```
 

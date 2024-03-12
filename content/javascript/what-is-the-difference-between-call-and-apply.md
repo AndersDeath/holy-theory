@@ -1,8 +1,9 @@
 ---
 title: What is the difference between Call and Apply?
-tags: ['question', 'interview']
-languages: ['javascript']
+tags: ["question", "interview"]
+languages: ["javascript"]
 ---
+
 # What is the difference between Call and Apply?
 
 `call()` and `apply()` are two methods in JavaScript that allow you to invoke a function with a specified `this` value and arguments. They are similar in purpose but differ in how they accept arguments.
@@ -12,6 +13,7 @@ languages: ['javascript']
 The `call()` method calls a function with a given `this` value and individual arguments passed one by one.
 
 **Syntax:**
+
 ```javascript
 functionName.call(thisValue, arg1, arg2, ...);
 ```
@@ -21,16 +23,17 @@ functionName.call(thisValue, arg1, arg2, ...);
 - **`arg1, arg2, ...`**: The arguments to be passed to the function individually.
 
 **Example:**
+
 ```javascript
 function greet(message) {
-    console.log(`${message}, ${this.name}!`);
+  console.log(`${message}, ${this.name}!`);
 }
 
 const person = {
-    name: 'John'
+  name: "John",
 };
 
-greet.call(person, 'Hello');
+greet.call(person, "Hello");
 // Output: Hello, John!
 ```
 
@@ -41,6 +44,7 @@ In this example, `call()` is used to invoke the `greet` function with `person` o
 The `apply()` method is similar to `call()`, but it accepts arguments as an array.
 
 **Syntax:**
+
 ```javascript
 functionName.apply(thisValue, [arg1, arg2, ...]);
 ```
@@ -50,16 +54,17 @@ functionName.apply(thisValue, [arg1, arg2, ...]);
 - **`[arg1, arg2, ...]`**: An array or array-like object containing the arguments to be passed to the function.
 
 **Example:**
+
 ```javascript
 function introduce(greeting, age) {
-    console.log(`${greeting}, I am ${this.name} and I am ${age} years old.`);
+  console.log(`${greeting}, I am ${this.name} and I am ${age} years old.`);
 }
 
 const person = {
-    name: 'Alice'
+  name: "Alice",
 };
 
-introduce.apply(person, ['Hi', 30]);
+introduce.apply(person, ["Hi", 30]);
 // Output: Hi, I am Alice and I am 30 years old.
 ```
 
@@ -68,6 +73,7 @@ In this example, `apply()` is used to invoke the `introduce` function with `pers
 ### Differences:
 
 1. **Argument Format**:
+
    - `call()` accepts arguments individually.
    - `apply()` accepts arguments as an array.
 
