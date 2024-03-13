@@ -11,14 +11,14 @@ Selection sort is a simple and efficient sorting algorithm that works by repeate
 
 ## How it works:
 
-**Step 1:** Initialization - Start with an unsorted list/array of elements.
+**Step 1:** Start with an unsorted list/array of elements.
 
-**Step 2:** Iteration - Repeat until the entire list is sorted: Find the minimum element in the unsorted portion and swap the minimum element with the leftmost unsorted element.
-**Step 3:** Update - Move the boundary between the sorted and unsorted portions one position to the right.
+**Step 2:** Repeat until the entire list is sorted: Find the minimum element in the unsorted portion and swap the minimum element with the leftmost unsorted element.
+**Step 3:** Move the boundary between the sorted and unsorted portions one position to the right.
 
-**Step 4:** Repeat - Continue this process until the entire list is sorted.
+**Step 4:** Continue this process until the entire list is sorted.
 
-**Step 5:** Completion - Once all elements are sorted, the process ends, and you have a fully sorted list.
+**Step 5:** Once all elements are sorted, the process ends, and you have a fully sorted list.
 
 ## Key Characteristics:
 
