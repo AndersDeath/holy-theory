@@ -3,6 +3,7 @@
 All notable changes to this project will be documented in this file.
 # [0.0.62] - In progress
 * update selection sort
+* add How to organize communication between microservices? question
 
 # [0.0.61] - 2025-03-11
 * update builder
