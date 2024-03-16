@@ -34,10 +34,10 @@
 </ul>
 <p>Example:</p>
 <pre><code class="hljs language-javascript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">example</span>(<span class="hljs-params"></span>) {
-    <span class="hljs-keyword">if</span> (<span class="hljs-literal">true</span>) {
-        <span class="hljs-keyword">var</span> x = <span class="hljs-number">10</span>;
-    }
-    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(x); <span class="hljs-comment">// Outputs 10, because var is function scoped</span>
+  <span class="hljs-keyword">if</span> (<span class="hljs-literal">true</span>) {
+    <span class="hljs-keyword">var</span> x = <span class="hljs-number">10</span>;
+  }
+  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(x); <span class="hljs-comment">// Outputs 10, because var is function scoped</span>
 }
 </code></pre></li>
 <li><p><strong><code>let</code>:</strong></p>
@@ -48,11 +48,11 @@
 </ul>
 <p>Example:</p>
 <pre><code class="hljs language-javascript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">example</span>(<span class="hljs-params"></span>) {
-    <span class="hljs-keyword">if</span> (<span class="hljs-literal">true</span>) {
-        <span class="hljs-keyword">let</span> x = <span class="hljs-number">10</span>;
-        <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(x); <span class="hljs-comment">// Outputs 10, because let is block scoped</span>
-    }
-    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(x); <span class="hljs-comment">// Error: x is not defined outside the block</span>
+  <span class="hljs-keyword">if</span> (<span class="hljs-literal">true</span>) {
+    <span class="hljs-keyword">let</span> x = <span class="hljs-number">10</span>;
+    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(x); <span class="hljs-comment">// Outputs 10, because let is block scoped</span>
+  }
+  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(x); <span class="hljs-comment">// Error: x is not defined outside the block</span>
 }
 </code></pre></li>
 <li><p><strong><code>const</code>:</strong></p>
@@ -63,9 +63,9 @@
 </ul>
 <p>Example:</p>
 <pre><code class="hljs language-javascript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">example</span>(<span class="hljs-params"></span>) {
-    <span class="hljs-keyword">const</span> x = <span class="hljs-number">10</span>;
-    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(x); <span class="hljs-comment">// Outputs 10, const variables cannot be reassigned</span>
-    x = <span class="hljs-number">20</span>; <span class="hljs-comment">// Error: Assignment to constant variable</span>
+  <span class="hljs-keyword">const</span> x = <span class="hljs-number">10</span>;
+  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(x); <span class="hljs-comment">// Outputs 10, const variables cannot be reassigned</span>
+  x = <span class="hljs-number">20</span>; <span class="hljs-comment">// Error: Assignment to constant variable</span>
 }
 </code></pre></li>
 </ol>
