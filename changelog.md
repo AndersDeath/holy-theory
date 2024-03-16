@@ -5,6 +5,7 @@ All notable changes to this project will be documented in this file.
 * update selection sort
 * add How to organize communication between microservices? question
 * add Redis and the Big Data Problem question
+* update static html and md versions
 
 # [0.0.61] - 2025-03-11
 * update builder
