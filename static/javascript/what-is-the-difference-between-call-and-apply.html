@@ -36,14 +36,14 @@
 </ul>
 <p><strong>Example:</strong></p>
 <pre><code class="hljs language-javascript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">greet</span>(<span class="hljs-params">message</span>) {
-    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">`<span class="hljs-subst">${message}</span>, <span class="hljs-subst">${<span class="hljs-variable language_">this</span>.name}</span>!`</span>);
+  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">`<span class="hljs-subst">${message}</span>, <span class="hljs-subst">${<span class="hljs-variable language_">this</span>.name}</span>!`</span>);
 }
 
 <span class="hljs-keyword">const</span> person = {
-    <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;John&#x27;</span>
+  <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;John&quot;</span>,
 };
 
-greet.<span class="hljs-title function_">call</span>(person, <span class="hljs-string">&#x27;Hello&#x27;</span>);
+greet.<span class="hljs-title function_">call</span>(person, <span class="hljs-string">&quot;Hello&quot;</span>);
 <span class="hljs-comment">// Output: Hello, John!</span>
 </code></pre><p>In this example, <code>call()</code> is used to invoke the <code>greet</code> function with <code>person</code> object as the <code>this</code> value and <code>&#39;Hello&#39;</code> as the argument.</p>
 <h3 id="apply"><code>apply()</code></h3>
@@ -57,14 +57,14 @@ greet.<span class="hljs-title function_">call</span>(person, <span class="hljs-s
 </ul>
 <p><strong>Example:</strong></p>
 <pre><code class="hljs language-javascript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">introduce</span>(<span class="hljs-params">greeting, age</span>) {
-    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">`<span class="hljs-subst">${greeting}</span>, I am <span class="hljs-subst">${<span class="hljs-variable language_">this</span>.name}</span> and I am <span class="hljs-subst">${age}</span> years old.`</span>);
+  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">`<span class="hljs-subst">${greeting}</span>, I am <span class="hljs-subst">${<span class="hljs-variable language_">this</span>.name}</span> and I am <span class="hljs-subst">${age}</span> years old.`</span>);
 }
 
 <span class="hljs-keyword">const</span> person = {
-    <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Alice&#x27;</span>
+  <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Alice&quot;</span>,
 };
 
-introduce.<span class="hljs-title function_">apply</span>(person, [<span class="hljs-string">&#x27;Hi&#x27;</span>, <span class="hljs-number">30</span>]);
+introduce.<span class="hljs-title function_">apply</span>(person, [<span class="hljs-string">&quot;Hi&quot;</span>, <span class="hljs-number">30</span>]);
 <span class="hljs-comment">// Output: Hi, I am Alice and I am 30 years old.</span>
 </code></pre><p>In this example, <code>apply()</code> is used to invoke the <code>introduce</code> function with <code>person</code> object as the <code>this</code> value and <code>[&#39;Hi&#39;, 30]</code> as the arguments passed in an array.</p>
 <h3 id="differences">Differences:</h3>

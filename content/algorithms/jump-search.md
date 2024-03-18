@@ -71,7 +71,7 @@ The time complexity of Jump Search is -add formula-,, where-add formula-, is the
 
 ![Jump search](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/jump-search.png)
 
-## Example: 
+## Example:
 
 ```typescript
 function jumpSearch(arr: number[], target: number): number {
