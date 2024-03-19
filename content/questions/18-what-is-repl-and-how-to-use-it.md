@@ -19,14 +19,16 @@ In TypeScript, you can utilize the TypeScript Playground, an online REPL environ
 
 2. **Write TypeScript Code:**
    In the left pane, you can write TypeScript code directly. For example:
+
    ```typescript
    function greet(name: string): string {
-       return `Hello, ${name}!`;
+     return `Hello, ${name}!`;
    }
 
    const message: string = greet("TypeScript");
    console.log(message);
    ```
+
 3. **Observe Compilation and Output:**
    As you type, the TypeScript Playground will compile your code in real-time. The compiled JavaScript code appears in the right pane. You can also see the output in the console at the bottom.
 
