@@ -1,8 +1,9 @@
 ---
 title: What is stress test?
-tags: ['question', 'interview', 'theory', 'computer-science', 'testing']
-languages: ['']
+tags: ["question", "interview", "theory", "computer-science", "testing"]
+languages: [""]
 ---
+
 # What is stress test?
 
 In software engineering, a stress test refers to a type of performance testing that evaluates the behavior and stability of a software system under extreme or stressful conditions. The purpose of a stress test is to assess the system's ability to handle high loads, heavy traffic, or resource-intensive scenarios.
@@ -18,4 +19,4 @@ The stress test simulates conditions that go beyond the typical usage patterns a
 
 By conducting stress tests, software engineers can proactively identify and address performance issues, scalability limitations, and architectural flaws before they impact the system's stability, user experience, or overall business operations. The insights gained from stress testing can inform optimization efforts, capacity planning, and infrastructure adjustments to ensure the software system meets performance requirements and can withstand stressful conditions in production environments.
 
-* [Go back](../readme.md)
+- [Go back](../readme.md)
