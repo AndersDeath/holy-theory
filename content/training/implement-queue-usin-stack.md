@@ -1,42 +1,43 @@
 ---
 title: Implement Queue using Stacks
-tags: ['training', 'task']
-languages: ['typescript']
+tags: ["training", "task"]
+languages: ["typescript"]
 ---
+
 # Implement Queue using Stacks
 
 ```typescript
 class MyQueue {
-    stack1: number[] = [];
-    stack2: number[] = [];
+  stack1: number[] = [];
+  stack2: number[] = [];
 
-    constructor() {}
+  constructor() {}
 
-    push(x: number): void {
-        this.stack1.push(x);
+  push(x: number): void {
+    this.stack1.push(x);
+  }
+
+  pop(): number {
+    this.move();
+    return this.stack2.pop();
+  }
+
+  peek(): number {
+    this.move();
+    return this.stack2[this.stack2.length - 1];
+  }
+
+  empty(): boolean {
+    return !this.stack1.length && !this.stack2.length;
+  }
+
+  move(): void {
+    if (!this.stack2.length) {
+      while (this.stack1.length) {
+        this.stack2.push(this.stack1.pop());
+      }
     }
-
-    pop(): number {
-        this.move();
-        return this.stack2.pop();
-    }
-
-    peek(): number {
-        this.move();
-        return this.stack2[this.stack2.length - 1];
-    }
-
-    empty(): boolean {
-        return !this.stack1.length && !this.stack2.length;
-    }
-
-    move(): void {
-        if (!this.stack2.length) {
-            while (this.stack1.length) {
-                this.stack2.push(this.stack1.pop());
-            }
-        }
-    }
+  }
 }
 
 /**
@@ -68,8 +69,9 @@ Here's a step-by-step explanation of the code:
 7. The `move` method is a private helper function used to transfer elements from `stack1` to `stack2`. It is called by `pop` and `peek` methods when needed. The purpose of this method is to maintain the correct order of elements in the queue, allowing efficient front element retrieval.
 
 Techniques used in this code include:
+
 - Implementing a queue using two stacks to efficiently perform queue operations (enqueue, dequeue, and peek).
 - Utilizing the LIFO (Last-In-First-Out) property of stacks to reverse the order of elements when moving them from `stack1` to `stack2`.
 - Ensuring that elements are moved to `stack2` only when necessary (on calls to `pop` and `peek`) to avoid unnecessary element transfers.
-  
+
 * [Go back](../readme.md)

@@ -1,8 +1,9 @@
 ---
 title: Cumulative Sum
-tags: ['training', 'task']
-languages: ['java']
+tags: ["training", "task"]
+languages: ["java"]
 ---
+
 # Cumulative Sum
 
 ```java
@@ -32,6 +33,7 @@ Step-by-step breakdown of the code:
 4. Iterate through each element of the input array `arr` using a for loop.
 
 5. Inside the loop:
+
    - Add the current element `arr[i]` to the `total` variable, updating the running sum.
    - Assign the value of `total` to the corresponding index `out[i]` in the output array.
 
@@ -51,5 +53,4 @@ Summary:
 
 The provided solution efficiently calculates the cumulative sum of the input array by iteratively summing up the elements and storing the cumulative sum at each index in a new array. This approach allows for quick access to the cumulative sum at any given index.
 
-
-* [Go back](../readme.md)
+- [Go back](../readme.md)
