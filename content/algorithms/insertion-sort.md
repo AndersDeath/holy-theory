@@ -17,7 +17,7 @@ Insertion Sort is a straightforward sorting algorithm that builds the sorted arr
 
 **Step 3:** For each unsorted element, compare the current element with the elements before it
 
-**Step 4:** If the current element is greater than its preceding element, leave it there, as it is already at the desired position. If not, keep comparing it with the elements before it until a smaller or equal element is found: Insert the current element after and all comparisons are made, and no smaller element is found: Insert the current element at the beginning of the array
+**Step 4:** If the current element is greater than its preceding one, leave it there, as it is already at the desired position. If not, keep comparing it with the elements before it until a smaller or equal one is found: Insert the current element after and all comparisons are made, and no smaller one is found: Insert the current item at the beginning of the array
 
 **Step 5:** Repeat the above process for every element of the unsorted subarray until the array is sorted
 
@@ -27,7 +27,7 @@ Insertion Sort is a straightforward sorting algorithm that builds the sorted arr
 
 **In-place Sorting**: It sorts elements by moving them within the array, without requiring additional storage space.
 
-**Stable**: The algorithm is a stable sorting algorithm, meaning that it preserves the relative order of equal elements.
+**Stable**: It is a stable sorting algorithm, meaning that it preserves the relative order of equal elements.
 
 **Adaptive**: Insertion sort is adaptive to some extent. If the input list is almost sorted, it can perform better than its worst-case time complexity.
 
@@ -35,7 +35,7 @@ Insertion Sort is a straightforward sorting algorithm that builds the sorted arr
 
 **Simple Implementation**: It is straightforward to implement and understand, making it a good choice for educational purposes or for sorting small lists.
 
-**Efficient for Nearly Sorted Data**: Insertion sort performs well on data that is already partially sorted, as it only requires shifting a few elements to insert a new one.
+**Efficient for Nearly Sorted Data**: The algorithm performs well on data that is already partially sorted, as it only requires shifting a few elements to insert a new one.
 
 ## Applications:
 
@@ -43,7 +43,7 @@ Insertion Sort is a straightforward sorting algorithm that builds the sorted arr
 
 **Nearly Sorted Data**: It performs well on data that is already partially sorted, requiring minimal adjustments to insert new elements.
 
-**Online Algorithms**: Insertion sort can be useful in situations where data is continuously arriving, as it can efficiently incorporate new elements into a sorted list.
+**Online Algorithms**: It can be useful in situations where data is continuously arriving, as it can efficiently incorporate new elements into a sorted list.
 
 **Embedded Systems**: Due to its simple implementation and low memory requirements, Insertion sort is suitable for sorting small arrays in resource-constrained environments, such as embedded systems.
 
@@ -55,7 +55,7 @@ Insertion Sort is a straightforward sorting algorithm that builds the sorted arr
 
 **Time Complexity:**
 
-Insertion Sort has a time complexity of O(n^2) in the worst case, where 'n' is the number of elements in the array. Despite its quadratic time complexity, Insertion Sort is often more efficient on small datasets or partially sorted arrays compared to other quadratic sorting algorithms. It's also an in-place sorting algorithm, meaning it doesn't require additional memory.
+Insertion Sort has a time complexity of O(n^2) in the worst case, where 'n' is the number of elements in the array. Despite its quadratic time complexity, the algorithm is often more efficient on small datasets or partially sorted arrays compared to other quadratic sorting algorithms. It's also an in-place sorting algorithm, meaning it doesn't require additional memory.
 
 ![Insertion sort](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/insertion-sort.png)
 
