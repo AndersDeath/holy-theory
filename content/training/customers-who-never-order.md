@@ -1,8 +1,9 @@
 ---
 title: Customers Who Never Order
-tags: ['training', 'task']
-languages: ['sql']
+tags: ["training", "task"]
+languages: ["sql"]
 ---
+
 # Customers Who Never Order
 
 ```SQL
@@ -43,4 +44,4 @@ Summary:
 
 The provided SQL query retrieves the names of customers from the `Customers` table who do not have any corresponding orders in the `Orders` table. It achieves this by using a subquery with the `NOT IN` operator to exclude customers whose `Id` values exist in the `CustomerId` column of the `Orders` table.
 
-* [Go back](../readme.md)
+- [Go back](../readme.md)

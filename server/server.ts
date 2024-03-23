@@ -1,5 +1,5 @@
 import express, { Express, Request, Response } from "express";
-import { exec, execFile, spawn } from "child_process";
+import { spawn } from "child_process";
 import fs from "fs-extra";
 
 const app: Express = express();

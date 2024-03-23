@@ -1,8 +1,9 @@
 ---
 title: Convert a Number to Hexadecimal
-tags: ['training', 'task', 'tree']
-languages: ['java']
+tags: ["training", "task", "tree"]
+languages: ["java"]
 ---
+
 # Convert a Number to Hexadecimal
 
 ```java
@@ -35,6 +36,7 @@ Below is the step-by-step breakdown of the code:
 5. The code enters a `while` loop that continues until `num` becomes 0.
 
 6. Inside the loop, the code performs the following operations:
+
    - It extracts the last 4 bits of `num` using the bitwise AND operation `num & 15`. The number 15 is represented in binary as 0000 1111, so the AND operation with 15 extracts the rightmost 4 bits.
    - It inserts the hexadecimal character corresponding to the extracted value at the beginning of the `sb` using `sb.insert(0, map[num & 15])`.
    - It right shifts `num` by 4 bits using the logical right shift operator `num >>> 4` to discard the processed bits.

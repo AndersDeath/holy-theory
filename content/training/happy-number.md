@@ -1,32 +1,31 @@
 ---
 title: Happy Number
-tags: ['training', 'task']
-languages: ['typescript']
+tags: ["training", "task"]
+languages: ["typescript"]
 ---
+
 # Happy Number
 
 ```typescript
-
 function isHappy(n: number): boolean {
-    let slow = n;
-    let fast = getNextSum(n);
-    while(fast !== 1 && slow !== fast) {
-        slow = getNextSum(slow);
-        fast = getNextSum(getNextSum(fast));
-    }
-    return fast === 1;
-};
-
-const getNextSum = (number) => {
-    let sum = 0;
-    while(number > 0) {
-        let digit = number % 10;
-        sum += digit * digit;
-        number = Math.floor(number / 10);
-    }
-    return sum;
+  let slow = n;
+  let fast = getNextSum(n);
+  while (fast !== 1 && slow !== fast) {
+    slow = getNextSum(slow);
+    fast = getNextSum(getNextSum(fast));
+  }
+  return fast === 1;
 }
 
+const getNextSum = (number) => {
+  let sum = 0;
+  while (number > 0) {
+    let digit = number % 10;
+    sum += digit * digit;
+    number = Math.floor(number / 10);
+  }
+  return sum;
+};
 ```
 
 The code is an implementation of the "Happy Number" problem. It determines if a given number is a "happy number" or not. A happy number is defined as a number in which the sum of the squares of its digits eventually becomes 1 after a series of calculations. If the sum never becomes 1, it is not a happy number.
@@ -50,6 +49,7 @@ Here's a step-by-step explanation of the code:
 8. If the loop exits because `fast` becomes equal to `slow`, it means that there is a cycle in the sequence of sums, and the number `n` is not a happy number. The function returns `false`.
 
 The techniques used in this code include:
+
 - Mathematical operations to calculate the sum of squares of digits.
 - Looping to iterate through the sequence of sums of squares of digits.
 - Two pointers (slow and fast) to detect cycles in the sequence. This is also known as the Floyd's cycle-finding algorithm, or the "tortoise and hare" algorithm. It's a well-known technique for detecting cycles in linked lists or sequences. In this case, it helps to efficiently determine whether the number is a happy number or not.

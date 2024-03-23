@@ -1,13 +1,13 @@
 ---
 title: Guess Number Higher or Lower
-tags: ['training', 'task']
-languages: ['typescript']
+tags: ["training", "task"]
+languages: ["typescript"]
 ---
+
 # Guess Number Higher or Lower
 
 ```typescript
-
-/** 
+/**
  * Forward declaration of guess API.
  * @param {number} num   your guess
  * @return 	     -1 if num is higher than the picked number
@@ -16,20 +16,19 @@ languages: ['typescript']
  * var guess = function(num) {}
  */
 
-
 function guessNumber(n: number): number {
-    let left = 1, right = n
+  let left = 1,
+    right = n;
 
-    while(left < right) {
-        const mid = left + Math.floor((right-left)/2)
-        const current = guess(mid)
-        if(current === 0) return mid
-        if(current === -1) right = mid
-        else left = mid+1
-    }
-    return left
-};
-
+  while (left < right) {
+    const mid = left + Math.floor((right - left) / 2);
+    const current = guess(mid);
+    if (current === 0) return mid;
+    if (current === -1) right = mid;
+    else left = mid + 1;
+  }
+  return left;
+}
 ```
 
 The code is an implementation of a binary search algorithm to find the number that is guessed correctly within the range of numbers from 1 to `n`. The `guessNumber` function takes an integer `n` as input and returns the correct number.
@@ -57,6 +56,7 @@ Here's a step-by-step explanation of the code:
 10. When the loop ends, the correct number has been found, and the function returns `left`, which holds the correct number.
 
 Techniques used in the code:
+
 - Binary search: The function `guessNumber` uses binary search to efficiently find the correct number by narrowing down the search range in each iteration.
 
 * [Go back](../readme.md)
