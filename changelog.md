@@ -3,6 +3,7 @@
 All notable changes to this project will be documented in this file.
 
 # [0.0.63] - In progress
+* update selection sort
 
 # [0.0.62] - 2025-03-18
 * update selection sort
