@@ -1,12 +1,13 @@
 ---
 title: Design patterns
-tags: ['question', 'interview', 'theory']
-languages: ['']
+tags: ["question", "interview", "theory"]
+languages: [""]
 ---
+
 # Design patterns
 
-
 **Creational Patterns:**
+
 1. **Factory Method:** Creates objects without specifying the exact class by delegating the instantiation to subclasses. Provides a way to create objects based on certain conditions or parameters.
 
 2. **Abstract Factory:** Provides an interface for creating families of related or dependent objects without specifying their concrete classes. Supports creating objects with different implementations but having a common theme.
@@ -17,8 +18,7 @@ languages: ['']
 
 5. **Singleton:** Ensures a class has only one instance and provides a global point of access to it. Useful when you need to have a single shared instance across the entire application.
 
-**Structural Patterns:**
-6. **Adapter:** Converts the interface of one class into another interface that clients expect, making incompatible classes work together.
+**Structural Patterns:** 6. **Adapter:** Converts the interface of one class into another interface that clients expect, making incompatible classes work together.
 
 7. **Bridge:** Decouples an abstraction from its implementation, allowing them to vary independently. Useful when you want to extend a class in two independent dimensions.
 
@@ -32,8 +32,7 @@ languages: ['']
 
 12. **Proxy:** Acts as a placeholder for another object, controlling access to it, and providing additional functionality when required.
 
-**Behavioral Patterns:**
-13. **Chain of Responsibility:** Allows multiple objects to handle a request without specifying the receiver explicitly. The request is passed along the chain until it's handled.
+**Behavioral Patterns:** 13. **Chain of Responsibility:** Allows multiple objects to handle a request without specifying the receiver explicitly. The request is passed along the chain until it's handled.
 
 14. **Command:** Encapsulates a request as an object, allowing parameterization of clients with different requests, queuing of requests, or logging of the requests.
 

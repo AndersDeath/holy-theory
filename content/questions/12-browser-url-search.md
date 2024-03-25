@@ -1,8 +1,9 @@
 ---
 title: Browser URL Search
-tags: ['question', 'interview', 'theory']
-languages: ['']
+tags: ["question", "interview", "theory"]
+languages: [""]
 ---
+
 # Browser URL Search
 
 ## Question
@@ -10,7 +11,6 @@ languages: ['']
 A person settled in front of their laptop, launching a browser before typing a URL into the search bar. What unfolds within the browser at the network level following this action?
 
 ![Browser URL Search](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/12-browser-url-search.png)
-
 
 ## Answer
 
