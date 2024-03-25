@@ -1,22 +1,26 @@
 # Changelog
 
 All notable changes to this project will be documented in this file.
+# [0.0.64] - In progress
 
-# [0.0.63] - In progress
+# [0.0.63] - 2024-03-25
 * update selection sort
+* update insertion sort
+* update styling
+* start working on new platform
 
-# [0.0.62] - 2025-03-18
+# [0.0.62] - 2024-03-18
 * update selection sort
 * add How to organize communication between microservices? question
 * add Redis and the Big Data Problem question
 * update static html and md versions
 
-# [0.0.61] - 2025-03-11
+# [0.0.61] - 2024-03-11
 * update builder
 * update server
 * add algorithm Handbook Introduction draft
 
-# [0.0.60] - 2025-03-04
+# [0.0.60] - 2024-03-04
 * finished binary search
 * finished ternary search
 * finished interpolation search
