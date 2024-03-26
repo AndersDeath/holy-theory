@@ -100,7 +100,6 @@ class DoublyLinkedList<T> {
     this.tail = temp!;
   }
 }
-
 ```
 
 # Doubly Linked Lists

@@ -1,8 +1,9 @@
 ---
 title: Graph
-tags: ['theory', 'structures', 'data structures']
-languages: ['']
+tags: ["theory", "structures", "data structures"]
+languages: [""]
 ---
+
 # Graph
 
 ![Graph](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/graph.png)
