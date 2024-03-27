@@ -1,26 +1,30 @@
 ---
 title: CAP theorem
-tags: ['system design']
-languages: ['']
+tags: ["system design"]
+languages: [""]
 ---
+
 ## CAP theorem
 
 CAP theorem, also known as Brewer's theorem, has become a fundamental principle in the design and operation of distributed systems. Let's delve deeper into each aspect of the theorem and explore real-world examples and implications.
 
 ### 1. **Consistency:**
+
 Consistency in the context of CAP theorem means that all nodes in a distributed system have the same data at any given point in time. Ensuring consistency often involves coordination and synchronization between nodes. Strongly consistent systems guarantee that once a piece of data is written, all subsequent reads will return that value.
 
-   - **Example:** Traditional relational databases (like MySQL, PostgreSQL) often prioritize consistency. When a transaction is committed, the database ensures that the changes are immediately visible to all subsequent queries.
+- **Example:** Traditional relational databases (like MySQL, PostgreSQL) often prioritize consistency. When a transaction is committed, the database ensures that the changes are immediately visible to all subsequent queries.
 
 ### 2. **Availability:**
+
 Availability refers to the ability of the system to respond to every request, without any downtime. Highly available systems remain operational and responsive, even in the face of failures.
 
-   - **Example:** NoSQL databases like Cassandra and Couchbase emphasize availability. They are designed to operate without interruption even if some of their nodes fail, ensuring that the service is always accessible.
+- **Example:** NoSQL databases like Cassandra and Couchbase emphasize availability. They are designed to operate without interruption even if some of their nodes fail, ensuring that the service is always accessible.
 
 ### 3. **Partition Tolerance:**
+
 Partition tolerance means that the system continues to function even if network partitions occur, i.e., if communication between nodes is unreliable or slow. Partition tolerance is crucial for distributed systems because network failures are inevitable in real-world scenarios.
 
-   - **Example:** Distributed systems like Hadoop and Apache Kafka prioritize partition tolerance. They are built to handle network partitions and communication delays between nodes, ensuring the system's stability under adverse network conditions.
+- **Example:** Distributed systems like Hadoop and Apache Kafka prioritize partition tolerance. They are built to handle network partitions and communication delays between nodes, ensuring the system's stability under adverse network conditions.
 
 ### Real-World Scenarios and Trade-Offs:
 

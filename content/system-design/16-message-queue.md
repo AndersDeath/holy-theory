@@ -1,8 +1,9 @@
 ---
 title: Message queue
-tags: ['system design']
-languages: ['']
+tags: ["system design"]
+languages: [""]
 ---
+
 ## Message queue
 
 ![Message queue](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/16-message-queue.png)
@@ -27,4 +28,4 @@ Here's a breakdown of the key components and concepts associated with message qu
 
 Overall, message queues are a fundamental building block in many distributed systems, helping to decouple different components, improve system resilience, and enable efficient communication between services or parts of a system. They are widely used in scenarios like job queues, event-driven architectures, and microservices-based applications.
 
-* [Go back](../readme.md)
+- [Go back](../readme.md)
