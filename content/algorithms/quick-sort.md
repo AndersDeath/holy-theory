@@ -15,7 +15,7 @@ Quick Sort is an efficient, comparison-based sorting algorithm that follows the 
 Select a pivot. It might be any element at random, the first or last element, middle one.
 
 **Step 2:**
-Partition the array around the pivot element. Move all the elements < pivot to the left of the pivot and move all elements >= pivot to the pivot’s right
+Partition the array around the pivot element. Move all the elements that less than pivot to the left of the it and move all elements that more or equal to the right side.
 
 **Step 3:**
 After Step 2, the pivot element is in its correct position
@@ -28,7 +28,7 @@ Stop recursion when array is sorted when reach out the base case. It's an array 
 
 ## Key Characteristics:
 
-**Divide and Conquer**: it is a divide-and-conquer algorithm that partitions the array into smaller sub-arrays, sorts each sub-array recursively, and then combines them to obtain a sorted array.
+**Divide and Conquer**: it is a divide-and-conquer algorithm that partitions the array into smaller sub-arrays, sorts each of them recursively, and then combines them to obtain a sorted array.
 
 **In-place Sorting**: Quick Sort often sorts elements in place within the array, which means it does not require additional memory beyond a few stack frames for recursion.
 
