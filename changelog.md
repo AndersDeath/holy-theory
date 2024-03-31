@@ -7,6 +7,7 @@ All notable changes to this project will be documented in this file.
 * update linear search
 * update jump search
 * update binary search
+* update ternary search
 
 # [0.0.63] - 2024-03-25
 * update selection sort
