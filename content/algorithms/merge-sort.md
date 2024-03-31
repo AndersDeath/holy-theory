@@ -7,19 +7,19 @@ sort: 500
 
 # Merge sort
 
-Merge Sort is a comparison-based sorting algorithm that follows the divide-and-conquer paradigm. It works by dividing the unsorted array into 'n' sub-arrays, each containing one element. It then repeatedly merges these sub-arrays to produce new sorted sub-arrays until there is only one sub-array remaining - the fully sorted array.
+Merge Sort is a comparison-based sorting algorithm that follows the divide-and-conquer paradigm. It works by dividing the unsorted array into 'n' sub-arrays, each containing one element. It then repeatedly merges these sub-arrays to produce new sorted ones until there is only one sub-array remaining - the fully sorted array.
 
 ## How it works:
 
-**Step 1:** Divide - The unsorted array is recursively divided into two halves until each sub-array contains only one element. This is the base case of the recursion.
+**Step 1:** The unsorted array is recursively divided into two halves until each sub-array contains only one element. This is the base case of the recursion.
 
-**Step 2:** Conquer - The adjacent sub-arrays are then recursively merged to produce new sorted sub-arrays. This process continues until there is only one sub-array remaining the fully sorted array.
+**Step 2:** The adjacent sub-arrays are then recursively merged to produce new sorted ones. This process continues until there is only one sub-array remaining the fully sorted array.
 
-**Step 3:** Merge - The key operation in Merge Sort is the merging of two sorted sub-arrays to produce a single, sorted sub-array. This involves comparing elements from the two sub-arrays and placing them in the correct order.
+**Step 3:** The key operation in Merge Sort is the merging of two sorted sub-arrays to produce a single, sorted one. This involves comparing elements from the two sub-arrays and placing them in the correct order.
 
 ## Key Characteristics:
 
-**Divide and Conquer**: Merge Sort is a divide-and-conquer algorithm that breaks down the array into smaller sub-arrays, sorts each sub-array recursively, and then merges them to obtain a sorted array.
+**Divide and Conquer**: Merge Sort is a divide-and-conquer algorithm that breaks down the array into smaller sub-arrays, sorts each of them recursively, and then merges the result to final sorted array.
 
 **Stable Sorting**: It is a stable sorting algorithm, meaning that it preserves the relative order of equal elements during sorting.
 
@@ -39,7 +39,7 @@ Merge Sort is a comparison-based sorting algorithm that follows the divide-and-c
 
 **External Sorting**: It is commonly used in external sorting algorithms where data is too large to fit into memory entirely. It efficiently sorts data stored on external storage devices like hard drives by dividing it into manageable chunks, sorting them in memory, and then merging them back together.
 
-**Network Routing**: The algorithm is utilized in network routing algorithms for organizing and sorting routing tables efficiently. In networking applications, sorting large sets of routing information is crucial for optimizing data transmission and network performance.
+**Network Routing**: Merge sort is utilized in network routing algorithms for organizing and sorting routing tables efficiently. In networking applications, sorting large sets of routing information is crucial for optimizing data transmission and network performance.
 
 **Parallel Processing**: Its divide-and-conquer approach lends itself well to parallel processing. It can be parallelized across multiple processors or threads, allowing for faster sorting of data in parallel computing environments.
 
@@ -48,11 +48,13 @@ Merge Sort is a comparison-based sorting algorithm that follows the divide-and-c
 **Operating Systems**: It is employed in various components of operating systems for tasks like sorting file directories, managing memory allocation, and organizing system resources efficiently.
 
 ## Time Complexity:
+
 Merge Sort has a consistent time complexity of O(n log n) in all cases, where 'n' is the number of elements in the array. It is a stable sorting algorithm, meaning that equal elements maintain their relative order in the sorted output. While Merge Sort has a slightly higher space complexity due to the need for additional memory, its stability and predictable performance make it a widely used and reliable sorting algorithm.
 
 ![Merge sort](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/merge-sort.png)
 
 ## Example:
+
 <!-- ignore start -->
 
 ```java

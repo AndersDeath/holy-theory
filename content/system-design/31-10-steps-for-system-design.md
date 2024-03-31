@@ -6,7 +6,7 @@ languages: [""]
 
 ## 10 steps for system design
 
-Keep in mind that the specifics can vary based on the type of system you're designing (software, hardware, IT, etc.). 
+Keep in mind that the specifics can vary based on the type of system you're designing (software, hardware, IT, etc.).
 
 1. **Define the Problem:** Clearly state the problem your system is going to solve. Understand the requirements and constraints.
 

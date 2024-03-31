@@ -7,13 +7,13 @@ sort: 900
 
 # Ternary search
 
-Ternary Search is a divide-and-conquer algorithm designed for efficiently finding the position of a target value in a sorted array. It operates by dividing the array into three parts and recursively narrowing down the search space until the target is found or determined to be absent.
+Ternary Search is a divide-and-conquer algorithm designed for efficiently finding the position of a target value in a sorted array. It works by separating the array into three parts and recursively narrowing down the search space until the target is found or not.
 
 ## How it Works:
 
-**Step 1:** Ternary Search starts by dividing the sorted array into three parts.
+**Step 1:** Divide the sorted array into three parts.
 
-**Step 2:** Then it compares the target value with the elements at two points within the array, dividing it into three segments. If the target is found at one of these points, the search is successful.
+**Step 2:** Then compare the target value with the elements at two points within the array, separating it into three segments. If the target is found at one of these points, the search is successful.
 
 **Step 3:** Based on the comparisons, Ternary Search identifies whether the target lies in the first, second, or third segment of the array.
 
@@ -29,9 +29,7 @@ Ternary Search is a divide-and-conquer algorithm designed for efficiently findin
 
 **Implementation**: Ternary search can be implemented recursively or iteratively. The recursive implementation is straightforward and elegant, but it might suffer from stack overflow for large input sizes. The iterative implementation, on the other hand, is more efficient in terms of space.
 
-// **Mid-Point Calculation**: In each iteration, ternary search calculates two mid-points (m1 and m2) to divide the search space into three equal parts. The value of the mid-points is calculated as follows: \(m1 = \text{start} + \frac{\text{end} - \text{start}}{3}\) and \(m2 = \text{end} - \frac{\text{end} - \text{start}}{3}\).
-
-**Termination Condition**: Ternary search terminates when the desired element is found, or the search interval becomes too small to divide further. Typically, the termination condition involves comparing the values at the two mid-points to determine which subinterval to continue searching in.
+// **Mid-Point Calculation**: In each iteration, ternary search calculates two mid-points (m1 and m2) to divide the search space into three equal parts. The value of the mid-points is calculated as follows: \(m1 = \text{start} + \frac{\text{end} - \text{start}}{3}\) and \(m2 = \text{end} - \frac{\text{end} - \text{start}}{3}\).n.
 
 // **Space Complexity**: Ternary search has a space complexity of \(O(1)\) since it does not require any extra space proportional to the input size beyond a few variables used for indices and comparison values.
 
@@ -41,19 +39,17 @@ Ternary Search is a divide-and-conquer algorithm designed for efficiently findin
 
 // **Finding a Peak in Peak Finding Problem**: In a 1D peak finding problem where a peak is defined as an element greater than or equal to its neighbors, ternary search can efficiently locate a peak in \(O(\log_3{n})\) time complexity, where \(n\) is the size of the array.
 
-**Optimizing Functions**: Ternary search can be applied in optimization problems where a function needs to be optimized within a certain range. For example, in numerical methods like Newton's method or gradient descent, ternary search can help refine the search for the optimal solution.
+**Optimizing Functions**: Ternary search can be applied in optimization problems where a function needs to be optimized within a certain range. For example, in numerical methods like Newton's one or gradient descent, the algorithm can help refine the search for the optimal solution.
 
-**Searching in Sorted Arrays with Large Number of Comparisons**: Ternary search can be advantageous in scenarios where the number of comparisons required for binary search becomes too high due to the nature of the data. Ternary search reduces the number of comparisons needed by approximately one-third in each iteration, potentially leading to faster search times.
+**Searching in Sorted Arrays with Large Number of Comparisons**: Ternary search can be advantageous in scenarios where the number of comparisons required for binary one becomes too high due to the nature of the data. The algorithm reduces the number of comparisons needed by approximately one-third in each iteration, potentially leading to faster search times.
 
-**Approximate Search**: Ternary search can also be adapted for approximate search tasks where finding an exact match is not necessary. For example, in databases or search engines, ternary search can efficiently narrow down the search space for approximate matches, reducing the computational cost.
+**Approximate Search**: Ternary search can also be adapted for approximate tasks where finding an exact match is not necessary. For example, in databases or search engines, the algorithm can efficiently narrow down the search space for approximate matches, reducing the computational cost.
 
-**Range Queries**: Ternary search can be used in range query problems where the objective is to find an element satisfying certain conditions within a range. By repeatedly dividing the search space into three parts, ternary search can efficiently locate the elements satisfying the given conditions.
-
-**Finding Roots of Equations**: Ternary search can be applied in numerical analysis to find roots of equations within a certain interval. Although methods like Newton's method are more commonly used for this purpose, ternary search can provide an alternative approach, especially when the function is not differentiable or its derivative is difficult to compute.
+**Finding Roots of Equations**: The algorithm can be applied in numerical analysis to find roots of equations within a certain interval. Although methods like Newton's method are more commonly used for this purpose, ternary search can provide an alternative approach, especially when the function is not differentiable or its derivative is difficult to compute.
 
 ## Time Complexity:
 
-Ternary Search has a time complexity of O(log3 n), where 'n' is the size of the array. This is an improvement over binary search when the search space can be significantly reduced at each step. However, it's worth noting that constant factors play a role, and in practice, binary search might be faster for smaller datasets due to simpler arithmetic operations. Ternary Search is particularly beneficial when the dataset is large and the search space can be significantly reduced with each iteration.
+Ternary Search has a time complexity of O(log3 n), where 'n' is the size of the array. This is an improvement over binary search when the search space can be significantly reduced at each step. However, it's worth noting that constant factors play a role, and in practice, binary search might be faster for smaller datasets due to simpler arithmetic operations. Ternary Search is particularly beneficial when the dataset is large and the space can be significantly reduced with each iteration.
 
 ![Ternary search](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/ternary-search.png)
 

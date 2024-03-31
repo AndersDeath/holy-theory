@@ -1,13 +1,16 @@
 ---
 title: Tree
-tags: ['theory', 'structures', 'data structures']
-languages: ['javascript']
+tags: ["theory", "structures", "data structures"]
+languages: ["javascript"]
 ---
+
 # Tree
+
 ![Tree1](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/tree1.png)
 ![Tree2](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/tree2.png)
 
 ## Tree
+
 ```javascript
 class Tree {
   constructor() {
@@ -25,7 +28,7 @@ class Tree {
   add(value, parentValue) {
     let newNode = {
       value,
-      children: []
+      children: [],
     };
 
     if (this.root === null) {
@@ -33,7 +36,7 @@ class Tree {
       return;
     }
 
-    this.traverse(node => {
+    this.traverse((node) => {
       if (node.value === parentValue) {
         node.children.push(newNode);
       }
@@ -45,9 +48,7 @@ class Tree {
 ## Binary search tree
 
 ```javascript
-
 class BinarySearchTree {
-
   constructor() {
     this.root = null;
   }
@@ -56,13 +57,10 @@ class BinarySearchTree {
     let current = this.root;
 
     while (current) {
-
       if (value > current.value) {
         current = current.right;
-
       } else if (value < current.value) {
         current = current.left;
-
       } else {
         return true;
       }
@@ -75,7 +73,7 @@ class BinarySearchTree {
     let node = {
       value: value,
       left: null,
-      right: null
+      right: null,
     };
 
     if (this.root === null) {
@@ -86,30 +84,24 @@ class BinarySearchTree {
     let current = this.root;
 
     while (true) {
-
       if (value > current.value) {
-
         if (!current.right) {
           current.right = node;
           break;
         }
 
         current = current.right;
-
       } else if (value < current.value) {
-
         if (!current.left) {
           current.left = node;
           break;
         }
 
         current = current.left;
-
       } else {
         break;
       }
     }
   }
 }
-
 ```

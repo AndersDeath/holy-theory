@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 # [0.0.64] - In progress
+* update quick sort
+* update merge sort
+* update linear search
+* update jump search
+* update binary search
+* update ternary search
+* update interpolation search
 
 # [0.0.63] - 2024-03-25
 * update selection sort

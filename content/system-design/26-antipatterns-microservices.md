@@ -1,8 +1,9 @@
 ---
 title: Common anti-patterns in microservices architecture
-tags: ['system design']
-languages: ['']
+tags: ["system design"]
+languages: [""]
 ---
+
 ## Common anti-patterns in microservices architecture
 
 ![Common anti-patterns in microservices architecture](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/26-antipatterns-microservices.png)
@@ -37,4 +38,4 @@ languages: ['']
 
 15. **Lack of Governance and Documentation:** Insufficient governance processes, documentation, and guidelines for designing, implementing, and evolving microservices, resulting in inconsistencies and difficulty in maintaining the architecture over time.
 
-* [Go back](../readme.md)
+- [Go back](../readme.md)

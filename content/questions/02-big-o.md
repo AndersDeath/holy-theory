@@ -1,8 +1,9 @@
 ---
 title: Big O
-tags: ['question', 'interview', 'theory', 'computer-science']
-languages: ['']
+tags: ["question", "interview", "theory", "computer-science"]
+languages: [""]
 ---
+
 # Big O
 
 ![Big O](https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/02-big-o.png)
