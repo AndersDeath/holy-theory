@@ -1,7 +1,10 @@
 # Changelog
 
 All notable changes to this project will be documented in this file.
-# [0.0.64] - In progress
+
+# [0.0.65] - In progress
+
+# [0.0.64] - 2024-04-01
 * update quick sort
 * update merge sort
 * update linear search
