@@ -1,8 +1,9 @@
 ---
 title: Tenth Line
-tags: ['training', 'task']
-languages: ['bash']
+tags: ["training", "task"]
+languages: ["bash"]
 ---
+
 # Tenth Line
 
 ```bash
