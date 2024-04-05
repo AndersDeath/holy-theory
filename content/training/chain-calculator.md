@@ -1,34 +1,35 @@
 ---
 title: Chain calculator
-tags: ['training', 'task']
-languages: ['typescript']
+tags: ["training", "task"]
+languages: ["typescript"]
 ---
+
 # Chain calculator
 
 ```typescript
 function ChainCalculator(given) {
-    this.num = given || 0;
-    const actions = {
-        half: ['this.num = this.num/2; return this;'],
-        quarter: ['this.num = this.num/4; return this;'],
-        third: ['this.num = this.num/3; return this;'],
-        pow: ['given', 'this.num = Math.pow(this.num, given); return this;'],
-        sqrt: ['this.num = Math.sqrt(this.num); return this;'],
-        log: [`console.log(this.num); return this;`],
-        sum: ['given',`this.num += given; return this;`],
-        minus: ['given',`this.num -= given; return this;`],
-        multiply: ['given',`this.num *= given; return this;`],
-        divide: ['given',`this.num /= given; return this;`],
-        finish: ['return this.num;']
-    }
+  this.num = given || 0;
+  const actions = {
+    half: ["this.num = this.num/2; return this;"],
+    quarter: ["this.num = this.num/4; return this;"],
+    third: ["this.num = this.num/3; return this;"],
+    pow: ["given", "this.num = Math.pow(this.num, given); return this;"],
+    sqrt: ["this.num = Math.sqrt(this.num); return this;"],
+    log: [`console.log(this.num); return this;`],
+    sum: ["given", `this.num += given; return this;`],
+    minus: ["given", `this.num -= given; return this;`],
+    multiply: ["given", `this.num *= given; return this;`],
+    divide: ["given", `this.num /= given; return this;`],
+    finish: ["return this.num;"],
+  };
 
-    for(const key in actions) {
-        this[key] = new Function(...actions[key])
-    }
+  for (const key in actions) {
+    this[key] = new Function(...actions[key]);
+  }
 }
 const calculator = new ChainCalculator();
 
-calculator.log().sum(15).log().sum(10).log().finish().log()
+calculator.log().sum(15).log().sum(10).log().finish().log();
 ```
 
 The code above defines a `ChainCalculator` constructor function that creates calculator objects with chainable operations. The calculator can perform various mathematical operations on a number value and supports method chaining. The operations are defined as properties of the calculator object, and each operation returns the calculator object itself, allowing for sequential method calls.
@@ -69,5 +70,4 @@ Here's a step-by-step breakdown of the code:
 
 Please note that the code provided uses the `Function` constructor to dynamically create functions from code strings. While this approach offers flexibility, it can also be potentially unsafe if the code strings come from untrusted sources. It's important to ensure that the code strings used in this manner are secure and not susceptible to code injection vulnerabilities.
 
-
-* [Go back](../readme.md)
+- [Go back](../readme.md)

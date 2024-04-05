@@ -1,44 +1,44 @@
 ---
 title: Balanced brackets
-tags: ['training', 'task']
-languages: ['typescript']
+tags: ["training", "task"]
+languages: ["typescript"]
 ---
-# Balanced brackets
-```typescript
 
+# Balanced brackets
+
+```typescript
 const tokens = {
-    '{': '}',
-    '[': ']',
-    '(': ')'
-}
+  "{": "}",
+  "[": "]",
+  "(": ")",
+};
 function isOpenTerm(s) {
-    return tokens[s];
+  return tokens[s];
 }
 
 function matches(first, second) {
-    for(let item in tokens) {
-        if(item === first) {
-           return tokens[item] === second
-       } 
+  for (let item in tokens) {
+    if (item === first) {
+      return tokens[item] === second;
     }
-    return false;
+  }
+  return false;
 }
 
 function isBalanced(s) {
-    // Write your code here
-   const stack = [];
-   for(let i = 0; i < s.length; i++) {
-       if(isOpenTerm(s[i])) {
-           stack.push(s[i]);
-       } else {
-           if(stack.length === 0 || !matches(stack.pop(), s[i])) {
-               return 'NO';
-           }
-       }
-   }
-   return stack.length === 0 ? 'YES' : 'NO'
+  // Write your code here
+  const stack = [];
+  for (let i = 0; i < s.length; i++) {
+    if (isOpenTerm(s[i])) {
+      stack.push(s[i]);
+    } else {
+      if (stack.length === 0 || !matches(stack.pop(), s[i])) {
+        return "NO";
+      }
+    }
+  }
+  return stack.length === 0 ? "YES" : "NO";
 }
-
 ```
 
 **Solution:**
@@ -47,11 +47,13 @@ Below are the step-by-step explanations of the code:
 1. The `tokens` object is defined, which maps opening parentheses, braces, and brackets to their corresponding closing counterparts.
 
 2. The `isOpenTerm` function is defined, which takes one parameter:
+
    - `s`: a character representing an opening term.
 
 3. The `isOpenTerm` function returns the corresponding closing term from the `tokens` object by accessing `tokens[s]`. If the opening term exists in the `tokens` object, its corresponding closing term is returned; otherwise, `undefined` is returned.
 
 4. The `matches` function is defined, which takes two parameters:
+
    - `first`: a character representing an opening term.
    - `second`: a character representing a closing term.
 
@@ -60,6 +62,7 @@ Below are the step-by-step explanations of the code:
 6. If no match is found in the `tokens` object, the `matches` function returns `false`.
 
 7. The `isBalanced` function is defined, which takes one parameter:
+
    - `s`: a string of parentheses, braces, and brackets.
 
 8. A stack data structure, `stack`, is initialized as an empty array. It will be used to track opening terms.
@@ -84,4 +87,5 @@ The following techniques are utilized within the code:
 6. Returning results based on conditions.
 
 ** Source: http://hackerrank.com**
-* [Go back](../readme.md)
+
+- [Go back](../readme.md)

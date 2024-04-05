@@ -1,33 +1,34 @@
 ---
 title: Assign Cookies
-tags: ['training', 'task']
-languages: ['typescript']
+tags: ["training", "task"]
+languages: ["typescript"]
 ---
+
 # Assign Cookies
 
 ```typescript
 function findContentChildren(g: number[], s: number[]): number {
-    const sortedG: number[] = g.sort((a,b) => a-b);
-    const sortedS: number[] = s.sort((a,b) => a-b);
-    let gCount: number = 0;
-    let sCount: number = 0;
-    while(gCount < sortedG.length && sCount < sortedS.length) {
-        if(sortedG[gCount] <= sortedS[sCount]) {
-            gCount++;
-            sCount++;
-        } else {
-            sCount++
-        }
+  const sortedG: number[] = g.sort((a, b) => a - b);
+  const sortedS: number[] = s.sort((a, b) => a - b);
+  let gCount: number = 0;
+  let sCount: number = 0;
+  while (gCount < sortedG.length && sCount < sortedS.length) {
+    if (sortedG[gCount] <= sortedS[sCount]) {
+      gCount++;
+      sCount++;
+    } else {
+      sCount++;
     }
-    return gCount;
-};
-
+  }
+  return gCount;
+}
 ```
 
 **Solution:**
 Below are the step-by-step explanations of the code:
 
 1. The `findContentChildren` function is defined, which takes two parameters:
+
    - `g`: an array of numbers representing the greed factor of children.
    - `s`: an array of numbers representing the size of cookies.
 
@@ -59,5 +60,4 @@ The following techniques are utilized within the code:
 4. Incrementing variables to move to the next element in the array.
 5. Returning a calculated result.
 
-
-* [Go back](../readme.md)
+- [Go back](../readme.md)

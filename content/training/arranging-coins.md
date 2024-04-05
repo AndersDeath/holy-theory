@@ -1,33 +1,36 @@
 ---
 title: Arranging Coins
-tags: ['training', 'task']
-languages: ['typescript']
+tags: ["training", "task"]
+languages: ["typescript"]
 ---
+
 # Arranging Coins
 
 ```typescript
 function arrangeCoins(n: number): number {
-    let i = 1;
-    let coins = 0;
-    let cnt = 0;
-    
-    while((n-coins) >= i) {
-        coins += i;
-        i++;
-        cnt++;
-    }
-    
-    return cnt;
-};
+  let i = 1;
+  let coins = 0;
+  let cnt = 0;
+
+  while (n - coins >= i) {
+    coins += i;
+    i++;
+    cnt++;
+  }
+
+  return cnt;
+}
 ```
 
 **Solution:**
 Below are the step-by-step explanations of the code:
 
 1. The `arrangeCoins` function is defined, which takes one parameter:
+
    - `n`: a number representing the total number of coins.
 
 2. Three variables are initialized:
+
    - `i` is set to 1 and represents the number of coins in the current row.
    - `coins` is set to 0 and will keep track of the total number of coins arranged.
    - `cnt` is set to 0 and will be used to count the number of complete rows.
@@ -56,5 +59,4 @@ The following techniques are utilized within the code:
 4. Accumulation of values using the `+=` operator.
 5. Returning a calculated result.
 
-
-* [Go back](../readme.md)
+- [Go back](../readme.md)

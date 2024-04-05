@@ -1,28 +1,29 @@
 ---
 title: Best Time to Buy and Sell Stock
-tags: ['training', 'task']
-languages: ['typescript']
+tags: ["training", "task"]
+languages: ["typescript"]
 ---
+
 # Best Time to Buy and Sell Stock
 
 ```typescript
 function maxProfit(prices: number[]): number {
-        let min = 10000;
-        
-        let maxDiff = 0;
-        for (let i = 0; i < prices.length; i++){
-            min = Math.min(prices[i], min);
-            maxDiff = Math.max(prices[i] - min, maxDiff);
-         }
-        return maxDiff;
+  let min = 10000;
 
-};
+  let maxDiff = 0;
+  for (let i = 0; i < prices.length; i++) {
+    min = Math.min(prices[i], min);
+    maxDiff = Math.max(prices[i] - min, maxDiff);
+  }
+  return maxDiff;
+}
 ```
 
 **Solution:**
 Below are the step-by-step explanations of the code:
 
 1. The `maxProfit` function is defined, which takes one parameter:
+
    - `prices`: an array of numbers representing the stock prices.
 
 2. A variable `min` is initialized to a high value, 10000, to track the minimum price encountered during the iteration. It will be updated as a new minimum price is found.
@@ -51,4 +52,5 @@ The following techniques are utilized within the code:
 4. Returning a calculated result.
 
 **Source: https://leetcode.com**
-* [Go back](../readme.md)
+
+- [Go back](../readme.md)

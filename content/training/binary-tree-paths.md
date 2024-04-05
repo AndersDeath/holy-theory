@@ -1,8 +1,9 @@
 ---
 title: Binary Tree Paths
-tags: ['training', 'task', 'tree']
-languages: ['typescript']
+tags: ["training", "task", "tree"]
+languages: ["typescript"]
 ---
+
 # Binary Tree Paths
 
 ```typescript
@@ -21,21 +22,23 @@ languages: ['typescript']
  */
 
 function binaryTreePaths(root: TreeNode | null): string[] {
-    const responce: string[] = [];
-    helper(root, "", responce);
-    return responce;
-};
+  const responce: string[] = [];
+  helper(root, "", responce);
+  return responce;
+}
 
 function helper(root: TreeNode, path: string, responce: string[]) {
-    if (root == null) { return; }
+  if (root == null) {
+    return;
+  }
 
-    if (root.left == null && root.right == null) {
-        responce.push(path + root.val);
-        return;
-    }
+  if (root.left == null && root.right == null) {
+    responce.push(path + root.val);
+    return;
+  }
 
-    helper(root.left, path + root.val + "->", responce);
-    helper(root.right, path + root.val + "->", responce);
+  helper(root.left, path + root.val + "->", responce);
+  helper(root.right, path + root.val + "->", responce);
 }
 ```
 
@@ -43,11 +46,13 @@ function helper(root: TreeNode, path: string, responce: string[]) {
 Below are the step-by-step explanations of the code:
 
 1. A binary tree node is defined using the `TreeNode` class, which has properties:
+
    - `val`: a number representing the value of the node.
    - `left`: a reference to the left child node.
    - `right`: a reference to the right child node.
 
 2. The `binaryTreePaths` function is defined, which takes one parameter:
+
    - `root`: a reference to the root node of the binary tree.
 
 3. A variable `response` is initialized as an empty array of strings. It will store the paths from the root to the leaf nodes.
@@ -55,6 +60,7 @@ Below are the step-by-step explanations of the code:
 4. The `helper` function is called with the `root`, an empty string `""`, and the `response` array.
 
 5. The `helper` function is defined, which takes three parameters:
+
    - `root`: a reference to the current node being processed.
    - `path`: a string representing the current path from the root to the current node.
    - `response`: a reference to the array storing the paths.
@@ -84,5 +90,4 @@ The following techniques are utilized within the code:
 5. Appending strings and values to an array.
 6. Returning a calculated result.
 
-
-* [Go back](../readme.md)
+- [Go back](../readme.md)

@@ -1,12 +1,12 @@
 ---
 title: Balanced Binary Tree
-tags: ['training', 'task', 'tree']
-languages: ['typescript']
+tags: ["training", "task", "tree"]
+languages: ["typescript"]
 ---
+
 # Balanced Binary Tree
 
 ```typescript
-
 /**
  * Definition for a binary tree node.
  * class TreeNode {
@@ -22,21 +22,21 @@ languages: ['typescript']
  */
 
 function isBalanced(root: TreeNode | null): boolean {
-    if(root === null) return true;
-    if(height(root) === -1) return false;
-    return true;
-};
+  if (root === null) return true;
+  if (height(root) === -1) return false;
+  return true;
+}
 
 function height(node: TreeNode): number {
-    if(node == null) return 0;
+  if (node == null) return 0;
 
-    const left = height(node.left)
-    const right = height(node.right);
+  const left = height(node.left);
+  const right = height(node.right);
 
-    if(left === -1 || right === -1) return -1;
-    if(Math.abs(left - right) > 1) return -1;
+  if (left === -1 || right === -1) return -1;
+  if (Math.abs(left - right) > 1) return -1;
 
-    return Math.max(left, right) + 1;
+  return Math.max(left, right) + 1;
 }
 ```
 
@@ -44,11 +44,13 @@ function height(node: TreeNode): number {
 Below are the step-by-step explanations of the code:
 
 1. A binary tree node is defined using the `TreeNode` class, which has properties:
+
    - `val`: a number representing the value of the node.
    - `left`: a reference to the left child node.
    - `right`: a reference to the right child node.
 
 2. The `isBalanced` function is defined, which takes one parameter:
+
    - `root`: a reference to the root node of the binary tree.
 
 3. In the `isBalanced` function, the first condition checks if the `root` is `null`. If it is `null`, it means the tree is empty, and an empty tree is considered balanced. In that case, the function returns `true`.
@@ -58,6 +60,7 @@ Below are the step-by-step explanations of the code:
 5. If both conditions are passed, it means the tree is balanced, and the function returns `true`.
 
 6. The `height` function is defined, which takes one parameter:
+
    - `node`: a reference to the current node being processed.
 
 7. Inside the `height` function, the first condition checks if the `node` is `null`. If it is `null`, it means the current subtree has no nodes, so the height is 0. In that case, the function returns 0.
@@ -82,5 +85,4 @@ The following techniques are utilized within the code:
 4. Returning results based on conditions.
 5. Performing mathematical calculations using `Math.abs` and `Math.max`.
 
-
-* [Go back](../readme.md)
+- [Go back](../readme.md)

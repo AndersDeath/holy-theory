@@ -1,8 +1,9 @@
 ---
 title: Adjacency list to adjacency matrix
-tags: ['training', 'task', 'matrix', 'graph']
-languages: ['java']
+tags: ["training", "task", "matrix", "graph"]
+languages: ["java"]
 ---
+
 # Adjacency list to adjacency matrix
 
 ```java
@@ -15,17 +16,19 @@ class Solution {
 				matrix[i][adjList[i].get(j)] = 1;
 			}
 		}
-		
+
 		return matrix;
     }
 }
 ```
+
 **Solution:**
 Below are the step-by-step explanations of the code:
 
 1. The `Solution` class is defined, containing the `adjListToMatrix` method.
 
 2. The `adjListToMatrix` method takes two parameters:
+
    - `n`: an integer representing the number of nodes in the graph.
    - `adjList`: an array of `ArrayList<Integer>` representing the adjacency list of the graph.
 
@@ -52,4 +55,4 @@ The following techniques are utilized within the code:
 5. Assigning values to elements of a 2D array.
 6. Converting an adjacency list representation to an adjacency matrix representation.
 
-* [Go back](../readme.md)
+- [Go back](../readme.md)

@@ -1,8 +1,9 @@
 ---
 title: Binary Tree Tilt
-tags: ['training', 'task', 'tree']
-languages: ['typescript']
+tags: ["training", "task", "tree"]
+languages: ["typescript"]
 ---
+
 # Binary Tree Tilt
 
 ```typescript
@@ -39,24 +40,26 @@ function findTilt(root: TreeNode | null): number {
   calculateTiltAndSum(root);
 
   return tilt;
-};
-
+}
 ```
 
 **Solution:**
 Below are the step-by-step explanations of the code:
 
 1. A binary tree node is defined using the `TreeNode` class, which has properties:
+
    - `val`: a number representing the value of the node.
    - `left`: a reference to the left child node.
    - `right`: a reference to the right child node.
 
 2. The `findTilt` function is defined, which takes one parameter:
+
    - `root`: a reference to the root node of the binary tree.
 
 3. A variable `tilt` is initialized to 0. It will store the total tilt of the binary tree.
 
 4. The `calculateTiltAndSum` function is defined inside the `findTilt` function. It takes one parameter:
+
    - `node`: a reference to the current node being processed.
 
 5. The `calculateTiltAndSum` function calculates the sum of the node's value, left subtree values, and right subtree values recursively. It also updates the `tilt` variable by adding the absolute difference between the sum of left subtree values and right subtree values.
@@ -89,4 +92,4 @@ The following techniques are utilized within the code:
 6. Updating variables with calculated values.
 7. Returning a calculated result.
 
-* [Go back](../readme.md)
+- [Go back](../readme.md)

@@ -1,32 +1,31 @@
 ---
 title: Container With Most Water
-tags: ['training', 'task']
-languages: ['typescript']
+tags: ["training", "task"]
+languages: ["typescript"]
 ---
+
 # Container With Most Water
 
 ```typescript
 function maxArea(height: number[]): number {
+  let maximumArea = Number.MIN_SAFE_INTEGER;
+  let left = 0;
+  let right = height.length - 1;
+  while (left < right) {
+    let shorterLine = Math.min(height[left], height[right]);
 
-    let maximumArea = Number.MIN_SAFE_INTEGER;
-    let left = 0;
-    let right = height.length - 1;
-    while (left < right) {
+    maximumArea = Math.max(maximumArea, shorterLine * (right - left));
 
-        let shorterLine = Math.min(height[left], height[right]);
-
-        maximumArea = Math.max(maximumArea, shorterLine * (right - left));
-
-        if (height[left] < height[right]) {
-            left++;
-        } else {
-            right--;
-        }
+    if (height[left] < height[right]) {
+      left++;
+    } else {
+      right--;
     }
-    return maximumArea;
-
-};
+  }
+  return maximumArea;
+}
 ```
+
 **Solution:**
 Below is the step-by-step breakdown of the code:
 
@@ -63,6 +62,6 @@ This approach efficiently explores all possible configurations of the container 
 
 The time complexity of this solution is O(n) since it uses a single loop to traverse the `height` array. The space complexity is O(1) as the algorithm uses a constant amount of additional space to store variables.
 
-
 **Source: https://leetcode.com**
-* [Go back](../readme.md)
+
+- [Go back](../readme.md)

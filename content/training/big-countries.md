@@ -1,8 +1,9 @@
 ---
 title: Big countries
-tags: ['training', 'task']
-languages: ['sql']
+tags: ["training", "task"]
+languages: ["sql"]
 ---
+
 # Big countries
 
 ```sql
@@ -19,5 +20,4 @@ The given code is a SQL query. It selects the columns `name`, `population`, and 
 
 In summary, the query selects the `name`, `population`, and `area` columns from the `World` table, and only retrieves the rows where either the population is greater than or equal to 25,000,000 or the area is greater than or equal to 3,000,000.
 
-
-* [Go back](../readme.md)
+- [Go back](../readme.md)

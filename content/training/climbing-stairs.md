@@ -1,25 +1,26 @@
 ---
 title: Climbing stairs
-tags: ['training', 'task']
-languages: ['typescript']
+tags: ["training", "task"]
+languages: ["typescript"]
 ---
+
 # Climbing stairs
 
 ```typescript
 function climbStairs(n: number): number {
-    if(n <= 3) {
-        return n;
-    }
+  if (n <= 3) {
+    return n;
+  }
 
-    let a = 3;
-    let b = 2;
+  let a = 3;
+  let b = 2;
 
-    for(let i = 0; i < n -3; i++) {
-        a = a + b;
-        b = a - b;
-    }
-    return a;
-};
+  for (let i = 0; i < n - 3; i++) {
+    a = a + b;
+    b = a - b;
+  }
+  return a;
+}
 ```
 
 **Solution:**
@@ -55,6 +56,6 @@ This approach uses a dynamic programming-like approach to solve the problem, avo
 
 The time complexity of this solution is O(n) since the loop iterates `n - 3` times. It has a constant space complexity since it only requires two variables to store the intermediate results.
 
-
 **Source: https://leetcode.com**
-* [Go back](../readme.md)
+
+- [Go back](../readme.md)

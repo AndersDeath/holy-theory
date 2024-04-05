@@ -1,12 +1,12 @@
 ---
 title: Binary Tree Preorder Traversal
-tags: ['training', 'task', 'tree']
-languages: ['typescript']
+tags: ["training", "task", "tree"]
+languages: ["typescript"]
 ---
+
 # Binary Tree Preorder Traversal
 
 ```typescript
-
 /**
  * Definition for a binary tree node.
  * class TreeNode {
@@ -22,30 +22,31 @@ languages: ['typescript']
  */
 
 function preorderTraversal(root: TreeNode | null): number[] {
-    const output: any[] = [];
-    preorder(root, output);
-    return output;
-};
-
-function preorder(root: TreeNode | null, output: any[]) {
-    if (root == null) return;
-
-    output.push(root.val);
-    preorder(root.left, output);
-    preorder(root.right, output);
+  const output: any[] = [];
+  preorder(root, output);
+  return output;
 }
 
+function preorder(root: TreeNode | null, output: any[]) {
+  if (root == null) return;
+
+  output.push(root.val);
+  preorder(root.left, output);
+  preorder(root.right, output);
+}
 ```
 
 **Solution:**
 Below are the step-by-step explanations of the code:
 
 1. A binary tree node is defined using the `TreeNode` class, which has properties:
+
    - `val`: a number representing the value of the node.
    - `left`: a reference to the left child node.
    - `right`: a reference to the right child node.
 
 2. The `preorderTraversal` function is defined, which takes one parameter:
+
    - `root`: a reference to the root node of the binary tree.
 
 3. A variable `output` is initialized as an empty array. It will store the preorder traversal values.
@@ -53,6 +54,7 @@ Below are the step-by-step explanations of the code:
 4. The `preorder` function is called with the `root` and the `output` array.
 
 5. The `preorder` function is defined, which takes two parameters:
+
    - `root`: a reference to the current node being processed.
    - `output`: a reference to the array storing the traversal values.
 
@@ -81,4 +83,4 @@ The following techniques are utilized within the code:
 5. Appending values to an array.
 6. Returning a calculated result.
 
-* [Go back](../readme.md)
+- [Go back](../readme.md)
