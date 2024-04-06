@@ -3,7 +3,8 @@
 All notable changes to this project will be documented in this file.
 
 # [0.0.65] - In progress
-
+* update Breadth First search
+  
 # [0.0.64] - 2024-04-01
 * update quick sort
 * update merge sort
