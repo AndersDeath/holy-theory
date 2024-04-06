@@ -7,7 +7,7 @@ sort: 1200
 
 # Depth-first search
 
-Depth-First Search (DFS) is a graph traversal algorithm that systematically explores the vertices of a graph by going as deep as possible along each branch before backtracking. It starts at a chosen vertex, explores as far as possible along one branch, and then backtracks to explore other branches. DFS is commonly used to detect cycles in a graph, topologically sort vertices, and solve problems related to connected components.
+Depth-First Search (DFS) is a graph traversal algorithm that systematically explores the vertices of a graph by going as deep as possible along each branch before backtracking. It starts at a chosen vertex, explores as far as possible along one branch, and then backtracks to explore other ones. DFS is commonly used to detect cycles in a graph, topologically sort vertices, and solve problems related to connected components.
 
 ## How it works:
 
@@ -25,17 +25,13 @@ Depth-First Search (DFS) is a graph traversal algorithm that systematically expl
 
 **Stack-Based (or Recursive)**: DFS can be implemented using a stack data structure or by recursion. In both cases, it relies on last-in, first-out (LIFO) ordering to keep track of nodes to be visited and backtracked.
 
-**Non-Optimal for Shortest Paths**: DFS does not guarantee finding the shortest path between two nodes in a graph. It explores as far as possible along each branch before backtracking, which may not necessarily lead to the shortest path.
+**Non-Optimal for Shortest Paths**: The algorithm does not guarantee finding the shortest path between two nodes in a graph. It explores as far as possible along each branch before backtracking, which may not necessarily lead to the shortest path.
 
 **Memory-Efficient**: DFS typically requires less memory compared to BFS because it only needs to store the path from the starting node to the current node. This makes it suitable for large graphs or graphs with limited memory.
 
 **Completeness (for finite graphs)**: DFS will visit all the nodes reachable from the starting node in a finite graph. However, it may not terminate in the presence of cycles in an infinite graph without proper cycle detection.
 
-**Time Complexity**: The time complexity of DFS is \(O(V + E)\), where \(V\) is the number of vertices (nodes) and \(E\) is the number of edges in the graph. This is because each vertex and each edge are examined once.
-
 **Recursive Nature**: DFS is inherently recursive in its nature. When implemented recursively, the function calls itself for each adjacent node until it reaches a leaf node or a node without unvisited neighbors.
-
-**Applications**: DFS is used in various applications such as topological sorting, cycle detection, pathfinding, maze solving, solving puzzles (e.g., Sudoku), and graph algorithms like finding connected components.
 
 **Depth-First Search Forest**: DFS produces a depth-first search forest, which is a collection of depth-first trees, one for each connected component of the graph. Each tree is rooted at a distinct vertex.
 
@@ -45,19 +41,19 @@ Depth-First Search (DFS) is a graph traversal algorithm that systematically expl
 
 **Applications:**
 
-**Traversal and Search**: DFS can be used to traverse and search a graph, visiting all the nodes reachable from a given starting node. This application is useful in scenarios such as finding connected components, identifying cycles, or determining reachability.
+**Traversal and Search**: Depth first search can be used to traverse and search a graph, visiting all the nodes reachable from a given starting node. This application is useful in scenarios such as finding connected components, identifying cycles, or determining reachability.
 
 **Topological Sorting**: DFS can be employed to perform topological sorting on directed acyclic graphs (DAGs). Topological sorting is essential in scheduling tasks with dependencies, such as in project management or task scheduling.
 
-**Pathfinding**: While DFS does not guarantee finding the shortest path between two nodes, it can be used for pathfinding in scenarios where finding any path is sufficient. Examples include maze solving, puzzle solving, and navigating game maps.
+**Pathfinding**: While Depth first sarch does not guarantee finding the shortest path between two nodes, it can be used for pathfinding in scenarios where looking for any path is sufficient. Examples include maze solving, puzzle solving, and navigating game maps.
 
-**Cycle Detection**: DFS is commonly used to detect cycles in a graph. By maintaining a set of visited nodes and tracking the path taken during traversal, cycles can be identified when revisiting a node that is already in the current path.
+**Cycle Detection**: The algorithm is commonly used to detect cycles in a graph. They can be identified when revisiting a node that is already in the current path by maintaining a set of visited nodes and tracking the path taken during traversal.
 
 **Strongly Connected Components (SCC)**: DFS can be applied to find strongly connected components in a directed graph. SCCs are subsets of vertices in a graph where every vertex is reachable from every other vertex within the subset.
 
 **Network Analysis**: DFS is utilized in network analysis tasks, such as finding bridges and articulation points in a network. Bridges are edges whose removal would disconnect the graph, while articulation points are vertices whose removal would increase the number of connected components.
 
-**Solving Puzzles**: DFS can be used to solve various puzzles, including Sudoku, N-Queens, and word games like Boggle. By exploring all possible configurations or solutions, DFS can efficiently find a valid solution.
+**Solving Puzzles**: The algorithm can be used to solve various puzzles, including Sudoku, N-Queens, and word games like Boggle. By exploring all possible configurations or solutions, DFS can efficiently find a valid solution.
 
 **XML Parsing and Document Traversal**: DFS can be employed in parsing XML documents and traversing hierarchical data structures. It allows for efficient exploration of the document structure and extraction of relevant information.
 
