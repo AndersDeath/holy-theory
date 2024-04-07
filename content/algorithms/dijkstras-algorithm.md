@@ -7,6 +7,8 @@ sort: 1300
 
 # Dijkstra's algorithm
 
+Dijkstra's algorithm is a graph traversal one used to find the shortest path from a source node to all other ones in a weighted graph. It maintains a set of tentative distances for each node, gradually updating them as it explores the graph. At each step, it selects the node with the smallest tentative distance, visits its neighbors, and updates their tentative distances if a shorter path is found. The algorithm continues until all nodes have been visited or the destination one is reached. Dijkstra's algorithm is widely used in network routing protocols and pathfinding applications in computer science.
+
 ## How it works:
 
 **Step 1:** Set the initial distance to the starting vertex as 0 and all other onces to infinity. Create a priority queue or a min-heap to store vertices based on their current tentative distances.
@@ -25,43 +27,31 @@ sort: 1300
 
 **Single-Source Shortest Path**: Dijkstra's algorithm finds the shortest paths from a single source node to all other nodes in a graph with non-negative edge weights.
 
-**Greedy Algorithm**: Dijkstra's algorithm is a greedy algorithm as it selects the next node to visit based on the shortest known distance from the source node. It iteratively expands the frontier of explored nodes by selecting the node with the smallest tentative distance.
+**Greedy Algorithm**: The algorithm is a greedy algorithm as it selects the next node to visit based on the shortest known distance from the source node. It iteratively expands the frontier of explored nodes by selecting the node with the smallest tentative distance.
 
-**Initialization**: Dijkstra's algorithm initializes the distances from the source node to all other nodes as infinity, except for the source node itself, which is assigned a distance of zero. It also maintains a priority queue (often implemented using a min-heap) to keep track of nodes with the smallest tentative distances.
+**Initialization**: Dijkstra's algorithm initializes the distances from the source node to all other nodes as infinity, except it itself, which is assigned a distance of zero. It also maintains a priority queue (often implemented using a min-heap) to keep track of nodes with the smallest tentative distances.
 
-**Relaxation**: Dijkstra's algorithm performs relaxation of edges during each iteration. For each node in the priority queue, it considers all its outgoing edges and updates the tentative distance to its neighboring nodes if a shorter path is found through the current node.
-
-**Optimal Substructure**: Dijkstra's algorithm exhibits optimal substructure, meaning that the shortest path between any two nodes is composed of shortest paths between the source node and intermediate nodes.
+**Relaxation**: The algorithm performs relaxation of edges during each iteration. For each node in the priority queue, it considers all its outgoing edges and updates the tentative distance to its neighboring nodes if a shorter path is found through the current node.
 
 **Termination**: Dijkstra's algorithm terminates when all nodes have been visited or when the priority queue becomes empty. At termination, the shortest path distances from the source node to all other nodes have been calculated.
 
-**Non-Negative Edge Weights**: Dijkstra's algorithm requires non-negative edge weights. If negative edge weights are present, the algorithm may not produce correct results, and algorithms like Bellman-Ford are more suitable.
-
-**Time Complexity**: The time complexity of Dijkstra's algorithm is \(O((V + E) \log V)\), where \(V\) is the number of vertices (nodes) and \(E\) is the number of edges in the graph. This complexity arises from the operations of updating and extracting the minimum element from the priority queue.
+**Non-Negative Edge Weights**: The algorithm requires non-negative edge weights. If negative edge weights are present, the algorithm may not produce correct results.
 
 **Space Complexity**: The space complexity of Dijkstra's algorithm is \(O(V)\) for storing the distances and priority queue, where \(V\) is the number of vertices in the graph.
 
-**Applications**: Dijkstra's algorithm has various applications, including network routing, shortest path planning in transportation networks, traffic management systems, and network optimization.
-
 ## Applications:
 
-**Routing in Networks**: Dijkstra's algorithm is commonly used in network routing protocols, such as Open Shortest Path First (OSPF) and Intermediate System to Intermediate System (IS-IS). It helps in finding the shortest paths for data packets to traverse through computer networks efficiently.
+**Routing in Networks**: Dijkstra's algorithm is commonly used in network routing protocols, such as Open Shortest Path First (OSPF) and Intermediate System to Intermediate System (IS-IS). It helps in finding the shortest paths for data packets to traverse through computer networks efficiently. It's also applicable to Telecommunications Networks
 
-**Navigation Systems**: Dijkstra's algorithm is used in GPS navigation systems to calculate the shortest routes between locations. It helps in providing users with optimal directions for reaching their destinations while considering factors like traffic congestion and road conditions.
+**Navigation Systems**: The algorithm is used in GPS navigation systems to calculate the shortest routes between locations. It helps in providing users with optimal directions for reaching their destinations while considering factors like traffic congestion and road conditions.
 
 **Transportation Networks**: Dijkstra's algorithm is applied in transportation planning and management systems to optimize routes for vehicles, such as buses, taxis, and delivery trucks. It helps in minimizing travel time and fuel consumption while maximizing efficiency.
 
-**Telecommunications Networks**: Dijkstra's algorithm is utilized in telecommunications networks to establish efficient communication paths between network nodes, such as routers and switches. It assists in optimizing network traffic and resource utilization.
-
-**Airline Route Planning**: Dijkstra's algorithm is used in airline route planning systems to determine the shortest paths between airports. It helps airlines in optimizing flight schedules, minimizing travel distances, and reducing operational costs.
+**Airline Route Planning**: The algorithm is used in airline route planning systems to determine the shortest paths between airports. It helps airlines in optimizing flight schedules, minimizing travel distances, and reducing operational costs.
 
 **Robotics and Autonomous Vehicles**: Dijkstra's algorithm is applied in robotics and autonomous vehicle navigation systems to plan collision-free paths between locations. It helps in ensuring safe and efficient movement of robots and vehicles in dynamic environments.
 
-**Supply Chain Optimization**: Dijkstra's algorithm is used in supply chain management systems to optimize transportation routes for goods and products. It helps in minimizing shipping costs, reducing delivery times, and improving overall supply chain efficiency.
-
-**Internet Protocol (IP) Routing**: Dijkstra's algorithm is employed in Internet Protocol (IP) routing to determine the best paths for data packets to travel across the Internet. It helps in ensuring reliable and efficient data transmission between network devices.
-
-**Telecommunication Network Planning**: Dijkstra's algorithm is used in telecommunication network planning to design optimal network infrastructures, including the placement of network nodes and the routing of communication links. It assists in maximizing network coverage and minimizing infrastructure costs.
+**Supply Chain Optimization**: The algorithm is used in supply chain management systems to optimize transportation routes for goods and products. It helps in minimizing shipping costs, reducing delivery times, and improving overall supply chain efficiency.
 
 **Emergency Response Planning**: Dijkstra's algorithm is applied in emergency response planning systems to calculate the shortest routes for emergency vehicles, such as ambulances and fire trucks, to reach incident locations. It helps in improving emergency response times and saving lives.
 
