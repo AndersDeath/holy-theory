@@ -1,24 +1,25 @@
 ---
 title: Repeated Substring Pattern
-tags: ['training', 'task']
-languages: ['typescript']
+tags: ["training", "task"]
+languages: ["typescript"]
 ---
+
 # Repeated Substring Pattern
 
 ```typescript
 function repeatedSubstringPattern(s: string): boolean {
-    for (let size=1;size<=s.length/2;size++) {
-            if (s.length%size==0) {
-                let curr=s.substring(0,size);
-                let j=size;
-                while (j<s.length && s.substring(j,j+size) === curr) {
-                    j+=size;
-                }
-                if (j==s.length) return true;
-            }
-        }
-        return false;
-};
+  for (let size = 1; size <= s.length / 2; size++) {
+    if (s.length % size == 0) {
+      let curr = s.substring(0, size);
+      let j = size;
+      while (j < s.length && s.substring(j, j + size) === curr) {
+        j += size;
+      }
+      if (j == s.length) return true;
+    }
+  }
+  return false;
+}
 ```
 
 1. **Input and Loop**: The function `repeatedSubstringPattern` takes a string `s` as input and aims to determine whether the string can be formed by repeatedly concatenating a substring. It uses a `for` loop to iterate through different sizes of substrings, starting from size 1 up to `s.length / 2`.

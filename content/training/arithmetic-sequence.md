@@ -1,8 +1,9 @@
 ---
 title: Arithmetic sequence
-tags: ['training', 'task']
-languages: ['java']
+tags: ["training", "task"]
+languages: ["java"]
 ---
+
 # Arithmetic sequence
 
 ```java
@@ -12,7 +13,7 @@ class Solution {
 		if(length == 1) {
 			return true;
 		}
-		
+
 		Arrays.sort(arr);
 		int diff = arr[1] - arr[0];
 		for(int i = 1; i < length; i++) {
@@ -31,6 +32,7 @@ Below are the step-by-step explanations of the code:
 1. The `Solution` class is defined, containing the `isArithmeticSequence` method.
 
 2. The `isArithmeticSequence` method takes one parameter:
+
    - `arr`: an array of integers to be checked for being an arithmetic sequence.
 
 3. The length of the array, `length`, is assigned to the `length` variable.
@@ -58,4 +60,4 @@ The following techniques are utilized within the code:
 5. Performing equality checks and conditional branching using `if` statements.
 6. Returning boolean values based on the outcome of the checks.
 
-* [Go back](../readme.md)
+- [Go back](../readme.md)

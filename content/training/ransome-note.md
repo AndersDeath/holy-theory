@@ -1,20 +1,21 @@
 ---
 title: Ransom Note
-tags: ['training', 'task']
-languages: ['typescript']
+tags: ["training", "task"]
+languages: ["typescript"]
 ---
+
 # Ransom Note
 
 ```typescript
 function canConstruct(ransomNote: string, magazine: string): boolean {
- let dicArr = [...magazine];
+  let dicArr = [...magazine];
   for (const c of ransomNote) {
     const index = dicArr.indexOf(c);
     if (index < 0) return false;
     dicArr.splice(index, 1);
   }
   return true;
-};
+}
 ```
 
 **Explanation with Steps:**
@@ -24,9 +25,10 @@ function canConstruct(ransomNote: string, magazine: string): boolean {
 **Step 2:** Iterate through each character `c` in the `ransomNote` string.
 
 **Step 3:** Inside the loop:
-   - Use the `indexOf` method to find the index of character `c` in the `dicArr` array.
-   - If the index is negative (character not found), return `false` immediately as the ransom note cannot be constructed.
-   - If the character is found, use the `splice` method to remove it from the `dicArr`, simulating its use in constructing the ransom note.
+
+- Use the `indexOf` method to find the index of character `c` in the `dicArr` array.
+- If the index is negative (character not found), return `false` immediately as the ransom note cannot be constructed.
+- If the character is found, use the `splice` method to remove it from the `dicArr`, simulating its use in constructing the ransom note.
 
 **Step 4:** After the loop completes, return `true`, indicating that the ransom note can be constructed.
 

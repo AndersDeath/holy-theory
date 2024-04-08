@@ -1,31 +1,32 @@
 ---
 title: Relative Ranks
-tags: ['training', 'task']
-languages: ['typescript']
+tags: ["training", "task"]
+languages: ["typescript"]
 ---
+
 # Relative Ranks
 
 ```typescript
 function findRelativeRanks(score: number[]): string[] {
- const sortedNums = [...score].sort((a, b) => b - a);
-    const ranks: string[] = new Array(score.length);
+  const sortedNums = [...score].sort((a, b) => b - a);
+  const ranks: string[] = new Array(score.length);
 
-    for (let i = 0; i < score.length; i++) {
-        const rank = sortedNums.indexOf(score[i]) + 1;
+  for (let i = 0; i < score.length; i++) {
+    const rank = sortedNums.indexOf(score[i]) + 1;
 
-        if (rank === 1) {
-            ranks[i] = "Gold Medal";
-        } else if (rank === 2) {
-            ranks[i] = "Silver Medal";
-        } else if (rank === 3) {
-            ranks[i] = "Bronze Medal";
-        } else {
-            ranks[i] = rank.toString();
-        }
+    if (rank === 1) {
+      ranks[i] = "Gold Medal";
+    } else if (rank === 2) {
+      ranks[i] = "Silver Medal";
+    } else if (rank === 3) {
+      ranks[i] = "Bronze Medal";
+    } else {
+      ranks[i] = rank.toString();
     }
+  }
 
-    return ranks;
-};
+  return ranks;
+}
 ```
 
 1. **Sorting the Array**: The input `score` array is copied using the spread operator `[...score]` to create a new array `sortedNums`. This new array is sorted in descending order using the `sort()` method, which takes a comparison function `(a, b) => b - a`. This ensures that the largest scores come first in the sorted array.

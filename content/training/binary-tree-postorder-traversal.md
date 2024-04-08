@@ -1,8 +1,9 @@
 ---
 title: Binary Tree Postorder Traversal
-tags: ['training', 'task', 'tree']
-languages: ['typescript']
+tags: ["training", "task", "tree"]
+languages: ["typescript"]
 ---
+
 # Binary Tree Postorder Traversal
 
 ```typescript
@@ -24,7 +25,7 @@ function postorderTraversal(root: TreeNode | null): number[] {
   var res = [];
   helper(root, res);
   return res;
-};
+}
 
 const helper = function (root, res) {
   if (!root) return;
@@ -38,11 +39,13 @@ const helper = function (root, res) {
 Below are the step-by-step explanations of the code:
 
 1. A binary tree node is defined using the `TreeNode` class, which has properties:
+
    - `val`: a number representing the value of the node.
    - `left`: a reference to the left child node.
    - `right`: a reference to the right child node.
 
 2. The `postorderTraversal` function is defined, which takes one parameter:
+
    - `root`: a reference to the root node of the binary tree.
 
 3. A variable `res` is initialized as an empty array. It will store the postorder traversal values.
@@ -50,6 +53,7 @@ Below are the step-by-step explanations of the code:
 4. The `helper` function is called with the `root` and the `res` array.
 
 5. The `helper` function is defined, which takes two parameters:
+
    - `root`: a reference to the current node being processed.
    - `res`: a reference to the array storing the traversal values.
 
@@ -78,4 +82,4 @@ The following techniques are utilized within the code:
 5. Appending values to an array.
 6. Returning a calculated result.
 
-* [Go back](../readme.md)
+- [Go back](../readme.md)

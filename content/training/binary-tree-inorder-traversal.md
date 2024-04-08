@@ -1,8 +1,9 @@
 ---
 title: Binary Tree Inorder Traversal
-tags: ['training', 'task', 'tree']
-languages: ['typescript']
+tags: ["training", "task", "tree"]
+languages: ["typescript"]
 ---
+
 # Binary Tree Inorder Traversal
 
 ```typescript
@@ -21,32 +22,34 @@ languages: ['typescript']
  */
 
 function inorderTraversal(root: TreeNode | null): number[] {
-    const list = [];
-    const stack = [];
-    let node = root;
+  const list = [];
+  const stack = [];
+  let node = root;
 
-    while(node !== null || stack.length > 0) {
-        while(node !== null) {
-            stack.push(node);
-            node = node.left
-        }
-        list.push(stack[stack.length -1].val);
-        let el = stack.pop();
-        node = el.right;
+  while (node !== null || stack.length > 0) {
+    while (node !== null) {
+      stack.push(node);
+      node = node.left;
     }
-    return list;
-};
+    list.push(stack[stack.length - 1].val);
+    let el = stack.pop();
+    node = el.right;
+  }
+  return list;
+}
 ```
 
 **Solution:**
 Below are the step-by-step explanations of the code:
 
 1. A binary tree node is defined using the `TreeNode` class, which has properties:
+
    - `val`: a number representing the value of the node.
    - `left`: a reference to the left child node.
    - `right`: a reference to the right child node.
 
 2. The `inorderTraversal` function is defined, which takes one parameter:
+
    - `root`: a reference to the root node of the binary tree.
 
 3. A variable `list` is initialized as an empty array. It will store the inorder traversal values.
@@ -83,4 +86,4 @@ The following techniques are utilized within the code:
 6. Accessing properties and values of nodes.
 7. Returning a calculated result.
 
-* [Go back](../readme.md)
+- [Go back](../readme.md)

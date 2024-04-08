@@ -1,20 +1,21 @@
 ---
 title: Contains Duplicate
-tags: ['training', 'task']
-languages: ['typescript']
+tags: ["training", "task"]
+languages: ["typescript"]
 ---
+
 # Contains Duplicate
 
 ```typescript
 function containsDuplicate(nums: number[]): boolean {
-        nums.sort((a: any, b: any) => a-b);
-        for(let i = 0; i < nums.length -1; i++) {
-            if(nums[i] === nums[i+1]) {
-                return true;
-            }
-        }
-        return false;
-};
+  nums.sort((a: any, b: any) => a - b);
+  for (let i = 0; i < nums.length - 1; i++) {
+    if (nums[i] === nums[i + 1]) {
+      return true;
+    }
+  }
+  return false;
+}
 ```
 
 **Solution:**
@@ -45,4 +46,5 @@ The following techniques are utilized within the code:
 The provided solution sorts the array to bring duplicate elements together, allowing for a simple comparison of adjacent elements to determine duplicates. This approach has a time complexity of O(n log n) due to the sorting operation and a space complexity of O(1) since no additional data structures are used.
 
 **Source: https://leetcode.com**
-* [Go back](../readme.md)
+
+- [Go back](../readme.md)

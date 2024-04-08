@@ -1,37 +1,39 @@
 ---
 title: Base 7
-tags: ['training', 'task']
-languages: ['typescript']
+tags: ["training", "task"]
+languages: ["typescript"]
 ---
+
 # Base 7
 
 ```typescript
 function convertToBase7(num: number): string {
   if (num === 0) {
-        return "0";
-    }
+    return "0";
+  }
 
-    let isNegative = num < 0;
-    num = Math.abs(num);
-    let base7 = "";
+  let isNegative = num < 0;
+  num = Math.abs(num);
+  let base7 = "";
 
-    while (num > 0) {
-        base7 = (num % 7).toString() + base7;
-        num = Math.floor(num / 7);
-    }
+  while (num > 0) {
+    base7 = (num % 7).toString() + base7;
+    num = Math.floor(num / 7);
+  }
 
-    if (isNegative) {
-        base7 = "-" + base7;
-    }
+  if (isNegative) {
+    base7 = "-" + base7;
+  }
 
-    return base7;
-};
+  return base7;
+}
 ```
 
 **Solution:**
 Below are the step-by-step explanations of the code:
 
 1. The `convertToBase7` function is defined, which takes one parameter:
+
    - `num`: a number to be converted to base-7.
 
 2. The first condition checks if `num` is equal to 0. If it is, it means the input number is already 0, so the function returns the string "0" as the base-7 representation of 0.
@@ -69,4 +71,5 @@ The following techniques are utilized within the code:
 5. Returning a calculated result.
 
 **Source: https://leetcode.com**
-* [Go back](../readme.md)
+
+- [Go back](../readme.md)

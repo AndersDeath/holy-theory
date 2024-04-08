@@ -1,8 +1,9 @@
 ---
 title: Reverse array
-tags: ['training', 'task']
-languages: ['typescript']
+tags: ["training", "task"]
+languages: ["typescript"]
 ---
+
 # Reverse array
 
 Solution Steps
@@ -13,22 +14,21 @@ Solution Steps
 4. If start reached to the value length/2 or start =/> end , then terminate otherwise repeat from step 2.
 
 Complexity Analysis
-* Time Complexity: O(n)
-* Space Complexity: O(1)
 
+- Time Complexity: O(n)
+- Space Complexity: O(1)
 
 ```typescript
 function reverseArray(a: number[]): number[] {
-    let start = 0;
-    let end = a.length - 1;
-    while(start < end) {
-        let temp = a[start];
-        a[start] = a[end];
-        a[end] = temp;
-        start++;
-        end--;
-    }
-    return a;
+  let start = 0;
+  let end = a.length - 1;
+  while (start < end) {
+    let temp = a[start];
+    a[start] = a[end];
+    a[end] = temp;
+    start++;
+    end--;
+  }
+  return a;
 }
-
 ```

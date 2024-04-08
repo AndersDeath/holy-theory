@@ -1,21 +1,22 @@
 ---
 title: Contains Duplicates 2
-tags: ['training', 'task']
-languages: ['typescript']
+tags: ["training", "task"]
+languages: ["typescript"]
 ---
+
 # Contains Duplicates 2
 
 ```typescript
 function containsNearbyDuplicate(nums: number[], k: number): boolean {
-    const seen: any = new Map();
-    for (let i = 0; i < nums.length; ++i) {
-      if (i - seen.get(nums[i]) <= k) {
-        return true;
-      }
-        seen.set(nums[i], i);
+  const seen: any = new Map();
+  for (let i = 0; i < nums.length; ++i) {
+    if (i - seen.get(nums[i]) <= k) {
+      return true;
     }
-    return false;
-};
+    seen.set(nums[i], i);
+  }
+  return false;
+}
 ```
 
 **Solution:**
@@ -54,4 +55,5 @@ The provided solution efficiently checks for nearby duplicates by utilizing a `M
 The time complexity of this solution is O(n), where n is the length of the `nums` array, since it requires iterating over the entire array. The space complexity is also O(n) due to the usage of the `seen` Map to store elements and their indices.
 
 **Source: https://leetcode.com**
-* [Go back](../readme.md)
+
+- [Go back](../readme.md)

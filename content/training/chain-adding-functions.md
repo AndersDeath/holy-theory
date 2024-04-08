@@ -1,8 +1,9 @@
 ---
 title: Chain adding functions
-tags: ['training', 'task']
-languages: ['typescript']
+tags: ["training", "task"]
+languages: ["typescript"]
 ---
+
 # Chain adding functions
 
 Multiple calls:
@@ -23,16 +24,16 @@ addTwo(3)(5); // 10
 
 ```typescript
 function add(x: number): any {
-    let sum = x;
-    function f(y: number) {
-      sum += y;
-      return f;
-    }
-    f.toString = function() {
-      return sum;
-    };
+  let sum = x;
+  function f(y: number) {
+    sum += y;
     return f;
   }
+  f.toString = function () {
+    return sum;
+  };
+  return f;
+}
 ```
 
 The provided code defines a function `add` that returns a special function `f` with a cumulative behavior. Each time `f` is called with a parameter `y`, it adds `y` to the accumulated sum `sum` and returns `f` itself, allowing for chaining multiple function calls. The `toString` method is overridden to return the current value of `sum` when `f` is coerced to a string.
@@ -64,5 +65,4 @@ console.log(result); // Output: 10
 
 In this example, the `add` function is called with the initial value of `1`, and then `f` is repeatedly called with subsequent values `2`, `3`, and `4`. The cumulative sum is `1 + 2 + 3 + 4 = 10`. When `toString()` is called on the returned function, it returns the string representation of the accumulated sum, which is `"10"`.
 
-
-* [Go back](../readme.md)
+- [Go back](../readme.md)

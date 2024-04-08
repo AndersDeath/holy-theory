@@ -1,35 +1,36 @@
 ---
 title: Reshape the Matrix
-tags: ['training', 'task']
-languages: ['typescript']
+tags: ["training", "task"]
+languages: ["typescript"]
 ---
+
 # Reshape the Matrix
 
 ```typescript
 function matrixReshape(mat: number[][], r: number, c: number): number[][] {
   const m = mat.length;
   const n = mat[0].length;
-  
+
   if (m * n !== r * c) {
     return mat;
   }
-  
+
   const reshapedMatrix: number[][] = [];
   let row: number[] = [];
-  
+
   for (let i = 0; i < m; i++) {
     for (let j = 0; j < n; j++) {
       row.push(mat[i][j]);
-      
+
       if (row.length === c) {
         reshapedMatrix.push(row);
         row = [];
       }
     }
   }
-  
+
   return reshapedMatrix;
-};
+}
 ```
 
 1. **Input and Matrix Dimensions**: The function `matrixReshape` takes a matrix `mat` and two integers `r` and `c` as input. It aims to reshape the given matrix into a new matrix with `r` rows and `c` columns. It first calculates the dimensions of the input matrix `mat` using `m` for the number of rows and `n` for the number of columns.

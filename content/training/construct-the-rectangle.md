@@ -1,8 +1,9 @@
 ---
 title: Construct the Rectangle
-tags: ['training', 'task']
-languages: ['typescript']
+tags: ["training", "task"]
+languages: ["typescript"]
 ---
+
 # Construct the Rectangle
 
 ```typescript
@@ -15,7 +16,7 @@ function constructRectangle(area: number): number[] {
 
   const length = area / width;
   return [length, width];
-};
+}
 ```
 
 **Solution:**
@@ -51,4 +52,5 @@ The code efficiently calculates the dimensions of a rectangle given its area by 
 The time complexity of this solution is O(sqrt(area)) since it uses `Math.sqrt` to calculate the initial width, and the loop has a maximum number of iterations equal to the square root of the area.
 
 **Source: https://leetcode.com**
-* [Go back](../readme.md)
+
+- [Go back](../readme.md)

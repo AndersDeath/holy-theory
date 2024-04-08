@@ -1,8 +1,9 @@
 ---
 title: Binary Watch
-tags: ['training', 'task', 'tree']
-languages: ['java']
+tags: ["training", "task", "tree"]
+languages: ["java"]
 ---
+
 # Binary Watch
 
 ```java
@@ -53,4 +54,4 @@ The following techniques are utilized within the code:
 4. Adding elements to an `ArrayList`.
 5. Returning a calculated result.
 
-* [Go back](../readme.md)
+- [Go back](../readme.md)

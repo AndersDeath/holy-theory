@@ -1,28 +1,29 @@
 ---
 title: Array Partition
-tags: ['training', 'task']
-languages: ['typescript']
+tags: ["training", "task"]
+languages: ["typescript"]
 ---
+
 # Array Partition
 
 ```typescript
 function arrayPairSum(nums: number[]): number {
   nums.sort((a, b) => a - b);
   let sum = 0;
-  
+
   for (let i = 0; i < nums.length; i += 2) {
     sum += nums[i];
   }
-  
-  return sum;
-};
 
+  return sum;
+}
 ```
 
 **Solution:**
 Below are the step-by-step explanations of the code:
 
 1. The `arrayPairSum` function is defined, which takes one parameter:
+
    - `nums`: an array of numbers.
 
 2. The `sort` method is called on the `nums` array with a comparator function `(a, b) => a - b`. This sorts the array in ascending order.
@@ -48,5 +49,4 @@ The following techniques are utilized within the code:
 3. Accumulating values using the `+=` operator.
 4. Returning a calculated result.
 
-
-* [Go back](../readme.md)
+- [Go back](../readme.md)

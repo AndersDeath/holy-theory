@@ -1,8 +1,9 @@
 ---
 title: Add Two Numbers
-tags: ['training', 'task']
-languages: ['typescript']
+tags: ["training", "task"]
+languages: ["typescript"]
 ---
+
 # Add Two Numbers
 
 ```typescript
@@ -18,44 +19,44 @@ languages: ['typescript']
  * }
  */
 
-function addTwoNumbers(l1: ListNode | null, l2: ListNode | null): ListNode | null {
+function addTwoNumbers(
+  l1: ListNode | null,
+  l2: ListNode | null
+): ListNode | null {
+  let head = null;
 
-    let head = null
+  let temp = null;
 
-    let temp = null;
+  let carry = 0;
 
-    let carry = 0;
-
-    while(l1 !== null || l2 !== null) {
-        let sum = carry;
-        if(l1 !== null) {
-            sum += l1.val;
-            l1 = l1.next;
-        }
-        if(l2 !== null) {
-             sum += l2.val;
-            l2 = l2.next;
-        }
-
-        const node = new ListNode(Math.floor(sum) % 10);
-        carry = Math.floor(sum / 10);
-        if(temp === null) {
-            temp = node;
-            head = node;
-        } else {
-            temp.next = node;
-            temp = temp.next;
-        }
+  while (l1 !== null || l2 !== null) {
+    let sum = carry;
+    if (l1 !== null) {
+      sum += l1.val;
+      l1 = l1.next;
+    }
+    if (l2 !== null) {
+      sum += l2.val;
+      l2 = l2.next;
     }
 
-    if(carry > 0) {
-        temp.next = new ListNode(carry);
+    const node = new ListNode(Math.floor(sum) % 10);
+    carry = Math.floor(sum / 10);
+    if (temp === null) {
+      temp = node;
+      head = node;
+    } else {
+      temp.next = node;
+      temp = temp.next;
     }
+  }
 
+  if (carry > 0) {
+    temp.next = new ListNode(carry);
+  }
 
-    return head;
-
-};
+  return head;
+}
 ```
 
 **Solution:**
@@ -66,6 +67,7 @@ Below are the step-by-step explanations of the code:
 2. The `addTwoNumbers` function is defined, taking two parameters: `l1` (a ListNode representing the first linked list) and `l2` (a ListNode representing the second linked list). It returns a ListNode representing the sum of the two linked lists.
 
 3. Several variables are initialized:
+
    - `head` is initially set to `null` and will be used to keep track of the head node of the resulting linked list.
    - `temp` is initially set to `null` and will be used to traverse the linked list and add new nodes.
    - `carry` is initially set to 0 and will hold the carry value during addition.
@@ -98,4 +100,4 @@ The following techniques are utilized within the code:
 6. Creating new linked list nodes using the `ListNode` constructor.
 7. Updating references between linked list nodes to form the resulting linked list.
 
-* [Go back](../readme.md)
+- [Go back](../readme.md)

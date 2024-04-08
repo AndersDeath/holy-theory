@@ -1,20 +1,21 @@
 ---
 title: Remove element in place
-tags: ['training', 'task']
-languages: ['typescript']
+tags: ["training", "task"]
+languages: ["typescript"]
 ---
+
 # Remove element in place
 
 ```typescript
 function removeElement(nums: number[], val: number): number {
-    let count = 0;
-    for (let i = 0; i < nums.length; i++) {
-        if (nums[i] !== val) {
-            nums[count++] = nums[i];
-        }
+  let count = 0;
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] !== val) {
+      nums[count++] = nums[i];
     }
-    return count;
-};
+  }
+  return count;
+}
 ```
 
 1. **Input Array Modification**: The function `removeElement` takes an array of integers `nums` and an integer `val` as input. It aims to remove all instances of `val` from the array.

@@ -1,8 +1,9 @@
 ---
 title: Remove Linked List Elements
-tags: ['training', 'task']
-languages: ['typescript']
+tags: ["training", "task"]
+languages: ["typescript"]
 ---
+
 # Remove Linked List Elements
 
 ```typescript
@@ -19,26 +20,26 @@ languages: ['typescript']
  */
 
 function removeElements(head: ListNode | null, val: number): ListNode | null {
-        while (head != null && head.val == val) {
-            head = head.next;
-        }
+  while (head != null && head.val == val) {
+    head = head.next;
+  }
 
-        if (head == null) {
-            return null;
-        }
+  if (head == null) {
+    return null;
+  }
 
-        let temp = head;
+  let temp = head;
 
-        while (temp.next != null) {
-            const nextNode = temp.next;
-            if (nextNode.val == val) {
-                temp.next = nextNode.next;
-            } else {
-                temp = temp.next;
-            }
-        }
-        return head;
-};
+  while (temp.next != null) {
+    const nextNode = temp.next;
+    if (nextNode.val == val) {
+      temp.next = nextNode.next;
+    } else {
+      temp = temp.next;
+    }
+  }
+  return head;
+}
 ```
 
 1. **Input Linked List Modification**: The function `removeElements` takes a singly-linked list `head` and an integer `val` as input. It aims to remove all nodes with the specified value `val` from the linked list.
@@ -48,6 +49,7 @@ function removeElements(head: ListNode | null, val: number): ListNode | null {
 3. **Empty List Check**: After the initial removal of nodes with the specified value from the beginning, a check is performed to see if the `head` node has become `null` (i.e., the list is empty). If so, `null` is returned, indicating an empty list.
 
 4. **Traversal and Removal**: A temporary node `temp` is initialized to the `head` of the linked list. A `while` loop is used to traverse the linked list until the end. For each node, the following checks are performed:
+
    - If the value of the next node (`nextNode.val`) is equal to the specified value `val`, the `next` pointer of the current node (`temp`) is updated to skip the next node (i.e., `temp.next = nextNode.next`), effectively removing the node with the specified value from the list.
    - If the value of the next node is not equal to the specified value, the `temp` pointer is moved to the next node.
 
