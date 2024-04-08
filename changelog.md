@@ -6,7 +6,8 @@ All notable changes to this project will be documented in this file.
 * update Breadth First search
 * update  Depth-first search
 * update Dijkstra's algorithm
-* 
+* add Remove duplicates from sorted array training
+
 # [0.0.64] - 2024-04-01
 * update quick sort
 * update merge sort
