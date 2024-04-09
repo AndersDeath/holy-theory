@@ -37,16 +37,16 @@
 <li>Space Complexity: O(1)</li>
 </ul>
 <pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">reverseArray</span>(<span class="hljs-params">a: <span class="hljs-built_in">number</span>[]</span>): <span class="hljs-built_in">number</span>[] {
-    <span class="hljs-keyword">let</span> start = <span class="hljs-number">0</span>;
-    <span class="hljs-keyword">let</span> end = a.<span class="hljs-property">length</span> - <span class="hljs-number">1</span>;
-    <span class="hljs-keyword">while</span>(start &lt; end) {
-        <span class="hljs-keyword">let</span> temp = a[start];
-        a[start] = a[end];
-        a[end] = temp;
-        start++;
-        end--;
-    }
-    <span class="hljs-keyword">return</span> a;
+  <span class="hljs-keyword">let</span> start = <span class="hljs-number">0</span>;
+  <span class="hljs-keyword">let</span> end = a.<span class="hljs-property">length</span> - <span class="hljs-number">1</span>;
+  <span class="hljs-keyword">while</span> (start &lt; end) {
+    <span class="hljs-keyword">let</span> temp = a[start];
+    a[start] = a[end];
+    a[end] = temp;
+    start++;
+    end--;
+  }
+  <span class="hljs-keyword">return</span> a;
 }
 </code></pre></div>
     </body>

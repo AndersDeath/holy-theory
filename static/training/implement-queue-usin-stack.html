@@ -25,36 +25,36 @@
     <body>
         <div class="content"><h1 id="implement-queue-using-stacks">Implement Queue using Stacks</h1>
 <pre><code class="hljs language-typescript"><span class="hljs-keyword">class</span> <span class="hljs-title class_">MyQueue</span> {
-    <span class="hljs-attr">stack1</span>: <span class="hljs-built_in">number</span>[] = [];
-    <span class="hljs-attr">stack2</span>: <span class="hljs-built_in">number</span>[] = [];
+  <span class="hljs-attr">stack1</span>: <span class="hljs-built_in">number</span>[] = [];
+  <span class="hljs-attr">stack2</span>: <span class="hljs-built_in">number</span>[] = [];
 
-    <span class="hljs-title function_">constructor</span>(<span class="hljs-params"></span>) {}
+  <span class="hljs-title function_">constructor</span>(<span class="hljs-params"></span>) {}
 
-    <span class="hljs-title function_">push</span>(<span class="hljs-attr">x</span>: <span class="hljs-built_in">number</span>): <span class="hljs-built_in">void</span> {
-        <span class="hljs-variable language_">this</span>.<span class="hljs-property">stack1</span>.<span class="hljs-title function_">push</span>(x);
+  <span class="hljs-title function_">push</span>(<span class="hljs-attr">x</span>: <span class="hljs-built_in">number</span>): <span class="hljs-built_in">void</span> {
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">stack1</span>.<span class="hljs-title function_">push</span>(x);
+  }
+
+  <span class="hljs-title function_">pop</span>(): <span class="hljs-built_in">number</span> {
+    <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">move</span>();
+    <span class="hljs-keyword">return</span> <span class="hljs-variable language_">this</span>.<span class="hljs-property">stack2</span>.<span class="hljs-title function_">pop</span>();
+  }
+
+  <span class="hljs-title function_">peek</span>(): <span class="hljs-built_in">number</span> {
+    <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">move</span>();
+    <span class="hljs-keyword">return</span> <span class="hljs-variable language_">this</span>.<span class="hljs-property">stack2</span>[<span class="hljs-variable language_">this</span>.<span class="hljs-property">stack2</span>.<span class="hljs-property">length</span> - <span class="hljs-number">1</span>];
+  }
+
+  <span class="hljs-title function_">empty</span>(): <span class="hljs-built_in">boolean</span> {
+    <span class="hljs-keyword">return</span> !<span class="hljs-variable language_">this</span>.<span class="hljs-property">stack1</span>.<span class="hljs-property">length</span> &amp;&amp; !<span class="hljs-variable language_">this</span>.<span class="hljs-property">stack2</span>.<span class="hljs-property">length</span>;
+  }
+
+  <span class="hljs-title function_">move</span>(): <span class="hljs-built_in">void</span> {
+    <span class="hljs-keyword">if</span> (!<span class="hljs-variable language_">this</span>.<span class="hljs-property">stack2</span>.<span class="hljs-property">length</span>) {
+      <span class="hljs-keyword">while</span> (<span class="hljs-variable language_">this</span>.<span class="hljs-property">stack1</span>.<span class="hljs-property">length</span>) {
+        <span class="hljs-variable language_">this</span>.<span class="hljs-property">stack2</span>.<span class="hljs-title function_">push</span>(<span class="hljs-variable language_">this</span>.<span class="hljs-property">stack1</span>.<span class="hljs-title function_">pop</span>());
+      }
     }
-
-    <span class="hljs-title function_">pop</span>(): <span class="hljs-built_in">number</span> {
-        <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">move</span>();
-        <span class="hljs-keyword">return</span> <span class="hljs-variable language_">this</span>.<span class="hljs-property">stack2</span>.<span class="hljs-title function_">pop</span>();
-    }
-
-    <span class="hljs-title function_">peek</span>(): <span class="hljs-built_in">number</span> {
-        <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">move</span>();
-        <span class="hljs-keyword">return</span> <span class="hljs-variable language_">this</span>.<span class="hljs-property">stack2</span>[<span class="hljs-variable language_">this</span>.<span class="hljs-property">stack2</span>.<span class="hljs-property">length</span> - <span class="hljs-number">1</span>];
-    }
-
-    <span class="hljs-title function_">empty</span>(): <span class="hljs-built_in">boolean</span> {
-        <span class="hljs-keyword">return</span> !<span class="hljs-variable language_">this</span>.<span class="hljs-property">stack1</span>.<span class="hljs-property">length</span> &amp;&amp; !<span class="hljs-variable language_">this</span>.<span class="hljs-property">stack2</span>.<span class="hljs-property">length</span>;
-    }
-
-    <span class="hljs-title function_">move</span>(): <span class="hljs-built_in">void</span> {
-        <span class="hljs-keyword">if</span> (!<span class="hljs-variable language_">this</span>.<span class="hljs-property">stack2</span>.<span class="hljs-property">length</span>) {
-            <span class="hljs-keyword">while</span> (<span class="hljs-variable language_">this</span>.<span class="hljs-property">stack1</span>.<span class="hljs-property">length</span>) {
-                <span class="hljs-variable language_">this</span>.<span class="hljs-property">stack2</span>.<span class="hljs-title function_">push</span>(<span class="hljs-variable language_">this</span>.<span class="hljs-property">stack1</span>.<span class="hljs-title function_">pop</span>());
-            }
-        }
-    }
+  }
 }
 
 <span class="hljs-comment">/**

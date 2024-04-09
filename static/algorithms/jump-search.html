@@ -24,35 +24,35 @@
     </head>
     <body>
         <div class="content"><h1 id="jump-search">Jump search</h1>
-<p>Jump Search is a searching algorithm designed for sorted arrays. It is a block-based search algorithm that works by jumping ahead by fixed steps and then linearly searching within the block for the target element. Jump Search combines the efficiency of binary search with the simplicity of linear search.</p>
+<p>Jump Search is an algorithm designed for sorted arrays. It is a block-based search algorithm that works by jumping ahead by fixed steps and then linearly searching within the block for the target element. The algorithm combines the efficiency of binary search with the simplicity of linear search.</p>
 <h2 id="how-it-work">How it work:</h2>
 <p><strong>Step 1:</strong> Determine the jump size by taking the square root of the array length. This ensures a balanced trade-off between the number of jumps and the linear search within a block.</p>
-<p><strong>Step 2:</strong> Start at the beginning of the array and jump ahead by the calculated jump size until finding a value that is greater than or equal to the target.</p>
-<p><strong>Step 3:</strong> Perform a linear search within the block from the previous jump until finding the target element or determining that it is not present in the block.</p>
+<p><strong>Step 2:</strong> Start at the beginning of the array and move ahead by the calculated jump size until finding a value that is greater than or equal to the target.</p>
+<p><strong>Step 3:</strong> Perform a linear search within the block from the previous jump until finding the target element or checking that it is not there.</p>
 <p><strong>Step 4:</strong> Repeat the process until the entire array is searched or the target element is found.</p>
 <h2 id="key-characteristics">Key Characteristics:</h2>
-<p><strong>Sorted Array</strong>: Jump search requires the array to be sorted in ascending order. This characteristic is crucial for its operation.</p>
-<p><strong>Block Jumping</strong>: Jump search works by jumping ahead by fixed steps (often referred to as block size or jump size) instead of dividing the search space in half at each step like binary search.</p>
-<p><strong>Optimal Jump Size</strong>: The optimal jump size is usually calculated as the square root of the length of the array. This ensures a balance between the number of jumps and the number of comparisons needed.</p>
-<p><strong>Linear Search Within Blocks</strong>: After jumping to a particular block, jump search performs a linear search within that block to find the exact location of the target element.</p>
-<p><strong>Requires Random Access</strong>: Jump search requires random access to elements in the array. This means it is more suitable for data structures like arrays or lists with efficient random access.</p>
-<p><strong>Adaptive</strong>: Jump search can be adapted to different scenarios by adjusting the jump size. Smaller jump sizes can reduce the number of comparisons but increase the number of jumps, while larger jump sizes have the opposite effect.</p>
+<p><strong>Sorted Array</strong>: Jump search requires the array to be sorted in ascending order. This is required characteristic.</p>
+<p><strong>Block Jumping</strong>: The algorithm works by jumping ahead by fixed steps (often referred to as block size or jump size) instead of dividing the search space in half at each step like binary search.</p>
+<p><strong>Optimal Jump Size</strong>: The optimal jump size is usually calculated as the square root of the length of the array. This ensures a balance between the number of moves and the amount of comparisons needed.</p>
+<p><strong>Linear Search Within Blocks</strong>: After jumping to a particular block, the algorithm performs a linear search within that block.</p>
+<p><strong>Requires Random Access</strong>: Jump search requires random access to elements in the array. This means it is more suitable for data structures like arrays or lists.</p>
+<p><strong>Adaptive</strong>: The algorithm can be adapted to different scenarios by adjusting the jump size. Smaller jump sizes can reduce the number of comparisons but increase the number of jumps, while larger jump sizes have the opposite effect.</p>
 <p><strong>Not Recursive</strong>: Unlike binary search, jump search is typically implemented iteratively rather than recursively.</p>
-<p><strong>Suitable for Large Arrays</strong>: Jump search is particularly suitable for large arrays where binary search might be impractical due to the overhead of sorting or limited memory.</p>
+<p><strong>Suitable for Large Arrays</strong>: The algorithm is particularly suitable for large arrays due to more efficient work with memory.</p>
 <p><strong>Balances Efficiency and Simplicity</strong>: Jump search strikes a balance between the simplicity of linear search and the efficiency of binary search, making it a practical choice in scenarios where a trade-off between simplicity and efficiency is acceptable.</p>
-<p><strong>Space Complexity</strong>: Jump search has a space complexity of O(1), meaning it requires only a constant amount of additional space for variables regardless of the size of the array.</p>
-<p><strong>Applications</strong>: Jump search can be useful in scenarios where binary search is not suitable due to memory constraints or when the dataset is relatively large and needs a more efficient search than linear search.</p>
+<p><strong>Space Complexity</strong>: Jump search has a space complexity of O(1), meaning it requires only a constant amount of additional space.</p>
+<p><strong>Applications</strong>: The algorithm can be useful in scenarios where binary search is not suitable due to memory constraints or when the dataset is relatively large and needs a more efficient search than linear search.</p>
 <h2 id="applications">Applications:</h2>
-<p><strong>Search in Databases</strong>: Jump search can be applied in databases to search for records based on certain criteria, especially when the data is stored in sorted arrays or tables. It offers a more efficient alternative to linear search for large datasets.</p>
-<p><strong>File Systems</strong>: In file systems, jump search can be utilized to locate files within directories or to search for specific content within files. This is particularly useful when dealing with large directories or files where linear search would be inefficient.</p>
-<p><strong>Web Indexing</strong>: Jump search can be employed in web indexing algorithms to search for keywords within web pages or documents. It helps optimize search operations by quickly narrowing down the search space.</p>
-<p><strong>Data Compression Algorithms</strong>: Jump search can be used in data compression algorithms to quickly locate patterns or repeated sequences within data streams. This is especially useful in applications like lossless compression where efficiency is crucial.</p>
-<p><strong>Sparse Arrays</strong>: Jump search is effective for searching in sparse arrays where there are large gaps between elements. It helps efficiently navigate through the array while minimizing unnecessary comparisons.</p>
-<p><strong>Database Indexing</strong>: Jump search can be utilized in database indexing structures, such as B-trees or skip lists, to quickly locate entries within the index. It provides a fast method for searching within indexed structures.</p>
-<p><strong>Text Editors and Word Processors</strong>: Jump search can be incorporated into text editors or word processors to implement features like search and find functionality. It allows users to quickly locate specific words or phrases within documents.</p>
-<p><strong>Genetic Sequence Analysis</strong>: In bioinformatics, jump search can be applied to efficiently search for specific patterns or sequences within genetic data. It helps analyze DNA or protein sequences in large datasets.</p>
-<p><strong>Network Routing</strong>: Jump search can be used in network routing algorithms to efficiently search for routes or paths between network nodes. It assists in finding the optimal route while minimizing the number of hops or comparisons.</p>
-<p><strong>Data Mining</strong>: Jump search can be employed in data mining tasks to search for patterns or anomalies within large datasets. It aids in quickly identifying relevant data points or clusters.</p>
+<p><strong>Search in Databases</strong>: Jump search can be applied in databases to search for records based on certain criteria, especially when the data is stored in sorted arrays or tables.</p>
+<p><strong>File Systems</strong>: In file systems, the algorithm can be utilized to locate files within directories or to search for specific content within files.</p>
+<p><strong>Web Indexing</strong>: Jump search can be employed in web indexing algorithms to search for keywords within web pages or documents.</p>
+<p><strong>Data Compression Algorithms</strong>: The algorithm can be used in data compression ones to quickly locate patterns or repeated sequences within data streams.</p>
+<p><strong>Sparse Arrays</strong>: Jump search is effective for searching in sparse arrays where there are large gaps between elements. It helps to decrease the number of unnecessary comparisons.</p>
+<p><strong>Database Indexing</strong>: The algorithm can be utilized in database indexing structures, such as B-trees or skip lists, to quickly locate entries within the index. It provides a fast method for searching within indexed structures.</p>
+<p><strong>Text Editors and Word Processors</strong>: Jump search can be used into text editors or word processors to implement features like find word or bunch of phrase.</p>
+<p><strong>Genetic Sequence Analysis</strong>: In bioinformatics, the algorithm can be applied to efficiently search for specific patterns or sequences within genetic data. It helps analyze DNA or protein sequences in large datasets.</p>
+<p><strong>Network Routing</strong>: Jump search can be used in network routing algorithms to efficiently search for routes or paths between network nodes. It helps to find an optimal route while minimizing the number of hops or comparisons.</p>
+<p><strong>Data Mining</strong>: The algorithm can be employed in data mining tasks to search for patterns or anomalies within large datasets. It helps in quickly identify relevant data points or clusters.</p>
 <h2 id="time-complexity">Time Complexity:</h2>
 <p>The time complexity of Jump Search is -add formula-,, where-add formula-, is the size of the array. This makes it efficient for large datasets when compared to linear search but may be outperformed by binary search for certain scenarios.</p>
 <p><img src="https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/jump-search.png" alt="Jump search"></p>

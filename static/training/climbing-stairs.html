@@ -25,19 +25,19 @@
     <body>
         <div class="content"><h1 id="climbing-stairs">Climbing stairs</h1>
 <pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">climbStairs</span>(<span class="hljs-params">n: <span class="hljs-built_in">number</span></span>): <span class="hljs-built_in">number</span> {
-    <span class="hljs-keyword">if</span>(n &lt;= <span class="hljs-number">3</span>) {
-        <span class="hljs-keyword">return</span> n;
-    }
+  <span class="hljs-keyword">if</span> (n &lt;= <span class="hljs-number">3</span>) {
+    <span class="hljs-keyword">return</span> n;
+  }
 
-    <span class="hljs-keyword">let</span> a = <span class="hljs-number">3</span>;
-    <span class="hljs-keyword">let</span> b = <span class="hljs-number">2</span>;
+  <span class="hljs-keyword">let</span> a = <span class="hljs-number">3</span>;
+  <span class="hljs-keyword">let</span> b = <span class="hljs-number">2</span>;
 
-    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; n -<span class="hljs-number">3</span>; i++) {
-        a = a + b;
-        b = a - b;
-    }
-    <span class="hljs-keyword">return</span> a;
-};
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; n - <span class="hljs-number">3</span>; i++) {
+    a = a + b;
+    b = a - b;
+  }
+  <span class="hljs-keyword">return</span> a;
+}
 </code></pre><p><strong>Solution:</strong>
 Below is the step-by-step breakdown of the code:</p>
 <ol>
@@ -70,6 +70,9 @@ Below is the step-by-step breakdown of the code:</p>
 <p>This approach uses a dynamic programming-like approach to solve the problem, avoiding the need for recursion or maintaining an array. By iteratively updating the number of ways to reach each step based on the previous steps, the code calculates the total number of distinct ways to climb the stairs.</p>
 <p>The time complexity of this solution is O(n) since the loop iterates <code>n - 3</code> times. It has a constant space complexity since it only requires two variables to store the intermediate results.</p>
 <p><strong>Source: <a href="https://leetcode.com">https://leetcode.com</a></strong></p>
+<ul>
+<li><a href="../readme.md">Go back</a></li>
+</ul>
 </div>
     </body>
     </html>

@@ -24,8 +24,7 @@
     </head>
     <body>
         <div class="content"><h1 id="3sum-closest">3Sum Closest</h1>
-<pre><code class="hljs language-typescript">
-<span class="hljs-keyword">function</span> <span class="hljs-title function_">threeSumClosest</span>(<span class="hljs-params">nums: <span class="hljs-built_in">number</span>[], target: <span class="hljs-built_in">number</span></span>): <span class="hljs-built_in">number</span> {
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">threeSumClosest</span>(<span class="hljs-params">nums: <span class="hljs-built_in">number</span>[], target: <span class="hljs-built_in">number</span></span>): <span class="hljs-built_in">number</span> {
   nums.<span class="hljs-title function_">sort</span>(<span class="hljs-function">(<span class="hljs-params">a, b</span>) =&gt;</span> a - b);
 
   <span class="hljs-keyword">let</span> closestSum = nums[<span class="hljs-number">0</span>] + nums[<span class="hljs-number">1</span>] + nums[<span class="hljs-number">2</span>];
@@ -52,7 +51,7 @@
   }
 
   <span class="hljs-keyword">return</span> closestSum;
-};
+}
 </code></pre><p><strong>Solution:</strong></p>
 <p>The <code>threeSumClosest</code> function aims to find the sum of three numbers in an array (<code>nums</code>) that is closest to a target sum (<code>target</code>). Below are the step-by-step explanations of the code:</p>
 <table>
@@ -116,6 +115,9 @@
 <li>Using a <code>for</code> loop to iterate over an array.</li>
 <li>Using a <code>while</code> loop for</li>
 </ol>
+<ul>
+<li><a href="../readme.md">Go back</a></li>
+</ul>
 </div>
     </body>
     </html>

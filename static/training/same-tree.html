@@ -25,14 +25,14 @@
     <body>
         <div class="content"><h1 id="same-tree">Same tree</h1>
 <pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">isSameTree</span>(<span class="hljs-params">p: TreeNode | <span class="hljs-literal">null</span>, q: TreeNode | <span class="hljs-literal">null</span></span>): <span class="hljs-built_in">boolean</span> {
-    <span class="hljs-keyword">if</span>(p === <span class="hljs-literal">null</span> &amp;&amp; q === <span class="hljs-literal">null</span>) <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+  <span class="hljs-keyword">if</span> (p === <span class="hljs-literal">null</span> &amp;&amp; q === <span class="hljs-literal">null</span>) <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
 
-    <span class="hljs-keyword">if</span> (p === <span class="hljs-literal">null</span> || q === <span class="hljs-literal">null</span> || p.<span class="hljs-property">val</span> !== q.<span class="hljs-property">val</span>){
-        <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
-     }
-    
-    <span class="hljs-keyword">return</span> <span class="hljs-title function_">isSameTree</span>(p.<span class="hljs-property">left</span>,q.<span class="hljs-property">left</span>) &amp;&amp; <span class="hljs-title function_">isSameTree</span>(p.<span class="hljs-property">right</span>, q.<span class="hljs-property">right</span>);
-};
+  <span class="hljs-keyword">if</span> (p === <span class="hljs-literal">null</span> || q === <span class="hljs-literal">null</span> || p.<span class="hljs-property">val</span> !== q.<span class="hljs-property">val</span>) {
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+  }
+
+  <span class="hljs-keyword">return</span> <span class="hljs-title function_">isSameTree</span>(p.<span class="hljs-property">left</span>, q.<span class="hljs-property">left</span>) &amp;&amp; <span class="hljs-title function_">isSameTree</span>(p.<span class="hljs-property">right</span>, q.<span class="hljs-property">right</span>);
+}
 </code></pre><p><strong>Description:</strong></p>
 <ol>
 <li><p><strong>Base Case Check</strong>:</p>

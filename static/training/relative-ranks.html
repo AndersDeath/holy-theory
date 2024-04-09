@@ -25,25 +25,25 @@
     <body>
         <div class="content"><h1 id="relative-ranks">Relative Ranks</h1>
 <pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">findRelativeRanks</span>(<span class="hljs-params">score: <span class="hljs-built_in">number</span>[]</span>): <span class="hljs-built_in">string</span>[] {
- <span class="hljs-keyword">const</span> sortedNums = [...score].<span class="hljs-title function_">sort</span>(<span class="hljs-function">(<span class="hljs-params">a, b</span>) =&gt;</span> b - a);
-    <span class="hljs-keyword">const</span> <span class="hljs-attr">ranks</span>: <span class="hljs-built_in">string</span>[] = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Array</span>(score.<span class="hljs-property">length</span>);
+  <span class="hljs-keyword">const</span> sortedNums = [...score].<span class="hljs-title function_">sort</span>(<span class="hljs-function">(<span class="hljs-params">a, b</span>) =&gt;</span> b - a);
+  <span class="hljs-keyword">const</span> <span class="hljs-attr">ranks</span>: <span class="hljs-built_in">string</span>[] = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Array</span>(score.<span class="hljs-property">length</span>);
 
-    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; score.<span class="hljs-property">length</span>; i++) {
-        <span class="hljs-keyword">const</span> rank = sortedNums.<span class="hljs-title function_">indexOf</span>(score[i]) + <span class="hljs-number">1</span>;
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; score.<span class="hljs-property">length</span>; i++) {
+    <span class="hljs-keyword">const</span> rank = sortedNums.<span class="hljs-title function_">indexOf</span>(score[i]) + <span class="hljs-number">1</span>;
 
-        <span class="hljs-keyword">if</span> (rank === <span class="hljs-number">1</span>) {
-            ranks[i] = <span class="hljs-string">&quot;Gold Medal&quot;</span>;
-        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (rank === <span class="hljs-number">2</span>) {
-            ranks[i] = <span class="hljs-string">&quot;Silver Medal&quot;</span>;
-        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (rank === <span class="hljs-number">3</span>) {
-            ranks[i] = <span class="hljs-string">&quot;Bronze Medal&quot;</span>;
-        } <span class="hljs-keyword">else</span> {
-            ranks[i] = rank.<span class="hljs-title function_">toString</span>();
-        }
+    <span class="hljs-keyword">if</span> (rank === <span class="hljs-number">1</span>) {
+      ranks[i] = <span class="hljs-string">&quot;Gold Medal&quot;</span>;
+    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (rank === <span class="hljs-number">2</span>) {
+      ranks[i] = <span class="hljs-string">&quot;Silver Medal&quot;</span>;
+    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (rank === <span class="hljs-number">3</span>) {
+      ranks[i] = <span class="hljs-string">&quot;Bronze Medal&quot;</span>;
+    } <span class="hljs-keyword">else</span> {
+      ranks[i] = rank.<span class="hljs-title function_">toString</span>();
     }
+  }
 
-    <span class="hljs-keyword">return</span> ranks;
-};
+  <span class="hljs-keyword">return</span> ranks;
+}
 </code></pre><ol>
 <li><p><strong>Sorting the Array</strong>: The input <code>score</code> array is copied using the spread operator <code>[...score]</code> to create a new array <code>sortedNums</code>. This new array is sorted in descending order using the <code>sort()</code> method, which takes a comparison function <code>(a, b) =&gt; b - a</code>. This ensures that the largest scores come first in the sorted array.</p>
 </li>

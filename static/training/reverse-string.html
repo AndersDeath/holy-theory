@@ -24,17 +24,16 @@
     </head>
     <body>
         <div class="content"><h1 id="reverse-string">Reverse string</h1>
-<pre><code class="hljs language-typescript">
-<span class="hljs-keyword">function</span> <span class="hljs-title function_">reverseString</span>(<span class="hljs-params">s: <span class="hljs-built_in">string</span>[]</span>): <span class="hljs-built_in">void</span> {
-    <span class="hljs-keyword">let</span> l = <span class="hljs-number">0</span>;
-    <span class="hljs-keyword">let</span> r = s.<span class="hljs-property">length</span> - <span class="hljs-number">1</span>;
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">reverseString</span>(<span class="hljs-params">s: <span class="hljs-built_in">string</span>[]</span>): <span class="hljs-built_in">void</span> {
+  <span class="hljs-keyword">let</span> l = <span class="hljs-number">0</span>;
+  <span class="hljs-keyword">let</span> r = s.<span class="hljs-property">length</span> - <span class="hljs-number">1</span>;
 
-    <span class="hljs-keyword">while</span> (l &lt; r) {
-      <span class="hljs-keyword">let</span> temp = s[l];
-      s[l++] = s[r];
-      s[r--] = temp;
-    }
-};
+  <span class="hljs-keyword">while</span> (l &lt; r) {
+    <span class="hljs-keyword">let</span> temp = s[l];
+    s[l++] = s[r];
+    s[r--] = temp;
+  }
+}
 </code></pre><ol>
 <li><p><strong>Function Input and Output</strong>:</p>
 <ul>

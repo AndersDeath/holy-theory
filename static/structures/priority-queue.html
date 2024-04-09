@@ -26,50 +26,47 @@
         <div class="content"><h1 id="priority-queue">Priority Queue</h1>
 <p><img src="https://raw.githubusercontent.com/AndersDeath/holy-theory/main/images/priority-queue.png" alt="priority-queue"></p>
 <pre><code class="hljs language-typescript"><span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">PriorityQueue</span> {
-    <span class="hljs-keyword">private</span> <span class="hljs-attr">collection</span>: <span class="hljs-built_in">any</span>[] = []
+  <span class="hljs-keyword">private</span> <span class="hljs-attr">collection</span>: <span class="hljs-built_in">any</span>[] = [];
 
-    <span class="hljs-keyword">public</span> <span class="hljs-title function_">printCollection</span>(<span class="hljs-params"></span>) {
-        <span class="hljs-keyword">return</span> <span class="hljs-variable language_">this</span>.<span class="hljs-property">collection</span>;
+  <span class="hljs-keyword">public</span> <span class="hljs-title function_">printCollection</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-keyword">return</span> <span class="hljs-variable language_">this</span>.<span class="hljs-property">collection</span>;
+  }
+
+  <span class="hljs-keyword">public</span> <span class="hljs-title function_">enqueue</span>(<span class="hljs-params">element: <span class="hljs-built_in">any</span></span>) {
+    <span class="hljs-keyword">if</span> (<span class="hljs-variable language_">this</span>.<span class="hljs-title function_">isEmpty</span>()) {
+      <span class="hljs-keyword">return</span> <span class="hljs-variable language_">this</span>.<span class="hljs-property">collection</span>.<span class="hljs-title function_">push</span>(element);
     }
-
-    <span class="hljs-keyword">public</span> <span class="hljs-title function_">enqueue</span>(<span class="hljs-params">element: <span class="hljs-built_in">any</span></span>) {
-        <span class="hljs-keyword">if</span> (<span class="hljs-variable language_">this</span>.<span class="hljs-title function_">isEmpty</span>()) {
-            <span class="hljs-keyword">return</span> <span class="hljs-variable language_">this</span>.<span class="hljs-property">collection</span>.<span class="hljs-title function_">push</span>(element);
-        }
-        <span class="hljs-variable language_">this</span>.<span class="hljs-property">collection</span> = <span class="hljs-variable language_">this</span>.<span class="hljs-property">collection</span>.<span class="hljs-title function_">reverse</span>()
-        <span class="hljs-keyword">let</span> index = <span class="hljs-variable language_">this</span>.<span class="hljs-property">collection</span>.<span class="hljs-title function_">findIndex</span>(<span class="hljs-function">(<span class="hljs-params">item</span>) =&gt;</span> {
-            <span class="hljs-keyword">return</span> element[<span class="hljs-number">1</span>] &gt;= item[<span class="hljs-number">1</span>];
-        });
-        <span class="hljs-keyword">if</span> (index === -<span class="hljs-number">1</span>) {
-            <span class="hljs-variable language_">this</span>.<span class="hljs-property">collection</span>.<span class="hljs-title function_">push</span>(element);
-        } <span class="hljs-keyword">else</span> {
-            <span class="hljs-variable language_">this</span>.<span class="hljs-property">collection</span>.<span class="hljs-title function_">splice</span>(index, <span class="hljs-number">0</span>, element);
-        }
-        <span class="hljs-variable language_">this</span>.<span class="hljs-property">collection</span> = <span class="hljs-variable language_">this</span>.<span class="hljs-property">collection</span>.<span class="hljs-title function_">reverse</span>()
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">collection</span> = <span class="hljs-variable language_">this</span>.<span class="hljs-property">collection</span>.<span class="hljs-title function_">reverse</span>();
+    <span class="hljs-keyword">let</span> index = <span class="hljs-variable language_">this</span>.<span class="hljs-property">collection</span>.<span class="hljs-title function_">findIndex</span>(<span class="hljs-function">(<span class="hljs-params">item</span>) =&gt;</span> {
+      <span class="hljs-keyword">return</span> element[<span class="hljs-number">1</span>] &gt;= item[<span class="hljs-number">1</span>];
+    });
+    <span class="hljs-keyword">if</span> (index === -<span class="hljs-number">1</span>) {
+      <span class="hljs-variable language_">this</span>.<span class="hljs-property">collection</span>.<span class="hljs-title function_">push</span>(element);
+    } <span class="hljs-keyword">else</span> {
+      <span class="hljs-variable language_">this</span>.<span class="hljs-property">collection</span>.<span class="hljs-title function_">splice</span>(index, <span class="hljs-number">0</span>, element);
     }
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">collection</span> = <span class="hljs-variable language_">this</span>.<span class="hljs-property">collection</span>.<span class="hljs-title function_">reverse</span>();
+  }
 
-    <span class="hljs-keyword">public</span> <span class="hljs-title function_">dequeue</span>(<span class="hljs-params"></span>) {
-        <span class="hljs-keyword">if</span> (!<span class="hljs-variable language_">this</span>.<span class="hljs-title function_">isEmpty</span>()) {
-            <span class="hljs-keyword">return</span> <span class="hljs-variable language_">this</span>.<span class="hljs-property">collection</span>.<span class="hljs-title function_">shift</span>()[<span class="hljs-number">0</span>];
-        } <span class="hljs-keyword">else</span> {
-            <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;The queue is empty.&quot;</span>;
-        }
+  <span class="hljs-keyword">public</span> <span class="hljs-title function_">dequeue</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-keyword">if</span> (!<span class="hljs-variable language_">this</span>.<span class="hljs-title function_">isEmpty</span>()) {
+      <span class="hljs-keyword">return</span> <span class="hljs-variable language_">this</span>.<span class="hljs-property">collection</span>.<span class="hljs-title function_">shift</span>()[<span class="hljs-number">0</span>];
+    } <span class="hljs-keyword">else</span> {
+      <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;The queue is empty.&quot;</span>;
     }
+  }
 
-    <span class="hljs-keyword">public</span> <span class="hljs-title function_">front</span>():<span class="hljs-built_in">any</span> {
-        <span class="hljs-keyword">return</span> <span class="hljs-variable language_">this</span>.<span class="hljs-property">collection</span>[<span class="hljs-number">0</span>][<span class="hljs-number">0</span>]
+  <span class="hljs-keyword">public</span> <span class="hljs-title function_">front</span>(): <span class="hljs-built_in">any</span> {
+    <span class="hljs-keyword">return</span> <span class="hljs-variable language_">this</span>.<span class="hljs-property">collection</span>[<span class="hljs-number">0</span>][<span class="hljs-number">0</span>];
+  }
 
-    }
+  <span class="hljs-keyword">public</span> <span class="hljs-title function_">size</span>(): <span class="hljs-built_in">number</span> {
+    <span class="hljs-keyword">return</span> <span class="hljs-variable language_">this</span>.<span class="hljs-property">collection</span>.<span class="hljs-property">length</span>;
+  }
 
-    <span class="hljs-keyword">public</span> <span class="hljs-title function_">size</span>(): <span class="hljs-built_in">number</span> {
-        <span class="hljs-keyword">return</span> <span class="hljs-variable language_">this</span>.<span class="hljs-property">collection</span>.<span class="hljs-property">length</span>
-
-    }
-
-    <span class="hljs-keyword">public</span> <span class="hljs-title function_">isEmpty</span>(): <span class="hljs-built_in">boolean</span> {
-        <span class="hljs-keyword">return</span> !<span class="hljs-variable language_">this</span>.<span class="hljs-title function_">size</span>();
-
-    }
+  <span class="hljs-keyword">public</span> <span class="hljs-title function_">isEmpty</span>(): <span class="hljs-built_in">boolean</span> {
+    <span class="hljs-keyword">return</span> !<span class="hljs-variable language_">this</span>.<span class="hljs-title function_">size</span>();
+  }
 }
 </code></pre></div>
     </body>

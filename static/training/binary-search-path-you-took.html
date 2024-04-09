@@ -24,7 +24,7 @@
     </head>
     <body>
         <div class="content"><h1 id="binary-search-path-you-took">Binary search path you took</h1>
-<pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">binarySearch</span>(<span class="hljs-params">searchList: <span class="hljs-built_in">number</span>[], value: <span class="hljs-built_in">number</span></span>): (<span class="hljs-built_in">number</span>[] | <span class="hljs-built_in">string</span>) {
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">binarySearch</span>(<span class="hljs-params">searchList: <span class="hljs-built_in">number</span>[], value: <span class="hljs-built_in">number</span></span>): <span class="hljs-built_in">number</span>[] | <span class="hljs-built_in">string</span> {
   <span class="hljs-keyword">let</span> <span class="hljs-attr">path</span>: <span class="hljs-built_in">number</span>[] = [];
 
   <span class="hljs-keyword">let</span> <span class="hljs-attr">start</span>: <span class="hljs-built_in">number</span> = <span class="hljs-number">0</span>;
@@ -49,10 +49,10 @@
 <span class="hljs-comment">// Test with the provided array</span>
 <span class="hljs-keyword">const</span> <span class="hljs-attr">testArray</span>: <span class="hljs-built_in">number</span>[] = [
   <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>, <span class="hljs-number">10</span>, <span class="hljs-number">11</span>, <span class="hljs-number">12</span>, <span class="hljs-number">13</span>, <span class="hljs-number">14</span>, <span class="hljs-number">15</span>, <span class="hljs-number">16</span>, <span class="hljs-number">17</span>, <span class="hljs-number">18</span>, <span class="hljs-number">19</span>, <span class="hljs-number">20</span>, <span class="hljs-number">21</span>, <span class="hljs-number">22</span>,
-  <span class="hljs-number">23</span>, <span class="hljs-number">49</span>, <span class="hljs-number">70</span>
+  <span class="hljs-number">23</span>, <span class="hljs-number">49</span>, <span class="hljs-number">70</span>,
 ];
 
-<span class="hljs-keyword">const</span> <span class="hljs-attr">result</span>: (<span class="hljs-built_in">number</span>[] | <span class="hljs-built_in">string</span>) = <span class="hljs-title function_">binarySearch</span>(testArray, <span class="hljs-number">5</span>);
+<span class="hljs-keyword">const</span> <span class="hljs-attr">result</span>: <span class="hljs-built_in">number</span>[] | <span class="hljs-built_in">string</span> = <span class="hljs-title function_">binarySearch</span>(testArray, <span class="hljs-number">5</span>);
 <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(result); <span class="hljs-comment">// Output: [4, 6, 5]</span>
 </code></pre><p><strong>Solution:</strong></p>
 <ol>

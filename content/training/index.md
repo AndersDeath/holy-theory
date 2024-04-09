@@ -143,6 +143,7 @@
 - [Ransom Note](./ransome-note.md)
 - [Regular Expression Matching](./regular-expression-matching.md)
 - [Relative Ranks](./relative-ranks.md)
+- [Remove duplicate form sorted array](./remove-duplicate-from-sorted-array.md)
 - [Remove duplicate words](./remove-duplicate-words.md)
 - [Remove duplicates](./remove-duplicates.md)
 - [Remove element in place](./remove-element-in-place.md)
