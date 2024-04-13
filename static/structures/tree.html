@@ -43,7 +43,7 @@
   <span class="hljs-title function_">add</span>(<span class="hljs-params">value, parentValue</span>) {
     <span class="hljs-keyword">let</span> newNode = {
       value,
-      <span class="hljs-attr">children</span>: []
+      <span class="hljs-attr">children</span>: [],
     };
 
     <span class="hljs-keyword">if</span> (<span class="hljs-variable language_">this</span>.<span class="hljs-property">root</span> === <span class="hljs-literal">null</span>) {
@@ -51,7 +51,7 @@
       <span class="hljs-keyword">return</span>;
     }
 
-    <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">traverse</span>(<span class="hljs-function"><span class="hljs-params">node</span> =&gt;</span> {
+    <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">traverse</span>(<span class="hljs-function">(<span class="hljs-params">node</span>) =&gt;</span> {
       <span class="hljs-keyword">if</span> (node.<span class="hljs-property">value</span> === parentValue) {
         node.<span class="hljs-property">children</span>.<span class="hljs-title function_">push</span>(newNode);
       }
@@ -59,9 +59,7 @@
   }
 }
 </code></pre><h2 id="binary-search-tree">Binary search tree</h2>
-<pre><code class="hljs language-javascript">
-<span class="hljs-keyword">class</span> <span class="hljs-title class_">BinarySearchTree</span> {
-
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">class</span> <span class="hljs-title class_">BinarySearchTree</span> {
   <span class="hljs-title function_">constructor</span>(<span class="hljs-params"></span>) {
     <span class="hljs-variable language_">this</span>.<span class="hljs-property">root</span> = <span class="hljs-literal">null</span>;
   }
@@ -70,13 +68,10 @@
     <span class="hljs-keyword">let</span> current = <span class="hljs-variable language_">this</span>.<span class="hljs-property">root</span>;
 
     <span class="hljs-keyword">while</span> (current) {
-
       <span class="hljs-keyword">if</span> (value &gt; current.<span class="hljs-property">value</span>) {
         current = current.<span class="hljs-property">right</span>;
-
       } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (value &lt; current.<span class="hljs-property">value</span>) {
         current = current.<span class="hljs-property">left</span>;
-
       } <span class="hljs-keyword">else</span> {
         <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
       }
@@ -89,7 +84,7 @@
     <span class="hljs-keyword">let</span> node = {
       <span class="hljs-attr">value</span>: value,
       <span class="hljs-attr">left</span>: <span class="hljs-literal">null</span>,
-      <span class="hljs-attr">right</span>: <span class="hljs-literal">null</span>
+      <span class="hljs-attr">right</span>: <span class="hljs-literal">null</span>,
     };
 
     <span class="hljs-keyword">if</span> (<span class="hljs-variable language_">this</span>.<span class="hljs-property">root</span> === <span class="hljs-literal">null</span>) {
@@ -100,25 +95,20 @@
     <span class="hljs-keyword">let</span> current = <span class="hljs-variable language_">this</span>.<span class="hljs-property">root</span>;
 
     <span class="hljs-keyword">while</span> (<span class="hljs-literal">true</span>) {
-
       <span class="hljs-keyword">if</span> (value &gt; current.<span class="hljs-property">value</span>) {
-
         <span class="hljs-keyword">if</span> (!current.<span class="hljs-property">right</span>) {
           current.<span class="hljs-property">right</span> = node;
           <span class="hljs-keyword">break</span>;
         }
 
         current = current.<span class="hljs-property">right</span>;
-
       } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (value &lt; current.<span class="hljs-property">value</span>) {
-
         <span class="hljs-keyword">if</span> (!current.<span class="hljs-property">left</span>) {
           current.<span class="hljs-property">left</span> = node;
           <span class="hljs-keyword">break</span>;
         }
 
         current = current.<span class="hljs-property">left</span>;
-
       } <span class="hljs-keyword">else</span> {
         <span class="hljs-keyword">break</span>;
       }

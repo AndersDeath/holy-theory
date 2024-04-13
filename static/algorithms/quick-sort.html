@@ -29,7 +29,7 @@
 <p><strong>Step 1:</strong>
 Select a pivot. It might be any element at random, the first or last element, middle one.</p>
 <p><strong>Step 2:</strong>
-Partition the array around the pivot element. Move all the elements &lt; pivot to the left of the pivot and move all elements &gt;= pivot to the pivot’s right</p>
+Partition the array around the pivot element. Move all the elements that less than pivot to the left of the it and move all elements that more or equal to the right side.</p>
 <p><strong>Step 3:</strong>
 After Step 2, the pivot element is in its correct position</p>
 <p><strong>Step 4:</strong>
@@ -37,7 +37,7 @@ Apply the quicksort recursively on the left partition and then on the right part
 <p><strong>Step 5:</strong>
 Stop recursion when array is sorted when reach out the base case. It&#39;s an array of zero or one element.</p>
 <h2 id="key-characteristics">Key Characteristics:</h2>
-<p><strong>Divide and Conquer</strong>: it is a divide-and-conquer algorithm that partitions the array into smaller sub-arrays, sorts each sub-array recursively, and then combines them to obtain a sorted array.</p>
+<p><strong>Divide and Conquer</strong>: it is a divide-and-conquer algorithm that partitions the array into smaller sub-arrays, sorts each of them recursively, and then combines them to obtain a sorted array.</p>
 <p><strong>In-place Sorting</strong>: Quick Sort often sorts elements in place within the array, which means it does not require additional memory beyond a few stack frames for recursion.</p>
 <p><strong>Unstable</strong>: The algorithm is generally an unstable, meaning that it may change the relative order of equal elements.</p>
 <p><strong>Efficiency</strong>: Quick Sort is highly efficient for large datasets due to its average-case time complexity of O(n log n). It outperforms many other sorting algorithms like Bubble Sort, Insertion Sort, and Selection Sort for larger datasets.</p>

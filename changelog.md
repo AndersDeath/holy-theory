@@ -3,7 +3,9 @@
 All notable changes to this project will be documented in this file.
 
 # [0.0.66] - In progress
-*
+* update floyd warshall algorithm
+* update ford fulkerson algorithm
+* start working on builder3
 
 # [0.0.65] - 2024-04-08
 * update Breadth First search

@@ -26,24 +26,24 @@
         <div class="content"><h1 id="base-7">Base 7</h1>
 <pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">convertToBase7</span>(<span class="hljs-params">num: <span class="hljs-built_in">number</span></span>): <span class="hljs-built_in">string</span> {
   <span class="hljs-keyword">if</span> (num === <span class="hljs-number">0</span>) {
-        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;0&quot;</span>;
-    }
+    <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;0&quot;</span>;
+  }
 
-    <span class="hljs-keyword">let</span> isNegative = num &lt; <span class="hljs-number">0</span>;
-    num = <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">abs</span>(num);
-    <span class="hljs-keyword">let</span> base7 = <span class="hljs-string">&quot;&quot;</span>;
+  <span class="hljs-keyword">let</span> isNegative = num &lt; <span class="hljs-number">0</span>;
+  num = <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">abs</span>(num);
+  <span class="hljs-keyword">let</span> base7 = <span class="hljs-string">&quot;&quot;</span>;
 
-    <span class="hljs-keyword">while</span> (num &gt; <span class="hljs-number">0</span>) {
-        base7 = (num % <span class="hljs-number">7</span>).<span class="hljs-title function_">toString</span>() + base7;
-        num = <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">floor</span>(num / <span class="hljs-number">7</span>);
-    }
+  <span class="hljs-keyword">while</span> (num &gt; <span class="hljs-number">0</span>) {
+    base7 = (num % <span class="hljs-number">7</span>).<span class="hljs-title function_">toString</span>() + base7;
+    num = <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">floor</span>(num / <span class="hljs-number">7</span>);
+  }
 
-    <span class="hljs-keyword">if</span> (isNegative) {
-        base7 = <span class="hljs-string">&quot;-&quot;</span> + base7;
-    }
+  <span class="hljs-keyword">if</span> (isNegative) {
+    base7 = <span class="hljs-string">&quot;-&quot;</span> + base7;
+  }
 
-    <span class="hljs-keyword">return</span> base7;
-};
+  <span class="hljs-keyword">return</span> base7;
+}
 </code></pre><p><strong>Solution:</strong>
 Below are the step-by-step explanations of the code:</p>
 <ol>
@@ -87,6 +87,9 @@ Below are the step-by-step explanations of the code:</p>
 <li>Returning a calculated result.</li>
 </ol>
 <p><strong>Source: <a href="https://leetcode.com">https://leetcode.com</a></strong></p>
+<ul>
+<li><a href="../readme.md">Go back</a></li>
+</ul>
 </div>
     </body>
     </html>

@@ -24,8 +24,7 @@
     </head>
     <body>
         <div class="content"><h1 id="binary-tree-preorder-traversal">Binary Tree Preorder Traversal</h1>
-<pre><code class="hljs language-typescript">
-<span class="hljs-comment">/**
+<pre><code class="hljs language-typescript"><span class="hljs-comment">/**
  * Definition for a binary tree node.
  * class TreeNode {
  *     val: number
@@ -40,17 +39,17 @@
  */</span>
 
 <span class="hljs-keyword">function</span> <span class="hljs-title function_">preorderTraversal</span>(<span class="hljs-params">root: TreeNode | <span class="hljs-literal">null</span></span>): <span class="hljs-built_in">number</span>[] {
-    <span class="hljs-keyword">const</span> <span class="hljs-attr">output</span>: <span class="hljs-built_in">any</span>[] = [];
-    <span class="hljs-title function_">preorder</span>(root, output);
-    <span class="hljs-keyword">return</span> output;
-};
+  <span class="hljs-keyword">const</span> <span class="hljs-attr">output</span>: <span class="hljs-built_in">any</span>[] = [];
+  <span class="hljs-title function_">preorder</span>(root, output);
+  <span class="hljs-keyword">return</span> output;
+}
 
 <span class="hljs-keyword">function</span> <span class="hljs-title function_">preorder</span>(<span class="hljs-params">root: TreeNode | <span class="hljs-literal">null</span>, output: <span class="hljs-built_in">any</span>[]</span>) {
-    <span class="hljs-keyword">if</span> (root == <span class="hljs-literal">null</span>) <span class="hljs-keyword">return</span>;
+  <span class="hljs-keyword">if</span> (root == <span class="hljs-literal">null</span>) <span class="hljs-keyword">return</span>;
 
-    output.<span class="hljs-title function_">push</span>(root.<span class="hljs-property">val</span>);
-    <span class="hljs-title function_">preorder</span>(root.<span class="hljs-property">left</span>, output);
-    <span class="hljs-title function_">preorder</span>(root.<span class="hljs-property">right</span>, output);
+  output.<span class="hljs-title function_">push</span>(root.<span class="hljs-property">val</span>);
+  <span class="hljs-title function_">preorder</span>(root.<span class="hljs-property">left</span>, output);
+  <span class="hljs-title function_">preorder</span>(root.<span class="hljs-property">right</span>, output);
 }
 </code></pre><p><strong>Solution:</strong>
 Below are the step-by-step explanations of the code:</p>
@@ -102,6 +101,9 @@ Below are the step-by-step explanations of the code:</p>
 <li>Appending values to an array.</li>
 <li>Returning a calculated result.</li>
 </ol>
+<ul>
+<li><a href="../readme.md">Go back</a></li>
+</ul>
 </div>
     </body>
     </html>

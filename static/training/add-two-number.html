@@ -36,44 +36,44 @@
  * }
  */</span>
 
-<span class="hljs-keyword">function</span> <span class="hljs-title function_">addTwoNumbers</span>(<span class="hljs-params">l1: ListNode | <span class="hljs-literal">null</span>, l2: ListNode | <span class="hljs-literal">null</span></span>): <span class="hljs-title class_">ListNode</span> | <span class="hljs-literal">null</span> {
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">addTwoNumbers</span>(<span class="hljs-params">
+  l1: ListNode | <span class="hljs-literal">null</span>,
+  l2: ListNode | <span class="hljs-literal">null</span>
+</span>): <span class="hljs-title class_">ListNode</span> | <span class="hljs-literal">null</span> {
+  <span class="hljs-keyword">let</span> head = <span class="hljs-literal">null</span>;
 
-    <span class="hljs-keyword">let</span> head = <span class="hljs-literal">null</span>
+  <span class="hljs-keyword">let</span> temp = <span class="hljs-literal">null</span>;
 
-    <span class="hljs-keyword">let</span> temp = <span class="hljs-literal">null</span>;
+  <span class="hljs-keyword">let</span> carry = <span class="hljs-number">0</span>;
 
-    <span class="hljs-keyword">let</span> carry = <span class="hljs-number">0</span>;
-
-    <span class="hljs-keyword">while</span>(l1 !== <span class="hljs-literal">null</span> || l2 !== <span class="hljs-literal">null</span>) {
-        <span class="hljs-keyword">let</span> sum = carry;
-        <span class="hljs-keyword">if</span>(l1 !== <span class="hljs-literal">null</span>) {
-            sum += l1.<span class="hljs-property">val</span>;
-            l1 = l1.<span class="hljs-property">next</span>;
-        }
-        <span class="hljs-keyword">if</span>(l2 !== <span class="hljs-literal">null</span>) {
-             sum += l2.<span class="hljs-property">val</span>;
-            l2 = l2.<span class="hljs-property">next</span>;
-        }
-
-        <span class="hljs-keyword">const</span> node = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ListNode</span>(<span class="hljs-title class_">Math</span>.<span class="hljs-title function_">floor</span>(sum) % <span class="hljs-number">10</span>);
-        carry = <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">floor</span>(sum / <span class="hljs-number">10</span>);
-        <span class="hljs-keyword">if</span>(temp === <span class="hljs-literal">null</span>) {
-            temp = node;
-            head = node;
-        } <span class="hljs-keyword">else</span> {
-            temp.<span class="hljs-property">next</span> = node;
-            temp = temp.<span class="hljs-property">next</span>;
-        }
+  <span class="hljs-keyword">while</span> (l1 !== <span class="hljs-literal">null</span> || l2 !== <span class="hljs-literal">null</span>) {
+    <span class="hljs-keyword">let</span> sum = carry;
+    <span class="hljs-keyword">if</span> (l1 !== <span class="hljs-literal">null</span>) {
+      sum += l1.<span class="hljs-property">val</span>;
+      l1 = l1.<span class="hljs-property">next</span>;
+    }
+    <span class="hljs-keyword">if</span> (l2 !== <span class="hljs-literal">null</span>) {
+      sum += l2.<span class="hljs-property">val</span>;
+      l2 = l2.<span class="hljs-property">next</span>;
     }
 
-    <span class="hljs-keyword">if</span>(carry &gt; <span class="hljs-number">0</span>) {
-        temp.<span class="hljs-property">next</span> = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ListNode</span>(carry);
+    <span class="hljs-keyword">const</span> node = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ListNode</span>(<span class="hljs-title class_">Math</span>.<span class="hljs-title function_">floor</span>(sum) % <span class="hljs-number">10</span>);
+    carry = <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">floor</span>(sum / <span class="hljs-number">10</span>);
+    <span class="hljs-keyword">if</span> (temp === <span class="hljs-literal">null</span>) {
+      temp = node;
+      head = node;
+    } <span class="hljs-keyword">else</span> {
+      temp.<span class="hljs-property">next</span> = node;
+      temp = temp.<span class="hljs-property">next</span>;
     }
+  }
 
+  <span class="hljs-keyword">if</span> (carry &gt; <span class="hljs-number">0</span>) {
+    temp.<span class="hljs-property">next</span> = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ListNode</span>(carry);
+  }
 
-    <span class="hljs-keyword">return</span> head;
-
-};
+  <span class="hljs-keyword">return</span> head;
+}
 </code></pre><p><strong>Solution:</strong>
 Below are the step-by-step explanations of the code:</p>
 <ol>
@@ -116,6 +116,9 @@ Below are the step-by-step explanations of the code:</p>
 <li>Creating new linked list nodes using the <code>ListNode</code> constructor.</li>
 <li>Updating references between linked list nodes to form the resulting linked list.</li>
 </ol>
+<ul>
+<li><a href="../readme.md">Go back</a></li>
+</ul>
 </div>
     </body>
     </html>

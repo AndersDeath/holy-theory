@@ -1,10 +1,12 @@
 import express, { Express, Request, Response } from "express";
 import { spawn } from "child_process";
 import fs from "fs-extra";
+import { Builder } from "./builder/builder";
+
+new Builder();
 
 const app: Express = express();
 const port = 3000;
-
 app.use(express.static("static"));
 
 app.get("/builder", (req: Request, res: Response) => {
@@ -14,20 +16,22 @@ app.get("/builder", (req: Request, res: Response) => {
 
 app.get("/builder/run", (req: Request, res: Response) => {
   console.log("the builder is run");
+  console.log("test");
+  console.log("sd");
+  // try {
+  //   const process = spawn(`./scripts/generate_all.sh`, []);
 
-  try {
-    const process = spawn(`./scripts/generate_all.sh`, []);
+  //   process.stdout.on("data", (res: any) => {
+  //     console.log("Log: " + res);
+  //   });
 
-    process.stdout.on("data", (res: any) => {
-      console.log("Log: " + res);
-    });
-
-    process.on("close", (code) => {
-      res.redirect("/builder");
-    });
-  } catch (e) {
-    console.log(e);
-  }
+  //   process.on("close", (code) => {
+  //     res.redirect("/builder");
+  //   });
+  // } catch (e) {
+  //   console.log(e);
+  // }
+  res.send("Test");
 });
 
 app.listen(port, () => {

@@ -25,15 +25,15 @@
     <body>
         <div class="content"><h1 id="sum-square-difference">Sum square difference</h1>
 <h2 id="naive-solution">Naive solution</h2>
-<pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">sumSquareDifference</span>(<span class="hljs-params">n: <span class="hljs-built_in">number</span></span>):<span class="hljs-built_in">number</span> {
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">sumSquareDifference</span>(<span class="hljs-params">n: <span class="hljs-built_in">number</span></span>): <span class="hljs-built_in">number</span> {
   <span class="hljs-keyword">let</span> <span class="hljs-attr">sumSquares</span>: <span class="hljs-built_in">number</span> = <span class="hljs-number">0</span>;
-  <span class="hljs-keyword">let</span> <span class="hljs-attr">squareSum</span>:<span class="hljs-built_in">number</span> = <span class="hljs-number">0</span>;
-  <span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> i = <span class="hljs-number">1</span>; i &lt;= n; i++) {
+  <span class="hljs-keyword">let</span> <span class="hljs-attr">squareSum</span>: <span class="hljs-built_in">number</span> = <span class="hljs-number">0</span>;
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">1</span>; i &lt;= n; i++) {
     sumSquares += <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">pow</span>(i, <span class="hljs-number">2</span>);
-    squareSum +=i;
+    squareSum += i;
   }
 
-  <span class="hljs-keyword">return</span> <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">pow</span>(squareSum,<span class="hljs-number">2</span>) - sumSquares;
+  <span class="hljs-keyword">return</span> <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">pow</span>(squareSum, <span class="hljs-number">2</span>) - sumSquares;
 }
 </code></pre><ol>
 <li><p><strong>Initialize Variables:</strong></p>
@@ -71,15 +71,15 @@
 </ol>
 <h2 id="optimized-solution">Optimized solution</h2>
 <pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">sumSquareDifference</span>(<span class="hljs-params">n: <span class="hljs-built_in">number</span></span>): <span class="hljs-built_in">number</span> {
-    <span class="hljs-keyword">const</span> sumOfSquares = (n * (n + <span class="hljs-number">1</span>) * (<span class="hljs-number">2</span> * n + <span class="hljs-number">1</span>)) / <span class="hljs-number">6</span>;
-    <span class="hljs-keyword">const</span> sum = (n * (n + <span class="hljs-number">1</span>)) / <span class="hljs-number">2</span>;
-    <span class="hljs-keyword">const</span> squareOfSum = <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">pow</span>(sum, <span class="hljs-number">2</span>);
-    <span class="hljs-keyword">return</span> squareOfSum - sumOfSquares;
+  <span class="hljs-keyword">const</span> sumOfSquares = (n * (n + <span class="hljs-number">1</span>) * (<span class="hljs-number">2</span> * n + <span class="hljs-number">1</span>)) / <span class="hljs-number">6</span>;
+  <span class="hljs-keyword">const</span> sum = (n * (n + <span class="hljs-number">1</span>)) / <span class="hljs-number">2</span>;
+  <span class="hljs-keyword">const</span> squareOfSum = <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">pow</span>(sum, <span class="hljs-number">2</span>);
+  <span class="hljs-keyword">return</span> squareOfSum - sumOfSquares;
 }
 </code></pre><ol>
 <li><p><strong>Calculate the Sum of Squares:</strong></p>
 <ul>
-<li>The sum of squares of the first <code>n</code> natural numbers can be calculated using the formula </li>
+<li>The sum of squares of the first <code>n</code> natural numbers can be calculated using the formula</li>
 <li>Calculate <code>sumOfSquares</code> using the formula.</li>
 </ul>
 </li>

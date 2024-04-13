@@ -25,18 +25,18 @@
     <body>
         <div class="content"><h1 id="arranging-coins">Arranging Coins</h1>
 <pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">arrangeCoins</span>(<span class="hljs-params">n: <span class="hljs-built_in">number</span></span>): <span class="hljs-built_in">number</span> {
-    <span class="hljs-keyword">let</span> i = <span class="hljs-number">1</span>;
-    <span class="hljs-keyword">let</span> coins = <span class="hljs-number">0</span>;
-    <span class="hljs-keyword">let</span> cnt = <span class="hljs-number">0</span>;
-    
-    <span class="hljs-keyword">while</span>((n-coins) &gt;= i) {
-        coins += i;
-        i++;
-        cnt++;
-    }
-    
-    <span class="hljs-keyword">return</span> cnt;
-};
+  <span class="hljs-keyword">let</span> i = <span class="hljs-number">1</span>;
+  <span class="hljs-keyword">let</span> coins = <span class="hljs-number">0</span>;
+  <span class="hljs-keyword">let</span> cnt = <span class="hljs-number">0</span>;
+
+  <span class="hljs-keyword">while</span> (n - coins &gt;= i) {
+    coins += i;
+    i++;
+    cnt++;
+  }
+
+  <span class="hljs-keyword">return</span> cnt;
+}
 </code></pre><p><strong>Solution:</strong>
 Below are the step-by-step explanations of the code:</p>
 <ol>
@@ -76,6 +76,9 @@ Below are the step-by-step explanations of the code:</p>
 <li>Accumulation of values using the <code>+=</code> operator.</li>
 <li>Returning a calculated result.</li>
 </ol>
+<ul>
+<li><a href="../readme.md">Go back</a></li>
+</ul>
 </div>
     </body>
     </html>

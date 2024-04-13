@@ -25,28 +25,28 @@
     <body>
         <div class="content"><h1 id="chain-calculator">Chain calculator</h1>
 <pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">ChainCalculator</span>(<span class="hljs-params">given</span>) {
-    <span class="hljs-variable language_">this</span>.<span class="hljs-property">num</span> = given || <span class="hljs-number">0</span>;
-    <span class="hljs-keyword">const</span> actions = {
-        <span class="hljs-attr">half</span>: [<span class="hljs-string">&#x27;this.num = this.num/2; return this;&#x27;</span>],
-        <span class="hljs-attr">quarter</span>: [<span class="hljs-string">&#x27;this.num = this.num/4; return this;&#x27;</span>],
-        <span class="hljs-attr">third</span>: [<span class="hljs-string">&#x27;this.num = this.num/3; return this;&#x27;</span>],
-        <span class="hljs-attr">pow</span>: [<span class="hljs-string">&#x27;given&#x27;</span>, <span class="hljs-string">&#x27;this.num = Math.pow(this.num, given); return this;&#x27;</span>],
-        <span class="hljs-attr">sqrt</span>: [<span class="hljs-string">&#x27;this.num = Math.sqrt(this.num); return this;&#x27;</span>],
-        <span class="hljs-attr">log</span>: [<span class="hljs-string">`console.log(this.num); return this;`</span>],
-        <span class="hljs-attr">sum</span>: [<span class="hljs-string">&#x27;given&#x27;</span>,<span class="hljs-string">`this.num += given; return this;`</span>],
-        <span class="hljs-attr">minus</span>: [<span class="hljs-string">&#x27;given&#x27;</span>,<span class="hljs-string">`this.num -= given; return this;`</span>],
-        <span class="hljs-attr">multiply</span>: [<span class="hljs-string">&#x27;given&#x27;</span>,<span class="hljs-string">`this.num *= given; return this;`</span>],
-        <span class="hljs-attr">divide</span>: [<span class="hljs-string">&#x27;given&#x27;</span>,<span class="hljs-string">`this.num /= given; return this;`</span>],
-        <span class="hljs-attr">finish</span>: [<span class="hljs-string">&#x27;return this.num;&#x27;</span>]
-    }
+  <span class="hljs-variable language_">this</span>.<span class="hljs-property">num</span> = given || <span class="hljs-number">0</span>;
+  <span class="hljs-keyword">const</span> actions = {
+    <span class="hljs-attr">half</span>: [<span class="hljs-string">&quot;this.num = this.num/2; return this;&quot;</span>],
+    <span class="hljs-attr">quarter</span>: [<span class="hljs-string">&quot;this.num = this.num/4; return this;&quot;</span>],
+    <span class="hljs-attr">third</span>: [<span class="hljs-string">&quot;this.num = this.num/3; return this;&quot;</span>],
+    <span class="hljs-attr">pow</span>: [<span class="hljs-string">&quot;given&quot;</span>, <span class="hljs-string">&quot;this.num = Math.pow(this.num, given); return this;&quot;</span>],
+    <span class="hljs-attr">sqrt</span>: [<span class="hljs-string">&quot;this.num = Math.sqrt(this.num); return this;&quot;</span>],
+    <span class="hljs-attr">log</span>: [<span class="hljs-string">`console.log(this.num); return this;`</span>],
+    <span class="hljs-attr">sum</span>: [<span class="hljs-string">&quot;given&quot;</span>, <span class="hljs-string">`this.num += given; return this;`</span>],
+    <span class="hljs-attr">minus</span>: [<span class="hljs-string">&quot;given&quot;</span>, <span class="hljs-string">`this.num -= given; return this;`</span>],
+    <span class="hljs-attr">multiply</span>: [<span class="hljs-string">&quot;given&quot;</span>, <span class="hljs-string">`this.num *= given; return this;`</span>],
+    <span class="hljs-attr">divide</span>: [<span class="hljs-string">&quot;given&quot;</span>, <span class="hljs-string">`this.num /= given; return this;`</span>],
+    <span class="hljs-attr">finish</span>: [<span class="hljs-string">&quot;return this.num;&quot;</span>],
+  };
 
-    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">const</span> key <span class="hljs-keyword">in</span> actions) {
-        <span class="hljs-variable language_">this</span>[key] = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Function</span>(...actions[key])
-    }
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">const</span> key <span class="hljs-keyword">in</span> actions) {
+    <span class="hljs-variable language_">this</span>[key] = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Function</span>(...actions[key]);
+  }
 }
 <span class="hljs-keyword">const</span> calculator = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ChainCalculator</span>();
 
-calculator.<span class="hljs-title function_">log</span>().<span class="hljs-title function_">sum</span>(<span class="hljs-number">15</span>).<span class="hljs-title function_">log</span>().<span class="hljs-title function_">sum</span>(<span class="hljs-number">10</span>).<span class="hljs-title function_">log</span>().<span class="hljs-title function_">finish</span>().<span class="hljs-title function_">log</span>()
+calculator.<span class="hljs-title function_">log</span>().<span class="hljs-title function_">sum</span>(<span class="hljs-number">15</span>).<span class="hljs-title function_">log</span>().<span class="hljs-title function_">sum</span>(<span class="hljs-number">10</span>).<span class="hljs-title function_">log</span>().<span class="hljs-title function_">finish</span>().<span class="hljs-title function_">log</span>();
 </code></pre><p>The code above defines a <code>ChainCalculator</code> constructor function that creates calculator objects with chainable operations. The calculator can perform various mathematical operations on a number value and supports method chaining. The operations are defined as properties of the calculator object, and each operation returns the calculator object itself, allowing for sequential method calls.</p>
 <p>Here&#39;s a step-by-step breakdown of the code:</p>
 <ol>
@@ -84,6 +84,9 @@ calculator.<span class="hljs-title function_">log</span>().<span class="hljs-tit
 </li>
 </ol>
 <p>Please note that the code provided uses the <code>Function</code> constructor to dynamically create functions from code strings. While this approach offers flexibility, it can also be potentially unsafe if the code strings come from untrusted sources. It&#39;s important to ensure that the code strings used in this manner are secure and not susceptible to code injection vulnerabilities.</p>
+<ul>
+<li><a href="../readme.md">Go back</a></li>
+</ul>
 </div>
     </body>
     </html>
