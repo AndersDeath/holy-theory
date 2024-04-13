@@ -10,7 +10,7 @@ update_training() {
 update_readme() {
     echo "Provide a readme update:"
     read readme_update
-    echo "$readme_update" > README.md
+    echo "$readme_update" >README.md
 }
 
 update_changelog() {
@@ -28,16 +28,27 @@ while true; do
 
     select opt in "${options[@]}"; do
         case $opt in
-            "Update training") update_training ;;
-            "Add new training") echo "In progress" ;;
-            "Update readme") update_readme ;;
-            "Update changelog") update_changelog ;;
-            "Update readme and changelog") update_readme; update_changelog ;;
-            "Push everything") push_changes ;;
-            "Commit and push everything") git add .; git commit -m "Unknown update"; push_changes ;;
-            "Update static html and md versions") git add .; git commit -m "Update static html and md versions"; push_changes ;;
-            "Quit") exit 0 ;;
-            *) echo "Invalid option: $REPLY";;
+        "Update training") update_training ;;
+        "Add new training") echo "In progress" ;;
+        "Update readme") update_readme ;;
+        "Update changelog") update_changelog ;;
+        "Update readme and changelog")
+            update_readme
+            update_changelog
+            ;;
+        "Push everything") push_changes ;;
+        "Commit and push everything")
+            git add .
+            git commit -m "Unknown update"
+            push_changes
+            ;;
+        "Update static html and md versions")
+            git add .
+            git commit -m "Update static html and md versions"
+            push_changes
+            ;;
+        "Quit") exit 0 ;;
+        *) echo "Invalid option: $REPLY" ;;
         esac
         break
     done

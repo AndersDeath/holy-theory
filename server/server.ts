@@ -5,7 +5,6 @@ import { Builder } from "./builder/builder";
 
 new Builder();
 
-
 const app: Express = express();
 const port = 3000;
 app.use(express.static("static"));
@@ -17,8 +16,8 @@ app.get("/builder", (req: Request, res: Response) => {
 
 app.get("/builder/run", (req: Request, res: Response) => {
   console.log("the builder is run");
-  console.log('test')
-  console.log('sd')
+  console.log("test");
+  console.log("sd");
   // try {
   //   const process = spawn(`./scripts/generate_all.sh`, []);
 
@@ -32,7 +31,7 @@ app.get("/builder/run", (req: Request, res: Response) => {
   // } catch (e) {
   //   console.log(e);
   // }
-  res.send('Test');
+  res.send("Test");
 });
 
 app.listen(port, () => {
