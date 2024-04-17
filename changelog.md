@@ -3,7 +3,8 @@
 All notable changes to this project will be documented in this file.
 # [0.0.67] - In progress
 * add logger to builder3
-* 
+* add markdown parse to builder3
+
 # [0.0.66] - 2024-04-15
 * update floyd warshall algorithm
 * update ford fulkerson algorithm
