@@ -16,6 +16,9 @@ app.get("/builder", (req: Request, res: Response) => {
 
 app.get("/builder/run", (req: Request, res: Response) => {
   console.log("the builder is run");
+
+
+  
   // try {
   //   const process = spawn(`./scripts/generate_all.sh`, []);
 
