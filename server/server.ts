@@ -3,7 +3,9 @@ import { spawn } from "child_process";
 import fs from "fs-extra";
 import { Builder } from "./builder/builder";
 
-new Builder();
+const builder = new Builder({});
+
+builder.run();
 
 const app: Express = express();
 const port = 3000;
@@ -17,8 +19,6 @@ app.get("/builder", (req: Request, res: Response) => {
 app.get("/builder/run", (req: Request, res: Response) => {
   console.log("the builder is run");
 
-
-  
   // try {
   //   const process = spawn(`./scripts/generate_all.sh`, []);
 
