@@ -1,29 +1,31 @@
 ---
 title: Detect Capital Use
-tags: ['training', 'task']
-languages: ['typescript']
+tags: ["training", "task"]
+languages: ["typescript"]
 ---
+
 # Detect Capital Use
 
 ```typescript
 function detectCapitalUse(word: string): boolean {
   const isUpperCase = (ch: string): boolean => ch === ch.toUpperCase();
 
-    if (word === word.toUpperCase()) {
-        return true;
-    }
+  if (word === word.toUpperCase()) {
+    return true;
+  }
 
-    if (word === word.toLowerCase()) {
-        return true;
-    }
+  if (word === word.toLowerCase()) {
+    return true;
+  }
 
-    if (isUpperCase(word[0]) && word.slice(1) === word.slice(1).toLowerCase()) {
-        return true;
-    }
+  if (isUpperCase(word[0]) && word.slice(1) === word.slice(1).toLowerCase()) {
+    return true;
+  }
 
-    return false;
-};
+  return false;
+}
 ```
+
 **Solution:**
 
 Step-by-step breakdown of the code:
@@ -54,4 +56,4 @@ Summary:
 
 The provided JavaScript code checks the capitalization of a given word and returns `true` if the capitalization is correct (e.g., all uppercase, all lowercase, or starting with an uppercase followed by lowercase), and `false` otherwise.
 
-* [Go back](../readme.md)
+- [Go back](../readme.md)

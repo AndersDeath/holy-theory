@@ -1,8 +1,9 @@
 ---
 title: Delete Duplicate Emails
-tags: ['training', 'task']
-languages: ['sql']
+tags: ["training", "task"]
+languages: ["sql"]
 ---
+
 # Delete Duplicate Emails
 
 ```sql
@@ -39,5 +40,4 @@ Summary:
 
 The provided SQL query deletes rows from the `Person` table where the `id` value of one row is greater than the `id` value of another row, and their `email` values are the same. This ensures that only one row with the duplicate email address and the higher `id` value remains in the table.
 
-
-* [Go back](../readme.md)
+- [Go back](../readme.md)

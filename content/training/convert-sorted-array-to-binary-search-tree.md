@@ -1,12 +1,12 @@
 ---
 title: Convert Sorted Array to Binary Search Tree
-tags: ['training', 'task', 'tree']
-languages: ['typescript']
+tags: ["training", "task", "tree"]
+languages: ["typescript"]
 ---
+
 # Convert Sorted Array to Binary Search Tree
 
 ```typescript
-
 /**
  * Definition for a binary tree node.
  * class TreeNode {
@@ -22,19 +22,17 @@ languages: ['typescript']
  */
 
 function sortedArrayToBST(nums: number[]): TreeNode | null {
-    return helper(nums, 0, nums.length - 1);
-};
-
-
-function helper(nums: number[], start:number, end: number) {
-    if(start > end) return null;
-    let mid = Math.trunc((start + end) / 2);
-    let node = new TreeNode(nums[mid]);
-    node.left = helper(nums, start, mid -1);
-    node.right = helper(nums, mid + 1, end);
-    return node
+  return helper(nums, 0, nums.length - 1);
 }
 
+function helper(nums: number[], start: number, end: number) {
+  if (start > end) return null;
+  let mid = Math.trunc((start + end) / 2);
+  let node = new TreeNode(nums[mid]);
+  node.left = helper(nums, start, mid - 1);
+  node.right = helper(nums, mid + 1, end);
+  return node;
+}
 ```
 
 **Solution:**
@@ -53,6 +51,7 @@ Below is the step-by-step breakdown of the code:
 6. A new `TreeNode` object is created with the value at the middle index `nums[mid]`.
 
 7. Recursive calls to the `helper` function are made to construct the left subtree and right subtree of the current node:
+
    - The left subtree is constructed by calling `helper` with `start` and `mid - 1` as the new start and end indices.
    - The right subtree is constructed by calling `helper` with `mid + 1` and `end` as the new start and end indices.
 
