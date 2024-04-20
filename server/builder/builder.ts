@@ -17,12 +17,12 @@ export class Builder {
   }
 
   async init(parseMD: any, rootFolder: string) {
-    console.log(parseMD);
     const folders = await fs.readdir(rootFolder);
     for (const folder of folders) {
       const folderPath = path.join(rootFolder, folder);
       if (fs.statSync(folderPath).isDirectory()) {
-        await this.parseFolder(folder, folderPath);
+       const content =  await this.parseFolder(folder, folderPath);
+       console.log(content);
       }
     }
   }
@@ -35,6 +35,7 @@ export class Builder {
   }
 
   async parseFolder(folder: any, folderPath: any) {
+    const content:any = [];
     const sectionName = folder.replace(/ /g, "-");
     const sectionOutputFolder = path.join(
       this.config.outputFolder,
@@ -44,18 +45,14 @@ export class Builder {
 
     const files = await fs.readdir(folderPath);
 
-    // for (const file of files) {
-    //   await parseFile(file, folderPath, sectionOutputFolder, sectionName);
-    // }
+    for (const file of files) {
+      const filePath = path.join(folderPath, file);
 
-    // await fs.writeFile(
-    //   path.join(sectionOutputFolder, "index." + type),
-    //   await buildLinksList(
-    //     allContentWithSections.filter(
-    //       (e: ContentEntity) => e.section === sectionName
-    //     ),
-    //     type
-    //   )
-    // );
+      if (path.extname(file) === ".md") {
+        const pieceOfContent = await fs.readFile(filePath, "utf-8");
+        content.push(pieceOfContent);
+      }
+    }
+    return content;
   }
 }
