@@ -22,7 +22,7 @@ export class Builder {
       const folderPath = path.join(rootFolder, folder);
       if (fs.statSync(folderPath).isDirectory()) {
        const content =  await this.parseFolder(folder, folderPath);
-       console.log(content);
+      //  console.log(content.length);
       }
     }
   }
@@ -50,9 +50,11 @@ export class Builder {
 
       if (path.extname(file) === ".md") {
         const pieceOfContent = await fs.readFile(filePath, "utf-8");
+        console.log(pieceOfContent)
         content.push(pieceOfContent);
       }
     }
+    console.log(content.length)
     return content;
   }
 }
