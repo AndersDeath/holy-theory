@@ -6,7 +6,6 @@ export class Builder {
     outputFolder: "",
   };
   constructor(config: any) {
-    console.log("Builder started");
     this.config = config;
   }
 
@@ -21,8 +20,7 @@ export class Builder {
     for (const folder of folders) {
       const folderPath = path.join(rootFolder, folder);
       if (fs.statSync(folderPath).isDirectory()) {
-       const content =  await this.parseFolder(folder, folderPath);
-      //  console.log(content.length);
+        const content = await this.parseFolder(folder, folderPath);
       }
     }
   }
@@ -35,7 +33,7 @@ export class Builder {
   }
 
   async parseFolder(folder: any, folderPath: any) {
-    const content:any = [];
+    const content: any = [];
     const sectionName = folder.replace(/ /g, "-");
     const sectionOutputFolder = path.join(
       this.config.outputFolder,
@@ -50,11 +48,10 @@ export class Builder {
 
       if (path.extname(file) === ".md") {
         const pieceOfContent = await fs.readFile(filePath, "utf-8");
-        console.log(pieceOfContent)
+        console.log(pieceOfContent);
         content.push(pieceOfContent);
       }
     }
-    console.log(content.length)
     return content;
   }
 }
