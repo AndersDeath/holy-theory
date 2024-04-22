@@ -1,27 +1,28 @@
 ---
 title: Counting Bits
-tags: ['training', 'task']
-languages: ['typescript']
+tags: ["training", "task"]
+languages: ["typescript"]
 ---
+
 # Counting Bits
 
 ```typescript
 function countBits(n: number): number[] {
-    let result: number[] = [0];
-    let pow = 1;
-    let offset = 1;
-    for (let i = 1; i <= n; i ++) {
-        if (i == pow) {
-            result[i] = 1;
-            pow = pow << 1;
-            offset = 1;
-        } else {
-            result[i] = result[offset] + 1;
-            offset++;
-        }
+  let result: number[] = [0];
+  let pow = 1;
+  let offset = 1;
+  for (let i = 1; i <= n; i++) {
+    if (i == pow) {
+      result[i] = 1;
+      pow = pow << 1;
+      offset = 1;
+    } else {
+      result[i] = result[offset] + 1;
+      offset++;
     }
-    return result;
-};
+  }
+  return result;
+}
 ```
 
 **Solution:**
@@ -37,11 +38,13 @@ Step-by-step breakdown of the code:
 4. Iterate from `i = 1` to `n`.
 
 5. Check if `i` is equal to `pow`. If it is, it means that `i` is a power of 2. In this case:
+
    - Set `result[i]` to 1, as a power of 2 always has a single 1-bit in its binary representation.
    - Update `pow` by left-shifting it by 1 to get the next power of 2.
    - Reset `offset` to 1.
 
 6. If `i` is not a power of 2:
+
    - Set `result[i]` to `result[offset] + 1`. This means that the number of 1-bits in `i` is equal to the number of 1-bits in the number at the corresponding offset in the array, plus 1.
    - Increment `offset` by 1 to move to the next offset.
 
@@ -57,4 +60,4 @@ Summary:
 
 The provided solution efficiently counts the number of 1-bits in the binary representation of each number from 0 to `n` and stores the counts in an array. It achieves this by identifying powers of 2 and updating the count based on the previously calculated counts using bitwise operations.
 
-* [Go back](../readme.md)
+- [Go back](../readme.md)

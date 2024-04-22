@@ -1,8 +1,9 @@
 ---
 title: Customer Placing the Largest Number of Order
-tags: ['training', 'task']
-languages: ['sql']
+tags: ["training", "task"]
+languages: ["sql"]
 ---
+
 # Customer Placing the Largest Number of Order
 
 ```SQL
@@ -23,6 +24,7 @@ HAVING COUNT(order_number) = (
 This SQL query retrieves the `customer_number` from the `Orders` table for customers who have placed the maximum number of orders. Here's a breakdown of the query:
 
 1. **Main Query:**
+
    - The main query selects the `customer_number` from the `Orders` table.
    - It uses the `GROUP BY` clause to group the orders based on the `customer_number`.
    - The `HAVING` clause filters the results to include only those groups where the count of `order_number` is equal to the maximum count of `order_number` in the entire table.

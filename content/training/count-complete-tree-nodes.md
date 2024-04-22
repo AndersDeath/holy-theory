@@ -1,8 +1,9 @@
 ---
 title: Count Complete Tree Nodes
-tags: ['training', 'task']
-languages: ['typescript']
+tags: ["training", "task"]
+languages: ["typescript"]
 ---
+
 # Count Complete Tree Nodes
 
 ```typescript
@@ -19,7 +20,6 @@ languages: ['typescript']
  *     }
  * }
  */
-
 
 function countNodes(root: any | null): number {
   if (!root) {
@@ -55,7 +55,6 @@ function getRightDepth(node: any | null): number {
   }
   return depth;
 }
-
 ```
 
 **Solution:**
@@ -64,6 +63,7 @@ This code defines a function `countNodes` to count the total number of nodes in 
 Breakdown:
 
 1. **`countNodes` Function:**
+
    - The function takes a binary tree's root node as an argument (`root: TreeNode | null`).
    - If the tree is empty (i.e., `root` is `null`), it returns 0.
    - It then calculates the depth of the left and right subtrees using the helper functions `getLeftDepth` and `getRightDepth`.

@@ -1,22 +1,23 @@
 ---
 title: Curry function
-tags: ['training', 'task']
-languages: ['typescript']
+tags: ["training", "task"]
+languages: ["typescript"]
 ---
+
 # Curry function
 
 ```typescript
 function curry(func: any) {
-    const curried = (...args: any) => {
-        if(args.length >= func.length) {
-            return func.apply(this, args);
-        } else {
-            return (...args2: any) => {
-                return curried.apply(this, args.concat(args2))
-            }
-        }
-    };
-    return curried;
+  const curried = (...args: any) => {
+    if (args.length >= func.length) {
+      return func.apply(this, args);
+    } else {
+      return (...args2: any) => {
+        return curried.apply(this, args.concat(args2));
+      };
+    }
+  };
+  return curried;
 }
 ```
 
@@ -33,10 +34,12 @@ Step-by-step breakdown of the code:
 4. Inside the `curried` function, a check is performed to determine if the number of arguments passed (`args.length`) is greater than or equal to the expected number of arguments of the original function (`func.length`).
 
 5. If the condition is true:
+
    - The original function `func` is called using the `apply` method, passing `this` as the context and `args` as the arguments.
    - The result of the function call is returned.
 
 6. If the condition is false:
+
    - A new function is returned using arrow function syntax. This new function accepts additional arguments `args2`.
    - The `curried` function is recursively called with the combined arguments of `args` and `args2` using the `apply` method.
 
@@ -58,5 +61,4 @@ Summary:
 
 The provided solution implements the concept of currying by creating a curried version of a function. It allows the function to be called with a partial set of arguments, returning a new function that accepts the remaining arguments until the required number of arguments is provided.
 
-
-* [Go back](../readme.md)
+- [Go back](../readme.md)

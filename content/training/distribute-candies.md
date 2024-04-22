@@ -1,17 +1,18 @@
 ---
 title: Distribute Candies
-tags: ['training', 'task']
-languages: ['typescript']
+tags: ["training", "task"]
+languages: ["typescript"]
 ---
+
 # Distribute Candies
 
 ```typescript
 function distributeCandies(candyType: number[]): number {
   const uniqueCandies = new Set(candyType);
   const maxCandies = candyType.length / 2;
-  
+
   return Math.min(uniqueCandies.size, maxCandies);
-};
+}
 ```
 
 **Solution:**
@@ -38,5 +39,4 @@ Summary:
 
 The provided TypeScript code calculates the maximum number of unique candies that the sister can receive when the candies are distributed equally between her and her brother. It ensures that she receives the maximum possible unique candies without exceeding half of the total candies.
 
-
-* [Go back](../readme.md)
+- [Go back](../readme.md)
