@@ -1,7 +1,9 @@
 # Changelog
 
 All notable changes to this project will be documented in this file.
-# [0.0.67] - In progress
+# [0.0.68] - In progress
+
+# [0.0.67] - 2024-04-22
 * add logger to builder3
 * add markdown parse to builder3
 
