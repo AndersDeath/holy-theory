@@ -7,6 +7,7 @@ interface RawContent {
 }
 export class Builder {
   parseMDLib: any;
+  rawContent: RawContent[] = [];
   config = {
     outputFolder: "",
   };
@@ -23,19 +24,15 @@ export class Builder {
 
   async init(rootFolder: string) {
     const folders = await fs.readdir(rootFolder);
-    let allParsedContent: RawContent[] = [];
     for (const folder of folders) {
       const folderPath = path.join(rootFolder, folder);
       if (fs.statSync(folderPath).isDirectory()) {
         const rawContentArr = await this.parseFolder(folderPath);
-        const parsedContentWithCategory: RawContent[] = await this.parseRawContent(
-          folder,
-          rawContentArr
-        );
-        allParsedContent = [...allParsedContent, ...parsedContentWithCategory];
+        const parsedContentWithCategory: RawContent[] =
+          await this.parseRawContent(folder, rawContentArr);
+        this.rawContent = [...this.rawContent, ...parsedContentWithCategory];
       }
     }
-    console.log(allParsedContent);
   }
 
   parseMDInit(callback: () => void) {
