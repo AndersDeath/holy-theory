@@ -1,6 +1,10 @@
 import * as fs from "fs-extra";
 import * as path from "path";
-
+interface RawContent {
+  category: string;
+  metadata: any;
+  content: string;
+}
 export class Builder {
   parseMDLib: any;
   config = {
@@ -19,19 +23,19 @@ export class Builder {
 
   async init(rootFolder: string) {
     const folders = await fs.readdir(rootFolder);
-    let allParsedContent: any = [];
+    let allParsedContent: RawContent[] = [];
     for (const folder of folders) {
       const folderPath = path.join(rootFolder, folder);
       if (fs.statSync(folderPath).isDirectory()) {
-        const rawContentArr = await this.parseFolder(folder, folderPath);
-        const parsedContentWithCategory = await this.parseRawContent(
+        const rawContentArr = await this.parseFolder(folderPath);
+        const parsedContentWithCategory: RawContent[] = await this.parseRawContent(
           folder,
           rawContentArr
         );
         allParsedContent = [...allParsedContent, ...parsedContentWithCategory];
       }
     }
-    console.log(allParsedContent.length);
+    console.log(allParsedContent);
   }
 
   parseMDInit(callback: () => void) {
@@ -43,7 +47,7 @@ export class Builder {
   }
 
   parseRawContent(category: string, rawContentArr) {
-    const output: any = [];
+    const output: RawContent[] = [];
     for (let index = 0; index < rawContentArr.length; index++) {
       const rawContent = rawContentArr[index];
       const { metadata, content }: any = this.parseMDLib(rawContent);
@@ -56,25 +60,18 @@ export class Builder {
     return output;
   }
 
-  async parseFolder(folder: any, folderPath: any) {
-    const content: any = [];
-    const sectionName = folder.replace(/ /g, "-");
-    const sectionOutputFolder = path.join(
-      this.config.outputFolder,
-      sectionName
-    );
-    await fs.mkdirp(sectionOutputFolder);
-
+  async parseFolder(folderPath: any) {
+    const content: string[] = [];
     const files = await fs.readdir(folderPath);
 
     for (const file of files) {
       const filePath = path.join(folderPath, file);
-
       if (path.extname(file) === ".md") {
-        const pieceOfContent = await fs.readFile(filePath, "utf-8");
+        const pieceOfContent: string = await fs.readFile(filePath, "utf-8");
         content.push(pieceOfContent);
       }
     }
+
     return content;
   }
 }
