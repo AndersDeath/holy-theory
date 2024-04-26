@@ -3,6 +3,7 @@ export interface RawContent {
   metadata: any;
   content: string;
   folderPath: string;
+  fileName: string;
 }
 
 export interface Config {

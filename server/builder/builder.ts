@@ -1,7 +1,12 @@
 import * as fs from "fs-extra";
 import * as path from "path";
 import { Config, RawContent } from "./models/interfaces";
-
+import { pageWrapperHtml } from "./ui/page-wrapper.html";
+import { marked } from "./libs/marked";
+interface File {
+  name: string;
+  content: string;
+}
 export class Builder {
   parseMDLib: any;
   rawContent: RawContent[] = [];
@@ -25,9 +30,9 @@ export class Builder {
     for (const folder of folders) {
       const folderPath: string = path.join(this.config.sourceRootPath, folder);
       if (fs.statSync(folderPath).isDirectory()) {
-        const rawContentArr: string[] = await this.parseFolder(folderPath);
+        const sourceFiles: File[] = await this.parseFolder(folderPath);
         const parsedContentWithCategory: RawContent[] =
-          await this.parseRawContent(folder, rawContentArr).map(
+          await this.parseRawContent(folder, sourceFiles).map(
             (rawContent: RawContent) => {
               rawContent.folderPath = folderPath;
               return rawContent;
@@ -45,30 +50,34 @@ export class Builder {
     });
   }
 
-  parseRawContent(category: string, rawContentArr: string[]) {
+  parseRawContent(category: string, sourceFiles: File[]) {
     const output: RawContent[] = [];
-    for (let index = 0; index < rawContentArr.length; index++) {
-      const rawContent = rawContentArr[index];
-      const { metadata, content }: any = this.parseMDLib(rawContent);
+    for (let index = 0; index < sourceFiles.length; index++) {
+      const file = sourceFiles[index];
+      const { metadata, content }: any = this.parseMDLib(file.content);
       output.push({
         category,
         metadata,
         content,
         folderPath: "",
+        fileName: file.name,
       });
     }
     return output;
   }
 
-  async parseFolder(folderPath: any): Promise<string[]> {
-    const content: string[] = [];
+  async parseFolder(folderPath: any): Promise<File[]> {
+    const content: File[] = [];
     const files: string[] = await fs.readdir(folderPath);
 
     for (const file of files) {
       const filePath: string = path.join(folderPath, file);
       if (path.extname(file) === ".md") {
         const pieceOfContent: string = await fs.readFile(filePath, "utf-8");
-        content.push(pieceOfContent);
+        content.push({
+          name: file.replace(/\.[^.]+$/, ""),
+          content: pieceOfContent,
+        });
       }
     }
 
@@ -77,12 +86,20 @@ export class Builder {
 
   async buildStaticHtml(): Promise<void> {
     console.log("Build static html");
-    console.log(this.config.htmlOutputPath);
+    const files: any[] = [];
     for (let i = 0; i < this.rawContent.length; i++) {
       const rawContent: RawContent = this.rawContent[i];
       await fs.mkdirp(
         path.join(this.config.htmlOutputPath, rawContent.category)
       );
+      files.push({
+        path: path.join(
+          this.config.htmlOutputPath,
+          rawContent.category,
+          rawContent.fileName + ".html"
+        ),
+        content: pageWrapperHtml(marked.parse(rawContent.content)),
+      });
     }
   }
 }
