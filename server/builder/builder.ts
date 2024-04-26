@@ -24,7 +24,12 @@ export class Builder {
       if (fs.statSync(folderPath).isDirectory()) {
         const rawContentArr: string[] = await this.parseFolder(folderPath);
         const parsedContentWithCategory: RawContent[] =
-          await this.parseRawContent(folder, rawContentArr);
+          await this.parseRawContent(folder, rawContentArr).map(
+            (rawContent: RawContent) => {
+              rawContent.folderPath = folderPath;
+              return rawContent;
+            }
+          );
         this.rawContent = [...this.rawContent, ...parsedContentWithCategory];
       }
     }
@@ -47,6 +52,7 @@ export class Builder {
         category,
         metadata,
         content,
+        folderPath: "",
       });
     }
     return output;
