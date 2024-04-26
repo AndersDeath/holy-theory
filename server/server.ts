@@ -5,7 +5,7 @@ import { Builder } from "./builder/builder";
 
 const builder = new Builder({ rootFolder: "./content" });
 
-builder.run();
+await builder.run();
 
 const app: Express = express();
 const port = 3000;

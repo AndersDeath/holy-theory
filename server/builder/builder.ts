@@ -13,8 +13,9 @@ export class Builder {
     this.config = config;
   }
 
-  run() {
-    this.parseMDInit(() => this.init());
+  async run(): Promise<void> {
+    this.parseMDLib = await this.parseMDInit();
+    this.init();
   }
 
   async init() {
@@ -33,13 +34,13 @@ export class Builder {
         this.rawContent = [...this.rawContent, ...parsedContentWithCategory];
       }
     }
+    console.log(this.rawContent.length);
   }
 
-  parseMDInit(callback: () => void) {
-    import("parse-md").then((module) => {
+  async parseMDInit(): Promise<any> {
+    return import("parse-md").then((module) => {
       const parseMD = module.default;
-      this.parseMDLib = parseMD;
-      callback();
+      return parseMD;
     });
   }
 
