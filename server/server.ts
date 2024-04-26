@@ -3,7 +3,7 @@ import { spawn } from "child_process";
 import fs from "fs-extra";
 import { Builder } from "./builder/builder";
 
-const builder = new Builder({});
+const builder = new Builder({ rootFolder: "./content" });
 
 builder.run();
 
