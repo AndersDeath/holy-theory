@@ -6,5 +6,6 @@ export interface RawContent {
 }
 
 export interface Config {
-  rootFolder: string;
+  sourceRootPath: string;
+  htmlOutputPath: string;
 }

@@ -6,7 +6,8 @@ export class Builder {
   parseMDLib: any;
   rawContent: RawContent[] = [];
   config: Config = {
-    rootFolder: "",
+    sourceRootPath: "",
+    htmlOutputPath: "",
   };
 
   constructor(config: Config) {
@@ -15,13 +16,14 @@ export class Builder {
 
   async run(): Promise<void> {
     this.parseMDLib = await this.parseMDInit();
-    this.init();
+    await this.init();
+    await this.buildStaticHtml();
   }
 
-  async init() {
-    const folders: string[] = await fs.readdir(this.config.rootFolder);
+  async init(): Promise<any> {
+    const folders: string[] = await fs.readdir(this.config.sourceRootPath);
     for (const folder of folders) {
-      const folderPath: string = path.join(this.config.rootFolder, folder);
+      const folderPath: string = path.join(this.config.sourceRootPath, folder);
       if (fs.statSync(folderPath).isDirectory()) {
         const rawContentArr: string[] = await this.parseFolder(folderPath);
         const parsedContentWithCategory: RawContent[] =
@@ -34,7 +36,6 @@ export class Builder {
         this.rawContent = [...this.rawContent, ...parsedContentWithCategory];
       }
     }
-    console.log(this.rawContent.length);
   }
 
   async parseMDInit(): Promise<any> {
@@ -72,5 +73,16 @@ export class Builder {
     }
 
     return content;
+  }
+
+  async buildStaticHtml(): Promise<void> {
+    console.log("Build static html");
+    console.log(this.config.htmlOutputPath);
+    for (let i = 0; i < this.rawContent.length; i++) {
+      const rawContent: RawContent = this.rawContent[i];
+      await fs.mkdirp(
+        path.join(this.config.htmlOutputPath, rawContent.category)
+      );
+    }
   }
 }

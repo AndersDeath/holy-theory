@@ -3,7 +3,10 @@ import { spawn } from "child_process";
 import fs from "fs-extra";
 import { Builder } from "./builder/builder";
 
-const builder = new Builder({ rootFolder: "./content" });
+const builder = new Builder({
+  sourceRootPath: "./content",
+  htmlOutputPath: "./static2",
+});
 
 await builder.run();
 
