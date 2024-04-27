@@ -5,6 +5,8 @@ All notable changes to this project will be documented in this file.
 * add content parser to Builder3
 * start ui library for Builder3
 * add folder parser for Builder3
+* add What is DORA metrics? question
+  
 # [0.0.67] - 2024-04-22
 * add logger to Builder3
 * add markdown parse to Builder3
