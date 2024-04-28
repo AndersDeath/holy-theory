@@ -87,8 +87,13 @@ export class Builder {
   async buildStaticHtml(): Promise<void> {
     console.log("Build static html");
     const files: any[] = [];
+    let contentAggregation: any = {};
+    let allContentAggregation: any = "";
+    let currentCategory: string = "";
+
     for (let i = 0; i < this.rawContent.length; i++) {
       const rawContent: RawContent = this.rawContent[i];
+
       await fs.mkdirp(
         path.join(this.config.htmlOutputPath, rawContent.category)
       );
@@ -98,8 +103,33 @@ export class Builder {
           rawContent.category,
           rawContent.fileName + ".html"
         ),
-        content: pageWrapperHtml(marked.parse(rawContent.content)),
+        content: marked.parse(rawContent.content),
       });
+
+      if (rawContent.category !== currentCategory) {
+        currentCategory = rawContent.category;
+        contentAggregation[currentCategory] += marked.parse(rawContent.content);
+        allContentAggregation += marked.parse(rawContent.content);
+      } else {
+        contentAggregation[currentCategory] += marked.parse(rawContent.content);
+        allContentAggregation += marked.parse(rawContent.content);
+      }
+    }
+    Object.keys(contentAggregation).forEach((key: string) => {
+      files.push({
+        path: path.join(this.config.htmlOutputPath, key, "all.html"),
+        content: marked.parse(contentAggregation[key]),
+      });
+    });
+
+    files.push({
+      path: path.join(this.config.htmlOutputPath, "all.html"),
+      content: allContentAggregation,
+    });
+
+    for (let index = 0; index < files.length; index++) {
+      const element = files[index];
+      fs.writeFileSync(element.path, pageWrapperHtml(element.content));
     }
   }
 }
