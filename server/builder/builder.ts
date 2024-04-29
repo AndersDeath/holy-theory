@@ -86,17 +86,30 @@ export class Builder {
 
   async buildStaticHtml(): Promise<void> {
     console.log("Build static html");
+    const files: any[] = await this.createHtmlFiles();
+
+    for (let index = 0; index < files.length; index++) {
+      fs.writeFileSync(
+        files[index].path,
+        pageWrapperHtml(files[index].content)
+      );
+    }
+  }
+
+  async createCategoryDirectory(categoryName: string): Promise<void> {
+    return fs.mkdirp(path.join(this.config.htmlOutputPath, categoryName));
+  }
+
+  async createHtmlFiles(): Promise<any[]> {
     const files: any[] = [];
-    let contentAggregation: any = {};
-    let allContentAggregation: any = "";
-    let currentCategory: string = "";
+
+    const contentAggregation: any = new Map();
 
     for (let i = 0; i < this.rawContent.length; i++) {
       const rawContent: RawContent = this.rawContent[i];
 
-      await fs.mkdirp(
-        path.join(this.config.htmlOutputPath, rawContent.category)
-      );
+      await this.createCategoryDirectory(rawContent.category);
+
       files.push({
         path: path.join(
           this.config.htmlOutputPath,
@@ -106,30 +119,33 @@ export class Builder {
         content: marked.parse(rawContent.content),
       });
 
-      if (rawContent.category !== currentCategory) {
-        currentCategory = rawContent.category;
-        contentAggregation[currentCategory] += marked.parse(rawContent.content);
-        allContentAggregation += marked.parse(rawContent.content);
-      } else {
-        contentAggregation[currentCategory] += marked.parse(rawContent.content);
-        allContentAggregation += marked.parse(rawContent.content);
-      }
+      if (!contentAggregation.get(rawContent.category))
+        contentAggregation.set(rawContent.category, "");
+      if (!contentAggregation.get("all")) contentAggregation.set("all", "");
+
+      contentAggregation.set(
+        rawContent.category,
+        contentAggregation.get(rawContent.category) +
+          marked.parse(rawContent.content)
+      );
+      contentAggregation.set(
+        "all",
+        contentAggregation.get(rawContent.category) +
+          marked.parse(rawContent.content)
+      );
     }
-    Object.keys(contentAggregation).forEach((key: string) => {
+
+    const contentAggregationFromMap = Object.fromEntries(contentAggregation);
+    Object.keys(contentAggregationFromMap).forEach((key: string) => {
       files.push({
-        path: path.join(this.config.htmlOutputPath, key, "all.html"),
-        content: marked.parse(contentAggregation[key]),
+        path:
+          key === "all"
+            ? path.join(this.config.htmlOutputPath, "all.html")
+            : path.join(this.config.htmlOutputPath, key, "all.html"),
+        content: marked.parse(contentAggregationFromMap[key]),
       });
     });
 
-    files.push({
-      path: path.join(this.config.htmlOutputPath, "all.html"),
-      content: allContentAggregation,
-    });
-
-    for (let index = 0; index < files.length; index++) {
-      const element = files[index];
-      fs.writeFileSync(element.path, pageWrapperHtml(element.content));
-    }
+    return files;
   }
 }
