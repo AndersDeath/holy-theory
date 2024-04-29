@@ -7,6 +7,7 @@ All notable changes to this project will be documented in this file.
 * add folder parser for Builder3
 * add What is DORA metrics? question
 * add generation of all content to Builder3
+* update generation html for Builder3
   
 # [0.0.67] - 2024-04-22
 * add logger to Builder3
