@@ -1,7 +1,10 @@
 # Changelog
 
 All notable changes to this project will be documented in this file.
-# [0.0.68] - In progress
+
+# [0.0.69] - In progress
+
+# [0.0.68] - 2024-04-29
 * add content parser to Builder3
 * start ui library for Builder3
 * add folder parser for Builder3
