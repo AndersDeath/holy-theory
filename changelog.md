@@ -1,12 +1,20 @@
 # Changelog
 
 All notable changes to this project will be documented in this file.
-# [0.0.68] - In progress
+
+# [0.0.69] - In progress
+
+# [0.0.68] - 2024-04-29
 * add content parser to Builder3
-* start ui library for builder3
+* start ui library for Builder3
+* add folder parser for Builder3
+* add What is DORA metrics? question
+* add generation of all content to Builder3
+* update generation html for Builder3
+  
 # [0.0.67] - 2024-04-22
-* add logger to builder3
-* add markdown parse to builder3
+* add logger to Builder3
+* add markdown parse to Builder3
 
 # [0.0.66] - 2024-04-15
 * update floyd warshall algorithm
