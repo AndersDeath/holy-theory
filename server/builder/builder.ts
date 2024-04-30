@@ -1,12 +1,9 @@
 import * as fs from "fs-extra";
 import * as path from "path";
-import { Config, RawContent } from "./models/interfaces";
+import { Config, B3File, RawContent } from "./models/interfaces";
 import { pageWrapperHtml } from "./ui/page-wrapper.html";
-import { marked } from "./libs/marked";
-interface File {
-  name: string;
-  content: string;
-}
+import { FileChunk } from "./file-chunk";
+
 export class Builder {
   parseMDLib: any;
   rawContent: RawContent[] = [];
@@ -30,7 +27,7 @@ export class Builder {
     for (const folder of folders) {
       const folderPath: string = path.join(this.config.sourceRootPath, folder);
       if (fs.statSync(folderPath).isDirectory()) {
-        const sourceFiles: File[] = await this.parseFolder(folderPath);
+        const sourceFiles: B3File[] = await this.parseFolder(folderPath);
         const parsedContentWithCategory: RawContent[] =
           await this.parseRawContent(folder, sourceFiles).map(
             (rawContent: RawContent) => {
@@ -50,7 +47,7 @@ export class Builder {
     });
   }
 
-  parseRawContent(category: string, sourceFiles: File[]) {
+  parseRawContent(category: string, sourceFiles: B3File[]) {
     const output: RawContent[] = [];
     for (let index = 0; index < sourceFiles.length; index++) {
       const file = sourceFiles[index];
@@ -66,8 +63,8 @@ export class Builder {
     return output;
   }
 
-  async parseFolder(folderPath: any): Promise<File[]> {
-    const content: File[] = [];
+  async parseFolder(folderPath: any): Promise<B3File[]> {
+    const content: B3File[] = [];
     const files: string[] = await fs.readdir(folderPath);
 
     for (const file of files) {
@@ -77,6 +74,8 @@ export class Builder {
         content.push({
           name: file.replace(/\.[^.]+$/, ""),
           content: pieceOfContent,
+          category: file,
+          path: filePath,
         });
       }
     }
@@ -86,9 +85,10 @@ export class Builder {
 
   async buildStaticHtml(): Promise<void> {
     console.log("Build static html");
-    const files: any[] = await this.createHtmlFiles();
-
+    const fileChunk = new FileChunk(this.config, this.rawContent);
+    const files: any[] = await fileChunk.run();
     for (let index = 0; index < files.length; index++) {
+      await this.createCategoryDirectory(files[index].category, ["all"]);
       fs.writeFileSync(
         files[index].path,
         pageWrapperHtml(files[index].content)
@@ -96,56 +96,11 @@ export class Builder {
     }
   }
 
-  async createCategoryDirectory(categoryName: string): Promise<void> {
+  async createCategoryDirectory(
+    categoryName: string,
+    ignoreList: string[]
+  ): Promise<void> {
+    if (ignoreList.includes(categoryName)) return;
     return fs.mkdirp(path.join(this.config.htmlOutputPath, categoryName));
-  }
-
-  async createHtmlFiles(): Promise<any[]> {
-    const files: any[] = [];
-
-    const contentAggregation: any = new Map();
-
-    for (let i = 0; i < this.rawContent.length; i++) {
-      const rawContent: RawContent = this.rawContent[i];
-
-      await this.createCategoryDirectory(rawContent.category);
-
-      files.push({
-        path: path.join(
-          this.config.htmlOutputPath,
-          rawContent.category,
-          rawContent.fileName + ".html"
-        ),
-        content: marked.parse(rawContent.content),
-      });
-
-      if (!contentAggregation.get(rawContent.category))
-        contentAggregation.set(rawContent.category, "");
-      if (!contentAggregation.get("all")) contentAggregation.set("all", "");
-
-      contentAggregation.set(
-        rawContent.category,
-        contentAggregation.get(rawContent.category) +
-          marked.parse(rawContent.content)
-      );
-      contentAggregation.set(
-        "all",
-        contentAggregation.get(rawContent.category) +
-          marked.parse(rawContent.content)
-      );
-    }
-
-    const contentAggregationFromMap = Object.fromEntries(contentAggregation);
-    Object.keys(contentAggregationFromMap).forEach((key: string) => {
-      files.push({
-        path:
-          key === "all"
-            ? path.join(this.config.htmlOutputPath, "all.html")
-            : path.join(this.config.htmlOutputPath, key, "all.html"),
-        content: marked.parse(contentAggregationFromMap[key]),
-      });
-    });
-
-    return files;
   }
 }
