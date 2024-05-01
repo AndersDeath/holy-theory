@@ -2,7 +2,8 @@ import * as fs from "fs-extra";
 import * as path from "path";
 import { Config, B3File, RawContent } from "./models/interfaces";
 import { pageWrapperHtml } from "./ui/page-wrapper.html";
-import { FileChunk } from "./file-chunk";
+import { FileGroup } from "./file-group";
+import { marked } from "./libs/marked";
 
 export class Builder {
   parseMDLib: any;
@@ -85,13 +86,13 @@ export class Builder {
 
   async buildStaticHtml(): Promise<void> {
     console.log("Build static html");
-    const fileChunk = new FileChunk(this.config, this.rawContent);
-    const files: any[] = await fileChunk.run();
+    const fileGroup = new FileGroup(this.config, this.rawContent);
+    const files: any[] = await fileGroup.run();
     for (let index = 0; index < files.length; index++) {
       await this.createCategoryDirectory(files[index].category, ["all"]);
       fs.writeFileSync(
         files[index].path,
-        pageWrapperHtml(files[index].content)
+        pageWrapperHtml(marked.parse(files[index].content))
       );
     }
   }

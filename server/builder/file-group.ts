@@ -1,8 +1,8 @@
 import { B3File, Config, RawContent } from "./models/interfaces";
-import { marked } from "./libs/marked";
 import * as path from "path";
+import { tableOfContentsHtml } from "./ui/table-of-contents.html";
 
-export class FileChunk {
+export class FileGroup {
   rawContent: RawContent[] = [];
   config: Config = {
     sourceRootPath: "",
@@ -27,7 +27,7 @@ export class FileChunk {
           rawContent.category,
           rawContent.fileName + ".html"
         ),
-        content: marked.parse(rawContent.content),
+        content: rawContent.content,
         category: rawContent.category,
         name: rawContent.metadata.name || "",
       });
@@ -38,15 +38,20 @@ export class FileChunk {
 
       contentAggregation.set(
         rawContent.category,
-        contentAggregation.get(rawContent.category) +
-          marked.parse(rawContent.content)
+        contentAggregation.get(rawContent.category) + rawContent.content
       );
+
       contentAggregation.set(
         "all",
-        contentAggregation.get(rawContent.category) +
-          marked.parse(rawContent.content)
+        contentAggregation.get(rawContent.category) + rawContent.content
       );
     }
+
+    contentAggregation.set(
+      "all",
+      tableOfContentsHtml(contentAggregation.get("all") || "") +
+        contentAggregation.get("all")
+    );
 
     const contentAggregationFromMap = Object.fromEntries(contentAggregation);
     Object.keys(contentAggregationFromMap).forEach((key: string) => {
@@ -55,7 +60,7 @@ export class FileChunk {
           key === "all"
             ? path.join(this.config.htmlOutputPath, "all.html")
             : path.join(this.config.htmlOutputPath, key, "all.html"),
-        content: marked.parse(contentAggregationFromMap[key]),
+        content: contentAggregationFromMap[key],
         category: key,
         name: "all",
       });
