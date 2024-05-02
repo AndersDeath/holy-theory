@@ -4,6 +4,7 @@ import { tableOfContentsHtml } from "./ui/table-of-contents.html";
 
 export class FileGroup {
   rawContent: RawContent[] = [];
+  aggregatedContent: Map<string, string> = new Map();
   config: Config = {
     sourceRootPath: "",
     htmlOutputPath: "",
@@ -13,10 +14,20 @@ export class FileGroup {
     this.config = config;
   }
 
+  initAggregatedContentKey(category: string) {
+    if (!this.aggregatedContent.get(category))
+      this.aggregatedContent.set(category, "");
+  }
+
+  appendAggregatedContentValue(category: string, value: string) {
+    this.aggregatedContent.set(
+      category,
+      this.aggregatedContent.get(category) + value
+    );
+  }
+
   async run(): Promise<any[]> {
     const files: B3File[] = [];
-
-    const contentAggregation: Map<string, string> = new Map();
 
     for (let i = 0; i < this.rawContent.length; i++) {
       const rawContent: RawContent = this.rawContent[i];
@@ -32,28 +43,25 @@ export class FileGroup {
         name: rawContent.metadata.name || "",
       });
 
-      if (!contentAggregation.get(rawContent.category))
-        contentAggregation.set(rawContent.category, "");
-      if (!contentAggregation.get("all")) contentAggregation.set("all", "");
+      this.initAggregatedContentKey(rawContent.category);
+      this.initAggregatedContentKey("all");
 
-      contentAggregation.set(
+      this.appendAggregatedContentValue(
         rawContent.category,
-        contentAggregation.get(rawContent.category) + rawContent.content
+        rawContent.content
       );
-
-      contentAggregation.set(
-        "all",
-        contentAggregation.get(rawContent.category) + rawContent.content
-      );
+      this.appendAggregatedContentValue("all", rawContent.content);
     }
 
-    contentAggregation.set(
+    this.aggregatedContent.set(
       "all",
-      tableOfContentsHtml(contentAggregation.get("all") || "") +
-        contentAggregation.get("all")
+      tableOfContentsHtml(this.aggregatedContent.get("all") || "") +
+        this.aggregatedContent.get("all")
     );
 
-    const contentAggregationFromMap = Object.fromEntries(contentAggregation);
+    const contentAggregationFromMap = Object.fromEntries(
+      this.aggregatedContent
+    );
     Object.keys(contentAggregationFromMap).forEach((key: string) => {
       files.push({
         path:
