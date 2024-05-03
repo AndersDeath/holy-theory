@@ -23,5 +23,5 @@ export const tableOfContentsHtml = (markdownContent: string): string => {
 
   toc += "</ul>".repeat(level);
 
-  return toc + '\n';
+  return toc + "\n";
 };
