@@ -8,6 +8,7 @@ export class FileGroup {
   config: Config = {
     sourceRootPath: "",
     htmlOutputPath: "",
+    outputType: "html",
   };
   constructor(config: Config, rawContent: RawContent[]) {
     this.rawContent = rawContent;
@@ -36,7 +37,7 @@ export class FileGroup {
         path: path.join(
           this.config.htmlOutputPath,
           rawContent.category,
-          rawContent.fileName + ".html"
+          rawContent.fileName + "." + this.config.outputType
         ),
         content: rawContent.content,
         category: rawContent.category,
@@ -66,8 +67,15 @@ export class FileGroup {
       files.push({
         path:
           key === "all"
-            ? path.join(this.config.htmlOutputPath, "all.html")
-            : path.join(this.config.htmlOutputPath, key, "all.html"),
+            ? path.join(
+                this.config.htmlOutputPath,
+                "all." + this.config.outputType
+              )
+            : path.join(
+                this.config.htmlOutputPath,
+                key,
+                "all." + this.config.outputType
+              ),
         content: contentAggregationFromMap[key],
         category: key,
         name: "all",

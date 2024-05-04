@@ -9,6 +9,7 @@ export interface RawContent {
 export interface Config {
   sourceRootPath: string;
   htmlOutputPath: string;
+  outputType?: string;
 }
 
 export interface B3File {

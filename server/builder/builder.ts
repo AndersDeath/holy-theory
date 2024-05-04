@@ -84,6 +84,16 @@ export class Builder {
     return content;
   }
 
+  async buildStaticMD(): Promise<void> {
+    console.log("Build static md");
+    const fileGroup = new FileGroup(this.config, this.rawContent);
+    const files: any[] = await fileGroup.run();
+    for (let index = 0; index < files.length; index++) {
+      await this.createCategoryDirectory(files[index].category, ["all"]);
+      fs.writeFileSync(files[index].path, files[index].content);
+    }
+  }
+
   async buildStaticHtml(): Promise<void> {
     console.log("Build static html");
     const fileGroup = new FileGroup(this.config, this.rawContent);
