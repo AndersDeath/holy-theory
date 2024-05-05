@@ -9,6 +9,7 @@ export class FileGroup {
     sourceRootPath: "",
     htmlOutputPath: "",
     outputType: "html",
+    markdownOutputPath: "",
   };
   constructor(config: Config, rawContent: RawContent[]) {
     this.rawContent = rawContent;

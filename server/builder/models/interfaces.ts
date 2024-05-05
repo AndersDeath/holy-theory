@@ -9,6 +9,7 @@ export interface RawContent {
 export interface Config {
   sourceRootPath: string;
   htmlOutputPath: string;
+  markdownOutputPath: string;
   outputType?: string;
 }
 

@@ -11,6 +11,7 @@ export class Builder {
   config: Config = {
     sourceRootPath: "",
     htmlOutputPath: "",
+    markdownOutputPath: "",
   };
 
   constructor(config: Config) {
@@ -86,6 +87,7 @@ export class Builder {
 
   async buildStaticMD(): Promise<void> {
     console.log("Build static md");
+    this.config.outputType = "md";
     const fileGroup = new FileGroup(this.config, this.rawContent);
     const files: any[] = await fileGroup.run();
     for (let index = 0; index < files.length; index++) {
@@ -96,6 +98,7 @@ export class Builder {
 
   async buildStaticHtml(): Promise<void> {
     console.log("Build static html");
+    this.config.outputType = "html";
     const fileGroup = new FileGroup(this.config, this.rawContent);
     const files: any[] = await fileGroup.run();
     for (let index = 0; index < files.length; index++) {
