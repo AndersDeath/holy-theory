@@ -5,6 +5,7 @@ All notable changes to this project will be documented in this file.
 # [0.0.69] - In progress
 * add toc generator for html and refactoring, Builder3
 * add static markdown generation, Builder3
+* add markdown output path, Builder3
   
 # [0.0.68] - 2024-04-29
 * add content parser to Builder3
