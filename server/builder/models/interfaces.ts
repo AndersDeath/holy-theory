@@ -9,4 +9,13 @@ export interface RawContent {
 export interface Config {
   sourceRootPath: string;
   htmlOutputPath: string;
+  markdownOutputPath: string;
+  outputType?: string;
+}
+
+export interface B3File {
+  name: string;
+  content: string;
+  path: string;
+  category: string;
 }

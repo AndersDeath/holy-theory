@@ -1,4 +1,3 @@
-
 import { LOGGER_DICTIONARY } from "./logger.dictionary";
 
 export class Logger {
