@@ -1,15 +1,6 @@
 import express, { Express, Request, Response } from "express";
 import { spawn } from "child_process";
 import fs from "fs-extra";
-import { Builder } from "./builder/builder";
-
-const builder = new Builder({
-  sourceRootPath: "./content",
-  htmlOutputPath: "./static2",
-  markdownOutputPath: './markdown2'
-});
-
-await builder.run();
 
 const app: Express = express();
 const port = 3000;
