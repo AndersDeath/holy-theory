@@ -1,6 +1,9 @@
 import { Builder } from "./builder/builder";
+import { Logger } from "./builder/logger/logger";
 
-console.time("Builder working timer");
+const logger = new Logger();
+logger.log("The Builder Runner has started!");
+logger.time("Builder working timer");
 
 const builder = new Builder({
   sourceRootPath: "./content",
@@ -9,6 +12,6 @@ const builder = new Builder({
 });
 
 builder.run().then(() => {
-  console.log("The work of script finished");
-  console.timeEnd("Builder working timer");
+  logger.log("The work of script finished");
+  logger.timeEnd("Builder working timer");
 });

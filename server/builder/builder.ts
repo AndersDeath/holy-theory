@@ -4,7 +4,7 @@ import { Config, B3File, RawContent } from "./models/interfaces";
 import { pageWrapperHtml } from "./ui/page-wrapper.html";
 import { FileGroup } from "./file-group";
 import { marked } from "./libs/marked";
-
+import { Logger } from './logger/logger';
 export class Builder {
   parseMDLib: any;
   rawContent: RawContent[] = [];
@@ -14,7 +14,10 @@ export class Builder {
     markdownOutputPath: "",
   };
 
+  logger: Logger = new Logger();
+
   constructor(config: Config) {
+    this.logger.log('Builder constructor is initialized');
     this.config = config;
   }
 
@@ -86,7 +89,7 @@ export class Builder {
   }
 
   async buildStaticMD(): Promise<void> {
-    console.log("Build static md");
+    this.logger.log("Build static md");
     this.config.outputType = "md";
     const fileGroup = new FileGroup(this.config, this.rawContent);
     const files: any[] = await fileGroup.run();
@@ -97,7 +100,7 @@ export class Builder {
   }
 
   async buildStaticHtml(): Promise<void> {
-    console.log("Build static html");
+    this.logger.log("Build static html");
     this.config.outputType = "html";
     const fileGroup = new FileGroup(this.config, this.rawContent);
     const files: any[] = await fileGroup.run();
