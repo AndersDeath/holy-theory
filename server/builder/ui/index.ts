@@ -4,4 +4,6 @@ export * from "./list-item.html";
 export * from "./list-item.md";
 export * from "./page-break.html";
 export * from "./page-break.md";
-export * from './page-wrapper.html';
+export * from "./page-wrapper.html";
+export * from "./table-of-contents.html";
+export * from "./table-of-contents.md";
