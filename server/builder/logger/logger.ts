@@ -3,7 +3,7 @@ import { LOGGER_DICTIONARY } from "./logger.dictionary";
 export class Logger {
   private static instance: Logger;
 
-  private constructor() {}
+  constructor() {}
 
   public static getInstance(): Logger {
     if (!Logger.instance) {
@@ -26,5 +26,13 @@ export class Logger {
 
   public log(message: string) {
     console.log("Log: ", message);
+  }
+
+  public time(message: string) {
+    console.time("Time log: " + message);
+  }
+
+  public timeEnd(message: string) {
+    console.timeEnd("Time log: " + message);
   }
 }

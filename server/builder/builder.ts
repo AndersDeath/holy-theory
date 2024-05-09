@@ -4,7 +4,7 @@ import { Config, B3File, RawContent } from "./models/interfaces";
 import { pageWrapperHtml } from "./ui/page-wrapper.html";
 import { FileGroup } from "./file-group";
 import { marked } from "./libs/marked";
-
+import { Logger } from "./logger/logger";
 export class Builder {
   parseMDLib: any;
   rawContent: RawContent[] = [];
@@ -14,7 +14,10 @@ export class Builder {
     markdownOutputPath: "",
   };
 
+  logger: Logger = new Logger();
+
   constructor(config: Config) {
+    this.logger.log("Builder constructor is initialized");
     this.config = config;
   }
 
@@ -22,6 +25,7 @@ export class Builder {
     this.parseMDLib = await this.parseMDInit();
     await this.init();
     await this.buildStaticHtml();
+    await this.buildStaticMD();
   }
 
   async init(): Promise<any> {
@@ -86,23 +90,31 @@ export class Builder {
   }
 
   async buildStaticMD(): Promise<void> {
-    console.log("Build static md");
+    this.logger.log("Build static md");
     this.config.outputType = "md";
     const fileGroup = new FileGroup(this.config, this.rawContent);
     const files: any[] = await fileGroup.run();
     for (let index = 0; index < files.length; index++) {
-      await this.createCategoryDirectory(files[index].category, ["all"]);
+      await this.createCategoryDirectory(
+        this.config.markdownOutputPath,
+        files[index].category,
+        ["all"]
+      );
       fs.writeFileSync(files[index].path, files[index].content);
     }
   }
 
   async buildStaticHtml(): Promise<void> {
-    console.log("Build static html");
+    this.logger.log("Build static html");
     this.config.outputType = "html";
     const fileGroup = new FileGroup(this.config, this.rawContent);
     const files: any[] = await fileGroup.run();
     for (let index = 0; index < files.length; index++) {
-      await this.createCategoryDirectory(files[index].category, ["all"]);
+      await this.createCategoryDirectory(
+        this.config.htmlOutputPath,
+        files[index].category,
+        ["all"]
+      );
       fs.writeFileSync(
         files[index].path,
         pageWrapperHtml(marked.parse(files[index].content))
@@ -111,10 +123,11 @@ export class Builder {
   }
 
   async createCategoryDirectory(
+    outputPath: string,
     categoryName: string,
     ignoreList: string[]
   ): Promise<void> {
     if (ignoreList.includes(categoryName)) return;
-    return fs.mkdirp(path.join(this.config.htmlOutputPath, categoryName));
+    return fs.mkdirp(path.join(outputPath, categoryName));
   }
 }

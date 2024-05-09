@@ -1,10 +1,11 @@
 import { B3File, Config, RawContent } from "./models/interfaces";
 import * as path from "path";
-import { tableOfContentsHtml } from "./ui/table-of-contents.html";
+import { tableOfContentsHtml, tableOfContentsMd } from "./ui";
 
 export class FileGroup {
   rawContent: RawContent[] = [];
   aggregatedContent: Map<string, string> = new Map();
+  outputPath: string = "";
   config: Config = {
     sourceRootPath: "",
     htmlOutputPath: "",
@@ -14,6 +15,12 @@ export class FileGroup {
   constructor(config: Config, rawContent: RawContent[]) {
     this.rawContent = rawContent;
     this.config = config;
+    if (this.config.outputType === "md") {
+      this.outputPath = this.config.markdownOutputPath;
+    }
+    if (this.config.outputType === "html") {
+      this.outputPath = this.config.htmlOutputPath;
+    }
   }
 
   initAggregatedContentKey(category: string) {
@@ -28,6 +35,12 @@ export class FileGroup {
     );
   }
 
+  generateTableOfContents(text: string): string {
+    if (this.config.outputType === "md") return tableOfContentsMd(text);
+    if (this.config.outputType === "html") return tableOfContentsHtml(text);
+    return "";
+  }
+
   async run(): Promise<any[]> {
     const files: B3File[] = [];
 
@@ -36,7 +49,7 @@ export class FileGroup {
 
       files.push({
         path: path.join(
-          this.config.htmlOutputPath,
+          this.outputPath,
           rawContent.category,
           rawContent.fileName + "." + this.config.outputType
         ),
@@ -57,7 +70,7 @@ export class FileGroup {
 
     this.aggregatedContent.set(
       "all",
-      tableOfContentsHtml(this.aggregatedContent.get("all") || "") +
+      this.generateTableOfContents(this.aggregatedContent.get("all") || "") +
         this.aggregatedContent.get("all")
     );
 
@@ -68,15 +81,8 @@ export class FileGroup {
       files.push({
         path:
           key === "all"
-            ? path.join(
-                this.config.htmlOutputPath,
-                "all." + this.config.outputType
-              )
-            : path.join(
-                this.config.htmlOutputPath,
-                key,
-                "all." + this.config.outputType
-              ),
+            ? path.join(this.outputPath, "all." + this.config.outputType)
+            : path.join(this.outputPath, key, "all." + this.config.outputType),
         content: contentAggregationFromMap[key],
         category: key,
         name: "all",
