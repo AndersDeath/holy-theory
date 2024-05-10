@@ -41,22 +41,28 @@ export class FileGroup {
     return "";
   }
 
+  createSimpleFile(rawContent: RawContent) {
+    return {
+      path: path.join(
+        this.outputPath,
+        rawContent.category,
+        rawContent.fileName + "." + this.config.outputType
+      ),
+      content: rawContent.content,
+      category: rawContent.category,
+      name: rawContent.metadata.name || "",
+    };
+  }
+
+  createAggregatedFile() {}
+
   async run(): Promise<any[]> {
     const files: B3File[] = [];
 
     for (let i = 0; i < this.rawContent.length; i++) {
       const rawContent: RawContent = this.rawContent[i];
 
-      files.push({
-        path: path.join(
-          this.outputPath,
-          rawContent.category,
-          rawContent.fileName + "." + this.config.outputType
-        ),
-        content: rawContent.content,
-        category: rawContent.category,
-        name: rawContent.metadata.name || "",
-      });
+      files.push(this.createSimpleFile(rawContent));
 
       this.initAggregatedContentKey(rawContent.category);
       this.initAggregatedContentKey("all");
