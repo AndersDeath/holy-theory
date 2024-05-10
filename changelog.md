@@ -5,6 +5,7 @@ All notable changes to this project will be documented in this file.
 # [0.0.70] - In progress
 * update Builder3 logger
 * update markdown generator on Builder3
+* pushing files to FileGroup optimization (Builder3)
 * 
 # [0.0.69] - 2024-05-06
 * add toc generator for html and refactoring, Builder3
