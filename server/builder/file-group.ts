@@ -54,7 +54,24 @@ export class FileGroup {
     };
   }
 
-  createAggregatedFile() {}
+  createAggregatedFileGroup() {
+    const files: B3File[] = [];
+    const contentAggregationFromMap = Object.fromEntries(
+      this.aggregatedContent
+    );
+    Object.keys(contentAggregationFromMap).forEach((key: string) => {
+      files.push({
+        path:
+          key === "all"
+            ? path.join(this.outputPath, "all." + this.config.outputType)
+            : path.join(this.outputPath, key, "all." + this.config.outputType),
+        content: contentAggregationFromMap[key],
+        category: key,
+        name: "all",
+      });
+    });
+    return files;
+  }
 
   async run(): Promise<any[]> {
     const files: B3File[] = [];
@@ -79,22 +96,8 @@ export class FileGroup {
       this.generateTableOfContents(this.aggregatedContent.get("all") || "") +
         this.aggregatedContent.get("all")
     );
-
-    const contentAggregationFromMap = Object.fromEntries(
-      this.aggregatedContent
-    );
-    Object.keys(contentAggregationFromMap).forEach((key: string) => {
-      files.push({
-        path:
-          key === "all"
-            ? path.join(this.outputPath, "all." + this.config.outputType)
-            : path.join(this.outputPath, key, "all." + this.config.outputType),
-        content: contentAggregationFromMap[key],
-        category: key,
-        name: "all",
-      });
-    });
-
+    const aggregatedFiles = this.createAggregatedFileGroup();
+    files.push(...aggregatedFiles);
     return files;
   }
 }
