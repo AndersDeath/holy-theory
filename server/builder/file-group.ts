@@ -41,22 +41,45 @@ export class FileGroup {
     return "";
   }
 
+  createSimpleFile(rawContent: RawContent) {
+    return {
+      path: path.join(
+        this.outputPath,
+        rawContent.category,
+        rawContent.fileName + "." + this.config.outputType
+      ),
+      content: rawContent.content,
+      category: rawContent.category,
+      name: rawContent.metadata.name || "",
+    };
+  }
+
+  createAggregatedFileGroup() {
+    const files: B3File[] = [];
+    const contentAggregationFromMap = Object.fromEntries(
+      this.aggregatedContent
+    );
+    Object.keys(contentAggregationFromMap).forEach((key: string) => {
+      files.push({
+        path:
+          key === "all"
+            ? path.join(this.outputPath, "all." + this.config.outputType)
+            : path.join(this.outputPath, key, "all." + this.config.outputType),
+        content: contentAggregationFromMap[key],
+        category: key,
+        name: "all",
+      });
+    });
+    return files;
+  }
+
   async run(): Promise<any[]> {
     const files: B3File[] = [];
 
     for (let i = 0; i < this.rawContent.length; i++) {
       const rawContent: RawContent = this.rawContent[i];
 
-      files.push({
-        path: path.join(
-          this.outputPath,
-          rawContent.category,
-          rawContent.fileName + "." + this.config.outputType
-        ),
-        content: rawContent.content,
-        category: rawContent.category,
-        name: rawContent.metadata.name || "",
-      });
+      files.push(this.createSimpleFile(rawContent));
 
       this.initAggregatedContentKey(rawContent.category);
       this.initAggregatedContentKey("all");
@@ -73,22 +96,8 @@ export class FileGroup {
       this.generateTableOfContents(this.aggregatedContent.get("all") || "") +
         this.aggregatedContent.get("all")
     );
-
-    const contentAggregationFromMap = Object.fromEntries(
-      this.aggregatedContent
-    );
-    Object.keys(contentAggregationFromMap).forEach((key: string) => {
-      files.push({
-        path:
-          key === "all"
-            ? path.join(this.outputPath, "all." + this.config.outputType)
-            : path.join(this.outputPath, key, "all." + this.config.outputType),
-        content: contentAggregationFromMap[key],
-        category: key,
-        name: "all",
-      });
-    });
-
+    const aggregatedFiles = this.createAggregatedFileGroup();
+    files.push(...aggregatedFiles);
     return files;
   }
 }
