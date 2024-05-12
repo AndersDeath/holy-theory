@@ -44,6 +44,7 @@ export class Builder {
         this.rawContent = [...this.rawContent, ...parsedContentWithCategory];
       }
     }
+    this.logger.log(`${this.rawContent.length} content items are parsed`);
   }
 
   async parseMDInit(): Promise<any> {
