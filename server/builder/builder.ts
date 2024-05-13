@@ -92,33 +92,27 @@ export class Builder {
 
   async buildStaticMD(): Promise<void> {
     this.logger.log("Build static md");
-    this.config.outputType = "md";
-    const fileGroup = new FileGroup(this.config, this.rawContent);
-    const files: any[] = await fileGroup.run();
-    for (let index = 0; index < files.length; index++) {
-      await this.createCategoryDirectory(
-        this.config.markdownOutputPath,
-        files[index].category,
-        ["all"]
-      );
-      fs.writeFileSync(files[index].path, files[index].content);
-    }
+    await this.buildStatic("md", this.config.markdownOutputPath);
   }
 
   async buildStaticHtml(): Promise<void> {
     this.logger.log("Build static html");
-    this.config.outputType = "html";
+    await this.buildStatic("html", this.config.htmlOutputPath);
+  }
+
+  async buildStatic(outputType: string, outputPath: string): Promise<void> {
+    this.config.outputType = outputType;
     const fileGroup = new FileGroup(this.config, this.rawContent);
     const files: any[] = await fileGroup.run();
     for (let index = 0; index < files.length; index++) {
-      await this.createCategoryDirectory(
-        this.config.htmlOutputPath,
-        files[index].category,
-        ["all"]
-      );
+      await this.createCategoryDirectory(outputPath, files[index].category, [
+        "all",
+      ]);
       fs.writeFileSync(
         files[index].path,
-        pageWrapperHtml(marked.parse(files[index].content))
+        this.config.outputType === "html"
+          ? pageWrapperHtml(marked.parse(files[index].content))
+          : marked.parse(files[index].content)
       );
     }
   }
