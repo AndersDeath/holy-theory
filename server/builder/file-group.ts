@@ -50,7 +50,9 @@ export class FileGroup {
       ),
       content: rawContent.content,
       category: rawContent.category,
-      name: rawContent.metadata.name || "",
+      name: rawContent.metadata.title || "",
+      sort: rawContent.metadata.sort || 0,
+      ignore: rawContent.metadata.ignore || false,
     };
   }
 
@@ -68,6 +70,8 @@ export class FileGroup {
         content: contentAggregationFromMap[key],
         category: key,
         name: "all",
+        sort: 0,
+        ignore: false,
       });
     });
     return files;

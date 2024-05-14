@@ -18,4 +18,6 @@ export interface B3File {
   content: string;
   path: string;
   category: string;
+  sort: number;
+  ignore: boolean;
 }

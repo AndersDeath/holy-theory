@@ -83,6 +83,8 @@ export class Builder {
           content: pieceOfContent,
           category: file,
           path: filePath,
+          sort: 0,
+          ignore: false,
         });
       }
     }
@@ -103,7 +105,8 @@ export class Builder {
   async buildStatic(outputType: string, outputPath: string): Promise<void> {
     this.config.outputType = outputType;
     const fileGroup = new FileGroup(this.config, this.rawContent);
-    const files: any[] = await fileGroup.run();
+    const files: B3File[] = await fileGroup.run();
+
     for (let index = 0; index < files.length; index++) {
       await this.createCategoryDirectory(outputPath, files[index].category, [
         "all",
