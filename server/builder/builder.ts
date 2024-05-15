@@ -6,7 +6,7 @@ import { FileGroup } from "./file-group";
 import { marked } from "./libs/marked";
 import { Logger } from "./logger/logger";
 export class Builder {
-  parseMDLib: any;
+  parseMDLibInstance: any;
   rawContent: RawContent[] = [];
   config: Config = {
     sourceRootPath: "",
@@ -22,7 +22,7 @@ export class Builder {
   }
 
   async run(): Promise<void> {
-    this.parseMDLib = await this.parseMDInit();
+    this.parseMDLibInstance = await this.parseMDInit();
     await this.init();
     await this.buildStaticHtml();
     await this.buildStaticMD();
@@ -58,7 +58,7 @@ export class Builder {
     const output: RawContent[] = [];
     for (let index = 0; index < sourceFiles.length; index++) {
       const file = sourceFiles[index];
-      const { metadata, content }: any = this.parseMDLib(file.content);
+      const { metadata, content }: any = this.parseMDLibInstance(file.content);
       output.push({
         category,
         metadata,
