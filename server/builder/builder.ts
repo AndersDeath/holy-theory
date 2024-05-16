@@ -24,8 +24,9 @@ export class Builder {
   async run(): Promise<void> {
     this.parseMDLibInstance = await this.parseMDInit();
     await this.init();
-    await this.buildStaticHtml();
-    await this.buildStaticMD();
+    // await this.buildStaticHtml();
+    // await this.buildStaticMD();
+    await this.buildBookTemplate('algorithms');
   }
 
   async init(): Promise<any> {
@@ -118,6 +119,13 @@ export class Builder {
           : marked.parse(files[index].content)
       );
     }
+  }
+
+  async buildBookTemplate(category: string): Promise<void> {
+    this.config.targetCategory = category;
+    const fileGroup = new FileGroup(this.config, this.rawContent);
+    const files: B3File[] = await fileGroup.run();
+    console.log(files);
   }
 
   async createCategoryDirectory(

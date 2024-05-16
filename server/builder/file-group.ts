@@ -11,10 +11,15 @@ export class FileGroup {
     htmlOutputPath: "",
     outputType: "html",
     markdownOutputPath: "",
+    targetCategory: "",
   };
   constructor(config: Config, rawContent: RawContent[]) {
     this.rawContent = rawContent;
     this.config = config;
+    if (!this.config.outputType) {
+      // TODO: Move it to logger class
+      throw new Error("Critical Error: Output type should be defined");
+    }
     if (this.config.outputType === "md") {
       this.outputPath = this.config.markdownOutputPath;
     }
@@ -79,7 +84,11 @@ export class FileGroup {
 
   async run(): Promise<any[]> {
     const files: B3File[] = [];
-
+    if (this.config.targetCategory) {
+      this.rawContent = this.rawContent.filter(
+        (item: RawContent) => item.category === this.config.targetCategory
+      );
+    }
     for (let i = 0; i < this.rawContent.length; i++) {
       const rawContent: RawContent = this.rawContent[i];
 

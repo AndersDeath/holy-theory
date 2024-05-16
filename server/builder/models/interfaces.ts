@@ -11,6 +11,7 @@ export interface Config {
   htmlOutputPath: string;
   markdownOutputPath: string;
   outputType?: string;
+  targetCategory?: string;
 }
 
 export interface B3File {
