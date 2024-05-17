@@ -1,12 +1,17 @@
 import * as fs from "fs-extra";
 import * as path from "path";
-import { Config, B3File, RawContent } from "./models/interfaces";
+import {
+  Config,
+  B3File,
+  RawContent,
+  OutputFileTypes,
+} from "./models/interfaces";
 import { pageWrapperHtml } from "./ui/page-wrapper.html";
 import { FileGroup } from "./file-group";
 import { marked } from "./libs/marked";
 import { Logger } from "./logger/logger";
 export class Builder {
-  parseMDLib: any;
+  parseMDLibInstance: any;
   rawContent: RawContent[] = [];
   config: Config = {
     sourceRootPath: "",
@@ -22,10 +27,11 @@ export class Builder {
   }
 
   async run(): Promise<void> {
-    this.parseMDLib = await this.parseMDInit();
+    this.parseMDLibInstance = await this.parseMDInit();
     await this.init();
-    await this.buildStaticHtml();
-    await this.buildStaticMD();
+    // await this.buildStaticHtml();
+    // await this.buildStaticMD();
+    await this.buildBookTemplate("algorithms");
   }
 
   async init(): Promise<any> {
@@ -58,7 +64,7 @@ export class Builder {
     const output: RawContent[] = [];
     for (let index = 0; index < sourceFiles.length; index++) {
       const file = sourceFiles[index];
-      const { metadata, content }: any = this.parseMDLib(file.content);
+      const { metadata, content }: any = this.parseMDLibInstance(file.content);
       output.push({
         category,
         metadata,
@@ -83,6 +89,8 @@ export class Builder {
           content: pieceOfContent,
           category: file,
           path: filePath,
+          sort: 0,
+          ignore: false,
         });
       }
     }
@@ -92,29 +100,38 @@ export class Builder {
 
   async buildStaticMD(): Promise<void> {
     this.logger.log("Build static md");
-    await this.buildStatic("md", this.config.markdownOutputPath);
+    await this.buildStatic(OutputFileTypes.MD, this.config.markdownOutputPath);
   }
 
   async buildStaticHtml(): Promise<void> {
     this.logger.log("Build static html");
-    await this.buildStatic("html", this.config.htmlOutputPath);
+    await this.buildStatic(OutputFileTypes.HTML, this.config.htmlOutputPath);
   }
 
   async buildStatic(outputType: string, outputPath: string): Promise<void> {
     this.config.outputType = outputType;
     const fileGroup = new FileGroup(this.config, this.rawContent);
-    const files: any[] = await fileGroup.run();
+    const files: B3File[] = await fileGroup.run();
+
     for (let index = 0; index < files.length; index++) {
       await this.createCategoryDirectory(outputPath, files[index].category, [
         "all",
       ]);
       fs.writeFileSync(
         files[index].path,
-        this.config.outputType === "html"
+        this.config.outputType === OutputFileTypes.HTML
           ? pageWrapperHtml(marked.parse(files[index].content))
           : marked.parse(files[index].content)
       );
     }
+  }
+
+  async buildBookTemplate(category: string): Promise<void> {
+    this.config.targetCategory = category;
+    this.config.outputType = OutputFileTypes.HTML;
+    const fileGroup = new FileGroup(this.config, this.rawContent);
+    const files: B3File[] = await fileGroup.prepareBookTemplateContent();
+    console.log(files.length);
   }
 
   async createCategoryDirectory(

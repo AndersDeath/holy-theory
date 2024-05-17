@@ -11,6 +11,7 @@ export interface Config {
   htmlOutputPath: string;
   markdownOutputPath: string;
   outputType?: string;
+  targetCategory?: string;
 }
 
 export interface B3File {
@@ -18,4 +19,11 @@ export interface B3File {
   content: string;
   path: string;
   category: string;
+  sort: number;
+  ignore: boolean;
+}
+
+export enum OutputFileTypes {
+  HTML = "html",
+  MD = "md",
 }

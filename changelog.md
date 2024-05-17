@@ -2,7 +2,8 @@
 
 All notable changes to this project will be documented in this file.
 # [0.0.71] - In progress
-
+* add necessary metadata to files Builder3
+* add buildBookTemplate for Builder3
 # [0.0.70] - 2024-05-13
 * update Builder3 logger
 * update markdown generator on Builder3
