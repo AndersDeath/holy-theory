@@ -22,3 +22,8 @@ export interface B3File {
   sort: number;
   ignore: boolean;
 }
+
+export enum OutputFileTypes {
+  HTML = "html",
+  MD = "md",
+}

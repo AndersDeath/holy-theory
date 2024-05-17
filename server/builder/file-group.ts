@@ -1,4 +1,9 @@
-import { B3File, Config, RawContent } from "./models/interfaces";
+import {
+  B3File,
+  Config,
+  OutputFileTypes,
+  RawContent,
+} from "./models/interfaces";
 import * as path from "path";
 import { tableOfContentsHtml, tableOfContentsMd } from "./ui";
 
@@ -9,7 +14,7 @@ export class FileGroup {
   config: Config = {
     sourceRootPath: "",
     htmlOutputPath: "",
-    outputType: "html",
+    outputType: OutputFileTypes.HTML,
     markdownOutputPath: "",
     targetCategory: "",
   };
@@ -20,10 +25,10 @@ export class FileGroup {
       // TODO: Move it to logger class
       throw new Error("Critical Error: Output type should be defined");
     }
-    if (this.config.outputType === "md") {
+    if (this.config.outputType === OutputFileTypes.MD) {
       this.outputPath = this.config.markdownOutputPath;
     }
-    if (this.config.outputType === "html") {
+    if (this.config.outputType === OutputFileTypes.HTML) {
       this.outputPath = this.config.htmlOutputPath;
     }
   }
@@ -41,8 +46,10 @@ export class FileGroup {
   }
 
   generateTableOfContents(text: string): string {
-    if (this.config.outputType === "md") return tableOfContentsMd(text);
-    if (this.config.outputType === "html") return tableOfContentsHtml(text);
+    if (this.config.outputType === OutputFileTypes.MD)
+      return tableOfContentsMd(text);
+    if (this.config.outputType === OutputFileTypes.HTML)
+      return tableOfContentsHtml(text);
     return "";
   }
 
