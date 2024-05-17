@@ -123,9 +123,10 @@ export class Builder {
 
   async buildBookTemplate(category: string): Promise<void> {
     this.config.targetCategory = category;
+    this.config.outputType = 'html'
     const fileGroup = new FileGroup(this.config, this.rawContent);
-    const files: B3File[] = await fileGroup.run();
-    console.log(files);
+    const files: B3File[] = await fileGroup.prepareBookTemplateContent();
+    console.log(files.length);
   }
 
   async createCategoryDirectory(

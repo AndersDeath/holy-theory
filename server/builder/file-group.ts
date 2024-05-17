@@ -61,7 +61,7 @@ export class FileGroup {
     };
   }
 
-  createAggregatedFileGroup() {
+  createAggregatedFileGroup(groupName: string) {
     const files: B3File[] = [];
     const contentAggregationFromMap = Object.fromEntries(
       this.aggregatedContent
@@ -69,12 +69,19 @@ export class FileGroup {
     Object.keys(contentAggregationFromMap).forEach((key: string) => {
       files.push({
         path:
-          key === "all"
-            ? path.join(this.outputPath, "all." + this.config.outputType)
-            : path.join(this.outputPath, key, "all." + this.config.outputType),
+          key === groupName
+            ? path.join(
+                this.outputPath,
+                groupName + "." + this.config.outputType
+              )
+            : path.join(
+                this.outputPath,
+                key,
+                groupName + "." + this.config.outputType
+              ),
         content: contentAggregationFromMap[key],
         category: key,
-        name: "all",
+        name: groupName,
         sort: 0,
         ignore: false,
       });
@@ -109,7 +116,38 @@ export class FileGroup {
       this.generateTableOfContents(this.aggregatedContent.get("all") || "") +
         this.aggregatedContent.get("all")
     );
-    const aggregatedFiles = this.createAggregatedFileGroup();
+    const aggregatedFiles = this.createAggregatedFileGroup("all");
+    files.push(...aggregatedFiles);
+    return files;
+  }
+
+  async prepareBookTemplateContent(): Promise<any[]> {
+    const files: B3File[] = [];
+    if (this.config.targetCategory) {
+      this.rawContent = this.rawContent.filter(
+        (item: RawContent) => item.category === this.config.targetCategory
+      );
+    }
+    for (let i = 0; i < this.rawContent.length; i++) {
+      const rawContent: RawContent = this.rawContent[i];
+
+      this.initAggregatedContentKey("prepared-book-template");
+
+      this.appendAggregatedContentValue(
+        "prepared-book-template",
+        rawContent.content
+      );
+    }
+
+    this.aggregatedContent.set(
+      "prepared-book-template",
+      this.generateTableOfContents(
+        this.aggregatedContent.get("prepared-book-template") || ""
+      ) + this.aggregatedContent.get("prepared-book-template")
+    );
+    const aggregatedFiles = this.createAggregatedFileGroup(
+      "prepared-book-template"
+    );
     files.push(...aggregatedFiles);
     return files;
   }
