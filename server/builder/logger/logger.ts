@@ -35,4 +35,9 @@ export class Logger {
   public timeEnd(message: string) {
     console.timeEnd("Time log: " + message);
   }
+
+  public throwError(message: string) {
+    console.error("Message: ", message);
+    throw new Error("Error: " + message);
+  }
 }

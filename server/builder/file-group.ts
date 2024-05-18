@@ -6,6 +6,7 @@ import {
 } from "./models/interfaces";
 import * as path from "path";
 import { tableOfContentsHtml, tableOfContentsMd } from "./ui";
+import { Logger } from "./logger/logger";
 
 export class FileGroup {
   rawContent: RawContent[] = [];
@@ -18,12 +19,12 @@ export class FileGroup {
     markdownOutputPath: "",
     targetCategory: "",
   };
+  logger: Logger = new Logger();
   constructor(config: Config, rawContent: RawContent[]) {
     this.rawContent = rawContent;
     this.config = config;
     if (!this.config.outputType) {
-      // TODO: Move it to logger class
-      throw new Error("Critical Error: Output type should be defined");
+      this.logger.throwError("Critical Error: Output type should be defined");
     }
     if (this.config.outputType === OutputFileTypes.MD) {
       this.outputPath = this.config.markdownOutputPath;
