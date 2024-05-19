@@ -17,6 +17,7 @@ export class Builder {
     sourceRootPath: "",
     htmlOutputPath: "",
     markdownOutputPath: "",
+    buildFolderPath: "",
   };
 
   logger: Logger = new Logger();
@@ -127,11 +128,24 @@ export class Builder {
   }
 
   async buildBookTemplate(category: string): Promise<void> {
+    this.logger.log("Build prepared Html Book Template");
     this.config.targetCategory = category;
     this.config.outputType = OutputFileTypes.HTML;
     const fileGroup = new FileGroup(this.config, this.rawContent);
     const files: B3File[] = await fileGroup.prepareBookTemplateContent();
     console.log(files.length);
+    // console.log(files);
+    for (let index = 0; index < files.length; index++) {
+      await this.createCategoryDirectory(
+        this.config.buildFolderPath,
+        files[index].category,
+        ["all"]
+      );
+      fs.writeFileSync(
+        files[index].path,
+        pageWrapperHtml(marked.parse(files[index].content))
+      );
+    }
   }
 
   async createCategoryDirectory(

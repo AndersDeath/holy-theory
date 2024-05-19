@@ -9,6 +9,7 @@ const builder = new Builder({
   sourceRootPath: "./content",
   htmlOutputPath: "./static2",
   markdownOutputPath: "./markdown2",
+  buildFolderPath: "./temp",
 });
 
 builder.run().then(() => {
