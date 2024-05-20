@@ -9,10 +9,17 @@ const builder = new Builder({
   sourceRootPath: "./content",
   htmlOutputPath: "./static2",
   markdownOutputPath: "./markdown2",
-  buildFolderPath: "./temp",
+  tempFolderPath: "./temp",
 });
 
-builder.run().then(() => {
-  logger.log("The work of script finished");
-  logger.timeEnd("Builder working timer");
-});
+builder
+  .run({
+    targets: [],
+    bookSettings: {
+      categories: ["algorithms"],
+    },
+  })
+  .then(() => {
+    logger.log("The work of script finished");
+    logger.timeEnd("Builder working timer");
+  });

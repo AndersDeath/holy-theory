@@ -5,11 +5,19 @@ import {
   B3File,
   RawContent,
   OutputFileTypes,
+  RunConfig,
 } from "./models/interfaces";
 import { pageWrapperHtml } from "./ui/page-wrapper.html";
 import { FileGroup } from "./file-group";
 import { marked } from "./libs/marked";
 import { Logger } from "./logger/logger";
+
+const RunConfigDefault = {
+  targets: [],
+  bookSettings: {
+    categories: [],
+  },
+};
 export class Builder {
   parseMDLibInstance: any;
   rawContent: RawContent[] = [];
@@ -27,12 +35,32 @@ export class Builder {
     this.config = config;
   }
 
-  async run(): Promise<void> {
+  async run(runConfig: RunConfig = RunConfigDefault): Promise<void> {
     this.parseMDLibInstance = await this.parseMDInit();
     await this.init();
-    // await this.buildStaticHtml();
-    // await this.buildStaticMD();
-    await this.buildBookTemplate("algorithms");
+    if (runConfig.targets.length === 0) {
+      await this.buildStaticHtml();
+      await this.buildStaticMD();
+      if (runConfig.bookSettings.categories.length > 0) {
+        const promisesArray: Promise<void>[] = [];
+        for (
+          let index = 0;
+          index < runConfig.bookSettings.categories.length;
+          index++
+        ) {
+          const element = runConfig.bookSettings.categories[index];
+          promisesArray.push(this.buildBookTemplate(element));
+        }
+        await Promise.all(promisesArray);
+      }
+      return;
+    }
+
+    if (runConfig.targets.includes["html"]) await this.buildStaticHtml();
+    if (runConfig.targets.includes["md"]) await this.buildStaticMD();
+    if (runConfig.targets.includes["book"])
+      await this.buildBookTemplate("algorithms");
+    return;
   }
 
   async init(): Promise<any> {

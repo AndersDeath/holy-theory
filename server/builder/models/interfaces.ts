@@ -28,3 +28,10 @@ export enum OutputFileTypes {
   HTML = "html",
   MD = "md",
 }
+
+export interface RunConfig {
+  targets: string[];
+  bookSettings: {
+    categories: string[];
+  };
+}
