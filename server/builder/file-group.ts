@@ -18,7 +18,7 @@ export class FileGroup {
     outputType: OutputFileTypes.HTML,
     markdownOutputPath: "",
     targetCategory: "",
-    buildFolderPath: "",
+    tempFolderPath: "",
   };
   logger: Logger = new Logger();
   constructor(config: Config, rawContent: RawContent[]) {
@@ -134,7 +134,7 @@ export class FileGroup {
   async prepareBookTemplateContent(): Promise<any[]> {
     const files: B3File[] = [];
     const preparedBookTemplateKey = "prepared-book-template";
-    this.outputPath = this.config.buildFolderPath;
+    this.outputPath = this.config.tempFolderPath;
 
     if (this.config.targetCategory) {
       this.rawContent = this.rawContent.filter(

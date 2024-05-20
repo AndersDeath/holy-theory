@@ -12,7 +12,7 @@ export interface Config {
   markdownOutputPath: string;
   outputType?: string;
   targetCategory?: string;
-  buildFolderPath: string;
+  tempFolderPath: string;
 }
 
 export interface B3File {

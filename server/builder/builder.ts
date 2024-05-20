@@ -17,7 +17,7 @@ export class Builder {
     sourceRootPath: "",
     htmlOutputPath: "",
     markdownOutputPath: "",
-    buildFolderPath: "",
+    tempFolderPath: "",
   };
 
   logger: Logger = new Logger();
@@ -137,9 +137,8 @@ export class Builder {
     // console.log(files);
     for (let index = 0; index < files.length; index++) {
       await this.createCategoryDirectory(
-        this.config.buildFolderPath,
-        files[index].category,
-        ["all"]
+        this.config.tempFolderPath,
+        files[index].category
       );
       fs.writeFileSync(
         files[index].path,
@@ -151,7 +150,7 @@ export class Builder {
   async createCategoryDirectory(
     outputPath: string,
     categoryName: string,
-    ignoreList: string[]
+    ignoreList: string[] = []
   ): Promise<void> {
     if (ignoreList.includes(categoryName)) return;
     return fs.mkdirp(path.join(outputPath, categoryName));
