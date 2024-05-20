@@ -37,18 +37,22 @@ export class Builder {
 
   async run(runConfig: RunConfig = RunConfigDefault): Promise<void> {
     this.parseMDLibInstance = await this.parseMDInit();
+
+    const rConf = this.runConfigResolver(runConfig);
+
     await this.init();
-    if (runConfig.targets.length === 0) {
+    
+    if (runConfig.targets?.length === 0) {
       await this.buildStaticHtml();
       await this.buildStaticMD();
-      if (runConfig.bookSettings.categories.length > 0) {
+      if ((rConf.bookSettings?.categories ?? []).length > 0) {
         const promisesArray: Promise<void>[] = [];
         for (
           let index = 0;
-          index < runConfig.bookSettings.categories.length;
+          index < (rConf.bookSettings?.categories ?? []).length;
           index++
         ) {
-          const element = runConfig.bookSettings.categories[index];
+          const element = (rConf.bookSettings?.categories ?? [])[index];
           promisesArray.push(this.buildBookTemplate(element));
         }
         await Promise.all(promisesArray);
@@ -56,11 +60,19 @@ export class Builder {
       return;
     }
 
-    if (runConfig.targets.includes["html"]) await this.buildStaticHtml();
-    if (runConfig.targets.includes["md"]) await this.buildStaticMD();
-    if (runConfig.targets.includes["book"])
+    if (rConf.targets && rConf.targets.includes("html"))
+      await this.buildStaticHtml();
+    if (rConf.targets && rConf.targets.includes("md"))
+      await this.buildStaticMD();
+    if (rConf.targets && rConf.targets.includes("book"))
       await this.buildBookTemplate("algorithms");
     return;
+  }
+
+  runConfigResolver(runConfig: RunConfig): RunConfig {
+    if (!runConfig.targets) runConfig.targets = [];
+    if (!runConfig.bookSettings) runConfig.bookSettings = { categories: [] };
+    return runConfig;
   }
 
   async init(): Promise<any> {

@@ -30,8 +30,8 @@ export enum OutputFileTypes {
 }
 
 export interface RunConfig {
-  targets: string[];
-  bookSettings: {
+  targets?: string[];
+  bookSettings?: {
     categories: string[];
   };
 }
