@@ -5,19 +5,24 @@ import {
   B3File,
   RawContent,
   OutputFileTypes,
+  RunConfig,
 } from "./models/interfaces";
 import { pageWrapperHtml } from "./ui/page-wrapper.html";
 import { FileGroup } from "./file-group";
 import { marked } from "./libs/marked";
 import { Logger } from "./logger/logger";
+
+const RunConfigDefault = {
+  targets: [],
+  bookSettings: {
+    categories: [],
+  },
+};
+
 export class Builder {
   parseMDLibInstance: any;
   rawContent: RawContent[] = [];
-  config: Config = {
-    sourceRootPath: "",
-    htmlOutputPath: "",
-    markdownOutputPath: "",
-  };
+  config: Config;
 
   logger: Logger = new Logger();
 
@@ -26,59 +31,80 @@ export class Builder {
     this.config = config;
   }
 
-  async run(): Promise<void> {
+  async run(runConfig: RunConfig = RunConfigDefault): Promise<void> {
     this.parseMDLibInstance = await this.parseMDInit();
+
+    const rConf = this.runConfigResolver(runConfig);
+
     await this.init();
-    // await this.buildStaticHtml();
-    // await this.buildStaticMD();
-    await this.buildBookTemplate("algorithms");
+
+    if (runConfig.targets?.length === 0) {
+      await this.buildStaticHtml();
+      await this.buildStaticMD();
+      await this.detectBookBookTemplateCategoriesAndBuild(rConf);
+      return;
+    }
+
+    if (rConf.targets && rConf.targets.includes("html"))
+      await this.buildStaticHtml();
+    if (rConf.targets && rConf.targets.includes("md"))
+      await this.buildStaticMD();
+    if (rConf.targets && rConf.targets.includes("book"))
+      await this.detectBookBookTemplateCategoriesAndBuild(rConf);
+
+    return;
   }
 
-  async init(): Promise<any> {
+  async detectBookBookTemplateCategoriesAndBuild(
+    rConf: RunConfig
+  ): Promise<void> {
+    const categories = rConf.bookSettings?.categories ?? [];
+    await Promise.all(
+      categories.map((element) => this.buildBookTemplate(element))
+    );
+  }
+
+  runConfigResolver(runConfig: RunConfig): RunConfig {
+    runConfig.targets = runConfig.targets || [];
+    runConfig.bookSettings = runConfig.bookSettings || { categories: [] };
+    return runConfig;
+  }
+
+  async init(): Promise<void> {
     const folders: string[] = await fs.readdir(this.config.sourceRootPath);
     for (const folder of folders) {
       const folderPath: string = path.join(this.config.sourceRootPath, folder);
       if (fs.statSync(folderPath).isDirectory()) {
         const sourceFiles: B3File[] = await this.parseFolder(folderPath);
-        const parsedContentWithCategory: RawContent[] =
-          await this.parseRawContent(folder, sourceFiles).map(
-            (rawContent: RawContent) => {
-              rawContent.folderPath = folderPath;
-              return rawContent;
-            }
-          );
-        this.rawContent = [...this.rawContent, ...parsedContentWithCategory];
+        const parsedContentWithCategory: RawContent[] = await Promise.all(
+          sourceFiles.map((file) => this.parseRawContent(folder, file))
+        );
+        this.rawContent.push(...parsedContentWithCategory);
       }
     }
     this.logger.log(`${this.rawContent.length} content items are parsed`);
   }
 
   async parseMDInit(): Promise<any> {
-    return import("parse-md").then((module) => {
-      const parseMD = module.default;
-      return parseMD;
-    });
+    const module = await import("parse-md");
+    const parseMD = module.default;
+    return parseMD;
   }
 
-  parseRawContent(category: string, sourceFiles: B3File[]) {
-    const output: RawContent[] = [];
-    for (let index = 0; index < sourceFiles.length; index++) {
-      const file = sourceFiles[index];
-      const { metadata, content }: any = this.parseMDLibInstance(file.content);
-      output.push({
-        category,
-        metadata,
-        content,
-        folderPath: "",
-        fileName: file.name,
-      });
-    }
-    return output;
+  parseRawContent(category: string, file: B3File): RawContent {
+    const { metadata, content }: any = this.parseMDLibInstance(file.content);
+    return {
+      category,
+      metadata,
+      content,
+      folderPath: "",
+      fileName: file.name,
+    };
   }
 
-  async parseFolder(folderPath: any): Promise<B3File[]> {
-    const content: B3File[] = [];
+  async parseFolder(folderPath: string): Promise<B3File[]> {
     const files: string[] = await fs.readdir(folderPath);
+    const content: B3File[] = [];
 
     for (const file of files) {
       const filePath: string = path.join(folderPath, file);
@@ -113,31 +139,38 @@ export class Builder {
     const fileGroup = new FileGroup(this.config, this.rawContent);
     const files: B3File[] = await fileGroup.run();
 
-    for (let index = 0; index < files.length; index++) {
-      await this.createCategoryDirectory(outputPath, files[index].category, [
-        "all",
-      ]);
+    for (const file of files) {
+      await this.createCategoryDirectory(outputPath, file.category, ["all"]);
       fs.writeFileSync(
-        files[index].path,
+        file.path,
         this.config.outputType === OutputFileTypes.HTML
-          ? pageWrapperHtml(marked.parse(files[index].content))
-          : marked.parse(files[index].content)
+          ? pageWrapperHtml(marked.parse(file.content))
+          : marked.parse(file.content)
       );
     }
   }
 
   async buildBookTemplate(category: string): Promise<void> {
+    this.logger.log("Build prepared Html Book Template");
     this.config.targetCategory = category;
     this.config.outputType = OutputFileTypes.HTML;
     const fileGroup = new FileGroup(this.config, this.rawContent);
     const files: B3File[] = await fileGroup.prepareBookTemplateContent();
     console.log(files.length);
+    // console.log(files);
+    for (const file of files) {
+      await this.createCategoryDirectory(
+        this.config.tempFolderPath,
+        file.category
+      );
+      fs.writeFileSync(file.path, pageWrapperHtml(marked.parse(file.content)));
+    }
   }
 
   async createCategoryDirectory(
     outputPath: string,
     categoryName: string,
-    ignoreList: string[]
+    ignoreList: string[] = []
   ): Promise<void> {
     if (ignoreList.includes(categoryName)) return;
     return fs.mkdirp(path.join(outputPath, categoryName));

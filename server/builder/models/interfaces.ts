@@ -12,6 +12,7 @@ export interface Config {
   markdownOutputPath: string;
   outputType?: string;
   targetCategory?: string;
+  tempFolderPath: string;
 }
 
 export interface B3File {
@@ -26,4 +27,11 @@ export interface B3File {
 export enum OutputFileTypes {
   HTML = "html",
   MD = "md",
+}
+
+export interface RunConfig {
+  targets?: string[];
+  bookSettings?: {
+    categories: string[];
+  };
 }

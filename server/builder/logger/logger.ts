@@ -13,26 +13,31 @@ export class Logger {
   }
 
   public test(): void {
-    console.log("Logger works");
+    this.log("Logger works");
   }
 
-  public info(messageCode: string) {
+  public info(messageCode: string): void {
     if (!LOGGER_DICTIONARY[messageCode]) {
-      console.log("Logger: no message in dictionary");
+      this.log("Logger: no message in dictionary");
       return;
     }
-    console.log("Info: ", LOGGER_DICTIONARY[messageCode]);
+    this.log("Info: " + LOGGER_DICTIONARY[messageCode]);
   }
 
-  public log(message: string) {
-    console.log("Log: ", message);
+  public log(message: string): void {
+    console.log("Log: " + message);
   }
 
-  public time(message: string) {
+  public time(message: string): void {
     console.time("Time log: " + message);
   }
 
-  public timeEnd(message: string) {
+  public timeEnd(message: string): void {
     console.timeEnd("Time log: " + message);
+  }
+
+  public throwError(message: string): void {
+    console.error("Message: " + message);
+    throw new Error("Error: " + message);
   }
 }
