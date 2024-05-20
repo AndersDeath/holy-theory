@@ -18,15 +18,11 @@ const RunConfigDefault = {
     categories: [],
   },
 };
+
 export class Builder {
   parseMDLibInstance: any;
   rawContent: RawContent[] = [];
-  config: Config = {
-    sourceRootPath: "",
-    htmlOutputPath: "",
-    markdownOutputPath: "",
-    tempFolderPath: "",
-  };
+  config: Config;
 
   logger: Logger = new Logger();
 
@@ -62,66 +58,53 @@ export class Builder {
   async detectBookBookTemplateCategoriesAndBuild(
     rConf: RunConfig
   ): Promise<void> {
-    if ((rConf.bookSettings?.categories ?? []).length > 0) {
-      await Promise.all(
-        (rConf.bookSettings?.categories ?? []).map((element) =>
-          this.buildBookTemplate(element)
-        )
-      );
-    }
+    const categories = rConf.bookSettings?.categories ?? [];
+    await Promise.all(
+      categories.map((element) => this.buildBookTemplate(element))
+    );
   }
 
   runConfigResolver(runConfig: RunConfig): RunConfig {
-    if (!runConfig.targets) runConfig.targets = [];
-    if (!runConfig.bookSettings) runConfig.bookSettings = { categories: [] };
+    runConfig.targets = runConfig.targets || [];
+    runConfig.bookSettings = runConfig.bookSettings || { categories: [] };
     return runConfig;
   }
 
-  async init(): Promise<any> {
+  async init(): Promise<void> {
     const folders: string[] = await fs.readdir(this.config.sourceRootPath);
     for (const folder of folders) {
       const folderPath: string = path.join(this.config.sourceRootPath, folder);
       if (fs.statSync(folderPath).isDirectory()) {
         const sourceFiles: B3File[] = await this.parseFolder(folderPath);
-        const parsedContentWithCategory: RawContent[] =
-          await this.parseRawContent(folder, sourceFiles).map(
-            (rawContent: RawContent) => {
-              rawContent.folderPath = folderPath;
-              return rawContent;
-            }
-          );
-        this.rawContent = [...this.rawContent, ...parsedContentWithCategory];
+        const parsedContentWithCategory: RawContent[] = await Promise.all(
+          sourceFiles.map((file) => this.parseRawContent(folder, file))
+        );
+        this.rawContent.push(...parsedContentWithCategory);
       }
     }
     this.logger.log(`${this.rawContent.length} content items are parsed`);
   }
 
   async parseMDInit(): Promise<any> {
-    return import("parse-md").then((module) => {
-      const parseMD = module.default;
-      return parseMD;
-    });
+    const module = await import("parse-md");
+    const parseMD = module.default;
+    return parseMD;
   }
 
-  parseRawContent(category: string, sourceFiles: B3File[]) {
-    const output: RawContent[] = [];
-    for (let index = 0; index < sourceFiles.length; index++) {
-      const file = sourceFiles[index];
-      const { metadata, content }: any = this.parseMDLibInstance(file.content);
-      output.push({
-        category,
-        metadata,
-        content,
-        folderPath: "",
-        fileName: file.name,
-      });
-    }
-    return output;
+  parseRawContent(category: string, file: B3File): RawContent {
+    const { metadata, content }: any = this.parseMDLibInstance(file.content);
+    return {
+      category,
+      metadata,
+      content,
+      folderPath: "",
+      fileName: file.name,
+    };
   }
 
-  async parseFolder(folderPath: any): Promise<B3File[]> {
-    const content: B3File[] = [];
+  async parseFolder(folderPath: string): Promise<B3File[]> {
     const files: string[] = await fs.readdir(folderPath);
+    const content: B3File[] = [];
 
     for (const file of files) {
       const filePath: string = path.join(folderPath, file);
@@ -156,15 +139,13 @@ export class Builder {
     const fileGroup = new FileGroup(this.config, this.rawContent);
     const files: B3File[] = await fileGroup.run();
 
-    for (let index = 0; index < files.length; index++) {
-      await this.createCategoryDirectory(outputPath, files[index].category, [
-        "all",
-      ]);
+    for (const file of files) {
+      await this.createCategoryDirectory(outputPath, file.category, ["all"]);
       fs.writeFileSync(
-        files[index].path,
+        file.path,
         this.config.outputType === OutputFileTypes.HTML
-          ? pageWrapperHtml(marked.parse(files[index].content))
-          : marked.parse(files[index].content)
+          ? pageWrapperHtml(marked.parse(file.content))
+          : marked.parse(file.content)
       );
     }
   }
@@ -177,15 +158,12 @@ export class Builder {
     const files: B3File[] = await fileGroup.prepareBookTemplateContent();
     console.log(files.length);
     // console.log(files);
-    for (let index = 0; index < files.length; index++) {
+    for (const file of files) {
       await this.createCategoryDirectory(
         this.config.tempFolderPath,
-        files[index].category
+        file.category
       );
-      fs.writeFileSync(
-        files[index].path,
-        pageWrapperHtml(marked.parse(files[index].content))
-      );
+      fs.writeFileSync(file.path, pageWrapperHtml(marked.parse(file.content)));
     }
   }
 

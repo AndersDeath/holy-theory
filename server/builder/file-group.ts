@@ -1,12 +1,13 @@
+import * as path from "path";
+import { tableOfContentsHtml, tableOfContentsMd } from "./ui";
+import { Logger } from "./logger/logger";
+
 import {
   B3File,
   Config,
   OutputFileTypes,
   RawContent,
 } from "./models/interfaces";
-import * as path from "path";
-import { tableOfContentsHtml, tableOfContentsMd } from "./ui";
-import { Logger } from "./logger/logger";
 
 export class FileGroup {
   rawContent: RawContent[] = [];
@@ -21,47 +22,47 @@ export class FileGroup {
     tempFolderPath: "",
   };
   logger: Logger = new Logger();
+
   constructor(config: Config, rawContent: RawContent[]) {
     this.rawContent = rawContent;
     this.config = config;
     if (!this.config.outputType) {
       this.logger.throwError("Critical Error: Output type should be defined");
     }
-    if (this.config.outputType === OutputFileTypes.MD) {
-      this.outputPath = this.config.markdownOutputPath;
-    }
-    if (this.config.outputType === OutputFileTypes.HTML) {
-      this.outputPath = this.config.htmlOutputPath;
-    }
+    this.outputPath =
+      this.config.outputType === OutputFileTypes.MD
+        ? this.config.markdownOutputPath
+        : this.config.htmlOutputPath;
   }
 
-  initAggregatedContentKey(category: string) {
-    if (!this.aggregatedContent.get(category))
+  private initAggregatedContentKey(category: string) {
+    if (!this.aggregatedContent.has(category)) {
       this.aggregatedContent.set(category, "");
+    }
   }
 
-  appendAggregatedContentValue(category: string, value: string) {
+  private appendAggregatedContentValue(category: string, value: string) {
     this.aggregatedContent.set(
       category,
       this.aggregatedContent.get(category) + value
     );
   }
 
-  generateTableOfContents(text: string): string {
-    if (this.config.outputType === OutputFileTypes.MD)
+  private generateTableOfContents(text: string): string {
+    if (this.config.outputType === OutputFileTypes.MD) {
       return tableOfContentsMd(text);
-    if (this.config.outputType === OutputFileTypes.HTML)
+    }
+    if (this.config.outputType === OutputFileTypes.HTML) {
       return tableOfContentsHtml(text);
+    }
     return "";
   }
 
-  createSimpleFile(rawContent: RawContent) {
+  private createSimpleFile(rawContent: RawContent): B3File {
+    const fileName = rawContent.fileName + "." + this.config.outputType;
+    const filePath = path.join(this.outputPath, rawContent.category, fileName);
     return {
-      path: path.join(
-        this.outputPath,
-        rawContent.category,
-        rawContent.fileName + "." + this.config.outputType
-      ),
+      path: filePath,
       content: rawContent.content,
       category: rawContent.category,
       name: rawContent.metadata.title || "",
@@ -70,24 +71,22 @@ export class FileGroup {
     };
   }
 
-  createAggregatedFileGroup(groupName: string) {
+  private createAggregatedFileGroup(groupName: string): B3File[] {
     const files: B3File[] = [];
     const contentAggregationFromMap = Object.fromEntries(
       this.aggregatedContent
     );
     Object.keys(contentAggregationFromMap).forEach((key: string) => {
+      const filePath =
+        key === groupName
+          ? path.join(this.outputPath, groupName + "." + this.config.outputType)
+          : path.join(
+              this.outputPath,
+              key,
+              groupName + "." + this.config.outputType
+            );
       files.push({
-        path:
-          key === groupName
-            ? path.join(
-                this.outputPath,
-                groupName + "." + this.config.outputType
-              )
-            : path.join(
-                this.outputPath,
-                key,
-                groupName + "." + this.config.outputType
-              ),
+        path: filePath,
         content: contentAggregationFromMap[key],
         category: key,
         name: groupName,
@@ -98,7 +97,7 @@ export class FileGroup {
     return files;
   }
 
-  async run(): Promise<any[]> {
+  async run(): Promise<B3File[]> {
     const files: B3File[] = [];
     const allKey = "all";
     if (this.config.targetCategory) {
@@ -106,9 +105,7 @@ export class FileGroup {
         (item: RawContent) => item.category === this.config.targetCategory
       );
     }
-    for (let i = 0; i < this.rawContent.length; i++) {
-      const rawContent: RawContent = this.rawContent[i];
-
+    for (const rawContent of this.rawContent) {
       files.push(this.createSimpleFile(rawContent));
 
       this.initAggregatedContentKey(rawContent.category);
@@ -131,7 +128,7 @@ export class FileGroup {
     return files;
   }
 
-  async prepareBookTemplateContent(): Promise<any[]> {
+  async prepareBookTemplateContent(): Promise<B3File[]> {
     const files: B3File[] = [];
     const preparedBookTemplateKey = "prepared-book-template";
     this.outputPath = this.config.tempFolderPath;
@@ -141,9 +138,7 @@ export class FileGroup {
         (item: RawContent) => item.category === this.config.targetCategory
       );
     }
-    for (let i = 0; i < this.rawContent.length; i++) {
-      const rawContent: RawContent = this.rawContent[i];
-
+    for (const rawContent of this.rawContent) {
       this.initAggregatedContentKey(preparedBookTemplateKey);
 
       this.appendAggregatedContentValue(
