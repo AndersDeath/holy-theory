@@ -41,22 +41,11 @@ export class Builder {
     const rConf = this.runConfigResolver(runConfig);
 
     await this.init();
-    
+
     if (runConfig.targets?.length === 0) {
       await this.buildStaticHtml();
       await this.buildStaticMD();
-      if ((rConf.bookSettings?.categories ?? []).length > 0) {
-        const promisesArray: Promise<void>[] = [];
-        for (
-          let index = 0;
-          index < (rConf.bookSettings?.categories ?? []).length;
-          index++
-        ) {
-          const element = (rConf.bookSettings?.categories ?? [])[index];
-          promisesArray.push(this.buildBookTemplate(element));
-        }
-        await Promise.all(promisesArray);
-      }
+      await this.detectBookBookTemplateCategoriesAndBuild(rConf);
       return;
     }
 
@@ -65,8 +54,21 @@ export class Builder {
     if (rConf.targets && rConf.targets.includes("md"))
       await this.buildStaticMD();
     if (rConf.targets && rConf.targets.includes("book"))
-      await this.buildBookTemplate("algorithms");
+      await this.detectBookBookTemplateCategoriesAndBuild(rConf);
+
     return;
+  }
+
+  async detectBookBookTemplateCategoriesAndBuild(
+    rConf: RunConfig
+  ): Promise<void> {
+    if ((rConf.bookSettings?.categories ?? []).length > 0) {
+      await Promise.all(
+        (rConf.bookSettings?.categories ?? []).map((element) =>
+          this.buildBookTemplate(element)
+        )
+      );
+    }
   }
 
   runConfigResolver(runConfig: RunConfig): RunConfig {

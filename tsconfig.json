@@ -7,9 +7,6 @@
     "sourceMap": true,
     "outDir": "dist"
   },
-  "ts-node": {
-    "esm": true
-  },
   "include": ["builder/**/*", "builder/types.d.ts"],
   "lib": ["es2015"]
 }
