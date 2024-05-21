@@ -42,6 +42,7 @@ export class Builder {
       await this.buildStaticHtml();
       await this.buildStaticMD();
       await this.detectBookBookTemplateCategoriesAndBuild(rConf);
+      await this.copyImageFolder();
       return;
     }
 
@@ -49,9 +50,10 @@ export class Builder {
       await this.buildStaticHtml();
     if (rConf.targets && rConf.targets.includes("md"))
       await this.buildStaticMD();
-    if (rConf.targets && rConf.targets.includes("book"))
+    if (rConf.targets && rConf.targets.includes("book")) {
       await this.detectBookBookTemplateCategoriesAndBuild(rConf);
-
+      await this.copyImageFolder();
+    }
     return;
   }
 
@@ -155,14 +157,14 @@ export class Builder {
     this.config.targetCategory = category;
     this.config.outputType = OutputFileTypes.HTML;
     const fileGroup = new FileGroup(this.config, this.rawContent);
-    const files: B3File[] = await fileGroup.prepareBookTemplateContent();
+    const files: B3File[] = await fileGroup.prepareBookTemplateContent(
+      "prepared-book-" + category
+    );
     console.log(files.length);
     // console.log(files);
+    fs.mkdirp(this.config.tempFolderPath);
     for (const file of files) {
-      await this.createCategoryDirectory(
-        this.config.tempFolderPath,
-        file.category
-      );
+      file.content = await this.replaceGlobalImagePathToLocal(file.content);
       fs.writeFileSync(file.path, pageWrapperHtml(marked.parse(file.content)));
     }
   }
@@ -174,5 +176,19 @@ export class Builder {
   ): Promise<void> {
     if (ignoreList.includes(categoryName)) return;
     return fs.mkdirp(path.join(outputPath, categoryName));
+  }
+
+  async copyImageFolder(): Promise<void> {
+    await fs.copy(
+      this.config.imageFolderPath,
+      path.join(this.config.tempFolderPath, "images")
+    );
+  }
+
+  async replaceGlobalImagePathToLocal(content: string): Promise<string> {
+    return content.replace(
+      /https:\/\/raw\.githubusercontent\.com\/AndersDeath\/holy-theory\/main\/images/g,
+      path.join("./", "images")
+    );
   }
 }

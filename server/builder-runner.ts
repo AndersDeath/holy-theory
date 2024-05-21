@@ -10,13 +10,14 @@ const builder = new Builder({
   htmlOutputPath: "./static2",
   markdownOutputPath: "./markdown2",
   tempFolderPath: "./temp",
+  imageFolderPath: "./images",
 });
 
 builder
   .run({
     targets: [],
     bookSettings: {
-      categories: ["algorithms"],
+      categories: ["algorithms", "javascript", "system-design"],
     },
   })
   .then(() => {
