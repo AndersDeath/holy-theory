@@ -13,6 +13,7 @@ export interface Config {
   outputType?: string;
   targetCategory?: string;
   tempFolderPath: string;
+  imageFolderPath: string;
 }
 
 export interface B3File {

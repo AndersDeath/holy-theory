@@ -20,6 +20,7 @@ export class FileGroup {
     markdownOutputPath: "",
     targetCategory: "",
     tempFolderPath: "",
+    imageFolderPath: "",
   };
   logger: Logger = new Logger();
 
@@ -128,9 +129,11 @@ export class FileGroup {
     return files;
   }
 
-  async prepareBookTemplateContent(): Promise<B3File[]> {
+  async prepareBookTemplateContent(
+    preparedBookTemplateKey: string
+  ): Promise<B3File[]> {
     const files: B3File[] = [];
-    const preparedBookTemplateKey = "prepared-book-template";
+
     this.outputPath = this.config.tempFolderPath;
 
     if (this.config.targetCategory) {
