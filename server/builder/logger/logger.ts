@@ -1,9 +1,23 @@
 import { LOGGER_DICTIONARY } from "./logger.dictionary";
+import * as fs from "fs-extra";
 
+export interface LoggerConfig {
+  logFilePath: string;
+  consoleLog: boolean;
+}
 export class Logger {
+  logFilePath: string = "./builder3-logs.log";
+  consoleLog: boolean = false;
+
   private static instance: Logger;
 
-  constructor() {}
+  constructor(config?: any) {
+    if (config) {
+      this.logFilePath = config.logFilePath;
+      this.consoleLog = config.consoleLog;
+    }
+    this.createLogFileIfNotExists();
+  }
 
   public static getInstance(): Logger {
     if (!Logger.instance) {
@@ -25,7 +39,11 @@ export class Logger {
   }
 
   public log(message: string): void {
-    console.log("Log: " + message);
+    let messageToLog = "Log: " + message;
+    if (this.consoleLog) {
+      console.log(messageToLog);
+    }
+    this.writeToFile(messageToLog);
   }
 
   public time(message: string): void {
@@ -33,11 +51,35 @@ export class Logger {
   }
 
   public timeEnd(message: string): void {
-    console.timeEnd("Time log: " + message);
+    let messageToLog = "Time log: " + message;
+    console.timeEnd(messageToLog);
+    this.writeToFile(messageToLog);
   }
 
   public throwError(message: string): void {
-    console.error("Message: " + message);
-    throw new Error("Error: " + message);
+    let messageToLog = "Error: " + message;
+    if (this.consoleLog) {
+      console.log(messageToLog);
+    }
+    this.writeToFile(messageToLog);
+    throw new Error(messageToLog);
+  }
+
+  private getDate() {
+    return new Date().toISOString();
+  }
+
+  private async writeToFile(message: string) {
+    await fs.appendFile(
+      this.logFilePath,
+      this.getDate() + " " + message + "\n",
+      "utf8"
+    );
+  }
+
+  private async createLogFileIfNotExists() {
+    if (!fs.existsSync(this.logFilePath)) {
+      fs.writeFileSync(this.logFilePath, "", "utf8");
+    }
   }
 }
