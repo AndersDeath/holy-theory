@@ -1,6 +1,8 @@
 import express, { Express, Request, Response } from "express";
 import { spawn } from "child_process";
 import fs from "fs-extra";
+import { Builder } from "./builder/builder";
+import { Logger } from "./builder/logger/logger";
 
 const app: Express = express();
 const port = 3000;
@@ -11,23 +13,38 @@ app.get("/builder", (req: Request, res: Response) => {
   res.send(page);
 });
 
+app.get("/builder/logs", (req: Request, res: Response) => {
+  const page = fs.readFileSync("./builder3-logs.log", "utf-8");
+  res.send(page);
+})
+
 app.get("/builder/run", (req: Request, res: Response) => {
-  console.log("the builder is run");
+  const page = fs.readFileSync("./server/templates/generation-run.html", "utf-8");
+  const logger = new Logger();
+  logger.log("The Builder Runner has started!");
+  logger.time("Builder working timer");
 
-  // try {
-  //   const process = spawn(`./scripts/generate_all.sh`, []);
+  const builder = new Builder({
+    sourceRootPath: "./content",
+    htmlOutputPath: "./static2",
+    markdownOutputPath: "./markdown2",
+    tempFolderPath: "./temp",
+    imageFolderPath: "./images",
+  });
 
-  //   process.stdout.on("data", (res: any) => {
-  //     console.log("Log: " + res);
-  //   });
+  builder
+    .run({
+      targets: [],
+      bookSettings: {
+        categories: ["algorithms", "javascript", "system-design"],
+      },
+    })
+    .then(() => {
+      logger.log("The work of script finished");
+      logger.timeEnd("Builder working timer");
+    });
 
-  //   process.on("close", (code) => {
-  //     res.redirect("/builder");
-  //   });
-  // } catch (e) {
-  //   console.log(e);
-  // }
-  res.send("Test");
+  res.send(page);
 });
 
 app.listen(port, () => {
