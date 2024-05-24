@@ -5,6 +5,7 @@ All notable changes to this project will be documented in this file.
 * add image copying to Builder3 and optimize book preparation
 * extend logger for Builder3
 * move builder3 to primitive server
+* add logger page to server
 
 # [0.0.71] - 2024-05-20
 * add necessary metadata to files Builder3
