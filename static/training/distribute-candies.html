@@ -27,9 +27,9 @@
 <pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">distributeCandies</span>(<span class="hljs-params">candyType: <span class="hljs-built_in">number</span>[]</span>): <span class="hljs-built_in">number</span> {
   <span class="hljs-keyword">const</span> uniqueCandies = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Set</span>(candyType);
   <span class="hljs-keyword">const</span> maxCandies = candyType.<span class="hljs-property">length</span> / <span class="hljs-number">2</span>;
-  
+
   <span class="hljs-keyword">return</span> <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">min</span>(uniqueCandies.<span class="hljs-property">size</span>, maxCandies);
-};
+}
 </code></pre><p><strong>Solution:</strong></p>
 <p>Step-by-step breakdown of the code:</p>
 <ol>
@@ -53,6 +53,9 @@
 </ol>
 <p>Summary:</p>
 <p>The provided TypeScript code calculates the maximum number of unique candies that the sister can receive when the candies are distributed equally between her and her brother. It ensures that she receives the maximum possible unique candies without exceeding half of the total candies.</p>
+<ul>
+<li><a href="../readme.md">Go back</a></li>
+</ul>
 </div>
     </body>
     </html>

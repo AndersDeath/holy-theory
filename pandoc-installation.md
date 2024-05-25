@@ -8,3 +8,4 @@
 4. curl -sL "https://yihui.org/tinytex/install-bin-unix.sh" | sh
 5. tlmgr update --self
 6. tlmgr install framed
+7. brew install basictex
