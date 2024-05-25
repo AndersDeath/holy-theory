@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file.
 * extend logger for Builder3
 * move builder3 to primitive server
 * add logger page to server
+* update git-tools of HT
 
 # [0.0.71] - 2024-05-20
 * add necessary metadata to files Builder3
