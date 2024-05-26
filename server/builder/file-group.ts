@@ -1,5 +1,10 @@
 import * as path from "path";
-import { tableOfContentsHtml, tableOfContentsMd } from "./ui";
+import {
+  pageBreakHtml,
+  pageBreakMd,
+  tableOfContentsHtml,
+  tableOfContentsMd,
+} from "./ui";
 import { Logger } from "./logger/logger";
 
 import {
@@ -138,7 +143,9 @@ export class FileGroup {
 
     if (this.config.targetCategory) {
       this.rawContent = this.rawContent.filter(
-        (item: RawContent) => item.category === this.config.targetCategory
+        (item: RawContent) =>
+          item.category === this.config.targetCategory &&
+          item.metadata["ignore"] !== true
       );
     }
     for (const rawContent of this.rawContent) {
@@ -146,16 +153,9 @@ export class FileGroup {
 
       this.appendAggregatedContentValue(
         preparedBookTemplateKey,
-        rawContent.content
+        pageBreakMd() + "\n\r" + rawContent.content
       );
     }
-
-    this.aggregatedContent.set(
-      preparedBookTemplateKey,
-      this.generateTableOfContents(
-        this.aggregatedContent.get(preparedBookTemplateKey) || ""
-      ) + this.aggregatedContent.get(preparedBookTemplateKey)
-    );
     const aggregatedFiles = this.createAggregatedFileGroup(
       preparedBookTemplateKey
     );
