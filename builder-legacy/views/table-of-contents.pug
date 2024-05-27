@@ -1,9 +1,0 @@
-h1 #{header}
-span!=navigation
-each val in values
-  h1!= val.title
-  ul
-      each item in val.data 
-          li 
-            a(href=`${item.meta.url}`) #{item.title}
-      hr
