@@ -24,8 +24,7 @@
     </head>
     <body>
         <div class="content"><h1 id="convert-sorted-array-to-binary-search-tree">Convert Sorted Array to Binary Search Tree</h1>
-<pre><code class="hljs language-typescript">
-<span class="hljs-comment">/**
+<pre><code class="hljs language-typescript"><span class="hljs-comment">/**
  * Definition for a binary tree node.
  * class TreeNode {
  *     val: number
@@ -40,17 +39,16 @@
  */</span>
 
 <span class="hljs-keyword">function</span> <span class="hljs-title function_">sortedArrayToBST</span>(<span class="hljs-params">nums: <span class="hljs-built_in">number</span>[]</span>): <span class="hljs-title class_">TreeNode</span> | <span class="hljs-literal">null</span> {
-    <span class="hljs-keyword">return</span> <span class="hljs-title function_">helper</span>(nums, <span class="hljs-number">0</span>, nums.<span class="hljs-property">length</span> - <span class="hljs-number">1</span>);
-};
+  <span class="hljs-keyword">return</span> <span class="hljs-title function_">helper</span>(nums, <span class="hljs-number">0</span>, nums.<span class="hljs-property">length</span> - <span class="hljs-number">1</span>);
+}
 
-
-<span class="hljs-keyword">function</span> <span class="hljs-title function_">helper</span>(<span class="hljs-params">nums: <span class="hljs-built_in">number</span>[], start:<span class="hljs-built_in">number</span>, end: <span class="hljs-built_in">number</span></span>) {
-    <span class="hljs-keyword">if</span>(start &gt; end) <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;
-    <span class="hljs-keyword">let</span> mid = <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">trunc</span>((start + end) / <span class="hljs-number">2</span>);
-    <span class="hljs-keyword">let</span> node = <span class="hljs-keyword">new</span> <span class="hljs-title class_">TreeNode</span>(nums[mid]);
-    node.<span class="hljs-property">left</span> = <span class="hljs-title function_">helper</span>(nums, start, mid -<span class="hljs-number">1</span>);
-    node.<span class="hljs-property">right</span> = <span class="hljs-title function_">helper</span>(nums, mid + <span class="hljs-number">1</span>, end);
-    <span class="hljs-keyword">return</span> node
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">helper</span>(<span class="hljs-params">nums: <span class="hljs-built_in">number</span>[], start: <span class="hljs-built_in">number</span>, end: <span class="hljs-built_in">number</span></span>) {
+  <span class="hljs-keyword">if</span> (start &gt; end) <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;
+  <span class="hljs-keyword">let</span> mid = <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">trunc</span>((start + end) / <span class="hljs-number">2</span>);
+  <span class="hljs-keyword">let</span> node = <span class="hljs-keyword">new</span> <span class="hljs-title class_">TreeNode</span>(nums[mid]);
+  node.<span class="hljs-property">left</span> = <span class="hljs-title function_">helper</span>(nums, start, mid - <span class="hljs-number">1</span>);
+  node.<span class="hljs-property">right</span> = <span class="hljs-title function_">helper</span>(nums, mid + <span class="hljs-number">1</span>, end);
+  <span class="hljs-keyword">return</span> node;
 }
 </code></pre><p><strong>Solution:</strong>
 Below is the step-by-step breakdown of the code:</p>

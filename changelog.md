@@ -3,7 +3,12 @@
 All notable changes to this project will be documented in this file.
 # [0.0.72] - In progress
 * add image copying to Builder3 and optimize book preparation
-* 
+* extend logger for Builder3
+* move builder3 to primitive server
+* add logger page to server
+* update git-tools of HT
+* update content
+
 # [0.0.71] - 2024-05-20
 * add necessary metadata to files Builder3
 * add buildBookTemplate for Builder3

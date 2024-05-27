@@ -35,7 +35,8 @@
   <span class="hljs-keyword">if</span> (divisor === -<span class="hljs-number">1</span> &amp;&amp; dividend === -<span class="hljs-number">2147483648</span>) <span class="hljs-keyword">return</span> <span class="hljs-number">2147483647</span>;
   <span class="hljs-keyword">if</span> (dis === <span class="hljs-number">1</span>) <span class="hljs-keyword">return</span> divisor &gt; <span class="hljs-number">0</span> ? dividend : -dividend;
 
-  <span class="hljs-keyword">while</span> (arr[arr.<span class="hljs-property">length</span> - <span class="hljs-number">1</span>] &lt; did) arr.<span class="hljs-title function_">push</span>(arr[arr.<span class="hljs-property">length</span> - <span class="hljs-number">1</span>] + arr[arr.<span class="hljs-property">length</span> - <span class="hljs-number">1</span>]);
+  <span class="hljs-keyword">while</span> (arr[arr.<span class="hljs-property">length</span> - <span class="hljs-number">1</span>] &lt; did)
+    arr.<span class="hljs-title function_">push</span>(arr[arr.<span class="hljs-property">length</span> - <span class="hljs-number">1</span>] + arr[arr.<span class="hljs-property">length</span> - <span class="hljs-number">1</span>]);
 
   <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = arr.<span class="hljs-property">length</span> - <span class="hljs-number">1</span>; i &gt;= <span class="hljs-number">0</span>; i--) {
     <span class="hljs-keyword">if</span> (did &gt;= arr[i]) {
@@ -45,7 +46,7 @@
   }
 
   <span class="hljs-keyword">return</span> sign ? res : -res;
-};
+}
 </code></pre><p><strong>Solution:</strong></p>
 <ol>
 <li><p><strong>Get Absolute Values:</strong></p>

@@ -153,15 +153,14 @@ export class Builder {
   }
 
   async buildBookTemplate(category: string): Promise<void> {
-    this.logger.log("Build prepared Html Book Template");
+    this.logger.log("Build prepared Html Book Template " + category);
     this.config.targetCategory = category;
     this.config.outputType = OutputFileTypes.HTML;
     const fileGroup = new FileGroup(this.config, this.rawContent);
     const files: B3File[] = await fileGroup.prepareBookTemplateContent(
       "prepared-book-" + category
     );
-    console.log(files.length);
-    // console.log(files);
+
     fs.mkdirp(this.config.tempFolderPath);
     for (const file of files) {
       file.content = await this.replaceGlobalImagePathToLocal(file.content);

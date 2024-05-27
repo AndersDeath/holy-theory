@@ -1,1 +1,1 @@
-export const pageBreakMd = (type: string) => "\n\\newpage \n\n";
+export const pageBreakMd = () => "\n\\newpage \n\n";

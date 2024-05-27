@@ -2,15 +2,15 @@
 
 update_training() {
     echo "Provide a name of training:"
-    read training_name
+    read -r training_name
     git add .
     git commit -m "Update $training_name training and add explanation of solution"
 }
 
 update_readme() {
     echo "Provide a readme update:"
-    read readme_update
-    echo "$readme_update" >README.md
+    read -r readme_update
+    echo "$readme_update" > README.md
 }
 
 update_changelog() {
@@ -22,34 +22,59 @@ push_changes() {
     git push
 }
 
-while true; do
+select_option() {
     PS3='What do you want to do?: '
     options=("Update training" "Add new training" "Update readme" "Update changelog" "Update readme and changelog" "Push everything" "Commit and push everything" "Update static html and md versions" "Quit")
 
     select opt in "${options[@]}"; do
         case $opt in
-        "Update training") update_training ;;
-        "Add new training") echo "In progress" ;;
-        "Update readme") update_readme ;;
-        "Update changelog") update_changelog ;;
+        "Update training")
+            update_training
+            break
+            ;;
+        "Add new training")
+            echo "In progress"
+            break
+            ;;
+        "Update readme")
+            update_readme
+            break
+            ;;
+        "Update changelog")
+            update_changelog
+            break
+            ;;
         "Update readme and changelog")
             update_readme
             update_changelog
+            break
             ;;
-        "Push everything") push_changes ;;
+        "Push everything")
+            push_changes
+            break
+            ;;
         "Commit and push everything")
             git add .
             git commit -m "Unknown update"
             push_changes
+            break
             ;;
         "Update static html and md versions")
             git add .
             git commit -m "Update static html and md versions"
             push_changes
+            break
             ;;
-        "Quit") exit 0 ;;
-        *) echo "Invalid option: $REPLY" ;;
+        "Quit")
+            exit 0
+            ;;
+        *)
+            echo "Invalid option: $REPLY"
+            ;;
         esac
-        break
     done
+}
+
+while true; do
+    select_option
 done
