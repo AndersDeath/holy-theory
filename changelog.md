@@ -8,6 +8,7 @@ All notable changes to this project will be documented in this file.
 * add logger page to server
 * update git-tools of HT
 * update content
+* remove builder-legacy (v1)
 
 # [0.0.71] - 2024-05-20
 * add necessary metadata to files Builder3
