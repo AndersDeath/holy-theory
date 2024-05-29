@@ -3,7 +3,8 @@
 All notable changes to this project will be documented in this file.
 # [0.0.73] - In progress
 * add nodemon development setup
-
+* update UX on server
+* 
 # [0.0.72] - 2024-05-27
 * add image copying to Builder3 and optimize book preparation
 * extend logger for Builder3
