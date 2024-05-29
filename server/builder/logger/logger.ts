@@ -65,6 +65,10 @@ export class Logger {
     throw new Error(messageToLog);
   }
 
+  public async clearLogs(): Promise<void> {
+    await fs.writeFile(this.logFilePath, "", "utf8");
+  }
+
   private getDate() {
     return new Date().toISOString();
   }

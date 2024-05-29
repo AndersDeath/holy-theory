@@ -6,9 +6,9 @@ import { Logger } from "./builder/logger/logger";
 
 const app: Express = express();
 const port = 3000;
-app.use(express.static("static"));
+app.use("/static", express.static("static"));
 
-app.get("/builder", (req: Request, res: Response) => {
+app.get("/", (req: Request, res: Response) => {
   const page = fs.readFileSync("./server/templates/builder.html", "utf-8");
   res.send(page);
 });
@@ -25,6 +25,12 @@ app.get("/builder/logs", (req: Request, res: Response) => {
   const replaceKey = /put_logs_here/g;
   const output = page.replace(replaceKey, logs);
   res.send(output);
+});
+
+app.get("/builder/logs/clear", async (req: Request, res: Response) => {
+  const logger = new Logger();
+  await logger.clearLogs();
+  res.redirect("/builder/logs");
 });
 
 app.get("/builder/run", (req: Request, res: Response) => {
@@ -57,6 +63,14 @@ app.get("/builder/run", (req: Request, res: Response) => {
     });
 
   res.send(page);
+});
+
+app.get("/clear-everything", async (req: Request, res: Response) => {
+  await fs.remove("./static2");
+  await fs.remove("./markdown2");
+  await fs.remove("./temp");
+  await fs.remove("./builder3-logs.log");
+  res.redirect("/");
 });
 
 app.listen(port, () => {
