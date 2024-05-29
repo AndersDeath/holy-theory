@@ -19,19 +19,27 @@ const RunConfigDefault = {
   },
 };
 
-export class Builder {
-  parseMDLibInstance: any;
-  rawContent: RawContent[] = [];
-  config: Config;
+export class Builder3 {
+  public get targets() {
+    return ["md", "html", "book"];
+  }
 
-  logger: Logger = new Logger();
+  public get categories() {
+    return this.getCategories();
+  }
+
+  private parseMDLibInstance: any;
+  private rawContent: RawContent[] = [];
+  private config: Config;
+
+  private logger: Logger = new Logger();
 
   constructor(config: Config) {
     this.logger.log("Builder constructor is initialized");
     this.config = config;
   }
 
-  async run(runConfig: RunConfig = RunConfigDefault): Promise<void> {
+  public async run(runConfig: RunConfig = RunConfigDefault): Promise<void> {
     this.parseMDLibInstance = await this.parseMDInit();
 
     const rConf = this.runConfigResolver(runConfig);
@@ -57,7 +65,7 @@ export class Builder {
     return;
   }
 
-  async detectBookBookTemplateCategoriesAndBuild(
+  private async detectBookBookTemplateCategoriesAndBuild(
     rConf: RunConfig
   ): Promise<void> {
     const categories = rConf.bookSettings?.categories ?? [];
@@ -66,13 +74,13 @@ export class Builder {
     );
   }
 
-  runConfigResolver(runConfig: RunConfig): RunConfig {
+  private runConfigResolver(runConfig: RunConfig): RunConfig {
     runConfig.targets = runConfig.targets || [];
     runConfig.bookSettings = runConfig.bookSettings || { categories: [] };
     return runConfig;
   }
 
-  async init(): Promise<void> {
+  private async init(): Promise<void> {
     const folders: string[] = await fs.readdir(this.config.sourceRootPath);
     for (const folder of folders) {
       const folderPath: string = path.join(this.config.sourceRootPath, folder);
@@ -87,13 +95,20 @@ export class Builder {
     this.logger.log(`${this.rawContent.length} content items are parsed`);
   }
 
-  async parseMDInit(): Promise<any> {
+  private getCategories() {
+    const folders: string[] = fs.readdirSync(this.config.sourceRootPath);
+    return folders.filter((folder) =>
+      fs.statSync(path.join(this.config.sourceRootPath, folder)).isDirectory()
+    );
+  }
+
+  private async parseMDInit(): Promise<any> {
     const module = await import("parse-md");
     const parseMD = module.default;
     return parseMD;
   }
 
-  parseRawContent(category: string, file: B3File): RawContent {
+  private parseRawContent(category: string, file: B3File): RawContent {
     const { metadata, content }: any = this.parseMDLibInstance(file.content);
     return {
       category,
@@ -104,7 +119,7 @@ export class Builder {
     };
   }
 
-  async parseFolder(folderPath: string): Promise<B3File[]> {
+  private async parseFolder(folderPath: string): Promise<B3File[]> {
     const files: string[] = await fs.readdir(folderPath);
     const content: B3File[] = [];
 
@@ -126,17 +141,20 @@ export class Builder {
     return content;
   }
 
-  async buildStaticMD(): Promise<void> {
+  private async buildStaticMD(): Promise<void> {
     this.logger.log("Build static md");
     await this.buildStatic(OutputFileTypes.MD, this.config.markdownOutputPath);
   }
 
-  async buildStaticHtml(): Promise<void> {
+  private async buildStaticHtml(): Promise<void> {
     this.logger.log("Build static html");
     await this.buildStatic(OutputFileTypes.HTML, this.config.htmlOutputPath);
   }
 
-  async buildStatic(outputType: string, outputPath: string): Promise<void> {
+  private async buildStatic(
+    outputType: string,
+    outputPath: string
+  ): Promise<void> {
     this.config.outputType = outputType;
     const fileGroup = new FileGroup(this.config, this.rawContent);
     const files: B3File[] = await fileGroup.run();
@@ -152,7 +170,7 @@ export class Builder {
     }
   }
 
-  async buildBookTemplate(category: string): Promise<void> {
+  private async buildBookTemplate(category: string): Promise<void> {
     this.logger.log("Build prepared Html Book Template " + category);
     this.config.targetCategory = category;
     this.config.outputType = OutputFileTypes.HTML;
@@ -168,7 +186,7 @@ export class Builder {
     }
   }
 
-  async createCategoryDirectory(
+  private async createCategoryDirectory(
     outputPath: string,
     categoryName: string,
     ignoreList: string[] = []
@@ -177,14 +195,16 @@ export class Builder {
     return fs.mkdirp(path.join(outputPath, categoryName));
   }
 
-  async copyImageFolder(): Promise<void> {
+  private async copyImageFolder(): Promise<void> {
     await fs.copy(
       this.config.imageFolderPath,
       path.join(this.config.tempFolderPath, "images")
     );
   }
 
-  async replaceGlobalImagePathToLocal(content: string): Promise<string> {
+  private async replaceGlobalImagePathToLocal(
+    content: string
+  ): Promise<string> {
     return content.replace(
       /https:\/\/raw\.githubusercontent\.com\/AndersDeath\/holy-theory\/main\/images/g,
       path.join("./", "images")

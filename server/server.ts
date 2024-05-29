@@ -1,11 +1,20 @@
 import express, { Express, Request, Response } from "express";
 import { spawn } from "child_process";
 import fs from "fs-extra";
-import { Builder } from "./builder/builder";
+import { Builder3 } from "./builder/builder";
 import { Logger } from "./builder/logger/logger";
 
 const app: Express = express();
 const port = 3000;
+
+const B3 = new Builder3({
+  sourceRootPath: "./content",
+  htmlOutputPath: "./static2",
+  markdownOutputPath: "./markdown2",
+  tempFolderPath: "./temp",
+  imageFolderPath: "./images",
+});
+
 app.use("/static", express.static("static"));
 
 app.get("/", (req: Request, res: Response) => {
@@ -34,6 +43,15 @@ app.get("/builder/logs/clear", async (req: Request, res: Response) => {
 });
 
 app.get("/builder/run", (req: Request, res: Response) => {
+  let targets = [];
+  let categories = [];
+  if (req.query.targets) {
+    targets = req.query.targets.toString().split(",");
+  }
+  if (req.query.categories) {
+    targets = req.query.categories.toString().split(",");
+  }
+
   const page = fs.readFileSync(
     "./server/templates/generation-run.html",
     "utf-8"
@@ -42,25 +60,15 @@ app.get("/builder/run", (req: Request, res: Response) => {
   logger.log("The Builder Runner has started!");
   logger.time("Builder working timer");
 
-  const builder = new Builder({
-    sourceRootPath: "./content",
-    htmlOutputPath: "./static2",
-    markdownOutputPath: "./markdown2",
-    tempFolderPath: "./temp",
-    imageFolderPath: "./images",
+  B3.run({
+    targets,
+    bookSettings: {
+      categories,
+    },
+  }).then(() => {
+    logger.log("The work of script finished");
+    logger.timeEnd("Builder working timer");
   });
-
-  builder
-    .run({
-      targets: [],
-      bookSettings: {
-        categories: ["algorithms", "javascript", "system-design"],
-      },
-    })
-    .then(() => {
-      logger.log("The work of script finished");
-      logger.timeEnd("Builder working timer");
-    });
 
   res.send(page);
 });
