@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file.
 * update UX on server
 * update server of Builder3
 * start working on pandoc executer for Builder3
+* create Builder3 File System helper
 
 # [0.0.72] - 2024-05-27
 * add image copying to Builder3 and optimize book preparation
