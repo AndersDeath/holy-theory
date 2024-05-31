@@ -11,6 +11,7 @@ import { pageWrapperHtml } from "./ui/page-wrapper.html";
 import { FileGroup } from "./file-group";
 import { marked } from "./libs/marked";
 import { Logger } from "./logger/logger";
+import { Builder3FS } from "./builder-fs";
 
 const RunConfigDefault = {
   targets: [],
@@ -33,6 +34,8 @@ export class Builder3 {
   private config: Config;
 
   private logger: Logger = new Logger();
+
+  private b3fs = new Builder3FS();
 
   constructor(config: Config) {
     this.logger.log("Builder constructor is initialized");
@@ -160,7 +163,7 @@ export class Builder3 {
     const files: B3File[] = await fileGroup.run();
 
     for (const file of files) {
-      await this.createCategoryDirectory(outputPath, file.category, ["all"]);
+      await this.b3fs.createCategoryDirectory(outputPath, file.category, ["all"]);
       fs.writeFileSync(
         file.path,
         this.config.outputType === OutputFileTypes.HTML
@@ -184,15 +187,6 @@ export class Builder3 {
       file.content = await this.replaceGlobalImagePathToLocal(file.content);
       fs.writeFileSync(file.path, pageWrapperHtml(marked.parse(file.content)));
     }
-  }
-
-  private async createCategoryDirectory(
-    outputPath: string,
-    categoryName: string,
-    ignoreList: string[] = []
-  ): Promise<void> {
-    if (ignoreList.includes(categoryName)) return;
-    return fs.mkdirp(path.join(outputPath, categoryName));
   }
 
   private async copyImageFolder(): Promise<void> {
