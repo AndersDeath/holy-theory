@@ -1,6 +1,6 @@
 {
-  "watch": ["server"],
+  "watch": ["builder3Server"],
   "ext": "ts,json,html",
-  "ignore": ["server/**/*.spec.ts"],
-  "exec": "ts-node ./server/server.ts"
+  "ignore": ["builder3Server/**/*.spec.ts"],
+  "exec": "ts-node ./builder3Server/index.ts"
 }
