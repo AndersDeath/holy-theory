@@ -12,6 +12,7 @@ import { FileGroup } from "./file-group";
 import { marked } from "./libs/marked";
 import { Logger } from "./logger/logger";
 import { Builder3FS } from "./builder-fs";
+import { Pandoc } from "./pandoc";
 
 const RunConfigDefault = {
   targets: [],
@@ -37,6 +38,8 @@ export class Builder3 {
 
   private b3fs = new Builder3FS();
 
+  private pandoc = new Pandoc();
+
   constructor(config: Config) {
     this.logger.log("Builder constructor is initialized");
     this.config = config;
@@ -54,6 +57,7 @@ export class Builder3 {
       await this.buildStaticMD();
       await this.detectBookBookTemplateCategoriesAndBuild(rConf);
       await this.copyImageFolder();
+      await this.buildBookPdf(rConf);
       return;
     }
 
@@ -64,6 +68,7 @@ export class Builder3 {
     if (rConf.targets && rConf.targets.includes("book")) {
       await this.detectBookBookTemplateCategoriesAndBuild(rConf);
       await this.copyImageFolder();
+      await this.buildBookPdf(rConf);
     }
     return;
   }
@@ -163,7 +168,9 @@ export class Builder3 {
     const files: B3File[] = await fileGroup.run();
 
     for (const file of files) {
-      await this.b3fs.createCategoryDirectory(outputPath, file.category, ["all"]);
+      await this.b3fs.createCategoryDirectory(outputPath, file.category, [
+        "all",
+      ]);
       fs.writeFileSync(
         file.path,
         this.config.outputType === OutputFileTypes.HTML
@@ -187,6 +194,11 @@ export class Builder3 {
       file.content = await this.replaceGlobalImagePathToLocal(file.content);
       fs.writeFileSync(file.path, pageWrapperHtml(marked.parse(file.content)));
     }
+  }
+
+  private async buildBookPdf(rConf: RunConfig): Promise<void> {
+    console.log(rConf);
+    // this.pandoc.generate();
   }
 
   private async copyImageFolder(): Promise<void> {

@@ -18,12 +18,12 @@ const B3 = new Builder3({
 app.use("/static", express.static("static"));
 
 app.get("/", (req: Request, res: Response) => {
-  const page = fs.readFileSync("./server/templates/builder.html", "utf-8");
+  const page = fs.readFileSync("./builder3Server/templates/builder.html", "utf-8");
   res.send(page);
 });
 
 app.get("/builder/logs", (req: Request, res: Response) => {
-  const page = fs.readFileSync("./server/templates/logs.html", "utf-8");
+  const page = fs.readFileSync("./builder3Server/templates/logs.html", "utf-8");
   const logFile = fs.readFileSync("./builder3-logs.log", "utf-8");
   let logs = "<div>";
   logFile.split("\n").forEach((element) => {
@@ -53,7 +53,7 @@ app.get("/builder/run", (req: Request, res: Response) => {
   }
 
   const page = fs.readFileSync(
-    "./server/templates/generation-run.html",
+    "./builder3Server/templates/generation-run.html",
     "utf-8"
   );
   const logger = new Logger();
