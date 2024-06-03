@@ -1,7 +1,10 @@
 # Changelog
 
 All notable changes to this project will be documented in this file.
-# [0.0.73] - In progress
+
+# [0.0.74] - In progress
+
+# [0.0.73] - 2024-06-03
 * add nodemon development setup
 * update UX on server
 * update server of Builder3
