@@ -1,8 +1,9 @@
-import express, { Express, Request, Response } from "express";
+import express, { Request, Response } from "express";
 import fs from "fs-extra";
 
 import { Builder3 } from "../builder/builder";
 import { Logger } from "../builder/logger/logger";
+import { indexController } from "./controllers/index.controller";
 
 export const routesInit = (app: any) => {
 
@@ -17,8 +18,7 @@ export const routesInit = (app: any) => {
     app.use("/static", express.static("static"));
 
     app.get("/", (req: Request, res: Response) => {
-        const page = fs.readFileSync("./builder3Server/templates/builder.html", "utf-8");
-        res.send(page);
+        indexController(req, res)
     });
 
     app.get("/builder/logs", (req: Request, res: Response) => {
