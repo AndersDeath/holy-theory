@@ -20,8 +20,11 @@ export const builderRunController = {
             targets = req.query.targets.toString().split(",");
         }
         if (req.query.categories) {
-            targets = req.query.categories.toString().split(",");
+            categories = req.query.categories.toString().split(",");
         }
+
+        console.log(targets)
+        console.log(categories)
 
         const page = fs.readFileSync(
             "./builder3Server/templates/generation-run.html",

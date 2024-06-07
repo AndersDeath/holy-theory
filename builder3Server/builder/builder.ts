@@ -198,7 +198,14 @@ export class Builder3 {
 
   private async buildBookPdf(rConf: RunConfig): Promise<void> {
     console.log(rConf);
-    // this.pandoc.generate();
+    // http://localhost:3000/builder/run?categories=algorithms&targets=html,book debugging url
+    const config = {
+      inputPath: "temp/prepared-book-algorithms.html",
+      outputPath: "temp/output_from_html_algorithms.pdf",
+      isTableOfContents: true,
+      metadataFile: "meta/handbook_algorithms.yaml",
+    }
+    this.pandoc.generate(config);
   }
 
   private async copyImageFolder(): Promise<void> {
