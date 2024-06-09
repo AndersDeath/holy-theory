@@ -21,11 +21,14 @@
 <body>
   <h1>Builder3</h1>
   <form action="/builder/run">
-    <ul>
-      <% categories.forEach((item) => { %>
-        <li><%= item %></li>
-      <% }) %>
-    </ul>
+    <h3>Categories: </h3>
+    <% categories.forEach((item) => { %>
+    <input type="checkbox" name="categories" value="<%= item %>" /><%= item %> <br>
+    <% }) %>
+    <h3>Targets: </h3>
+    <% targets.forEach((item) => { %>
+    <input type="checkbox" name="targets" value="<%= item %>" /><%= item %> <br>
+    <% }) %>
 
     <button type="submit">Generate</button>
   </form>
