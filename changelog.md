@@ -1,8 +1,12 @@
 # Changelog
 
 All notable changes to this project will be documented in this file.
+# [0.0.75] - In progress
 
-# [0.0.74] - In progress
+# [0.0.74] - 2024-06-10
+* add controllers concept to server
+* update pandoc executor
+* migrate to ejs for server templates
 
 # [0.0.73] - 2024-06-03
 * add nodemon development setup
