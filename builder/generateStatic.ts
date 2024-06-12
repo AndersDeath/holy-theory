@@ -160,9 +160,9 @@ export const generateStatic = async (
     [path.join(outputFolder, "prepared_all." + type), preparedAllProjectOutput],
     [
       path.join(outputFolder, "prepared_all_algorithms." + type),
-      preparedAlgorithmsProjectOutput,
+      preparedAlgorithmsProjectOutput
     ],
-    [path.join(outputFolder, "all." + type), allProject.export()],
+    [path.join(outputFolder, "all." + type), allProject.export()]
   ];
 
   for (let index = 0; index < outputBucket.length; index++) {
