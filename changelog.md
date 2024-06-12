@@ -2,6 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 # [0.0.75] - In progress
+* add prettier and eslint settings
 
 # [0.0.74] - 2024-06-10
 * add controllers concept to server
