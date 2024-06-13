@@ -5,7 +5,7 @@ import {
   B3File,
   RawContent,
   OutputFileTypes,
-  RunConfig,
+  RunConfig
 } from "./models/interfaces";
 import { pageWrapperHtml } from "./ui/page-wrapper.html";
 import { FileGroup } from "./file-group";
@@ -17,8 +17,8 @@ import { Pandoc } from "./pandoc";
 const RunConfigDefault = {
   targets: [],
   bookSettings: {
-    categories: [],
-  },
+    categories: []
+  }
 };
 
 export class Builder3 {
@@ -123,7 +123,7 @@ export class Builder3 {
       metadata,
       content,
       folderPath: "",
-      fileName: file.name,
+      fileName: file.name
     };
   }
 
@@ -141,7 +141,7 @@ export class Builder3 {
           category: file,
           path: filePath,
           sort: 0,
-          ignore: false,
+          ignore: false
         });
       }
     }
@@ -169,7 +169,7 @@ export class Builder3 {
 
     for (const file of files) {
       await this.b3fs.createCategoryDirectory(outputPath, file.category, [
-        "all",
+        "all"
       ]);
       fs.writeFileSync(
         file.path,
@@ -203,8 +203,8 @@ export class Builder3 {
       inputPath: "temp/prepared-book-algorithms.html",
       outputPath: "temp/output_from_html_algorithms.pdf",
       isTableOfContents: true,
-      metadataFile: "meta/handbook_algorithms.yaml",
-    }
+      metadataFile: "meta/handbook_algorithms.yaml"
+    };
     this.pandoc.generate(config);
   }
 

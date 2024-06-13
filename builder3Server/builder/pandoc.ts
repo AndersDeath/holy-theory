@@ -7,8 +7,10 @@ interface PandocInput {
   metadataFile?: string;
   isTableOfContents?: boolean;
 }
+
 export class Pandoc {
-  constructor() {}
+  constructor() {
+  }
 
   async generate(input: PandocInput) {
     const cmd = this.createCommand(input);
