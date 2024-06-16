@@ -5,6 +5,7 @@ import { B3 } from "../b3";
 
 export const builderRunController = {
   route: "/builder/run",
+  method: 'GET',
   controller: async (req: Request, res: Response): Promise<void> => {
     let targets: string[] = [];
     let categories: string[] = [];
