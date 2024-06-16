@@ -6,8 +6,8 @@ import { B3 } from "../b3";
 export const builderRunController = {
   route: "/builder/run",
   controller: async (req: Request, res: Response): Promise<void> => {
-    let targets = [];
-    let categories = [];
+    let targets: string[] = [];
+    let categories: string[] = [];
     if (req.query.targets) {
       targets = req.query.targets.toString().split(",");
     }
@@ -22,7 +22,7 @@ export const builderRunController = {
       "./builder3Server/templates/generation-run.html",
       "utf-8"
     );
-    const logger = new Logger();
+    const logger: Logger = new Logger();
     logger.log("The Builder Runner has started!");
     logger.time("Builder working timer");
 
@@ -31,7 +31,7 @@ export const builderRunController = {
       bookSettings: {
         categories
       }
-    }).then(() => {
+    }).then((): void => {
       logger.log("The work of script finished");
       logger.timeEnd("Builder working timer");
     });

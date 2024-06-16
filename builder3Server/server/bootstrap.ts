@@ -5,27 +5,27 @@ import { builderLogsClearController } from "./controllers/builderLogsClear.contr
 import { builderRunController } from "./controllers/builderRun.controller";
 import { clearEverythingController } from "./controllers/clearEverything.controller";
 
-export const routesInit = (app: any) => {
+export const routesInit = (app: any): void => {
 
   app.use("/static", express.static("static"));
 
-  app.get(indexController.route, (req: Request, res: Response) => {
+  app.get(indexController.route, (req: Request, res: Response): void => {
     indexController.controller(req, res);
   });
 
-  app.get(builderLogsController.route, (req: Request, res: Response) => {
+  app.get(builderLogsController.route, (req: Request, res: Response): void => {
     builderLogsController.controller(req, res);
   });
 
-  app.get(builderLogsClearController.route, async (req: Request, res: Response) => {
+  app.get(builderLogsClearController.route, async (req: Request, res: Response): Promise<void> => {
     await builderLogsClearController.controller(req, res);
   });
 
-  app.get(builderRunController.route, (req: Request, res: Response) => {
+  app.get(builderRunController.route, (req: Request, res: Response): void => {
     builderRunController.controller(req, res);
   });
 
-  app.get(clearEverythingController.route, async (req: Request, res: Response) => {
+  app.get(clearEverythingController.route, async (req: Request, res: Response): Promise<void> => {
     await clearEverythingController.controller(req, res);
   });
 
