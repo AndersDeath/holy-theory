@@ -1,12 +1,13 @@
-import fs from "fs-extra";
 import { Request, Response } from "express";
 import { Logger } from "../../builder/logger/logger";
+import { Controller } from "../models/controller.model";
 
-export const builderLogsClearController = {
-    route: "/builder/logs/clear",
-    controller: async (req: Request, res: Response) => {
-        const logger = new Logger();
-        await logger.clearLogs();
-        res.redirect("/builder/logs")
-    }
-}
+export const builderLogsClearController: Controller = {
+  route: "/builder/logs/clear",
+  method: 'GET',
+  controller: async (req: Request, res: Response): Promise<void> => {
+    const logger: Logger = new Logger();
+    await logger.clearLogs();
+    res.redirect("/builder/logs");
+  }
+};

@@ -3,7 +3,7 @@ import {
   pageBreakHtml,
   pageBreakMd,
   tableOfContentsHtml,
-  tableOfContentsMd,
+  tableOfContentsMd
 } from "./ui";
 import { Logger } from "./logger/logger";
 
@@ -11,7 +11,7 @@ import {
   B3File,
   Config,
   OutputFileTypes,
-  RawContent,
+  RawContent
 } from "./models/interfaces";
 
 export class FileGroup {
@@ -25,7 +25,7 @@ export class FileGroup {
     markdownOutputPath: "",
     targetCategory: "",
     tempFolderPath: "",
-    imageFolderPath: "",
+    imageFolderPath: ""
   };
   logger: Logger = new Logger();
 
@@ -73,7 +73,7 @@ export class FileGroup {
       category: rawContent.category,
       name: rawContent.metadata.title || "",
       sort: rawContent.metadata.sort || 0,
-      ignore: rawContent.metadata.ignore || false,
+      ignore: rawContent.metadata.ignore || false
     };
   }
 
@@ -87,17 +87,17 @@ export class FileGroup {
         key === groupName
           ? path.join(this.outputPath, groupName + "." + this.config.outputType)
           : path.join(
-              this.outputPath,
-              key,
-              groupName + "." + this.config.outputType
-            );
+            this.outputPath,
+            key,
+            groupName + "." + this.config.outputType
+          );
       files.push({
         path: filePath,
         content: contentAggregationFromMap[key],
         category: key,
         name: groupName,
         sort: 0,
-        ignore: false,
+        ignore: false
       });
     });
     return files;
@@ -127,7 +127,7 @@ export class FileGroup {
     this.aggregatedContent.set(
       allKey,
       this.generateTableOfContents(this.aggregatedContent.get(allKey) || "") +
-        this.aggregatedContent.get(allKey)
+      this.aggregatedContent.get(allKey)
     );
     const aggregatedFiles = this.createAggregatedFileGroup(allKey);
     files.push(...aggregatedFiles);

@@ -2,7 +2,8 @@ import * as fs from "fs-extra";
 import * as path from "path";
 
 export class Builder3FS {
-  constructor() {}
+  constructor() {
+  }
 
   public async createCategoryDirectory(
     outputPath: string,

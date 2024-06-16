@@ -1,19 +1,23 @@
 import fs from "fs-extra";
 import { Request, Response } from "express";
+import { Controller } from "../models/controller.model";
 
-export const builderLogsController = {
-    route: "/builder/logs",
-    controller: (req: Request, res: Response) => {
-        const page = fs.readFileSync("./builder3Server/templates/logs.html", "utf-8");
-        const logFile = fs.readFileSync("./builder3-logs.log", "utf-8");
-        let logs = "<div>";
-        logFile.split("\n").forEach((element) => {
-            logs += element + "</br>";
-        });
-        logs += "</div>";
+export const builderLogsController: Controller = {
+  route: "/builder/logs",
+  method: "GET",
+  controller: async (req: Request, res: Response): Promise<void> => {
+    try {
+      const [page, logFile] = await Promise.all([
+        fs.readFile("./builder3Server/templates/logs.html", "utf-8"),
+        fs.readFile("./builder3-logs.log", "utf-8")
+      ]);
 
-        const replaceKey = /put_logs_here/g;
-        const output = page.replace(replaceKey, logs);
-        res.send(output);
+      const logs: string = `<div>${logFile.split("\n").join("</br>")}</div>`;
+      const output = page.replace(/put_logs_here/g, logs);
+
+      res.send(output);
+    } catch (error) {
+      res.status(500).send("Error reading log files.");
     }
-}
+  }
+};
