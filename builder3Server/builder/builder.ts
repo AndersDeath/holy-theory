@@ -22,27 +22,24 @@ const RunConfigDefault = {
 };
 
 export class Builder3 {
+  private parseMDLibInstance: any;
+  private rawContent: RawContent[] = [];
+  private config: Config;
+  private logger: Logger = new Logger();
+  private b3fs: Builder3FS = new Builder3FS();
+  private pandoc: Pandoc = new Pandoc();
+
+  constructor(config: Config) {
+    this.logger.log("Builder constructor is initialized");
+    this.config = config;
+  }
+
   public get targets() {
     return ["md", "html", "book"];
   }
 
   public get categories() {
     return this.getCategories();
-  }
-
-  private parseMDLibInstance: any;
-  private rawContent: RawContent[] = [];
-  private config: Config;
-
-  private logger: Logger = new Logger();
-
-  private b3fs = new Builder3FS();
-
-  private pandoc = new Pandoc();
-
-  constructor(config: Config) {
-    this.logger.log("Builder constructor is initialized");
-    this.config = config;
   }
 
   public async run(runConfig: RunConfig = RunConfigDefault): Promise<void> {

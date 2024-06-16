@@ -3,7 +3,7 @@ import { Request, Response } from "express";
 
 export const clearEverythingController = {
   route: "/clear-everything",
-  controller: async (req: Request, res: Response) => {
+  controller: async (req: Request, res: Response): Promise<void> => {
     await fs.remove("./static2");
     await fs.remove("./markdown2");
     await fs.remove("./temp");
