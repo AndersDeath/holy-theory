@@ -1,7 +1,8 @@
 import { Request, Response } from "express";
 import { B3 } from "../b3";
+import { Controller } from "../models/controller.model";
 
-export const indexController = {
+export const indexController: Controller = {
   route: "/",
   method: "GET",
   controller: async (req: Request, res: Response): Promise<void> => {

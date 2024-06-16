@@ -3,6 +3,7 @@ import { builderLogsClearController } from "./builderLogsClear.controller";
 import { builderRunController } from "./builderRun.controller";
 import { builderLogsController } from "./builderLogs.controller";
 import { clearEverythingController } from "./clearEverything.controller";
+import { Controller } from "../models/controller.model";
 
 export {
   indexController,
@@ -12,7 +13,7 @@ export {
   clearEverythingController
 };
 
-export const Controllers = [
+export const Controllers: Controller[] = [
   indexController,
   builderLogsClearController,
   builderRunController,

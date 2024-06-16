@@ -2,8 +2,9 @@ import fs from "fs-extra";
 import { Request, Response } from "express";
 import { Logger } from "../../builder/logger/logger";
 import { B3 } from "../b3";
+import { Controller } from "../models/controller.model";
 
-export const builderRunController = {
+export const builderRunController: Controller = {
   route: "/builder/run",
   method: 'GET',
   controller: async (req: Request, res: Response): Promise<void> => {

@@ -1,9 +1,10 @@
 import fs from "fs-extra";
 import { Request, Response } from "express";
+import { Controller } from "../models/controller.model";
 
-export const builderLogsController = {
+export const builderLogsController: Controller = {
   route: "/builder/logs",
-  method: 'GET',
+  method: "GET",
   controller: async (req: Request, res: Response): Promise<void> => {
     try {
       const [page, logFile] = await Promise.all([
