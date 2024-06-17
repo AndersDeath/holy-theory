@@ -13,6 +13,7 @@ import { marked } from "./libs/marked";
 import { Logger } from "./logger/logger";
 import { Builder3FS } from "./builder-fs";
 import { Pandoc } from "./pandoc";
+import { pageBreakHtml } from "./ui";
 
 const RunConfigDefault = {
   targets: [],
@@ -189,20 +190,27 @@ export class Builder3 {
     fs.mkdirp(this.config.tempFolderPath);
     for (const file of files) {
       file.content = await this.replaceGlobalImagePathToLocal(file.content);
+      file.content = await this.replaceMarkdownPageBreakToHtml(file.content);
       fs.writeFileSync(file.path, pageWrapperHtml(marked.parse(file.content)));
     }
   }
 
   private async buildBookPdf(rConf: RunConfig): Promise<void> {
-    console.log(rConf);
     // http://localhost:3000/builder/run?categories=algorithms&targets=html,book debugging url
-    const config = {
-      inputPath: "temp/prepared-book-algorithms.html",
-      outputPath: "temp/output_from_html_algorithms.pdf",
-      isTableOfContents: true,
-      metadataFile: "meta/handbook_algorithms.yaml"
-    };
-    this.pandoc.generate(config);
+    if (rConf.bookSettings.categories.length > 0) {
+      rConf.bookSettings.categories.forEach((category: string): void => {
+        const config = {
+          inputPath: `temp/prepared-book-${category}.html`,
+          outputPath: `temp/output_from_html_${category}.pdf`,
+          isTableOfContents: true,
+          metadataFile: "meta/handbook_algorithms.yaml"
+        };
+        this.pandoc.generate(config);
+      });
+    } else {
+      this.logger.throwError("There are not categories in request");
+    }
+
   }
 
   private async copyImageFolder(): Promise<void> {
@@ -218,6 +226,15 @@ export class Builder3 {
     return content.replace(
       /https:\/\/raw\.githubusercontent\.com\/AndersDeath\/holy-theory\/main\/images/g,
       path.join("./", "images")
+    );
+  }
+
+  private async replaceMarkdownPageBreakToHtml(
+    content: string
+  ): Promise<string> {
+    return content.replace(
+      /\\newpage/g,
+      path.join("./", pageBreakHtml())
     );
   }
 }
