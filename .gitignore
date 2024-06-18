@@ -8,3 +8,4 @@ node_modules/
 dist
 .vscode/*
 .idea
+builder3-logs.log
