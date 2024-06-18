@@ -1,10 +1,9 @@
-export const pageWrapperHtml = (content: string, meta?: any) => {
+export const pageWrapperHtml = (content: string) => {
   return `<!DOCTYPE html>
       <html lang="en">
       <head>
           <meta charset="UTF-8">
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <title>${meta?.title || "Holy Theory"}</title>
           <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/monokai.min.css" />
           <script type="application/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
           <style>

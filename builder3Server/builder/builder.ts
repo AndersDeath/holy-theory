@@ -199,11 +199,12 @@ export class Builder3 {
     // http://localhost:3000/builder/run?categories=algorithms&targets=html,book debugging url
     if (rConf.bookSettings.categories.length > 0) {
       rConf.bookSettings.categories.forEach((category: string): void => {
+        console.log(category)
         const config = {
           inputPath: `temp/prepared-book-${category}.html`,
           outputPath: `temp/output_from_html_${category}.pdf`,
           isTableOfContents: true,
-          metadataFile: "meta/handbook_algorithms.yaml"
+          metadataFile: `content/${category}/pandoc-config.yaml`
         };
         this.pandoc.generate(config);
       });
