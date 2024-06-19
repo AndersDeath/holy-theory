@@ -21,10 +21,10 @@ export class Pandoc {
 
   createCommand(input: PandocInput): string {
     return `pandoc ${input.inputPath} -o ${input.outputPath} ${
-      input.isTableOfContents ? "--table-of-contents" : ""
+      input.isTableOfContents ? "--table-of-contents " : ""
     } ${
       input.metadataFile ? `--metadata-file=${input.metadataFile}` : ""
-    } -V geometry:margin=1in --highlight-style tango`;
+    }   -V margin-top=0mm -V margin-right=0mm -V margin-bottom=0mm -V margin-left=0mm --dpi=300 --highlight-style tango --pdf-engine=wkhtmltopdf`;
   }
 }
 
