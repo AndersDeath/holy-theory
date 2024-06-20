@@ -8,7 +8,7 @@ export const pageWrapperHtml = (content: string) => {
           <script type="application/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
           <style>
           body {
-            margin: 0;
+                margin: 0;
                 padding: 0;
             }
     
@@ -17,8 +17,19 @@ export const pageWrapperHtml = (content: string) => {
             }
     
             .content {
-              width: 60%;
+              width: 100%;
               margin: 0 auto;
+            }
+            
+            @media print {
+              @page {
+                margin: 0;
+              }
+              
+              body {
+              margin: 20mm;
+              }
+         
             }
           </style>
       </head>
