@@ -181,7 +181,7 @@ export class Builder3 {
   private async buildBookTemplate(category: string): Promise<void> {
     this.logger.log("Build prepared Html Book Template " + category);
     this.config.targetCategory = category;
-    this.config.outputType = OutputFileTypes.HTML;
+    this.config.outputType = OutputFileTypes.MD;
     const fileGroup = new FileGroup(this.config, this.rawContent);
     const files: B3File[] = await fileGroup.prepareBookTemplateContent(
       "prepared-book-" + category
@@ -190,8 +190,8 @@ export class Builder3 {
     fs.mkdirp(this.config.tempFolderPath);
     for (const file of files) {
       file.content = await this.replaceGlobalImagePathToLocal(file.content);
-      file.content = await this.replaceMarkdownPageBreakToHtml(file.content);
-      fs.writeFileSync(file.path, pageWrapperHtml(marked.parse(file.content)));
+      // file.content = await this.replaceMarkdownPageBreakToHtml(file.content);
+      fs.writeFileSync(file.path, file.content);
     }
   }
 
@@ -201,7 +201,7 @@ export class Builder3 {
       rConf.bookSettings.categories.forEach((category: string): void => {
         console.log(category)
         const config = {
-          inputPath: `temp/prepared-book-${category}.html`,
+          inputPath: `temp/prepared-book-${category}.md`,
           outputPath: `temp/output_from_html_${category}.pdf`,
           isTableOfContents: true,
           metadataFile: `content/${category}/pandoc-config.yaml`

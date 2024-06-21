@@ -10,6 +10,7 @@ export const pageWrapperHtml = (content: string) => {
           body {
                 margin: 0;
                 padding: 0;
+                width: 100vw;
             }
     
             img {
@@ -17,20 +18,31 @@ export const pageWrapperHtml = (content: string) => {
             }
     
             .content {
-              width: 100%;
+             width: 100vw;
               margin: 0 auto;
             }
             
             @media print {
-              @page {
-                margin: 0;
-              }
-              
-              body {
-              margin: 20mm;
-              }
-         
+           @page {
+                size: A4 landscape;
+                margin: 1cm;
             }
+            body {
+                font-size: 12pt;
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+           .content {
+                transform: scale(0.75);
+                transform-origin: top left;
+                width: 100%;
+                height: 100%;
+            }
+        }
+            }
+            
           </style>
       </head>
       <body>

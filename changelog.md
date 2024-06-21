@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file.
 * add installation documentation
 * add support of pandoc metadata
 * add wkhtmltopdf support
+* fix bug of support latex formulas
 
 # [0.0.74] - 2024-06-10
 * add controllers concept to server

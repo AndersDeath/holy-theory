@@ -29,15 +29,15 @@ Ternary Search is a divide-and-conquer algorithm designed for efficiently findin
 
 **Implementation**: Ternary search can be implemented recursively or iteratively. The recursive implementation is straightforward and elegant, but it might suffer from stack overflow for large input sizes. The iterative implementation, on the other hand, is more efficient in terms of space.
 
-// **Mid-Point Calculation**: In each iteration, ternary search calculates two mid-points (m1 and m2) to divide the search space into three equal parts. The value of the mid-points is calculated as follows: \(m1 = \text{start} + \frac{\text{end} - \text{start}}{3}\) and \(m2 = \text{end} - \frac{\text{end} - \text{start}}{3}\).n.
+**Mid-Point Calculation**: In each iteration, ternary search calculates two mid-points (m1 and m2) to divide the search space into three equal parts. The value of the mid-points is calculated as follows: $m1 = \text{start} + \frac{\text{end} - \text{start}}{3}$ and $m2 = \text{end} - \frac{\text{end} - \text{start}}{3}$.n.
 
-// **Space Complexity**: Ternary search has a space complexity of \(O(1)\) since it does not require any extra space proportional to the input size beyond a few variables used for indices and comparison values.
+**Space Complexity**: Ternary search has a space complexity of $O(1)$ since it does not require any extra space proportional to the input size beyond a few variables used for indices and comparison values.
 
 ## Applications:
 
 **Finding Local Extrema**: Ternary search is commonly used to find the maximum or minimum value of a unimodal function over a given interval. This application arises in various fields such as optimization problems, mathematical modeling, and computer graphics.
 
-// **Finding a Peak in Peak Finding Problem**: In a 1D peak finding problem where a peak is defined as an element greater than or equal to its neighbors, ternary search can efficiently locate a peak in \(O(\log_3{n})\) time complexity, where \(n\) is the size of the array.
+**Finding a Peak in Peak Finding Problem**: In a 1D peak finding problem where a peak is defined as an element greater than or equal to its neighbors, ternary search can efficiently locate a peak in $O(\log_3{n})$ time complexity, where $n$ is the size of the array.
 
 **Optimizing Functions**: Ternary search can be applied in optimization problems where a function needs to be optimized within a certain range. For example, in numerical methods like Newton's one or gradient descent, the algorithm can help refine the search for the optimal solution.
 

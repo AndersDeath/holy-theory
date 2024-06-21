@@ -14,6 +14,7 @@ export class Pandoc {
 
   async generate(input: PandocInput) {
     const cmd = this.createCommand(input);
+    console.log(cmd)
     const { stdout, stderr } = await exec(cmd);
     console.log("stdout:", stdout);
     console.log("stderr:", stderr);
@@ -24,7 +25,7 @@ export class Pandoc {
       input.isTableOfContents ? "--table-of-contents " : ""
     } ${
       input.metadataFile ? `--metadata-file=${input.metadataFile}` : ""
-    }   -V margin-top=0mm -V margin-right=0mm -V margin-bottom=0mm -V margin-left=0mm --dpi=300 --highlight-style tango --pdf-engine=wkhtmltopdf`;
+    }  -V geometry:margin=1in  --highlight-style tango  `;
   }
 }
 
