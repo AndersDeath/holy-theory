@@ -25,7 +25,7 @@ export class Pandoc {
       input.isTableOfContents ? "--table-of-contents " : ""
     } ${
       input.metadataFile ? `--metadata-file=${input.metadataFile}` : ""
-    }  -V geometry:margin=1in  --highlight-style tango  `;
+    }  -V geometry:margin=1in  --highlight-style pygments  `;
   }
 }
 
