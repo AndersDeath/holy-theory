@@ -1,4 +1,6 @@
-title:  'Algorithms Handbook'
-author:
-  - Vladimir Bolshakov
+title:  "Algorithms Handbook"
+author: "Vladimir Bolshakov"
+date: "2024-06-22"
 keywords: [book, algorithms]
+include-before:
+  - '`\newpage{}`{=latex}'
