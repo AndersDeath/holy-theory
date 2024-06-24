@@ -21,17 +21,9 @@ export class Pandoc {
 
   createCommand(input: PandocInput): string {
     return `pandoc ${input.inputPath} -o ${input.outputPath} ${
-      input.isTableOfContents ? "--table-of-contents" : ""
+      input.isTableOfContents ? "--toc --toc-depth=1 " : ""
     } ${
-      input.metadataFile ? `--metadata-file=${input.metadataFile}` : ""
-    } -V geometry:margin=1in --highlight-style tango`;
+      input.metadataFile ? ` --metadata-file=${input.metadataFile}` : ""
+    }  -V geometry:margin=1in --highlight-style pygments  `;
   }
 }
-
-// const pandoc = new Pandoc();
-// pandoc.generate({
-//   inputPath: "static/prepared_all_algorithms.html",
-//   outputPath: "pdf/output_from_html_algorithms.pdf",
-//   isTableOfContents: true,
-//   metadataFile: "meta/handbook_algorithms.yaml",
-// });

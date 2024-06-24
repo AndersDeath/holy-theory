@@ -29,15 +29,14 @@ Interpolation Search is a an algorithm designed for finding a specific target va
 
 **Calculation of Position**: The estimated position of the target value is calculated using interpolation formula, which typically involves linear interpolation. However, other interpolation techniques such as quadratic or exponential interpolation can also be used depending on the nature of the data.
 
-// **Complexity**: The time complexity of interpolation search is \(O(\log \log n)\) on average, where \(n\) is the number of elements in the array. This complexity is better than binary search in certain scenarios, especially when the elements are uniformly distributed.
+**Complexity**: The time complexity of interpolation search is $O(\log \log n)$ on average, where $n$ is the number of elements in the array. This complexity is better than binary search in certain scenarios, especially when the elements are uniformly distributed.
 
-// **Worst-case Scenario**: While interpolation search generally performs well, it can degrade to \(O(n)\) time complexity in the worst-case scenario, particularly when the distribution of values in the array is highly skewed or uneven.
+**Worst-case Scenario**: While interpolation search generally performs well, it can degrade to $O(n)$ time complexity in the worst-case scenario, particularly when the distribution of values in the array is highly skewed or uneven.
 
 **Handling Non-uniform Distributions**: Interpolation search is particularly effective when the values in the array are uniformly distributed. However, in cases where the distribution is non-uniform, interpolation search may not provide significant advantages over other search algorithms like binary search.
 
 **Implementation**: Interpolation search can be implemented recursively or iteratively. Iterative implementation is often preferred due to its simplicity and efficiency. However, recursive implementation may be more intuitive for some programmers.
 
-// **Space Complexity**: Interpolation search has a space complexity of \(O(1)\) since it does not require any additional space proportional to the input size beyond a few variables used for indices and calculations.
 
 ## Applications:
 
@@ -51,7 +50,7 @@ Interpolation Search is a an algorithm designed for finding a specific target va
 
 **Approximate Search**: Interpolation search can be adapted for approximate search tasks where finding an exact match is not necessary. For example, in spell checkers or auto-complete features in text editors, interpolation search can quickly narrow down the search space for approximate matches.
 
-// **Time-Critical Systems**: In real-time systems where response time is critical, interpolation search can be beneficial due to its average-case time complexity of \(O(\log \log n)\). This makes it suitable for applications requiring fast search operations, such as in financial trading systems or telecommunications networks.
+**Time-Critical Systems**: In real-time systems where response time is critical, interpolation search can be beneficial due to its average-case time complexity of $O(\log \log n)$. This makes it suitable for applications requiring fast search operations, such as in financial trading systems or telecommunications networks.
 
 **Finding Closest Values**: This algorithm can be used to find the closest value to a given target value within a sorted array. This application is useful in scenarios such as image processing, signal processing, and sensor data analysis.
 

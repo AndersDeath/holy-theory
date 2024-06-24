@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 # [0.0.75] - In progress
 * add prettier and eslint settings
 * add installation documentation
+* add support of pandoc metadata
+* add wkhtmltopdf support
+* fix bug of support latex formulas
+* fix bug of a space between title and a table of contents
+* remove Builder2
+* remove legacy tooling and metadata
 
 # [0.0.74] - 2024-06-10
 * add controllers concept to server

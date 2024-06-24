@@ -145,8 +145,12 @@ export class FileGroup {
       this.rawContent = this.rawContent.filter(
         (item: RawContent) =>
           item.category === this.config.targetCategory &&
-          item.metadata["ignore"] !== true
+          item.metadata["ignore"] !== true &&
+          item.fileName.indexOf('index') == -1
       );
+      this.rawContent.sort((a: RawContent,b: RawContent) => {
+        return a.metadata.sort - b.metadata.sort
+      })
     }
     for (const rawContent of this.rawContent) {
       this.initAggregatedContentKey(preparedBookTemplateKey);
