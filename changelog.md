@@ -11,6 +11,8 @@ All notable changes to this project will be documented in this file.
 * remove Builder2
 * remove legacy tooling and metadata
 * add Understanding Inversion of Control (IoC) article
+* add output folder that would have all generated pdf files
+* add removal of temp folder
 
 # [0.0.74] - 2024-06-10
 * add controllers concept to server

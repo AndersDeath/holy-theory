@@ -9,3 +9,4 @@ dist
 .vscode/*
 .idea
 builder3-logs.log
+output
