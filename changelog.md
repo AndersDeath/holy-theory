@@ -1,6 +1,7 @@
 # Changelog
 
 All notable changes to this project will be documented in this file.
+
 # [0.0.75] - In progress
 * add prettier and eslint settings
 * add installation documentation
@@ -13,6 +14,7 @@ All notable changes to this project will be documented in this file.
 * add Understanding Inversion of Control (IoC) article
 * add output folder that would have all generated pdf files
 * add removal of temp folder
+* create api endpoint for fetching logs
 
 # [0.0.74] - 2024-06-10
 * add controllers concept to server

@@ -5,8 +5,11 @@ export interface LoggerConfig {
   logFilePath: string;
   consoleLog: boolean;
 }
+
 export class Logger {
   logFilePath: string = "./builder3-logs.log";
+  logJsonFilePath: string = "./builder3-logs.json";
+
   consoleLog: boolean = false;
 
   private static instance: Logger;
@@ -16,7 +19,7 @@ export class Logger {
       this.logFilePath = config.logFilePath;
       this.consoleLog = config.consoleLog;
     }
-    this.createLogFileIfNotExists();
+    this.createLogFilesIfNotExist();
   }
 
   public static getInstance(): Logger {
@@ -24,10 +27,6 @@ export class Logger {
       Logger.instance = new Logger();
     }
     return Logger.instance;
-  }
-
-  public test(): void {
-    this.log("Logger works");
   }
 
   public info(messageCode: string): void {
@@ -74,16 +73,29 @@ export class Logger {
   }
 
   private async writeToFile(message: string) {
+    const time = this.getDate();
     await fs.appendFile(
       this.logFilePath,
-      this.getDate() + " " + message + "\n",
+      time + " " + message + "\n",
       "utf8"
     );
+
+    const jsonLog = JSON.parse(fs.readFileSync(this.logJsonFilePath, "utf8"));
+    jsonLog.unshift({
+      time: time,
+      type: message.split(":")[0].trim(),
+      message: message.split(":")[1].trim()
+    });
+    fs.writeFileSync(this.logJsonFilePath, JSON.stringify(jsonLog, null, "\t"), "utf8");
+
   }
 
-  private async createLogFileIfNotExists() {
+  private async createLogFilesIfNotExist() {
     if (!fs.existsSync(this.logFilePath)) {
       fs.writeFileSync(this.logFilePath, "", "utf8");
+    }
+    if (!fs.existsSync(this.logJsonFilePath)) {
+      fs.writeFileSync(this.logJsonFilePath, "[]", "utf8");
     }
   }
 }
