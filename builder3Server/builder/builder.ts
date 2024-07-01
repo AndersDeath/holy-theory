@@ -47,7 +47,6 @@ export class Builder3 {
     this.parseMDLibInstance = await this.parseMDInit();
 
     const rConf = this.runConfigResolver(runConfig);
-
     await this.init();
 
     if (runConfig.targets?.length === 0) {
@@ -57,7 +56,7 @@ export class Builder3 {
       await this.copyImageFolder();
       await this.buildBookPdf(rConf);
       await this.copyArtifactsFromTempToOutput(rConf);
-      fs.rmSync('./temp', { recursive: true, force: true });
+      fs.rmSync("./temp", { recursive: true, force: true });
       return;
     }
 
@@ -70,7 +69,7 @@ export class Builder3 {
       await this.copyImageFolder();
       await this.buildBookPdf(rConf);
       await this.copyArtifactsFromTempToOutput(rConf);
-      fs.rmSync('./temp', { recursive: true, force: true });
+      fs.rmSync("./temp", { recursive: true, force: true });
     }
     return;
   }
@@ -244,7 +243,7 @@ export class Builder3 {
 
   private async copyArtifactsFromTempToOutput(rConf: RunConfig): Promise<void> {
     if (rConf.bookSettings.categories.length > 0) {
-      fs.mkdirp('output');
+      fs.mkdirp("output");
       rConf.bookSettings.categories.forEach((category: string): void => {
         fs.copyFileSync(`temp/output_from_html_${category}.pdf`, `output/${category}.pdf`);
       });
