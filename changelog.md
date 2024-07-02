@@ -15,6 +15,7 @@ All notable changes to this project will be documented in this file.
 * add output folder that would have all generated pdf files
 * add removal of temp folder
 * create api endpoint for fetching logs
+* create api endpoint for running builder3
 
 # [0.0.74] - 2024-06-10
 * add controllers concept to server

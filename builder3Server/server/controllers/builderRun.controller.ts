@@ -6,7 +6,7 @@ import { Controller } from "../models/controller.model";
 
 export const builderRunController: Controller = {
   route: "/builder/run",
-  method: 'GET',
+  method: "GET",
   controller: async (req: Request, res: Response): Promise<void> => {
     let targets: string[] = [];
     let categories: string[] = [];

@@ -1,8 +1,9 @@
 import { Request, Response } from "express";
 import { Logger } from "../../../builder/logger/logger";
 import { B3 } from "../../b3";
-import { Controller } from "../../models/controller.model";
+
 import { fetchBodyParams } from "../../utils/fetchBodyParams";
+import { Controller } from "../../models/controller.model";
 
 export const builderApiRunController: Controller = {
   route: "/builder/api/run",
@@ -13,16 +14,18 @@ export const builderApiRunController: Controller = {
       const logger: Logger = new Logger();
       logger.log("The Builder Runner has started!");
       logger.time("Builder working timer");
-      await B3.run({
-        targets: JSON.parse(targets) || [],
-        bookSettings: {
-          categories: JSON.parse(categories) || []
-        }
-      });
-      logger.log("The work of script finished");
-      logger.timeEnd("Builder working timer");
-      res.send({ status: "success" });
 
+      B3.run({
+        targets: JSON.parse(targets || "[]"),
+        bookSettings: {
+          categories: JSON.parse(categories || "[]")
+        }
+      }).then(() => {
+        logger.log("The work of script finished");
+        logger.timeEnd("Builder working timer");
+        res.send({ status: "success" });
+
+      });
     } catch (error: any) {
       res.status(500);
     }

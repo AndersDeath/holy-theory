@@ -44,9 +44,11 @@ export class Builder3 {
   }
 
   public async run(runConfig: RunConfig = RunConfigDefault): Promise<void> {
+    console.log(runConfig);
     this.parseMDLibInstance = await this.parseMDInit();
-
+    console.log("sss");
     const rConf = this.runConfigResolver(runConfig);
+
     await this.init();
 
     if (runConfig.targets?.length === 0) {
@@ -112,6 +114,7 @@ export class Builder3 {
   }
 
   private async parseMDInit(): Promise<any> {
+    console.log("sd");
     const module = await import("parse-md");
     const parseMD = module.default;
     return parseMD;
