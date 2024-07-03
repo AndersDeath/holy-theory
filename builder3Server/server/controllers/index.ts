@@ -6,6 +6,7 @@ import { clearEverythingController } from "./clearEverything.controller";
 import { builderApiController } from "./api/builderApi.controller";
 import { builderApiGetLogsController } from "./api/builderApiGetLogs.controller";
 import { builderApiRunController } from "./api/builderApiRun.controller";
+import { builderApiClearEverythingController } from "./api/builderApiClearEverything.controller";
 import { Controller } from "../models/controller.model";
 
 export {
@@ -16,7 +17,8 @@ export {
   clearEverythingController,
   builderApiController,
   builderApiGetLogsController,
-  builderApiRunController
+  builderApiRunController,
+  builderApiClearEverythingController
 };
 
 export const Controllers: Controller[] = [
@@ -27,5 +29,6 @@ export const Controllers: Controller[] = [
   clearEverythingController,
   builderApiController,
   builderApiGetLogsController,
-  builderApiRunController
+  builderApiRunController,
+  builderApiClearEverythingController
 ];
