@@ -17,6 +17,7 @@ All notable changes to this project will be documented in this file.
 * create api endpoint for fetching logs
 * create api endpoint for running builder3
 * create api endpoint for clear temp information builder3
+* create api endpoint for getting categories from builder3
 
 # [0.0.74] - 2024-06-10
 * add controllers concept to server
