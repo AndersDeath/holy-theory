@@ -6,21 +6,16 @@ import { Controller } from "../models/controller.model";
 
 export const builderRunController: Controller = {
   route: "/builder/run",
-  method: 'GET',
+  method: "GET",
   controller: async (req: Request, res: Response): Promise<void> => {
     let targets: string[] = [];
     let categories: string[] = [];
     if (req.query.targets) {
       targets = req.query.targets.toString().split(",");
-      console.log(targets)
     }
     if (req.query.categories) {
       categories = req.query.categories.toString().split(",");
-      console.log(categories)
     }
-
-    console.log(targets);
-    console.log(categories);
 
     const page = fs.readFileSync(
       "./builder3Server/templates/generation-run.html",

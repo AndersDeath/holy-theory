@@ -3,6 +3,12 @@ import { builderLogsClearController } from "./builderLogsClear.controller";
 import { builderRunController } from "./builderRun.controller";
 import { builderLogsController } from "./builderLogs.controller";
 import { clearEverythingController } from "./clearEverything.controller";
+import { builderApiController } from "./api/builderApi.controller";
+import { builderApiGetLogsController } from "./api/builderApiGetLogs.controller";
+import { builderApiRunController } from "./api/builderApiRun.controller";
+import { builderApiClearEverythingController } from "./api/builderApiClearEverything.controller";
+import { builderApiGetCategoriesController } from "./api/builderApiGetCategories.controller";
+import { builderApiGetTargetsController } from "./api/builderApiGetTargets.controller";
 import { Controller } from "../models/controller.model";
 
 export {
@@ -10,7 +16,13 @@ export {
   builderLogsController,
   builderRunController,
   builderLogsClearController,
-  clearEverythingController
+  clearEverythingController,
+  builderApiController,
+  builderApiGetLogsController,
+  builderApiRunController,
+  builderApiClearEverythingController,
+  builderApiGetCategoriesController,
+  builderApiGetTargetsController
 };
 
 export const Controllers: Controller[] = [
@@ -18,5 +30,11 @@ export const Controllers: Controller[] = [
   builderLogsClearController,
   builderRunController,
   builderLogsController,
-  clearEverythingController
+  clearEverythingController,
+  builderApiController,
+  builderApiGetLogsController,
+  builderApiRunController,
+  builderApiClearEverythingController,
+  builderApiGetCategoriesController,
+  builderApiGetTargetsController
 ];

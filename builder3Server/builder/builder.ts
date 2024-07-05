@@ -44,8 +44,9 @@ export class Builder3 {
   }
 
   public async run(runConfig: RunConfig = RunConfigDefault): Promise<void> {
+    console.log(runConfig);
     this.parseMDLibInstance = await this.parseMDInit();
-
+    console.log("sss");
     const rConf = this.runConfigResolver(runConfig);
 
     await this.init();
@@ -56,6 +57,8 @@ export class Builder3 {
       await this.detectBookBookTemplateCategoriesAndBuild(rConf);
       await this.copyImageFolder();
       await this.buildBookPdf(rConf);
+      await this.copyArtifactsFromTempToOutput(rConf);
+      fs.rmSync("./temp", { recursive: true, force: true });
       return;
     }
 
@@ -67,6 +70,8 @@ export class Builder3 {
       await this.detectBookBookTemplateCategoriesAndBuild(rConf);
       await this.copyImageFolder();
       await this.buildBookPdf(rConf);
+      await this.copyArtifactsFromTempToOutput(rConf);
+      fs.rmSync("./temp", { recursive: true, force: true });
     }
     return;
   }
@@ -109,6 +114,7 @@ export class Builder3 {
   }
 
   private async parseMDInit(): Promise<any> {
+    console.log("sd");
     const module = await import("parse-md");
     const parseMD = module.default;
     return parseMD;
@@ -198,16 +204,15 @@ export class Builder3 {
   private async buildBookPdf(rConf: RunConfig): Promise<void> {
     // http://localhost:3000/builder/run?categories=algorithms&targets=html,book debugging url
     if (rConf.bookSettings.categories.length > 0) {
-      rConf.bookSettings.categories.forEach((category: string): void => {
-        console.log(category)
+      for (const category of rConf.bookSettings.categories) {
         const config = {
           inputPath: `temp/prepared-book-${category}.md`,
           outputPath: `temp/output_from_html_${category}.pdf`,
           isTableOfContents: true,
           metadataFile: `content/${category}/pandoc-config.yaml`
         };
-        this.pandoc.generate(config);
-      });
+        await this.pandoc.generate(config);
+      }
     } else {
       this.logger.throwError("There are not categories in request");
     }
@@ -237,5 +242,16 @@ export class Builder3 {
       /\\newpage/g,
       path.join("./", pageBreakHtml())
     );
+  }
+
+  private async copyArtifactsFromTempToOutput(rConf: RunConfig): Promise<void> {
+    if (rConf.bookSettings.categories.length > 0) {
+      fs.mkdirp("output");
+      rConf.bookSettings.categories.forEach((category: string): void => {
+        fs.copyFileSync(`temp/output_from_html_${category}.pdf`, `output/${category}.pdf`);
+      });
+    } else {
+      this.logger.throwError("There are not categories in request");
+    }
   }
 }

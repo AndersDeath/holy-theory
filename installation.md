@@ -39,40 +39,16 @@ Install Bun as per the official instructions at [bun.sh](https://bun.sh/).
 #### macOS:
 
 1. Install Pandoc:
-
+2. 
 ```sh
-brew install pandoc
-```
-
-2. Install additional Pandoc tools:
-
-```sh
-brew install pandoc-highlighting
-brew install pandoc-plot
-```
-
-3. Install TinyTeX for LaTeX support:
-
-```sh
-curl -sL "https://yihui.org/tinytex/install-bin-unix.sh" | sh
-```
-
-4. Update TinyTeX:
-
-```sh
-tlmgr update --self
-```
-
-5. Install necessary LaTeX packages:
-
-```sh
-tlmgr install framed
-```
-
-6. Install BasicTeX:
-
-```sh
-brew install basictex
+1. brew install pandoc
+2. brew install pandoc-highlighting
+3. brew install pandoc-plot
+4. curl -sL "https://yihui.org/tinytex/install-bin-unix.sh" | sh
+5. tlmgr update --self
+6. tlmgr install framed
+7. brew install basictex
+8. brew install --cask wkhtmltopdf
 ```
 
 ## Author

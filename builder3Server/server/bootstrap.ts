@@ -12,5 +12,10 @@ export const routesInit = (app: any): void => {
         await element.controller(req, res);
       });
     }
+    if (element.method === "POST") {
+      app.post(element.route, async (req: Request, res: Response): Promise<void> => {
+        await element.controller(req, res);
+      });
+    }
   });
 };

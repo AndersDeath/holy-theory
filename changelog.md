@@ -1,6 +1,7 @@
 # Changelog
 
 All notable changes to this project will be documented in this file.
+
 # [0.0.75] - In progress
 * add prettier and eslint settings
 * add installation documentation
@@ -10,6 +11,14 @@ All notable changes to this project will be documented in this file.
 * fix bug of a space between title and a table of contents
 * remove Builder2
 * remove legacy tooling and metadata
+* add Understanding Inversion of Control (IoC) article
+* add output folder that would have all generated pdf files
+* add removal of temp folder
+* create api endpoint for fetching logs
+* create api endpoint for running builder3
+* create api endpoint for clear temp information builder3
+* create api endpoint for getting categories from builder3
+* create api endpoint for getting targets from builder3
 
 # [0.0.74] - 2024-06-10
 * add controllers concept to server
