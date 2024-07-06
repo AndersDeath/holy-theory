@@ -35,7 +35,7 @@ export class Builder3 {
     this.config = config;
   }
 
-  public get targets() {
+  public get targets(): [string, string, string] {
     return ["md", "html", "book"];
   }
 
@@ -106,7 +106,7 @@ export class Builder3 {
     this.logger.log(`${this.rawContent.length} content items are parsed`);
   }
 
-  private getCategories() {
+  private getCategories():string[] {
     const folders: string[] = fs.readdirSync(this.config.sourceRootPath);
     return folders.filter((folder) =>
       fs.statSync(path.join(this.config.sourceRootPath, folder)).isDirectory()
@@ -202,7 +202,6 @@ export class Builder3 {
   }
 
   private async buildBookPdf(rConf: RunConfig): Promise<void> {
-    // http://localhost:3000/builder/run?categories=algorithms&targets=html,book debugging url
     if (rConf.bookSettings.categories.length > 0) {
       for (const category of rConf.bookSettings.categories) {
         const config = {

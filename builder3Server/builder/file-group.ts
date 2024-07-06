@@ -105,10 +105,10 @@ export class FileGroup {
 
   async run(): Promise<B3File[]> {
     const files: B3File[] = [];
-    const allKey = "all";
+    const allKey: string = "all";
     if (this.config.targetCategory) {
       this.rawContent = this.rawContent.filter(
-        (item: RawContent) => item.category === this.config.targetCategory
+        (item: RawContent): boolean => item.category === this.config.targetCategory
       );
     }
     for (const rawContent of this.rawContent) {
@@ -129,7 +129,7 @@ export class FileGroup {
       this.generateTableOfContents(this.aggregatedContent.get(allKey) || "") +
       this.aggregatedContent.get(allKey)
     );
-    const aggregatedFiles = this.createAggregatedFileGroup(allKey);
+    const aggregatedFiles: B3File[] = this.createAggregatedFileGroup(allKey);
     files.push(...aggregatedFiles);
     return files;
   }
@@ -146,11 +146,11 @@ export class FileGroup {
         (item: RawContent) =>
           item.category === this.config.targetCategory &&
           item.metadata["ignore"] !== true &&
-          item.fileName.indexOf('index') == -1
+          item.fileName.indexOf("index") == -1
       );
-      this.rawContent.sort((a: RawContent,b: RawContent) => {
-        return a.metadata.sort - b.metadata.sort
-      })
+      this.rawContent.sort((a: RawContent, b: RawContent) => {
+        return a.metadata.sort - b.metadata.sort;
+      });
     }
     for (const rawContent of this.rawContent) {
       this.initAggregatedContentKey(preparedBookTemplateKey);
@@ -160,7 +160,7 @@ export class FileGroup {
         pageBreakMd() + "\n\r" + rawContent.content
       );
     }
-    const aggregatedFiles = this.createAggregatedFileGroup(
+    const aggregatedFiles: B3File[] = this.createAggregatedFileGroup(
       preparedBookTemplateKey
     );
     files.push(...aggregatedFiles);
