@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-# [0.0.75] - In progress
+# [0.0.75] - 2024-07-08
 * add prettier and eslint settings
 * add installation documentation
 * add support of pandoc metadata
