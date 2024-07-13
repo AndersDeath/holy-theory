@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+# [next]
+
+* remove builder3 + builder3Server from the project
+* set MIT license
+
 # [0.0.75] - 2024-07-08
 * add prettier and eslint settings
 * add installation documentation
@@ -52,12 +57,12 @@ All notable changes to this project will be documented in this file.
 * update markdown generator on Builder3
 * pushing files to FileGroup optimization (Builder3)
 * optimize aggregated file group in Builder3
-  
+
 # [0.0.69] - 2024-05-06
 * add toc generator for html and refactoring, Builder3
 * add static markdown generation, Builder3
 * add markdown output path, Builder3
-  
+
 # [0.0.68] - 2024-04-29
 * add content parser to Builder3
 * start ui library for Builder3
@@ -65,7 +70,7 @@ All notable changes to this project will be documented in this file.
 * add What is DORA metrics? question
 * add generation of all content to Builder3
 * update generation html for Builder3
-  
+
 # [0.0.67] - 2024-04-22
 * add logger to Builder3
 * add markdown parse to Builder3
@@ -153,7 +158,7 @@ All notable changes to this project will be documented in this file.
 * update builder
 * update quick sort
 * update merge sort
-  
+
 # [0.0.55] - 2024-01-29
 * builder refactoring
 * update selection sort
@@ -283,7 +288,7 @@ All notable changes to this project will be documented in this file.
 * add all content files generation
 * add pdf generator command
 * add Find Smallest Multiple training
-  
+
 # [0.0.41] - 2023-10-23
 * add Even Fibonacci Numbers training
 * add How can JavaScript codes be hidden from old browsers that do not support JavaScript? question
@@ -765,7 +770,7 @@ All notable changes to this project will be documented in this file.
 * add bubble sort in Java
 * add selection sort in Java
 * add how dns resolves ip address
-* add single server setup 
+* add single server setup
 * add database + single servers setup
 * add load balancer
 * add database replication
@@ -780,7 +785,7 @@ All notable changes to this project will be documented in this file.
 * add System design with data centers
 * add Message queue
 * add System design with message queue
-  
+
 # [0.0.5] - 2023-02-20
 * update queue
 * update stack
