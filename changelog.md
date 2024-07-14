@@ -7,6 +7,7 @@ All notable changes to this project will be documented in this file.
 * remove builder3 + builder3Server from the project
 * set MIT license
 * remove some irrelevant content
+* add array implementation in typescript for educational purposes
 
 # [0.0.75] - 2024-07-08
 * add prettier and eslint settings
