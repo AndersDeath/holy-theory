@@ -8,6 +8,7 @@ All notable changes to this project will be documented in this file.
 * set MIT license
 * remove some irrelevant content
 * add array implementation in typescript for educational purposes
+* add graph implementation in typescript for educational purposes
 
 # [0.0.75] - 2024-07-08
 * add prettier and eslint settings
