@@ -9,6 +9,7 @@ All notable changes to this project will be documented in this file.
 * remove some irrelevant content
 * add array implementation in typescript for educational purposes
 * add graph implementation in typescript for educational purposes
+* add Key Characteristics of algorithms draft
 
 # [0.0.75] - 2024-07-08
 * add prettier and eslint settings
