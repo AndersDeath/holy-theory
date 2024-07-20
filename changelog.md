@@ -12,6 +12,7 @@ All notable changes to this project will be documented in this file.
 * add Key Characteristics of algorithms draft
 * add Applications of algorithms draft
 * add Big O for algorithms
+* add XSS Attacks article
 
 # [0.0.75] - 2024-07-08
 * add prettier and eslint settings
