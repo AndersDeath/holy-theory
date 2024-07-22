@@ -14,6 +14,7 @@ All notable changes to this project will be documented in this file.
 * add Big O for algorithms
 * add XSS Attacks article
 * add Common Types of Attacks on Websites article
+* add Hexagonal (Ports & Adapters) Architecture article
 
 # [0.0.75] - 2024-07-08
 * add prettier and eslint settings
