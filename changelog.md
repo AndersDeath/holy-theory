@@ -17,6 +17,7 @@ All notable changes to this project will be documented in this file.
 * add Hexagonal (Ports & Adapters) Architecture article
 * add additional quick-sort solution in typescript
 * update big-o article
+* add what is server side rendering question
 
 # [0.0.75] - 2024-07-08
 * add prettier and eslint settings
