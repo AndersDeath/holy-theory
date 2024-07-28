@@ -18,6 +18,7 @@ All notable changes to this project will be documented in this file.
 * add additional quick-sort solution in typescript
 * update big-o article
 * add what is server side rendering question
+* add how to secure your front-end application question
 
 # [0.0.75] - 2024-07-08
 * add prettier and eslint settings
