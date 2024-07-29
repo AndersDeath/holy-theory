@@ -1,3 +1,0 @@
-- [What is stress test?](./01-what-is-stress-test.md)
-- [What types of software testing do you know?](./02-what-types-of-software-testing-do-you-know.md)
-- [testing all](./index.md)
