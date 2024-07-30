@@ -19,6 +19,7 @@ All notable changes to this project will be documented in this file.
 * update big-o article
 * add what is server side rendering question
 * add how to secure your front-end application question
+* remove unnecessary index files
 
 # [0.0.75] - 2024-07-08
 * add prettier and eslint settings
