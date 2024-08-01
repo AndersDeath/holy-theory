@@ -21,6 +21,7 @@ All notable changes to this project will be documented in this file.
 * add how to secure your front-end application question
 * remove unnecessary index files
 * add question about MVC Pattern
+* add question about MVVC Pattern
 
 # [0.0.75] - 2024-07-08
 * add prettier and eslint settings
