@@ -22,6 +22,8 @@ All notable changes to this project will be documented in this file.
 * remove unnecessary index files
 * add question about MVC Pattern
 * add question about MVVC Pattern
+* add question what is DDD
+* restructure questions section
 
 # [0.0.75] - 2024-07-08
 * add prettier and eslint settings
