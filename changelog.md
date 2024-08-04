@@ -9,6 +9,21 @@ All notable changes to this project will be documented in this file.
 * remove some irrelevant content
 * add array implementation in typescript for educational purposes
 * add graph implementation in typescript for educational purposes
+* add Key Characteristics of algorithms draft
+* add Applications of algorithms draft
+* add Big O for algorithms
+* add XSS Attacks article
+* add Common Types of Attacks on Websites article
+* add Hexagonal (Ports & Adapters) Architecture article
+* add additional quick-sort solution in typescript
+* update big-o article
+* add what is server side rendering question
+* add how to secure your front-end application question
+* remove unnecessary index files
+* add question about MVC Pattern
+* add question about MVVC Pattern
+* add question what is DDD
+* restructure questions section
 
 # [0.0.75] - 2024-07-08
 * add prettier and eslint settings

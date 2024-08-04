@@ -169,3 +169,28 @@ function quicksort(arr: number[]): number[] {
   }
 }
 ```
+
+```typescript
+function quicksort(arr: number[]): number[] {
+  if (arr.length < 2) {
+    return arr;
+  } else {
+    const pivot = arr[Math.floor(arr.length / 2)];
+    const less: number[] = [];
+    const equal: number[] = [];
+    const greater: number[] = [];
+
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i] < pivot) {
+        less.push(arr[i]);
+      } else if (arr[i] === pivot) {
+        equal.push(arr[i]);
+      } else {
+        greater.push(arr[i]);
+      }
+    }
+
+    return [...quicksort(less), ...equal, ...quicksort(greater)];
+  }
+}
+```

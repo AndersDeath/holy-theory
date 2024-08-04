@@ -1,4 +1,0 @@
-- [Event Bus](./event-bus.md)
-- [patterns all](./index.md)
-- [Observer](./observer.md)
-- [Singleton](./singleton.md)
