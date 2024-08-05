@@ -24,6 +24,7 @@ All notable changes to this project will be documented in this file.
 * add question about MVVC Pattern
 * add question what is DDD
 * restructure questions section
+* add OpenID Connect (OIDC) article
 
 # [0.0.75] - 2024-07-08
 * add prettier and eslint settings
