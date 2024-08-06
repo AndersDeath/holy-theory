@@ -25,6 +25,7 @@ All notable changes to this project will be documented in this file.
 * add question what is DDD
 * restructure questions section
 * add OpenID Connect (OIDC) article
+* add What is OAuth 2.0 article
 
 # [0.0.75] - 2024-07-08
 * add prettier and eslint settings
