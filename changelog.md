@@ -26,6 +26,7 @@ All notable changes to this project will be documented in this file.
 * restructure questions section
 * add OpenID Connect (OIDC) article
 * add What is OAuth 2.0 article
+* add 2sum training for typescript
 
 # [0.0.75] - 2024-07-08
 * add prettier and eslint settings
