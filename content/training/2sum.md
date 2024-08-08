@@ -67,3 +67,21 @@ This function, `twoSum`, solves the problem of finding two numbers in an array (
 4. **Early Return for Efficient Execution**:
    - The function returns as soon as a solution is found, avoiding unnecessary iterations once the pair of numbers is identified.
   
+
+**More solutions**
+
+```java
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        Map<Integer,Integer> myMap = new HashMap<>();
+        for(int i = 0; i < nums.length; i++) {
+            int diff = target - nums[i];
+            if(myMap.containsKey(diff)) {
+                return new int[] { myMap.get(diff), i};
+            }
+            myMap.put(nums[i], i);
+        }
+        return null;
+    }
+}
+```
