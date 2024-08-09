@@ -85,3 +85,22 @@ class Solution {
     }
 }
 ```
+
+```typescript
+/**
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number[]}
+ */
+var twoSum = function(nums, target) {
+    const myMap = new Map();
+    for (let i = 0; i < nums.length; i++) {
+        const diff = target - nums[i];
+        if (myMap.has(diff)) {
+            return [myMap.get(diff), i];
+        }
+        myMap.set(nums[i], i);
+    }
+    return null;
+};
+```
