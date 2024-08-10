@@ -104,3 +104,19 @@ var twoSum = function(nums, target) {
     return null;
 };
 ```
+
+```kotlin
+class Solution {
+    fun twoSum(nums: IntArray, target: Int): IntArray? {
+        val myMap = mutableMapOf<Int, Int>()
+        for (i in nums.indices) {
+            val diff = target - nums[i]
+            if (myMap.containsKey(diff)) {
+                return intArrayOf(myMap[diff]!!, i)
+            }
+            myMap[nums[i]] = i
+        }
+        return null
+    }
+}
+```
