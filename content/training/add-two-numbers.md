@@ -148,3 +148,52 @@ class Solution {
     }
 }
 ```
+
+```kotlin
+/**
+ * Example:
+ * var li = ListNode(5)
+ * var v = li.`val`
+ * Definition for singly-linked list.
+ * class ListNode(var `val`: Int) {
+ *     var next: ListNode? = null
+ * }
+ */
+class Solution {
+    fun addTwoNumbers(l1: ListNode?, l2: ListNode?): ListNode? {
+        var head: ListNode? = null;
+        var temp: ListNode? = null;
+        var carry = 0;
+
+        var l1Current = l1;
+        var l2Current = l2;
+        
+        while(l1Current != null || l2Current != null) {
+            var sum = carry;
+            if(l1Current != null) {
+                sum += l1Current.`val`;
+                l1Current = l1Current.next;
+            }
+            if(l2Current != null) {
+                sum += l2Current.`val`;
+                l2Current = l2Current.next;
+            }
+            var node = ListNode(sum % 10);
+            carry = sum / 10;
+            if(temp == null) {
+                temp = node;
+                head = node;
+            } else {
+                temp.next = node;
+                temp = temp.next;
+            }
+        }
+
+        if(carry > 0) {
+            temp?.next = ListNode(carry);
+        }
+        
+        return head;
+    }
+}
+```
