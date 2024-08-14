@@ -33,6 +33,7 @@ All notable changes to this project will be documented in this file.
 * add Add two numbers training solution for Java
 * add Add two numbers training solution for Kotlin
 * add Add two numbers training solution for JavaScript
+* add 2sum training solution for Go
 
 # [0.0.75] - 2024-07-08
 * add prettier and eslint settings

@@ -120,3 +120,19 @@ class Solution {
     }
 }
 ```
+
+```go
+func twoSum(nums []int, target int) []int {
+    myMap := make(map[int]int)
+    
+    for i, num := range nums {
+        diff := target - num
+        if val, ok := myMap[diff]; ok {
+            return []int{val, i}
+        }
+        myMap[num] = i
+    }
+    
+    return nil
+}
+```
