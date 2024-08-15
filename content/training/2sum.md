@@ -136,3 +136,20 @@ func twoSum(nums []int, target int) []int {
     return nil
 }
 ```
+
+```python
+class Solution(object):
+    def twoSum(self, nums, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: List[int]
+        """
+        my_map = {}
+        for i, num in enumerate(nums):
+            diff = target - num
+            if diff in my_map:
+                return [my_map[diff], i]
+            my_map[num] = i
+        return None
+```
