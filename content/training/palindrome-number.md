@@ -49,3 +49,21 @@ Here's how the method works:
 **Summary:**
 
 The `isPalindrome` method in the `Solution` class checks if a given integer is a palindrome by reversing its digits and comparing it with the original input. It returns `true` if the integer is a palindrome and `false` otherwise.
+
+
+**Other solutions**
+
+```typescript
+function isPalindrome(x: number): boolean {
+        if(x < 0) {
+            return false;
+        }
+        let number:number = x;
+        let reverse:number = 0;
+        while(number > 0) {
+            reverse = reverse * 10 + number % 10;
+            number = Math.floor(number / 10);
+        }
+        return x === reverse;
+};
+```
