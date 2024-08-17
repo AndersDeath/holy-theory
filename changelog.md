@@ -36,7 +36,8 @@ All notable changes to this project will be documented in this file.
 * add 2sum training solution for Go
 * add 2sum training solution for Python
 * add Palindrom number solution for TypeScript
-  
+* add Palindrom number solution for JavaScript
+
 # [0.0.75] - 2024-07-08
 * add prettier and eslint settings
 * add installation documentation
