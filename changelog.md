@@ -38,6 +38,7 @@ All notable changes to this project will be documented in this file.
 * add Palindrom number solution for TypeScript
 * add Palindrom number solution for JavaScript
 * add Palindrom number solution for Kotlin
+* add description to Map data structure
 
 # [0.0.75] - 2024-07-08
 * add prettier and eslint settings
