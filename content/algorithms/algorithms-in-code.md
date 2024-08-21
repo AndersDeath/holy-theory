@@ -51,3 +51,76 @@ function jumpSearch(arr: number[], target: number): number {
   return -1;
 }
 ```
+
+### Binary search
+
+```typescript
+
+function binarySearch(nums: number[], target: number): number {
+  let left: number = 0;
+  let right: number = nums.length - 1;
+
+  while (left <= right) {
+    const mid: number = Math.floor((left + right) / 2);
+
+    if (nums[mid] === target) return mid;
+    if (target < nums[mid]) right = mid - 1;
+    else left = mid + 1;
+  }
+
+  return -1;
+}
+
+```
+
+### Ternary search
+
+```typescript
+function ternarySearch(
+  func: (x: number) => number,
+  left: number,
+  right: number,
+  epsilon: number
+): number {
+  while (right - left > epsilon) {
+    const mid1 = left + (right - left) / 3;
+    const mid2 = right - (right - left) / 3;
+
+    const value1 = func(mid1);
+    const value2 = func(mid2);
+
+    if (value1 < value2) {
+      left = mid1;
+    } else {
+      right = mid2;
+    }
+  }
+
+  return (left + right) / 2;
+}
+```
+
+### Interpolation search
+
+```typescript
+function interpolationSearch(array: number[], value: number): number {
+  let low = 0;
+  let high = array.length - 1;
+
+  while (value >= array[low] && value <= array[high] && low <= high) {
+    const probe =
+      low + ((high - low) * (value - array[low])) / (array[high] - array[low]);
+    const roundedProbe = Math.floor(probe);
+
+    if (array[roundedProbe] === value) {
+      return roundedProbe;
+    } else if (array[roundedProbe] < value) {
+      low = roundedProbe + 1;
+    } else {
+      high = roundedProbe - 1;
+    }
+  }
+
+  return -1;
+}
+```
