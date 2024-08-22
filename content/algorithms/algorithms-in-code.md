@@ -124,3 +124,100 @@ function interpolationSearch(array: number[], value: number): number {
   return -1;
 }
 ```
+
+## Sorting algorithms
+
+### Bubble sort
+
+```typescript
+function bubbleSort(array: number[] | string[]) {
+  for (let i = 0; i < array.length; i++) {
+    for (let j = 0; j < array.length - 1 - i; j++) {
+      if (array[j] > array[j + 1]) {
+        [array[j], array[j + 1]] = [array[j + 1], array[j]];
+      }
+    }
+  }
+  return array;
+}
+```
+
+### Selection sort
+
+```typescript
+function selectionSort(array: any[]) {
+  for (let i = 0; i < array.length - 1; i++) {
+    let min = i;
+    for (let j = i + 1; j < array.length; j++) {
+      if (array[min] > array[j]) min = j;
+    }
+    [array[i], array[min]] = [array[min], array[i]];
+  }
+  return array;
+}
+```
+
+### Insertion sort
+
+```typescript
+function insertionSort(array: number[] | string[]) {
+  for (let i = 1; i < array.length; i++) {
+    let curr = array[i];
+    let j = i - 1;
+    for (j; j >= 0 && array[j] > curr; j--) {
+      array[j + 1] = array[j];
+    }
+    array[j + 1] = curr;
+  }
+  return array;
+}
+```
+
+### Quick sort
+
+```typescript
+function quicksort(arr: number[]): number[] {
+  if (arr.length < 2) {
+    return arr;
+  } else {
+    const pivot = arr[Math.floor(arr.length / 2)];
+    const less = arr.slice(1).filter((i) => i <= pivot);
+    const greater = arr.slice(1).filter((i) => i > pivot);
+    return [...quicksort(less), pivot, ...quicksort(greater)];
+  }
+}
+```
+
+### Merge sort
+
+```typescript
+function mergeSort(arr: number[]): number[] {
+  if (arr.length <= 1) {
+    return arr;
+  }
+
+  const middle = Math.floor(arr.length / 2);
+  const left = arr.slice(0, middle);
+  const right = arr.slice(middle);
+
+  return merge(mergeSort(left), mergeSort(right));
+}
+
+function merge(left: number[], right: number[]): number[] {
+  let result: number[] = [];
+  let leftIndex = 0;
+  let rightIndex = 0;
+
+  while (leftIndex < left.length && rightIndex < right.length) {
+    if (left[leftIndex] < right[rightIndex]) {
+      result.push(left[leftIndex]);
+      leftIndex++;
+    } else {
+      result.push(right[rightIndex]);
+      rightIndex++;
+    }
+  }
+
+  return result.concat(left.slice(leftIndex)).concat(right.slice(rightIndex));
+}
+```
