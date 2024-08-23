@@ -221,3 +221,301 @@ function merge(left: number[], right: number[]): number[] {
   return result.concat(left.slice(leftIndex)).concat(right.slice(rightIndex));
 }
 ```
+
+## Graph algorithms
+
+### Breadth First search
+
+```typescript
+class Graph {
+  private adjacencyList: Map<string, string[]>;
+
+  constructor() {
+    this.adjacencyList = new Map();
+  }
+
+  addVertex(vertex: string) {
+    if (!this.adjacencyList.has(vertex)) {
+      this.adjacencyList.set(vertex, []);
+    }
+  }
+
+  addEdge(vertex1: string, vertex2: string) {
+    this.adjacencyList.get(vertex1)?.push(vertex2);
+    this.adjacencyList.get(vertex2)?.push(vertex1);
+  }
+
+  bfs(startingVertex: string) {
+    const visited: Set<string> = new Set();
+    const queue: string[] = [];
+
+    visited.add(startingVertex);
+    queue.push(startingVertex);
+
+    while (queue.length > 0) {
+      const currentVertex = queue.shift()!;
+      console.log(currentVertex);
+
+      const neighbors = this.adjacencyList.get(currentVertex) || [];
+
+      for (const neighbor of neighbors) {
+        if (!visited.has(neighbor)) {
+          visited.add(neighbor);
+          queue.push(neighbor);
+        }
+      }
+    }
+  }
+}
+```
+
+### Depth First search
+
+```typescript
+class Graph {
+  private adjacencyList: Map<string, string[]>;
+
+  constructor() {
+    this.adjacencyList = new Map();
+  }
+
+  addVertex(vertex: string) {
+    if (!this.adjacencyList.has(vertex)) {
+      this.adjacencyList.set(vertex, []);
+    }
+  }
+
+  addEdge(vertex1: string, vertex2: string) {
+    this.adjacencyList.get(vertex1)?.push(vertex2);
+    this.adjacencyList.get(vertex2)?.push(vertex1);
+  }
+
+  dfs(startingVertex: string) {
+    const visited: Set<string> = new Set();
+
+    const dfsHelper = (vertex: string) => {
+      console.log(vertex);
+      visited.add(vertex);
+
+      const neighbors = this.adjacencyList.get(vertex) || [];
+
+      for (const neighbor of neighbors) {
+        if (!visited.has(neighbor)) {
+          dfsHelper(neighbor);
+        }
+      }
+    };
+
+    dfsHelper(startingVertex);
+  }
+}
+```
+
+### Dijkstra
+
+```typescript
+class Graph {
+  private adjacencyList: Map<string, Map<string, number>>;
+
+  constructor() {
+    this.adjacencyList = new Map();
+  }
+
+  addVertex(vertex: string) {
+    if (!this.adjacencyList.has(vertex)) {
+      this.adjacencyList.set(vertex, new Map());
+    }
+  }
+
+  addEdge(vertex1: string, vertex2: string, weight: number) {
+    this.adjacencyList.get(vertex1)?.set(vertex2, weight);
+    this.adjacencyList.get(vertex2)?.set(vertex1, weight);
+  }
+
+  dijkstra(startingVertex: string) {
+    const distances: Map<string, number> = new Map();
+    const previous: Map<string, string | null> = new Map();
+    const priorityQueue = new PriorityQueue();
+
+    for (const vertex of this.adjacencyList.keys()) {
+      distances.set(vertex, vertex === startingVertex ? 0 : Infinity);
+      previous.set(vertex, null);
+      priorityQueue.enqueue(vertex, distances.get(vertex)!);
+    }
+
+    while (!priorityQueue.isEmpty()) {
+      const currentVertex = priorityQueue.dequeue()!;
+      const neighbors = this.adjacencyList.get(currentVertex);
+
+      if (neighbors) {
+        for (const neighbor of neighbors.keys()) {
+          const distance =
+            distances.get(currentVertex)! + neighbors.get(neighbor)!;
+
+          if (distance < distances.get(neighbor)!) {
+            distances.set(neighbor, distance);
+            previous.set(neighbor, currentVertex);
+            priorityQueue.enqueue(neighbor, distance);
+          }
+        }
+      }
+    }
+
+    return { distances, previous };
+  }
+
+  shortestPath(startingVertex: string, targetVertex: string) {
+    const { distances, previous } = this.dijkstra(startingVertex);
+
+    const path: string[] = [];
+    let currentVertex = targetVertex;
+
+    while (currentVertex !== null) {
+      path.unshift(currentVertex);
+      currentVertex = previous.get(currentVertex)!;
+    }
+
+    return { path, distance: distances.get(targetVertex) };
+  }
+}
+
+class PriorityQueue {
+  private items: [string, number][] = [];
+
+  enqueue(element: string, priority: number) {
+    this.items.push([element, priority]);
+    this.sort();
+  }
+
+  dequeue() {
+    return this.items.shift();
+  }
+
+  isEmpty() {
+    return this.items.length === 0;
+  }
+
+  private sort() {
+    this.items.sort((a, b) => a[1] - b[1]);
+  }
+}
+```
+
+### Floyd Warshall algorithm
+
+```typescript
+class Graph {
+  private adjacencyMatrix: number[][];
+
+  constructor(numVertices: number) {
+    this.adjacencyMatrix = Array.from({ length: numVertices }, () =>
+      Array(numVertices).fill(Infinity)
+    );
+
+    // Set diagonal elements to 0
+    for (let i = 0; i < numVertices; i++) {
+      this.adjacencyMatrix[i][i] = 0;
+    }
+  }
+
+  addEdge(source: number, destination: number, weight: number) {
+    this.adjacencyMatrix[source][destination] = weight;
+  }
+
+  floydWarshall() {
+    const numVertices = this.adjacencyMatrix.length;
+
+    for (let k = 0; k < numVertices; k++) {
+      for (let i = 0; i < numVertices; i++) {
+        for (let j = 0; j < numVertices; j++) {
+          if (
+            this.adjacencyMatrix[i][k] + this.adjacencyMatrix[k][j] <
+            this.adjacencyMatrix[i][j]
+          ) {
+            this.adjacencyMatrix[i][j] =
+              this.adjacencyMatrix[i][k] + this.adjacencyMatrix[k][j];
+          }
+        }
+      }
+    }
+
+    return this.adjacencyMatrix;
+  }
+}
+```
+
+### Ford Fulkerson algorithm
+
+
+```typescript
+class FordFulkerson {
+  private graph: number[][];
+  private numVertices: number;
+
+  constructor(graph: number[][]) {
+    this.graph = graph;
+    this.numVertices = graph.length;
+  }
+
+  fordFulkerson(source: number, sink: number): number {
+    let maxFlow = 0;
+
+    const residualGraph = this.graph.map((row) => [...row]);
+
+    while (true) {
+      const path = this.bfs(source, sink, residualGraph);
+      if (!path) {
+        break;
+      }
+
+      let minCapacity = Number.POSITIVE_INFINITY;
+      for (let i = 0; i < path.length - 1; i++) {
+        const u = path[i];
+        const v = path[i + 1];
+        minCapacity = Math.min(minCapacity, residualGraph[u][v]);
+      }
+
+      for (let i = 0; i < path.length - 1; i++) {
+        const u = path[i];
+        const v = path[i + 1];
+        residualGraph[u][v] -= minCapacity;
+        residualGraph[v][u] += minCapacity;
+      }
+
+      maxFlow += minCapacity;
+    }
+
+    return maxFlow;
+  }
+
+  bfs(source: number, sink: number, graph: number[][]): number[] | null {
+    const visited: boolean[] = new Array(this.numVertices).fill(false);
+    const queue: number[] = [source];
+    const parent: number[] = new Array(this.numVertices).fill(-1);
+
+    while (queue.length > 0) {
+      const u = queue.shift()!;
+
+      for (let v = 0; v < this.numVertices; v++) {
+        if (!visited[v] && graph[u][v] > 0) {
+          queue.push(v);
+          parent[v] = u;
+          visited[v] = true;
+        }
+      }
+    }
+
+    if (!visited[sink]) {
+      return null;
+    }
+
+    const path: number[] = [];
+    for (let v = sink; v !== source; v = parent[v]) {
+      path.unshift(v);
+    }
+    path.unshift(source);
+
+    return path;
+  }
+}
+```
