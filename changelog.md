@@ -44,6 +44,7 @@ All notable changes to this project will be documented in this file.
 * add Abstract factory design pattern
 * add Builder design pattern
 * add Prototype design pattern
+* add Adapter design pattern
 
 # [0.0.75] - 2024-07-08
 * add prettier and eslint settings
