@@ -47,6 +47,7 @@ All notable changes to this project will be documented in this file.
 * add Adapter design pattern
 * add Bridge design pattern
 * add Composite design pattern
+* add Decorator design pattern
 
 # [0.0.75] - 2024-07-08
 * add prettier and eslint settings
