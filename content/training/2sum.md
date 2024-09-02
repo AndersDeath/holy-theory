@@ -1,7 +1,7 @@
 ---
 title: 2sum
 tags: ["training", "task"]
-languages: ["typescript"]
+languages: ["typescript", "java", "go", "python, "kotlin"]
 ---
 
 # 2Sum
