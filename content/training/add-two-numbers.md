@@ -1,7 +1,7 @@
 ---
 title: Add Two Numbers
 tags: ["training", "task"]
-languages: ["typescript"]
+languages: ["typescript", "java", "kotlin", "javascipt"]
 ---
 
 # Add Two Numbers
