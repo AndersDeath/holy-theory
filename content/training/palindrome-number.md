@@ -1,7 +1,7 @@
 ---
 title: Palindrome number
 tags: ["training", "task"]
-languages: ["java"]
+languages: ["java", "javascript", "kotlin"]
 ---
 
 # Palindrome number
