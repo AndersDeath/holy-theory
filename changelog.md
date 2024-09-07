@@ -51,6 +51,7 @@ All notable changes to this project will be documented in this file.
 * add Facade design pattern
 * add Flyweight design pattern
 * add Proxy design pattern
+* update Observer design pattern
 
 # [0.0.75] - 2024-07-08
 * add prettier and eslint settings
