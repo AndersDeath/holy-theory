@@ -54,6 +54,7 @@ All notable changes to this project will be documented in this file.
 * update Observer design pattern
 * add Strategy design pattern
 * add Command design pattern
+* add Chain of Responsibility design pattern
 
 # [0.0.75] - 2024-07-08
 * add prettier and eslint settings
