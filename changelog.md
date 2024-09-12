@@ -56,6 +56,7 @@ All notable changes to this project will be documented in this file.
 * add Command design pattern
 * add Chain of Responsibility design pattern
 * add State design pattern
+* add Template Method design pattern
 
 # [0.0.75] - 2024-07-08
 * add prettier and eslint settings
