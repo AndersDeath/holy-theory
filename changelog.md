@@ -59,6 +59,7 @@ All notable changes to this project will be documented in this file.
 * add Template Method design pattern
 * add Visitor design pattern
 * add Mediator design pattern
+* add MVC (Model-View-Controller) design pattern
 
 # [0.0.75] - 2024-07-08
 * add prettier and eslint settings
