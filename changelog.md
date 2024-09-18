@@ -62,6 +62,7 @@ All notable changes to this project will be documented in this file.
 * add MVC (Model-View-Controller) design pattern
 * add MVVM (Model-View-ViewModel) design pattern
 * add What is typing system? question
+* add What is Source control in programming? question
 
 # [0.0.75] - 2024-07-08
 * add prettier and eslint settings
