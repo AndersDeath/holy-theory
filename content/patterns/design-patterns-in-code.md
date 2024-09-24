@@ -103,7 +103,309 @@ console.log("\nSea Logistics:");
 clientCode(new SeaLogistics());
 
 ```
+### Abstract factory
 
+```typescript
+// Step 1: Define abstract product interfaces for Button and Checkbox
+interface Button {
+    render(): void;
+}
+
+interface Checkbox {
+    check(): void;
+}
+
+// Step 2: Implement concrete products for Windows (WindowsButton, WindowsCheckbox)
+class WindowsButton implements Button {
+    render(): void {
+        console.log("Rendering a Windows button.");
+    }
+}
+
+class WindowsCheckbox implements Checkbox {
+    check(): void {
+        console.log("Checking a Windows checkbox.");
+    }
+}
+
+// Step 3: Implement concrete products for Mac (MacButton, MacCheckbox)
+class MacButton implements Button {
+    render(): void {
+        console.log("Rendering a Mac button.");
+    }
+}
+
+class MacCheckbox implements Checkbox {
+    check(): void {
+        console.log("Checking a Mac checkbox.");
+    }
+}
+
+// Step 4: Define the Abstract Factory interface that creates families of related products
+interface UIFactory {
+    createButton(): Button;
+    createCheckbox(): Checkbox;
+}
+
+// Step 5: Implement concrete factories for Windows and Mac
+class WindowsUIFactory implements UIFactory {
+    createButton(): Button {
+        return new WindowsButton();
+    }
+
+    createCheckbox(): Checkbox {
+        return new WindowsCheckbox();
+    }
+}
+
+class MacUIFactory implements UIFactory {
+    createButton(): Button {
+        return new MacButton();
+    }
+
+    createCheckbox(): Checkbox {
+        return new MacCheckbox();
+    }
+}
+
+// Step 6: Client code that works with any factory type
+function clientCode(factory: UIFactory): void {
+    const button = factory.createButton();
+    const checkbox = factory.createCheckbox();
+
+    button.render();
+    checkbox.check();
+}
+
+// Step 7: Usage of the Abstract Factory pattern
+console.log("Using Windows UI Factory:");
+clientCode(new WindowsUIFactory());
+
+console.log("\nUsing Mac UI Factory:");
+clientCode(new MacUIFactory());
+
+```
+### Builder
+
+```typescript
+// Step 1: Define the product (House) class
+class House {
+    public walls?: string;
+    public doors?: number;
+    public windows?: number;
+    public roof?: string;
+    
+    public showHouse(): void {
+        console.log(`House with ${this.walls}, ${this.doors} doors, ${this.windows} windows, and a ${this.roof}.`);
+    }
+}
+
+// Step 2: Define the builder interface
+interface Builder {
+    reset(): void;
+    setWalls(wallType: string): void;
+    setDoors(doorCount: number): void;
+    setWindows(windowCount: number): void;
+    setRoof(roofType: string): void;
+    getResult(): House;
+}
+
+// Step 3: Implement the concrete builder (HouseBuilder)
+class HouseBuilder implements Builder {
+    private house: House;
+
+    constructor() {
+        this.reset();
+    }
+
+    public reset(): void {
+        this.house = new House();
+    }
+
+    public setWalls(wallType: string): void {
+        this.house.walls = wallType;
+    }
+
+    public setDoors(doorCount: number): void {
+        this.house.doors = doorCount;
+    }
+
+    public setWindows(windowCount: number): void {
+        this.house.windows = windowCount;
+    }
+
+    public setRoof(roofType: string): void {
+        this.house.roof = roofType;
+    }
+
+    public getResult(): House {
+        const result = this.house;
+        this.reset(); // reset builder for a new build process
+        return result;
+    }
+}
+
+// Step 4: Define the director class to control the construction process
+class Director {
+    private builder: Builder;
+
+    constructor(builder: Builder) {
+        this.builder = builder;
+    }
+
+    public setBuilder(builder: Builder): void {
+        this.builder = builder;
+    }
+
+    // Commonly used steps to build a standard house
+    public constructSimpleHouse(): void {
+        this.builder.setWalls("brick walls");
+        this.builder.setDoors(2);
+        this.builder.setWindows(4);
+        this.builder.setRoof("metal roof");
+    }
+
+    // Steps to build a more complex house
+    public constructLuxuryHouse(): void {
+        this.builder.setWalls("glass walls");
+        this.builder.setDoors(6);
+        this.builder.setWindows(12);
+        this.builder.setRoof("solar panel roof");
+    }
+}
+
+// Step 5: Client code
+function clientCode(director: Director) {
+    const builder = new HouseBuilder();
+    director.setBuilder(builder);
+
+    console.log("Building a simple house:");
+    director.constructSimpleHouse();
+    let house = builder.getResult();
+    house.showHouse();
+
+    console.log("\nBuilding a luxury house:");
+    director.constructLuxuryHouse();
+    house = builder.getResult();
+    house.showHouse();
+}
+
+// Usage of the Builder pattern
+const director = new Director(new HouseBuilder());
+clientCode(director);
+
+```
+
+### Prototype
+
+```typescript
+// Step 1: Define the Prototype interface
+interface Prototype {
+    clone(): this;
+}
+
+// Step 2: Implement the base class (Shape) that implements the Prototype interface
+class Shape implements Prototype {
+    public x: number;
+    public y: number;
+    public color: string;
+
+    constructor(x: number, y: number, color: string) {
+        this.x = x;
+        this.y = y;
+        this.color = color;
+    }
+
+    // The clone method is used to create a copy of the current object
+    public clone(): this {
+        return Object.create(this); // Creates a shallow copy of the object
+    }
+
+    public draw(): void {
+        console.log(`Drawing a shape at (${this.x}, ${this.y}) with color ${this.color}`);
+    }
+}
+
+// Step 3: Implement concrete prototypes (Circle and Rectangle) extending the base Shape class
+class Circle extends Shape {
+    public radius: number;
+
+    constructor(x: number, y: number, color: string, radius: number) {
+        super(x, y, color);
+        this.radius = radius;
+    }
+
+    // Override the clone method to copy the Circle object
+    public clone(): this {
+        const clone = super.clone() as this; // Deep clone the Circle properties
+        clone.radius = this.radius; // Manually copy the radius
+        return clone;
+    }
+
+    public draw(): void {
+        console.log(`Drawing a circle at (${this.x}, ${this.y}) with radius ${this.radius} and color ${this.color}`);
+    }
+}
+
+class Rectangle extends Shape {
+    public width: number;
+    public height: number;
+
+    constructor(x: number, y: number, color: string, width: number, height: number) {
+        super(x, y, color);
+        this.width = width;
+        this.height = height;
+    }
+
+    // Override the clone method to copy the Rectangle object
+    public clone(): this {
+        const clone = super.clone() as this;
+        clone.width = this.width; // Manually copy the width
+        clone.height = this.height; // Manually copy the height
+        return clone;
+    }
+
+    public draw(): void {
+        console.log(`Drawing a rectangle at (${this.x}, ${this.y}) with width ${this.width}, height ${this.height}, and color ${this.color}`);
+    }
+}
+
+// Step 4: Client code
+function clientCode() {
+    // Create an original Circle
+    const originalCircle = new Circle(10, 20, "red", 15);
+    originalCircle.draw();
+
+    // Clone the Circle
+    const clonedCircle = originalCircle.clone();
+    clonedCircle.draw(); // Cloned circle will have the same properties as the original
+
+    // Modify the cloned Circle's properties
+    clonedCircle.x = 30;
+    clonedCircle.y = 40;
+    clonedCircle.radius = 25;
+    clonedCircle.draw();
+
+    // Create an original Rectangle
+    const originalRectangle = new Rectangle(5, 5, "blue", 10, 20);
+    originalRectangle.draw();
+
+    // Clone the Rectangle
+    const clonedRectangle = originalRectangle.clone();
+    clonedRectangle.draw(); // Cloned rectangle will have the same properties as the original
+
+    // Modify the cloned Rectangle's properties
+    clonedRectangle.x = 50;
+    clonedRectangle.y = 60;
+    clonedRectangle.width = 30;
+    clonedRectangle.height = 40;
+    clonedRectangle.draw();
+}
+
+// Test the Prototype pattern
+clientCode();
+
+```
 ## Structural design pattern
 
 ## Behavioral design pattern
