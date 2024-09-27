@@ -700,6 +700,238 @@ clientCode();
 
 ```
 
+### Decorator
+
+```typescript
+// Step 1: Define the component interface
+interface Coffee {
+    cost(): number;        // Returns the cost of the coffee
+    description(): string; // Returns the description of the coffee
+}
+
+// Step 2: Create concrete components (basic objects) that implement the Coffee interface
+class SimpleCoffee implements Coffee {
+    cost(): number {
+        return 5;  // Base cost of the simple coffee
+    }
+
+    description(): string {
+        return "Simple Coffee";  // Basic description of the coffee
+    }
+}
+
+// Step 3: Create the abstract decorator class that implements the same interface as the component
+class CoffeeDecorator implements Coffee {
+    protected coffee: Coffee; // Reference to the object being decorated (wrapped)
+
+    constructor(coffee: Coffee) {
+        this.coffee = coffee;
+    }
+
+    cost(): number {
+        return this.coffee.cost();  // Delegates the cost to the wrapped coffee
+    }
+
+    description(): string {
+        return this.coffee.description();  // Delegates the description to the wrapped coffee
+    }
+}
+
+// Step 4: Create concrete decorators that extend the decorator class and add extra functionality
+class MilkDecorator extends CoffeeDecorator {
+    constructor(coffee: Coffee) {
+        super(coffee);
+    }
+
+    cost(): number {
+        return this.coffee.cost() + 2;  // Adds the cost of milk to the coffee
+    }
+
+    description(): string {
+        return this.coffee.description() + ", Milk";  // Adds "Milk" to the description
+    }
+}
+
+class SugarDecorator extends CoffeeDecorator {
+    constructor(coffee: Coffee) {
+        super(coffee);
+    }
+
+    cost(): number {
+        return this.coffee.cost() + 1;  // Adds the cost of sugar to the coffee
+    }
+
+    description(): string {
+        return this.coffee.description() + ", Sugar";  // Adds "Sugar" to the description
+    }
+}
+
+class WhipCreamDecorator extends CoffeeDecorator {
+    constructor(coffee: Coffee) {
+        super(coffee);
+    }
+
+    cost(): number {
+        return this.coffee.cost() + 3;  // Adds the cost of whip cream to the coffee
+    }
+
+    description(): string {
+        return this.coffee.description() + ", Whip Cream";  // Adds "Whip Cream" to the description
+    }
+}
+
+// Step 5: Client code
+function clientCode() {
+    // Create a simple coffee
+    let myCoffee: Coffee = new SimpleCoffee();
+    console.log(`${myCoffee.description()} costs $${myCoffee.cost()}`);
+
+    // Add milk to the coffee
+    myCoffee = new MilkDecorator(myCoffee);
+    console.log(`${myCoffee.description()} costs $${myCoffee.cost()}`);
+
+    // Add sugar to the coffee
+    myCoffee = new SugarDecorator(myCoffee);
+    console.log(`${myCoffee.description()} costs $${myCoffee.cost()}`);
+
+    // Add whip cream to the coffee
+    myCoffee = new WhipCreamDecorator(myCoffee);
+    console.log(`${myCoffee.description()} costs $${myCoffee.cost()}`);
+}
+
+// Run client code
+clientCode();
+
+```
+
+### Facade
+
+
+```typescript
+// Step 1: Define complex subsystems (classes with complex logic)
+
+class CPU {
+    freeze(): void {
+        console.log("CPU is frozen.");
+    }
+
+    jump(position: number): void {
+        console.log(`CPU jumps to memory address ${position}.`);
+    }
+
+    execute(): void {
+        console.log("CPU starts executing instructions.");
+    }
+}
+
+class Memory {
+    load(position: number, data: string): void {
+        console.log(`Memory loads data "${data}" into position ${position}.`);
+    }
+}
+
+class HardDrive {
+    read(lba: number, size: number): string {
+        console.log(`HardDrive reads ${size} bytes from LBA ${lba}.`);
+        return "bootloader_data";
+    }
+}
+
+// Step 2: Create the Facade class that provides a simplified interface to the client
+class ComputerFacade {
+    private cpu: CPU;
+    private memory: Memory;
+    private hardDrive: HardDrive;
+
+    constructor() {
+        this.cpu = new CPU();
+        this.memory = new Memory();
+        this.hardDrive = new HardDrive();
+    }
+
+    // The Facade method that hides the complex logic of booting up a computer
+    startComputer(): void {
+        console.log("Starting computer...");
+        this.cpu.freeze();
+        const bootAddress = 0x00;
+        const bootSector = this.hardDrive.read(bootAddress, 512);
+        this.memory.load(bootAddress, bootSector);
+        this.cpu.jump(bootAddress);
+        this.cpu.execute();
+        console.log("Computer started.");
+    }
+}
+
+// Step 3: Client code using the Facade
+
+function clientCode() {
+    const computer = new ComputerFacade();
+    // The client only interacts with the simplified startComputer() method
+    computer.startComputer();  // All complex subsystem interactions are hidden
+}
+
+clientCode();
+
+```
+### Flyweight
+
+```typescript
+// Step 1: Define the Flyweight (shared object) interface
+interface Shape {
+    draw(x: number, y: number, color: string): void; // The flyweight method
+}
+
+// Step 2: Create concrete flyweight classes that implement the Shape interface
+class Circle implements Shape {
+    private radius: number;  // Intrinsic state (shared between objects)
+
+    constructor(radius: number) {
+        this.radius = radius;
+    }
+
+    // The draw method accepts extrinsic state (x, y, and color)
+    draw(x: number, y: number, color: string): void {
+        console.log(`Drawing a ${color} circle with radius ${this.radius} at (${x}, ${y})`);
+    }
+}
+
+// Step 3: Create the FlyweightFactory to manage flyweight objects
+class ShapeFactory {
+    private static circleMap: { [key: string]: Circle } = {};  // Stores created flyweights (circles)
+
+    // Returns a flyweight (shared object) or creates a new one if not already present
+    static getCircle(radius: number): Circle {
+        const key = radius.toString();  // Use radius as the key to share objects
+        if (!this.circleMap[key]) {
+            console.log(`Creating a new circle with radius ${radius}`);
+            this.circleMap[key] = new Circle(radius);  // Create and store a new circle if it doesn't exist
+        }
+        return this.circleMap[key];  // Return the existing circle
+    }
+}
+
+// Step 4: Client code
+function clientCode() {
+    // The factory will return shared circle objects based on the radius
+    const circle1 = ShapeFactory.getCircle(5);  // Create or retrieve a circle with radius 5
+    circle1.draw(10, 10, "Red");
+
+    const circle2 = ShapeFactory.getCircle(5);  // Reuses the same circle object with radius 5
+    circle2.draw(20, 20, "Green");
+
+    const circle3 = ShapeFactory.getCircle(10);  // Create or retrieve a circle with radius 10
+    circle3.draw(30, 30, "Blue");
+
+    const circle4 = ShapeFactory.getCircle(5);  // Reuses the same circle object with radius 5
+    circle4.draw(40, 40, "Yellow");
+
+    // The number of created objects will be minimized
+}
+
+clientCode();
+
+```
+
 ## Behavioral design pattern
 
 ## Other Noteworthy Patterns
