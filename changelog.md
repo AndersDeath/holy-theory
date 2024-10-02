@@ -65,6 +65,7 @@ All notable changes to this project will be documented in this file.
 * add What is Source control in programming? question
 * add What debugging is? question
 * add Design patterns In Code
+* update preface for Algorithms
 
 # [0.0.75] - 2024-07-08
 * add prettier and eslint settings
