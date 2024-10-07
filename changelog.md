@@ -66,6 +66,7 @@ All notable changes to this project will be documented in this file.
 * add What debugging is? question
 * add Design patterns In Code
 * update preface for Algorithms
+* restructurization of the project
 
 # [0.0.75] - 2024-07-08
 * add prettier and eslint settings
