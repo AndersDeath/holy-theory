@@ -68,6 +68,7 @@ All notable changes to this project will be documented in this file.
 * update preface for Algorithms
 * restructurization of the project
 * update Big-O notation article
+* update RESTful API methods
 
 # [0.0.75] - 2024-07-08
 * add prettier and eslint settings
