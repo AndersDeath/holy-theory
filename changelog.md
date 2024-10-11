@@ -70,6 +70,7 @@ All notable changes to this project will be documented in this file.
 * update Big-O notation article
 * update RESTful API methods
 * update Software development life cycle
+* update Software categories abstract
 
 # [0.0.75] - 2024-07-08
 * add prettier and eslint settings
