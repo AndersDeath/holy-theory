@@ -72,6 +72,7 @@ All notable changes to this project will be documented in this file.
 * update Software development life cycle
 * update Software categories abstract
 * update Software characteristics abstract
+* update Types of Databases abstract
 
 # [0.0.75] - 2024-07-08
 * add prettier and eslint settings
