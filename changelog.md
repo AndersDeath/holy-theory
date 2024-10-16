@@ -75,6 +75,7 @@ All notable changes to this project will be documented in this file.
 * update Types of Databases abstract
 * update JavaScript data types abstract
 * update Diffie hellman algorithm abstract
+* add Key Aspects of Integration Testing abstract
 
 # [0.0.75] - 2024-07-08
 * add prettier and eslint settings
