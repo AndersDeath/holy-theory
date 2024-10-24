@@ -77,6 +77,7 @@ All notable changes to this project will be documented in this file.
 * update Diffie hellman algorithm abstract
 * add Key Aspects of Integration Testing abstract
 * update Architectural characteristics abstract
+* update Cache tier abstract
 
 # [0.0.75] - 2024-07-08
 * add prettier and eslint settings
