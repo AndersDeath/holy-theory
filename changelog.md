@@ -78,6 +78,7 @@ All notable changes to this project will be documented in this file.
 * add Key Aspects of Integration Testing abstract
 * update Architectural characteristics abstract
 * update Cache tier abstract
+* update CDN Workflow abstract
 
 # [0.0.75] - 2024-07-08
 * add prettier and eslint settings
