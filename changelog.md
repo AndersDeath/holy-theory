@@ -81,6 +81,7 @@ All notable changes to this project will be documented in this file.
 * update CDN Workflow abstract
 * update Horizontal and vertical scaling abstract
 * add sql section and the first question what is sql
+* add sql dialects abstract
 
 # [0.0.75] - 2024-07-08
 * add prettier and eslint settings
