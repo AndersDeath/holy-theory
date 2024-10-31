@@ -84,6 +84,7 @@ All notable changes to this project will be documented in this file.
 * add sql dialects abstract
 * add brand new ai interview questions section
 * add code section and merge-sort in js there
+* add quick sort to code section
 
 # [0.0.75] - 2024-07-08
 * add prettier and eslint settings
