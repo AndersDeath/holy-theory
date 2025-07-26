@@ -31,7 +31,7 @@ This directory contains both simple and optimized implementations of Quick Sort 
 
 | Algorithm | Time Complexity | Space Complexity | Stability |
 |-----------|----------------|------------------|-----------|
-| **Quick Sort** | O(n log n) avg, O(n²) worst | O(log n) avg | No |
+| **Quick Sort** | O(n log n) avg, O(n squared) worst | O(log n) avg | No |
 | **Merge Sort** | O(n log n) always | O(n) | Yes |
 
 ## Quick Sort
@@ -40,7 +40,7 @@ This directory contains both simple and optimized implementations of Quick Sort 
 
 #### 1. **Median-of-Three Pivot Selection** (Optimized Version)
 - Instead of always choosing the middle element as pivot, we use the median of first, middle, and last elements
-- This helps avoid worst-case scenarios (O(n²)) when the array is already sorted or reverse sorted
+- This helps avoid worst-case scenarios (O(n squared)) when the array is already sorted or reverse sorted
 - Improves average-case performance significantly
 
 #### 2. **Improved Base Case**
@@ -58,7 +58,7 @@ This directory contains both simple and optimized implementations of Quick Sort 
 flowchart TD
     A[Start: Array] --> B{Array length <= 1?}
     B -->|Yes| C[Return array as is]
-    B -->|No| D[Choose pivot: arr[0]]
+    B -->|No| D[Choose pivot: first element]
     D --> E[Partition array]
     E --> F[Create less array]
     E --> G[Create equal array]
@@ -98,7 +98,7 @@ flowchart TD
     O --> P
 ```
 
-### Quick Sort Step-by-Step Example: [3, 5, 1, 6, 192, 54, 213, 5]
+### Quick Sort Step-by-Step Example: 3, 5, 1, 6, 192, 54, 213, 5
 
 #### Simple Quick Sort Execution
 
@@ -267,7 +267,7 @@ flowchart TD
     J --> K
 ```
 
-### Merge Sort Step-by-Step Example: [3, 5, 1, 6, 192, 54, 213, 5]
+### Merge Sort Step-by-Step Example: 3, 5, 1, 6, 192, 54, 213, 5
 
 ```mermaid
 flowchart TD
@@ -310,36 +310,36 @@ flowchart TD
 
 ### Merge Process Comparison
 
-#### Simple Merge: [1,3,5] + [2,4,6]
+#### Simple Merge: 1,3,5 + 2,4,6
 
 ```mermaid
 flowchart LR
-    A[Left: 1,3,5] --> C[Compare: 1 <= 2?]
+    A[Left: 1,3,5] --> C[Compare: 1 less than or equal to 2?]
     B[Right: 2,4,6] --> C
     C -->|Yes| D[Take 1 from left]
     C -->|No| E[Take 2 from right]
     D --> F[Result: 1]
     E --> G[Result: 2]
-    F --> H[Compare: 3 <= 2?]
-    G --> I[Compare: 1 <= 4?]
+    F --> H[Compare: 3 less than or equal to 2?]
+    G --> I[Compare: 1 less than or equal to 4?]
     H -->|No| J[Take 2 from right]
     I -->|Yes| K[Take 3 from left]
     J --> L[Result: 1,2]
     K --> M[Result: 2,1]
-    L --> N[Compare: 3 <= 4?]
-    M --> O[Compare: 2 <= 4?]
+    L --> N[Compare: 3 less than or equal to 4?]
+    M --> O[Compare: 2 less than or equal to 4?]
     N -->|Yes| P[Take 3 from left]
     O -->|Yes| Q[Take 2 from right]
     P --> R[Result: 1,2,3]
     Q --> S[Result: 1,2,3]
-    R --> T[Compare: 5 <= 4?]
-    S --> U[Compare: 3 <= 4?]
+    R --> T[Compare: 5 less than or equal to 4?]
+    S --> U[Compare: 3 less than or equal to 4?]
     T -->|No| V[Take 4 from right]
     U -->|Yes| W[Take 4 from right]
     V --> X[Result: 1,2,3,4]
     W --> Y[Result: 1,2,3,4]
-    X --> Z[Compare: 5 <= 6?]
-    Y --> AA[Compare: 5 <= 6?]
+    X --> Z[Compare: 5 less than or equal to 6?]
+    Y --> AA[Compare: 5 less than or equal to 6?]
     Z -->|Yes| BB[Take 5 from left]
     AA -->|Yes| CC[Take 5 from left]
     BB --> DD[Result: 1,2,3,4,5]
@@ -350,36 +350,36 @@ flowchart LR
     GG --> HH
 ```
 
-#### Optimized Merge: [1,3,5] + [2,4,6]
+#### Optimized Merge: 1,3,5 + 2,4,6
 
 ```mermaid
 flowchart LR
-    A[Left: 1,3,5] --> C[Compare: 1 <= 2?]
+    A[Left: 1,3,5] --> C[Compare: 1 less than or equal to 2?]
     B[Right: 2,4,6] --> C
     C -->|Yes| D[Take 1 from left]
     C -->|No| E[Take 2 from right]
     D --> F[Result: 1]
     E --> G[Result: 2]
-    F --> H[Compare: 3 <= 2?]
-    G --> I[Compare: 1 <= 4?]
+    F --> H[Compare: 3 less than or equal to 2?]
+    G --> I[Compare: 1 less than or equal to 4?]
     H -->|No| J[Take 2 from right]
     I -->|Yes| K[Take 3 from left]
     J --> L[Result: 1,2]
     K --> M[Result: 2,1]
-    L --> N[Compare: 3 <= 4?]
-    M --> O[Compare: 2 <= 4?]
+    L --> N[Compare: 3 less than or equal to 4?]
+    M --> O[Compare: 2 less than or equal to 4?]
     N -->|Yes| P[Take 3 from left]
     O -->|Yes| Q[Take 2 from right]
     P --> R[Result: 1,2,3]
     Q --> S[Result: 1,2,3]
-    R --> T[Compare: 5 <= 4?]
-    S --> U[Compare: 3 <= 4?]
+    R --> T[Compare: 5 less than or equal to 4?]
+    S --> U[Compare: 3 less than or equal to 4?]
     T -->|No| V[Take 4 from right]
     U -->|Yes| W[Take 4 from right]
     V --> X[Result: 1,2,3,4]
     W --> Y[Result: 1,2,3,4]
-    X --> Z[Compare: 5 <= 6?]
-    Y --> AA[Compare: 5 <= 6?]
+    X --> Z[Compare: 5 less than or equal to 6?]
+    Y --> AA[Compare: 5 less than or equal to 6?]
     Z -->|Yes| BB[Take 5 from left]
     AA -->|Yes| CC[Take 5 from left]
     BB --> DD[Result: 1,2,3,4,5]
@@ -396,9 +396,9 @@ flowchart LR
 
 ```mermaid
 graph LR
-    A[Input Size] --> B[Quick Sort: O(n log n) avg]
-    A --> C[Merge Sort: O(n log n) always]
-    A --> D[Quick Sort: O(n²) worst]
+    A[Input Size] --> B[Quick Sort: O of n log n avg]
+    A --> C[Merge Sort: O of n log n always]
+    A --> D[Quick Sort: O of n squared worst]
     B --> E[Random data: Excellent]
     C --> F[All cases: Predictable]
     D --> G[Sorted data: Poor]
@@ -408,8 +408,8 @@ graph LR
 
 ```mermaid
 graph TD
-    A[Memory Usage] --> B[Quick Sort: O(log n) avg]
-    A --> C[Merge Sort: O(n)]
+    A[Memory Usage] --> B[Quick Sort: O of log n avg]
+    A --> C[Merge Sort: O of n]
     B --> D[In-place operations]
     C --> E[Additional space needed]
     D --> F[Better for limited memory]
@@ -440,10 +440,10 @@ graph TD
     A --> E[Many Duplicates]
     B --> F[Simple: Good]
     B --> G[Optimized: Excellent]
-    C --> H[Simple: Poor O(n²)]
-    C --> I[Optimized: Good O(n log n)]
-    D --> J[Simple: Poor O(n²)]
-    D --> K[Optimized: Good O(n log n)]
+    C --> H[Simple: Poor O of n squared]
+    C --> I[Optimized: Good O of n log n]
+    D --> J[Simple: Poor O of n squared]
+    D --> K[Optimized: Good O of n log n]
     E --> L[Simple: Variable]
     E --> M[Optimized: Good]
 ```
@@ -456,14 +456,14 @@ graph TD
     A --> C[Already Sorted]
     A --> D[Reverse Sorted]
     A --> E[Many Duplicates]
-    B --> F[Simple: Consistent O(n log n)]
-    B --> G[Optimized: Consistent O(n log n)]
-    C --> H[Simple: Consistent O(n log n)]
-    C --> I[Optimized: Consistent O(n log n)]
-    D --> J[Simple: Consistent O(n log n)]
-    D --> K[Optimized: Consistent O(n log n)]
-    E --> L[Simple: Consistent O(n log n)]
-    E --> M[Optimized: Consistent O(n log n)]
+    B --> F[Simple: Consistent O of n log n]
+    B --> G[Optimized: Consistent O of n log n]
+    C --> H[Simple: Consistent O of n log n]
+    C --> I[Optimized: Consistent O of n log n]
+    D --> J[Simple: Consistent O of n log n]
+    D --> K[Optimized: Consistent O of n log n]
+    E --> L[Simple: Consistent O of n log n]
+    E --> M[Optimized: Consistent O of n log n]
 ```
 
 ## Implementation Structure
@@ -548,8 +548,8 @@ graph TD
     Z --> BB[Result: 5]
     AA --> CC[Combine: 1,2,3,4,5]
     BB --> CC
-    CC --> DD[Simple: O(n²) performance]
-    CC --> EE[Optimized: O(n log n) performance]
+    CC --> DD[Simple: O of n squared performance]
+    CC --> EE[Optimized: O of n log n performance]
 ```
 
 ### Merge Sort Performance by Input Type
@@ -578,8 +578,8 @@ graph TD
     S --> U[Final: 1,2,3,4,5]
     N --> T
     O --> U
-    T --> V[Simple: O(n log n) performance]
-    U --> W[Optimized: O(n log n) performance]
+    T --> V[Simple: O of n log n performance]
+    U --> W[Optimized: O of n log n performance]
 ```
 
 ## Memory Usage
@@ -804,7 +804,7 @@ cd ts && npx tsx merge-sort.ts
 | Aspect | Simple Version | Optimized Version |
 |--------|---------------|-------------------|
 | **Quick Sort - Pivot Selection** | First element (`arr[0]`) | Median-of-three |
-| **Quick Sort - Worst Case Performance** | O(n²) on sorted arrays | Better performance |
+| **Quick Sort - Worst Case Performance** | O(n squared) on sorted arrays | Better performance |
 | **Merge Sort - Stability** | Basic implementation | Stable sorting |
 | **Merge Sort - Memory Management** | Basic | Enhanced |
 | **Code Complexity** | Simpler, easier to understand | More sophisticated |
