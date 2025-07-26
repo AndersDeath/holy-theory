@@ -1,5 +1,5 @@
 // Section: Algorithms
-// Language: JavaScript
+// Language: TypeScript
 // Name: Merge Sort (Optimized)
 
 /**
@@ -7,7 +7,7 @@
  * Time Complexity: O(n log n) - always
  * Space Complexity: O(n)
  */
-function simpleMergeSort(arr) {
+function simpleMergeSort<T extends number | string>(arr: T[]): T[] {
     if (arr.length <= 1) {
         return arr;
     }
@@ -19,8 +19,8 @@ function simpleMergeSort(arr) {
     return simpleMerge(simpleMergeSort(left), simpleMergeSort(right));
 }
 
-function simpleMerge(left, right) {
-    const result = [];
+function simpleMerge<T extends number | string>(left: T[], right: T[]): T[] {
+    const result: T[] = [];
     let leftIndex = 0;
     let rightIndex = 0;
     
@@ -43,11 +43,11 @@ function simpleMerge(left, right) {
  * Space Complexity: O(n)
  * 
  * Optimizations:
- * - In-place merging capability
  * - Better memory management
  * - Stable sorting (preserves order of equal elements)
+ * - More explicit remaining element handling
  */
-function mergeSort(arr) {
+function mergeSort<T extends number | string>(arr: T[]): T[] {
     if (arr.length <= 1) {
         return arr;
     }
@@ -59,8 +59,8 @@ function mergeSort(arr) {
     return merge(mergeSort(left), mergeSort(right));
 }
 
-function merge(left, right) {
-    const result = [];
+function merge<T extends number | string>(left: T[], right: T[]): T[] {
+    const result: T[] = [];
     let leftIndex = 0;
     let rightIndex = 0;
     
@@ -91,7 +91,7 @@ function merge(left, right) {
 }
 
 // Test cases
-const testCases = [
+const testCases: (number | string)[][] = [
     [3, 5, 1, 6, 192, 54, 213, 5],
     [3, 2, 6, 18, 9, 7],
     [1],
@@ -107,7 +107,8 @@ console.log("=== Simple Merge Sort Test Results ===");
 testCases.forEach((testCase, index) => {
     console.log(`Test ${index + 1}:`);
     console.log(`  Input:  [${testCase.join(', ')}]`);
-    console.log(`  Output: [${simpleMergeSort([...testCase]).join(', ')}]`);
+    const result = simpleMergeSort([...testCase]);
+    console.log(`  Output: [${result.join(', ')}]`);
     console.log();
 });
 
@@ -115,6 +116,10 @@ console.log("=== Optimized Merge Sort Test Results ===");
 testCases.forEach((testCase, index) => {
     console.log(`Test ${index + 1}:`);
     console.log(`  Input:  [${testCase.join(', ')}]`);
-    console.log(`  Output: [${mergeSort([...testCase]).join(', ')}]`);
+    const result = mergeSort([...testCase]);
+    console.log(`  Output: [${result.join(', ')}]`);
     console.log();
 });
+
+// Export for use in other modules
+export { mergeSort, simpleMergeSort, merge, simpleMerge }; 
