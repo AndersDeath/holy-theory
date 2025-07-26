@@ -24,6 +24,68 @@ All notable changes to this project will be documented in this file.
 * add question about MVVC Pattern
 * add question what is DDD
 * restructure questions section
+* add OpenID Connect (OIDC) article
+* add What is OAuth 2.0 article
+* add 2sum training for typescript
+* add 2sum training solution for Java
+* add 2sum training solution for TypeScript
+* add 2sum training solution for Kotlin
+* add Add two numbers training solution for Java
+* add Add two numbers training solution for Kotlin
+* add Add two numbers training solution for JavaScript
+* add 2sum training solution for Go
+* add 2sum training solution for Python
+* add Palindrom number solution for TypeScript
+* add Palindrom number solution for JavaScript
+* add Palindrom number solution for Kotlin
+* add description to Map data structure
+* add Algorithms In Code abstract
+* add Factory method design pattern
+* add Abstract factory design pattern
+* add Builder design pattern
+* add Prototype design pattern
+* add Adapter design pattern
+* add Bridge design pattern
+* add Composite design pattern
+* add Decorator design pattern
+* add Facade design pattern
+* add Flyweight design pattern
+* add Proxy design pattern
+* update Observer design pattern
+* add Strategy design pattern
+* add Command design pattern
+* add Chain of Responsibility design pattern
+* add State design pattern
+* add Template Method design pattern
+* add Visitor design pattern
+* add Mediator design pattern
+* add MVC (Model-View-Controller) design pattern
+* add MVVM (Model-View-ViewModel) design pattern
+* add What is typing system? question
+* add What is Source control in programming? question
+* add What debugging is? question
+* add Design patterns In Code
+* update preface for Algorithms
+* restructurization of the project
+* update Big-O notation article
+* update RESTful API methods
+* update Software development life cycle
+* update Software categories abstract
+* update Software characteristics abstract
+* update Types of Databases abstract
+* update JavaScript data types abstract
+* update Diffie hellman algorithm abstract
+* add Key Aspects of Integration Testing abstract
+* update Architectural characteristics abstract
+* update Cache tier abstract
+* update CDN Workflow abstract
+* update Horizontal and vertical scaling abstract
+* add sql section and the first question what is sql
+* add sql dialects abstract
+* add brand new ai interview questions section
+* add code section and merge-sort in js there
+* add quick sort to code section
+* add questions typescript section and "For what is "Omit" type needed?" question
 
 # [0.0.75] - 2024-07-08
 * add prettier and eslint settings
